@@ -96,7 +96,7 @@ class HomeController extends Controller
                     if($singleProduct->id_country === $country_id) {
                         $request->request->add(['redirectToCountry' => $singleProduct->id_country]);
                         $countryUrl = $singleProduct->country_code;
-                        $redirectUrl = 'http://'.$countryUrl.'.'.$site.'.'.$domain.'/'.$singleProduct->slug;
+                        $redirectUrl = 'https://'.$countryUrl.'.'.$site.'.'.$domain.'/'.$singleProduct->slug;
                         return redirect($redirectUrl);
                     }
                 }
@@ -422,7 +422,7 @@ class HomeController extends Controller
                    $request->session()->push('coupon', $coupon);
                    if(isset($this->customerData['session_id'])) {
                        try {
-                           $this->modelEvent->insertSessionEvent($this->customerData['session_id'], 9);
+                           $this->modelEvent->insertSessionEvent($this->customerData['session_id'], 8);
                        } catch (\Exception $exception) {
                            Log::error("Error: Session - Coupon entered - DB | Exception: " . $exception->getMessage());
                        }
@@ -450,7 +450,7 @@ class HomeController extends Controller
 
             if(isset($this->customerData['session_id'])) {
                 try {
-                    $this->modelEvent->insertSessionEvent($this->customerData['session_id'], 8);
+                    $this->modelEvent->insertSessionEvent($this->customerData['session_id'], 7);
                 } catch (\Exception $exception) {
                     Log::error("Error: Session - Unexisting country - DB | Exception: " . $exception->getMessage());
                 }
@@ -469,7 +469,7 @@ class HomeController extends Controller
 
         $productSlug = $product[0]->slug;
 
-        $redirectUrl = 'http://'.$selectedCountry.'.'.$host.'/'.$productSlug;
+        $redirectUrl = 'https://'.$selectedCountry.'.'.$host.'/'.$productSlug;
         return redirect($redirectUrl);
     }
 
@@ -566,7 +566,10 @@ class HomeController extends Controller
             ->setTestEventCode('TEST54990')
             ->setEvents($events);
         $response = $api_request->execute();
-        return $fb_event;
+
+        if(!empty(json_decode($response, true))) {
+            return $response;
+        }
     }
 
 }
