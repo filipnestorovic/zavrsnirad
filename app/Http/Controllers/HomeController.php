@@ -197,9 +197,6 @@ class HomeController extends Controller
         }
 
         $this->data['fb_event'] = "ViewContent";
-//        foreach($this->data['pixels'] as $pixel) {
-//            $this->sendConversionApiFB($request, $pixel, $this->data['fb_event']);
-//        }
 
         if(isset($this->customerData['session_id'])) {
             try {
@@ -219,9 +216,6 @@ class HomeController extends Controller
         }
 
         $this->data['fb_event'] = "AddToCart";
-//        foreach($this->data['pixels'] as $pixel) {
-//            $this->sendConversionApiFB($request, $pixel, $this->data['fb_event']);
-//        }
 
         if(isset($this->customerData['session_id'])) {
             try {
@@ -245,9 +239,6 @@ class HomeController extends Controller
         }
 
         $this->data['fb_event'] = "Purchase";
-//        foreach($this->data['pixels'] as $pixel) {
-//            $this->sendConversionApiFB($request, $pixel, $this->data['fb_event'], $this->data['order']);
-//        }
 
         $this->data['landerView'] = $this->returnedData['landerView'];
         return view($this->returnedData['thankyouView'], $this->data);
@@ -275,28 +266,27 @@ class HomeController extends Controller
                 $generate = 1;
             }
         } else {
-//            $ipUuid = $this->modelSession->checkSessionIp(request()->ip());
-//            $i = 0;
-//            if(count($ipUuid)>0) {
-//                foreach($ipUuid as $singleSession) {
-//                    $variation = $this->modelVariation->getAllVariations(null,null,null,null,null,$singleSession->variation_id);
-//                    if(count($variation)>0) {
-//                        $variation_product_id = $variation[0]->id_product;
-//                        if($variation_product_id === $product_id) {
-//                            $this->variationField = $variation;
-//                            $response = 1;
-//                            $uuid = $ipUuid[$i]->uuid;
-//                            $generate = 0;
-//                        } else {
-//                            $generate = 1;
-//                        }
-//                    }
-//                    $i++;
-//                }
-//            } else {
-//                $generate = 1;
-//            }
-            $generate = 1;
+            $ipUuid = $this->modelSession->checkSessionIp(request()->ip());
+            $i = 0;
+            if(count($ipUuid)>0) {
+                foreach($ipUuid as $singleSession) {
+                    $variation = $this->modelVariation->getAllVariations(null,null,null,null,null,$singleSession->variation_id);
+                    if(count($variation)>0) {
+                        $variation_product_id = $variation[0]->id_product;
+                        if($variation_product_id === $product_id) {
+                            $this->variationField = $variation;
+                            $response = 1;
+                            $uuid = $ipUuid[$i]->uuid;
+                            $generate = 0;
+                        } else {
+                            $generate = 1;
+                        }
+                    }
+                    $i++;
+                }
+            } else {
+                $generate = 1;
+            }
         }
 
         if($generate === 1) {
@@ -430,7 +420,6 @@ class HomeController extends Controller
                }
             }
         }
-        // store coupon in session
         return $discountPercent;
     }
 
@@ -522,8 +511,6 @@ class HomeController extends Controller
         } else {
             $cookie_fbc = null;
         }
-
-        // ?fbclid=IwAR26eHEfwoFUcGM_3UAutdqH-FORnd2BDV_rs-evyFBDUgUnhUmO1oQIUo8
 
         $access_token = 'EAACOQyyltp0BAIXMsezZAgrZBZBZCzVUoWjZCH20tK8UphZC2Fs8T4DldoaQTiuqgbrxoWeLBq08heeofvyASFehWNvM44kct7QRclpqrJh03bYzaBTHcsWxoRbZAu25NpDQqP8yHuZBJZBCaazyzxJR45r2zDlzeFqHbJ3mepDbOn8lZBjrC5jVlOZCU9Ogp6zMCRSXIQ7eOfaMwZDZD';
         $api = Api::init(null, null, $access_token);

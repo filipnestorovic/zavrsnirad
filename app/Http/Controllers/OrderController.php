@@ -34,8 +34,6 @@ class OrderController extends Controller
 
     public function order(Request $request){
 
-//        dd($request->all());
-
         $rules = [
             'name' => ['required'],
             'phone' => ['required'],
@@ -59,15 +57,19 @@ class OrderController extends Controller
                 ->withInput();
         }
 
-//        if($request->session()->get('country') == "bg") {
-//            $customerErrorMessage = "Грешка при поръчката, моля свържете се с нас по имейл info@wombatshop.eu!";
-//        } else if($request->session()->get('country') == "ro") {
-//            $customerErrorMessage = "Eroare la comandă, vă rugăm să ne contactați prin e-mail info@wombatshop.eu!";
-//        } else {
-//            $customerErrorMessage = "Greška prilikom porudžbine, molimo da nas kontaktirate putem emaila info@wombatsbrand.com!";
-//        }
-
-        //generate error message from database
+        if($request->session()->get('country') == "bg") {
+            $customerErrorMessage = "Грешка при поръчката, моля свържете се с нас по имейл info@wombatshop.eu!";
+        } else if($request->session()->get('country') == "ro") {
+            $customerErrorMessage = "Eroare la comandă, vă rugăm să ne contactați prin e-mail info@wombatshop.eu!";
+        } else if($request->session()->get('country') == "gr") {
+            $customerErrorMessage = "Σφάλμα παραγγελίας, επικοινωνήστε μαζί μας μέσω email info@wombatshop.eu!";
+        } else if($request->session()->get('country') == "pl") {
+            $customerErrorMessage = "Błąd zamówienia, prosimy o kontakt mailowy info@wombatshop.eu!";
+        } else if($request->session()->get('country') == "rs" || $request->session()->get('country') == "ba") {
+            $customerErrorMessage = "Greška prilikom porudžbine, molimo da nas kontaktirate putem emaila info@wombatsbrand.com!";
+        } else {
+            $customerErrorMessage = "An error has occurred during checkout, please contact us at info@wombatsbrand.com!";
+        }
 
         try {
 
@@ -97,14 +99,14 @@ class OrderController extends Controller
 
             if($this->modelOrder->quantity === 0) {
                 Log::error("Error: Quantity not set");
-                return redirect()->back()->withErrors(["An error has occurred during checkout"]);
+                return redirect()->back()->withErrors([$customerErrorMessage]);
             }
 
             $variation = $this->modelVariation->getVariationByIdAndQuantity($variation_id, $this->modelOrder->quantity);
 
             if($variation === null) {
                 Log::error("Error: Variation with this quantity not found - DB");
-                return redirect()->back()->withErrors(["An error has occurred during checkout"]);
+                return redirect()->back()->withErrors([$customerErrorMessage]);
             } else {
 
                 $session_id = $request->get('session_id');
@@ -137,23 +139,37 @@ class OrderController extends Controller
                     $orderId = $this->modelOrder->insertOrder();
                 } catch (\Exception $exception) {
                     Log::error("Error: Inserting new order - DB \nMessage: " . $exception->getMessage() . "\nDetails:". json_encode($this->modelOrder, JSON_PRETTY_PRINT));
-                    return redirect()->back()->withErrors(["An error has occurred during checkout"]);
+                    return redirect()->back()->withErrors([$customerErrorMessage]);
                 }
 
                 if($orderId) {
                     $orderDetails = $this->modelOrder->getOrderById($orderId, $this->modelOrder->quantity);
 
                     //delete from abandoned if exist
+//                    try {
+//                        $resultAbandonDelete = $this->checkAndDeleteAbandonedIfOrderExists($orderDetails->email, $orderDetails->product_id);
+//                    }
+//                    catch(\Exception $exception){
+//                        Log::error('Error: Deleting from abandoned cart \n Message: ' . $exception->getMessage() . '\n Details:'. json_encode($modelOrders, JSON_PRETTY_PRINT) . '\n orderDetails'. json_encode($orderDetails, JSON_PRETTY_PRINT));
+//                    }
 
                     try {
                         //webhooks
-//                        if($orderDetails->woocommerce_product_id === null) {
-//                            $webhookResult = $this->sendWebhook($orderDetails);
-//                        } else {
-//                            $webhookResult = $this->createNewOrderWoocommerce($orderDetails);
-//                        }
-
-                        $webhookResult = 1;
+                        if($orderDetails->woocommerce_product_id === null) {
+                            try {
+                                $webhookResult = $this->sendWebhook($orderDetails);
+                            } catch(\Exception $exception){
+                                Log::error("Error: ServerWombat Webhook \nMessage: " . $exception->getMessage() . "\nDetails: ". json_encode($orderDetails, JSON_PRETTY_PRINT));
+                                return redirect()->back()->withErrors([$customerErrorMessage]);
+                            }
+                        } else {
+                            try {
+                                $webhookResult = $this->createNewOrderWoocommerce($orderDetails);
+                            } catch(\Exception $exception){
+                                Log::error("Error: Woocommerce Webhook \nMessage: " . $exception->getMessage() . "\nDetails: ". json_encode($orderDetails, JSON_PRETTY_PRINT));
+                                return redirect()->back()->withErrors([$customerErrorMessage]);
+                            }
+                        }
 
                         if($webhookResult) {
                             if(isset($session_id)) {
@@ -165,18 +181,18 @@ class OrderController extends Controller
                             }
                             return redirect()->to('/'.$orderDetails->slug.'/thankyou')->with('data', $orderDetails);
                         } else {
-                            return redirect()->back()->withErrors(["An error has occurred during checkout"]);
+                            Log::error("Error: Empty webhook result \nResult: " . $webhookResult . "\nDetails: ". json_encode($orderDetails, JSON_PRETTY_PRINT));
+                            return redirect()->back()->withErrors([$customerErrorMessage]);
                         }
-
-                    } catch(\Exception $exception){
+                    } catch(\Exception $exception) {
                         Log::error("Error: Triggering new order -  Webhook \nMessage: " . $exception->getMessage() . "\nDetails: ". json_encode($orderDetails, JSON_PRETTY_PRINT));
-                        return redirect()->back()->withErrors(["An error has occurred during checkout"]);
+                        return redirect()->back()->withErrors([$customerErrorMessage]);
                     }
                 }
             }
         } catch (\Exception $ex) {
             Log::error("An error has occurred during checkout - " . $ex->getMessage());
-            return redirect()->back()->withErrors(["An error has occurred during checkout"]);
+            return redirect()->back()->withErrors([$customerErrorMessage]);
         }
     }
 
