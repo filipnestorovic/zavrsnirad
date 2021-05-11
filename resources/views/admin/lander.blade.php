@@ -37,7 +37,7 @@
                             </div>
                             <select name="productIdLander" id="productIdLander" data-toggle="dropdown" required>
                                 @foreach($products as $product)
-                                    <option value="{{ $product->id_product }}">{{ $product->product_name }}</option>
+                                    <option label="{{ $product->id_brand }}" value="{{ $product->id_product }}">{{ $product->product_name }}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -197,6 +197,21 @@
                     success: function (data) {
                         $('#landerTableAjax').html('');
                         $('#landerTableAjax').html(data);
+
+                        $('#brandIdLander').val(0).selectpicker('refresh');
+                        $("#productIdLander").val(0).selectpicker('refresh');
+                        $('#brandIdLander').change(function() {
+                            let brandId = parseInt($(this).val());
+                            $("#productIdLander option").each(function() {
+                                let productBrandId = parseInt($(this).attr('label'));
+                                if(brandId === productBrandId) {
+                                    $(this).show();
+                                } else {
+                                    $(this).hide();
+                                }
+                            });
+                            $("#productIdLander").val(0).selectpicker('refresh');
+                        });
 
                         $('.editLanderBtn').click(function(){
                             let id = $(this).val();
