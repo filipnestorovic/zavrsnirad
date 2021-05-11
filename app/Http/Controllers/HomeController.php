@@ -550,12 +550,14 @@ class HomeController extends Controller
         $events = array();
         array_push($events, $event);
         $api_request = (new EventRequest($pixel_id))
-            ->setTestEventCode('TEST54990')
+            ->setTestEventCode('TEST12831')
             ->setEvents($events);
         $response = $api_request->execute();
 
         if(!empty(json_decode($response, true))) {
             return $response;
+        } else {
+            return $fb_event;
         }
     }
 
