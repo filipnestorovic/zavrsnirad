@@ -82,12 +82,14 @@ class HomeController extends Controller
         $brand_id = $this->modelBrand->getBrandByUrl($brandUrl)->id_brand;
 
         if($brand_id === null) {
+            Log::info('404 - Brand null - Slug: '.$slug.' Brand: '.$brandUrl);
             return abort('404');
         } else {
             $product = $this->modelProduct->getProductBySlugBrandAndCountry($slug, $brand_id, $country_id);
         }
 
         if($product === null) {
+            Log::info('404 - Product null - Slug: '.$slug.' Brand: '.$brandUrl);
             return abort('404');
         } else {
             if($product->country_id != $country_id) { //show product for that country if exists
@@ -124,7 +126,7 @@ class HomeController extends Controller
                 $getTests = json_decode($this->modelTest->getAllTests(null, $product_id, 1, null), true);
                 $activeTests = $this->getMultipleItemsFromQuery($getTests, 'id_test');
                 if (count($activeTests) === 0) {
-                    Log::info('Test - Default variation - '. $product->product_name);
+//                    Log::info('Test - Default variation - '. $product->product_name);
                     $variation = $this->modelVariation->getDefaultVariationByProductId($product_id);
                 } else {
                     $visitsTotal = 1;
@@ -148,7 +150,7 @@ class HomeController extends Controller
                             if ($currentPercentage <= $percentage) {
                                 $variation = $this->modelVariation->getAllVariations(null, null, null, null, null, $singleTestVariation['id_variation']);
                                 $this->customerData['test_variation_id'] = $singleTestVariation['id_tests_variations'];
-                                Log::info('Test - Test variation - '.$singleTestVariation['id_tests_variations'].' - '. $product->product_name);
+//                                Log::info('Test - Test variation - '.$singleTestVariation['id_tests_variations'].' - '. $product->product_name);
                                 break;
                             }
                         }
@@ -207,7 +209,7 @@ class HomeController extends Controller
                 Log::error("Error: Session - Lander view - DB | Exception: " . $exception->getMessage());
             }
         }
-        Log::info('Test - Lander view - '.$this->customerData['session_id']);
+//        Log::info('Test - Lander view - '.$this->customerData['session_id']);
         return view($this->returnedData['landerView'], $this->data);
     }
 
@@ -226,7 +228,7 @@ class HomeController extends Controller
                 Log::error("Error: Session - Checkout view - DB | Exception: " . $exception->getMessage());
             }
         }
-        Log::info('Test - Checkout view - '.$this->customerData['session_id']);
+//        Log::info('Test - Checkout view - '.$this->customerData['session_id']);
         return view($this->returnedData['checkoutView'], $this->data);
     }
 
@@ -242,7 +244,7 @@ class HomeController extends Controller
 
         $this->data['fb_event'] = "Purchase";
 
-        Log::info('Test - Thankyou view - '.$this->customerData['session_id']);
+//        Log::info('Test - Thankyou view - '.$this->customerData['session_id']);
         $this->data['landerView'] = $this->returnedData['landerView'];
         return view($this->returnedData['thankyouView'], $this->data);
     }
