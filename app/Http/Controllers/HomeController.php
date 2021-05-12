@@ -124,6 +124,7 @@ class HomeController extends Controller
                 $getTests = json_decode($this->modelTest->getAllTests(null, $product_id, 1, null), true);
                 $activeTests = $this->getMultipleItemsFromQuery($getTests, 'id_test');
                 if (count($activeTests) === 0) {
+                    Log::info('Test - Default variation - '. $product->product_name);
                     $variation = $this->modelVariation->getDefaultVariationByProductId($product_id);
                 } else {
                     $visitsTotal = 1;
@@ -147,6 +148,7 @@ class HomeController extends Controller
                             if ($currentPercentage <= $percentage) {
                                 $variation = $this->modelVariation->getAllVariations(null, null, null, null, null, $singleTestVariation['id_variation']);
                                 $this->customerData['test_variation_id'] = $singleTestVariation['id_tests_variations'];
+                                Log::info('Test - Test variation - '.$singleTestVariation['id_tests_variations'].' - '. $product->product_name);
                                 break;
                             }
                         }
@@ -295,6 +297,7 @@ class HomeController extends Controller
         }
 
         if(isset($uuid)) {
+            Log::info('Test - Uuid - '. $uuid);
             $request->session()->put('uuid', $uuid);
         }
 
@@ -550,7 +553,7 @@ class HomeController extends Controller
         $events = array();
         array_push($events, $event);
         $api_request = (new EventRequest($pixel_id))
-            ->setTestEventCode('TEST12831')
+            ->setTestEventCode('TEST20632')
             ->setEvents($events);
         $response = $api_request->execute();
 
