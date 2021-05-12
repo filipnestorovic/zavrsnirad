@@ -35,6 +35,7 @@ class Variation extends Model
             ->leftJoin('lander', 'variation.lander_id', '=', 'lander.id_lander')
             ->leftJoin('checkout', 'variation.checkout_id', '=', 'checkout.id_checkout')
             ->leftJoin('thankyou', 'variation.thankyou_id', '=', 'thankyou.id_thankyou')
+            ->leftJoin('brand', 'product.brand_id', '=', 'brand.id_brand')
             ->select('*','variation.deleted_at as variation_deleted','variations_prices.deleted_at as variation_price_deleted')
             ->orderBy('variation.product_id', 'asc')
             ->orderBy('variation.is_variation_default', 'desc')
@@ -51,6 +52,7 @@ class Variation extends Model
             $result->where(function ($query) use($searchFilter) {
                 $query->where('variation.variation_name', 'LIKE', '%'.$searchFilter.'%')
                     ->orWhere('variation.variation_description', 'LIKE', '%'.$searchFilter.'%')
+                    ->orWhere('brand.brand_name', 'LIKE', '%'.$searchFilter.'%')
                     ->orWhere('product.product_name', 'LIKE', '%'.$searchFilter.'%');
             });
         }
