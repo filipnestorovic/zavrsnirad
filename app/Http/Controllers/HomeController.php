@@ -76,8 +76,6 @@ class HomeController extends Controller
 
     public function index(Request $request, $site = null, $domain = null, $slug = null, $coupon = null) {
 
-        \Log::debug('Test debug message');
-
         $brandUrl = 'https://'.$site.'.'.$domain;
         $country_id = $request->get('countryId');
 
