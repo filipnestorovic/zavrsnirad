@@ -36,6 +36,7 @@ class Checkout extends Model
         $result = DB::table('checkout')
             ->where('country_id','=',$id)
             ->whereNull('checkout.deleted_at')
+            ->orderByDesc('id_checkout')
             ->get();
         return $result;
     }
