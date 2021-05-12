@@ -102,14 +102,21 @@ return [
             'path' => storage_path('logs/laravel.log'),
         ],
 
+//        'rollbar' => [
+//            'driver' => 'monolog',
+//            'handler' => \Rollbar\Laravel\MonologHandler::class,
+//            'access_token' => env('ROLLBAR_TOKEN'),
+//            'level' => 'debug',
+//            'person_fn' => 'Auth::user',
+//            'capture_email' => true,            //optional
+//            'capture_username' => true     //optional
+//        ],
+
         'rollbar' => [
             'driver' => 'monolog',
             'handler' => \Rollbar\Laravel\MonologHandler::class,
             'access_token' => env('ROLLBAR_TOKEN'),
             'level' => 'debug',
-            'person_fn' => 'Auth::user',
-            'capture_email' => true,            //optional
-            'capture_username' => true     //optional
         ],
 
     ],
