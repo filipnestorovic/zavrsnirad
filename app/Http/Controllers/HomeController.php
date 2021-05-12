@@ -207,7 +207,7 @@ class HomeController extends Controller
                 Log::error("Error: Session - Lander view - DB | Exception: " . $exception->getMessage());
             }
         }
-
+        Log::info('Test - Lander view - '.$this->customerData['session_id']);
         return view($this->returnedData['landerView'], $this->data);
     }
 
@@ -226,7 +226,7 @@ class HomeController extends Controller
                 Log::error("Error: Session - Checkout view - DB | Exception: " . $exception->getMessage());
             }
         }
-
+        Log::info('Test - Checkout view - '.$this->customerData['session_id']);
         return view($this->returnedData['checkoutView'], $this->data);
     }
 
@@ -242,6 +242,7 @@ class HomeController extends Controller
 
         $this->data['fb_event'] = "Purchase";
 
+        Log::info('Test - Thankyou view - '.$this->customerData['session_id']);
         $this->data['landerView'] = $this->returnedData['landerView'];
         return view($this->returnedData['thankyouView'], $this->data);
     }
@@ -297,7 +298,6 @@ class HomeController extends Controller
         }
 
         if(isset($uuid)) {
-            Log::info('Test - Uuid - '. $uuid);
             $request->session()->put('uuid', $uuid);
         }
 
