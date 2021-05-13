@@ -21,7 +21,7 @@ Auth::routes();
 //})->middleware(['auth'])->name('dashboard');
 
 Route::group([ 'middleware' => ['admin']], function() {
-    Route::domain('admin.wombatsbrand.com')->middleware(['auth'])->group(function () {
+    Route::domain('new.wombatsbrand.com')->middleware(['auth'])->group(function () {
         Route::get('/', [App\Http\Controllers\AdminController::class, 'admin'])->name('adminDashboard');
         Route::get('/logout', [App\Http\Controllers\AdminController::class, 'logout'])->name('logoutAdmin');
 
