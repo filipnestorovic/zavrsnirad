@@ -21,7 +21,7 @@ Auth::routes();
 //})->middleware(['auth'])->name('dashboard');
 
 Route::group([ 'middleware' => ['admin']], function() {
-    Route::domain('new.wombatsbrand.com')->middleware(['auth'])->group(function () {
+    Route::domain('admin.wombatsbrand.com')->middleware(['auth'])->group(function () {
         Route::get('/', [App\Http\Controllers\AdminController::class, 'admin'])->name('adminDashboard');
         Route::get('/logout', [App\Http\Controllers\AdminController::class, 'logout'])->name('logoutAdmin');
 
@@ -120,7 +120,7 @@ Route::group([ 'middleware' => ['admin']], function() {
         Route::get('/removeVariationFromTest/{id}', [App\Http\Controllers\TestController::class, 'removeVariationFromTest'])->name('removeVariationFromTest');
         Route::get('/restoreVariationTest/{id}', [App\Http\Controllers\TestController::class, 'restoreVariationTest'])->name('restoreVariationTest');
 
-        Route::get('/startTest/{id}/{wrongSum?}', [App\Http\Controllers\TestController::class, 'startTest'])->name('startTest');
+        Route::get('/startTest/{id}/{wrongSum?}/{pricesNotSet?}', [App\Http\Controllers\TestController::class, 'startTest'])->name('startTest');
         Route::get('/pauseTest/{id}', [App\Http\Controllers\TestController::class, 'pauseTest'])->name('pauseTest');
         Route::get('/endTest/{id}', [App\Http\Controllers\TestController::class, 'endTest'])->name('endTest');
 

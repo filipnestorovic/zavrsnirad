@@ -32,11 +32,12 @@ class Price extends Model
             ->leftJoin('lander', 'variation.lander_id', '=', 'lander.id_lander')
             ->leftJoin('checkout', 'variation.checkout_id', '=', 'checkout.id_checkout')
             ->leftJoin('thankyou', 'variation.thankyou_id', '=', 'thankyou.id_thankyou')
+            ->selectRaw("*, (variations_prices.deleted_at) AS PriceDeleted")
             ->where('variation.id_variation',$id)
             ->whereNull('variation.deleted_at')
-            ->whereNull('variations_prices.deleted_at')
-            ->get();
-        return $result;
+            ->whereNull('variations_prices.deleted_at');
+
+        return $result->get();
     }
 
     public function checkIfPriceExists($amount, $currency_id) {

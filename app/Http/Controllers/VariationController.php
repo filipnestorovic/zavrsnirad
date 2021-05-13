@@ -8,6 +8,7 @@ use App\Models\Coupon;
 use App\Models\Lander;
 use App\Models\Price;
 use App\Models\Product;
+use App\Models\Statistic;
 use App\Models\Thankyou;
 use App\Models\Variation;
 use Illuminate\Http\Request;
@@ -25,6 +26,7 @@ class VariationController extends Controller
         $this->modelCountry = new Country();
         $this->modelPrice = new Price();
         $this->modelCoupon = new Coupon();
+        $this->modelStatistic = new Statistic();
     }
 
     public function variationsIndex() {
@@ -117,6 +119,12 @@ class VariationController extends Controller
             $allOrdersCount++;
             $revenueTotal += $order->price;
         }
+
+        $singleVariationVisits = $this->modelStatistic->getSingleTestStatistic(null, null, $id);
+
+        $this->data['landerVisits'] = isset($singleVariationVisits[0]->VariationVisits) ? $singleVariationVisits[0]->VariationVisits : 0;
+        $this->data['checkoutVisits'] = isset($singleVariationVisits[1]->VariationVisits) ? $singleVariationVisits[1]->VariationVisits : 0;
+        $this->data['thankyouVisits'] = isset($singleVariationVisits[2]->VariationVisits) ? $singleVariationVisits[2]->VariationVisits : 0;
 
         $this->data['product_id'] = $product_id;
         $this->data['landers'] = $this->modelLander->getLandersByProduct($product_id);

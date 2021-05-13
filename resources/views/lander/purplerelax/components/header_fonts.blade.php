@@ -31,7 +31,7 @@
     @font-face {
         font-family: helvetica;
         src:    url({{ asset('/') }}fonts/helvetica.eot) format('embedded-opentype'),
-                url({{ asset('/') }}fonts/helvetica.otf) format('opentype'),
+                url({{ asset('/') }}fonts/Helvetica.otf) format('opentype'),
                 url({{ asset('/') }}fonts/helvetica.woff) format('woff'),
                 url({{ asset('/') }}fonts/helvetica.ttf) format('truetype'),
                 url({{ asset('/') }}fonts/helvetica.svg) format('svg');

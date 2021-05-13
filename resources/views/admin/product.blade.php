@@ -304,10 +304,10 @@
                     success: function (data) {
                         $('#productTableAjax').html('');
                         $('#productTableAjax').html(data);
-                        // $('[data-toggle="tooltip"]').tooltip();
-                        // $('[data-toggle="popover"]').popover({
-                        //     html: true
-                        // });
+                        $('[data-toggle="tooltip"]').tooltip();
+                        $('[data-toggle="popover"]').popover({
+                            html: true
+                        });
                         afterInitialAjax();
                     },
                     error: function (req, err) {
@@ -316,6 +316,14 @@
                     }
                 });
             }
+
+            $('body').on('click', function (e) {
+                $('[data-toggle=popover]').each(function () {
+                    if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                        $(this).popover('hide');
+                    }
+                });
+            });
 
             fetch_data();
 

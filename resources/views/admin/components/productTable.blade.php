@@ -19,6 +19,14 @@
         <span class="badge bg-danger">Deleted product</span>
     </caption>
     @foreach($paginatedItems as $singleProduct)
+        @php
+            $errorsText = "";
+            if(count($singleProduct[0]['errors']) > 0) {
+                foreach($singleProduct[0]['errors'] as $error) {
+                    $errorsText .= $error."<br/>";
+                }
+            }
+        @endphp
         <tr style="padding-top: 0px;"
             @if($singleProduct[0]["product_deleted"])
                 class="table-danger"
@@ -28,7 +36,12 @@
             @endif
         >
             <td>{{ $singleProduct[0]["id_product"] }}</td>
-            <td>{{ $singleProduct[0]["product_name"] }}</td>
+            <td>
+                {{ $singleProduct[0]["product_name"] }}&nbsp;
+                @if($errorsText != "")
+                    <a data-toggle="popover" data-placement="right" title="Not set" data-content="{{ $errorsText }}"><i  style="color: #F93154;" class="fas fa-exclamation-circle fa-lg"></i></a>
+                @endif
+            </td>
             <td>{{ $singleProduct[0]["sku"] }}</td>
             <td>{{ $singleProduct[0]["slug"] }}</td>
             <td><img src="{{ asset('/').$singleProduct[0]["product_image"] }}" height="70px"/></td>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Price;
 use App\Models\Product;
 use App\Models\Statistic;
 use App\Models\Test;
@@ -17,6 +18,7 @@ class TestController extends Controller
         $this->modelProduct = new Product();
         $this->modelVariation = new Variation();
         $this->modelStatistic = new Statistic();
+        $this->modelPrice = new Price();
     }
 
     public function testsIndex() {
@@ -78,6 +80,7 @@ class TestController extends Controller
             $checkIfTrafficSumIsGood = 0;
             $array = [];
             $totalVariationOrders = [];
+            $pricesNotSet = 0;
             foreach($formattedTest as $variations) {
                 foreach($variations as $variation) {
                     if($variation['removed_at'] === null) {
@@ -93,11 +96,20 @@ class TestController extends Controller
                         $revenueOrders += $singleOrder->price;
                     }
                     $totalVariationOrders[$testVariationId]['orders'] = $countOrders;
-                    $totalVariationOrders[$testVariationId]['revenue'] = $revenueOrders;}
+                    $totalVariationOrders[$testVariationId]['revenue'] = $revenueOrders;
+                    $variationPrices = $this->modelPrice->getPricesForVariation($variation['id_variation']);
+                    if(count($variationPrices)===0) {
+                        $pricesNotSet++;
+                    }
+                }
             }
 
             if($checkIfTrafficSumIsGood != 100) {
                 $this->data['wrongSum'] = 1;
+            }
+
+            if($pricesNotSet > 0) {
+                $this->data['pricesNotSet'] = 1;
             }
 
             iF($request->ajax()) {
@@ -225,10 +237,13 @@ class TestController extends Controller
         }
     }
 
-    public function startTest($id, $wrongSum) {
+    public function startTest($id, $wrongSum, $pricesNotSet) {
         try {
             if($wrongSum === "1") {
                 return redirect()->back()->with('error','Traffic percent sum must be 100!');
+            }
+            if($pricesNotSet === "1") {
+                return redirect()->back()->with('error','One or more variations have no prices!');
             }
             $singleTest = $this->modelTest->getSingleTest($id);
             if($singleTest) {

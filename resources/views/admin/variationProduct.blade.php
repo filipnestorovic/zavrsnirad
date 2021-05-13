@@ -107,7 +107,7 @@
                     </div>
                 </form>
                 <div class="card mt-5">
-                    <div class="card-header">Statistic</div>
+                    <div class="card-header">Orders by quantity</div>
                     <div class="card-body">
                         <table id="statisticTable" class="table table-bordered table-responsive-sm table-striped text-center">
                             <tr>
@@ -125,14 +125,6 @@
                                     <td>{{ $percentage }}%</td>
                                 </tr>
                             @endforeach
-                                <tr>
-                                    <th>Total orders</th>
-                                    <th colspan="2">{{ $allOrders }}</th>
-                                </tr>
-                                <tr>
-                                    <th>Revenue</th>
-                                    <th colspan="2">{{ $totalRevenue }} {{ $currency_symbol }}</th>
-                                </tr>
                         </table>
                     </div>
                 </div>
@@ -221,6 +213,31 @@
                                 </div>
                             </div>
                         </form>
+                    </div>
+                </div>
+                <div class="card mt-5">
+                    <div class="card-header">Statistic for this variation (including tests)</div>
+                    <div class="card-body">
+                        <table id="statisticTable" class="table table-bordered table-responsive-sm table-striped text-center">
+                            <tr>
+                                <th>Lander</th>
+                                <th>Checkout</th>
+                                <th>Thankyou</th>
+                                <th>CTR</th>
+                                <th>CR</th>
+                                <th>Orders</th>
+                                <th>Revenue</th>
+                            </tr>
+                            <tr>
+                                <td>{{ $landerVisits }}</td>
+                                <td>{{ $checkoutVisits }}</td>
+                                <td>{{ $thankyouVisits }}</td>
+                                <td>{{ $landerVisits != 0 ? number_format(($checkoutVisits/$landerVisits)*100, 2) : 0 }}%</td>
+                                <td>{{ $landerVisits != 0 ? number_format(($thankyouVisits/$landerVisits)*100, 2) : 0 }}%</td>
+                                <td>{{ $allOrders }}</td>
+                                <td>{{ $totalRevenue }} {{ $currency_symbol }}</td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>

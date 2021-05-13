@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title></title>
+    <title>Admin panel | Wombats brand</title>
     <!-- MDB icon -->
     <link rel="icon" href="{{asset('')}}admin/img/favicon.png" type="image/x-icon">
     <!-- Font Awesome -->

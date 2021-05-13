@@ -7,6 +7,7 @@ use App\Models\Country;
 use App\Models\Pixel;
 use App\Models\Product;
 use App\Models\Review;
+use App\Models\Variation;
 use App\Traits\UploadTrait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
@@ -40,6 +41,32 @@ class ProductController extends Controller
 
         $productsList = json_decode($this->modelProduct->getAllProductsAjax($searchFilter,$brandFilter,$countryFilter), true);
 
+//        dd($productsList);
+
+        $this->modelVariation = new Variation();
+        $this->modelReview = new Review();
+        $homeController = new HomeController();
+        foreach($productsList as $key => $product) {
+
+            $product_id = $product['id_product'];
+            $brand_id = $product['brand_id'];
+            $errors = [];
+
+            $defaultVariation = $this->modelVariation->getDefaultVariationByProductId($product_id);
+            if(count($defaultVariation) === 0) {
+                array_push($errors, 'Default variation');
+            }
+            $pixels = $homeController->getPixelsForView($product_id, $brand_id);
+            if(count($pixels) === 0) {
+                array_push($errors, 'Pixel');
+            }
+            $review = $this->modelReview->getProductReviews($product_id);
+            if(count($review) === 0) {
+                array_push($errors, 'Reviews');
+            }
+            $productsList[$key]['errors'] = $errors;
+        }
+
         $paginatedData = $this->prepareDataForTableAjax($request, $productsList,'id_product', true, $perPage, $currentPage, 'productTable');
 
         if(!$request->ajax()) {
@@ -47,6 +74,10 @@ class ProductController extends Controller
         }
 
         return $paginatedData;
+    }
+
+    public function checkProductRequirements() {
+
     }
 
     public function productIndex() {

@@ -10,7 +10,7 @@ class Statistic extends Model
 {
     use HasFactory;
 
-    public function getSingleTestStatistic($test_variation_id = null, $test_id = null) {
+    public function getSingleTestStatistic($test_variation_id = null, $test_id = null, $variation_id = null) {
         $result = DB::table('session_events')
             ->groupBy(['session_events.event_id'])
             ->leftJoin('event', 'session_events.event_id', '=', 'event.id_event')
@@ -27,6 +27,11 @@ class Statistic extends Model
         if(!empty($test_id)){
             $result->selectRaw("variation.variation_name, event.event_name, session_events.event_id, COUNT(DISTINCT session_events.session_id) AS TestTotalVisits");
             $result->where('test.id_test', '=', $test_id);
+        }
+
+        if(!empty($variation_id)){
+            $result->selectRaw("event.event_name, session_events.event_id, COUNT(DISTINCT session_events.session_id) AS VariationVisits");
+            $result->where('session.variation_id', '=', $variation_id);
         }
 
         return $result->get();

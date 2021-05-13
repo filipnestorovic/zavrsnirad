@@ -105,7 +105,7 @@
                 <div class="card">
                     <div class="card-body">
                         @if($singleTest->is_active === 0 && $singleTest->ended_at === null)
-                            <a href="{{ route('startTest',['id' => $testId, 'wrongSum' => isset($wrongSum) === true ? $wrongSum : 0]) }}"><button type="button" class="btn btn-success btn-rounded btn-lg startTestBtn">Start test</button></a>
+                            <a href="{{ route('startTest',['id' => $testId, 'wrongSum' => isset($wrongSum) === true ? $wrongSum : 0, 'pricesNotSet' => isset($pricesNotSet) === true ? $pricesNotSet : 0]) }}"><button type="button" class="btn btn-success btn-rounded btn-lg startTestBtn">Start test</button></a>
                         @endif
                         @if($singleTest->ended_at === null && $singleTest->started_at != null && $singleTest->is_active === 1 )
                             <a href="{{ route('pauseTest',['id' => $testId]) }}"><button type="button" class="btn btn-primary btn-rounded btn-lg pauseTestBtn">Pause test</button></a>
@@ -136,7 +136,8 @@
                                 <th>Lander</th>
                                 <th>Checkout</th>
                                 <th>Thankyou</th>
-                                <th>Conversion rate</th>
+                                <th>CTR</th>
+                                <th>CR</th>
                                 <th>Orders</th>
                                 <th>Revenue</th>
                             </tr>
@@ -147,6 +148,11 @@
                                     <td class="landerViews">{{ isset($singleVariation[0]->TestVariationVisits) ? $singleVariation[0]->TestVariationVisits : 0 }}</td>
                                     <td class="checkoutViews">{{ isset($singleVariation[1]->TestVariationVisits) ? $singleVariation[1]->TestVariationVisits : 0 }}</td>
                                     <td class="thankyouViews">{{ isset($singleVariation[2]->TestVariationVisits) ? $singleVariation[2]->TestVariationVisits : 0 }}</td>
+                                    <td>
+                                        @if(isset($singleVariation[1]->TestVariationVisits) && isset($singleVariation[0]->TestVariationVisits))
+                                            {{ number_format(($singleVariation[1]->TestVariationVisits/$singleVariation[0]->TestVariationVisits)*100, 2) }}%
+                                        @endif
+                                    </td>
                                     <td>
                                         @if(isset($singleVariation[2]->TestVariationVisits) && isset($singleVariation[0]->TestVariationVisits))
                                             {{ number_format(($singleVariation[2]->TestVariationVisits/$singleVariation[0]->TestVariationVisits)*100, 2) }}%
@@ -162,6 +168,7 @@
                                 <th id="landerTotal"></th>
                                 <th id="checkoutTotal"></th>
                                 <th id="thankyouTotal"></th>
+                                <th id="ctrTotal"></th>
                                 <th id="conversionTotal"></th>
                                 <th id="ordersTotal"></th>
                                 <th id="revenueTotal"></th>
@@ -345,11 +352,13 @@
                 $revenueSum += parseInt($slicedField);
             });
 
+            $ctrTotal = ($checkoutSum/$landerSum)*100;
             $conversionTotal = ($thankyouSum/$landerSum)*100;
 
             $('#landerTotal').html($landerSum);
             $('#checkoutTotal').html($checkoutSum);
             $('#thankyouTotal').html($thankyouSum);
+            $('#ctrTotal').html($ctrTotal.toFixed(2) + "%");
             $('#conversionTotal').html($conversionTotal.toFixed(2) + "%");
             $('#ordersTotal').html($orderSum);
             $('#revenueTotal').html($revenueSum + " RSD");
@@ -381,6 +390,14 @@
                 $('.startTestBtn').click(function (e) {
                     e.preventDefault();
                     return alert('Traffic percent sum must be 100!');
+                });
+            @endif
+
+            @if(isset($pricesNotSet) && $pricesNotSet === 1)
+                $('.startTestBtn').prop('disabled', true);
+                $('.startTestBtn').click(function (e) {
+                    e.preventDefault();
+                    return alert('One or more variations have no prices!');
                 });
             @endif
 
