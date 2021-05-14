@@ -22,7 +22,7 @@ Auth::routes();
 
 Route::group([ 'middleware' => ['admin']], function() {
 
-    $adminRoutes = function () {
+    Route::domain('new.wombatsbrand.com')->middleware(['auth'])->group(function () {
         Route::get('/', [App\Http\Controllers\AdminController::class, 'admin'])->name('adminDashboard');
         Route::get('/logout', [App\Http\Controllers\AdminController::class, 'logout'])->name('logoutAdmin');
 
@@ -132,11 +132,8 @@ Route::group([ 'middleware' => ['admin']], function() {
         Route::get('/deleteEvent/{id}', [App\Http\Controllers\EventController::class, 'deleteEvent'])->name('deleteEvent');
 
         require __DIR__.'/auth.php';
-    };
 
-    Route::domain('new.wombatsbrand.com')->middleware(['auth'])->group($adminRoutes);
-    Route::domain('admin.wombatsbrand.com')->middleware(['auth'])->group($adminRoutes);
-
+    });
 });
 
 Route::group(['middleware' => ['guest']], function () {
