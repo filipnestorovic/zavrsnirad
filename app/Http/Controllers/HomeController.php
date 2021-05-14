@@ -79,6 +79,11 @@ class HomeController extends Controller
         $brandUrl = 'https://'.$site.'.'.$domain;
         $country_id = $request->get('countryId');
 
+        if($slug === "purplerelax") {
+            Log::info('From Google with slug *purplerelax* - slug changed to *vratnimasazer*');
+            $slug = "vratnimasazer";
+        }
+
         $brand_id = $this->modelBrand->getBrandByUrl($brandUrl)->id_brand;
 
         if($brand_id === null) {
