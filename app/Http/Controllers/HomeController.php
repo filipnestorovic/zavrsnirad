@@ -560,7 +560,7 @@ class HomeController extends Controller
         $events = array();
         array_push($events, $event);
         $api_request = (new EventRequest($pixel_id))
-            ->setTestEventCode('TEST20632')
+            ->setTestEventCode('TEST35501')
             ->setEvents($events);
         $response = $api_request->execute();
 
