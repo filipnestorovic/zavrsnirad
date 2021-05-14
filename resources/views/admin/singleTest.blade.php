@@ -140,6 +140,7 @@
                                 <th>CR</th>
                                 <th>Orders</th>
                                 <th>Revenue</th>
+                                <th>AOV</th>
                             </tr>
                             @foreach($singleVariationStatistic as $key => $singleVariation)
                                 <tr>
@@ -160,9 +161,14 @@
                                     </td>
                                     <td class="ordersColumn">{{ $testOrders[$key]['orders'] }}</td>
                                     <td class="revenueColumn">{{ $testOrders[$key]['revenue'] }} RSD</td>
+                                    <td class="aovColumn">
+                                        @if($testOrders[$key]['orders'] != 0)
+                                            {{ number_format(($testOrders[$key]['revenue']/$testOrders[$key]['orders']), 2) }} RSD
+                                        @endif
+                                    </td>
                                 </tr>
                             @endforeach
-                            <tr class="table-primary">
+                            <tr class="table-secondary">
                                 <th></th>
                                 <th>Total</th>
                                 <th id="landerTotal"></th>
@@ -172,6 +178,7 @@
                                 <th id="conversionTotal"></th>
                                 <th id="ordersTotal"></th>
                                 <th id="revenueTotal"></th>
+                                <th id="aovTotal"></th>
                             </tr>
                         </table>
                     </div>
@@ -354,6 +361,7 @@
 
             $ctrTotal = ($checkoutSum/$landerSum)*100;
             $conversionTotal = ($thankyouSum/$landerSum)*100;
+            $aovTotal = $revenueSum/$orderSum;
 
             $('#landerTotal').html($landerSum);
             $('#checkoutTotal').html($checkoutSum);
@@ -362,12 +370,13 @@
             $('#conversionTotal').html($conversionTotal.toFixed(2) + "%");
             $('#ordersTotal').html($orderSum);
             $('#revenueTotal').html($revenueSum + " RSD");
+            $('#aovTotal').html($aovTotal.toLocaleString('rs', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + " RSD");
 
             let max = 0;
             let maxIndex = 0;
             let newvalue = 0;
             for (let i=1; i < document.getElementById('dataTable').rows.length-1; i++){
-                newRow = document.getElementById('dataTable').rows[i].cells[5].innerText;
+                newRow = document.getElementById('dataTable').rows[i].cells[6].innerText;
                 newvalue = parseFloat(newRow.slice(0, -1));
                 if (newvalue > max) {
                     max = newvalue;

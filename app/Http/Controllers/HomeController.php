@@ -84,6 +84,11 @@ class HomeController extends Controller
             $slug = "vratnimasazer";
         }
 
+        if($slug === "masazer") {
+            Log::info('From Google with slug *masazer* - slug changed to *multifunkcionalnimasazer*');
+            $slug = "multifunkcionalnimasazer";
+        }
+
         $brand_id = $this->modelBrand->getBrandByUrl($brandUrl)->id_brand;
 
         if($brand_id === null) {
