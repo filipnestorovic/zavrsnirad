@@ -85,10 +85,10 @@
                                             @foreach($reviews as $review)
                                                 <tr>
                                                     <td class="pt-3-half">{{$review->id_review}}</td>
-                                                    <td class="pt-3-half">{{$review->review_text}}</td>
+                                                    <td class="pt-3-half w-50">{{$review->review_text}}</td>
                                                     <td class="pt-3-half">{{$review->review_name}}</td>
                                                     <td class="pt-3-half">{{$review->stars}}</td>
-                                                    <td class="pt-3-half"><img src="{{ asset('/').$review->review_image }}" height="50px"/></td>
+                                                    <td class="pt-3-half"><img src="{{ asset('/').$review->review_image }}" height="70px"/></td>
                                                     <td>
                                                         <span class="table-edit"><button type="button" class="btn btn-primary btn-rounded btn-sm my-0 editReviewBtn" data-toggle="modal" data-target="#editReview" value="{{$review->id_review}}">EDIT</button></span>
                                                         <span class="table-remove"><a href="{{ route('deleteReview',['id' => $review->id_review]) }}"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0 deleteReviewBtn">DELETE</button></a></span>
