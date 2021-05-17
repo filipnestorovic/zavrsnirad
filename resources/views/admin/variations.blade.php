@@ -158,6 +158,7 @@
                     url: baseURL + "ajaxData/getVariationsAjax?page=" + currentPage,
                     data: {searchFilter:searchFilter, landerFilter:landerFilter, checkoutFilter:checkoutFilter, thankyouFilter: thankyouFilter, productFilter: productFilter},
                     success: function (data) {
+                        // console.log(data);
                         $('#variationTableAjax').html('');
                         $('#variationTableAjax').html(data);
                         $('[data-toggle="tooltip"]').tooltip();
