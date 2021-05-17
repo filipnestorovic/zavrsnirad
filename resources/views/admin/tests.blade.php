@@ -39,8 +39,8 @@
                                 <select id="activeFilter"  name="activeFilter">
                                     <option value="" data-width="auto" selected>All</option>
                                     <option value="1">Active</option>
-                                    <option value="0">Inactive</option>
-                                    <option value="2">Finished</option>
+                                    <option value="2">Inactive</option>
+                                    <option value="3">Finished</option>
                                 </select>
                                 <script>
                                    $("#activeFilter").selectpicker("render");
@@ -133,6 +133,7 @@
                     url: baseURL + "ajaxData/getTestsAjax?page=" + currentPage,
                     data: {searchFilter:searchFilter, productFilter: productFilter, activeFilter: activeFilter},
                     success: function (data) {
+                        console.log(data);
                         $('#testTableAjax').html('');
                         $('#testTableAjax').html(data);
                     },
