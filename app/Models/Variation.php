@@ -79,10 +79,8 @@ class Variation extends Model
                 $q->select('variation_id')
                     ->from('tests_variations')
                     ->leftJoin('test', 'tests_variations.test_id', '=', 'test.id_test')
-                    ->where([
-                        ['test.is_active','=',1],
-                        ['test.id_test','<>',$test_id]
-                    ]);
+                    ->where('test.is_active','=',1)
+                    ->orWhere('test.id_test','=',$test_id);
             })
             ->whereNull('variation.deleted_at')
             ->get();
