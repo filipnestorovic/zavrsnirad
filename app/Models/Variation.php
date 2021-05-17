@@ -72,14 +72,17 @@ class Variation extends Model
         return $result->get();
     }
 
-    public function getAvailableVariationsByProductId($id) {
+    public function getAvailableVariationsByProductId($id, $test_id) {
         $result = DB::table('variation')
             ->where('product_id','=',$id)
-            ->whereNotIn('id_variation', function($q){
+            ->whereNotIn('id_variation', function($q) use ($test_id){
                 $q->select('variation_id')
                     ->from('tests_variations')
                     ->leftJoin('test', 'tests_variations.test_id', '=', 'test.id_test')
-                    ->where('test.is_active','=',1);
+                    ->where([
+                        ['test.is_active','=',1],
+                        ['test.id_test','<>',$test_id]
+                    ]);
             })
             ->whereNull('variation.deleted_at')
             ->get();

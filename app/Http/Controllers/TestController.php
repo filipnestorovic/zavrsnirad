@@ -80,7 +80,7 @@ class TestController extends Controller
             $this->data['testId'] = $id;
             $this->data['singleTest'] = $singleTest;
             $this->data['product'] = $this->modelProduct->getProduct($singleTest->product_id);
-            $this->data['availableVariationsForProduct'] = $this->modelVariation->getAvailableVariationsByProductId($singleTest->product_id);
+            $this->data['availableVariationsForProduct'] = $this->modelVariation->getAvailableVariationsByProductId($singleTest->product_id, $id);
 
             $unformattedTest = json_decode($this->modelTest->getAllTests($id), true);
             $formattedTest = $this->getMultipleItemsFromQuery($unformattedTest, 'id_test');
