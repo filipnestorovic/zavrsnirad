@@ -51,17 +51,25 @@ class TestController extends Controller
     }
 
     public function createTest(Request $request) {
-        $this->modelTest->product_id = $request->get('productIdTestCreate');
-        try {
-            $insertedTestId = $this->modelTest->insertTest();
-            if($insertedTestId) {
-                return redirect()->route('singleTest',['id' => $insertedTestId])->with('success','Test has been created successfully, you can add variations now!');
-            } else {
-                return redirect()->route('testsIndex')->with('error','Error with adding new test to database!');
+        $product_id = $request->get('productIdTestCreate');
+
+        $activeTestForProduct = $this->modelTest->getAllTests(null, $product_id, 1, null);
+
+        if(count($activeTestForProduct)>0) {
+            return redirect()->route('testsIndex')->with('error','On going test with this product!');
+        } else {
+            try {
+                $this->modelTest->product_id = $product_id;
+                $insertedTestId = $this->modelTest->insertTest();
+                if($insertedTestId) {
+                    return redirect()->route('singleTest',['id' => $insertedTestId])->with('success','Test has been created successfully, you can add variations now!');
+                } else {
+                    return redirect()->route('testsIndex')->with('error','Error with adding new test to database!');
+                }
+            } catch (\Exception $exception) {
+                Log::error("Error: Inserting new test | Exception: " . $exception->getMessage());
+                return redirect()->route('testsIndex')->with('error','Error on inserting new test!');
             }
-        } catch (\Exception $exception) {
-            Log::error("Error: Inserting new test | Exception: " . $exception->getMessage());
-            return redirect()->route('testsIndex')->with('error','Error on inserting new test!');
         }
     }
 

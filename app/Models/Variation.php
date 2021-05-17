@@ -76,7 +76,10 @@ class Variation extends Model
         $result = DB::table('variation')
             ->where('product_id','=',$id)
             ->whereNotIn('id_variation', function($q){
-                $q->select('variation_id')->from('tests_variations');
+                $q->select('variation_id')
+                    ->from('tests_variations')
+                    ->leftJoin('test', 'tests_variations.test_id', '=', 'test.id_test')
+                    ->where('test.is_active','=',1);
             })
             ->whereNull('variation.deleted_at')
             ->get();

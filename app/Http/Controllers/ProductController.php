@@ -76,10 +76,6 @@ class ProductController extends Controller
         return $paginatedData;
     }
 
-    public function checkProductRequirements() {
-
-    }
-
     public function productIndex() {
         $this->data['countriesDdl'] = $this->modelCountry->getAllCountries();
         $this->data['brandsDdl'] = $this->modelBrand->getAllBrands();

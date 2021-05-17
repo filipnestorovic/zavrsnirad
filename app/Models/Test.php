@@ -44,8 +44,13 @@ class Test extends Model
         if(!empty($activeFilter)){
             if($activeFilter === 2) {
                 $result->whereNotNull('test.ended_at');
-            } else {
+                $result->where('test.is_active', '=', 0);
+            } else if($activeFilter === 1) {
                 $result->where('test.is_active', '=', $activeFilter);
+            }
+            else if($activeFilter === 0) {
+                $result->where('test.is_active', '=', $activeFilter);
+                $result->whereNull('test.ended_at');
             }
         }
         if(!empty($test_id)){
