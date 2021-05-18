@@ -42,13 +42,13 @@ class Test extends Model
             $result->where('test.product_id', '=', $productFilter);
         }
         if(!empty($activeFilter)){
-            if($activeFilter === "3") {
+            if((int)$activeFilter === 3) {
                 $result->whereNotNull('test.ended_at');
                 $result->where('test.is_active', '=', 0);
-            } else if($activeFilter === "1") {
+            } else if((int)$activeFilter === 1) {
                 $result->where('test.is_active', '=', 1);
             }
-            else if($activeFilter === "2") {
+            else if((int)$activeFilter === 2) {
                 $result->where('test.is_active', '=', 0);
                 $result->whereNull('test.ended_at');
             }

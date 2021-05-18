@@ -68,7 +68,11 @@
                                                     @endif
                                                 >
                                                 <td class="pt-3-half">{{ $singleVariation['id_tests_variations'] }}</td>
-                                                <td class="pt-3-half">{{ $singleVariation['variation_name'] }}</td>
+                                                <td class="pt-3-half">
+                                                    <a class="text-primary" href="{{ route('variation',['id' => $singleVariation['id_variation']]) }}">
+                                                        {{ $singleVariation['variation_name'] }}
+                                                    </a>
+                                                </td>
                                                 <td class="pt-3-half
                                                 @if((isset($wrongSum) && $wrongSum===1) && ($singleVariation['removed_at'] === null)) bg-warning @endif
                                                 ">{{$singleVariation['traffic_percentage']}}</td>
@@ -247,6 +251,9 @@
     <style>
         #tableCouponBody td {
             vertical-align: middle;
+        }
+        .variationDetailsLink {
+
         }
     </style>
 @endsection

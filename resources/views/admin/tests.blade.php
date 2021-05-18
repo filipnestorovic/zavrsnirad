@@ -133,7 +133,6 @@
                     url: baseURL + "ajaxData/getTestsAjax?page=" + currentPage,
                     data: {searchFilter:searchFilter, productFilter: productFilter, activeFilter: activeFilter},
                     success: function (data) {
-                        console.log(data);
                         $('#testTableAjax').html('');
                         $('#testTableAjax').html(data);
                     },
