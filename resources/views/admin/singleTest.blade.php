@@ -149,18 +149,18 @@
                             @foreach($singleVariationStatistic as $key => $singleVariation)
                                 <tr>
                                     <td>{{ $key }}</td>
-                                    <th>{{ isset($singleVariation[0]->variation_name) ? $singleVariation[0]->variation_name : "" }}</th>
-                                    <td class="landerViews">{{ isset($singleVariation[0]->TestVariationVisits) ? $singleVariation[0]->TestVariationVisits : 0 }}</td>
-                                    <td class="checkoutViews">{{ isset($singleVariation[1]->TestVariationVisits) ? $singleVariation[1]->TestVariationVisits : 0 }}</td>
-                                    <td class="thankyouViews">{{ isset($singleVariation[2]->TestVariationVisits) ? $singleVariation[2]->TestVariationVisits : 0 }}</td>
+                                    <th>{{ isset($singleVariation['VariationName']) ? $singleVariation['VariationName'] : "" }}</th>
+                                    <td class="landerViews">{{ isset($singleVariation['LanderView']) ? $singleVariation['LanderView'] : 0 }}</td>
+                                    <td class="checkoutViews">{{ isset($singleVariation['CheckoutView']) ? $singleVariation['CheckoutView'] : 0 }}</td>
+                                    <td class="thankyouViews">{{ isset($singleVariation['Purchase']) ? $singleVariation['Purchase'] : 0 }}</td>
                                     <td>
-                                        @if(isset($singleVariation[1]->TestVariationVisits) && isset($singleVariation[0]->TestVariationVisits))
-                                            {{ number_format(($singleVariation[1]->TestVariationVisits/$singleVariation[0]->TestVariationVisits)*100, 2) }}%
+                                        @if(isset($singleVariation['CheckoutView']) && isset($singleVariation['LanderView']))
+                                            {{ number_format(($singleVariation['CheckoutView']/$singleVariation['LanderView'])*100, 2) }}%
                                         @endif
                                     </td>
                                     <td>
-                                        @if(isset($singleVariation[2]->TestVariationVisits) && isset($singleVariation[0]->TestVariationVisits))
-                                            {{ number_format(($singleVariation[2]->TestVariationVisits/$singleVariation[0]->TestVariationVisits)*100, 2) }}%
+                                        @if(isset($singleVariation['Purchase']) && isset($singleVariation['LanderView']))
+                                            {{ number_format(($singleVariation['Purchase']/$singleVariation['LanderView'])*100, 2) }}%
                                         @endif
                                     </td>
                                     <td class="ordersColumn">{{ $testOrders[$key]['orders'] }}</td>

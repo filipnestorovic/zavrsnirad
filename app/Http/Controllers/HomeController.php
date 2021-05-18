@@ -486,6 +486,17 @@ class HomeController extends Controller
         return $this->customerData;
     }
 
+    public function insertEventDbAjax(Request $request) {
+        try {
+            $session_id = $request->get('session_id');
+            $event_id = $request->get('event_id');
+
+            $insertResult = $this->modelEvent->insertSessionEvent($session_id, $event_id);
+        } catch (\Exception $exception) {
+            Log::error("Error: Inserting session event with Ajax | Session: ".$session_id." Event: ".$event_id." Exception: " . $exception->getMessage());
+        }
+    }
+
     public function generateUuid($onlyNumbers = null) {
         $l=10;
         $str = "";

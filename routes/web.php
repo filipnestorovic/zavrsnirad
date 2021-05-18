@@ -146,6 +146,7 @@ Route::group(['middleware' => ['guest']], function () {
     };
 
     Route::get('/ajax/sendConversionApiFB', [App\Http\Controllers\HomeController::class, 'sendConversionApiFB'])->name('sendConversionApiFB');
+    Route::post('/insertSessionAjax', [App\Http\Controllers\HomeController::class, 'insertEventDbAjax'])->name('insertEventDbAjax');
 
     Route::post('/selectCountry', [App\Http\Controllers\HomeController::class, 'selectCountry'])->name('selectCountry');
 

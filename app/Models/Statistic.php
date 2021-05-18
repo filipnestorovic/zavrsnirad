@@ -12,7 +12,7 @@ class Statistic extends Model
 
     public function getSingleTestStatistic($test_variation_id = null, $test_id = null, $variation_id = null) {
         $result = DB::table('session_events')
-            ->groupBy(['session_events.event_id'])
+            ->groupBy('session_events.event_id')
             ->leftJoin('event', 'session_events.event_id', '=', 'event.id_event')
             ->leftJoin('session', 'session_events.session_id', '=', 'session.id_session')
             ->leftJoin('tests_variations', 'session.test_variation_id', '=', 'tests_variations.id_tests_variations')

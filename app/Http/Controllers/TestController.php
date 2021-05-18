@@ -93,21 +93,38 @@ class TestController extends Controller
                 foreach($variations as $variation) {
                     if($variation['removed_at'] === null) {
                         $checkIfTrafficSumIsGood += $variation['traffic_percentage'];
-                    }
-                    $testVariationId = $variation['id_tests_variations'];
-                    $array[$testVariationId] = $this->modelStatistic->getSingleTestStatistic($testVariationId);
-                    $testOrders = $this->modelStatistic->getOrdersForVariationInActiveTest($testVariationId);
-                    $countOrders = 0;
-                    $revenueOrders = 0;
-                    foreach($testOrders as $singleOrder) {
-                        $countOrders++;
-                        $revenueOrders += $singleOrder->price;
-                    }
-                    $totalVariationOrders[$testVariationId]['orders'] = $countOrders;
-                    $totalVariationOrders[$testVariationId]['revenue'] = $revenueOrders;
-                    $variationPrices = $this->modelPrice->getPricesForVariation($variation['id_variation']);
-                    if(count($variationPrices)===0) {
-                        $pricesNotSet++;
+
+                        $testVariationId = $variation['id_tests_variations'];
+
+                        $testStatistic = $this->modelStatistic->getSingleTestStatistic($testVariationId);
+                        $newArray = [];
+                        foreach ($testStatistic as $key => $value) {
+                            $newArray['VariationName'] = $value->variation_name;
+                            $newArray[$value->event_name] = $value->TestVariationVisits;
+                        }
+
+                        $array[$testVariationId] = $newArray;
+                        $testOrders = $this->modelStatistic->getOrdersForVariationInActiveTest($testVariationId);
+                        $countOrders = 0;
+                        $revenueOrders = 0;
+                        foreach ($testOrders as $singleOrder) {
+                            $countOrders++;
+                            $revenueOrders += $singleOrder->price;
+                        }
+                        $totalVariationOrders[$testVariationId]['orders'] = $countOrders;
+                        $totalVariationOrders[$testVariationId]['revenue'] = $revenueOrders;
+                        if ($variation['removed_at'] === null) {
+                            $variationPrices = $this->modelPrice->getPricesForVariation($variation['id_variation'], $id);
+                            $variationPriceNotSet = 0;
+                            foreach ($variationPrices as $vp) {
+                                if ($vp->id_variations_prices === null || $vp->PriceDeleted != null) {
+                                    $variationPriceNotSet++;
+                                }
+                            }
+                            if (count($variationPrices) === $variationPriceNotSet) {
+                                $pricesNotSet++;
+                            }
+                        }
                     }
                 }
             }

@@ -2,9 +2,12 @@
     $(document).ready(function () {
         let name, email, phone, city, zip, country_code, currency_symbol, amount;
         const baseURL = "{{ asset('/') }}";
+        const csrf_token = "{{ csrf_token() }}";
         let sessionId = "{{ $session_id }}";
         let getUrlParams = new URLSearchParams(window.location.search);
         let fbclid = getUrlParams.get('fbclid');
+        let landerCheckout = $('#landerCheckout').val();
+        let sentAddToCart = 0;
 
         @if($fb_event === "Purchase" && $order != null)
              name = "{{ $order->name }}";
@@ -35,6 +38,9 @@
             @foreach($pixels as $pixel)
                 sendFbEvent('{{$pixel}}','{{$fb_event}}');
             @endforeach
+            if(landerCheckout === "1" && sentAddToCart === 0) {
+                sendEventDB(sessionId,2);
+            }
         });
 
         $("a[href^='#']").click(function(){
@@ -43,7 +49,29 @@
             @foreach($pixels as $pixel)
                 sendFbEvent('{{$pixel}}','{{$fb_event}}');
             @endforeach
+            if(landerCheckout === "1" && sentAddToCart === 0) {
+                sendEventDB(sessionId,2);
+            }
         });
+
+        function sendEventDB($session_id, $event_id) {
+            $.ajax({
+                url: baseURL + "insertSessionAjax",
+                type:"POST",
+                data:{
+                    session_id:$session_id,
+                    event_id:$event_id,
+                    _token: csrf_token
+                },
+                success:function(response){
+                    sentAddToCart = 1;
+                    console.log(response);
+                },
+                error: function (req, err) {
+                    console.log(req);
+                }
+            });
+        }
 
         function sendFbEvent(pixel_id, fb_event) {
             $.ajax({

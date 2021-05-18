@@ -122,9 +122,14 @@ class VariationController extends Controller
 
         $singleVariationVisits = $this->modelStatistic->getSingleTestStatistic(null, null, $id);
 
-        $this->data['landerVisits'] = isset($singleVariationVisits[0]->VariationVisits) ? $singleVariationVisits[0]->VariationVisits : 0;
-        $this->data['checkoutVisits'] = isset($singleVariationVisits[1]->VariationVisits) ? $singleVariationVisits[1]->VariationVisits : 0;
-        $this->data['thankyouVisits'] = isset($singleVariationVisits[2]->VariationVisits) ? $singleVariationVisits[2]->VariationVisits : 0;
+        $newArray = [];
+        foreach ($singleVariationVisits as $key => $value) {
+            $newArray[$value->event_name] = $value->VariationVisits;
+        }
+
+        $this->data['landerVisits'] = isset($newArray['LanderView']) ? $newArray['LanderView'] : 0;
+        $this->data['checkoutVisits'] = isset($newArray['CheckoutView']) ? $newArray['CheckoutView'] : 0;
+        $this->data['thankyouVisits'] = isset($newArray['Purchase']) ? $newArray['Purchase'] : 0;
 
         $this->data['product_id'] = $product_id;
         $this->data['landers'] = $this->modelLander->getLandersByProduct($product_id);
