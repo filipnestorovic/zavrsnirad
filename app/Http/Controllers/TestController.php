@@ -88,19 +88,21 @@ class TestController extends Controller
             $checkIfTrafficSumIsGood = 0;
             $array = [];
             $totalVariationOrders = [];
-            $pricesNotSet = 0;
+//            $pricesNotSet = 0;
             foreach($formattedTest as $variations) {
                 foreach($variations as $variation) {
                     if($variation['removed_at'] === null) {
                         $checkIfTrafficSumIsGood += $variation['traffic_percentage'];
 
                         $testVariationId = $variation['id_tests_variations'];
+                        $testStatistic = $this->modelStatistic->getSingleTestStatistic($testVariationId, $id, null);
 
-                        $testStatistic = $this->modelStatistic->getSingleTestStatistic($testVariationId);
                         $newArray = [];
                         foreach ($testStatistic as $key => $value) {
                             $newArray['VariationName'] = $value->variation_name;
-                            $newArray[$value->event_name] = $value->TestVariationVisits;
+                            if(isset($value->TestVariationVisits)) {
+                                $newArray[$value->event_name] = $value->TestVariationVisits;
+                            }
                         }
 
                         $array[$testVariationId] = $newArray;
