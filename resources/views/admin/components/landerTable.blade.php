@@ -17,6 +17,9 @@
             @if($singleLander[0]["lander_deleted"])
             class="table-danger"
             @endif
+            @if($singleLander[0]["mobile_version"])
+            class="table-warning"
+                @endif
         >
             <td>{{ $singleLander[0]["id_lander"] }}</td>
             <td>{{ $singleLander[0]["lander_name"] }}</td>

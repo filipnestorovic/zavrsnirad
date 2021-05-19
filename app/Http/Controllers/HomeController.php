@@ -99,7 +99,17 @@ class HomeController extends Controller
         }
 
         if($product === null) {
-            Log::info('404 - Product null - Slug: '.$slug.' Brand: '.$brandUrl);
+            if($slug === "akupunkturnaolovkaFiles") {
+                $agent = new Agent();
+                $info['ip'] = $request->ip();
+                $info['user_agent'] = $agent->getUserAgent();
+                $info['isRobot'] = $agent->isRobot();
+                $info['httpHeaders'] = $agent->getHttpHeaders();
+
+                Log::info('404 - Slug akupunkturnaFiles - Coupon: '.$coupon.' More info: '.json_encode($info, JSON_PRETTY_PRINT));
+            } else {
+                Log::info('404 - Product null - Slug: '.$slug.' Brand: '.$brandUrl);
+            }
             return abort('404');
         } else {
             if($product->country_id != $country_id) { //show product for that country if exists
