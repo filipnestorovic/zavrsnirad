@@ -99,14 +99,14 @@ class HomeController extends Controller
         }
 
         if($product === null) {
-            if($slug === "akupunkturnaolovkaFiles") {
+            if($slug === "akupunkturnaolovkaFiles" || $slug === "images") {
                 $agent = new Agent();
                 $info['ip'] = $request->ip();
                 $info['user_agent'] = $agent->getUserAgent();
                 $info['isRobot'] = $agent->isRobot();
                 $info['httpHeaders'] = $agent->getHttpHeaders();
 
-                Log::info('404 - Slug akupunkturnaFiles - Coupon: '.$coupon.' More info: '.json_encode($info, JSON_PRETTY_PRINT));
+                Log::info('404 - Slug akupunkturnaFiles/images - Coupon: '.$coupon.' More info: '.json_encode($info, JSON_PRETTY_PRINT));
             } else {
                 Log::info('404 - Product null - Slug: '.$slug.' Brand: '.$brandUrl);
             }
