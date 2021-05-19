@@ -113,18 +113,18 @@ class TestController extends Controller
                         }
                         $totalVariationOrders[$testVariationId]['orders'] = $countOrders;
                         $totalVariationOrders[$testVariationId]['revenue'] = $revenueOrders;
-                        if ($variation['removed_at'] === null) {
-                            $variationPrices = $this->modelPrice->getPricesForVariation($variation['id_variation'], $id);
-                            $variationPriceNotSet = 0;
-                            foreach ($variationPrices as $vp) {
-                                if ($vp->id_variations_prices === null || $vp->PriceDeleted != null) {
-                                    $variationPriceNotSet++;
-                                }
-                            }
-                            if (count($variationPrices) === $variationPriceNotSet) {
-                                $pricesNotSet++;
-                            }
-                        }
+//                        if ($variation['removed_at'] === null) {
+//                            $variationPrices = $this->modelPrice->getPricesForVariation($variation['id_variation'], $id);
+//                            $variationPriceNotSet = 0;
+//                            foreach ($variationPrices as $vp) {
+//                                if ($vp->id_variations_prices === null || $vp->PriceDeleted != null) {
+//                                    $variationPriceNotSet++;
+//                                }
+//                            }
+//                            if (count($variationPrices) === $variationPriceNotSet) {
+//                                $pricesNotSet++;
+//                            }
+//                        }
                     }
                 }
             }
@@ -133,9 +133,9 @@ class TestController extends Controller
                 $this->data['wrongSum'] = 1;
             }
 
-            if($pricesNotSet > 0) {
-                $this->data['pricesNotSet'] = 1;
-            }
+//            if($pricesNotSet > 0) {
+//                $this->data['pricesNotSet'] = 1;
+//            }
 
             iF($request->ajax()) {
                 return $singleTest;

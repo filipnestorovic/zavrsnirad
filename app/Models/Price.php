@@ -21,7 +21,7 @@ class Price extends Model
     public $variation_id;
     public $price_id;
 
-    public function getPricesForVariation($id, $test_id = null) {
+    public function getPricesForVariation($id) {
         $result = DB::table('variation')
             ->leftJoin('variations_prices', function($query) {
                 $query->on('variation.id_variation','=','variations_prices.variation_id')
@@ -32,15 +32,10 @@ class Price extends Model
             ->leftJoin('lander', 'variation.lander_id', '=', 'lander.id_lander')
             ->leftJoin('checkout', 'variation.checkout_id', '=', 'checkout.id_checkout')
             ->leftJoin('thankyou', 'variation.thankyou_id', '=', 'thankyou.id_thankyou')
-            ->leftJoin('tests_variations', 'variation.id_variation', '=', 'tests_variations.variation_id')
-            ->selectRaw("*, (variations_prices.deleted_at) AS PriceDeleted, (tests_variations.removed_at) AS TestVariationDeleted")
+            ->selectRaw("*, (variations_prices.deleted_at) AS PriceDeleted")
             ->where('variation.id_variation',$id)
             ->whereNull('variation.deleted_at')
             ->whereNull('variations_prices.deleted_at');
-
-        if(!empty($test_id)){
-            $result->where('tests_variations.test_id', '=', $test_id);
-        }
 
         return $result->get();
     }
