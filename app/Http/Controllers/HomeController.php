@@ -535,6 +535,13 @@ class HomeController extends Controller
         $pixel_id = $request->get('pixel_id');
         $fb_event = $request->get('fb_event');
 
+        $domain = $request->getHost();
+        if($domain === "dailysharkpena.com") {
+            $token = 'EAACOQyyltp0BAIXMsezZAgrZBZBZCzVUoWjZCH20tK8UphZC2Fs8T4DldoaQTiuqgbrxoWeLBq08heeofvyASFehWNvM44kct7QRclpqrJh03bYzaBTHcsWxoRbZAu25NpDQqP8yHuZBJZBCaazyzxJR45r2zDlzeFqHbJ3mepDbOn8lZBjrC5jVlOZCU9Ogp6zMCRSXIQ7eOfaMwZDZD';
+        } else {
+            $token = 'EAACOQyyltp0BAIXMsezZAgrZBZBZCzVUoWjZCH20tK8UphZC2Fs8T4DldoaQTiuqgbrxoWeLBq08heeofvyASFehWNvM44kct7QRclpqrJh03bYzaBTHcsWxoRbZAu25NpDQqP8yHuZBJZBCaazyzxJR45r2zDlzeFqHbJ3mepDbOn8lZBjrC5jVlOZCU9Ogp6zMCRSXIQ7eOfaMwZDZD';
+        }
+
         $current_timestamp = Carbon::now()->unix();
         $random_number = $this->generateUuid(1);
         if(isset($_COOKIE['_fbp'])) {
@@ -548,7 +555,7 @@ class HomeController extends Controller
             $cookie_fbc = null;
         }
 
-        $access_token = 'EAACOQyyltp0BAIXMsezZAgrZBZBZCzVUoWjZCH20tK8UphZC2Fs8T4DldoaQTiuqgbrxoWeLBq08heeofvyASFehWNvM44kct7QRclpqrJh03bYzaBTHcsWxoRbZAu25NpDQqP8yHuZBJZBCaazyzxJR45r2zDlzeFqHbJ3mepDbOn8lZBjrC5jVlOZCU9Ogp6zMCRSXIQ7eOfaMwZDZD';
+        $access_token = $token;
         $api = Api::init(null, null, $access_token);
         $api->setLogger(new CurlLogger());
         if($fb_event === "Purchase") {
