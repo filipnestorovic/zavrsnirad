@@ -424,7 +424,7 @@
                     url: baseURL + "getTestVariation/" + parseInt(id),
                     dataType: 'json',
                     success: function (data) {
-                        console.log(data);
+                        // console.log(data);
                         $('#trafficModal').val(data.traffic_percentage);
                         $('#testVariationIdModal').val(data.id_tests_variations);
                     },
