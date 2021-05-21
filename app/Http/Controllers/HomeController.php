@@ -537,7 +537,7 @@ class HomeController extends Controller
 
         $domain = $request->getHost();
         if($domain === "dailysharkpena.com") {
-            $token = 'EAACOQyyltp0BAIXMsezZAgrZBZBZCzVUoWjZCH20tK8UphZC2Fs8T4DldoaQTiuqgbrxoWeLBq08heeofvyASFehWNvM44kct7QRclpqrJh03bYzaBTHcsWxoRbZAu25NpDQqP8yHuZBJZBCaazyzxJR45r2zDlzeFqHbJ3mepDbOn8lZBjrC5jVlOZCU9Ogp6zMCRSXIQ7eOfaMwZDZD';
+            $token = 'EAAHLY93Tf3kBAKElZBZAZBq3BInc0KyZBxOqNZB6ODcCDyJVeZCMnmEPTIhfBnL8He2lYCeaZBglRmOL4CGxXNFHUBZCKrmOnzoQf1ZBJVBLOSvisvO6pdfRdzdP5BIaYJxNXYSzeZBr47rXfPWTofPTTW3bLISMgc1mj6cnYGZCvVFvnBZBy4dJge3JRDe0FSMRZA6mc5AOtLBURxQZDZD';
         } else {
             $token = 'EAACOQyyltp0BAIXMsezZAgrZBZBZCzVUoWjZCH20tK8UphZC2Fs8T4DldoaQTiuqgbrxoWeLBq08heeofvyASFehWNvM44kct7QRclpqrJh03bYzaBTHcsWxoRbZAu25NpDQqP8yHuZBJZBCaazyzxJR45r2zDlzeFqHbJ3mepDbOn8lZBjrC5jVlOZCU9Ogp6zMCRSXIQ7eOfaMwZDZD';
         }

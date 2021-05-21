@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <meta name="viewport" content="width=device-width">
-
+<meta name="facebook-domain-verification" content="ptjsl7rwu6htratw6hfig38e8oe3jc" />
     <link href="{{ asset('/') }}dailysharkFiles/cleanmaster/favicon.png" rel="icon" type="image/png" >
     <link href="{{ asset('/') }}dailysharkFiles/cleanmaster/reset.css" rel="stylesheet" type="text/css">
     <link href="{{ asset('/') }}dailysharkFiles/cleanmaster/styles.css" rel="stylesheet" type="text/css">

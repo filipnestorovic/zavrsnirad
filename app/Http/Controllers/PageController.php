@@ -292,7 +292,7 @@ class PageController extends Controller
             $checkout_slug = strtolower(preg_replace('/\s*/', '', $checkout_name));
 
             $view = 'checkout.'.$country_code.'.'.$checkout_slug;
-
+            
             if (!View::exists($view)) {
                 return redirect()->back()->with('error','This view does not exists, please create it first!');
             }
