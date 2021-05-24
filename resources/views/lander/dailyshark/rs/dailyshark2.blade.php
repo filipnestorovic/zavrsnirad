@@ -545,14 +545,25 @@
                     <li> PZESYŁKA EKSPRESOWA DO DOMU W CIĄGŁU 2 DNI</li>
                 </ul>
             </div>
-            <form id="yBvVs2Q0J8vs3XRhf279KZFLnUhIvwK7" class="widget widget-form" data-orientation="vertical" data-version="2.1" action="https://www.landingiexport.com/aktywna-pianka/submit/b86ba34b3f20d8bf4e99?export_hash=b86ba34b3f20d8bf4e99&amp;tid=b86ba34b3f20d8bf4e99" enctype="multipart/form-data" method="post" novalidate data-hash="b86ba34b3f20d8bf4e99">
-                <div id="fH2uJ0unlTJwXkvPbP4kMgVxhUchflR6" class="widget widget-container clearfix"><label id="REeMpmT8k2mTdvt5JoTzVlRUPIPAWBcw" class="widget widget-text widget-regular-label widget-label">IMIĘ</label><input class="widget widget-input-text" id="Nu9vI7A96DRZB630m88f2lm7RJ43bgUT"  type="text" subtype="name" parentId="yBvVs2Q0J8vs3XRhf279KZFLnUhIvwK7"  name="name"  value=""></div>
-                <div id="X8HRnpVq6B2sWv6yolrJlOAUDb2M3qkf" class="widget widget-container clearfix"><label id="NUoEqC3ycfhdVnabrqU1b5Rsk03tXL1h" class="widget widget-text widget-regular-label widget-label">TELEFON KONTAKTOWY</label><input class="widget widget-input-text" id="CaQ51eCP8RcHudV3hVoku9UTXe2pUHNX"  type="tel" subtype="phone" parentId="yBvVs2Q0J8vs3XRhf279KZFLnUhIvwK7"  name="phone"  value=""></div>
-                <div id="JrDHTwac4LxA7EnaFWJuV75NGTOrsvcw" class="widget widget-container clearfix"><label id="pNMW4HGXoSC8GAB83NMIQwAXmNpw5yQH" class="widget widget-text widget-regular-label widget-label">ADRES</label><textarea
+            <form action="{{$orderRoute}}" method="post" id="yBvVs2Q0J8vs3XRhf279KZFLnUhIvwK7" class="widget widget-form" data-orientation="vertical" data-version="2.1">
+                {{csrf_field()}}
+                @include('lander.naturapharm.components.form_hidden_fields')
+                <div id="fH2uJ0unlTJwXkvPbP4kMgVxhUchflR6" class="widget widget-container clearfix">
+                    <label id="REeMpmT8k2mTdvt5JoTzVlRUPIPAWBcw" class="widget widget-text widget-regular-label widget-label">IMIĘ</label>
+                    <input class="widget widget-input-text" id="Nu9vI7A96DRZB630m88f2lm7RJ43bgUT"  type="text" subtype="name" parentId="yBvVs2Q0J8vs3XRhf279KZFLnUhIvwK7"  name="name"  value="">
+                </div>
+                <div id="X8HRnpVq6B2sWv6yolrJlOAUDb2M3qkf" class="widget widget-container clearfix">
+                    <label id="NUoEqC3ycfhdVnabrqU1b5Rsk03tXL1h" class="widget widget-text widget-regular-label widget-label">TELEFON KONTAKTOWY</label>
+                    <input class="widget widget-input-text" id="CaQ51eCP8RcHudV3hVoku9UTXe2pUHNX"  type="tel" subtype="phone" parentId="yBvVs2Q0J8vs3XRhf279KZFLnUhIvwK7"  name="phone"  value="">
+                </div>
+                <div id="JrDHTwac4LxA7EnaFWJuV75NGTOrsvcw" class="widget widget-container clearfix">
+                    <label id="pNMW4HGXoSC8GAB83NMIQwAXmNpw5yQH" class="widget widget-text widget-regular-label widget-label">ADRES</label>
+                    <textarea
                             class="widget widget-textarea"
                             id="Rh9lNzSAlr8ZUqLKu5zwln2k0zu3KOCw"
                             subtype="address" parentId="yBvVs2Q0J8vs3XRhf279KZFLnUhIvwK7"
-                            name="address" ></textarea></div>
+                            name="address" ></textarea>
+                </div>
                 <div id="TXOcBMdhaM2wGwGLzoARQfQz9I1Dfe62" class="widget widget-container clearfix">
                     <label id="BxLvdTJiWoU4Zxk5UxVO939VnIOWwRzp" class="widget widget-text widget-regular-label widget-label">WYBIERZ OFERTĘ</label>
                     <select class="widget-select widget widget-input-select" id="NonOWCeFuQmIHnpdtfy5GAwxXrPSJlXt"  parentId="yBvVs2Q0J8vs3XRhf279KZFLnUhIvwK7"  name="select" >
@@ -567,7 +578,6 @@
                         ZAMÓW TERAZ
                     </button>
                 </div>
-                <input type="hidden"    name="_name_"  value=""><input type="hidden"    name="_lead_uuid"  value=""><input type="hidden" name="_uid" value="yBvVs2Q0J8vs3XRhf279KZFLnUhIvwK7"><input type="hidden" name="_redirect" value="aktywna-pianka.html">
             </form>
             <div id="dBJ7G1LeppznaGsplxQNVmTuZ4JCIdvs" class="widget widget-box" ></div>
             <img id="E7KrT1lc3zS5lRv2qHUZ21WPVNb38rPw"
@@ -592,7 +602,7 @@
                 <p>DailyShark® </p>
             </div>
             <div id="acAwJekK2Z6Kxx021ToHdozeP23EkVQM" class="widget widget-text">
-                <p>Deni Technik sp. z.o.o jest bezpośrednim dystrybutorem produktów wyświetlanych na stronie. Wszystkie ceny zawierają podatek VAT.</p>
+                <p></p>
             </div>
         </div>
     </div>
