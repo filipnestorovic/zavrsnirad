@@ -11,8 +11,16 @@
     <link href="{{ asset('/') }}dailysharkFiles/dailyshark/lander1/base.css" type="text/css" rel="stylesheet">
     <script src="{{ asset('/') }}dailysharkFiles/dailyshark/jquery.min.js" type="text/javascript"></script>
     <script src="{{ asset('/') }}dailysharkFiles/dailyshark/jquery-ui.min.js" type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/css?family=Russo+One&amp;subset=latin,latin-ext" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i&amp;subset=latin,latin-ext" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,700,700italic&amp;subset=latin,latin-ext" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Neuton:300,400,400italic,700&amp;subset=latin,latin-ext" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lobster&amp;subset=latin,latin-ext" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Marck+Script&amp;subset=latin,latin-ext" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i&amp;subset=latin,latin-ext" type="text/css" rel="stylesheet" />
 </head>
 <body id="Zcc579e32ab7c2c234c287cbcbc03f3a7639f9f1"  >
+@include('components.display_errors')
 <div id="imk70DZKGMb399trSeGQ79IWrp7T9Clk" class="widget widget-section " >
     <div class="row">
         <div class="container " >
@@ -30,7 +38,7 @@
             >
             <a href="#XqJ6sTI6tNbSss1nJLcdTzqTIcUgVGzG" id="mTcI2CJqZ1Ge7oEs3FHPoQiwXBaxvazc" class="widget widget-button"  version="3" subtype="anchor" rel="noopener noreferrer" >
                 <div class="widget-overlay"></div>
-                <div id="K3OQDINka5Du5MSH6qcArxuLgdEEFgMh" class="widget widget-text">&Pi;&Alpha;&Rho;&Alpha;&Gamma;&Gamma;&Epsilon;&Iota;&Lambda;&Epsilon; &Tau;&Omega;&Rho;&Alpha;</div>
+                <div id="K3OQDINka5Du5MSH6qcArxuLgdEEFgMh" class="widget widget-text">PORUČI ODMAH</div>
             </a>
             <div id="J7nXggsFkXqeWRIsFuNh58N07gswJMb9" class="widget widget-text">
                 <p>{{ $prices[1]['amount'] }} RSD</p>
@@ -168,7 +176,7 @@
             </div>
             <a href="#XqJ6sTI6tNbSss1nJLcdTzqTIcUgVGzG" id="CSxuAHzoi1Tc5oqXP0ov7xGfTO7CVwI5" class="widget widget-button"  version="3" subtype="anchor" rel="noopener noreferrer" >
                 <div class="widget-overlay"></div>
-                <div id="Sbq03nvDCTNiB1aER7QQsx6F4sM8PmBt" class="widget widget-text">&Pi;&Alpha;&Rho;&Alpha;&Gamma;&Gamma;&Epsilon;&Iota;&Lambda;&Epsilon; &Tau;&Omega;&Rho;&Alpha;</div>
+                <div id="Sbq03nvDCTNiB1aER7QQsx6F4sM8PmBt" class="widget widget-text">PORUČI ODMAH</div>
             </a>
             <img id="H51f9TudkH8tBIuT1bPMk1yi8mRJBl6Q"
                  width="960" height="500"
@@ -315,27 +323,27 @@
             </div>
             <a href="#XqJ6sTI6tNbSss1nJLcdTzqTIcUgVGzG" title="2" id="nHRJObp6hR78zsIRs5HiDrl1cnfWA3pU" class="widget widget-button button-quantity"  version="3" subtype="anchor" rel="noopener noreferrer" >
                 <div class="widget-overlay"></div>
-                <div id="bTN7EmMLDBRQTdvUc8SmlG8BvP5wdzxn" class="widget widget-text">&Pi;&Alpha;&Rho;&Alpha;&Gamma;&Gamma;&Epsilon;&Iota;&Lambda;&Epsilon; &Tau;&Omega;&Rho;&Alpha;</div>
+                <div id="bTN7EmMLDBRQTdvUc8SmlG8BvP5wdzxn" class="widget widget-text">PORUČI ODMAH</div>
             </a>
             <a href="#XqJ6sTI6tNbSss1nJLcdTzqTIcUgVGzG" title="1" id="AWuVUlg56ATPAJhPoSGc3QTOQ1FOcN8q" class="widget widget-button button-quantity"  version="3" subtype="anchor" rel="noopener noreferrer" >
                 <div class="widget-overlay"></div>
-                <div id="XFDa4Rd2cvhUIFH8bMgT0nxEUd37DzEL" class="widget widget-text">&Pi;&Alpha;&Rho;&Alpha;&Gamma;&Gamma;&Epsilon;&Iota;&Lambda;&Epsilon; &Tau;&Omega;&Rho;&Alpha;</div>
+                <div id="XFDa4Rd2cvhUIFH8bMgT0nxEUd37DzEL" class="widget widget-text">PORUČI ODMAH</div>
             </a>
             <a href="#XqJ6sTI6tNbSss1nJLcdTzqTIcUgVGzG" title="3" id="aDzCNv16FtqkVP1eVXlE0ixAb76lMFJ9" class="widget widget-button button-quantity"  version="3" subtype="anchor" rel="noopener noreferrer" >
                 <div class="widget-overlay"></div>
-                <div id="iPZI2Ixi6Thuf2gx46rei6vG7xJWMf9k" class="widget widget-text">&Pi;&Alpha;&Rho;&Alpha;&Gamma;&Gamma;&Epsilon;&Iota;&Lambda;&Epsilon; &Tau;&Omega;&Rho;&Alpha;</div>
+                <div id="iPZI2Ixi6Thuf2gx46rei6vG7xJWMf9k" class="widget widget-text">PORUČI ODMAH</div>
             </a>
             <a href="#XqJ6sTI6tNbSss1nJLcdTzqTIcUgVGzG" title="2" id="zRuntMutMxxykUovkTtT4bmQ7iXBUm4E" class="widget widget-button button-quantity"  version="3" subtype="anchor" rel="noopener noreferrer" >
                 <div class="widget-overlay"></div>
-                <div id="TFZ9f9lhJPXhNdLqJXFtas8wig9nK2fP" class="widget widget-text">&Pi;&Alpha;&Rho;&Alpha;&Gamma;&Gamma;&Epsilon;&Iota;&Lambda;&Epsilon; &Tau;&Omega;&Rho;&Alpha;</div>
+                <div id="TFZ9f9lhJPXhNdLqJXFtas8wig9nK2fP" class="widget widget-text">PORUČI ODMAH</div>
             </a>
             <a href="#XqJ6sTI6tNbSss1nJLcdTzqTIcUgVGzG" title="1" id="b5i0BebnFzJbeOARvnGCuH2uTx8gliIS" class="widget widget-button button-quantity"  version="3" subtype="anchor" rel="noopener noreferrer" >
                 <div class="widget-overlay"></div>
-                <div id="BT6ETppI5cgXZSH72utWZkbGQrQucXwN" class="widget widget-text">&Pi;&Alpha;&Rho;&Alpha;&Gamma;&Gamma;&Epsilon;&Iota;&Lambda;&Epsilon; &Tau;&Omega;&Rho;&Alpha;</div>
+                <div id="BT6ETppI5cgXZSH72utWZkbGQrQucXwN" class="widget widget-text">PORUČI ODMAH</div>
             </a>
             <a href="#XqJ6sTI6tNbSss1nJLcdTzqTIcUgVGzG" title="3" id="nHRJObp6hR78zsIRs5HiDrl1cnfWA3pU1" class="widget widget-button button-quantity"  version="3" subtype="anchor" rel="noopener noreferrer" >
                 <div class="widget-overlay"></div>
-                <div id="bTN7EmMLDBRQTdvUc8SmlG8BvP5wdzxn" class="widget widget-text">&Pi;&Alpha;&Rho;&Alpha;&Gamma;&Gamma;&Epsilon;&Iota;&Lambda;&Epsilon; &Tau;&Omega;&Rho;&Alpha;</div>
+                <div id="bTN7EmMLDBRQTdvUc8SmlG8BvP5wdzxn" class="widget widget-text">PORUČI ODMAH</div>
             </a>
             <img id="E7KrT1lc3zS5lRv2qHUZ21WPVNb38rPw"
                  width="960" height="639"
@@ -398,7 +406,7 @@
                 <div id="FIKWkqeThZmu9a72OVTMiuBXFq0npgyR" class="widget widget-container input-button-container clearfix">
                     <button class="widget widget-input-button" type="submit" id="VKLu6pVA87bvPUOrgq5ZstLepM0rgiyI"  parentId="yBvVs2Q0J8vs3XRhf279KZFLnUhIvwK7">
                         <div class="widget-overlay"></div>
-                        ΠΑΡΑΓΓΕΙΛΕ ΤΩΡΑ
+                        PORUČI ODMAH
                     </button>
                 </div>
             </form>

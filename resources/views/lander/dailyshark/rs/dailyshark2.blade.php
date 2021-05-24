@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+    @include('components.pixel_init')
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="HandheldFriendly" content="true" />
@@ -9,8 +10,16 @@
     <link href="{{ asset('/') }}dailysharkFiles/dailyshark/lander2/base.css" type="text/css" rel="stylesheet">
     <script src="{{ asset('/') }}dailysharkFiles/dailyshark/jquery.min.js" type="text/javascript"></script>
     <script src="{{ asset('/') }}dailysharkFiles/dailyshark/jquery-ui.min.js" type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/css?family=Russo+One&amp;subset=latin,latin-ext" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i&amp;subset=latin,latin-ext" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,700,700italic&amp;subset=latin,latin-ext" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Neuton:300,400,400italic,700&amp;subset=latin,latin-ext" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lobster&amp;subset=latin,latin-ext" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Marck+Script&amp;subset=latin,latin-ext" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i&amp;subset=latin,latin-ext" type="text/css" rel="stylesheet" />
 </head>
 <body id="Zcc579e32ab7c2c234c287cbcbc03f3a7639f9f1"  >
+@include('components.display_errors')
 <div id="imk70DZKGMb399trSeGQ79IWrp7T9Clk" class="widget widget-section " >
     <div class="row">
         <div class="container " >
@@ -23,7 +32,7 @@
             <img id="A21TOTvuMsLI5LFiUA5PwlhD3EBh4pU8"
                  width="160" height="467"
                  class="widget widget-image"
-                 src="{{ asset('/') }}dailysharkFiles/dailyshark/lander2/forch_spuma_activa_plus_5_r560_image_5de12a5c673a3_600x600.png"
+                 src="{{ asset('/') }}dailysharkFiles/dailyshark/lander2/dailyshark2_600.png"
                  alt=""
             >
             <div id="qbwhdB89h1OCNvkG8bcgWda7b1VPq0Nx" class="widget widget-box" ></div>
@@ -41,31 +50,31 @@
             >
             <a href="#XqJ6sTI6tNbSss1nJLcdTzqTIcUgVGzG" id="mTcI2CJqZ1Ge7oEs3FHPoQiwXBaxvazc" class="widget widget-button"  version="3" subtype="anchor" rel="noopener noreferrer" >
                 <div class="widget-overlay"></div>
-                <div id="K3OQDINka5Du5MSH6qcArxuLgdEEFgMh" class="widget widget-text">ZAM&Oacute;W TERAZ</div>
+                <div id="K3OQDINka5Du5MSH6qcArxuLgdEEFgMh" class="widget widget-text">PORUČI ODMAH</div>
             </a>
             <div id="J7nXggsFkXqeWRIsFuNh58N07gswJMb9" class="widget widget-text">
-                <p>64.99 PLN.</p>
+                <p>{{ $prices[1]['amount'] }} RSD</p>
             </div>
             <div id="LipFEZIIuHibtg02CIxTpyqByVLuSTk2" class="widget widget-text">
-                <p><span style="color: rgb(255, 127, 0); text-decoration-line: line-through;">84.99 PLN.</span></p>
+                <p><span style="color: rgb(255, 127, 0); text-decoration-line: line-through;">{{ $prices[1]['originalPrice'] }} RSD</span></p>
             </div>
             <div id="XlpekzaQIAx6X5MXw5oolmoXJnoyxzOd" class="widget widget-box" ></div>
-            <div id="lzK4TGM9sg8IrSiUsCp13vhFiEmz953S" class="widget widget-counter counter-type-4" data-date="720" data-format="%dd:%hh:%mm:%ss"data-version="2"data-repeat="-1">
-                <div id="KlZXyIZUd6uZZTHTwhF3Q9DqmAeshxpR" class="widget widget-container">
-                    <div id="f6EDNg7iRqDetl3AFa86M0VqqT5GSB0t" class="widget widget-text counter-number" data-format="%hh"></div>
-                    <div id="I6uSlCsnae4v8HzQ7S2U0L5GasX4h8Ts" class="widget widget-text counter-label">Godziny</div>
-                </div>
-                <div id="eZVSNC5Tf0qGIFU2laaDzsXT0NkGeLoS" class="widget widget-container">
-                    <div id="e47IFqvVgEGA7VPrvHBWcMTsnPTPWtKO" class="widget widget-text counter-number" data-format="%mm"></div>
-                    <div id="Fiq5fOCVioolKFpoOdJ2yM1I6aU1sGwq" class="widget widget-text counter-label">Minuty</div>
-                </div>
-                <div id="X2w2qwLawbZaydTwOTMarqs1hSsvFHaH" class="widget widget-container">
-                    <div id="Kgn44K452rDDuUsm1sFrc0QNt9kbHNTL" class="widget widget-text counter-number" data-format="%ss"></div>
-                    <div id="NAtG6ZuTEPa2E5I88IMssdNoIGNl4Qx2" class="widget widget-text counter-label">Sekundy</div>
-                </div>
-            </div>
+            {{--<div id="lzK4TGM9sg8IrSiUsCp13vhFiEmz953S" class="widget widget-counter counter-type-4" data-date="720" data-format="%dd:%hh:%mm:%ss"data-version="2"data-repeat="-1">--}}
+                {{--<div id="KlZXyIZUd6uZZTHTwhF3Q9DqmAeshxpR" class="widget widget-container">--}}
+                    {{--<div id="f6EDNg7iRqDetl3AFa86M0VqqT5GSB0t" class="widget widget-text counter-number" data-format="%hh"></div>--}}
+                    {{--<div id="I6uSlCsnae4v8HzQ7S2U0L5GasX4h8Ts" class="widget widget-text counter-label">Godziny</div>--}}
+                {{--</div>--}}
+                {{--<div id="eZVSNC5Tf0qGIFU2laaDzsXT0NkGeLoS" class="widget widget-container">--}}
+                    {{--<div id="e47IFqvVgEGA7VPrvHBWcMTsnPTPWtKO" class="widget widget-text counter-number" data-format="%mm"></div>--}}
+                    {{--<div id="Fiq5fOCVioolKFpoOdJ2yM1I6aU1sGwq" class="widget widget-text counter-label">Minuty</div>--}}
+                {{--</div>--}}
+                {{--<div id="X2w2qwLawbZaydTwOTMarqs1hSsvFHaH" class="widget widget-container">--}}
+                    {{--<div id="Kgn44K452rDDuUsm1sFrc0QNt9kbHNTL" class="widget widget-text counter-number" data-format="%ss"></div>--}}
+                    {{--<div id="NAtG6ZuTEPa2E5I88IMssdNoIGNl4Qx2" class="widget widget-text counter-label">Sekundy</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
             <div id="vphG1UWOdu4AHTqWKxnWuoDvAAstLHT2" class="widget widget-text">
-                <p>OSZCZĘDZASZ -25%</p>
+                <p>POPUST -40%</p>
             </div>
             <i id="TyAPJnpZmGlyiiS5G8RUXR9UQdBIVVGO" class="fa fa-arrow-down widget widget-icon"></i>
         </div>
@@ -90,7 +99,7 @@
             <img id="LlFTqxZLfdL1dVx1EVRvEZcMSqE0g9v6"
                  width="170" height="154"
                  class="widget widget-image"
-                 src="{{ asset('/') }}dailysharkFiles/dailyshark/lander2/57936001_2172731566137425_3552256932423139328_o.png"
+                 src="{{ asset('/') }}dailysharkFiles/dailyshark/lander2/dailysharklogo_154.png"
                  alt=""
             >
             <i id="zoH3iFhLgRsb1mV5ikQEQd39CRa0yMcG" class="fa fa-arrow-down widget widget-icon"></i>
@@ -157,7 +166,7 @@
             <i id="mF0QlLGtZs8sNlErowPQ7oheWpAIdLaq" class="fa fa-certificate widget widget-icon"></i>
             <a href="#XqJ6sTI6tNbSss1nJLcdTzqTIcUgVGzG" id="GpkqZiLg7MQAuUGXt2FFLaHo2e7am9dN" class="widget widget-button"  version="3" subtype="anchor" rel="noopener noreferrer" >
                 <div class="widget-overlay"></div>
-                <div id="Q1AlT89fzeMR0eGeulNItVRwGZ2sZ6Uv" class="widget widget-text">ZAM&Oacute;W TERAZ</div>
+                <div id="Q1AlT89fzeMR0eGeulNItVRwGZ2sZ6Uv" class="widget widget-text">PORUČI ODMAH</div>
             </a>
             <div id="u2wW38ls84E15qP3zZbsEpHxSQhmr5NF" class="widget widget-text">
                 <p>JEDEN PRODUKT - KILKA ZASTOSOWANIA</p>
@@ -167,13 +176,13 @@
             </div>
             <div id="KDvuroJaeTWa4pZPnU5pDfRz8k2E8gaE" class="widget widget-box" ></div>
             <div id="UkW8Rx4SsTDKIzngOZPTiWMGn7NBqqUT" class="widget widget-text">
-                <p>64.99 PLN</p>
+                <p>{{ $prices[1]['amount'] }} RSD</p>
             </div>
             <div id="TJenkH1G9DxMZmRJUyucTzd4FoTgJJNk" class="widget widget-text">
-                <p><span style="color: rgb(255, 127, 0); text-decoration-line: line-through;">84.99 PLN</span></p>
+                <p><span style="color: rgb(255, 127, 0); text-decoration-line: line-through;">{{ $prices[1]['originalPrice'] }} RSD</span></p>
             </div>
             <div id="PwTqNyqMVceQyBFF4LZ9B9e6FRDVsyqX" class="widget widget-text">
-                <p>OSZCZĘDZASZ -25%</p>
+                <p>POPUST -40%</p>
             </div>
             <img id="Rs76L4gHfPSCa8dwXS8H7fTEaUFhAiwt"
                  width="287" height="73"
@@ -257,7 +266,7 @@
             <img id="SnLlv4FgNaEO4TGSxMcHyuntedXJ5cay"
                  width="318" height="304"
                  class="widget widget-image"
-                 src="{{ asset('/') }}dailysharkFiles/dailyshark/lander2/aktivna_pana_za_suho_prane_na_tapiceria_dailyshark_400ml_image_5e77da79ae6c3_1920x1920.jpg"
+                 src="{{ asset('/') }}dailysharkFiles/dailyshark/lander2/dailyshark2_1920_2.jpg"
                  alt=""
             >
             <i id="M7Pd2QteLW4TuT5czxxMCVIXKpNKRPB9" class="fa fa-arrow-down widget widget-icon"></i>
@@ -265,20 +274,20 @@
                 <div class="widget-overlay"></div>
                 <div id="m3Wh3u0hIxqL56JwbpBmRyTWZTTGvIlE" class="widget widget-text">ZOBACZ OFERTĘ</div>
             </a>
-            <div id="txwUFwm4pd7OSsnIl8miGsrGIpRQ7iu0" class="widget widget-counter counter-type-4" data-date="720" data-format="%dd:%hh:%mm:%ss"data-version="2"data-repeat="-1">
-                <div id="kyXPE2UysuJxFNlWJ9wZ25wsN1QbI12K" class="widget widget-container">
-                    <div id="Px9ENXNodqDDWJTPHU9ZScDl371xQN0O" class="widget widget-text counter-number" data-format="%hh"></div>
-                    <div id="xITkZka6spx5IEUxz39SaSuOSwIGUCli" class="widget widget-text counter-label">Godziny</div>
-                </div>
-                <div id="WkVW2iKbi1GBxZQSF85croEHKzVZVTxc" class="widget widget-container">
-                    <div id="i4IbOT0lG6lbqi5rdWvQk0y2V7Ixhst5" class="widget widget-text counter-number" data-format="%mm"></div>
-                    <div id="es9dQrHncTuoG3XZ7bD2ct1rob210tJE" class="widget widget-text counter-label">Minuty</div>
-                </div>
-                <div id="TrtG9CLHFGbwpPRw0xSKzivvqbqGP30W" class="widget widget-container">
-                    <div id="kC5G3DNg2RGsq7Crlg6NbmcNCqASKqqc" class="widget widget-text counter-number" data-format="%ss"></div>
-                    <div id="d26kR4kKT9iEoOLNTFwnoxqXttNSeont" class="widget widget-text counter-label">Sekundy</div>
-                </div>
-            </div>
+            {{--<div id="txwUFwm4pd7OSsnIl8miGsrGIpRQ7iu0" class="widget widget-counter counter-type-4" data-date="720" data-format="%dd:%hh:%mm:%ss"data-version="2"data-repeat="-1">--}}
+                {{--<div id="kyXPE2UysuJxFNlWJ9wZ25wsN1QbI12K" class="widget widget-container">--}}
+                    {{--<div id="Px9ENXNodqDDWJTPHU9ZScDl371xQN0O" class="widget widget-text counter-number" data-format="%hh"></div>--}}
+                    {{--<div id="xITkZka6spx5IEUxz39SaSuOSwIGUCli" class="widget widget-text counter-label">Godziny</div>--}}
+                {{--</div>--}}
+                {{--<div id="WkVW2iKbi1GBxZQSF85croEHKzVZVTxc" class="widget widget-container">--}}
+                    {{--<div id="i4IbOT0lG6lbqi5rdWvQk0y2V7Ixhst5" class="widget widget-text counter-number" data-format="%mm"></div>--}}
+                    {{--<div id="es9dQrHncTuoG3XZ7bD2ct1rob210tJE" class="widget widget-text counter-label">Minuty</div>--}}
+                {{--</div>--}}
+                {{--<div id="TrtG9CLHFGbwpPRw0xSKzivvqbqGP30W" class="widget widget-container">--}}
+                    {{--<div id="kC5G3DNg2RGsq7Crlg6NbmcNCqASKqqc" class="widget widget-text counter-number" data-format="%ss"></div>--}}
+                    {{--<div id="d26kR4kKT9iEoOLNTFwnoxqXttNSeont" class="widget widget-text counter-label">Sekundy</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
         </div>
     </div>
 </div>
@@ -322,7 +331,7 @@
             <img id="GeGE5n2TOosOPnKXBgxTprMvNzmkZmvn"
                  width="224" height="326"
                  class="widget widget-image"
-                 src="{{ asset('/') }}dailysharkFiles/dailyshark/lander2/aktivna_pana_za_suho_prane_na_tapiceria_dailyshark_400ml_image_5e77da51aa2eb_1920x1920.jpg"
+                 src="{{ asset('/') }}dailysharkFiles/dailyshark/lander2/dailyshark2_1920_1.jpg"
                  alt=""
             >
             <img id="GSC2y6xT8bMODscfuTrkwgl99KvgO0rQ"
@@ -348,7 +357,7 @@
             <div id="HZfGeiM0gM7NAkWFKdVqTgmmNH5bOL65" class="widget widget-box" ></div>
             <a href="#XqJ6sTI6tNbSss1nJLcdTzqTIcUgVGzG" id="CSxuAHzoi1Tc5oqXP0ov7xGfTO7CVwI5" class="widget widget-button"  version="3" subtype="anchor" rel="noopener noreferrer" >
                 <div class="widget-overlay"></div>
-                <div id="Sbq03nvDCTNiB1aER7QQsx6F4sM8PmBt" class="widget widget-text">ZAM&Oacute;W TERAZ</div>
+                <div id="Sbq03nvDCTNiB1aER7QQsx6F4sM8PmBt" class="widget widget-text">PORUČI ODMAH</div>
             </a>
             <i id="gcZ2l14c4la42k7SFLfE0r4FX9WHNyuJ" class="fa fa-arrow-down widget widget-icon"></i><i id="qoNk1GEi5u4x2AAnZ3p9dy6lB55befDo" class="fa fa-arrow-down widget widget-icon"></i>
         </div>
@@ -408,7 +417,7 @@
             <i id="fdwFkOZs84CuTReWTrbTOoh1XiuALFH2" class="fa fa-smile-o widget widget-icon"></i><i id="sy3TfhBB8WTOgqvlpPh00H62IzheRwIB" class="fa fa-check-square-o widget widget-icon"></i><i id="ycW4nKs2Ge6TCvXCEtGA2ucqawEovvBL" class="fa fa-thumbs-o-up widget widget-icon"></i><i id="dX3rCE5XT9T6zrDdVSI5sMB7P4cDxdHI" class="fa fa-arrow-down widget widget-icon"></i>
             <a href="#XqJ6sTI6tNbSss1nJLcdTzqTIcUgVGzG" id="FMdKICcmRVO9ZAq9QWyGnfhQ3nDDPDot" class="widget widget-button"  version="3" subtype="anchor" rel="noopener noreferrer" >
                 <div class="widget-overlay"></div>
-                <div id="xZpV4JGBNbToKC2gtTbEntxnVTM38MPX" class="widget widget-text">ZAM&Oacute;W TERAZ</div>
+                <div id="xZpV4JGBNbToKC2gtTbEntxnVTM38MPX" class="widget widget-text">PORUČI ODMAH</div>
             </a>
         </div>
     </div>
@@ -417,7 +426,7 @@
     <div class="row">
         <div class="container " >
             <div id="TsWVHyVozDmyIlL1BKCM4zsRZQTIAr8M" class="widget widget-text">
-                <h4>OFERTA PROMOCYJNA</h4>
+                <h4>JEDAN KOMAD</h4>
             </div>
             <div id="keJuKRv9wcUQLpVJoW3rJTMcGNoT3Hmb" class="widget widget-text">
                 <p>Skorzystaj z naszego rabatu i odbierz swój DailyShark!</p>
@@ -426,12 +435,12 @@
             <img id="dvNGelXqfya5lFNXx29A5NSkGNKx7Tt4"
                  width="88" height="245"
                  class="widget widget-image"
-                 src="{{ asset('/') }}dailysharkFiles/dailyshark/lander2/forch_spuma_activa_plus_5_r560_image_5de12a5c673a3_600x600.png"
+                 src="{{ asset('/') }}dailysharkFiles/dailyshark/lander2/dailyshark2_600.png"
                  alt=""
             >
             <div id="kyG3FGi6L5QvvAQ7Rv3xRecSEVyp2475" class="widget widget-box" ></div>
             <div id="Tbx84f0GJeWaJ9Fk2pdXMdq4A7doqapD" class="widget widget-text">
-                <h4>OFERTA SPECJALNA</h4>
+                <h4>DVA KOMADA</h4>
             </div>
             <img id="FoO2mDIDA62GMSzbUT7k5SFOXiChlUED"
                  width="250" height="303"
@@ -440,11 +449,11 @@
                  alt=""
             >
             <div id="dryw5rvwQFDdRFXrD4SoqeJGZUrT7QO7" class="widget widget-text">
-                <p>Zamów 2 szt. DailyShark w cenie 49.99 PLN za sztukę. </p>
+                <p>Zamów 2 szt. DailyShark w cenie 49.99 RSD za sztukę. </p>
             </div>
             <div id="ZaJWOyUDdR6rXRH1oEG4BBXsWK6KfBZv" class="widget widget-box" ></div>
             <div id="Etq1kzqrCeLw0pByTQyPLRakKeLHSPM0" class="widget widget-text">
-                <p>Zamów 3 szt. DailyShark w cenie 49.99 PLN za sztukę, a otrzymasz prezent DailyShark Max</p>
+                <p>Zamów 3 szt. DailyShark w cenie 49.99 RSD za sztukę, a otrzymasz prezent DailyShark Max</p>
             </div>
             <img id="lFqCELilWDrL4TFVFspH68XnrIR4ibcm"
                  width="210" height="226"
@@ -453,81 +462,71 @@
                  alt=""
             >
             <div id="MveVdpSBdimVXDyfsb1bSyEd5BI9T706" class="widget widget-text">
-                <h4>OFERTA EKSKLUZYWNA</h4>
+                <h4>TRI KOMADA</h4>
             </div>
             <div id="IFIpLSNld7Usa6QDqK5t0gxJGrTWzPXy" class="widget widget-text">
-                <p>64.99 PLN</p>
+                <p>{{ $prices[1]['amount'] }} RSD</p>
             </div>
             <div id="t3mXc8Eug4AeCCcK7PTcx6cdCQwaE8oL" class="widget widget-text">
-                <p><span style="color: rgb(255, 127, 0); text-decoration-line: line-through;">84.99 PLN</span></p>
+                <p><span style="color: rgb(255, 127, 0); text-decoration-line: line-through;">{{ $prices[1]['originalPrice'] }} RSD</span></p>
             </div>
             <div id="R2tVaRsnDggIsSldRPhUd62d1Shie9J4" class="widget widget-text">
-                <p>ZAOSZCZĘDZISZ -25%</p>
+                <p>POPUST -40%</p>
             </div>
             <div id="MLhhrRZQ2WuT2ughiGtaZOzEayTLwv3q" class="widget widget-text">
-                <p><span style="color: rgb(255, 127, 0); text-decoration-line: line-through;">169.98 PLN</span></p>
+                <p><span style="color: rgb(255, 127, 0); text-decoration-line: line-through;">{{ $prices[2]['originalPrice'] }} RSD</span></p>
             </div>
             <div id="vus87RwUkzO5gw25ZnPVBx4zEKNbrilX" class="widget widget-text">
-                <p>99.98 PLN</p>
+                <p>{{ $prices[2]['amount'] }} RSD</p>
             </div>
             <div id="gIRa3eAdWQrfmWLQzlM8IS7sLgBy4kcT" class="widget widget-text">
                 <p>ZAOSZCZĘDZISZ AŻ DO 40%</p>
             </div>
             <div id="zaBMECSpnKPnngwrIrlLpw5pvmytHyCc" class="widget widget-text">
-                <p><span style="color: rgb(255, 127, 0); text-decoration-line: line-through;">254.97 PLN</span></p>
+                <p><span style="color: rgb(255, 127, 0); text-decoration-line: line-through;">{{ $prices[3]['originalPrice'] }} RSD</span></p>
             </div>
             <div id="ZMZV8l7upTnZAZ3ynEqoZBPNcOZCrBro" class="widget widget-text">
-                <p>149.97 PLN</p>
+                <p>{{ $prices[3]['amount'] }} RSD</p>
             </div>
             <div id="I3tn6R3m7eoMT1fLip8nJ0IwSHq1zmvD" class="widget widget-text">
-                <p>ZAOSZCZĘDZISZ 40% I DOSTANIESZ PREZENT W WYSOKOŚCI 44.99 PLN</p>
+                <p>ZAOSZCZĘDZISZ 40% I DOSTANIESZ PREZENT W WYSOKOŚCI 44.99 RSD</p>
             </div>
             <div id="WP1x69zIUL9TRREW79hRADC7J4GXkFZg" class="widget widget-box" ></div>
             <div id="bHSlNWtNenmiPf5Z8xaII5XaxHQMnvln" class="widget widget-text">
-                <p>NAJBARDIZEJ ATRAKCYJNA</p>
-                <p>OFERTA </p>
+                <p>NAJBOLJA</p>
+                <p>PONUDA</p>
             </div>
             <div id="qKrRXLQyle29fKH3VCqZTnJzsigqtl7U" class="widget widget-text">
                 <p><b style=""><u style=""><span style="color: rgb(255, 169, 0);">POŚPIESZ SIĘ! </span><span style="color: rgb(255, 255, 255);">WSZYSTKIE CENY SĄ WAŻNE DO ZAKOŃCZENIA PROMOCJI LUB DO WYSTAWIENIA ILOŚCI! OSZCZĘDZAJ PIENIĄDZE, CZAS, WYDAJNOŚĆ I NERWY! </span></u></b></p>
             </div>
             <div id="ezqRq61MeHmr97WVMtP2T6RkhVU8rS4h" class="widget widget-text">
-                <p><span style="color: rgb(255, 255, 255);">OFERTA </span><span style="color: rgb(255, 158, 0);">EKSKLUZYWNA</span></p>
+                <p><span style="color: rgb(255, 255, 255);">TRI </span><span style="color: rgb(255, 158, 0);">KOMADA</span></p>
             </div>
             <i id="wLZypl5Gf5qfO3wMvUz2v1MSeMcD2Sl0" class="fa fa-arrow-down widget widget-icon"></i>
-            <a href="#XqJ6sTI6tNbSss1nJLcdTzqTIcUgVGzG" id="nHRJObp6hR78zsIRs5HiDrl1cnfWA3pU" class="widget widget-button"  version="3" subtype="anchor" rel="noopener noreferrer" >
+            <a href="#XqJ6sTI6tNbSss1nJLcdTzqTIcUgVGzG" title="2" id="nHRJObp6hR78zsIRs5HiDrl1cnfWA3pU" class="widget widget-button button-quantity"  version="3" subtype="anchor" rel="noopener noreferrer" >
                 <div class="widget-overlay"></div>
-                <div id="bTN7EmMLDBRQTdvUc8SmlG8BvP5wdzxn" class="widget widget-text">ZAM&Oacute;W TERAZ</div>
+                <div id="bTN7EmMLDBRQTdvUc8SmlG8BvP5wdzxn" class="widget widget-text">PORUČI ODMAH</div>
             </a>
-            <a href="#XqJ6sTI6tNbSss1nJLcdTzqTIcUgVGzG" id="AWuVUlg56ATPAJhPoSGc3QTOQ1FOcN8q" class="widget widget-button"  version="3" subtype="anchor" rel="noopener noreferrer" >
+            <a href="#XqJ6sTI6tNbSss1nJLcdTzqTIcUgVGzG" title="1" id="AWuVUlg56ATPAJhPoSGc3QTOQ1FOcN8q" class="widget widget-button button-quantity"  version="3" subtype="anchor" rel="noopener noreferrer" >
                 <div class="widget-overlay"></div>
-                <div id="XFDa4Rd2cvhUIFH8bMgT0nxEUd37DzEL" class="widget widget-text">ZAM&Oacute;W TERAZ</div>
+                <div id="XFDa4Rd2cvhUIFH8bMgT0nxEUd37DzEL" class="widget widget-text">PORUČI ODMAH</div>
             </a>
-            <a href="#XqJ6sTI6tNbSss1nJLcdTzqTIcUgVGzG" id="aDzCNv16FtqkVP1eVXlE0ixAb76lMFJ9" class="widget widget-button"  version="3" subtype="anchor" rel="noopener noreferrer" >
+            <a href="#XqJ6sTI6tNbSss1nJLcdTzqTIcUgVGzG" title="3" id="aDzCNv16FtqkVP1eVXlE0ixAb76lMFJ9" class="widget widget-button button-quantity"  version="3" subtype="anchor" rel="noopener noreferrer" >
                 <div class="widget-overlay"></div>
-                <div id="iPZI2Ixi6Thuf2gx46rei6vG7xJWMf9k" class="widget widget-text">ZAM&Oacute;W TERAZ</div>
+                <div id="iPZI2Ixi6Thuf2gx46rei6vG7xJWMf9k" class="widget widget-text">PORUČI ODMAH</div>
             </a>
             <i id="iZKT0sULzHAPBQbDB4zwGFzQ3saKTIcC" class="fa fa-arrow-down widget widget-icon"></i><i id="IUPRn2Wa6vgGuLJTmyRNQgtvctwO94U6" class="fa fa-arrow-down widget widget-icon"></i><i id="Sbw14c75LtercH0Uimiar1r8ReGtHI24" class="fa fa-arrow-down widget widget-icon"></i>
-            <div id="aXZ8cnJO7WrsvoGDVJTvXbc8mB529Zce" class="widget widget-counter counter-type-4" data-date="720" data-format="%dd:%hh:%mm:%ss"data-version="2"data-repeat="-1">
-                <div id="XHnfT1T5zhkPeCEvIMeaSJQfbnQhxMLT" class="widget widget-container">
-                    <div id="VLaKEhOHM8nkubDqBdoII4Evxw29i6qp" class="widget widget-text counter-number" data-format="%hh"></div>
-                    <div id="qNSUfPRbJzG9R4OoksBI0koQ8gebJZPT" class="widget widget-text counter-label">Godziny</div>
-                </div>
-                <div id="wU8aPJEx6Vw28MRTToiQcePRUBDMR7nP" class="widget widget-container">
-                    <div id="KHUZ4k0AMhnGizT5ZA9xaqmyQuCBo8nR" class="widget widget-text counter-number" data-format="%mm"></div>
-                    <div id="c183KMFLHl2MfpFAuXX0v1R4gc5rx7BA" class="widget widget-text counter-label">Minuty</div>
-                </div>
-                <div id="nXVXtncOEwE94euIs6Xp1qLhBGrWWgsz" class="widget widget-container">
-                    <div id="ATQ6PAEfMiGikkzGOiJC2ZLeLhWDGptc" class="widget widget-text counter-number" data-format="%ss"></div>
-                    <div id="cBlteZTCRUgN6zqBmognNKaLwVoLg9H3" class="widget widget-text counter-label">Sekundy</div>
-                </div>
-            </div>
-            <a href="#XqJ6sTI6tNbSss1nJLcdTzqTIcUgVGzG" id="lKANXe7Enycl77UlsA54Clsd5fK2Wo5W" class="widget widget-button"  version="3" subtype="anchor" rel="noopener noreferrer" >
+            <a href="#XqJ6sTI6tNbSss1nJLcdTzqTIcUgVGzG" title="2" id="lKANXe7Enycl77UlsA54Clsd5fK2Wo5W" class="widget widget-button button-quantity"  version="3" subtype="anchor" rel="noopener noreferrer" >
                 <div class="widget-overlay"></div>
-                <div id="FhcKWo6xUgq5JFaSDnXrWdhE98rCOAJP" class="widget widget-text">ZAM&Oacute;W TERAZ</div>
+                <div id="FhcKWo6xUgq5JFaSDnXrWdhE98rCOAJP" class="widget widget-text">PORUČI ODMAH</div>
             </a>
-            <a href="#XqJ6sTI6tNbSss1nJLcdTzqTIcUgVGzG" id="X0G41609ET8qEDllUdQKbe1CNgsmQNAe" class="widget widget-button"  version="3" subtype="anchor" rel="noopener noreferrer" >
+            <a href="#XqJ6sTI6tNbSss1nJLcdTzqTIcUgVGzG" title="1" id="nHRJObp6hR78zsIRs5HiDrl1cnfWA3pU1" class="widget widget-button button-quantity"  version="3" subtype="anchor" rel="noopener noreferrer" >
                 <div class="widget-overlay"></div>
-                <div id="DDZ753rywZK2tFlN930E5qcoMkNTyRvA" class="widget widget-text">ZAM&Oacute;W TERAZ</div>
+                <div id="bTN7EmMLDBRQTdvUc8SmlG8BvP5wdzxn" class="widget widget-text">PORUČI ODMAH</div>
+            </a>
+            <a href="#XqJ6sTI6tNbSss1nJLcdTzqTIcUgVGzG" title="3" id="X0G41609ET8qEDllUdQKbe1CNgsmQNAe" class="widget widget-button button-quantity"  version="3" subtype="anchor" rel="noopener noreferrer" >
+                <div class="widget-overlay"></div>
+                <div id="DDZ753rywZK2tFlN930E5qcoMkNTyRvA" class="widget widget-text">PORUČI ODMAH</div>
             </a>
         </div>
     </div>
@@ -549,33 +548,42 @@
                 {{csrf_field()}}
                 @include('lander.naturapharm.components.form_hidden_fields')
                 <div id="fH2uJ0unlTJwXkvPbP4kMgVxhUchflR6" class="widget widget-container clearfix">
-                    <label id="REeMpmT8k2mTdvt5JoTzVlRUPIPAWBcw" class="widget widget-text widget-regular-label widget-label">IMIĘ</label>
-                    <input class="widget widget-input-text" id="Nu9vI7A96DRZB630m88f2lm7RJ43bgUT"  type="text" subtype="name" parentId="yBvVs2Q0J8vs3XRhf279KZFLnUhIvwK7"  name="name"  value="">
+                    <label id="REeMpmT8k2mTdvt5JoTzVlRUPIPAWBcw" class="widget widget-text widget-regular-label widget-label">Ime i prezime</label>
+                    <input class="widget widget-input-text" id="Nu9vI7A96DRZB630m88f2lm7RJ43bgUT" type="text" subtype="name" parentId="yBvVs2Q0J8vs3XRhf279KZFLnUhIvwK7"  name="name"  value="{{ old('name') }}" required>
                 </div>
                 <div id="X8HRnpVq6B2sWv6yolrJlOAUDb2M3qkf" class="widget widget-container clearfix">
-                    <label id="NUoEqC3ycfhdVnabrqU1b5Rsk03tXL1h" class="widget widget-text widget-regular-label widget-label">TELEFON KONTAKTOWY</label>
-                    <input class="widget widget-input-text" id="CaQ51eCP8RcHudV3hVoku9UTXe2pUHNX"  type="tel" subtype="phone" parentId="yBvVs2Q0J8vs3XRhf279KZFLnUhIvwK7"  name="phone"  value="">
+                    <label id="NUoEqC3ycfhdVnabrqU1b5Rsk03tXL1h" class="widget widget-text widget-regular-label widget-label">Telefon</label>
+                    <input class="widget widget-input-text" id="CaQ51eCP8RcHudV3hVoku9UTXe2pUHNX"  type="tel" subtype="phone" parentId="yBvVs2Q0J8vs3XRhf279KZFLnUhIvwK7"  name="phone"  value="{{ old('phone') }}" required>
+                </div>
+                <div id="X8HRnpVq6B2sWv6yolrJlOAUDb2M3qkf" class="widget widget-container clearfix">
+                    <label id="NUoEqC3ycfhdVnabrqU1b5Rsk03tXL1h" class="widget widget-text widget-regular-label widget-label">Email</label>
+                    <input class="widget widget-input-text" id="CaQ51eCP8RcHudV3hVoku9UTXe2pUHNX"  type="email" subtype="email" parentId="yBvVs2Q0J8vs3XRhf279KZFLnUhIvwK7"  name="email"  value="{{ old('email') }}" required>
                 </div>
                 <div id="JrDHTwac4LxA7EnaFWJuV75NGTOrsvcw" class="widget widget-container clearfix">
-                    <label id="pNMW4HGXoSC8GAB83NMIQwAXmNpw5yQH" class="widget widget-text widget-regular-label widget-label">ADRES</label>
-                    <textarea
-                            class="widget widget-textarea"
-                            id="Rh9lNzSAlr8ZUqLKu5zwln2k0zu3KOCw"
-                            subtype="address" parentId="yBvVs2Q0J8vs3XRhf279KZFLnUhIvwK7"
-                            name="address" ></textarea>
+                    <label id="pNMW4HGXoSC8GAB83NMIQwAXmNpw5yQH" class="widget widget-text widget-regular-label widget-label">Adresa</label>
+                    <input class="widget widget-input-text" id="Rh9lNzSAlr8ZUqLKu5zwln2k0zu3KOCw"  type="text" subtype="address" parentId="yBvVs2Q0J8vs3XRhf279KZFLnUhIvwK7"  name="shipping_address"  value="{{ old('shipping_address') }}" required>
+                </div>
+                <div id="JrDHTwac4LxA7EnaFWJuV75NGTOrsvcw" class="widget widget-container clearfix">
+                    <label id="pNMW4HGXoSC8GAB83NMIQwAXmNpw5yQH" class="widget widget-text widget-regular-label widget-label">Grad</label>
+                    <input class="widget widget-input-text" id="Rh9lNzSAlr8ZUqLKu5zwln2k0zu3KOCw"  type="text" subtype="city" parentId="yBvVs2Q0J8vs3XRhf279KZFLnUhIvwK7"  name="shipping_city"  value="{{ old('shipping_city') }}" required>
                 </div>
                 <div id="TXOcBMdhaM2wGwGLzoARQfQz9I1Dfe62" class="widget widget-container clearfix">
-                    <label id="BxLvdTJiWoU4Zxk5UxVO939VnIOWwRzp" class="widget widget-text widget-regular-label widget-label">WYBIERZ OFERTĘ</label>
-                    <select class="widget-select widget widget-input-select" id="NonOWCeFuQmIHnpdtfy5GAwxXrPSJlXt"  parentId="yBvVs2Q0J8vs3XRhf279KZFLnUhIvwK7"  name="select" >
-                        <option value="DS-1001@64.99" >1 SZTUKA – 64.99 PLN</option>
-                        <option value="DS-1001;DS-1001@99.98" >2 SZTUKI – 99.98 PLN</option>
-                        <option value="DS-1001;DS-1001;DS-1001;DS-2003@149.97" >3 SZTUKI + PREZEN – 149.97 PLN</option>
+                    <label id="BxLvdTJiWoU4Zxk5UxVO939VnIOWwRzp" class="widget widget-text widget-regular-label widget-label">Izaberite količinu</label>
+                    <select class="widget-select widget widget-input-select" id="NonOWCeFuQmIHnpdtfy5GAwxXrPSJlXt"  parentId="yBvVs2Q0J8vs3XRhf279KZFLnUhIvwK7"  name="quantity" required>
+                        @foreach($prices as $singlePrice)
+                            <option value="{{$singlePrice['quantity']}}"
+                                    @if($singlePrice['is_default']) selected @endif
+                                    @if(old('quantity') == $singlePrice['quantity']) selected @endif
+                            >
+                                {{$singlePrice['quantity']}} x {{$product->product_name}} ({{$singlePrice['amount']}} RSD)
+                            </option>
+                        @endforeach
                     </select>
                 </div>
                 <div id="FIKWkqeThZmu9a72OVTMiuBXFq0npgyR" class="widget widget-container input-button-container clearfix">
                     <button class="widget widget-input-button" type="submit" id="VKLu6pVA87bvPUOrgq5ZstLepM0rgiyI"  parentId="yBvVs2Q0J8vs3XRhf279KZFLnUhIvwK7">
                         <div class="widget-overlay"></div>
-                        ZAMÓW TERAZ
+                        PORUČI ODMAH
                     </button>
                 </div>
             </form>
@@ -595,7 +603,7 @@
             <img id="bN3hP9JerwPdoiLS5Vzt5is6du5DrySp"
                  width="87" height="88"
                  class="widget widget-image"
-                 src="{{ asset('/') }}dailysharkFiles/dailyshark/lander2/57936001_2172731566137425_3552256932423139328_o.png"
+                 src="{{ asset('/') }}dailysharkFiles/dailyshark/lander2/dailysharklogo_154.png"
                  alt=""
             >
             <div id="zFKPICpom7m7KSo1S2FxzHIqPUy4mkLm" class="widget widget-text">
@@ -607,5 +615,15 @@
         </div>
     </div>
 </div>
+@include('components.pixel_footer')
+<script>
+    $(document).ready(function(){
+        $('.button-quantity').click(function(){
+            $title = $(this).attr('title');
+            $('#NonOWCeFuQmIHnpdtfy5GAwxXrPSJlXt').val($title);
+            $('#yBvVs2Q0J8vs3XRhf279KZFLnUhIvwK7').effect("shake", "slow");
+        });
+    });
+</script>
 </body>
 </html>
