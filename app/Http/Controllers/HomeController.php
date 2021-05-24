@@ -106,7 +106,9 @@ class HomeController extends Controller
                 $info['isRobot'] = $agent->isRobot();
                 $info['httpHeaders'] = $agent->getHttpHeaders();
 
-                Log::info('404 - Slug akupunkturnaFiles/images - Coupon: '.$coupon.' More info: '.json_encode($info, JSON_PRETTY_PRINT));
+                if($info['isRobot'] === false) {
+                    Log::info('404 - Slug akupunkturnaFiles/images - Coupon: '.$coupon.' More info: '.json_encode($info, JSON_PRETTY_PRINT));
+                }
             } else {
                 Log::info('404 - Product null - Slug: '.$slug.' Brand: '.$brandUrl);
             }
