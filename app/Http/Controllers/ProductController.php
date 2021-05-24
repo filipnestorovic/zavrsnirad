@@ -322,7 +322,7 @@ class ProductController extends Controller
 
         $rules = [
             'review_name' => ['required','max:50'],
-            'review_text' => ['required','max:255'],
+            'review_text' => ['required'],
             'reviewStars' => ['required'],
             'productId' => ['required'],
             'review_image' => ['required','image'],
@@ -390,7 +390,7 @@ class ProductController extends Controller
 
         $rules = [
             'reviewNameModal' => ['required','max:50'],
-            'reviewTextModal' => ['required','max:255'],
+            'reviewTextModal' => ['required'],
             'reviewStarsModal' => ['required'],
             'reviewIdModal' => ['required'],
             'reviewImageModal' => ['nullable','image'],
