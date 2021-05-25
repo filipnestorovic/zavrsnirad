@@ -2,14 +2,17 @@
 <html>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <head>
-    <meta charset="utf-8"/>
     <title>Zategnuto telo, brzo i lako, bez vežbanja za samo 30 dana?</title>
+    @include('components.pixel_init')
+    <meta charset="utf-8"/>
     <meta content="initial-scale=1, maximum-scale=1, width=device-width" name="viewport"/>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet"/>
     {{--<link href="http://febatigr.com/content/nZrNIuQCvDQbpnd/img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>--}}
     <link href="{{ asset('/') }}flexonikFiles/ems/adv/index.css" media="all" rel="stylesheet" type="text/css"/>
+    <script src="{{ asset('/') }}shared_files/jquery-1.12.4.min.js" type="text/javascript"></script>
 </head>
 <body>
+@include('components.display_errors')
 <div class="main-container">
     <div class="header">
         {{--<div id="logo"> <img alt="" src="{{ asset('/') }}flexonikFiles/ems/adv/logo.png"/></div>--}}
@@ -507,5 +510,6 @@
     <span>&copy; {{ now()->year }} Copyright. Sva prava zadržana.</span><br>
     <p></p>
 </div>
+@include('components.pixel_footer')
 </body>
 </html>
