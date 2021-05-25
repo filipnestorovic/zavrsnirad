@@ -92,25 +92,20 @@ class HomeController extends Controller
         $brand_id = $this->modelBrand->getBrandByUrl($brandUrl)->id_brand;
 
         if($brand_id === null) {
-            Log::info('404 - Brand null - Slug: '.$slug.' Brand: '.$brandUrl);
+            Log::info('404 - Brand null - '.$brandUrl);
             return abort('404');
         } else {
             $product = $this->modelProduct->getProductBySlugBrandAndCountry($slug, $brand_id, $country_id);
         }
 
         if($product === null) {
-            if($slug === "akupunkturnaolovkaFiles" || $slug === "images") {
-                $agent = new Agent();
+            $agent = new Agent();
+            if(!$agent->isRobot()) {
                 $info['ip'] = $request->ip();
                 $info['user_agent'] = $agent->getUserAgent();
                 $info['isRobot'] = $agent->isRobot();
                 $info['httpHeaders'] = $agent->getHttpHeaders();
-
-                if($info['isRobot'] === false) {
-                    Log::info('404 - Slug akupunkturnaFiles/images - Coupon: '.$coupon.' More info: '.json_encode($info, JSON_PRETTY_PRINT));
-                }
-            } else {
-                Log::info('404 - Product null - Slug: '.$slug.' Brand: '.$brandUrl);
+                Log::info('404 - Product null - Slug: '.$slug.' - Coupon: '.$coupon.' - Brand: '.$brandUrl.' More info: '.json_encode($info, JSON_PRETTY_PRINT));
             }
             return abort('404');
         } else {
