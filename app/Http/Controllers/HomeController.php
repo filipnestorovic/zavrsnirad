@@ -80,19 +80,19 @@ class HomeController extends Controller
         $country_id = $request->get('countryId');
 
         if($slug === "purplerelax") {
-            Log::info('From Google with slug *purplerelax* - slug changed to *vratnimasazer*');
+//            Log::info('From Google with slug *purplerelax* - slug changed to *vratnimasazer*');
             $slug = "vratnimasazer";
         }
 
         if($slug === "masazer") {
-            Log::info('From Google with slug *masazer* - slug changed to *multifunkcionalnimasazer*');
+//            Log::info('From Google with slug *masazer* - slug changed to *multifunkcionalnimasazer*');
             $slug = "multifunkcionalnimasazer";
         }
 
         $brand_id = $this->modelBrand->getBrandByUrl($brandUrl)->id_brand;
 
         if($brand_id === null) {
-            Log::info('404 - Brand null - '.$brandUrl);
+//            Log::info('404 - Brand null - '.$brandUrl);
             return abort('404');
         } else {
             $product = $this->modelProduct->getProductBySlugBrandAndCountry($slug, $brand_id, $country_id);
@@ -105,7 +105,7 @@ class HomeController extends Controller
                 $info['user_agent'] = $agent->getUserAgent();
                 $info['isRobot'] = $agent->isRobot();
                 $info['httpHeaders'] = $agent->getHttpHeaders();
-                Log::info('404 - Product null - Slug: '.$slug.' - Coupon: '.$coupon.' - Brand: '.$brandUrl.' More info: '.json_encode($info, JSON_PRETTY_PRINT));
+//                Log::info('404 - Product null - Slug: '.$slug.' - Coupon: '.$coupon.' - Brand: '.$brandUrl.' More info: '.json_encode($info, JSON_PRETTY_PRINT));
             }
             return abort('404');
         } else {
