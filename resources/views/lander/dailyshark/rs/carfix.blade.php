@@ -25,14 +25,13 @@
 </div>
 <div class="section block-2" id=ch1>
     <div class=wrap>
-        <h2 class=line>Что такое Car-Fix</h2>
-        <h3>И почему он пользуется такой популярностью у автовладельцев?</h3>
+        <h2 class=line>ŠTA JE CAR-FIX</h2>
+        <h3 style="text-align: center;">I ZAŠTO JE TOLIKO POPULARAN KOD VLASNIKA AUTOMOBILA?</h3>
         <div class="container clearfix">
-            {{--<div class=video>--}}
-                {{--<iframe width=454 height=284 src="https://www.youtube.com/embed/bVQcqCCgtSU?rel=0&amp;controls=0&amp;showinfo=0" frameborder=0 allowfullscreen></iframe>--}}
-            {{--</div>--}}
-            <p>Мы предлагаем по истине потрясающее приспособление для <b>устранения вмятин на Вашем авто без повреждения лакокрасочного покрытия</b>! Этим инструментом и технологией пользуются профессионалы в автосервисах!</p>
-            <p><b>Car-Fix сэкономит Ваши деньги</b> без дорогостоящего ремонта на СТО. Уникальная, запатентованная форма скобы исключает дополнительные повреждения, а клей после устранения вмятин можно легко удалить!</p>
+            <p>U ponudi imamo zaista neverovatan alat za <b>uklanjanje udubljenja na vašem automobilu, bez oštećenja laka</b>.
+                Ovaj alat i tehnologiju koriste profesionalci u autoservisima.</p>
+            <p><b>Car-Fix štedi vaš novac</b> bez skupih popravki u servisu. Jedinstveni i patentirani alat eliminiše udubljenje brzo i lako,
+                bez oštećenja.</p>
         </div>
     </div>
 </div>
@@ -43,51 +42,54 @@
 </div>
 <div class="section block-3">
     <div class=wrap>
-        <h2 class=line>Инструкция по применению</h2>
+        <h2 class=line>UPUTSTVO ZA UPOTREBU</h2>
         <div class=container-1>
             <ul>
-                <li><b>1</b> - Клей наносится на специальную присоску (требуется разогревающий пистолет)</li>
-                <li><b>2</b> - присоску с клеем помещаем в центр вмятины и ожидаем 2-3 минуты</li>
-                <li><b>3</b> - одеваем скобу-мостик. Закручиваем специальный болт, до тех пор пока вмятина не исчезнет</li>
-                <li><b>4</b> - без проблем отклеиваем присоску и убираем остатки клея. ГОТОВО!</li>
+                <li><b>1</b> - Lepak se nanosi na posebnu usisnu čašu (potreban je pištolj za grejanje)</li>
+                <li><b>2</b> - Stavite vakuum sa lepkom u središte udubljenja i pričekajte 2-3 minuta</li>
+                <li><b>3</b> - Namontirati ceo mehanizam i zatezati specijalni vijak dok udubljenje ne nestane</li>
+                <li><b>4</b> - Bez problema skinite vakuum i uklonite ostatke lepka. GOTOVO!</li>
                 <li></li>
             </ul>
         </div>
         <div class=container-2>
-            <h4>Комплектация набора:</h4>
+            <h4>Komplet sadrži:</h4>
             <ul>
-                <li><b>&#10003;</b> - мостик-скоба Car-Fix</li>
-                <li><b>&#10003;</b> - вытяжной вентель</li>
-                <li><b>&#10003;</b> - специальный термоклей (1 шт.)</li>
-                <li><b>&#10003;</b> - присоски разного диаметра (3 шт.)</li>
-                <li><b>&#10003;</b> - лопатка для удаления клея</li>
+                <li><b>&#10003;</b> - Car Fix alatku</li>
+                <li><b>&#10003;</b> - Specijalni lepak za topljenje</li>
+                <li><b>&#10003;</b> - Pištolj za topljenje lepka</li>
+                <li><b>&#10003;</b> - Usisne čaše različitih prečnika (3 kom)</li>
+                <li><b>&#10003;</b> - Lopatica za uklanjanje lepka</li>
             </ul>
         </div>
     </div>
 </div>
 <div class="section block-6 bg-rep">
     <div class=wrap>
-        <h2 class=line>Отзывы <span>покупателей</span></h2>
+        <h2 class=line>UTISCI <span>KUPACA</span></h2>
         <div class="rew-cont clearfix">
             <div class=rew-item>
                 <img src="{{ asset('/') }}dailysharkFiles/carfix/rew-1.png">
                 <div>
-                    <h4>Михаил Липкович</h4>
-                    «Посоветовал Car-Fix мне сотрудник по работе. Заезжая в гараж, помял задний бампер и никак не мог решить каким образом убрать вмятину. Результат после применения набора для рихтовки мне очень понравился, это просто не заменимая вещь для автовладельцев.»
+                    <h4>Branko Tatomirović</h4>
+                    "Ulazeći u garažu, udario sam zadnji branik i nisam znao kako da uklonim udubljenje, a komšija me je posavetovao da kupim Car-Fix.
+                    Rezultat mi se jako svideo jer sam za male pare uspeo da ispeglam udubljenje. Odlična stvar za vlasnike automobila."
                 </div>
             </div>
             <div class=rew-item>
                 <img src="{{ asset('/') }}dailysharkFiles/carfix/rew-2.png">
                 <div>
-                    <h4>Виктор Митрохин</h4>
-                    «Езжу я в принципе очень аккуратно, но в большом городе всякое случается, то там задел, то там стукнулся, в общем, неприятно видеть свою красавицу в таком виде. Сосед по гаражу посоветовал комплект для устранения вмятин Car-Fix. Быстро, просто, эффективно привел кузов в порядок.»
+                    <h4>Viktor Mitrović</h4>
+                    "U principu vozim vrlo oprezno, ali u velikom gradu se svašta dogodi. Imao sam 2 udubljenja na limariji i kolega mi je predložio Car-Fix komplet za ispravljanje limarije.
+                    Brzo, jednostavno i efikasno. Sve preporuke."
                 </div>
             </div>
             <div class=rew-item>
                 <img src="{{ asset('/') }}dailysharkFiles/carfix/rew-3.png">
                 <div>
-                    <h4>Алена Смирнова</h4>
-                    «Набор просто супер! Очень прост в использовании. Увидела в действии Car-Fix у коллеги по работе. Когда на моих глазах исчезла довольно большая вмятина, тут же решила, что мне он очень нужен. Езжу я на родительской машине и Car-Fix всегда вожу с собой.»
+                    <h4>Anđela Petrović</h4>
+                    "Set je super i vrlo jednostavan za upotrebu. Car-Fix sam videla kod mog kolege i nakon nekoliko dana sam ga poručila.
+                    Kada mi je prilično veliko udubljenje nestalo pred očima, shvatila sam da sam kupila pravu stvar. Udarila sam tatin automobil i ništa nije primetio. :)"
                 </div>
             </div>
         </div>
@@ -95,16 +97,16 @@
 </div>
 <div class="section block-7" id=ch3>
     <div class=wrap>
-        <h2 class=line>Доставка <span>и оплата</span></h2>
+        <h2 class=line>Dostava <span>i plaćanje</span></h2>
         <ul class=clearfix>
             <li>
-                <p><b>Доставка почтой</b>, в течение 7 рабочих дней.</p>
+                <p>Dostava brzom poštom u roku od <b>1-2 radna dana</b>.</p>
             </li>
             <li>
-                <p><b>Никаких предоплат!</b> Оплата заказов осуществляется непосредственно по факту получения заказа.</p>
+                <p><b>Bez plaćanja unapred!</b> Plaćanje se vrši po prijemu paketa.</p>
             </li>
             <li>
-                <p>Вы вправе отказаться от покупки <b>в течение 14 дней</b> с момента получения заказа, независимо от причины возврата.</p>
+                <p>Ukoliko vam se proizvod ne dopadne, <b>vratićemo vam novac</b>.</p>
             </li>
         </ul>
     </div>
@@ -112,7 +114,7 @@
 <div id="#order" class=block-8>
     <div class=wrap>
         <h1>Car-Fix</h1>
-        <h2>Набор для вытягивания вмятин на вашем авто <span> со скидкой 40%</span></h2>
+        <h2>KOMPLET ZA ISPRAVLJANJE LIMARIJE NA VAŠEM AUTOMOBILU</h2>
     </div>
     <div class="wrap clearfix">
         <div class=left-cont>
@@ -123,13 +125,13 @@
         </div>
         <div class=right-cont id=order>
             <p class=title>
-                <strong>Заполните форму</strong><br>и наши менеджеры свяжутся с Вами в ближайшее время
+                <strong>Popunite formu</strong><br>podacima za dostavu
             </p>
             <form action="{{$orderRoute}}" method=post>
                 {{ csrf_field() }}
                 @include('lander.naturapharm.components.form_hidden_fields')
                 <div><input type="text" name="name" placeholder="Ime i prezime" required></div>
-                <div><input type="text" name="phone" class="only_number" placeholder="Telefon" required></div>
+                <div><input type="tel" name="phone" class="only_number" placeholder="Telefon" required></div>
                 <div><input type="text" name="shipping_address" placeholder="Adresa" required></div>
                 <div><input type="text" name="shipping_city" placeholder="Grad" required></div>
                 <p class=limit></p>
