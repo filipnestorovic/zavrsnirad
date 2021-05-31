@@ -546,4 +546,84 @@ class VariationController extends Controller
         }
 
     }
+
+    public function copyVariation($variation_id = null) {
+        $singleVariation = $this->modelVariation->getVariation($variation_id);
+        $coupons = $this->modelCoupon->getAllCouponsForVariation($variation_id);
+        $prices = $this->modelPrice->getPricesForVariation($variation_id);
+        $pricesList = json_decode($prices, true);
+        $groupedPrices = $this->getMultipleItemsFromQuery($pricesList,'id_variation');
+
+        $prices = [];
+        $i = 0;
+        $j = 0;
+        foreach($groupedPrices as $price) {
+            foreach($price as $p) {
+                $i++;
+                $prices[$i]['quantity'] = $p['quantity'];
+                $prices[$i]['price_id'] = $p['price_id'];
+                $prices[$i]['is_default'] = $p['is_default'];
+                $prices[$i]['is_free_shipping'] = $p['is_free_shipping'];
+            }
+        }
+
+        try {
+            $this->modelVariation->product_id = $singleVariation->product_id;
+            $this->modelVariation->variation_name = $singleVariation->variation_name . " - Copy";
+            $this->modelVariation->variation_description = $singleVariation->variation_description . " - Copy";
+            $this->modelVariation->lander_id = $singleVariation->lander_id;
+            $this->modelVariation->checkout_id = $singleVariation->checkout_id;
+            $this->modelVariation->thankyou_id = $singleVariation->thankyou_id;
+            $this->modelVariation->default = 0;
+            $this->modelVariation->active = $singleVariation->is_active;
+
+            $insertIdVariation = $this->modelVariation->insertVariations();
+        } catch (\Exception $exception) {
+            Log::error("Error: Copying variation | Exception: " . $exception->getMessage());
+            return redirect()->back()->with('error','Error on copying variation!');
+        }
+
+        if($insertIdVariation) {
+            try {
+                foreach($prices as $price) {
+                    $this->modelPrice->variation_id = $insertIdVariation;
+                    $this->modelPrice->quantity = $price['quantity'];
+                    $this->modelPrice->is_default = $price['is_default'];
+                    $this->modelPrice->is_free_shipping = $price['is_free_shipping'];
+                    $this->modelPrice->price_id = $price['price_id'];
+
+                    $insertPrice = $this->modelPrice->insertPriceVariation();
+                    if($insertPrice) $j++;
+                }
+            } catch (\Exception $exception) {
+                Log::error("Error: Adding prices to copied variation | Exception: " . $exception->getMessage());
+                return redirect()->back()->with('error','Error on adding prices to copied variation!');
+            }
+        }
+
+        $k = 0;
+        $l = 0;
+        if($i === $j) {
+            try {
+                foreach($coupons as $coupon) {
+                    $k++;
+                    $this->modelCoupon->variation_id = $insertIdVariation;
+                    $this->modelCoupon->coupon_id = $coupon->id_coupon;
+
+                    $insertCoupon = $this->modelCoupon->addVariationCoupon();
+                    if($insertCoupon) $l++;
+                }
+            } catch (\Exception $exception) {
+                Log::error("Error: Adding coupons to copied variation | Exception: " . $exception->getMessage());
+                return redirect()->back()->with('error','Error on adding coupons to copied variation!');
+            }
+        }
+
+        if($k === $l) {
+            return redirect()->route('variation',['id' => $insertIdVariation])->with('success','Variation copied successfully!');
+        } else {
+            return redirect()->back()->with('error','Error on copying variation!');
+        }
+
+    }
 }

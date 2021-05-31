@@ -165,6 +165,10 @@
                         $('[data-toggle="popover"]').popover({
                             html: true
                         });
+
+                        $('.copyVariationButton').click(function () {
+                            return confirm('Are you sure that you want to create new variation from this variation?');
+                        });
                     },
                     error: function (req, err) {
                         $('#errorMessageHeader').html('Error on getting variations list');

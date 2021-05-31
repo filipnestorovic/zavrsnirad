@@ -106,6 +106,7 @@ Route::group([ 'middleware' => ['admin']], function() {
         Route::get('/restoreVariation/{id?}', [App\Http\Controllers\VariationController::class, 'restoreVariation'])->name('restoreVariation');
         Route::post('/addCouponsToVariation', [App\Http\Controllers\VariationController::class, 'addCouponsToVariation'])->name('addCouponsToVariation');
         Route::post('/addPricesToVariation', [App\Http\Controllers\VariationController::class, 'addPricesToVariation'])->name('addPricesToVariation');
+        Route::get('/copyVariation/{id?}', [App\Http\Controllers\VariationController::class, 'copyVariation'])->name('copyVariation');
 
         Route::get('/ajaxData/getVariationsAjax', [App\Http\Controllers\VariationController::class, 'getVariationsAjax'])->name('getVariationsAjax');
         Route::get('/ajaxData/getProductsAjax', [App\Http\Controllers\ProductController::class, 'getProductsAjax'])->name('getProductsAjax');

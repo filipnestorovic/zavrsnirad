@@ -52,6 +52,7 @@
             <td>{{ $singleVariation[0]["thankyou_name"] }}</td>
             <td>
                 <span class="table-edit"><a href="{{ route('variation',['id' => $singleVariation[0]["id_variation"]]) }}"><button type="button" class="btn btn-success btn-rounded btn-sm my-0 editVariationButton">DETAILS</button></a></span>
+                <span class="table-copy"><a href="{{ route('copyVariation',['id' => $singleVariation[0]["id_variation"]]) }}"><button type="button" class="btn btn-primary btn-rounded btn-sm my-0 copyVariationButton">COPY</button></a></span>
             </td>
         </tr>
     @endforeach
