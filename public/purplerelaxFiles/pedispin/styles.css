@@ -241,8 +241,7 @@ h2 {
 }
 .about_section .text_block {
     float: left;
-    margin: 5px 0 40px 20px;
-    width: 460px;
+    margin-bottom: 30px;
 }
 .about_section .text_block p {
     margin: 0 0 15px;
@@ -492,7 +491,7 @@ h2 {
     left: -240px;
 }
 .opinion_section .text_block {
-    margin: 0 0 0 400px;
+    margin: 0;
     position: relative;
     z-index: 10;
 }

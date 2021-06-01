@@ -16,12 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-//Route::get('/dashboard', function () {
-//    return view('dashboard');
-//})->middleware(['auth'])->name('dashboard');
-
 Route::group([ 'middleware' => ['admin']], function() {
-
     Route::domain('new.wombatsbrand.com')->middleware(['auth'])->group(function () {
         Route::get('/', [App\Http\Controllers\AdminController::class, 'admin'])->name('adminDashboard');
         Route::get('/logout', [App\Http\Controllers\AdminController::class, 'logout'])->name('logoutAdmin');

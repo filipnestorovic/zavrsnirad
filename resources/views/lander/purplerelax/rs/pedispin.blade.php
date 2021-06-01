@@ -15,13 +15,13 @@
 @include('components.display_errors')
 <section class=offer_section>
     <div class=wrapper>
-        <h1 class=main_title>Pedi Spin – японская электрическая пемза</h1>
-        <p class=subtitle>Еще никогда уход за кожей ступней не был таким легким!</p>
+        <h1 class=main_title>PEDI SPIN - ZA NEŽNA I LEPA STOPALA</h1>
+        <p class=subtitle>Nega stopala nikada nije bila tako dostupna i jednostavna!</p>
         <div class=discount>Akcija! <span>40%</span> popusta</div>
         <ul>
-            <li>Устраняет мозоли и натоптыши</li>
-            <li>Процедура абсолютно безболезненна</li>
-            <li>Не требуется предварительное распаривание ног</li>
+            <li>Eliminiše žuljeve i kurje oči</li>
+            <li>Postupak je apsolutno bezbolan</li>
+            <li>Nije potrebno prethodno napariti stopala</li>
         </ul>
         <div class="price_block clearfix">
             <div class="price_item old">
@@ -38,10 +38,12 @@
 </section>
 <section class=about_section>
     <div class=wrapper>
-        <h2>Посмотрите, как легко использовать Pedi&nbsp;Spin!</h2>
+        <h2>POGLEDAJTE KAKO SE LAKO KORISTI PEDI SPIN!</h2>
         <div class=text_block>
-            <p><b>Электрическая пемза для педикюра Pedi Spin – это эффективный ежедневный уход за Вашими ножками в домашних условиях.</b> Пемза содержит встроенную полировальную головку, которая сделана из качественной коррозионной стали, безболезненно и эффективно выполнит чистку Ваших ступней.</p>
-            <p>Пемза компактная и работает от батареек, ее насадка с легкостью очищается и не требует особого ухода.</p>
+            <p><b>Električni uređaj za negu stopala postao je neizostavan proizvod u svakom ženskom domu.</b>
+                Poseduje ugrađenu glavu za glačanje i čišćenje kože izrađenu od visokokvalitetnog nerđajućeg čelika koji će bezbolno i efikasno očistiti stopala, skinuti sve
+                neravnine i učiniti kožu nežnom i glatkom.</p>
+            <p>Uređaj je kompaktan i radi na baterije, lako se čisti i ne zahteva posebno održavanje.</p>
         </div>
         <div class="images_block clearfix">
             <img src="{{ asset('/') }}purplerelaxFiles/pedispin/about__image1.jpg" alt="Pedi Spin">
@@ -52,38 +54,38 @@
 </section>
 <section class=problems_section>
     <div class=wrapper>
-        <h2>Вы забудете об этих проблемах!</h2>
+        <h2>POMAŽE U REŠAVANJU SLEDEĆIH PROBLEMA:</h2>
         <div class=problems_list>
             <div class=problem_item>
                 <img alt="Pedi Spin" src="{{ asset('/') }}purplerelaxFiles/pedispin/problems__problem1_image.jpg">
-                <h4>Трещины</h4>
+                <h4>Pukotine</h4>
             </div>
             <div class=problem_item>
                 <img alt="Pedi Spin" src="{{ asset('/') }}purplerelaxFiles/pedispin/problems__problem2_image.jpg">
-                <h4>Мозоли</h4>
+                <h4>Kraste</h4>
             </div>
             <div class=problem_item>
                 <img alt="Pedi Spin" src="{{ asset('/') }}purplerelaxFiles/pedispin/problems__problem3_image.jpg">
-                <h4>Натоптыши</h4>
+                <h4>Žuljevi</h4>
             </div>
             <div class=problem_item>
                 <img alt="Pedi Spin" src="{{ asset('/') }}purplerelaxFiles/pedispin/problems__problem4_image.jpg">
-                <h4>Огрубевшая кожа</h4>
+                <h4>Gruba koža</h4>
             </div>
         </div>
     </div>
 </section>
 <section class=benefits_section>
     <div class="wrapper clearfix">
-        <h2>Pedi Spin – аппарат нового поколения</h2>
+        <h2>PEDI SPIN - UREĐAJ NOVE GENERACIJE</h2>
         <div class=benefits_list>
             <div class=benefit_item>
                 <div class=image_block>
                     <img src="{{ asset('/') }}purplerelaxFiles/pedispin/benefits__benefit1_image.jpg" alt="Pedi Spin">
                 </div>
                 <div class=text_block>
-                    <h4>Эффективный</h4>
-                    <p>Вращающаяся полировальная головка Pedi Spin удаляет засохшие грубые наросты, мозоли&nbsp;и омертвевшую кожу</p>
+                    <h4>EFIKASNO</h4>
+                    <p>Rotirajuća glava za čišćenje kože uklanja suve, grube izrasline, žuljeve i mrtvu kožu</p>
                 </div>
             </div>
             <div class=benefit_item>
@@ -91,8 +93,8 @@
                     <img src="{{ asset('/') }}purplerelaxFiles/pedispin/benefits__benefit2_image.jpg" alt="Pedi Spin">
                 </div>
                 <div class=text_block>
-                    <h4>Аккуратный</h4>
-                    <p>Шлифовочные насадки устройства настолько нежны, что не повредят даже воздушный шар</p>
+                    <h4>BEZBEDNO</h4>
+                    <p>Dodaci za brušenje i glačanje kože su nežni toliko da neće oštetiti ni balon</p>
                 </div>
             </div>
             <div class=benefit_item>
@@ -100,8 +102,8 @@
                     <img src="{{ asset('/') }}purplerelaxFiles/pedispin/benefits__benefit4_image.jpg" alt="Pedi Spin">
                 </div>
                 <div class=text_block>
-                    <h4>Компактный</h4>
-                    <p>Pedi Spin не занимает много места, Вы легко можете брать его с собой в отпуск</p>
+                    <h4>KOMPAKTAN</h4>
+                    <p>Pedi Spin ne zauzima puno prostora, lako ga možete poneti sa sobom bilo gde</p>
                 </div>
             </div>
         </div>
@@ -113,69 +115,70 @@
 </section>
 <section class=use_steps_section>
     <div class=wrapper>
-        <h2>Сделайте свои ступни идеально гладкими с Pedi Spin всего за 3 шага!</h2>
+        <h2>UČINITE STOPALA SAVRŠENO GLATKIM POMOĆU PEDI SPIN UREĐAJA U SAMO 3 KORAKA!</h2>
         <div class="steps_list clearfix">
             <div class=step_item>
                 <img src="{{ asset('/') }}purplerelaxFiles/pedispin/use_steps__step1_image.jpg" alt="Pedi Spin">
-                <h4>Шаг 1</h4>
-                <p>Используйте основную насадку для удаления основной части огрубевшей кожи, натоптышей, мозолей</p>
+                <h4>KORAK 1</h4>
+                <p>Koristite osnovni nastavak za uklanjanje grube kože, zadebljanja i žuljeva</p>
             </div>
             <div class=step_item>
                 <img src="{{ asset('/') }}purplerelaxFiles/pedispin/use_steps__step2_image.jpg" alt="Pedi Spin">
-                <h4>Шаг 2</h4>
-                <p>Финишной насадкой еще раз пройдите по поверхности всей ступни</p>
+                <h4>KORAK 2</h4>
+                <p>Upotrebite nežnu četku za završnu obradu kako biste ponovo prešli celo stopalo</p>
             </div>
             <div class=step_item>
                 <img src="{{ asset('/') }}purplerelaxFiles/pedispin/use_steps__step3_image.jpg" alt="Pedi Spin">
-                <h4>Шаг 3</h4>
-                <p>Закрепите результат нанесением толстого слоя крема и дождитесь, пока крем полностью впитается</p>
+                <h4>KORAK 3</h4>
+                <p>Osigurajte rezultat nanošenjem debelog sloja kreme i pričekajte dok se krema potpuno ne upije</p>
             </div>
         </div>
-        <div class="results_block clearfix">
-            <img src="{{ asset('/') }}purplerelaxFiles/pedispin/use_steps__result1_image.jpg" alt="Pedi Spin">
-            <img src="{{ asset('/') }}purplerelaxFiles/pedispin/use_steps__result2_image.jpg" alt="Pedi Spin">
-        </div>
+        {{--<div class="results_block clearfix">--}}
+            {{--<img src="{{ asset('/') }}purplerelaxFiles/pedispin/use_steps__result1_image.jpg" alt="Pedi Spin">--}}
+            {{--<img src="{{ asset('/') }}purplerelaxFiles/pedispin/use_steps__result2_image.jpg" alt="Pedi Spin">--}}
+        {{--</div>--}}
     </div>
 </section>
 <section class=comparison_section>
     <div class=wrapper>
-        <h2>Pedi Spin – это наилучший способ ухода за кожей ступней</h2>
-        <p class=description>В отличие от дорогостоящих и сложных процедур аппаратного педикюра в косметических клиниках, <b>Pedi Spin недорогой и абсолютно простой в использовании.</b> А в отличие от домашних процедур, Pedi Spin гораздо удобнее, с ним <b>процесс удаления огрубевшей кожи занимает до 5 раз меньше времени.</b></p>
+        <h2>PEDI SPIN JE NAJBOLJI NAČIN ZA NEGU STOPALA</h2>
+        <p class=description>Za razliku od skupih i složenih postupaka u kozmetičkim salonima, <b>Pedi Spin je jeftin i potpuno jednostavan za upotrebu.</b>
+            U odnosu na kućne tretmane Pedi Spin je potpuno praktičan, jer postupak uklanjanja grube kože traje i do <b>5 puta kraće.</b></p>
         <div class="products_list owl-carousel">
             <div class="product_item first">
-                <h4>Электрическая пемза<br>“Pedi Spin”</h4>
+                <h4>UREĐAJ<br>PEDI SPIN</h4>
                 <div class=image_block>
                     <img src="{{ asset('/') }}purplerelaxFiles/pedispin/comparison__product1_image.jpg" alt="Pedi Spin">
                 </div>
                 <ul>
-                    <li class=yes>Эффективность</li>
-                    <li class=yes>Закрепление результата</li>
-                    <li class=yes>Экономия времени</li>
-                    <li class=yes>Легкость в использовании</li>
+                    <li class=yes>Efikasnost</li>
+                    <li class=yes>Trajni rezultati</li>
+                    <li class=yes>Ušteda vremena</li>
+                    <li class=yes>Jednostavnost upotrebe</li>
                 </ul>
             </div>
             <div class=product_item>
-                <h4>Обычные<br>“терки для пяток”</h4>
+                <h4>OSTALE ČETKE <br>ZA PETE I STOPALA</h4>
                 <div class=image_block>
                     <img src="{{ asset('/') }}purplerelaxFiles/pedispin/comparison__product2_image.jpg" alt="Pedi Spin">
                 </div>
                 <ul>
-                    <li class=no>Эффективность</li>
-                    <li class=no>Закрепление результата</li>
-                    <li class=no>Экономия времени</li>
-                    <li class=no>Легкость в использовании</li>
+                    <li class=no>Efikasnost</li>
+                    <li class=no>Trajni rezultati</li>
+                    <li class=no>Ušteda vremena</li>
+                    <li class=no>Jednostavnost upotrebe</li>
                 </ul>
             </div>
             <div class=product_item>
-                <h4>Курс аппаратного педикюра в&nbsp;клинике</h4>
+                <h4>TRETMAN U<br>SALONIMA LEPOTE</h4>
                 <div class=image_block>
                     <img src="{{ asset('/') }}purplerelaxFiles/pedispin/comparison__product3_image.jpg" alt="Pedi Spin">
                 </div>
                 <ul>
-                    <li class=yes>Эффективность</li>
-                    <li class=yes>Закрепление результата</li>
-                    <li class=no>Экономия времени</li>
-                    <li class=no>Легкость в использовании</li>
+                    <li class=yes>Efikasnost</li>
+                    <li class=yes>Trajni rezultati</li>
+                    <li class=no>Ušteda vremena</li>
+                    <li class=no>Jednostavnost upotrebe</li>
                 </ul>
             </div>
         </div>
@@ -184,61 +187,67 @@
 </section>
 <section class=opinion_section>
     <div class="wrapper clearfix">
-        <h2>Мнение профессионального косметолога</h2>
-        <img src="{{ asset('/') }}purplerelaxFiles/pedispin/opinion__photo.jpg" alt="Pedi Spin">
+        <h2>MIŠLJENJE STRUKE</h2>
+        {{--<img src="{{ asset('/') }}purplerelaxFiles/pedispin/opinion__photo.jpg" alt="Pedi Spin">--}}
         <div class=text_block>
-            <p>Проблемы с кожей на пятке, стопе и под пальцами в последнее время появляются во всё более молодом возрасте. Причинами этого служат неудобная обувь на высоком каблуке, излишний вес и ряд других факторов.</p>
-            <p><b>Своим пациентам я уже давно советую Pedi Spin. Уникальность данного аппарата заключается в том, что эффективное удаление омертвевших клеток осуществляется без распаривания кожи, притом абсолютно безболезненно и с сохранением эффекта от процедуры на чрезвычайно долгое время.</b></p>
-            <p>Pedi Spin способен справиться даже с натоптышами со стержнем, для борьбы с которыми единственными эффективными средствами являются: лазерное удаление, заморозка и высверливание.</p>
+            <p>Problemi s kožom na peti, stopalu i ispod nožnih prstiju nedavno se pojavljuju u sve mlađoj dobi.
+                Razlozi za to su neudobne cipele s visokom potpeticom i niz drugih faktora.</p>
+            <p>Već dugo preporučujemo "Pedi spin". <b>Jedinstvenost ovog uređaja leži u činjenici da se učinkovito uklanjanju mrtve ćelije kože bezbolno i za vrlo kratko vreme.</b></p>
+            <p>Pedi Spin je u stanju da se izbori čak i sa kurijim očima, bez uklanjanja zamrzavanjem i ostalim laserskim i hirurškim procedurama.</p>
             <div class=author_info>
-                <div class=name>Янышева Л. А.</div>
-                <div class=text><span>Практикующий врач-косметолог,</span> более 17 лет косметологической практики</div>
+                <div class=name></div>
+                <div class=text></div>
             </div>
         </div>
     </div>
 </section>
 <section class=reviews_section>
     <div class=wrapper>
-        <h2>Отзывы довольных покупателей</h2>
-        <p class=description>Мы получаем сотни благодарных отзывов ежедневно. Надеемся, что Вы останетесь довольны заказом и вернетесь к нам снова!</p>
+        <h2>UTISCI ZADOVOLJNIH KUPACA</h2>
+        <p class=description>Svakog dana dobijamo komentare stotine zadovoljnih kupaca. Nadamo se da ćete biti zadovoljni porudžbinom i kupiti ponovo kod nas!</p>
         <div class="reviews_list owl-carousel">
             <div class=review_item>
                 <img src="{{ asset('/') }}purplerelaxFiles/pedispin/reviews__review1_photo.jpg" alt="Pedi Spin">
-                <div class=author_info>Виктория, 38 лет</div>
-                <p>Идеальный выбор для тех у кого нет свободного времени. Процедура по удалению огрубевшей кожи проводится на сухой коже. Перед использованием не нужно распаривать ноги. Просто достал, включил и наслаждаешься эффектом.</p>
+                <div class=author_info>Violeta, 38 godina</div>
+                <p>Idealan izbor za one koji nemaju slobodnog vremena.
+                    Postupak grubog uklanjanja kože izvodi se na suvoj koži, a posle se glačanje kože može raditi posebnim nastavkom.
+                    Sve preporuke za proizvod!</p>
             </div>
             <div class=review_item>
                 <img src="{{ asset('/') }}purplerelaxFiles/pedispin/reviews__review2_photo.jpg" alt="Pedi Spin">
-                <div class=author_info>Светлана, 45 лет</div>
-                <p>Идеально подходит для чувствительной кожи. Давно уже искала что-то подобное. Действует очень деликатно, можно смело шлифовать кожу стопы в разных направлениях, заусениц не будет. Можно использовать не распаривая ноги.</p>
+                <div class=author_info>Svetlana, 45 godina</div>
+                <p>Idealno za osetljivu kožu. Dugo sam tražila tako nešto.
+                    Deluje vrlo nežno, možete sigurno brusiti kožu stopala u različitim smerovima, i neće napraviti ranice.
+                    Može se koristiti bez prethodnog parenja nogu.</p>
             </div>
             <div class=review_item>
                 <img src="{{ asset('/') }}purplerelaxFiles/pedispin/reviews__review3_photo.jpg" alt="Pedi Spin">
-                <div class=author_info>Наталья, 61 год</div>
-                <p>Мои пятки были жесткие и запущенные, но Pedi Spin справился с ними на ура, не пришлось даже кожу ног распаривать каждый раз. Отлично цепляет омертвевший эпидермис, но при этом не травмирует и не царапает кожу, все происходит безболезненно.</p>
+                <div class=author_info>Natalija, 61 godina</div>
+                <p>Pete su mi bile ukočene i ispucale, ali Pedi Spin mi je rešio problem.
+                    Savršeno uklanja mrtve slojeve kože ali istovremeno ne grebe kožu i sve se odvija bezbolno.</p>
             </div>
         </div>
     </div>
 </section>
 <section class=order_steps_section>
     <div class=wrapper>
-        <h2>Как заказать пемзу Pedi&nbsp;Spin?</h2>
+        <h2>KAKO NARUČITI PEDI SPIN?</h2>
         <div class=steps_list>
             <div class=step_item>
-                <h4>Шаг 1</h4>
-                <p>Вы оставляете заявку на нашем сайте</p>
+                <h4>Korak 1</h4>
+                <p>Unesite podatke za dostavu</p>
             </div>
             <div class=step_item>
-                <h4>Шаг 2</h4>
-                <p>Наш менеджер уточняет детали заказа</p>
+                <h4>Korak 2</h4>
+                <p>Potvrdićemo Vašu porudžbinu u najkraćem roku</p>
             </div>
             <div class=step_item>
-                <h4>Шаг 3</h4>
-                <p>Мы отправляем Ваш заказ почтой в любой регион</p>
+                <h4>Korak 3</h4>
+                <p>Brza pošta će Vam dostaviti paket u roku od 1-2 radna dana</p>
             </div>
             <div class=step_item>
-                <h4>Шаг 4</h4>
-                <p>Вы оплачиваете заказ при получении</p>
+                <h4>Korak 4</h4>
+                <p>Pošiljku plaćate pouzećem</p>
             </div>
         </div>
     </div>
@@ -246,13 +255,13 @@
 <section class=order_section>
     <div class=title_block>
         <div class=wrapper>
-            <h4>Успейте заказать PEDI SPIN по акционной цене!</h4>
+            <h4>Naručite Pedi spin po promotivnoj ceni, akcija može trajati još samo malo!</h4>
         </div>
     </div>
     <div class=content_block>
         <div class=wrapper>
-            <h3 class=main_title>Pedi Spin – японская электрическая пемза</h3>
-            <p class=subtitle>Еще никогда уход за кожей ступней не был таким легким!</p>
+            <h3 class=main_title>ZA NEŽNA, MEKA I ŽENSTVENA STOPALA</h3>
+            <p class=subtitle>Nega nikada nije bila lakša!</p>
             <div class=discount>Akcija! <span>40%</span> popusta</div>
             <div class=form_block>
                 <div class="price_block clearfix">
