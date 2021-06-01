@@ -20,10 +20,22 @@
     </caption>
     @foreach($paginatedItems as $singleProduct)
         @php
+            $criticalsText = "";
             $errorsText = "";
+            $warningsText = "";
+            if(count($singleProduct[0]['criticals']) > 0) {
+                foreach($singleProduct[0]['criticals'] as $critical) {
+                    $criticalsText .= $critical."<br/>";
+                }
+            }
             if(count($singleProduct[0]['errors']) > 0) {
                 foreach($singleProduct[0]['errors'] as $error) {
                     $errorsText .= $error."<br/>";
+                }
+            }
+            if(count($singleProduct[0]['warnings']) > 0) {
+                foreach($singleProduct[0]['warnings'] as $warning) {
+                    $warningsText .= $warning."<br/>";
                 }
             }
         @endphp
@@ -38,8 +50,16 @@
             <td>{{ $singleProduct[0]["id_product"] }}</td>
             <td>
                 {{ $singleProduct[0]["product_name"] }}&nbsp;
-                @if($errorsText != "")
-                    <a data-toggle="popover" data-placement="right" title="Not set" data-content="{{ $errorsText }}"><i  style="color: #F93154;" class="fas fa-exclamation-circle fa-lg"></i></a>
+                @if(!$singleProduct[0]["product_deleted"])
+                    @if($criticalsText != "")
+                        <a data-toggle="popover" data-placement="right" title="Critical" data-content="{{ $criticalsText }}"><i  style="color: #F93154;" class="fas fa-exclamation-triangle fa-lg"></i></a>
+                    @endif
+                    @if($errorsText != "")
+                        <a data-toggle="popover" data-placement="right" title="Error" data-content="{{ $errorsText }}"><i  style="color: #FFA900;" class="fas fa-exclamation-circle fa-lg"></i></a>
+                    @endif
+                    @if($warningsText != "")
+                        <a data-toggle="popover" data-placement="right" title="Warning" data-content="{{ $warningsText }}"><i  style="color: #00B74A;" class="fas fa-bell fa-lg"></i></a>
+                    @endif
                 @endif
             </td>
             <td>{{ $singleProduct[0]["sku"] }}</td>

@@ -27,23 +27,24 @@
         @endphp
         <tr style="padding-top: 0px;"
             @if($singleVariation[0]["variation_deleted"])
-            class="table-danger"
-                @endif
+                class="table-danger"
+            @endif
             @if($singleVariation[0]["is_variation_default"])
-            class="table-primary"
-                @endif
+                class="table-primary"
+            @endif
             @if($singleVariation[0]["is_active"] == 0)
-            class="table-danger"
-                @endif
+                class="table-danger"
+            @endif
         >
             <td>{{ $singleVariation[0]["id_variation"] }}</td>
             <td>{{ $singleVariation[0]["variation_name"] }}&nbsp;
-                @if($variationPrices != "")
-                    <a data-toggle="popover" data-placement="right" title="Prices" data-content="{{ $variationPrices }}"><i class="fas fa-comments-dollar fa-lg"></i></a>
-                @else
-                    <a data-toggle="tooltip" title="Prices are not entered"><i  style="color: #F93154;" class="fas fa-exclamation-circle fa-lg"></i></a>
+                @if(!$singleVariation[0]["variation_deleted"])
+                    @if($variationPrices != "")
+                        <a data-toggle="popover" data-placement="right" title="Prices" data-content="{{ $variationPrices }}"><i class="fas fa-comments-dollar fa-lg"></i></a>
+                    @else
+                        <a data-toggle="tooltip" title="Prices are not entered"><i  style="color: #F93154;" class="fas fa-exclamation-circle fa-lg"></i></a>
+                    @endif
                 @endif
-
             </td>
             <td>{{ $singleVariation[0]["variation_description"] }}</td>
             <td>{{ $singleVariation[0]["product_name"] }} ({{ $singleVariation[0]["country_name"] }})</td>

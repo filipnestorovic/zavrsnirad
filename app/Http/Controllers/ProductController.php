@@ -41,8 +41,6 @@ class ProductController extends Controller
 
         $productsList = json_decode($this->modelProduct->getAllProductsAjax($searchFilter,$brandFilter,$countryFilter), true);
 
-//        dd($productsList);
-
         $this->modelVariation = new Variation();
         $this->modelReview = new Review();
         $homeController = new HomeController();
@@ -51,10 +49,12 @@ class ProductController extends Controller
             $product_id = $product['id_product'];
             $brand_id = $product['brand_id'];
             $errors = [];
+            $warnings = [];
+            $criticals = [];
 
             $defaultVariation = $this->modelVariation->getDefaultVariationByProductId($product_id);
             if(count($defaultVariation) === 0) {
-                array_push($errors, 'Default variation');
+                array_push($criticals, 'Default variation');
             }
             $pixels = $homeController->getPixelsForView($product_id, $brand_id);
             if(count($pixels) === 0) {
@@ -62,9 +62,11 @@ class ProductController extends Controller
             }
             $review = $this->modelReview->getProductReviews($product_id);
             if(count($review) === 0) {
-                array_push($errors, 'Reviews');
+                array_push($warnings, 'Reviews');
             }
+            $productsList[$key]['criticals'] = $criticals;
             $productsList[$key]['errors'] = $errors;
+            $productsList[$key]['warnings'] = $warnings;
         }
 
         $paginatedData = $this->prepareDataForTableAjax($request, $productsList,'id_product', true, $perPage, $currentPage, 'productTable');
