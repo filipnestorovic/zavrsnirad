@@ -165,7 +165,7 @@ class HomeController extends Controller
                             }
                             $currentPercentage = $variationVisits / $visitsTotal;
                             if ($currentPercentage <= $percentage) {
-                                $variation = $this->modelVariation->getAllVariations(null, null, null, null, null, $singleTestVariation['id_variation']);
+                                $variation = $this->modelVariation->getAllVariations(null, null, null, null, null, null, $singleTestVariation['id_variation']);
                                 $this->customerData['test_variation_id'] = $singleTestVariation['id_tests_variations'];
 //                                Log::info('Test - Test variation - '.$singleTestVariation['id_tests_variations'].' - '. $product->product_name);
                                 break;
@@ -274,7 +274,7 @@ class HomeController extends Controller
             $sessionUuid = $this->modelSession->checkSessionUuid($cookieUuid);
             if(count($sessionUuid)>0) {
                 foreach($sessionUuid as $singleSession) {
-                    $variation = $this->modelVariation->getAllVariations(null,null,null,null,null,$singleSession->variation_id);
+                    $variation = $this->modelVariation->getAllVariations(null,null,null,null,null, null, $singleSession->variation_id);
                     if(count($variation)>0) {
                         $variation_product_id = $variation[0]->id_product;
                         if($variation_product_id === $product_id) {
@@ -292,7 +292,7 @@ class HomeController extends Controller
             $i = 0;
             if(count($ipUuid)>0) {
                 foreach($ipUuid as $singleSession) {
-                    $variation = $this->modelVariation->getAllVariations(null,null,null,null,null,$singleSession->variation_id);
+                    $variation = $this->modelVariation->getAllVariations(null,null,null,null,null, null, $singleSession->variation_id);
                     if(count($variation)>0) {
                         $variation_product_id = $variation[0]->id_product;
                         if($variation_product_id === $product_id) {
