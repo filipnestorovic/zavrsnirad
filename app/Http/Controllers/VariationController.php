@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Brand;
 use App\Models\Checkout;
 use App\Models\Country;
 use App\Models\Coupon;
@@ -20,6 +21,7 @@ class VariationController extends Controller
     public function __construct() {
         $this->modelVariation = new Variation();
         $this->modelProduct = new Product();
+        $this->modelBrand = new Brand();
         $this->modelLander = new Lander();
         $this->modelCheckout = new Checkout();
         $this->modelThankyou = new Thankyou();
@@ -31,6 +33,7 @@ class VariationController extends Controller
 
     public function variationsIndex() {
         $this->data['products'] = $this->modelProduct->getAllProduct();
+        $this->data['brands'] = $this->modelBrand->getAllBrands();
         $this->data['landers'] = $this->modelLander->getAllLanders();
         $this->data['checkouts'] = $this->modelCheckout->getAllCheckouts();
         $this->data['thankyous'] = $this->modelThankyou->getAllThankyous();
@@ -43,6 +46,7 @@ class VariationController extends Controller
         $checkoutFilter = $request->get('checkoutFilter');
         $thankyouFilter = $request->get('thankyouFilter');
         $productFilter = $request->get('productFilter');
+        $brandFilter = $request->get('brandFilter');
 
         $currentPage = $request->get('page');
 
@@ -52,7 +56,7 @@ class VariationController extends Controller
 
         $perPage = 10;
 
-        $variationList = json_decode($this->modelVariation->getAllVariations($searchFilter,$landerFilter,$checkoutFilter,$thankyouFilter,$productFilter), true);
+        $variationList = json_decode($this->modelVariation->getAllVariations($searchFilter,$landerFilter,$checkoutFilter,$thankyouFilter,$productFilter,$brandFilter), true);
 
         $paginatedData = $this->prepareDataForTableAjax($request, $variationList,'id_variation', true, $perPage, $currentPage, 'variationTable');
 

@@ -37,6 +37,16 @@
                                    $("#productFilter").selectpicker("render");
                                 </script>
 
+                                <select id="brandFilter"  name="brandFilter">
+                                    <option value="" data-width="auto" selected>Brand</option>
+                                    @foreach($brands as $brand)
+                                        <option value="{{ $brand->id_brand }}">{{ $brand->brand_name }}</option>
+                                    @endforeach
+                                </select>
+                                <script>
+                                   $("#brandFilter").selectpicker("render");
+                                </script>
+
                                 <select id="landerFilter"  name="landerFilter">
                                     <option value="" data-width="auto" selected>Lander</option>
                                     @foreach($landers as $lander)
@@ -127,11 +137,13 @@
         let checkoutFilter = getUrlParams.get('checkoutFilter');
         let thankyouFilter = getUrlParams.get('thankyouFilter');
         let productFilter = getUrlParams.get('productFilter');
+        let brandFilter = getUrlParams.get('brandFilter');
 
         $(document).ready(function () {
 
             $('#searchFilter').val(searchFilter);
             $('#productFilter').val(productFilter).selectpicker('refresh');
+            $('#brandFilter').val(brandFilter).selectpicker('refresh');
             $('#landerFilter').val(landerFilter).selectpicker('refresh');
             $('#checkoutFilter').val(checkoutFilter).selectpicker('refresh');
             $('#thankyouFilter').val(thankyouFilter).selectpicker('refresh');
@@ -156,7 +168,7 @@
 
                 $.ajax({
                     url: baseURL + "ajaxData/getVariationsAjax?page=" + currentPage,
-                    data: {searchFilter:searchFilter, landerFilter:landerFilter, checkoutFilter:checkoutFilter, thankyouFilter: thankyouFilter, productFilter: productFilter},
+                    data: {searchFilter:searchFilter, landerFilter:landerFilter, checkoutFilter:checkoutFilter, thankyouFilter: thankyouFilter, productFilter: productFilter, brandFilter:brandFilter},
                     success: function (data) {
                         // console.log(data);
                         $('#variationTableAjax').html('');

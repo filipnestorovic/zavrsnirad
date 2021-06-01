@@ -22,7 +22,7 @@ class Variation extends Model
     public $default;
     public $active;
 
-    public function getAllVariations($searchFilter, $landerFilter, $checkoutFilter, $thankyouFilter, $productFilter, $variation_id = null) {
+    public function getAllVariations($searchFilter, $landerFilter, $checkoutFilter, $thankyouFilter, $productFilter, $brandFilter, $variation_id = null) {
         $result = DB::table('variation')
             ->leftJoin('variations_prices', function($query) {
                 $query->on('variation.id_variation','=','variations_prices.variation_id')
@@ -67,6 +67,10 @@ class Variation extends Model
         }
         if(!empty($productFilter)){
             $result->where('variation.product_id', '=', $productFilter);
+        }
+        if(!empty($brandFilter)){
+            $result->where('product.brand_id', '=', $brandFilter);
+            $result->orWhere('lander.brand_id', '=', $brandFilter);
         }
 
         return $result->get();
