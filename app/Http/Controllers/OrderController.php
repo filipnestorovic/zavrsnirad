@@ -57,15 +57,15 @@ class OrderController extends Controller
                 ->withInput();
         }
 
-        if($request->session()->get('country') == "bg") {
+        if($request->get('countryShortcode') == "bg") {
             $customerErrorMessage = "Грешка при поръчката, моля свържете се с нас по имейл info@wombatshop.eu!";
-        } else if($request->session()->get('country') == "ro") {
+        } else if($request->get('countryShortcode') == "ro") {
             $customerErrorMessage = "Eroare la comandă, vă rugăm să ne contactați prin e-mail info@wombatshop.eu!";
-        } else if($request->session()->get('country') == "gr") {
+        } else if($request->get('countryShortcode') == "gr") {
             $customerErrorMessage = "Σφάλμα παραγγελίας, επικοινωνήστε μαζί μας μέσω email info@wombatshop.eu!";
-        } else if($request->session()->get('country') == "pl") {
+        } else if($request->get('countryShortcode') == "pl") {
             $customerErrorMessage = "Błąd zamówienia, prosimy o kontakt mailowy info@wombatshop.eu!";
-        } else if($request->session()->get('country') == "rs" || $request->session()->get('country') == "ba") {
+        } else if($request->get('countryShortcode') == "rs" || $request->get('countryShortcode') == "ba") {
             $customerErrorMessage = "Greška prilikom porudžbine, molimo da nas kontaktirate putem emaila info@wombatsbrand.com!";
         } else {
             $customerErrorMessage = "An error has occurred during checkout, please contact us at info@wombatsbrand.com!";
@@ -250,18 +250,24 @@ class OrderController extends Controller
 
     public function createNewOrderWoocommerce($orderDetails) {
 
+        $language = "";
+        $currency = "";
         switch ($orderDetails->country_code) {
             case "bg":
                 $language = "bg_BG";
+                $currency = "BGN";
                 break;
             case "ro":
                 $language = "ro_RO";
+                $currency = "RON";
                 break;
             case "gr":
                 $language = "el";
+                $currency = "EUR";
                 break;
             case "pl":
                 $language = "pl_PL";
+                $currency = "PLN";
                 break;
         }
 
@@ -270,7 +276,7 @@ class OrderController extends Controller
                 [
                     "method_title" => "Flat rate",
                     "method_id" => "flat_rate",
-                    "total"=> $orderDetails->shipping_cost,
+                    "total"=> (string)$orderDetails->shipping_cost,
                 ],
             ];
         } else {
@@ -278,7 +284,7 @@ class OrderController extends Controller
                 [
                     "method_title" => "Free shipping",
                     "method_id" => "free_shipping",
-                    "total"=> "0.00",
+                    "total"=> "0.00"
                 ],
             ];
         }
@@ -297,7 +303,7 @@ class OrderController extends Controller
         $data = [
             "payment_method"=> "cod",
             "status" => "processing",
-            "billing"=> [
+            "billing" => [
                 "first_name"=> (string)$orderDetails->name,
                 "last_name"=> "",
                 "address_1"=> (string)$orderDetails->street,
@@ -309,7 +315,7 @@ class OrderController extends Controller
                 "email"=> (string)$orderDetails->email,
                 "phone"=> (string)$orderDetails->phone
             ],
-            "shipping"=> [
+            "shipping" => [
                 "first_name"=> (string)$orderDetails->name,
                 "last_name"=> "",
                 "address_1"=> (string)$orderDetails->street,
@@ -317,18 +323,18 @@ class OrderController extends Controller
                 "city"=> (string)$orderDetails->city,
                 "state"=>"",
                 "postcode"=> (string)$orderDetails->zip,
-                "country"=> (string)$orderDetails->country_name,
+                "country"=> (string)$orderDetails->country_name
             ],
-            "line_items"=> [
+            "line_items" => [
                 [
                     "product_id"=> (string)$orderDetails->woocommerce_product_id,
                     "quantity"=> (string)$orderDetails->quantity,
-                    "total" => (string)$orderDetails->price,
+                    "total" => (string)$orderDetails->price
                 ]
             ],
             "lang" => $language,
             "shipping_lines" => $shipping,
-            "currency" => $orderDetails->currency_symbol,
+            "currency" => $currency,
         ];
 
 //        dd($result = $woocommerce->get('orders/6639'));
@@ -338,100 +344,5 @@ class OrderController extends Controller
         return $result;
 
     }
-
-//    public function abandonedCartInsert(Request $request) {
-//
-//        $modelAbandoned = new AbandonedCart();
-//
-//        $modelAbandoned->name = $request->get('name');
-//        $modelAbandoned->email = $request->get('email');
-//        $modelAbandoned->phone = $request->get('phone');
-//        $modelAbandoned->address = $request->get('address');
-//        $modelAbandoned->city = $request->get('city');
-//        $modelAbandoned->zip = $request->get('zip');
-//        $modelAbandoned->quantity = $request->get('quantity');
-//        $modelAbandoned->product_id = $request->get('product_id');
-//        $modelAbandoned->country_id = $request->get('country_id');
-//
-//        $modelAbandoned->uuid = Session::get('uuid');
-//
-//        if($modelAbandoned->uuid != null) {
-//
-//            $ifAbandonedExists = $modelAbandoned->getAbandonedUuidWithProduct($modelAbandoned->uuid, $modelAbandoned->product_id);
-//
-//            if($ifAbandonedExists != null) {
-////                Log::info("Abandoned exists - should be updated \nInfo: " . json_encode($ifAbandonedExists, JSON_PRETTY_PRINT));
-//                try {
-//                    if($modelAbandoned->email != null) {
-//                        $resultUpdate = $modelAbandoned->updateAbandoned($ifAbandonedExists->uuid,$ifAbandonedExists->product_id);
-////                        Log::info("Abandoned update \nInfo: " . json_encode($resultUpdate, JSON_PRETTY_PRINT));
-//                    }
-//                } catch (\Exception $exception) {
-//                    Log::error("Error: Abandoned cart update \n Message: " . $exception->getMessage() . "\n Data: " . json_encode($modelAbandoned, JSON_PRETTY_PRINT));
-//                }
-//            }
-//            else {
-//
-//                $rules = [
-//                    'email' => 'required|email',
-//                ];
-//
-//                $validator = \Validator::make($request->all(), $rules);
-//
-//                if ($validator->fails()) {
-////                    Log::debug("Email not validate! \nCustomer information: " . json_encode($modelAbandoned, JSON_PRETTY_PRINT));
-//                } else {
-//                    try {
-//                        $insertResult = $modelAbandoned->insertAbandoned();
-//
-//                        if($insertResult) {
-////                            Log::info("Abandoned inserted \nInfo: " . json_encode($modelAbandoned, JSON_PRETTY_PRINT));
-//                            $abandonedInfo = $modelAbandoned->getAbandonedId($insertResult);
-//                            try {
-////                                Log::info("Abandoned info for sending email \nInfo: " . json_encode($abandonedInfo, JSON_PRETTY_PRINT));
-//                                $jobObject = (new SendEmail($abandonedInfo, 'abandonedFirst'));
-//                                dispatch($jobObject)->delay(Carbon::now()->addMinutes(30));
-//                            } catch (\Exception $exception) {
-//                                Log::warning("Error: Sending abandon email \nMessage: " . $exception->getMessage() . "\nInfo: " . json_encode($abandonedInfo, JSON_PRETTY_PRINT));
-//                            }
-//                        } else {
-//                            Log::warning("Abandoned not inserted \nInfo: " . json_encode($modelAbandoned, JSON_PRETTY_PRINT));
-//                        }
-//
-//                    } catch(\Exception $ex) {
-//                        Log::error("Error: Abandoned cart insert \nMessage: " . $ex->getMessage() . "\nDetails: " . json_encode($modelAbandoned, JSON_PRETTY_PRINT));
-//                    }
-//                }
-//            }
-//        } else {
-////            Log::info("Uuid is not defined \nInfo: " . json_encode($modelAbandoned, JSON_PRETTY_PRINT));
-//        }
-//
-//        return 1;
-//    }
-
-//    public function checkAndDeleteAbandonedIfOrderExists($email, $product_id)
-//    {
-//        $modelOrder = new Order();
-//        $modelAbandoned = new AbandonedCart();
-//
-//        $resultOrder = $modelOrder->getOrderByEmailAndProductId($email, $product_id);
-//
-//        if ($resultOrder) {
-////            Log::info("Order for deleting \nOrder: " . json_encode($resultOrder, JSON_PRETTY_PRINT));
-//            try {
-//                $resultDelete = $modelAbandoned->deleteAbandonedAfterPurchase($email, $product_id);
-////                Log::info("Order deleting result \nResult: " . json_encode($resultDelete, JSON_PRETTY_PRINT));
-//            } catch (\Exception $exception) {
-//                Log::error("Error: Delete abandoned \nMessage: " . $exception->getMessage());
-//            }
-//        } else {
-////            Log::info("Order not found for deleting \nOrder: " . json_encode($resultOrder, JSON_PRETTY_PRINT));
-//            $resultDelete = 0;
-//        }
-//
-//        return $resultDelete;
-//
-//    }
 
 }
