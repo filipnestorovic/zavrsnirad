@@ -89,7 +89,14 @@ class HomeController extends Controller
             $slug = "multifunkcionalnimasazer";
         }
 
-        $brand_id = $this->modelBrand->getBrandByUrl($brandUrl)->id_brand;
+        $brand = $this->modelBrand->getBrandByUrl($brandUrl);
+
+        if($brand === null) {
+//            Log::info('404 - Brand null - '.$brandUrl);
+            return abort('404');
+        }
+
+        $brand_id = $brand->id_brand;
 
         if($brand_id === null) {
 //            Log::info('404 - Brand null - '.$brandUrl);
