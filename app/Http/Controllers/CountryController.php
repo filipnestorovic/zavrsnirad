@@ -137,6 +137,7 @@ class CountryController extends Controller
         $rules = [
             'currency_name' => ['required','max:30'],
             'currency_symbol' => ['required','max:5','unique:currency,currency_symbol'],
+            'currency_code' => ['required','max:30'],
         ];
 
         $messages = [
@@ -155,6 +156,7 @@ class CountryController extends Controller
         try {
             $this->modelCurrency->currency = $request->get('currency_name');
             $this->modelCurrency->currency_symbol = $request->get('currency_symbol');
+            $this->modelCurrency->currency_code = $request->get('currency_code');
 
             $insertResult = $this->modelCurrency->insertCurrency();
 
@@ -182,6 +184,7 @@ class CountryController extends Controller
             'currencyIdModal' => ['required'],
             'currencyNameModal' => ['required','max:30'],
             'currencySymbolModal' => ['required','max:5'],
+            'currencyCodeModal' => ['required','max:5'],
         ];
 
         $messages = [
@@ -201,6 +204,7 @@ class CountryController extends Controller
             $id = $request->get('currencyIdModal');
             $this->modelCurrency->currency = $request->get('currencyNameModal');
             $this->modelCurrency->currency_symbol = $request->get('currencySymbolModal');
+            $this->modelCurrency->currency_code = $request->get('currencyCodeModal');
 
             $updateResult = $this->modelCurrency->editCurrency($id);
 

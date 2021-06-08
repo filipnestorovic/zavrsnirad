@@ -14,6 +14,7 @@ class Currency extends Model
 
     public $currency;
     public $currency_symbol;
+    public $currency_code;
 
     public function getAllCurrencies(){
         $result = DB::table('currency')
@@ -35,6 +36,7 @@ class Currency extends Model
             ->insertGetId([
                 'currency' => $this->currency,
                 'currency_symbol' => $this->currency_symbol,
+                'currency_code' => $this->currency_code,
             ]);
         return $result;
     }
@@ -45,6 +47,7 @@ class Currency extends Model
             ->update([
                 'currency' => $this->currency,
                 'currency_symbol' => $this->currency_symbol,
+                'currency_code' => $this->currency_code,
                 'updated_at' => Carbon::now(),
             ]);
         return $result;

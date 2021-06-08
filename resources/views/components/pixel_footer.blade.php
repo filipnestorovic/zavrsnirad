@@ -1,6 +1,6 @@
 <script>
     $(document).ready(function () {
-        let name, email, phone, city, zip, country_code, currency_symbol, amount;
+        let name, email, phone, city, zip, country_code, currency_symbol, currency_code, amount;
         const baseURL = "{{ asset('/') }}";
         const csrf_token = "{{ csrf_token() }}";
         let sessionId = "{{ $session_id }}";
@@ -17,6 +17,7 @@
              zip = "{{ $order->zip }}";
              country_code = "{{ $order->country_code }}";
              currency_symbol = "{{ $order->currency_symbol }}";
+             currency_code = "{{ $order->currency_code }}";
              amount = "{{ $order->amount }}";
         @endif
 
@@ -77,7 +78,7 @@
             $.ajax({
                 type: "GET",
                 url: baseURL + "ajax/sendConversionApiFB",
-                data: {pixel_id:pixel_id, fb_event:fb_event, session_id:sessionId, fbclid:fbclid, name:name, email:email, phone:phone, city:city, zip:zip, country_code:country_code, currency_symbol:currency_symbol, amount:amount},
+                data: {pixel_id:pixel_id, fb_event:fb_event, session_id:sessionId, fbclid:fbclid, name:name, email:email, phone:phone, city:city, zip:zip, country_code:country_code, currency_symbol:currency_symbol, currency_code:currency_code, amount:amount},
                 success: function (data) {
                     console.log(data);
                 },

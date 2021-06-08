@@ -12,6 +12,7 @@
     <script src="{{ asset('/') }}purplerelaxFiles/akupunkturnaolovka/jquery.min.js"></script>
 </head>
 <body>
+@include('components.display_errors')
 <section class="offer_section">
     <div class="wrapper">
         <div class="title clearfix">

@@ -15,7 +15,7 @@
         $event_id = $fb_event.".".$session_id;
     @endphp
     @if($fb_event === "Purchase")
-        fbq('track', '{{$fb_event}}', {currency: '{{$order->currency_symbol}}', value: '{{$order->price}}'}, {eventID: "{{$event_id}}", event: "{{$fb_event}}"});
+        fbq('track', '{{$fb_event}}', {currency: '{{$order->currency_code}}', value: '{{$order->price}}'}, {eventID: "{{$event_id}}", event: "{{$fb_event}}"});
     @else
         fbq('track', '{{$fb_event}}', {eventID: "{{$event_id}}", event: "{{$fb_event}}"});
     @endif

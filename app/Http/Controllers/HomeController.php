@@ -546,6 +546,8 @@ class HomeController extends Controller
             $token = 'EAACOQyyltp0BAIXMsezZAgrZBZBZCzVUoWjZCH20tK8UphZC2Fs8T4DldoaQTiuqgbrxoWeLBq08heeofvyASFehWNvM44kct7QRclpqrJh03bYzaBTHcsWxoRbZAu25NpDQqP8yHuZBJZBCaazyzxJR45r2zDlzeFqHbJ3mepDbOn8lZBjrC5jVlOZCU9Ogp6zMCRSXIQ7eOfaMwZDZD';
         }
 
+
+
         $current_timestamp = Carbon::now()->unix();
         $random_number = $this->generateUuid(1);
         if(isset($_COOKIE['_fbp'])) {
@@ -575,7 +577,7 @@ class HomeController extends Controller
                 ->setFbc($cookie_fbc)
                 ->setFbp($cookie_fbp);
             $custom_data = (new CustomData())
-                ->setCurrency(strtoupper($request->get('currency_symbol')))
+                ->setCurrency($request->get('currency_code'))
                 ->setValue($request->get('amount'));
         } else {
             $user_data = (new UserData())

@@ -181,7 +181,7 @@ class OrderController extends Controller
                             }
                             return redirect()->to('/'.$orderDetails->slug.'/thankyou')->with('data', $orderDetails);
                         } else {
-                            Log::error("Error: Empty webhook result \nResult: " . $webhookResult . "\nDetails: ". json_encode($orderDetails, JSON_PRETTY_PRINT));
+//                            Log::error("Error: Empty webhook result \nResult: " . $webhookResult . "\nDetails: ". json_encode($orderDetails, JSON_PRETTY_PRINT));
                             return redirect()->back()->withErrors([$customerErrorMessage]);
                         }
                     } catch(\Exception $exception) {
@@ -238,11 +238,22 @@ class OrderController extends Controller
             'meta_data' => []
         ]);
 
+
+        $webhookUrl = "";
+        switch($orderDetails->country_code) {
+            case "rs":
+                $webhookUrl = "https://new.serverwombat.com/api/orderWebhook";
+                break;
+            case "ba":
+                $webhookUrl = "https://ba.serverwombat.com/api/orderWebhook";
+                break;
+            default:
+                $webhookUrl = "https://new.serverwombat.com/api/orderWebhook";
+        }
+
         try {
-            $response = $client->post('https://new.serverwombat.com/api/orderWebhook', ['body' => json_encode($jsonArray)]);
-
+            $response = $client->post($webhookUrl, ['body' => json_encode($jsonArray)]);
             return $response;
-
         } catch(\Exception $exception) {
             Log::critical("Error: Webhook accepting error \nServer message: " . $exception->getMessage() . "\nJSON: " . json_encode($jsonArray, JSON_PRETTY_PRINT));
         }
@@ -251,23 +262,18 @@ class OrderController extends Controller
     public function createNewOrderWoocommerce($orderDetails) {
 
         $language = "";
-        $currency = "";
         switch ($orderDetails->country_code) {
             case "bg":
                 $language = "bg_BG";
-                $currency = "BGN";
                 break;
             case "ro":
                 $language = "ro_RO";
-                $currency = "RON";
                 break;
             case "gr":
                 $language = "el";
-                $currency = "EUR";
                 break;
             case "pl":
                 $language = "pl_PL";
-                $currency = "PLN";
                 break;
         }
 
@@ -334,7 +340,7 @@ class OrderController extends Controller
             ],
             "lang" => $language,
             "shipping_lines" => $shipping,
-            "currency" => $currency,
+            "currency" => $orderDetails->currency_code,
         ];
 
 //        dd($result = $woocommerce->get('orders/6639'));

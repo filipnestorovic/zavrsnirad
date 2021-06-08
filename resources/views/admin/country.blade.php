@@ -125,6 +125,12 @@
                                 <input type="text" name="currency_symbol" id="currency_symbol" class="form-control" data-value="currency_symbol" value="" required="">
                             </div>
                             <div class="md-form input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm">Currency code</span>
+                                </div>
+                                <input type="text" name="currency_code" id="currency_code" class="form-control" data-value="currency_code" value="" required="">
+                            </div>
+                            <div class="md-form input-group input-group-sm mb-3">
                                 <button type="submit" id="addCurrencyButton" class="btn btn-primary btn-lg btn-block">Add currency</button>
                             </div>
                         </div>
@@ -141,6 +147,7 @@
                                         <th class="text-center">#</th>
                                         <th class="text-center">Currency</th>
                                         <th class="text-center">Currency symbol</th>
+                                        <th class="text-center">Currency code</th>
                                         <th class="text-center"></th>
                                     </tr>
                                     </thead>
@@ -151,6 +158,7 @@
                                                 <td class="pt-3-half">{{$currency->id_currency}}</td>
                                                 <td class="pt-3-half">{{$currency->currency}}</td>
                                                 <td class="pt-3-half">{{$currency->currency_symbol}}</td>
+                                                <td class="pt-3-half">{{$currency->currency_code}}</td>
                                                 <td>
                                                     <span class="table-edit"><button type="button" class="btn btn-primary btn-rounded btn-sm my-0 editCurrencyBtn" data-toggle="modal" data-target="#editCurrency" value="{{$currency->id_currency}}">EDIT</button></span>
                                                     <span class="table-remove"><a href="{{ route('deleteCurrency',['id' => $currency->id_currency]) }}"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0 deleteCurrencyBtn">DELETE</button></a></span>
@@ -256,6 +264,12 @@
                             </div>
                             <input type="text" name="currencySymbolModal" id="currencySymbolModal" class="form-control" data-value="currencySymbolModal" value="" autocomplete="off">
                         </div>
+                        <div class="md-form input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm">Currency code</span>
+                            </div>
+                            <input type="text" name="currencyCodeModal" id="currencyCodeModal" class="form-control" data-value="currencyCodeModal" value="" autocomplete="off">
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-primary btn-sm waves-effect">Edit currency</button>
@@ -304,6 +318,7 @@
                         $('#currencyIdModal').val(data.id_currency);
                         $('#currencyNameModal').val(data.currency);
                         $('#currencySymbolModal').val(data.currency_symbol);
+                        $('#currencyCodeModal').val(data.currency_code);
                     },
                     error: function (req, err) {
                         console.log(req);
