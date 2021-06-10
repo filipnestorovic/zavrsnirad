@@ -61,7 +61,7 @@ class VariationController extends Controller
         $paginatedData = $this->prepareDataForTableAjax($request, $variationList,'id_variation', true, $perPage, $currentPage, 'variationTable');
 
         if(!$request->ajax()) {
-            dd($paginatedData);
+//            dd($paginatedData);
         }
 
         return $paginatedData;

@@ -172,7 +172,7 @@ ul {
 }
 
 .button:active span {
-    margin-top: -2px
+
 }
 
 .top-phones {
@@ -823,8 +823,7 @@ ul {
 }
 
 .button3:active {
-    padding-top: 6px !important;
-    bottom: -49px
+
 }
 
 .title6 {

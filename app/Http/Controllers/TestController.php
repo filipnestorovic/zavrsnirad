@@ -44,7 +44,7 @@ class TestController extends Controller
         $paginatedData = $this->prepareDataForTableAjax($request, $testsList,'id_test', true, $perPage, $currentPage, 'testTable');
 
         if(!$request->ajax()) {
-            dd($activeFilter);
+//            dd($activeFilter);
         }
 
         return $paginatedData;

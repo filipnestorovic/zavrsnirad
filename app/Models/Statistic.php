@@ -17,7 +17,7 @@ class Statistic extends Model
             ->leftJoin('session', 'session_events.session_id', '=', 'session.id_session')
             ->leftJoin('tests_variations', 'session.test_variation_id', '=', 'tests_variations.id_tests_variations')
             ->leftJoin('test', 'tests_variations.test_id', '=', 'test.id_test')
-            ->leftJoin('variation', 'tests_variations.variation_id', '=', 'variation.id_variation');
+            ->leftJoin('variation', 'session.variation_id', '=', 'variation.id_variation');
 
         if(!empty($test_variation_id)){
             $result->selectRaw("variation.variation_name, event.event_name, session_events.event_id, COUNT(DISTINCT session_events.session_id) AS TestVariationVisits");
@@ -30,7 +30,7 @@ class Statistic extends Model
         }
 
         if(!empty($variation_id)){
-            $result->selectRaw("event.event_name, session_events.event_id, COUNT(DISTINCT session_events.session_id) AS VariationVisits");
+            $result->selectRaw("event.event_name, session_events.event_id, variation.variation_name, variation.id_variation, COUNT(DISTINCT session_events.session_id) AS VariationVisits");
             $result->where('session.variation_id', '=', $variation_id);
         }
 
@@ -40,6 +40,16 @@ class Statistic extends Model
     public function getOrdersForVariationInActiveTest($test_variation_id) {
         $result = DB::table('order')
             ->where('test_variation_id','=',$test_variation_id)
+            ->get();
+        return $result;
+    }
+
+    public function getLastOrders($order_count) {
+        $result = DB::table('order')
+            ->where('country_id','=',1)
+            ->groupBy('variation_id')
+            ->orderByDesc('created_at')
+            ->limit($order_count)
             ->get();
         return $result;
     }
