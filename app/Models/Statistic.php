@@ -44,13 +44,12 @@ class Statistic extends Model
         return $result;
     }
 
-    public function getLastOrders($order_count) {
+    public function getLastOrders($order_count, $country_id) {
         $result = DB::table('order')
-            ->where('country_id','=',1)
-            ->groupBy('variation_id')
-            ->orderByDesc('created_at')
-            ->limit($order_count)
+            ->where('country_id','=',$country_id)
+            ->orderByDesc('order.created_at')
             ->get();
+
         return $result;
     }
 }

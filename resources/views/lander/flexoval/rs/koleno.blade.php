@@ -335,7 +335,7 @@
         </div>
         <h3>Kakva je vaša politika vraćanja novca?</h3>
         <div>
-            <p>Vaše zadovoljstvo je naš glavni cilj. Ako iz bilo kog razloga želite da vratite proizvod - samo nas kontaktirajte na info@flexoval.com, u roku od 30 dana od prijema porudžbine, a mi ćemo izvršiti povraćaj novca i troškova dostave.</p>
+            <p>Vaše zadovoljstvo je naš glavni cilj. Ako iz bilo kog razloga želite da vratite proizvod - samo nas kontaktirajte na info@wombatsbrand.com, u roku od 30 dana od prijema porudžbine, a mi ćemo izvršiti povraćaj novca i troškova dostave.</p>
         </div>
     </div>
 </div>

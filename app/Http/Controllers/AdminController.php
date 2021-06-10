@@ -35,9 +35,12 @@ class AdminController extends Controller
 
     public function getActiveVariationsStatistic(Request $request) {
 
-        $orders = $this->modelStatistic->getLastOrders(10);
+        $orders = $this->modelStatistic->getLastOrders(10, 1);
+        $collection = collect($orders);
+        $messagesUnique = $collection->unique('variation_id')->slice(0,10);
+        $uniqueVariation = $messagesUnique->values()->all();
 
-        foreach($orders as $order) {
+        foreach($uniqueVariation as $order) {
             $singleVariationVisits = $this->modelStatistic->getSingleTestStatistic(null, null, $order->variation_id);
             $array[$order->variation_id] = [];
             if(count($singleVariationVisits)>0) {
@@ -78,7 +81,6 @@ class AdminController extends Controller
             } else {
                 return $paginatedItems;
             }
-
         }
     }
 
