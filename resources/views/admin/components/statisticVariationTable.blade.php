@@ -19,21 +19,21 @@
             @isset($singleVariation['id_variation'])
                 <td>{{ isset($singleVariation['id_variation']) ? $singleVariation['id_variation'] : '' }}</td>
                 <td>{{ isset($singleVariation['variation_name']) ? $singleVariation['variation_name'] : '' }}</td>
-                <td class="landerView">{{ isset($singleVariation['LanderView']) ? $singleVariation['LanderView'] : '0' }}</td>
-                <td class="checkoutView">{{ isset($singleVariation['CheckoutView']) ? $singleVariation['CheckoutView'] : '0' }}</td>
-                <td class="thankyouView">{{ isset($singleVariation['Purchase']) ? $singleVariation['Purchase'] : '0' }}</td>
+                <td>{{ isset($singleVariation['LanderView']) ? $singleVariation['LanderView'] : '0' }}</td>
+                <td>{{ isset($singleVariation['CheckoutView']) ? $singleVariation['CheckoutView'] : '0' }}</td>
+                <td>{{ isset($singleVariation['Purchase']) ? $singleVariation['Purchase'] : '0' }}</td>
                 <td>
                     @if(isset($singleVariation['CheckoutView']) && isset($singleVariation['LanderView']))
                         {{ number_format(($singleVariation['CheckoutView']/$singleVariation['LanderView'])*100, 2) }}%
                     @endif
                 </td>
                 <td>
-                    @if(isset($singleVariation['ThankyouView']) && isset($singleVariation['LanderView']))
+                    @if(isset($singleVariation['Purchase']) && isset($singleVariation['LanderView']))
                         {{ number_format(($singleVariation['Purchase']/$singleVariation['LanderView'])*100, 2) }}%
                     @endif
                 </td>
-                <td class="thankyouView">{{ isset($singleVariation['orders_count']) ? $singleVariation['orders_count'] : '0' }}</td>
-                <td class="thankyouView">{{ isset($singleVariation['orders_revenue']) ? $singleVariation['orders_revenue'] : '0' }} RSD</td>
+                <td>{{ isset($singleVariation['orders_count']) ? $singleVariation['orders_count'] : '0' }}</td>
+                <td>{{ isset($singleVariation['orders_revenue']) ? $singleVariation['orders_revenue'] : '0' }} RSD</td>
                 <td>
                     <span class="table-edit"><a href="{{ route('variation',['id' => $singleVariation['id_variation']]) }}"><button type="button" class="btn btn-success btn-rounded btn-sm my-0">DETAILS</button></a></span>
                 </td>
