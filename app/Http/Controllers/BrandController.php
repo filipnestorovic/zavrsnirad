@@ -56,7 +56,7 @@ class BrandController extends Controller
 
         $rules = [
             'brand_name' => ['required','max:30'],
-            'brand_url' => ['required','unique:brand,brand_url'],
+//            'brand_url' => ['required','unique:brand,brand_url'],
             'brand_logo' => ['required','image'],
         ];
 
@@ -100,7 +100,7 @@ class BrandController extends Controller
 
             if($uploadResult != null) {
                 $this->modelBrand->brand_name = $request->get('brand_name');
-                $this->modelBrand->brand_url = $request->get('brand_url');
+//                $this->modelBrand->brand_url = $request->get('brand_url');
                 $this->modelBrand->logo_url = $filePath;
 
                 $insertResult = $this->modelBrand->insertBrand();

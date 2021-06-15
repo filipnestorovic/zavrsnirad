@@ -137,6 +137,7 @@
                                 <tr>
                                     <th class="text-center">#</th>
                                     <th class="text-center">Brand name</th>
+                                    <th class="text-center">Brand URL</th>
                                     <th class="text-center">Logo</th>
                                     <th class="text-center">Brand Pixel</th>
                                     <th class="text-center"></th>
@@ -148,6 +149,7 @@
                                         <tr>
                                             <td class="pt-3-half">{{$brandSingle[0]['id_brand']}}</td>
                                             <td class="pt-3-half">{{$brandSingle[0]['brand_name']}}</td>
+                                            <td class="pt-3-half">{{$brandSingle[0]['brand_url']}}</td>
                                             <td class="pt-3-half"><img src="{{ asset('/').$brandSingle[0]['logo_url'] }}" height="70px"/></td>
                                             <td class="pt-3-half">
                                                 @foreach($brandSingle as $pixel)
@@ -192,6 +194,12 @@
                                 <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm">Name</span>
                             </div>
                             <input type="text" name="brandNameModal" id="brandNameModal" class="form-control" data-value="brandNameModal" value="" autocomplete="off">
+                        </div>
+                        <div class="md-form input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm">Url</span>
+                            </div>
+                            <input type="text" name="brandUrlModal" id="brandUrlModal" class="form-control" data-value="brandUrlModal" value="" autocomplete="off">
                         </div>
                         <div class="md-form input-group input-group-sm mb-3">
                             <div class="input-group-prepend">
@@ -331,6 +339,7 @@
                         $('.brandPixelDiv').hide();
                         $('#brandIdModal').val(data.id_brand);
                         $('#brandNameModal').val(data.brand_name);
+                        $('#brandUrlModal').val(data.brand_url);
                         $('#logoHiddenModal').val(data.logo_url);
                         // $('#defaultProductDdl').val(data.default_product_id).selectpicker('refresh');
                         $('#logoImgModal').attr('src','{{ asset('/') }}' + data.logo_url);
