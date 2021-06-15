@@ -31,6 +31,7 @@ class Controller extends BaseController
     protected $modelEvent;
     protected $modelOrder;
     protected $modelStatistic;
+    protected $modelDomain;
 
     public function getMultipleItemsFromQuery($data, $keyForGroup) {
         $orderedList = array();

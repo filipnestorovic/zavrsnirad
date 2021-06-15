@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    @include('components.pixel_init')
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
@@ -8,15 +9,17 @@
     <link type="text/css" href="{{ asset('/') }}innodermFiles/innoderm/order_me.min.css" rel="stylesheet" media="all">
     <link href="{{ asset('/') }}innodermFiles/innoderm/styles.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:300italic,300,500,500italic,700,700italic&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('/') }}innodermFiles/innoderm/s3_leaf.png" type="image/png" rel="icon">
     <style type="text/css">.s1-print{top: 63px;}.s1-icons .icon-2{padding-left: 50px;padding-right: 50px;}.custom_select select{height: 85%;}</style>
 </head>
 <body>
 <div class="page">
+    @include('components.display_errors')
     <div class="slide-1-bg">
         <div class="slide-1">
             <div class="content-block">
-                <div class="s1-content-block"><img alt="Inno Gialuron" class="s1-product" src="{{ asset('/') }}innodermFiles/innoderm/product.png" />
-                    <h1> Inno Gialuron </h1>
+                <div class="s1-content-block"><img alt="Inno Derm" class="s1-product" src="{{ asset('/') }}innodermFiles/innoderm/kremaKutija.png" />
+                    <h1> Inno Derm </h1>
                     <div class="s1-print"> Intenzivno
                         <p> podmlađivanje </p>
                     </div>
@@ -128,12 +131,12 @@
                     <div class="s4-sticker">
                         <p class="text-1"> Efekat </p>
                         <p class="text-2"> za nekoliko </p>
-                        <p class="text-2"> dana! </p> <img alt="s7_banka_2.png" class="s4-product" src="{{ asset('/') }}innodermFiles/innoderm/product.png" /> </div>
+                        <p class="text-2"> dana! </p> <img alt="s7_banka_2.png" class="s4-product" src="{{ asset('/') }}innodermFiles/innoderm/kremaKutija.png" /> </div>
                     <div class="s4-button-wr">
                         <div class="s1-button pre_toform" data-scroll=""> Naručite <span>  ODMAH  </span></div>
                     </div>
                     <div class="s4-h2-wr">
-                        <h2 class="s4-h2"> Inno Gialuron </h2></div>
+                        <h2 class="s4-h2"> Inno Derm </h2></div>
                     <div class="s4-content-right">
                         <h3 class="s4-h3"> Revolucija u <span>  podmlađivanju  </span></h3>
                         <div class="s4-text"> Čista izvorska voda, temeljno izbalansiran sastav i desetine proaktivnih biljnih sastojaka omogućavaju <span>  intenzivnu negu protiv starenja  </span> i čine vašu kožu ponovo mladom. </div>
@@ -149,7 +152,7 @@
                     <div class="s5-list-block">
                         <ul class="s5-list">
                             <li class="s5-li-1">
-                                <p class="s5-li-text"><span>  Inno Gialuron ima laganu teksturu  </span> koja čini da se ističe među drugim proizvodima. Poklonite sebi - luksuz delikatne nege koja nežno obnavlja vašu kožu! </p>
+                                <p class="s5-li-text"><span>  Inno Derm ima laganu teksturu  </span> koja čini da se ističe među drugim proizvodima. Poklonite sebi - luksuz delikatne nege koja nežno obnavlja vašu kožu! </p>
                             </li>
                             <li class="s5-li-2">
                                 <p class="s5-li-text"> <span>  Zahvaljujući blagom cvetnom mirisu  </span> svakodnevna nega lica postaje ugodan ritual. </p>
@@ -192,7 +195,7 @@
         <div class="content-block">
             <div class="s7-content-block">
                 <div class="s7-h2"> <span class="text-1">4</span> <span class="text-2">  koraka ka  </span> <span class="text-3">  mladosti kože  </span> </div>
-                <div class="s7-steps-block"><img alt="s7_circle_2.png" class="s7-circle" src="{{ asset('/') }}innodermFiles/innoderm/s7_circle_2.png" /> <img alt="s7_banka_2.png" class="s7-product" src="{{ asset('/') }}innodermFiles/innoderm/product.png" />
+                <div class="s7-steps-block"><img alt="s7_circle_2.png" class="s7-circle" src="{{ asset('/') }}innodermFiles/innoderm/s7_circle_2.png" /> <img alt="s7_banka_2.png" class="s7-product" src="{{ asset('/') }}innodermFiles/innoderm/kremaM.png" />
                     <div class="s7-row">
                         <div class="s7-column">
                             <div class="title"> 1. Čišćenje</div>
@@ -206,11 +209,11 @@
                     <div class="s7-row">
                         <div class="s7-column">
                             <div class="title"> 3. Hidratacija</div>
-                            <div class="text"> Ovo je najvažnija faza nege lica. Izbor hidratantnog mleka predstavlja osnovu vaše nege i garanciju dugotrajne mladosti kože. Koristite inovativno mleko InnoGialuron da biste se rešili već postojećih bora i sprečili pojavu novih.</div>
+                            <div class="text"> Ovo je najvažnija faza nege lica. Izbor hidratantnog mleka predstavlja osnovu vaše nege i garanciju dugotrajne mladosti kože. Koristite inovativno mleko InnoDerm da biste se rešili već postojećih bora i sprečili pojavu novih.</div>
                         </div>
                         <div class="s7-column s7-column-right">
                             <div class="title"> 4. Nega</div>
-                            <div class="text"> Nakon što ste naneli mleko, možete upotrebiti kremu- InnoGialuron se upija vrlo brzo i ne ometa delovanje drugih sredstava za negu. Osim ovoga, mleko se može koristiti i kao samostalno sredstvo za prevenciju dehidratacije i starenja kože.</div>
+                            <div class="text"> Nakon što ste naneli mleko, možete upotrebiti kremu- InnoDerm se upija vrlo brzo i ne ometa delovanje drugih sredstava za negu. Osim ovoga, mleko se može koristiti i kao samostalno sredstvo za prevenciju dehidratacije i starenja kože.</div>
                         </div>
                     </div>
                 </div>
@@ -223,7 +226,7 @@
                 <div class="s8-content-block">
                     <h2 class="s8-h2"> Tajna <p> delotvornosti </p></h2>
                     <div class="s8-row float-content">
-                        <div class="s8-center-column"><img alt="s7_banka_2.png" class="s8-product" src="{{ asset('/') }}innodermFiles/innoderm/product.png" />
+                        <div class="s8-center-column"><img alt="s7_banka_2.png" class="s8-product" src="{{ asset('/') }}innodermFiles/innoderm/kremaM.png" />
                             <div class="s8-leaf-bg"></div>
                             <div class="s8-cream-bg"></div>
                         </div>
@@ -237,7 +240,7 @@
                         </div>
                     </div>
                     <div class="s8-bottom-text"> Revitalizirajući ekstrakti su proizvedeni bez upotrebe alkohola, alkalnih supstanci i glicerina. </div>
-                    <div class="s8-bottom-text"> Serum ima najveći mogući sadržaj komponenata koje pogoduju zdravlju zbog prirodnog načina obrade. Sama priroda je podarila <span>  energiju Inno Gialuron-u.  </span></div>
+                    <div class="s8-bottom-text"> Serum ima najveći mogući sadržaj komponenata koje pogoduju zdravlju zbog prirodnog načina obrade. Sama priroda je podarila <span>  energiju Inno Derm-u.  </span></div>
                 </div>
             </div>
         </div>
@@ -245,7 +248,7 @@
             <div class="content-block">
                 <div class="s9-content-block">
                     <h2 class="s9-h2"> Efekat <span>  kompleksa  </span></h2>
-                    <h3 class="s9-h3"> Inno Gialuron vašu kožu čini zdravom i čvrstom, uklanja bore i
+                    <h3 class="s9-h3"> Inno Derm vašu kožu čini zdravom i čvrstom, uklanja bore i
                         nesavršenosti. </h3>
                     <div class="s9-row">
                         <ul class="s9-list">
@@ -270,10 +273,10 @@
     <!--/slide-8-bg-->
     <div class="slide-11-bg">
         <div class="slide-11">
-            <div class="content-block"><img alt="s11_banka.png" class="s11-product" src="{{ asset('/') }}innodermFiles/innoderm/product.png" />
+            <div class="content-block"><img alt="s11_banka.png" class="s11-product" src="{{ asset('/') }}innodermFiles/innoderm/kremaKutija.png" />
                 <div class="s11-content-block">
                     <div class="s11-title">
-                        <h2 class="s11-h2"> Inno Gialuron </h2>
+                        <h2 class="s11-h2"> Inno Derm </h2>
                         <h3 class="s11-h3"> №1 <span>  proizvod  </span> za podmlađivanje </h3></div>
                     <div class="s11-text-1"> Kompleksan oporavak</div>
                     <div class="s11-text-2"> kože lica</div>
@@ -298,7 +301,7 @@
                             </div>
                             <div class="text-1"> Ana, 37</div>
                             <div class="s12-text-2"> Postignuti rezultati za <span>  10 dana  </span></div>
-                            <div class="text-3"> Nisam imala dubinske bore, nego male mimičke bore, a i boju kože je trebalo poboljšati. Uz serum Inno Gialuron, bore su nestale a koža lica je postala tako sveža da izgledam mlađe od 30. </div>
+                            <div class="text-3"> Nisam imala dubinske bore, nego male mimičke bore, a i boju kože je trebalo poboljšati. Uz serum Inno Derm, bore su nestale a koža lica je postala tako sveža da izgledam mlađe od 30. </div>
                         </li>
                         <li class="s12-li margin">
                             <div class="s12-li-img"><img alt="s12_review_2.png" src="{{ asset('/') }}innodermFiles/innoderm/s12_review_2.png" />
@@ -309,7 +312,7 @@
                             </div>
                             <div class="text-1"> Snežana, 39</div>
                             <div class="s12-text-2"> Postignuti rezultati za <span>  14 dana  </span></div>
-                            <div class="text-3"> Kupila sam Inno Gialuron serum pre nekog vremena i već sam zadovoljna rezultatima - lice se zateglo, bore su se smanjile. Pored toga, pore su se suzile. Sada se uvek sebi divim ispred ogledala. A najvažnija stvar je da rezultati postaju vidljivi za dva dana. </div>
+                            <div class="text-3"> Kupila sam Inno Derm serum pre nekog vremena i već sam zadovoljna rezultatima - lice se zateglo, bore su se smanjile. Pored toga, pore su se suzile. Sada se uvek sebi divim ispred ogledala. A najvažnija stvar je da rezultati postaju vidljivi za dva dana. </div>
                         </li>
                         <li class="s12-li">
                             <div class="s12-li-img"><img alt="s12_review_3.png" src="{{ asset('/') }}innodermFiles/innoderm/s12_review_3.png" />
@@ -320,7 +323,7 @@
                             </div>
                             <div class="text-1"> Marija, 44</div>
                             <div class="s12-text-2"> Postignuti rezultati za <span>  13 dana  </span></div>
-                            <div class="text-3"> Posle 40. godine, koža nije ista, a nisam verovala da će ovaj serum da pomogne. Ali Inno Gialuron je stvarno efikasan - lice izgleda svežije, boja nije tako tamna, bore nestaju. Veoma mi je drago. </div>
+                            <div class="text-3"> Posle 40. godine, koža nije ista, a nisam verovala da će ovaj serum da pomogne. Ali Inno Derm je stvarno efikasan - lice izgleda svežije, boja nije tako tamna, bore nestaju. Veoma mi je drago. </div>
                         </li>
                     </ul>
                 </div>
@@ -358,7 +361,7 @@
                 </div>
                 <div class="s12s-text-block">
                     <h2 class="s12s-h2"> Eksperti preporučuju </h2>
-                    <div class="s12s-text-2"><img alt="s12_print.png" class="s12-print" src="{{ asset('/') }}innodermFiles/innoderm/s12_print.png" /> <img alt="s12_doctor_sign.png" class="s12-doctor-sign" src="{{ asset('/') }}innodermFiles/innoderm/s12_doctor_sign.png" /> Inno Gialuron je dokazao svoju efikasnost. Njegova glavna prednost je složena nega. Serum može da se koristi i za kompleksan, <span>  potpun program podmlađivanja kože lica  </span> i za preventivne mere. Bore su savršeno zaglađene, ten postaje ujednačen. Preporučujem ovaj serum svima onima koji žele da poboljšaju kvalitet kože i onima koji trebaju da zaštite kožu od bilo kakvih nedostataka. Ipak, suva koža koja se peruta može da se pobora za samo nekoliko dana i veoma je teško posle izravnati ove fine linije.
+                    <div class="s12s-text-2"><img alt="s12_print.png" class="s12-print" src="{{ asset('/') }}innodermFiles/innoderm/s12_print.png" /> <img alt="s12_doctor_sign.png" class="s12-doctor-sign" src="{{ asset('/') }}innodermFiles/innoderm/s12_doctor_sign.png" /> Inno Derm je dokazao svoju efikasnost. Njegova glavna prednost je složena nega. Serum može da se koristi i za kompleksan, <span>  potpun program podmlađivanja kože lica  </span> i za preventivne mere. Bore su savršeno zaglađene, ten postaje ujednačen. Preporučujem ovaj serum svima onima koji žele da poboljšaju kvalitet kože i onima koji trebaju da zaštite kožu od bilo kakvih nedostataka. Ipak, suva koža koja se peruta može da se pobora za samo nekoliko dana i veoma je teško posle izravnati ove fine linije.
                         <div class="s12s-doctor-name">
                             <p> Andrijana Savić, </p> kozmetolog</div>
                     </div>
@@ -378,9 +381,9 @@
                             <p> preporučuju </p>
                         </div>
                     </div>
-                    <div class="s13-product-bg"><img alt="s7_banka_2.png" class="s13-product" src="{{ asset('/') }}innodermFiles/innoderm/product.png" /></div>
+                    <div class="s13-product-bg"><img alt="s7_banka_2.png" class="s13-product" src="{{ asset('/') }}innodermFiles/innoderm/kremaM.png" /></div>
                     <div class="float-right s13-column">
-                        <h2 class="s13-h2"> Inno Gialuron </h2></div>
+                        <h2 class="s13-h2"> Inno Derm </h2></div>
                 </div>
                 <div style="display:none;" class="s13-journals-block"><img alt="s13_journals.png" src="{{ asset('/') }}innodermFiles/innoderm/s13_journals.png" /></div>
             </div>
@@ -389,12 +392,13 @@
             <div class="content-block">
                 <div class="s14-content-block">
                     <div class="s14-girl-bg"></div>
-                    <div class="s14-product-bg"><img alt="s7_banka_2.png" class="s14-product" src="{{ asset('/') }}innodermFiles/innoderm/product.png" /></div>
+                    <div class="s14-product-bg"><img alt="s7_banka_2.png" class="s14-product" src="{{ asset('/') }}innodermFiles/innoderm/kremaKutija.png" /></div>
+                    <a id="hiddenClick" href="#form-order" style="display:none;"></a>
                     <form id="form-order" action="{{$orderRoute}}" method="POST">
                         {{ csrf_field() }}
                         @include('lander.naturapharm.components.form_hidden_fields')
                         <div class="form-top">
-                            <h2 class="s14-h2"> Inno Gialuron </h2>
+                            <h2 class="s14-h2"> Inno Derm </h2>
                             <h3 class="s14-h3"></h3>
                             <p> Efikasan način </p> <span>  da pobedite  </span> starenje i bore </div>
                         <div class="form-bottom">
@@ -434,6 +438,7 @@
             $('html,body').animate({
                 scrollTop: orderForm
             }, 700);
+            $('#hiddenClick').click();
             return false;
         });
         $('.js_submit').click(function() {
@@ -441,5 +446,6 @@
         })
     });
 </script>
+@include('components.pixel_footer')
 </body>
 </html>

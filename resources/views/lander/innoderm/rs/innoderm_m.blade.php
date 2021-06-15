@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html>
-
 <head>
+    @include('components.pixel_init')
     <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport" />
     <meta charset="utf-8" />
+
     <link type="text/css" href="{{ asset('/') }}innodermFiles/innoderm/mob/order_me.min.css" rel="stylesheet" media="all">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300italic,300,500,500italic,700,700italic&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css" />
     <link href="{{ asset('/') }}innodermFiles/innoderm/mob/styles.css" rel="stylesheet" />
     <link href="{{ asset('/') }}innodermFiles/innoderm/mob/owl.carousel.css" rel="stylesheet" />
     <link href="{{ asset('/') }}innodermFiles/innoderm/mob/owl.theme.css" rel="stylesheet" />
+    <link href="{{ asset('/') }}innodermFiles/innoderm/s3_leaf.png" type="image/png" rel="icon">
     <script src="{{ asset('/') }}shared_files/jquery-1.12.4.min.js" type="text/javascript"></script>
 </head>
-
 <body>
 <div class="page">
+    @include('components.display_errors')
     <div class="slide-1-bg">
         <div class="slide-1">
             <div class="content-block">
                 <div class="s1-content-block">
                     <div class="s1-girl-bg"></div>
-                    <div class="s1-banka-bg"> <img alt="banka" class="s1-product" src="{{ asset('/') }}innodermFiles/innoderm/mob/product.png" width="125" /> </div>
+                    <div class="s1-banka-bg"> <img alt="banka" class="s1-product" src="{{ asset('/') }}innodermFiles/innoderm/kremaM.png" width="250" /> </div>
                     <h1>Inno Gialuron</h1>
                     <div class="h2-wr">
                         <h2 class="s1-h2">
@@ -117,7 +119,7 @@
                         <div class="text-1">EFEKAT</div>
                         <div class="text-2">za nekoliko</div>
                         <div class="text-2">dana!</div>
-                    </div> <img alt="banka.png" class="s4-product" src="{{ asset('/') }}innodermFiles/innoderm/mob/product.png" /> </div>
+                    </div> <img alt="banka.png" class="s4-product" src="{{ asset('/') }}innodermFiles/innoderm/kremaKutija.png" /> </div>
             </div>
         </div>
     </div>
@@ -289,7 +291,7 @@
                     </div>
                     <div class="s10-leaf"></div>
                 </div>
-                <div class="s10-over-product"></div> <img alt="banka" class="s10-product" src="{{ asset('/') }}innodermFiles/innoderm/mob/product.png" /> </div>
+                <div class="s10-over-product"></div> <img alt="banka" class="s10-product" src="{{ asset('/') }}innodermFiles/innoderm/kremaKutija.png" /> </div>
         </div>
         <div class="slide-11">
             <div class="content-block">
@@ -304,6 +306,7 @@
                         <div class="new-price">{{ $prices[1]['amount'] }} RSD</div>
                     </div>
                 </div>
+                <a id="hiddenClick" href="#form-order" style="display:none;"></a>
                 <form class="form" id="form-order" action="{{$orderRoute}}" method="POST">
                     {{ csrf_field() }}
                     @include('lander.naturapharm.components.form_hidden_fields')
@@ -328,6 +331,7 @@
             $('html,body').animate({
                 scrollTop: orderForm
             }, 700);
+            $('#hiddenClick').click();
             return false;
         });
         $('#owl').owlCarousel({
@@ -338,6 +342,6 @@
         })
     });
 </script>
+@include('components.pixel_footer')
 </body>
-
 </html>

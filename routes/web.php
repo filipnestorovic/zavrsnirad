@@ -37,6 +37,12 @@ Route::group([ 'middleware' => ['admin']], function() {
         Route::get('/getBrand/{id}', [App\Http\Controllers\BrandController::class, 'getBrand'])->name('getBrand');
         Route::post('/editBrand', [App\Http\Controllers\BrandController::class, 'editBrand'])->name('editBrand');
         Route::get('/deleteBrand/{id}', [App\Http\Controllers\BrandController::class, 'deleteBrand'])->name('deleteBrand');
+        Route::get('/getBrandDomains/{id}', [App\Http\Controllers\DomainController::class, 'getBrandDomains'])->name('getBrandDomains');
+
+        Route::post('/addDomain', [App\Http\Controllers\DomainController::class, 'addDomain'])->name('addDomain');
+        Route::get('/getDomain/{id}', [App\Http\Controllers\DomainController::class, 'getDomain'])->name('getDomain');
+        Route::post('/editDomain', [App\Http\Controllers\DomainController::class, 'editDomain'])->name('editDomain');
+        Route::get('/deleteDomain/{id}', [App\Http\Controllers\DomainController::class, 'deleteDomain'])->name('deleteDomain');
 
         Route::get('/product', [App\Http\Controllers\ProductController::class, 'productIndex'])->name('productIndex');
         Route::post('/addProduct', [App\Http\Controllers\ProductController::class, 'addProduct'])->name('addProduct');
@@ -59,12 +65,14 @@ Route::group([ 'middleware' => ['admin']], function() {
 
         Route::post('/connectBrandPixel', [App\Http\Controllers\PixelController::class, 'connectBrandPixel'])->name('connectBrandPixel');
         Route::post('/connectProductPixel', [App\Http\Controllers\PixelController::class, 'connectProductPixel'])->name('connectProductPixel');
+        Route::post('/connectDomainPixel', [App\Http\Controllers\PixelController::class, 'connectDomainPixel'])->name('connectDomainPixel');
 
         Route::get('/getBrandPixelForSingleProduct/{id}', [App\Http\Controllers\PixelController::class, 'getBrandPixelForSingleProduct'])->name('getBrandPixelForSingleProduct');
         Route::get('/getProductPixel/{id}', [App\Http\Controllers\PixelController::class, 'getProductPixel'])->name('getProductPixel');
 
         Route::get('/disconnectBrandPixel/{id}', [App\Http\Controllers\PixelController::class, 'disconnectBrandPixel'])->name('disconnectBrandPixel');
         Route::get('/disconnectProductPixel/{id}', [App\Http\Controllers\PixelController::class, 'disconnectProductPixel'])->name('disconnectProductPixel');
+        Route::get('/disconnectDomainPixel/{id}', [App\Http\Controllers\PixelController::class, 'disconnectDomainPixel'])->name('disconnectDomainPixel');
 
         Route::get('/lander', [App\Http\Controllers\PageController::class, 'landerIndex'])->name('landerIndex');
         Route::post('/addLander', [App\Http\Controllers\PageController::class, 'addLander'])->name('addLander');

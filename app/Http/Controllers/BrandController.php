@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Brand;
 use App\Models\Country;
+use App\Models\Domain;
 use App\Models\Pixel;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -24,6 +25,7 @@ class BrandController extends Controller
         $this->modelCountry = new Country();
         $this->modelPixel = new Pixel();
         $this->modelProduct = new Product();
+        $this->modelDomain = new Domain();
     }
 
     public function brandIndex(Request $request) {
@@ -36,6 +38,7 @@ class BrandController extends Controller
         $this->data['countriesDdl'] = $this->modelCountry->getAllCountries();
         $this->data['brands'] = $this->modelBrand->getAllBrands();
         $this->data['brandsPixels'] = $groupedBrands;
+        $this->data['domains'] = $this->modelDomain->getAllDomains();
         return view('admin.brand',$this->data);
     }
 

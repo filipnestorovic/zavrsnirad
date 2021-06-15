@@ -17,6 +17,7 @@ class Pixel extends Model
 
     public $brand_id;
     public $product_id;
+    public $domain_id;
 
     public function getAllPixels(){
         $result = DB::table('pixel')
@@ -74,6 +75,16 @@ class Pixel extends Model
         return $result;
     }
 
+    public function checkIfDomainIsConnected($domain_id, $pixel_id) {
+        $result = DB::table('pixel_domains')
+            ->where([
+                ['domain_id','=',$domain_id],
+                ['pixel_id','=',$pixel_id],
+            ])
+            ->get();
+        return $result;
+    }
+
     public function checkIfProductIsConnected($product_id, $pixel_id) {
         $result = DB::table('pixel_products')
             ->where([
@@ -89,6 +100,15 @@ class Pixel extends Model
             ->insertGetId([
                 'pixel_id' => $this->pixel_id,
                 'brand_id' => $this->brand_id,
+            ]);
+        return $result;
+    }
+
+    public function connectDomainPixel() {
+        $result = DB::table('pixel_domains')
+            ->insertGetId([
+                'pixel_id' => $this->pixel_id,
+                'domain_id' => $this->domain_id,
             ]);
         return $result;
     }
@@ -112,6 +132,13 @@ class Pixel extends Model
     public function disconnectProductPixel($id) {
         $result = DB::table('pixel_products')
             ->where('id_pixel_products',$id)
+            ->delete();
+        return $result;
+    }
+
+    public function disconnectDomainPixel($id) {
+        $result = DB::table('pixel_domains')
+            ->where('id_pixel_domains',$id)
             ->delete();
         return $result;
     }

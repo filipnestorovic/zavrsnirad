@@ -1,4 +1,4 @@
-<div class="modal fade" id="pixelModal" tabindex="-1" role="dialog" aria-labelledby="invoiceFormTitle" aria-hidden="true">
+<div class="modal fade" id="pixelModal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
     <!-- Change class .modal-sm to change the size of the modal -->
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -12,7 +12,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-4">
-                            <form id="editReviewForm" action="{{ route('addPixel') }}" method="POST" enctype="multipart/form-data" autocomplete="off">
+                            <form id="editReviewForm" action="{{ route('addPixel') }}" method="POST" autocomplete="off">
                                 {{ csrf_field() }}
                                 <div class="md-form input-group input-group-sm mb-3">
                                     <div class="input-group-prepend">

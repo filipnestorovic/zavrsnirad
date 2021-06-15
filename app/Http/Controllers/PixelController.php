@@ -135,6 +135,17 @@ class PixelController extends Controller
         }
     }
 
+    public function checkIfDomainIsConnected($domain_id,$pixel_id) {
+        $checkResult = $this->modelPixel->checkIfDomainIsConnected($domain_id,$pixel_id);
+
+        if(count($checkResult)>0) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
+
     public function connectBrandPixel(Request $request) {
 
         $rules = [
@@ -243,6 +254,8 @@ class PixelController extends Controller
 
         $data = $request->except('_token');
 
+        dd($data);
+
         foreach($data as $key => $value) {
             if(str_contains($key, 'brandHiddenPixel')) {
                 if($value == $selectedPixel) {
@@ -275,6 +288,65 @@ class PixelController extends Controller
             return redirect()->back()->with('error','Error on connecting pixel and product!');
         }
 
+    }
+
+    public function connectDomainPixel(Request $request) {
+        $rules = [
+            'domainDdl' => ['required'],
+            'pixelDdl' => ['required'],
+        ];
+
+        $messages = [
+            'required' => 'Field :attribute is required!',
+        ];
+
+        $validator = Validator::make($request->all(), $rules, $messages);
+
+        if ($validator->fails()) {
+            return redirect()
+                ->back()
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+        try {
+            $domain_id = $request->get('domainDdl');
+            $pixel_id = $request->get('pixelDdl');
+
+            if($this->checkIfDomainIsConnected($domain_id,$pixel_id)) {
+                return redirect()->back()->with('error','This pixel has already been connected!');
+            }
+
+            $this->modelPixel->domain_id = $domain_id;
+            $this->modelPixel->pixel_id = $pixel_id;
+
+            $insertResult = $this->modelPixel->connectDomainPixel();
+
+            if($insertResult) {
+                return redirect()->back()->with('success','Connected successfully!');
+            } else {
+                return redirect()->back()->with('error','Error with connecting pixel and domain!');
+            }
+        } catch (\Exception $exception) {
+            Log::error("Error: Connecting pixel and domain | Exception: " . $exception->getMessage());
+            return redirect()->back()->with('error','Error on connecting pixel and domain!');
+        }
+    }
+
+    public function disconnectDomainPixel($id) {
+        try {
+            $deleteResult = $this->modelPixel->disconnectDomainPixel($id);
+
+            if($deleteResult) {
+                return redirect()->back()->with('success','Disconnected successfully!');
+            } else {
+                return redirect()->back()->with('error','Error with disconnecting pixel and domain!');
+            }
+
+        } catch (\Exception $exception) {
+            Log::error("Error: Disconnecting pixel | Exception: " . $exception->getMessage());
+            return redirect()->back()->with('error','Error on disconnecting pixel!');
+        }
     }
 
 }
