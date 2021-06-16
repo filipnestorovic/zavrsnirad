@@ -138,7 +138,7 @@ class BrandController extends Controller
 
         $rules = [
             'brandNameModal' => ['required','max:30'],
-            'brandUrlModal' => ['required'],
+//            'brandUrlModal' => ['required'],
             'brandLogoModal' => ['image','nullable'],
         ];
 
@@ -187,7 +187,7 @@ class BrandController extends Controller
 
             $id = $request->get('brandIdModal');
             $this->modelBrand->brand_name = $request->get('brandNameModal');
-            $this->modelBrand->brand_url = $request->get('brandUrlModal');
+//            $this->modelBrand->brand_url = $request->get('brandUrlModal');
 
             $updateResult = $this->modelBrand->editBrand($id);
 
