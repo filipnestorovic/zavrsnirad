@@ -158,4 +158,12 @@ class Pixel extends Model
             ->get();
         return $result;
     }
+
+    public function getDomainPixel($id) {
+        $result = DB::table('pixel_domains')
+            ->leftJoin('pixel', 'pixel_domains.pixel_id', '=', 'pixel.id_pixel')
+            ->where('domain_id',$id)
+            ->get();
+        return $result;
+    }
 }

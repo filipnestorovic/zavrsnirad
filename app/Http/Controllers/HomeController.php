@@ -79,41 +79,64 @@ class HomeController extends Controller
         $brandUrl = 'https://'.$site.'.'.$domain;
         $country_id = $request->get('countryId');
 
-        if($slug === "purplerelax") {
-//            Log::info('From Google with slug *purplerelax* - slug changed to *vratnimasazer*');
-            $slug = "vratnimasazer";
-        }
-
-        if($slug === "masazer") {
-//            Log::info('From Google with slug *masazer* - slug changed to *multifunkcionalnimasazer*');
-            $slug = "multifunkcionalnimasazer";
-        }
-
         $brand = $this->modelBrand->getBrandByUrl($brandUrl);
 
         if($brand === null) {
-//            Log::info('404 - Brand null - '.$brandUrl);
+            Log::info('404 - Brand null - '.$brandUrl);
             return abort('404');
         }
 
         $brand_id = $brand->id_brand;
+        $domain_id = $brand->id_domain;
+
+        switch ($slug) {
+            case "purplerelax":
+            case "pulsirajucimasazer":
+                $slug = "vratnimasazer";
+                break;
+            case "masazer":
+                $slug = "multifunkcionalnimasazer";
+                break;
+            case "akupunkturnaolovka1":
+                $slug = "akupunkturnaolovka";
+                break;
+            case "jastukzanoge":
+                $slug = "ortopedskijastuk";
+                break;
+            case "dailysharkpena":
+            case "penadailyshark":
+                $slug = "dailyshark";
+                break;
+            case "carluxe1":
+                $slug = "carluxe";
+                break;
+            case "retrovizorkamera":
+                $slug = "retrovizor";
+                break;
+            case "flextraka":
+                $slug = "flextape";
+                break;
+            case "cleanmastermop":
+            case "mopcleanmaster":
+                $slug = "cleanmaster";
+                break;
+            case "carfix1":
+                $slug = "carfix";
+                break;
+            case "trapmosquito":
+            case "mosquitotrap":
+                $slug = "mosquito";
+                break;
+        }
 
         if($brand_id === null) {
-//            Log::info('404 - Brand null - '.$brandUrl);
             return abort('404');
         } else {
             $product = $this->modelProduct->getProductBySlugBrandAndCountry($slug, $brand_id, $country_id);
         }
 
         if($product === null) {
-//            $agent = new Agent();
-//            if(!$agent->isRobot()) {
-//                $info['ip'] = $request->ip();
-//                $info['user_agent'] = $agent->getUserAgent();
-//                $info['isRobot'] = $agent->isRobot();
-//                $info['httpHeaders'] = $agent->getHttpHeaders();
-////                Log::info('404 - Product null - Slug: '.$slug.' - Coupon: '.$coupon.' - Brand: '.$brandUrl.' More info: '.json_encode($info, JSON_PRETTY_PRINT));
-//            }
+            Log::info('404 - Product null - Brand: '.$brandUrl.' - Slug: '.$slug. ' - Coupon: '.$coupon);
             return abort('404');
         } else {
             if($product->country_id != $country_id) { //show product for that country if exists
@@ -189,7 +212,7 @@ class HomeController extends Controller
                 $host = $request->getHost();
 
                 $this->data['discount'] = $this->checkCouponForVariation($request, $this->returnedData['variationId'], $coupon);
-                $this->data['pixels'] = $this->getPixelsForView($product->id_product, $product->id_brand);
+                $this->data['pixels'] = $this->getPixelsForView($product->id_product, $product->id_brand, $domain_id);
                 $this->data['prices'] = $this->returnedData['prices'];
                 $this->data['productReviews'] = $this->getProductReviews($product_id);
                 $this->data['variation_id'] = $this->returnedData['variationId'];
@@ -401,20 +424,45 @@ class HomeController extends Controller
         return $returnData;
     }
 
-    public function getPixelsForView($product_id, $brand_id) {
+    public function getPixelsForView($product_id, $brand_id, $domain_id = null) {
         $productPixels = $this->modelPixel->getProductPixel($product_id);
         $brandPixels = $this->modelPixel->getBrandPixel($brand_id);
+
         $pixels = array();
-        if(count($productPixels) > 0) {
-            foreach($productPixels as $productPixel) {
-                $pixels[] = $productPixel->fb_pixel;
+
+        if($domain_id != null) {
+            $domainPixels = $this->modelPixel->getDomainPixel($domain_id);
+            if(count($domainPixels) > 0) {
+                foreach($domainPixels as $domainPixel) {
+                    array_push($pixels,$domainPixel->fb_pixel);
+                }
+            } else {
+                if(count($brandPixels) > 0) {
+                    foreach($brandPixels as $brandPixel) {
+                        array_push($pixels,$brandPixel->fb_pixel);
+                    }
+                } else {
+                    if(count($productPixels) > 0) {
+                        foreach($productPixels as $productPixel) {
+                            array_push($pixels,$productPixel->fb_pixel);
+                        }
+                    }
+                }
+            }
+        } else {
+            if(count($brandPixels) > 0) {
+                foreach($brandPixels as $brandPixel) {
+                    array_push($pixels,$brandPixel->fb_pixel);
+                }
+            } else {
+                if(count($productPixels) > 0) {
+                    foreach($productPixels as $productPixel) {
+                        array_push($pixels,$productPixel->fb_pixel);
+                    }
+                }
             }
         }
-        if(count($brandPixels) > 0) {
-            foreach($brandPixels as $brandPixel) {
-                $pixels[] = $brandPixel->fb_pixel;
-            }
-        }
+
         return $pixels;
     }
 

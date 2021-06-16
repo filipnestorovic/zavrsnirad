@@ -32,7 +32,7 @@ class OrderController extends Controller
         $this->modelSession = new UserSession();
     }
 
-    public function order(Request $request){
+    public function order(Request $request, $site = null, $domain = null){
 
         $rules = [
             'name' => ['required'],
@@ -144,7 +144,7 @@ class OrderController extends Controller
 
                 if($orderId) {
                     $orderDetails = $this->modelOrder->getOrderById($orderId, $this->modelOrder->quantity);
-
+                    $brandUrl = 'https://'.$site.'.'.$domain;
                     //delete from abandoned if exist
 //                    try {
 //                        $resultAbandonDelete = $this->checkAndDeleteAbandonedIfOrderExists($orderDetails->email, $orderDetails->product_id);
@@ -157,7 +157,7 @@ class OrderController extends Controller
                         //webhooks
                         if($orderDetails->woocommerce_product_id === null) {
                             try {
-                                $webhookResult = $this->sendWebhook($orderDetails);
+                                $webhookResult = $this->sendWebhook($orderDetails, $brandUrl);
                             } catch(\Exception $exception){
                                 Log::error("Error: ServerWombat Webhook \nMessage: " . $exception->getMessage() . "\nDetails: ". json_encode($orderDetails, JSON_PRETTY_PRINT));
                                 return redirect()->back()->withErrors([$customerErrorMessage]);
@@ -196,7 +196,7 @@ class OrderController extends Controller
         }
     }
 
-    public function sendWebhook($orderDetails){
+    public function sendWebhook($orderDetails, $brandUrl){
 
         $client = new GuzzleHttp\Client([
             'headers' => [ 'Content-Type' => 'application/json' ]
@@ -204,7 +204,7 @@ class OrderController extends Controller
 
         $jsonArray = array();
 
-        $jsonArray['site'] = $orderDetails->brand_url;
+        $jsonArray['site'] = $brandUrl;
 
         $jsonArray['number'] = $orderDetails->id_order;
         $jsonArray['date_created'] = $orderDetails->created_at;

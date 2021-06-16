@@ -144,28 +144,48 @@
                                 </tr>
                                 </thead>
                                 <tbody id="tableOrderDetailsBody">
-
                                 @foreach($brandsPixels as $brandSingle)
-                                        <tr>
-                                            <td class="pt-3-half">{{$brandSingle[0]['id_brand']}}</td>
-                                            <td class="pt-3-half">{{$brandSingle[0]['brand_name']}}</td>
-                                            <td class="pt-3-half">{{$brandSingle[0]['brand_url']}}</td>
-                                            <td class="pt-3-half"><img src="{{ asset('/').$brandSingle[0]['logo_url'] }}" height="70px"/></td>
-                                            <td class="pt-3-half">
-                                                @foreach($brandSingle as $pixel)
-                                                    @if($pixel['fb_pixel'] == null)
-                                                        <div style="color: red;">Brand pixel not set</div>
-                                                    @else
-                                                        <div style="margin-top: 10px;">{{ $pixel['fb_pixel'] }} - {{ $pixel['pixel_name'] }}</div>
-                                                    @endif
-                                                @endforeach
-                                            </td>
-                                            <td>
-                                                <span class="table-edit"><button type="button" class="btn btn-primary btn-rounded btn-sm my-0 editBrandBtn" data-toggle="modal" data-target="#editBrand" value="{{$brandSingle[0]['id_brand']}}">EDIT</button></span>
-                                                <span class="table-remove"><a href="{{ route('deleteBrand',['id' => $brandSingle[0]['id_brand']]) }}"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0 deleteBrandBtn">DELETE</button></a></span>
-                                                <span class="table-edit"><button type="button" class="btn btn-success btn-rounded btn-sm my-0 brandDomainsBtn" data-toggle="modal" data-target="#brandDomains" value="{{$brandSingle[0]['id_brand']}}">DOMAINS</button></span>
-                                            </td>
-                                        </tr>
+                                    @php
+                                        $criticalsText = "";
+                                        $errorsText = "";
+                                        if(count($brandSingle[0]['criticals']) > 0) {
+                                            foreach($brandSingle[0]['criticals'] as $critical) {
+                                                $criticalsText .= $critical;
+                                            }
+                                        }
+                                        if(count($brandSingle[0]['errors']) > 0) {
+                                            foreach($brandSingle[0]['errors'] as $error) {
+                                                $errorsText .= $error;
+                                            }
+                                        }
+                                    @endphp
+                                    <tr>
+                                        <td class="pt-3-half">{{$brandSingle[0]['id_brand']}}</td>
+                                        <td class="pt-3-half">{{$brandSingle[0]['brand_name']}}
+                                            @if($criticalsText != "")
+                                                <a data-toggle="popover" data-placement="right" title="Critical" data-content="{{ $criticalsText }}"><i style="color: #F93154;" class="fas fa-exclamation-triangle fa-lg"></i></a>
+                                            @endif
+                                            @if($errorsText != "")
+                                                <a data-toggle="popover" data-placement="right" title="Error" data-content="{{ $errorsText }}"><i  style="color: #FFA900;" class="fas fa-exclamation-circle fa-lg"></i></a>
+                                            @endif
+                                        </td>
+                                        <td class="pt-3-half">{{$brandSingle[0]['brand_url']}}</td>
+                                        <td class="pt-3-half"><img src="{{ asset('/').$brandSingle[0]['logo_url'] }}" height="70px"/></td>
+                                        <td class="pt-3-half">
+                                            @foreach($brandSingle as $pixel)
+                                                @if($pixel['fb_pixel'] == null)
+                                                    <div style="color: red;">Brand pixel not set</div>
+                                                @else
+                                                    <div style="margin-top: 10px;">{{ $pixel['fb_pixel'] }} - {{ $pixel['pixel_name'] }}</div>
+                                                @endif
+                                            @endforeach
+                                        </td>
+                                        <td>
+                                            <span class="table-edit"><button type="button" class="btn btn-primary btn-rounded btn-sm my-0 editBrandBtn" data-toggle="modal" data-target="#editBrand" value="{{$brandSingle[0]['id_brand']}}">EDIT</button></span>
+                                            <span class="table-remove"><a href="{{ route('deleteBrand',['id' => $brandSingle[0]['id_brand']]) }}"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0 deleteBrandBtn">DELETE</button></a></span>
+                                            <span class="table-edit"><button type="button" class="btn btn-success btn-rounded btn-sm my-0 brandDomainsBtn" data-toggle="modal" data-target="#brandDomains" value="{{$brandSingle[0]['id_brand']}}">DOMAINS</button></span>
+                                        </td>
+                                    </tr>
                                 @endforeach
                                 </tbody>
                             </table>
@@ -329,6 +349,18 @@
 @section('scripts')
     <script>
         $(document).ready(function () {
+
+            $('[data-toggle="popover"]').popover({
+                html: true
+            });
+            $('body').on('click', function (e) {
+                $('[data-toggle=popover]').each(function () {
+                    if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                        $(this).popover('hide');
+                    }
+                });
+            });
+
             $('.editBrandBtn').click(function(){
                 let id = $(this).val();
                 $.ajax({
@@ -368,7 +400,7 @@
                         for (let dataIndex in data) {
                             text += '<tr>';
                             text += '<td class="pt-3-half">' + data[dataIndex][0].id_domain + '</td>';
-                            text += '<td class="pt-3-half">' + data[dataIndex][0].domain_url + '</td>';
+                            text += '<td class="pt-3-half"><a target="_blank" href="' + data[dataIndex][0].domain_url + '">' + data[dataIndex][0].domain_url + '</a></td>';
                             text += '<td class="pt-3-half">';
                             for (let singlePixel in data[dataIndex]) {
                                 if(data[dataIndex][singlePixel].fb_pixel) {
@@ -382,7 +414,7 @@
                             deleteRoute = "{{ route('deleteDomain',['id' => ':id']) }}";
                             deleteRoute = deleteRoute.replace(':id', data[dataIndex][0].id_domain);
                             text += '<span class="table-edit"><button type="button" class="btn btn-primary btn-rounded btn-sm my-0 editDomainBtn" data-toggle="modal" data-target="#editDomain" value="' + data[dataIndex][0].id_domain + '">EDIT</button></span>';
-                            text += '<span class="table-remove"><a href="' + deleteRoute + '"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0 removeDomainBtn">DELETE DOMAIN</button></a></span>';
+                            text += '<span class="table-remove"><a href="' + deleteRoute + '"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0 removeDomainBtn">DELETE</button></a></span>';
                             text += '</td>';
                             text += '</tr>';
                         }
@@ -401,16 +433,20 @@
                                 url: baseURL + "getDomain/" + parseInt(id),
                                 dataType: 'json',
                                 success: function (data) {
-                                    pixelText = '<h5 style="text-align: center;">Pixels</h5><table class="table table-sm">';
-                                    for (let i = 0; i < data.length; i++) {
-                                        disconnectRoute = "{{ route('disconnectDomainPixel',['id' => ':id']) }}";
-                                        disconnectRoute = disconnectRoute.replace(':id', data[i].id_pixel_domains);
-                                        pixelText += '<tr>';
-                                        pixelText += '<td>' + data[i].fb_pixel + ' (' + data[i].pixel_name + ')</td>';
-                                        pixelText += '<td><a href="' + disconnectRoute + '"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0 disconnectDomainPixel">DISCONNECT</button></a></td>';
-                                        pixelText += '</tr>';
+                                    if(data[0].fb_pixel != null) {
+                                        pixelText = '<h5 style="text-align: center;">Pixels</h5><table class="table table-sm">';
+                                        for (let i = 0; i < data.length; i++) {
+                                            disconnectRoute = "{{ route('disconnectDomainPixel',['id' => ':id']) }}";
+                                            disconnectRoute = disconnectRoute.replace(':id', data[i].id_pixel_domains);
+                                            pixelText += '<tr>';
+                                            pixelText += '<td>' + data[i].fb_pixel + ' (' + data[i].pixel_name + ')</td>';
+                                            pixelText += '<td><a href="' + disconnectRoute + '"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0 disconnectDomainPixel">DISCONNECT</button></a></td>';
+                                            pixelText += '</tr>';
+                                        }
+                                        pixelText += '</table>';
+                                    } else {
+                                        pixelText = '<h5 style="text-align: center;">Domain pixel not set</h5>';
                                     }
-                                    pixelText += '</table>';
                                     $('#domainPixelTable').html(pixelText);
                                     $('#domainIdHiddenModal').val(data[0].id_domain);
                                     $('#domainUrlModal').val(data[0].domain_url);

@@ -254,8 +254,6 @@ class PixelController extends Controller
 
         $data = $request->except('_token');
 
-        dd($data);
-
         foreach($data as $key => $value) {
             if(str_contains($key, 'brandHiddenPixel')) {
                 if($value == $selectedPixel) {

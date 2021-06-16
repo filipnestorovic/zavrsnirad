@@ -29,7 +29,7 @@
                             <a href="{{ route('countryIndex') }}" class="list-group-item list-group-item-action waves-effect">
                                 <i class="fa fa-dollar-sign mr-3"></i>Countries/Currencies</a>
                             <a href="{{ route('brandIndex') }}" class="list-group-item list-group-item-action waves-effect">
-                                <i class="fa fa-certificate mr-3"></i>Brands</a>
+                                <i class="fa fa-certificate mr-3"></i>Brands/Domains</a>
                             <a href="{{ route('productIndex') }}" class="list-group-item list-group-item-action waves-effect">
                                 <i class="fab fa-product-hunt mr-3"></i>Products</a>
                             <a href="" class="list-group-item list-group-item-action waves-effect pixelMenu" data-toggle="modal" data-target="#pixelModal">
@@ -99,7 +99,7 @@
                 <a href="{{ route('countryIndex') }}" class="list-group-item list-group-item-action waves-effect">
                     <i class="fa fa-dollar-sign mr-3"></i>Countries/Currencies</a>
                 <a href="{{ route('brandIndex') }}" class="list-group-item list-group-item-action waves-effect">
-                    <i class="fa fa-certificate mr-3"></i>Brands</a>
+                    <i class="fa fa-certificate mr-3"></i>Brands/Domains</a>
                 <a href="{{ route('productIndex') }}" class="list-group-item list-group-item-action waves-effect">
                     <i class="fab fa-product-hunt mr-3"></i>Products</a>
                 <a href="" class="list-group-item list-group-item-action waves-effect pixelMenu" data-toggle="modal" data-target="#pixelModal">

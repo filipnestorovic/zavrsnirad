@@ -15,7 +15,7 @@ class DomainController extends Controller
 
     public function addDomain(Request $request) {
         $rules = [
-            'domain_url' => ['required','max:50','unique:domain,domain_url'],
+            'domain_url' => ['required','max:50'],
             'brandDdl' => ['required'],
         ];
 

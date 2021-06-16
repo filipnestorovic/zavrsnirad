@@ -32,6 +32,24 @@ class BrandController extends Controller
 
         $brandsList = json_decode($this->modelBrand->getAllBrandsWithPixels(), true);
 
+
+        foreach($brandsList as $key => $value) {
+            $criticals = [];
+            $errors = [];
+            $brandDomains = $this->modelDomain->getBrandDomains($value['id_brand'], null);
+            if(count($brandDomains)>0) {
+                foreach($brandDomains as $singleDomain) {
+                    if(!isset($singleDomain->fb_pixel)) {
+                        array_push($errors, 'Domain: '.$singleDomain->domain_url.' is not connected with pixel!');
+                    }
+                }
+            } else {
+                array_push($criticals, 'Brand must have at least one domain!');
+            }
+            $brandsList[$key]['criticals'] = $criticals;
+            $brandsList[$key]['errors'] = $errors;
+        }
+
         $groupedBrands = $this->getMultipleItemsFromQuery($brandsList,'id_brand');
 
         $this->data['pixelsDdl'] = $this->modelPixel->getAllPixels();

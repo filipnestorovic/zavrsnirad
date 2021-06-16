@@ -83,8 +83,10 @@ class Brand extends Model
 
     public function getBrandByUrl($brand_url) {
         $result = DB::table('brand')
-            ->where('brand_url','=',$brand_url)
+            ->rightJoin('domain', 'domain.brand_id', '=', 'brand.id_brand')
+            ->where('domain_url','=',$brand_url)
             ->whereNull('brand.deleted_at')
+            ->whereNull('domain.deleted_at')
             ->first();
         return $result;
     }
