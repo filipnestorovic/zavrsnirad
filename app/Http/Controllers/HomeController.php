@@ -137,106 +137,106 @@ class HomeController extends Controller
 
         if($product === null) {
             Log::info('404 - Product null - Brand: '.$brandUrl.' - Slug: '.$slug. ' - Coupon: '.$coupon);
-            return abort('404');
-        } else {
-            if($product->country_id != $country_id) { //show product for that country if exists
-                $productGroup = $this->modelProduct->groupProductBySku($product->sku);
-                foreach($productGroup as $singleProduct) {
-                    if($singleProduct->id_country === $country_id) {
-                        $request->request->add(['redirectToCountry' => $singleProduct->id_country]);
-                        $countryUrl = $singleProduct->country_code;
-                        $redirectUrl = 'https://'.$countryUrl.'.'.$site.'.'.$domain.'/'.$singleProduct->slug;
-                        return redirect($redirectUrl);
-                    }
+            $product = $this->modelProduct->getProductBySlugBrandAndCountry(null, $brand_id, $country_id);
+        }
+
+        if($product->country_id != $country_id) { //show product for that country if exists
+            $productGroup = $this->modelProduct->groupProductBySku($product->sku);
+            foreach($productGroup as $singleProduct) {
+                if($singleProduct->id_country === $country_id) {
+                    $request->request->add(['redirectToCountry' => $singleProduct->id_country]);
+                    $countryUrl = $singleProduct->country_code;
+                    $redirectUrl = 'https://'.$countryUrl.'.'.$site.'.'.$domain.'/'.$singleProduct->slug;
+                    return redirect($redirectUrl);
                 }
             }
+        }
 
-            $this->data['product'] = $product;
+        $this->data['product'] = $product;
 
-            if($request->get('unexistingCountry') != null) {
-                return $this->resolveCountry($request);
-            }
+        if($request->get('unexistingCountry') != null) {
+            return $this->resolveCountry($request);
+        }
 
-            $product_id = $product->id_product;
-            $variation = null;
+        $product_id = $product->id_product;
+        $variation = null;
 
-            $customerResponse = $this->getCustomerDetails($request);
-            $this->customerData['country_id'] = $product->country_id;
+        $customerResponse = $this->getCustomerDetails($request);
+        $this->customerData['country_id'] = $product->country_id;
 
-            $cookieResponse = $this->checkCustomerCookies($request, $product_id);
+        $cookieResponse = $this->checkCustomerCookies($request, $product_id);
 
-            if($cookieResponse === 1) {
-                $variation = $this->variationField;
-            }
+        if($cookieResponse === 1) {
+            $variation = $this->variationField;
+        }
 
-            if($cookieResponse === 0) {
-                $getTests = json_decode($this->modelTest->getAllTests(null, $product_id, 1, null), true);
-                $activeTests = $this->getMultipleItemsFromQuery($getTests, 'id_test');
-                if (count($activeTests) === 0) {
+        if($cookieResponse === 0) {
+            $getTests = json_decode($this->modelTest->getAllTests(null, $product_id, 1, null), true);
+            $activeTests = $this->getMultipleItemsFromQuery($getTests, 'id_test');
+            if (count($activeTests) === 0) {
 //                    Log::info('Test - Default variation - '. $product->product_name);
-                    $variation = $this->modelVariation->getDefaultVariationByProductId($product_id);
-                } else {
-                    $visitsTotal = 1;
-                    $variationVisits = 1;
-                    foreach ($activeTests as $test) {
-                        foreach ($test as $singleTestVariation) {
-                            $test_variation_id = $singleTestVariation['id_tests_variations'];
-                            $visits = $this->modelSession->getVariationVisits($test_variation_id);
-                            foreach($visits as $visit) {
-                                $visitsTotal += $visit->VariationVisits;
-                            }
+                $variation = $this->modelVariation->getDefaultVariationByProductId($product_id);
+            } else {
+                $visitsTotal = 1;
+                $variationVisits = 1;
+                foreach ($activeTests as $test) {
+                    foreach ($test as $singleTestVariation) {
+                        $test_variation_id = $singleTestVariation['id_tests_variations'];
+                        $visits = $this->modelSession->getVariationVisits($test_variation_id);
+                        foreach($visits as $visit) {
+                            $visitsTotal += $visit->VariationVisits;
                         }
-                        foreach ($test as $singleTestVariation) {
-                            $this->testId = $singleTestVariation['id_test'];
-                            $percentage = (int)$singleTestVariation['traffic_percentage'] / 100;
-                            $variationVisitsCollection = $this->modelSession->getVariationVisits($singleTestVariation['id_tests_variations']);
-                            foreach($variationVisitsCollection as $visit) {
-                                $variationVisits = $visit->VariationVisits;
-                            }
-                            $currentPercentage = $variationVisits / $visitsTotal;
-                            if ($currentPercentage <= $percentage) {
-                                $variation = $this->modelVariation->getAllVariations(null, null, null, null, null, null, $singleTestVariation['id_variation']);
-                                $this->customerData['test_variation_id'] = $singleTestVariation['id_tests_variations'];
+                    }
+                    foreach ($test as $singleTestVariation) {
+                        $this->testId = $singleTestVariation['id_test'];
+                        $percentage = (int)$singleTestVariation['traffic_percentage'] / 100;
+                        $variationVisitsCollection = $this->modelSession->getVariationVisits($singleTestVariation['id_tests_variations']);
+                        foreach($variationVisitsCollection as $visit) {
+                            $variationVisits = $visit->VariationVisits;
+                        }
+                        $currentPercentage = $variationVisits / $visitsTotal;
+                        if ($currentPercentage <= $percentage) {
+                            $variation = $this->modelVariation->getAllVariations(null, null, null, null, null, null, $singleTestVariation['id_variation']);
+                            $this->customerData['test_variation_id'] = $singleTestVariation['id_tests_variations'];
 //                                Log::info('Test - Test variation - '.$singleTestVariation['id_tests_variations'].' - '. $product->product_name);
-                                break;
-                            }
+                            break;
                         }
                     }
                 }
             }
+        }
 
-            if(count($variation)>0) {
-                $this->returnedData = $this->prepareVariationForView($variation);
+        if(count($variation)>0) {
+            $this->returnedData = $this->prepareVariationForView($variation);
 
-                $countryCode = $request->get('countryShortcode');
-                $host = $request->getHost();
+            $countryCode = $request->get('countryShortcode');
+            $host = $request->getHost();
 
-                $this->data['discount'] = $this->checkCouponForVariation($request, $this->returnedData['variationId'], $coupon);
-                $this->data['pixels'] = $this->getPixelsForView($product->id_product, $product->id_brand, $domain_id);
-                $this->data['prices'] = $this->returnedData['prices'];
-                $this->data['productReviews'] = $this->getProductReviews($product_id);
-                $this->data['variation_id'] = $this->returnedData['variationId'];
+            $this->data['discount'] = $this->checkCouponForVariation($request, $this->returnedData['variationId'], $coupon);
+            $this->data['pixels'] = $this->getPixelsForView($product->id_product, $product->id_brand, $domain_id);
+            $this->data['prices'] = $this->returnedData['prices'];
+            $this->data['productReviews'] = $this->getProductReviews($product_id);
+            $this->data['variation_id'] = $this->returnedData['variationId'];
 //                $this->data['checkoutView'] = route('checkout',['slug' => $product->slug, 'site' => $site, 'domain' => $domain, 'coupon' => $coupon]);
-                $this->data['checkoutView'] = '/'.$product->slug.'/checkout';
+            $this->data['checkoutView'] = '/'.$product->slug.'/checkout';
 //                $this->data['orderRoute'] = route('order',['site' => $site, 'domain' => $domain]);
-                $this->data['orderRoute'] = '/order';
-                $this->customerData['variation_id'] = $this->returnedData['variationId'];
+            $this->data['orderRoute'] = '/order';
+            $this->customerData['variation_id'] = $this->returnedData['variationId'];
 
-                $this->customerData['uuid'] = $request->session()->get('uuid');
+            $this->customerData['uuid'] = $request->session()->get('uuid');
 
-                try {
-                    $session_id = $this->insertSession($this->customerData);
-                    $this->customerData['session_id'] = $session_id;
-                } catch (\Exception $exception) {
-                    Log::error("Error: Insert customer in session | Exception: " . $exception->getMessage());
-                }
-
-                $this->data['session_id'] = $this->customerData['session_id'];
-
-            } else {
-                Log::error("Error: No active variation for this product - Product: ".$product_id);
-                return abort('404');
+            try {
+                $session_id = $this->insertSession($this->customerData);
+                $this->customerData['session_id'] = $session_id;
+            } catch (\Exception $exception) {
+                Log::error("Error: Insert customer in session | Exception: " . $exception->getMessage());
             }
+
+            $this->data['session_id'] = $this->customerData['session_id'];
+
+        } else {
+            Log::error("Error: No active variation for this product - Product: ".$product_id);
+            return abort('404');
         }
     }
 
