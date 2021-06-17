@@ -82,7 +82,6 @@ class HomeController extends Controller
         $brand = $this->modelBrand->getBrandByUrl($brandUrl);
 
         if($brand === null) {
-//            Log::info('404 - Brand null - '.$brandUrl);
             return abort('404');
         }
 
@@ -135,23 +134,22 @@ class HomeController extends Controller
             $product = $this->modelProduct->getProductBySlugBrandAndCountry($slug, $brand_id, $country_id);
         }
 
-        if($product === null) {
-//            Log::info('404 - Product null - Brand: '.$brandUrl.' - Slug: '.$slug. ' - Coupon: '.$coupon);
-            $product = $this->modelProduct->getProductBySlugBrandAndCountry(null, $brand_id, $country_id);
-        }
-
-        //ukoliko je slug pogresan, redirektovace na default product, uradi redirekciju na pravi product
-
-        if($product->country_id != $country_id) { //show product for that country if exists
-            $productGroup = $this->modelProduct->groupProductBySku($product->sku);
-            foreach($productGroup as $singleProduct) {
-                if($singleProduct->id_country === $country_id) {
-                    $request->request->add(['redirectToCountry' => $singleProduct->id_country]);
-                    $countryUrl = $singleProduct->country_code;
-                    $redirectUrl = 'https://'.$countryUrl.'.'.$site.'.'.$domain.'/'.$singleProduct->slug;
-                    return redirect($redirectUrl);
+        if($product === null) { //proveri da li postoji proizvod sa tim slugom za zemlju iz koje dolazi
+            $product = $this->modelProduct->getProductBySlugBrandAndCountry($slug, $brand_id, null);
+            if($product != null) {
+                if($product->country_id != $country_id) {
+                    $productGroup = $this->modelProduct->groupProductBySku($product->sku);
+                    foreach($productGroup as $singleProduct) {
+                        if($singleProduct->id_country === $country_id) {
+                            $product = $this->modelProduct->getProductBySlugBrandAndCountry($singleProduct->slug, $brand_id, $country_id);
+                        }
+                    }
                 }
             }
+        }
+
+        if($product === null) { //ukoliko ne postoji, posalji ga na default proizvod za tu zemlju
+            $product = $this->modelProduct->getProductBySlugBrandAndCountry(null, $brand_id, $country_id);
         }
 
         $this->data['product'] = $product;
