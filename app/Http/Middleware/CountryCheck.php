@@ -39,7 +39,7 @@ class CountryCheck
             if($checkCountryIp === null) {
                 $request->request->add(['countryShortcode' => "rs"]);
                 $request->request->add(['countryId' => 1]);
-                Log::info('Redirect to rs from: '.$countryCodeFromIp);
+//                Log::info('Redirect to rs from: '.$countryCodeFromIp);
             } else {
                 $request->request->add(['countryShortcode' => $checkCountryIp->country_code]);
                 $request->request->add(['countryId' => $checkCountryIp->id_country]);

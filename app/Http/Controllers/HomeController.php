@@ -82,7 +82,7 @@ class HomeController extends Controller
         $brand = $this->modelBrand->getBrandByUrl($brandUrl);
 
         if($brand === null) {
-            Log::info('404 - Brand null - '.$brandUrl);
+//            Log::info('404 - Brand null - '.$brandUrl);
             return abort('404');
         }
 
@@ -136,9 +136,11 @@ class HomeController extends Controller
         }
 
         if($product === null) {
-            Log::info('404 - Product null - Brand: '.$brandUrl.' - Slug: '.$slug. ' - Coupon: '.$coupon);
+//            Log::info('404 - Product null - Brand: '.$brandUrl.' - Slug: '.$slug. ' - Coupon: '.$coupon);
             $product = $this->modelProduct->getProductBySlugBrandAndCountry(null, $brand_id, $country_id);
         }
+
+        //ukoliko je slug pogresan, redirektovace na default product, uradi redirekciju na pravi product
 
         if($product->country_id != $country_id) { //show product for that country if exists
             $productGroup = $this->modelProduct->groupProductBySku($product->sku);
