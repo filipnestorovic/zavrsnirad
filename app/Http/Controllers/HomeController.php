@@ -134,7 +134,7 @@ class HomeController extends Controller
             $product = $this->modelProduct->getProductBySlugBrandAndCountry($slug, $brand_id, $country_id);
         }
 
-        if($product === null) { //proveri da li postoji proizvod sa tim slugom za zemlju iz koje dolazi
+        if($product === null && $slug != null) { //proveri da li postoji proizvod sa tim slugom za zemlju iz koje dolazi
             $product = $this->modelProduct->getProductBySlugBrandAndCountry($slug, $brand_id, null);
             if($product != null) {
                 if($product->country_id != $country_id) {
