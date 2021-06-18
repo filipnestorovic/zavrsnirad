@@ -120,6 +120,13 @@ class OrderController extends Controller
                 $this->modelOrder->country_id = $variation->country_id;
                 $this->modelOrder->test_variation_id = $test_variation_id;
 
+                if($session_id != null) {
+                    $this->modelOrder->session_id = $session_id;
+                } else {
+                    Log::error("Error: Order without session_id!");
+                }
+
+
                 $discount = $request->get('discount');
                 $multiplyDiscount = (100 - $discount) / 100;
 

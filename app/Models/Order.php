@@ -19,6 +19,7 @@ class Order
     public $variation_id;
     public $test_variation_id;
     public $country_id;
+    public $session_id;
 
     public function insertOrder(){
         $result = DB::table('order')
@@ -34,7 +35,8 @@ class Order
                 'is_free_shipping' => $this->is_order_with_free_shipping,
                 'variation_id' => $this->variation_id,
                 'test_variation_id' => $this->test_variation_id,
-                'country_id' => $this->country_id
+                'country_id' => $this->country_id,
+                'session_id' => $this->session_id,
             ]);
 
         return $result;
