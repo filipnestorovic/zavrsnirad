@@ -157,6 +157,8 @@ class HomeController extends Controller
             $url = url()->full();
             if($referer != null) {
                 Log::info('Pedispin - Referer '. $referer. ' - URL: '.$url);
+            } else {
+                Log::info('Pedispin - Direct from URL: '.$url);
             }
         }
 
