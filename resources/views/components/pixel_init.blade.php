@@ -31,7 +31,7 @@
 {{--</noscript>--}}
 <!-- End Facebook Pixel Code -->
 <meta property="og:title" content="{{ $product->product_name }} | {{ $product->brand_name }}">
-<meta property="og:description" content="">
+<meta property="og:description" content="{{ $product->product_name }}">
 <meta property="og:image" content="{{ asset('/').$product->product_image }}">
-<meta property="og:url" content="{{ $product->brand_url }}">
+<meta property="og:url" content="{{ $product->brand_url }}/{{ $product->slug }}">
 <title>{{ $product->product_name }} | {{ $product->brand_name }}</title>
