@@ -154,8 +154,9 @@ class HomeController extends Controller
 
         if($slug === "pedispin") {
             $referer = request()->headers->get('referer');
+            $url = url()->full();
             if($referer != null) {
-                Log::info('Pedispin - Referer '. $referer);
+                Log::info('Pedispin - Referer '. $referer. ' - URL: '.$url);
             }
         }
 
