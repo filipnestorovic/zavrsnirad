@@ -87,7 +87,12 @@
         @endif
     }
     .footerCompany a {
-        color: #111;
+        @if($fb_event === "Purchase" && $order != null)
+            color: white;
+        @else
+            color: #111;
+        @endif
+
         cursor: pointer;
     }
     .modal {
