@@ -257,11 +257,19 @@ class Variation extends Model
         return $result->first();
     }
 
-    public function getAllOrdersForVariation($variation_id) {
+    public function getAllOrdersForVariation($variation_id, $dateFrom = null, $dateTo = null) {
         $result = DB::table('order')
-            ->where('variation_id','=',$variation_id)
-            ->get();
-        return $result;
+            ->where('variation_id','=',$variation_id);
+
+        if(!empty($dateFrom)){
+            if(!empty($dateTo)) {
+                $result->whereBetween('order.created_at', [$dateFrom, $dateTo]);
+            } else {
+                $result->whereDate('order.created_at', '=', $dateFrom);
+            }
+        }
+
+        return $result->get();
     }
 
     public function countOrdersForVariation($variation_id) {

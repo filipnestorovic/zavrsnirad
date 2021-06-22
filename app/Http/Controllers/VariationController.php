@@ -12,6 +12,7 @@ use App\Models\Product;
 use App\Models\Statistic;
 use App\Models\Thankyou;
 use App\Models\Variation;
+use DateTime;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
@@ -167,7 +168,57 @@ class VariationController extends Controller
         }
         $this->data['disableButtons'] = $disableButtons;
 
-        return view('admin.variationProduct', $this->data);
+        return view('admin.singleVariation', $this->data);
+    }
+
+    public function getVariationStatisticByDate(Request $request) {
+        $dateFrom = $request->get('dateFrom');
+        $dateTo = $request->get('dateTo');
+        $variation_id = $request->get('variationId');
+
+        if($dateFrom){
+            $dateFrom = DateTime::createFromFormat('d.m.Y', $dateFrom);
+            $dateFrom = $dateFrom->format('Y-m-d');
+        }
+        if($dateTo){
+            $dateTo = DateTime::createFromFormat('d.m.Y', $dateTo);
+            $dateTo = $dateTo->format('Y-m-d');
+        }
+
+        $allOrders = $this->modelVariation->getAllOrdersForVariation($variation_id, $dateFrom, $dateTo);
+        $allOrdersCount = 0;
+        $revenueTotal = 0;
+        foreach($allOrders as $order) {
+            $allOrdersCount++;
+            $revenueTotal += $order->price;
+        }
+
+        $singleVariationVisits = $this->modelStatistic->getSingleTestStatistic(null, null, $variation_id, $dateFrom, $dateTo);
+
+        $newArray = [];
+        foreach ($singleVariationVisits as $key => $value) {
+            $newArray[$value->event_name] = $value->VariationVisits;
+        }
+
+        $this->data['landerVisits'] = isset($newArray['LanderView']) ? $newArray['LanderView'] : 0;
+        $this->data['checkoutVisits'] = isset($newArray['CheckoutView']) ? $newArray['CheckoutView'] : 0;
+        $this->data['thankyouVisits'] = isset($newArray['Purchase']) ? $newArray['Purchase'] : 0;
+        $this->data['allOrders'] = $allOrdersCount;
+        $this->data['totalRevenue'] = $revenueTotal;
+
+        $tableContent = "<tbody>";
+        $tableContent .= "<tr><th>Lander</th><th>Checkout</th><th>Thankyou</th><th>CTR</th><th>CR</th><th>Orders</th><th>Revenue</th></tr><tr>";
+        $tableContent .= "<td>".$this->data['landerVisits']."</td>";
+        $tableContent .= "<td>".$this->data['checkoutVisits']."</td>";
+        $tableContent .= "<td>".$this->data['thankyouVisits']."</td>";
+        $tableContent .= "<td>".($this->data['landerVisits'] != 0 ? number_format(($this->data['checkoutVisits']/$this->data['landerVisits'])*100, 2) : 0)."%</td>";
+        $tableContent .= "<td>".($this->data['landerVisits'] != 0 ? number_format(($this->data['thankyouVisits']/$this->data['landerVisits'])*100, 2) : 0)."%</td>";
+        $tableContent .= "<td>".$this->data['allOrders']."</td>";
+        $tableContent .= "<td>".$this->data['totalRevenue']." RSD</td>";
+        $tableContent .= "</tr></tbody>";
+
+        return $tableContent;
+
     }
 
     public function addVariation(Request $request) {

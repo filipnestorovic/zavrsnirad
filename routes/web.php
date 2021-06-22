@@ -116,6 +116,7 @@ Route::group([ 'middleware' => ['admin']], function() {
         Route::get('/ajaxData/getTestsAjax/{id?}', [App\Http\Controllers\TestController::class, 'getTestsAjax'])->name('getTestsAjax');
         Route::get('/ajaxData/getLandersAjax/{id?}', [App\Http\Controllers\PageController::class, 'getLandersAjax'])->name('getLandersAjax');
         Route::get('/ajaxData/getActiveVariationsStatistic', [App\Http\Controllers\AdminController::class, 'getActiveVariationsStatistic'])->name('getActiveVariationsStatistic');
+        Route::get('/ajaxData/getVariationStatisticByDate', [App\Http\Controllers\VariationController::class, 'getVariationStatisticByDate'])->name('getVariationStatisticByDate');
 
         Route::get('/tests', [App\Http\Controllers\TestController::class, 'testsIndex'])->name('testsIndex');
         Route::post('/createTest', [App\Http\Controllers\TestController::class, 'createTest'])->name('createTest');

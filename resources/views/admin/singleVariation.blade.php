@@ -215,29 +215,61 @@
                         </form>
                     </div>
                 </div>
+                {{--<div class="card mt-5">--}}
+                    {{--<div class="card-header">Statistic for this variation (including tests)</div>--}}
+                    {{--<div class="card-body">--}}
+                        {{--<table id="statisticTable" class="table table-bordered table-responsive-sm table-striped text-center">--}}
+                            {{--<tr>--}}
+                                {{--<th>Lander</th>--}}
+                                {{--<th>Checkout</th>--}}
+                                {{--<th>Thankyou</th>--}}
+                                {{--<th>CTR</th>--}}
+                                {{--<th>CR</th>--}}
+                                {{--<th>Orders</th>--}}
+                                {{--<th>Revenue</th>--}}
+                            {{--</tr>--}}
+                            {{--<tr>--}}
+                                {{--<td>{{ $landerVisits }}</td>--}}
+                                {{--<td>{{ $checkoutVisits }}</td>--}}
+                                {{--<td>{{ $thankyouVisits }}</td>--}}
+                                {{--<td>{{ $landerVisits != 0 ? number_format(($checkoutVisits/$landerVisits)*100, 2) : 0 }}%</td>--}}
+                                {{--<td>{{ $landerVisits != 0 ? number_format(($thankyouVisits/$landerVisits)*100, 2) : 0 }}%</td>--}}
+                                {{--<td>{{ $allOrders }}</td>--}}
+                                {{--<td>{{ $totalRevenue }} {{ $currency_symbol }}</td>--}}
+                            {{--</tr>--}}
+                        {{--</table>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
                 <div class="card mt-5">
-                    <div class="card-header">Statistic for this variation (including tests)</div>
+                    <div class="card-header">Variation statistic</div>
                     <div class="card-body">
-                        <table id="statisticTable" class="table table-bordered table-responsive-sm table-striped text-center">
-                            <tr>
-                                <th>Lander</th>
-                                <th>Checkout</th>
-                                <th>Thankyou</th>
-                                <th>CTR</th>
-                                <th>CR</th>
-                                <th>Orders</th>
-                                <th>Revenue</th>
-                            </tr>
-                            <tr>
-                                <td>{{ $landerVisits }}</td>
-                                <td>{{ $checkoutVisits }}</td>
-                                <td>{{ $thankyouVisits }}</td>
-                                <td>{{ $landerVisits != 0 ? number_format(($checkoutVisits/$landerVisits)*100, 2) : 0 }}%</td>
-                                <td>{{ $landerVisits != 0 ? number_format(($thankyouVisits/$landerVisits)*100, 2) : 0 }}%</td>
-                                <td>{{ $allOrders }}</td>
-                                <td>{{ $totalRevenue }} {{ $currency_symbol }}</td>
-                            </tr>
-                        </table>
+                        <div class="col-md-12">
+                            <span class="col-md-3 input-group mt-2 mb-2 daterange">
+                                <span class="input-group date">
+                                      <div class="input-group-prepend">
+                                         <label class="input-group-text" for="inputGroupSelect01">From</label>
+                                      </div>
+                                      <input type="text" class="form-control daterangeInput" id="selectedDatePickerFrom" name="fromDaySelect" value="" required="">
+                                </span>
+                            </span>
+                            <span class="col-md-3 input-group mt-2 mb-2 daterange">
+                                <span class="input-group date" id="">
+                                      <div class="input-group-prepend">
+                                         <label class="input-group-text" for="inputGroupSelect01">To</label>
+                                      </div>
+                                      <input type="text" class="form-control daterangeInput" id="selectedDatePickerTo" name="toDaySelect" value="">
+                                </span>
+                            </span>
+                            <span class="col-md-2 input-group mt-2 mb-2 daterange">
+                                <span class="input-group date" id="">
+                                      <input type="button" class="btn btn-primary btn-block" id="selectedDatePickerSubmit" name="selectedDatePickerSubmit" value="Filter">
+                                </span>
+                            </span>
+                        </div>
+                        <div class="col-md-12 mt-5">
+                            <table class="table table-bordered table-responsive-sm table-striped text-center" id="dateStatisticTable">
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -261,6 +293,19 @@
             cursor: pointer;
             margin-left: 3px;
         }
+        #selectedDatePickerTo {
+            display: inline;
+        }
+        .daterange {
+            float: left;
+            padding-left: 5px;
+        }
+        .daterange {
+            cursor: pointer;
+        }
+        .daterangeInput {
+            cursor: pointer;
+        }
     </style>
 @endsection
 
@@ -268,6 +313,39 @@
     <script>
         var disableButtons = '{{$disableButtons}}';
         $(document).ready(function () {
+
+            getVariationStatistic();
+
+            $('.daterangeInput').datepicker({
+                maxViewMode: 1,
+                language: "sr-latin",
+                orientation: "bottom left",
+                todayHighlight: true
+            }).on('change', function(){
+                $('.datepicker').hide();
+            });
+
+            $('#selectedDatePickerSubmit').click(getVariationStatistic);
+
+            function getVariationStatistic() {
+                let dateFrom = $('#selectedDatePickerFrom').val();
+                let dateTo = $('#selectedDatePickerTo').val();
+                let variationId = $('#variationIdEdit').val();
+
+                $.ajax({
+                    url: baseURL + "ajaxData/getVariationStatisticByDate",
+                    data: {dateFrom:dateFrom, dateTo:dateTo, variationId:variationId},
+                    success: function (data) {
+                        $('#dateStatisticTable').html('');
+                        $('#dateStatisticTable').html(data);
+                    },
+                    error: function (req, err) {
+                        $('#errorMessageHeader').html('Error on getting variations statistic');
+                        $('#errorMessageHeader').slideDown();
+                    }
+                });
+            }
+
             $('.priceInput').after(" {{ $currency_symbol }}");
 
             $('.deletePriceBtn').click(function (e) {

@@ -301,6 +301,8 @@ class HomeController extends Controller
 
         $this->data['fb_event'] = "Purchase";
 
+        //get upsell and crosssell prices from Webhook
+
 //        Log::info('Test - Thankyou view - '.$this->customerData['session_id']);
         $this->data['landerView'] = $this->returnedData['landerView'];
         return view($this->returnedData['thankyouView'], $this->data);

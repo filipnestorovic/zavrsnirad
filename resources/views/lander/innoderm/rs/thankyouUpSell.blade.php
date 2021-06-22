@@ -1,328 +1,108 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <meta content="width=device-width, initial-scale=1" name="viewport"/>
-    <title>Thank you</title>
-    <link href="https://fonts.googleapis.com/css?family=Exo+2:400,700&amp;subset=cyrillic" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300i,400,700&amp;display=swap&amp;subset=latin-ext" rel="stylesheet"/>
-    <link type="text/css" href="{{ asset('/') }}thankyouFiles/thankyouUpSell/secondPage.css" rel="stylesheet" media="all">
-    <script src="{{ asset('/') }}shared_files/jquery-1.12.4.min.js" type="text/javascript"></script>
-    <script type="text/javascript" src="{{ asset('/') }}thankyouFiles/thankyouUpSell/secondPage.js"></script>
+    @include('components.pixel_init')
+    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <title>Hvala na poverenju | </title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+    <style>@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&amp;display=swap);*{margin:0;padding:0;box-sizing:border-box}body{background:#F4F9FD;font-family:"Montserrat",sans-serif;font-size:14px;font-weight:400;color:#2E2E2E;line-height:1.5}img{max-width:100%;border:0}ul{margin:0;list-style:none}.container1{max-width:794px;margin:auto;margin-top:75px;margin-bottom:230px;background:#FFF;box-shadow:0 4px 20px rgba(0,0,0,.1)}.success-page__header{background-color:#28A6EA;background:url(data:image/png;base64,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) no-repeat center bottom,#28A6EA linear-gradient(81.52deg,#28A6EA 35.1%,#127CDE 72.28%);padding:45px 10px 65px;text-align:center;color:#fff}.success-page__header-wrapper{max-width:528px;margin:auto}.success-page__header-check{background:#3CD654;width:70px;height:70px;border-radius:50%;position:relative;margin:auto;margin-bottom:25px}.success-page__header-check::after,.success-page__header-check::before{content:"";background:#fff;position:absolute}.success-page__header-check::before{width:14px;height:4px;left:19px;top:37px;transform:rotate(45deg)}.success-page__header-check::after{width:28px;height:4px;left:26px;top:34px;transform:rotate(135deg)}.success-page__title{font-weight:700;font-size:30px;margin-bottom:15px}.success-page__title span{text-transform:uppercase}.success-page__message_success{font-weight:500;line-height:1.57}.success-page__body{background:#fff;margin-top:-1px;padding:85px 10px 65px}.success-page__body-wrapper{max-width:385px;margin:auto}.success-page__text{font-size:16px;font-weight:500;margin-bottom:18px}.list-info{background:#F4F9FD;padding:20px;margin-bottom:15px}.list-info__text{color:#000;font-weight:600;margin-right:10px}.success-page__message_fail__link{color:#147FDF;margin-bottom:40px;display:inline-block}.success-page__message_fail__link:hover{text-decoration:none}.success-page__text{font-size:16px;font-weight:500;margin-bottom:30px}.success-page__form__input{font-family:"Montserrat",sans-serif;outline:none;height:52px;padding:20px;border:1px solid #B8B8B8;border-radius:10px;width:100%;margin-bottom:25px}.success-page__form__label{display:block;margin-bottom:10px}input::-webkit-input-placeholder{color:#B8B8B8}input::-moz-placeholder{color:#B8B8B8}input:-moz-placeholder{color:#B8B8B8}input:-ms-input-placeholder{color:#B8B8B8}.success-page__form__button{font-size:16px;background:#3CD654;box-shadow:0 4px 20px rgba(0,0,0,.15);color:#fff;text-align:center;width:100%;font-weight:700;border-radius:10px;padding:15px;transition:.3s;cursor:pointer}.success-page__form__button:hover{box-shadow:none;background:#27ac3b}a:visited{color:rgb(144,144,144)}a{color:rgb(144,144,144)}@media(max-width:795px){.container1{margin-top:0;margin-bottom:0}.success-page__header{padding-top:55px}.success-page__title{font-size:24px}.success-page__body{padding:30px 10px 130px}.success-page__text{font-size:14px;margin-bottom:20px}}</style>
+    <script type="text/javascript" src="{{ asset('/') }}shared_files/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-<div class="v2_2_2_2">
-    <div class="second-page__wrapper">
-        <header class="second-page__header">
-            <div class="second-page__container">
-                <div class="second-page__header-wrapper">
-                    <div class="second-page__header-inner">
-                        <div class="logo-second"></div>
-                        <ul class="stamp-list">
-                            <li>
-                                <img src="{{ asset('/') }}thankyouFiles/thankyouUpSell/stamp_1.png"/>
-                            </li>
-                            <li>
-                                <img src="{{ asset('/') }}thankyouFiles/thankyouUpSell/stamp_2.png"/>
-                            </li>
-                            <li>
-                                <img src="{{ asset('/') }}thankyouFiles/thankyouUpSell/stamp_3.png"/>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+<div class="mod success-page">
+    <div class="container1">
+        <div class="success-page__header">
+            <div class="success-page__header-wrapper">
+                <div class="success-page__header-check"></div>
+                <h2 class="success-page__title">
+                    <span></span>, hvala na porudžbini!
+                </h2>
+                <p class="success-page__message_success">
+                    Vaša porudžbina sa brojem <b>#</b> je prihvaćena i uskoro će biti spremna za slanje!
+                    <br>
+                    Molimo proverite uneti broj telefona jer će Vas uskoro kontaktirati naša korisnička služba kako bi dogovorili detalje isporuke.
+                </p>
             </div>
-        </header>
-        <div class="second-page__main">
-            <div class="second-page__container">
-                <div class="second-page__main-left">
-                    <ul class="slider-list bx-bx">
-                        <li data-value="1">
-                            <div class="inner-block-wrapper">
-                                <div class="inner-block">
-                                    <div class="h-w-check js_changer h-w-ico"></div>
-                                    <div class="hidden-window__item">
-                                        <div class="hidden-window__item-sale">Akcia <span>50%</span>
-                                        </div>
-                                        <div class="hidden-window__item-img">
-                                            <div class="h-w-item-prod"></div>
-                                        </div>
-                                        <div class="hidden-window__item-balance">
-                                            <span>1</span> ks.
-                                        </div>
-                                    </div>
-                                    <div class="inner-block__description clearfix">
-                                        <h3 class="inner-block__description-title">Bojuje so starnutím</h3>
-                                        <div class="inner-block__description-tagline">Podporuje hydratáciu a tón pleti</div>
-                                        <div class="inner-block__description-result">Starostlivosť o vašu pokožku</div>
-                                        <div class="clearfix"></div>
-                                        <p class="inner-block__description-text">Efekt „sviežosti“ za 7 dní!</p>
-                                        <div class="mobile-balance">
-                                            <span>1</span> ks.
-                                        </div>
-                                        <div class="inner-block__description-price">
-                                            <div class="inner-block__description-price--new">
-                                                <span class="price-text">Cena:</span>
-                                                <span>39<font>€</font></span>
-                                            </div>
-                                            <s class="inner-block__description-price--old"> 78 <font>€</font> </s>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                        <div class="mobile-confirmation">
-                                            <button class="mobile-confirmation__button">Vyberte si túto kúru</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="" data-value="3">
-                            <div class="inner-block-wrapper">
-                                <div class="inner-block">
-                                    <div class="h-w-check js_changer h-w-ico"></div>
-                                    <div class="hidden-window__item">
-                                        <div class="hidden-window__item-sale">Akcia <span>50%</span>
-                                        </div>
-                                        <div class="hidden-window__item__best">
-                                            <img src="{{ asset('/') }}thankyouFiles/thankyouUpSell/stars.png"/>
-                                            <p>Najlepšia voľba</p>
-                                        </div>
-                                        <div class="hidden-window__item-img">
-                                            <div class=" h-w-item-prod"></div>
-                                            <div class="present-block">
-                                                <div class="present-block__images">
-                                                    <img src="{{ asset('/') }}thankyouFiles/thankyouUpSell/pack_2.png"/>
-                                                </div>
-                                                <div class="present-block__text">Darček</div>
-                                            </div>
-                                        </div>
-                                        <div class="hidden-window__item-balance">
-                                            <span>3</span> ks.
-                                        </div>
-                                    </div>
-                                    <div class="inner-block__description clearfix">
-                                        <h3 class="inner-block__description-title">Super výsledok</h3>
-                                        <div class="inner-block__description-tagline">Viditeľný účinok bez veľkých nákladov</div>
-                                        <div class="inner-block__description-result">Ošetrenie vrások</div>
-                                        <div class="clearfix"></div>
-                                        <p class="inner-block__description-text">Hlboký účinok na bunkovej úrovni! Pokožka na tvári a krku
-                                            sa napne, malé jemné línie sú preč.</p>
-                                        <div class="mobile-balance">
-                                            <span>3</span> ks.
-                                        </div>
-                                        <div class="inner-block__description-price">
-                                            <div class="inner-block__description-price--new">
-                                                <span class="price-text">Cena:</span>
-                                                <span>78 <font>€</font></span>
-                                            </div>
-                                            <div class="inner-block__description-price--old">
-                                                <s>156 <font>€</font> </s>
-                                            </div>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                        <div class="mobile-confirmation">
-                                            <button class="mobile-confirmation__button" value="">Vyberte si túto kúru</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li data-value="5">
-                            <div class="inner-block-wrapper">
-                                <div class="inner-block">
-                                    <div class="h-w-check js_changer h-w-ico"></div>
-                                    <div class="hidden-window__item">
-                                        <div class="hidden-window__item-sale">Akcia <span>50%</span>
-                                        </div>
-                                        <div class="hidden-window__item-img">
-                                            <div class="h-w-item-prod">
-                                                <span></span>
-                                            </div>
-                                            <div class="present-block">
-                                                <div class="present-block__images">
-                                                    <img src="{{ asset('/') }}thankyouFiles/thankyouUpSell/pack_2.png"/>
-                                                    <img src="{{ asset('/') }}thankyouFiles/thankyouUpSell/pack_2.png"/>
-                                                </div>
-                                                <div class="present-block__text">Darček</div>
-                                            </div>
-                                        </div>
-                                        <div class="hidden-window__item-balance">
-                                            <span>5</span> ks.
-                                        </div>
-                                    </div>
-                                    <div class="inner-block__description clearfix">
-                                        <h3 class="inner-block__description-title">Profesionálni prístup</h3>
-                                        <div class="inner-block__description-tagline">Transformácia s plnou kurou Rechiol</div>
-                                        <div class="inner-block__description-result">Prevencia starnutia pleti</div>
-                                        <div class="clearfix"></div>
-                                        <p class="inner-block__description-text">Takmer úplné vymiznutie príznakov starnutia po 5 týždňoch!
-                                            Zdvihnutý ovál tváre, vyblednuté pigmentové škvrny, ODSKÚŠANÉ odborníkmi</p>
-                                        <div class="mobile-balance">
-                                            <span>5</span> ks.
-                                        </div>
-                                        <div class="inner-block__description-price">
-                                            <div class="inner-block__description-price--new">
-                                                <span class="price-text">Cena:</span>
-                                                <span>117 <font>€</font></span>
-                                            </div>
-                                            <div class="inner-block__description-price--old">
-                                                <s>234 <font>€</font> </s>
-                                            </div>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                        <div class="mobile-confirmation">
-                                            <button class="mobile-confirmation__button">Vyberte si túto kúru</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="last-item" data-value="7">
-                            <div class="inner-block-wrapper">
-                                <div class="inner-block">
-                                    <div class="h-w-check js_changer h-w-ico"></div>
-                                    <div class="hidden-window__item">
-                                        <div class="hidden-window__item-sale">Akcia <span>50%</span>
-                                        </div>
-                                        <div class="hidden-window__item-img">
-                                            <div class="h-w-item-prod">
-                                                <span></span><span></span>
-                                            </div>
-                                            <div class="present-block">
-                                                <div class="present-block__images">
-                                                    <img src="{{ asset('/') }}thankyouFiles/thankyouUpSell/pack_2.png"/>
-                                                    <img src="{{ asset('/') }}thankyouFiles/thankyouUpSell/pack_2.png"/>
-                                                    <img src="{{ asset('/') }}thankyouFiles/thankyouUpSell/pack_2.png"/>
-                                                </div>
-                                                <div class="present-block__text">Darček</div>
-                                            </div>
-                                        </div>
-                                        <div class="hidden-window__item-balance">
-                                            <span>7</span> ks.
-                                        </div>
-                                    </div>
-                                    <div class="inner-block__description clearfix">
-                                        <h3 class="inner-block__description-title">Totálne obnovenie</h3>
-                                        <div class="inner-block__description-tagline">Multifazne obnovenie pre tvar a dekolt</div>
-                                        <div class="inner-block__description-result">Kumulatívny účinok</div>
-                                        <div class="clearfix"></div>
-                                        <p class="inner-block__description-text">Úplná regenerácia a obnova kožných buniek. Zabudnite na
-                                            vrásky a pigmentáciu na tvári už za 9 týždňov.</p>
-                                        <div class="mobile-balance">
-                                            <span>7</span> ks.
-                                        </div>
-                                        <div class="inner-block__description-price">
-                                            <div class="inner-block__description-price--new">
-                                                <span class="price-text">Cena:</span>
-                                                <span>156 <font>€</font></span>
-                                            </div>
-                                            <div class="inner-block__description-price--old">
-                                                <s>312 <font>€</font> </s>
-                                            </div>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                        <div class="mobile-confirmation">
-                                            <button class="mobile-confirmation__button">Vyberte si túto kúru</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+        </div>
+        <div class="success-page__body">
+            <div class="success-page__body-wrapper">
+                <h3 class="success-page__text">Molimo proverite unete podatke: </h3>
+                <div class="list-info">
+                    <ul class="list-info__list">
+                        <li class="list-info__item">
+                            <span class="list-info__text">Telefon: </span>
+
                         </li>
                     </ul>
                 </div>
-                <div class="second-page__main-right">
-                    <div class="hidden-window-form h-w-decor-block js_scrollForm">
-                        <form action="" class="second-page__form" method="post">
-                            <h3>ZADAJTE ÚDAJE</h3>
-                            <p class="second-title">a urobte objednávku:</p>
-                            <div class="h-w-select h-w-ico" style="display:none">
-                                <select id="country_code_selector" name="country_code">
-                                    <option value="SK">Slovensko</option>
-                                </select>
-                            </div>
-                            <div class="h-w-select h-w-ico">
-                                <select class="change-package-selector custom-field change-select" name="count_select">
-                                    <option data-slide-index="0" value="1">1 balenie</option>
-                                    <option data-slide-index="1" selected="selected" value="3">Kúra 2 + 1</option>
-                                    <option data-slide-index="2" value="5">Kúra 3 + 2</option>
-                                    <option data-slide-index="3" value="7">Kúra 4 + 3</option>
-                                </select>
-                            </div>
-                            <div>
-                                <input class="custom-field" data-count-length="2+" name="name" placeholder="Meno" type="text"/>
-                                <input class="only_number custom-field" name="phone" placeholder="Telefón" type="text"/>
-                            </div>
-                            <input name="address" placeholder="Address" type="text"/>
-                            <div class="input_inner input__wrap"></div>
-                            <div class="sec--total">Celkovo: <span class="total_red"><font class="js_full_price">0</font> €</span>
-                            </div>
-                            <div class="second-page__form--pay-delivery" style="display: block">
-                                <button class="second-page__form-button js_submit">Platba pri doručení</button>
-                                <!--<div class="delivery-price">Doporučene: <span><font class="js_delivery_price">0</font> €</span>
-                                </div>-->
-                            </div>
-                            <div class="transition-text">alebo</div>
-                            <div class="second-page__form--free-delivery">
-                                <div class="payment-online__timer"></div>
-                                <div class="js_pay_online pay-link">Platba online</div>
-                                <p class="tape-text">
-                                    <span>Doručenie:</span> zdarma</p>
-                                <ul class="cards-list">
-                                    <li>
-                                        <img src="{{ asset('/') }}thankyouFiles/thankyouUpSell/card_1.png"/>
-                                    </li>
-                                    <li>
-                                        <img src="{{ asset('/') }}thankyouFiles/thankyouUpSell/card_2.png"/>
-                                    </li>
-                                    <li>
-                                        <img src="{{ asset('/') }}thankyouFiles/thankyouUpSell/card_3.png"/>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="second-page__form--mobile-pay">
-                                <div class="payment-online__timer"></div>
-                                <h3>Vyberte si spôsob platby</h3>
-                                <div class="second-page__form--mobile-pay__wrap">
-                                    <div class="pay-delivery">
-                                        <button class="mobile-pay__button js_submit" data-but="1">Hotovosť</button>
-                                        <!--<div class="delivery-price">Doručenie:<span>
-                                        <font class="js_delivery_price">0</font> €</span>
-                                        </div>-->
-                                    </div>
-                                    <div class="free-delivery">
-                                        <button class="mobile-pay__link js_pay_online">Platba online</button>
-                                        <p>Doručenie:</p>
-                                        <div class="tape-text__mobile">zdarma</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="h-w-guarantee h-w-decor-block">
-                        <h3 class="guarantee-title">Garantujeme</h3>
-                        <ul class="guarantee-list">
-                            <li>
-                                <b>100%</b> kvalita
-                            </li>
-                            <li>
-                                <b>Kontrola výrobku</b> pri doručení
-                            </li>
-                            <li>
-                                <b>Bezpečnosť</b> vašich údajov
-                            </li>
-                        </ul>
-                    </div>
+                <br/>
+
+                <h3 class="success-page__text">{{ $upsellPrices[1]['description'] }}</h3>
+                <div class="prices d-inline-flex p-2 justify-content-center">
+                @foreach($upsellPrices as $price)
+                    <input type="radio" class="upSellRadio" value="" id="rb-{{ $price['quantity'] }}"/>
+                    <label for="rb-{{ $price['quantity'] }}">
+                        <div class="img-holder">
+                            <img class="img" src="{{ asset('/').$product->product_image }}"/>
+                        </div>
+                    </label>
+                @endforeach
                 </div>
-                <div class="second-page__main-left--bottom-text">
-                    <span>Výsledky závisia na individuálnych charakteristikách a môžu sa líšiť.</span> Uviedli sme priemerné
-                    výsledky 1 027 žien vo veku od 18 do 73 rokov, ktoré používajú Rechiol
+
+                <style>
+                    .upSellRadio {
+                        position: absolute;
+                        opacity: 0;
+                        width: 0;
+                        height: 0;
+                    }
+                    .prices {
+                        flex-wrap: wrap;
+                    }
+                    .img-holder {
+                        padding: 10px;
+                        border: 2px solid red;
+                        max-width: 140px;
+                        margin: 10px;
+                    }
+                    .img {
+                        max-width: 120px;
+                    }
+                </style>
+
+                <h3 class="success-page__text" id="lowerH">
+                    Za sve informacije možete nas kontaktirati putem društvenih mreža i na <b>060/046-0469</b>
+                    {{--Kako bismo ubrzali proces potvrde porudžbine, unesite svoju adresu:--}}<br/><br/>
+                    <p style="text-align: center;">Vaš </p>
+                </h3>
+                <div class="form">
+                    {{--<form action="#" class="success-page__form" id="details" method="post">--}}
+                    {{--<input name="order_id" type="hidden" value="{{ $order->id_order }}" />--}}
+                    {{--<span class="success-page__form__error" id="error_mail"></span>--}}
+                    {{--<div class="success-page__form__container">--}}
+                    {{--<label for="" class="success-page__form__label">Adresa</label>--}}
+                    {{--<input class="success-page__form__input" name="address"--}}
+                    {{--placeholder="" type="text" required/>--}}
+                    {{--<div class="success-page__form__button">Pošalji</div>--}}
+                    {{--</div>--}}
+                    {{--</form>--}}
+                    {{--<img src="{{ asset('/') }}kinokiFiles/img/safe_purchase.png" alt="Safe purchase icons"/>--}}
                 </div>
-                <div class="stamp-list__bottom">
-                    <img src="{{ asset('/') }}thankyouFiles/thankyouUpSell/stamp_4.png"/>
-                    <img src="{{ asset('/') }}thankyouFiles/thankyouUpSell/stamp_5.png"/>
-                    <img src="{{ asset('/') }}thankyouFiles/thankyouUpSell/stamp_6.png"/>
-                </div>
+                {{--<div>--}}
+                {{--<img src="{{ asset('/') }}kinokiFiles/img/safe_purchase.png" alt="Safe purchase icons"/>--}}
+                {{--</div>--}}
+                <p class="success-page__message_fail" style="margin-top: 20px; text-align: center;">
+                    {{--<a class="success-page__message_fail__link" href="javascript:history.back()">--}}
+                    {{--Ukoliko uneti podaci zahtevaju izmenu, kliknite ovde--}}
+                    {{--</a>--}}
+                    <a href="/{{$product->slug}}">Povratak na početnu stranu</a>
+                </p>
             </div>
         </div>
     </div>
 </div>
-{{--<div class="payment_timeout" style="display:none !important">0</div>--}}
+@include('components.pixel_footer')
 </body>
 </html>
