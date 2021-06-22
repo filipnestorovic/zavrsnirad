@@ -506,6 +506,9 @@
             </div>
         </div>
     </footer>
+    @if($product->brand_name === "Flexonik")
+        @include('components.company_footer')
+    @endif
 </div>
 
 @include('components.change_quantity_script')

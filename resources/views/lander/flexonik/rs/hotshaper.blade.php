@@ -313,10 +313,7 @@
         </div>
     </div>
 </div>
-<div class="footer">
-    <div class="container">
-    </div>
-</div>
+@include('components.company_footer')
 @include('components.pixel_footer')
 </body>
 </html>

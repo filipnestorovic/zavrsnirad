@@ -13,10 +13,10 @@
     <script src="{{ asset('/') }}flexonikFiles/hotshaper/slider.js"></script>
     <style>html{scroll-behavior: smooth;}</style>
     <style>
-        .block-1{background:url({{ asset('/') }}flexonikFiles/helanke/helankeBaner_dt.png) center top no-repeat;padding:0 20px;height:650px}
-        .block-10{position:relative;background:url({{ asset('/') }}flexonikFiles/helanke/helanke2_dt.png) center top no-repeat;text-align:left;height:570px;padding-top:40px}
+        .block-1{background:url({{ asset('/') }}flexonikFiles/helanke1/helankeBaner_dt.png) center top no-repeat;padding:0 20px;height:650px}
+        .block-10{position:relative;background:url({{ asset('/') }}flexonikFiles/helanke1/helanke2_dt.png) center top no-repeat;text-align:left;height:570px;padding-top:40px}
         .block-5{position:relative;padding:40px 0 100px;background:url({{ asset('/') }}flexonikFiles/helanke/helanke1_dt.png) center bottom no-repeat}
-        .block-14 .sale{position:relative;background:url({{ asset('/') }}flexonikFiles/helanke/helanke3_dt.png) left bottom no-repeat #fff;height:500px;padding:30px;-webkit-box-shadow:0 1px 8px 0 #e88030;-moz-box-shadow:0 1px 8px 0 #e88030;box-shadow:0 1px 8px 0 #e88030;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;text-align:center;overflow:hidden}
+        .block-14 .sale{position:relative;background:url({{ asset('/') }}flexonikFiles/helanke1/helanke3_dt.png) left bottom no-repeat #fff;height:500px;padding:30px;-webkit-box-shadow:0 1px 8px 0 #e88030;-moz-box-shadow:0 1px 8px 0 #e88030;box-shadow:0 1px 8px 0 #e88030;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;text-align:center;overflow:hidden}
     </style>
 </head>
 <body>
@@ -125,7 +125,7 @@
 <div class="block-4">
     <div class="container">
         <div class="clearfix">
-            <img src="{{ asset('/') }}flexonikFiles/helanke/helankeProduct.png" alt="HOT SHAPERS"/>
+            <img src="{{ asset('/') }}flexonikFiles/helanke1/helankeProduct.png" alt="HOT SHAPERS"/>
             <h2>PRESTANI RAZMIŠLJATI – OSTVARI SVE!</h2>
             <h3><b>VRUĆE HELANKE</b> - <br/> su realna šansa da budete u sjajnoj formi!</h3>
         </div>

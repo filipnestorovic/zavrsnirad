@@ -35,6 +35,7 @@
         @include('lander.shared_files.floating_bar')
     </div> <!--/container-->
 </section> <!-- /row-wrapper-->
+@include('components.company_footer')
 </main>
 </div>
 @include('components.pixel_footer')

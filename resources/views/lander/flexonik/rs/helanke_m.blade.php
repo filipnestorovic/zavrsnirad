@@ -174,10 +174,7 @@
             </div>
         </div>
     </div>
-    <div class="section footer">
-        <div class="center">
-        </div>
-    </div>
+    @include('components.company_footer')
 </div>
 @include('components.pixel_footer')
 </body>

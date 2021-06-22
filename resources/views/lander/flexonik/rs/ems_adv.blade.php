@@ -503,13 +503,12 @@
         <a class="button" href="#form" target="_top">Poruči EMS Trenažer</a>
     </div>
 </div>
-<div class="footer">
-</div>
 <div class="ac_footer">
     <span></span><br>
     <span>&copy; {{ now()->year }} Copyright. Sva prava zadržana.</span><br>
     <p></p>
 </div>
+@include('components.company_footer')
 @include('components.pixel_footer')
 </body>
 </html>

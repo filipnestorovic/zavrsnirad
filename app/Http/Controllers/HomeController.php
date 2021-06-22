@@ -152,16 +152,6 @@ class HomeController extends Controller
             $product = $this->modelProduct->getProductBySlugBrandAndCountry(null, $brand_id, $country_id);
         }
 
-        if($slug === "pedispin") {
-            $referer = request()->headers->get('referer');
-            $url = url()->full();
-            if($referer != null) {
-                Log::info('Pedispin - Referer '. $referer. ' - URL: '.$url);
-            } else {
-                Log::info('Pedispin - Direct from URL: '.$url);
-            }
-        }
-
         $this->data['product'] = $product;
 
         if($request->get('unexistingCountry') != null) {
