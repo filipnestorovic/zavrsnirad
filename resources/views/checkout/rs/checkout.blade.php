@@ -317,6 +317,9 @@
             </div>
         </div>
     </div>
+    @if($product->slug === "koleno")
+        @include('components.company_footer')
+    @endif
 </form>
 @include('components.change_quantity_script')
 </body>

@@ -58,6 +58,6 @@
     </div>
 </div>
 @include('lander.flexoval.components.footer')
-@if($product->brand_name === "Flexonik")
+@if($product->brand_name === "Flexonik" || $product->slug === "koleno")
     @include('components.company_footer')
 @endif

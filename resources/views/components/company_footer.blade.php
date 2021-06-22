@@ -79,6 +79,7 @@
         padding: 10px;
         font-size: 16px !important;
         background-color: white;
+        color: black;
     }
     .footerCompany a {
         color: #111;
