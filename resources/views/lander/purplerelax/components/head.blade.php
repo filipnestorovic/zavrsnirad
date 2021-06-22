@@ -37,6 +37,8 @@
                 <div class="right-hd">Nabavi <b>{{ $product->product_name }}</b> već danas!<a class="btn" href="{{$checkoutView}}">KUPI ODMAH</a></div>
             @elseif($product->country_code === "bg")
                 <div class="right-hd">Получи твоя <b>{{ $product->product_name }}</b> днес!<a class="btn" href="{{$checkoutView}}">КУПИ СЕГА</a></div>
+            @elseif($product->country_code === "gr")
+                <div class="right-hd">Αποκτήστε τον <b>{{ $product->product_name }}</b> σας σήμερα!<a class="btn" href="{{$checkoutView}}">ΑΓΟΡΑΣΤΕ ΤΩΡΑ</a></div>
             @endif
         </div>
     </div>
