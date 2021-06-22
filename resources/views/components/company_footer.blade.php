@@ -78,8 +78,13 @@
         text-align: center !important;
         padding: 10px;
         font-size: 16px !important;
-        background-color: white;
-        color: black;
+        @if($fb_event === "Purchase" && $order != null)
+            background-color: rgb(45, 45, 45);
+            color: white;
+        @else
+            background-color: white;
+            color: black;
+        @endif
     }
     .footerCompany a {
         color: #111;
