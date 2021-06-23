@@ -2,7 +2,6 @@
 <html>
 <head>
     @include('components.pixel_init')
-    <meta name="facebook-domain-verification" content="1lcgv7yeh57p1a8tcagodnkhnxa7fo" />
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1" />
