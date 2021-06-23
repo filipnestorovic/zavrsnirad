@@ -165,7 +165,7 @@ class ProductController extends Controller
                 $insertResult = 0;
                 if($insertProduct && $this->modelProduct->default==="1") {
                     try {
-                        $insertResult = $this->modelProduct->makeProductDefault($insertProduct, $this->modelProduct->country_id);
+                        $insertResult = $this->modelProduct->makeProductDefault($insertProduct, $this->modelProduct->country_id, $this->modelProduct->brand_id);
                     } catch (\Exception $exception) {
                         Log::error("Error: Making product default | Exception: " . $exception->getMessage());
                         return redirect()->route('productIndex')->with('error','Error on making product default!');
@@ -259,7 +259,7 @@ class ProductController extends Controller
             $updateDefault = 0;
             if($updateProduct === 1 && $this->modelProduct->default === "1") {
                 try {
-                    $updateDefault = $this->modelProduct->makeProductDefault($id, $this->modelProduct->country_id);
+                    $updateDefault = $this->modelProduct->makeProductDefault($id, $this->modelProduct->country_id, $this->modelProduct->brand_id);
                 } catch (\Exception $exception) {
                     Log::error("Error: Making product default | Exception: " . $exception->getMessage());
                     return redirect()->route('productIndex')->with('error','Error on making product default!');

@@ -125,11 +125,14 @@ class Product extends Model
         return $result;
     }
 
-    public function makeProductDefault($product_id, $country_id) {
+    public function makeProductDefault($product_id, $country_id, $brand_id) {
         DB::beginTransaction();
         try {
             DB::table('product')
-                ->where('country_id', '=',$country_id)
+                ->where([
+                    ['country_id', '=',$country_id],
+                    ['brand_id', '=',$brand_id],
+                ])
                 ->update([
                     'is_default_product' => 0,
                 ]);
