@@ -39,7 +39,8 @@ class Product extends Model
         if(!empty($searchFilter)){
             $result->where(function ($query) use($searchFilter) {
                 $query->where('product.product_name', 'LIKE', '%'.$searchFilter.'%')
-                    ->orWhere('product.slug', 'LIKE', '%'.$searchFilter.'%');
+                    ->orWhere('product.slug', 'LIKE', '%'.$searchFilter.'%')
+                    ->orWhere('product.sku', 'LIKE', '%'.$searchFilter.'%');
             });
         }
 

@@ -51,7 +51,7 @@ class Variation extends Model
             $result->where(function ($query) use($searchFilter) {
                 $query->where('variation.variation_name', 'LIKE', '%'.$searchFilter.'%')
                     ->orWhere('variation.variation_description', 'LIKE', '%'.$searchFilter.'%')
-                    ->orWhere('brand.brand_name', 'LIKE', '%'.$searchFilter.'%')
+                    ->orWhere('variation.id_variation', '=', $searchFilter)
                     ->orWhere('product.product_name', 'LIKE', '%'.$searchFilter.'%');
             });
         }

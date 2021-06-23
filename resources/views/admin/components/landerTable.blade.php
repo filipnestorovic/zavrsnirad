@@ -24,7 +24,7 @@
             <td>{{ $singleLander[0]["id_lander"] }}</td>
             <td>{{ $singleLander[0]["lander_name"] }}</td>
             <td>{{ $singleLander[0]["brand_name"] }}</td>
-            <td>{{ $singleLander[0]["product_name"] }}</td>
+            <td>{{ $singleLander[0]["product_name"] }} ({{ $singleLander[0]["country_name"] }})</td>
             <td>
                 @if($singleLander[0]["lander_deleted"])
                     <span class="table-review"><a href="{{ route('restoreLander',['id' => $singleLander[0]["id_lander"]]) }}"><button type="button" class="btn btn-success btn-rounded btn-sm my-0 restoreProductBtn">RESTORE</button></a></span>

@@ -37,7 +37,7 @@
                             </div>
                             <select name="productIdLander" id="productIdLander" data-toggle="dropdown" required>
                                 @foreach($products as $product)
-                                    <option label="{{ $product->id_brand }}" value="{{ $product->id_product }}">{{ $product->product_name }}</option>
+                                    <option label="{{ $product->id_brand }}" value="{{ $product->id_product }}">{{ $product->product_name }} ({{ $product->country_name }})</option>
                                 @endforeach
                             </select>
                         </div>
@@ -81,11 +81,20 @@
                             <select id="productFilter"  name="productFilter">
                                 <option value="" data-width="auto" selected>Product</option>
                                 @foreach($products as $product)
-                                    <option value="{{ $product->id_product }}">{{ $product->product_name }}</option>
+                                    <option value="{{ $product->id_product }}">{{ $product->product_name }} ({{ $product->country_name }})</option>
                                 @endforeach
                             </select>
                             <script>
                                $("#productFilter").selectpicker("render");
+                            </script>
+                            <select id="countryFilter"  name="countryFilter">
+                                <option value="" data-width="auto" selected>Country</option>
+                                    @foreach($countries as $country)
+                                        <option value="{{ $country->id_country }}">{{ $country->country_name }}</option>
+                                    @endforeach
+                            </select>
+                            <script>
+                               $("#countryFilter").selectpicker("render");
                             </script>
                         </span>
                         </form>
@@ -168,12 +177,14 @@
         let searchFilter = getUrlParams.get('searchFilter');
         let brandFilter = getUrlParams.get('brandFilter');
         let productFilter = getUrlParams.get('productFilter');
+        let countryFilter = getUrlParams.get('countryFilter');
 
         $(document).ready(function () {
 
             $('#searchFilter').val(searchFilter);
             $('#brandFilter').val(brandFilter).selectpicker('refresh');
             $('#productFilter').val(productFilter).selectpicker('refresh');
+            $('#countryFilter').val(countryFilter).selectpicker('refresh');
 
             $('#searchForm select').change(function() {
                 $('#searchForm').submit();
@@ -193,7 +204,7 @@
 
                 $.ajax({
                     url: baseURL + "ajaxData/getLandersAjax?page=" + currentPage,
-                    data: {searchFilter:searchFilter, brandFilter:brandFilter, productFilter:productFilter},
+                    data: {searchFilter:searchFilter, brandFilter:brandFilter, productFilter:productFilter, countryFilter:countryFilter},
                     success: function (data) {
                         $('#landerTableAjax').html('');
                         $('#landerTableAjax').html(data);

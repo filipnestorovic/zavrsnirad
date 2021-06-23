@@ -27,10 +27,11 @@ class Lander extends Model
         return $result;
     }
 
-    public function getAllLandersAjax($searchFilter, $brandFilter, $productFilter) {
+    public function getAllLandersAjax($searchFilter, $brandFilter, $productFilter, $countryFilter) {
         $result = DB::table('lander')
             ->leftJoin('brand', 'lander.brand_id', '=', 'brand.id_brand')
             ->leftJoin('product', 'lander.product_id', '=', 'product.id_product')
+            ->leftJoin('country', 'product.country_id', '=', 'country.id_country')
             ->select('*','lander.deleted_at as lander_deleted');
 
         if(!empty($searchFilter)){
@@ -45,6 +46,9 @@ class Lander extends Model
         }
         if(!empty($productFilter)){
             $result->where('lander.product_id', '=', $productFilter);
+        }
+        if(!empty($countryFilter)){
+            $result->where('product.country_id', '=', $countryFilter);
         }
 
         return $result->get();

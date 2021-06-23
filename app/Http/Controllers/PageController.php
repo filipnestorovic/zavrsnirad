@@ -30,6 +30,7 @@ class PageController extends Controller
         $searchFilter = $request->get('searchFilter');
         $brandFilter = $request->get('brandFilter');
         $productFilter = $request->get('productFilter');
+        $countryFilter = $request->get('countryFilter');
 
         $currentPage = $request->get('page');
         if($currentPage==null||$currentPage==""||$currentPage<1){
@@ -37,7 +38,7 @@ class PageController extends Controller
         }
         $perPage = 10;
 
-        $landerList = json_decode($this->modelLander->getAllLandersAjax($searchFilter,$brandFilter,$productFilter), true);
+        $landerList = json_decode($this->modelLander->getAllLandersAjax($searchFilter,$brandFilter,$productFilter, $countryFilter), true);
 
         $paginatedData = $this->prepareDataForTableAjax($request, $landerList,'id_lander', true, $perPage, $currentPage, 'landerTable');
 
@@ -52,6 +53,7 @@ class PageController extends Controller
         $this->data['landers'] = $this->modelLander->getAllLanders();
         $this->data['brands'] = $this->modelBrand->getAllBrands();
         $this->data['products'] = $this->modelProduct->getAllProduct();
+        $this->data['countries'] = $this->modelCountry->getAllCountries();
         return view('admin.lander', $this->data);
     }
 
