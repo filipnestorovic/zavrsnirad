@@ -2,13 +2,15 @@ $('form').submit(function(){
     $(this).find(':submit').attr('disabled','disabled');
 });
 
+let currency = $('#currencyHidden').val();
+
 $(window).on('pageshow', function(){
     let selectedId = $('input[name="quantity"]:checked').val();
 
     let priceOld = document.getElementById("product" + selectedId).value;
     let priceNew = document.getElementById("product" + selectedId).placeholder;
 
-    $('.old_price').text(priceOld + ' RSD');
+    $('.old_price').text(priceOld + ' '+currency);
     $('.new_price').text(priceNew);
 });
 
@@ -24,7 +26,7 @@ $('input[type=radio][name=quantity]').click(function() {
     $old_price = document.getElementById("product" + id).value;
     $new_price = document.getElementById("product" + id).placeholder;
 
-    $old_price = $old_price + " RSD";
+    $old_price = $old_price + " "+currency;
 
     try {
         $('.old_price').text($old_price);
