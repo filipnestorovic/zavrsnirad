@@ -533,7 +533,6 @@
         <span>&copy; {{ now()->year }} {{ $product->brand_name }} | Sva prava zadržana.</span>
     </div>
 </footer>
-<input type="hidden" id="currencyHidden" value="{{ $prices[1]['currency']}}"/>
 @include('components.pixel_footer')
 <script type="text/javascript" src="{{ asset('/') }}naturapharmFiles/kneepatch/form.js"></script>
 </body>

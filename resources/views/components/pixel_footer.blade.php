@@ -1,3 +1,4 @@
+<input type="hidden" id="currencyHidden" value="{{ $prices[1]['currency']}}"/>
 <script>
     $(document).ready(function () {
         let name, email, phone, city, zip, country_code, currency_symbol, currency_code, amount;
