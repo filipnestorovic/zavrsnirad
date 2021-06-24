@@ -79,7 +79,7 @@ class HomeController extends Controller
         $brandUrl = 'https://'.$site.'.'.$domain;
         $country_id = $request->get('countryId');
 
-        if($slug === "ba" && $coupon === "koljeno") {
+        if($slug === "ba" && $coupon === "koljeno" || $slug === "koljeno") {
             $country_id = 4;
             $slug = "koljeno";
         }
