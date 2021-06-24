@@ -220,52 +220,49 @@
         </div>
         <div class="success-page__body">
             <div class="success-page__body-wrapper">
-                <h3 class="success-page__text">Molimo proverite unete podatke: </h3>
-                <div class="list-info">
-                    <ul class="list-info__list">
-                        <li class="list-info__item">
-                            <span class="list-info__text">Telefon: </span>
+                <h3 class="success-page__text">Super akcija samo sada</h3>
+                {{--<div class="list-info">--}}
+                    {{--<ul class="list-info__list">--}}
+                        {{--<li class="list-info__item">--}}
+                            {{--<span class="list-info__text">Telefon: </span>--}}
 
-                        </li>
-                    </ul>
-                </div>
+                        {{--</li>--}}
+                    {{--</ul>--}}
+                {{--</div>--}}
                 <br/>
                 @isset($upSells)
-                    <form action="/upSellOrder" method="POST" id="upSellOrderForm">
+                    <form action="/upCrossSellOrder" method="POST" id="upCrossSellOrderForm">
                         {{ csrf_field() }}
                         {{--hidden polje za order_id i sve sto je potrebno za upsell tabelu--}}
-                        <div class="upsell d-inline-flex p-2 justify-content-center">
+                        <div class="upcrosssell d-inline-flex p-2 justify-content-center">
                             @foreach($upSells as $upSell)
                                 <h3 class="success-page__text">{{ $upSell->description }}</h3>
-                                <input type="radio" class="upSellRadio" value="{{ $upSell->quantity }}" id="rb-{{ $upSell->quantity }}" name="upSellQuantity" @if($upSell->isBestOption) checked @endif/>
-                                <label for="rb-{{ $upSell->quantity }}">
+                                <input type="radio" class="upCrossSellRadio" value="{{ $upSell->quantity }}" id="rb-{{ $upSell->quantity }}" name="upCrossSellQuantity" @if($upSell->isBestOption) checked @endif/>
+                                <label class="labelUpCrossSell" for="rb-{{ $upSell->quantity }}">
+                                @if(count($upSells) > 1)
+                                    <span class="quantity-badge">{{ $upSell->quantity }}</span>
+                                @endif
+                                @if($upSell->isBestOption)
+                                    <span class="best-option-badge"><img src="{{ asset('/')}}thankyouFiles/thankyouUpSell/best-offer-badge.png"/></span>
+                                @endif
                                 <div class="img-holder">
                                     <img class="img" src="{{ asset('/').$product->product_image }}"/>
                                 </div>
                                 </label>
+                            @if(count($prices) === 1)
+                                <span class="pricesUpCrossSell"><span class="oldPriceUpCrossSell"><p>{{ $prices[1]['amount']*$upSell->quantity }} RSD</p></span> <span class="newPriceUpCrossSell">{{ $upSell->price*$upSell->quantity }} RSD</span></span>
+                            @else
+                                <span class="pricesUpCrossSell">SAMO SADA <span class="newPriceUpCrossSell">{{ $upSell->price }} RSD</span></span>
+                            @endif
                             @endforeach
                         </div>
                         <div class="success-page__form__button"><button type="submit">DODAJ U PORUDŽBINU</button></div>
-                        <div class="success-page__form__button cancelUpSell"><button id="cancelUpSell" type="button">NE, HVALA</button></div>
+                        <div class="success-page__form__button cancelUpCrossSell"><button id="cancelUpCrossSell" type="button">NE, HVALA</button></div>
                     </form>
                 @endisset
 
-                @isset($crossSells)
-                <h3 class="success-page__text">{{ $crossSells[0]->description }}</h3>
-                <div class="prices d-inline-flex p-2 justify-content-center">
-                {{--@foreach($crossSells as $price)--}}
-                    {{--<input type="radio" class="upSellRadio" value="" id="rb-{{ $price['quantity'] }}"/>--}}
-                    {{--<label for="rb-{{ $price['quantity'] }}">--}}
-                        {{--<div class="img-holder">--}}
-                            {{--<img class="img" src="{{ asset('/').$product->product_image }}"/>--}}
-                        {{--</div>--}}
-                    {{--</label>--}}
-                {{--@endforeach--}}
-                </div>
-                @endisset
-
                 <style>
-                    .upsell h3 {
+                    .upcrosssell h3 {
                         width: 150px;
                         text-align: center;
                         color: white;
@@ -273,17 +270,20 @@
                         font-weight: 600;
                         text-transform: uppercase;
                     }
-                    .upSellRadio {
+                    .upCrossSellRadio {
                         /*position: absolute;*/
                         /*opacity: 0;*/
                         /*width: 0;*/
                         /*height: 0;*/
                         visibility: hidden;
                     }
-                    .upsell {
+                    .upcrosssell {
                         flex-wrap: wrap;
-                        background-color: #f4c2c2;
+                        background-color: #C6E2FF;
                         margin-bottom: 20px !important;
+                    }
+                    .upcrosssell label {
+                        margin-bottom: 0px;
                     }
                     .img-holder {
                         padding: 10px;
@@ -298,13 +298,57 @@
                     input[type="radio"]:checked+label > .img-holder {
                         border: 2px solid #E84343;
                     }
-                    .cancelUpSell button {
+                    .cancelUpCrossSell button {
                         background: white !important;
                         color: black;
                         font-weight: lighter;
                     }
-                    @media (max-width: 795px) {
-                        .upsell {
+                    .pricesUpCrossSell {
+                        width: 100%;
+                        display: block;
+                        text-align: center;
+                        margin-bottom: 10px;
+                        font-size: 18px;
+                    }
+                    .oldPriceUpCrossSell {
+                        color:red;
+                        text-decoration:line-through;
+                        text-decoration-thickness: 2px;
+                    }
+                    .oldPriceUpCrossSell p {
+                        color: black;
+                        display: inline;
+                        margin-right: 2px;
+                    }
+                    .newPriceUpCrossSell {
+                        font-size: 22px;
+                        font-weight: bold;
+                    }
+                    .labelUpCrossSell {
+                        position: relative;
+                    }
+                    .quantity-badge {
+                        background-color:rgba(242,242,242,1);
+                        text-align: center;
+                        border-radius: 50%;
+                        border: 1px solid grey;
+                        padding:10px;
+                        font-size:20px;
+                        position: absolute;
+                        top: -10px;
+                        left: -15px;
+                        width: 50px !important;
+                        height: 50px !important;
+                    }
+                    .best-option-badge {
+                        position: absolute;
+                        top: -25px;
+                        right: -30px;
+                        width: 90px !important;
+                        height: 90px !important;
+                    }
+                    @media (max-width:767px) {
+                        .upcrosssell {
                             margin: 0px -10px 20px -10px !important;
                         }
                     }
@@ -343,9 +387,17 @@
 </div>
 <script>
     $(document).ready(function() {
-        $('#cancelUpSell').click(function() {
-            $('#upSellOrderForm').slideUp("slow", function() {
-                alert('Canceled');
+        function scrollToForm() {
+            $('html, body').animate({
+                scrollTop: $("#upCrossSellOrderForm").offset().top+100
+            }, 1000);
+        }
+        if(window.outerWidth < 425) {
+            setTimeout(scrollToForm,4000);
+        }
+        $('#cancelUpCrossSell').click(function() {
+            $('#upCrossSellOrderForm').slideUp("slow", function() {
+                // alert('Canceled');
             });
         });
     });

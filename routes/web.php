@@ -149,7 +149,7 @@ Route::group(['middleware' => ['guest']], function () {
         Route::get('/{slug?}/{coupon?}', [App\Http\Controllers\HomeController::class, 'lander'])->name('lander');
 
         Route::post('/order', [App\Http\Controllers\OrderController::class, 'order'])->name('order');
-        Route::post('/upSellOrder', [App\Http\Controllers\OrderController::class, 'upSellOrder'])->name('upSellOrder');
+        Route::post('/upCrossSellOrder', [App\Http\Controllers\OrderController::class, 'upCrossSellOrder'])->name('upCrossSellOrder');
     };
 
     Route::get('/ajax/sendConversionApiFB', [App\Http\Controllers\HomeController::class, 'sendConversionApiFB'])->name('sendConversionApiFB');
