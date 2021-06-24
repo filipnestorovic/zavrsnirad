@@ -358,4 +358,8 @@ class OrderController extends Controller
 
     }
 
+    public function upSellOrder(Request $request) {
+        dd($request->all());
+    }
+
 }

@@ -79,6 +79,11 @@ class HomeController extends Controller
         $brandUrl = 'https://'.$site.'.'.$domain;
         $country_id = $request->get('countryId');
 
+        if($slug === "ba" && $coupon === "koljeno") {
+            $country_id = 4;
+            $slug = "koljeno";
+        }
+
         $brand = $this->modelBrand->getBrandByUrl($brandUrl);
 
         if($brand === null) {
@@ -223,6 +228,22 @@ class HomeController extends Controller
             $this->data['orderRoute'] = '/order';
             $this->customerData['variation_id'] = $this->returnedData['variationId'];
 
+            try {
+                $productUpCrossResponse = $this->getProductUpAndCrossSells($product->sku);
+                if($productUpCrossResponse->code === 200) {
+                    $productUpSells = $productUpCrossResponse->up;
+                    $productCrossSells = $productUpCrossResponse->cross;
+                    if(count($productUpSells)>0) {
+                        $this->data['upSells'] = $productUpSells;
+                    }
+                    if(count($productCrossSells)>0) {
+                        $this->data['crossSells'] = $productCrossSells;
+                    }
+                }
+            } catch (\Exception $exception) {
+                Log::error("Error: Gettings Up/Cross Sells | Exception: " . $exception->getMessage());
+            }
+
             $this->customerData['uuid'] = $request->session()->get('uuid');
 
             try {
@@ -290,8 +311,6 @@ class HomeController extends Controller
         }
 
         $this->data['fb_event'] = "Purchase";
-
-        //get upsell and crosssell prices from Webhook
 
 //        Log::info('Test - Thankyou view - '.$this->customerData['session_id']);
         $this->data['landerView'] = $this->returnedData['landerView'];
@@ -657,6 +676,19 @@ class HomeController extends Controller
             return $response;
         } else {
             return $fb_event;
+        }
+    }
+
+    public function getProductUpAndCrossSells($sku) {
+        $client = new GuzzleHttp\Client([
+            'headers' => [ 'Content-Type' => 'application/json' ]
+        ]);
+
+        try {
+            $response = $client->get('https://new.serverwombat.com/api/getProductCrossUpSellData?SKU='.$sku);
+            return json_decode($response->getBody());
+        } catch(\Exception $exception) {
+            Log::critical("Error: Webhook - Up/CrossSell error \nServer message: " . $exception->getMessage());
         }
     }
 
