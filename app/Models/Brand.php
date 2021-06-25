@@ -52,7 +52,6 @@ class Brand extends Model
         $result = DB::table('brand')
             ->insertGetId([
                 'brand_name' => $this->brand_name,
-                'brand_url' => $this->brand_url,
                 'logo_url' => $this->logo_url,
             ]);
         return $result;
@@ -63,7 +62,6 @@ class Brand extends Model
             ->where('id_brand', '=',$id)
             ->update([
                 'brand_name' => $this->brand_name,
-                'brand_url' => $this->brand_url,
                 'logo_url' => $this->logo_url,
                 'updated_at' => Carbon::now(),
             ]);

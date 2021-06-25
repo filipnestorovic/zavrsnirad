@@ -85,7 +85,6 @@ class Order
         return $result;
     }
 
-
     public function getOrderByPhoneAndProductId($phone, $product_id) {
         $result = DB::table('orders')
             ->where('phone', '=', $phone)
@@ -95,4 +94,7 @@ class Order
         return $result;
     }
 
+    public function upCrossSellOrder($order_id) {
+        return $order_id;
+    }
 }

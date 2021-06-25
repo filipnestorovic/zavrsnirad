@@ -22,6 +22,8 @@ use Illuminate\Support\Facades\Validator;
 class OrderController extends Controller
 {
 
+    public $customerErrorMessage = "An error has occurred during checkout, please contact us at info@wombatsbrand.com!";
+    
     public function __construct()
     {
         $this->middleware('guest');
@@ -58,17 +60,17 @@ class OrderController extends Controller
         }
 
         if($request->get('countryShortcode') == "bg") {
-            $customerErrorMessage = "Грешка при поръчката, моля свържете се с нас по имейл info@wombatshop.eu!";
+            $this->customerErrorMessage = "Грешка при поръчката, моля свържете се с нас по имейл info@wombatshop.eu!";
         } else if($request->get('countryShortcode') == "ro") {
-            $customerErrorMessage = "Eroare la comandă, vă rugăm să ne contactați prin e-mail info@wombatshop.eu!";
+            $this->customerErrorMessage = "Eroare la comandă, vă rugăm să ne contactați prin e-mail info@wombatshop.eu!";
         } else if($request->get('countryShortcode') == "gr") {
-            $customerErrorMessage = "Σφάλμα παραγγελίας, επικοινωνήστε μαζί μας μέσω email info@wombatshop.eu!";
+            $this->customerErrorMessage = "Σφάλμα παραγγελίας, επικοινωνήστε μαζί μας μέσω email info@wombatshop.eu!";
         } else if($request->get('countryShortcode') == "pl") {
-            $customerErrorMessage = "Błąd zamówienia, prosimy o kontakt mailowy info@wombatshop.eu!";
+            $this->customerErrorMessage = "Błąd zamówienia, prosimy o kontakt mailowy info@wombatshop.eu!";
         } else if($request->get('countryShortcode') == "rs" || $request->get('countryShortcode') == "ba") {
-            $customerErrorMessage = "Greška prilikom porudžbine, molimo da nas kontaktirate putem emaila info@wombatsbrand.com!";
+            $this->customerErrorMessage = "Greška prilikom porudžbine, molimo da nas kontaktirate putem emaila info@wombatsbrand.com!";
         } else {
-            $customerErrorMessage = "An error has occurred during checkout, please contact us at info@wombatsbrand.com!";
+            $this->customerErrorMessage = "An error has occurred during checkout, please contact us at info@wombatsbrand.com!";
         }
 
         try {
@@ -99,14 +101,14 @@ class OrderController extends Controller
 
             if($this->modelOrder->quantity === 0) {
                 Log::error("Error: Quantity not set");
-                return redirect()->back()->withErrors([$customerErrorMessage]);
+                return redirect()->back()->withErrors([$this->customerErrorMessage]);
             }
 
             $variation = $this->modelVariation->getVariationByIdAndQuantity($variation_id, $this->modelOrder->quantity);
 
             if($variation === null) {
                 Log::error("Error: Variation with this quantity not found - DB");
-                return redirect()->back()->withErrors([$customerErrorMessage]);
+                return redirect()->back()->withErrors([$this->customerErrorMessage]);
             } else {
 
                 $session_id = $request->get('session_id');
@@ -125,7 +127,6 @@ class OrderController extends Controller
                 } else {
                     Log::error("Error: Order without session_id!");
                 }
-
 
                 $discount = $request->get('discount');
                 $multiplyDiscount = (100 - $discount) / 100;
@@ -146,7 +147,7 @@ class OrderController extends Controller
                     $orderId = $this->modelOrder->insertOrder();
                 } catch (\Exception $exception) {
                     Log::error("Error: Inserting new order - DB \nMessage: " . $exception->getMessage() . "\nDetails:". json_encode($this->modelOrder, JSON_PRETTY_PRINT));
-                    return redirect()->back()->withErrors([$customerErrorMessage]);
+                    return redirect()->back()->withErrors([$this->customerErrorMessage]);
                 }
 
                 if($orderId) {
@@ -167,14 +168,14 @@ class OrderController extends Controller
                                 $webhookResult = $this->sendWebhook($orderDetails, $brandUrl);
                             } catch(\Exception $exception){
                                 Log::error("Error: ServerWombat Webhook \nMessage: " . $exception->getMessage() . "\nDetails: ". json_encode($orderDetails, JSON_PRETTY_PRINT));
-                                return redirect()->back()->withErrors([$customerErrorMessage]);
+                                return redirect()->back()->withErrors([$this->customerErrorMessage]);
                             }
                         } else {
                             try {
                                 $webhookResult = $this->createNewOrderWoocommerce($orderDetails);
                             } catch(\Exception $exception){
                                 Log::error("Error: Woocommerce Webhook \nMessage: " . $exception->getMessage() . "\nDetails: ". json_encode($orderDetails, JSON_PRETTY_PRINT));
-                                return redirect()->back()->withErrors([$customerErrorMessage]);
+                                return redirect()->back()->withErrors([$this->customerErrorMessage]);
                             }
                         }
 
@@ -189,17 +190,17 @@ class OrderController extends Controller
                             return redirect()->to('/'.$orderDetails->slug.'/thankyou')->with('data', $orderDetails);
                         } else {
 //                            Log::error("Error: Empty webhook result \nResult: " . $webhookResult . "\nDetails: ". json_encode($orderDetails, JSON_PRETTY_PRINT));
-                            return redirect()->back()->withErrors([$customerErrorMessage]);
+                            return redirect()->back()->withErrors([$this->customerErrorMessage]);
                         }
                     } catch(\Exception $exception) {
                         Log::error("Error: Triggering new order -  Webhook \nMessage: " . $exception->getMessage() . "\nDetails: ". json_encode($orderDetails, JSON_PRETTY_PRINT));
-                        return redirect()->back()->withErrors([$customerErrorMessage]);
+                        return redirect()->back()->withErrors([$this->customerErrorMessage]);
                     }
                 }
             }
         } catch (\Exception $ex) {
             Log::error("An error has occurred during checkout - " . $ex->getMessage());
-            return redirect()->back()->withErrors([$customerErrorMessage]);
+            return redirect()->back()->withErrors([$this->customerErrorMessage]);
         }
     }
 
@@ -359,6 +360,67 @@ class OrderController extends Controller
     }
 
     public function upCrossSellOrder(Request $request) {
+
+//        dd($request->all());
+
+        $rules = [
+            'orderIdUpCrossSell' => ['required'],
+            'variationIdUpCrossSell' => ['required'],
+            'upCrossSellQuantity' => ['required'],
+        ];
+
+        $messages = [
+//            'required' => 'Polje :attribute je obavezno!',
+        ];
+
+        $validator = Validator::make($request->all(), $rules, $messages);
+
+        if ($validator->fails()) {
+            return redirect()
+                ->back()
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+        try {
+            $order_id = $request->get('orderIdUpCrossSell');
+            $this->modelOrder->variation_id = $request->get('variationIdUpCrossSell');
+            $this->modelOrder->session_id = $request->get('sessionIdUpCrossSell');
+            $this->modelOrder->country_id = $request->get('countryId');
+            $quantity = $request->get('upCrossSellQuantity');
+            $this->modelOrder->quantity = $quantity;
+
+            $data = $request->except('_token','orderIdUpCrossSell','variationIdUpCrossSell','upCrossSellQuantity','countryShortcode','countryId');
+            foreach($data as $key => $value) {
+                if(str_contains($key, 'hiddenPriceUpCrossSell') && $value != null) {
+                    $quantityPrice = substr($key, -1);
+                    if($quantity === $quantityPrice) {
+                        $this->modelOrder->price = $value;
+                    }
+                }
+                if(str_contains($key, 'isFreeShippingUpCrossSell') && $value != null) {
+                    $quantityShipping = substr($key, -1);
+                    if($quantity === $quantityShipping) {
+                        $this->modelOrder->is_order_with_free_shipping = $value;
+                    }
+                }
+            }
+
+            try {
+                $upCrossSellId = $this->modelOrder->upCrossSellOrder($order_id);
+                if($upCrossSellId) {
+                    //sendwebhook
+                    return redirect()->back()->with('success', 1);
+                }
+            } catch (\Exception $exception) {
+                Log::error("Error: Inserting UpCrossSell - DB \nMessage: " . $exception->getMessage() . "\nDetails:". json_encode($this->modelOrder, JSON_PRETTY_PRINT));
+                return redirect()->back()->withErrors([$this->customerErrorMessage]);
+            }
+
+        } catch (\Exception $ex) {
+            Log::error("UpCrossSell Error - " . $ex->getMessage());
+            return redirect()->back()->withErrors([$this->customerErrorMessage]);
+        }
 
     }
 

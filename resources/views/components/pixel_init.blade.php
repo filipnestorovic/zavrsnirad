@@ -33,5 +33,5 @@
 <meta property="og:title" content="{{ $product->product_name }} | {{ $product->brand_name }}">
 <meta property="og:description" content="{{ $product->product_name }}">
 <meta property="og:image" content="{{ asset('/').$product->product_image }}">
-<meta property="og:url" content="{{ $product->brand_url }}/{{ $product->slug }}">
+<meta property="og:url" content="{{ $product->domain_url }}/{{ $product->slug }}">
 <title>{{ $product->product_name }} | {{ $product->brand_name }}</title>

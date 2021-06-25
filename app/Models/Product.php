@@ -156,6 +156,7 @@ class Product extends Model
             ->leftJoin('country', 'product.country_id', '=', 'country.id_country')
             ->leftJoin('lander', 'product.id_product', '=', 'lander.product_id')
             ->leftJoin('brand', 'lander.brand_id', '=', 'brand.id_brand')
+            ->leftJoin('domain', 'domain.brand_id', '=', 'brand.id_brand')
             ->whereNull('brand.deleted_at')
             ->whereNull('product.deleted_at')
             ->where([
@@ -186,7 +187,7 @@ class Product extends Model
         return $result->first();
     }
 
-    public function groupProductBySku($sku, $country_code = null) {
+    public function groupProductBySku($sku, $country_code = null, $country_id = null) {
         $result = DB::table('product')
             ->leftJoin('country', 'product.country_id', '=', 'country.id_country')
             ->leftJoin('brand', 'product.brand_id', '=', 'brand.id_brand')
@@ -198,6 +199,10 @@ class Product extends Model
 
         if(!empty($country_code)){
             $result->where('country.country_code', '=', $country_code);
+        }
+
+        if(!empty($country_id)){
+            $result->where('country.id_country', '=', $country_id);
         }
 
         return $result->get();

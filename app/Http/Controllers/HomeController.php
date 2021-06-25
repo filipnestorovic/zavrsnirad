@@ -228,21 +228,7 @@ class HomeController extends Controller
             $this->data['orderRoute'] = '/order';
             $this->customerData['variation_id'] = $this->returnedData['variationId'];
 
-            try {
-                $productUpCrossResponse = $this->getProductUpAndCrossSells($product->sku);
-                if($productUpCrossResponse->code === 200) {
-                    $productUpSells = $productUpCrossResponse->up;
-                    $productCrossSells = $productUpCrossResponse->cross;
-                    if(count($productUpSells)>0) {
-                        $this->data['upSells'] = $productUpSells;
-                    }
-                    if(count($productCrossSells)>0) {
-                        $this->data['crossSells'] = $productCrossSells;
-                    }
-                }
-            } catch (\Exception $exception) {
-                Log::error("Error: Gettings Up/Cross Sells | Exception: " . $exception->getMessage());
-            }
+//            $this->data['upCrossSells'] = $this->getProductUpAndCrossSells($product->sku, $country_id);
 
             $this->customerData['uuid'] = $request->session()->get('uuid');
 
@@ -679,14 +665,37 @@ class HomeController extends Controller
         }
     }
 
-    public function getProductUpAndCrossSells($sku) {
+    public function getProductUpAndCrossSells($sku, $country_id) {
         $client = new GuzzleHttp\Client([
             'headers' => [ 'Content-Type' => 'application/json' ]
         ]);
-
         try {
+            $upCrossSellData = [];
             $response = $client->get('https://new.serverwombat.com/api/getProductCrossUpSellData?SKU='.$sku);
-            return json_decode($response->getBody());
+            $productUpCrossResponse = json_decode($response->getBody());
+            dump($productUpCrossResponse);
+            try {
+                if($productUpCrossResponse->code === 200) {
+                    $productUpSells = $productUpCrossResponse->up;
+                    $productCrossSells = $productUpCrossResponse->cross;
+                    $i = 0;
+                    if(count($productUpSells)>0) {
+                        foreach($productUpSells as $upsell) {
+                            $upSellProduct = $this->modelProduct->groupProductBySku($upsell->SKU, null, $country_id);
+                            $upCrossSellData[$i]['sku'] = $upsell->SKU;
+                            $upCrossSellData[$i]['product_name'] = $upSellProduct[0]->product_name;
+                            $upCrossSellData[$i]['upcrosssell_product_id'] = $upSellProduct[0]->id_product;
+                            $i++;
+                        }
+                    }
+                    if(count($productCrossSells)>0) {
+//                        dd($productCrossSells);
+                    }
+                }
+//                dd($upCrossSellData);
+            } catch (\Exception $exception) {
+                Log::error("Error: Gettings Up/Cross Sells | Exception: " . $exception->getMessage());
+            }
         } catch(\Exception $exception) {
             Log::critical("Error: Webhook - Up/CrossSell error \nServer message: " . $exception->getMessage());
         }

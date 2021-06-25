@@ -233,9 +233,13 @@
                 @isset($upSells)
                     <form action="/upCrossSellOrder" method="POST" id="upCrossSellOrderForm">
                         {{ csrf_field() }}
-                        {{--hidden polje za order_id i sve sto je potrebno za upsell tabelu--}}
+                        <input type="hidden" name="orderIdUpCrossSell" value="1"/>
+                        <input type="hidden" name="variationIdUpCrossSell" value="1"/>
+                        <input type="hidden" name="sessionIdUpCrossSell" value="{{ $session_id }}"/>
                         <div class="upcrosssell d-inline-flex p-2 justify-content-center">
                             @foreach($upSells as $upSell)
+                                <input type="hidden" name="hiddenPriceUpCrossSell-{{ $upSell->quantity }}" value="{{ $upSell->price*$upSell->quantity }}"/>
+                                <input type="hidden" name="isFreeShippingUpCrossSell-{{ $upSell->quantity }}" value="0"/>
                                 <h3 class="success-page__text">{{ $upSell->description }}</h3>
                                 <input type="radio" class="upCrossSellRadio" value="{{ $upSell->quantity }}" id="rb-{{ $upSell->quantity }}" name="upCrossSellQuantity" @if($upSell->isBestOption) checked @endif/>
                                 <label class="labelUpCrossSell" for="rb-{{ $upSell->quantity }}">
@@ -252,7 +256,7 @@
                             @if(count($prices) === 1)
                                 <span class="pricesUpCrossSell"><span class="oldPriceUpCrossSell"><p>{{ $prices[1]['amount']*$upSell->quantity }} RSD</p></span> <span class="newPriceUpCrossSell">{{ $upSell->price*$upSell->quantity }} RSD</span></span>
                             @else
-                                <span class="pricesUpCrossSell">SAMO SADA <span class="newPriceUpCrossSell">{{ $upSell->price }} RSD</span></span>
+                                <span class="pricesUpCrossSell">SAMO SADA <span class="newPriceUpCrossSell">{{ $upSell->price*$upSell->quantity }} RSD</span></span>
                             @endif
                             @endforeach
                         </div>
