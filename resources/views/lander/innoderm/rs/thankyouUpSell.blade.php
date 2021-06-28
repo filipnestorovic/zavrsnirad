@@ -4,7 +4,6 @@
     @include('components.pixel_init')
     <meta charset="utf-8" />
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-    <title>Hvala na poverenju | </title>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
     <script type="text/javascript" src="{{ asset('/') }}shared_files/jquery-1.12.4.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -199,10 +198,101 @@
                 margin-bottom: 20px;
             }
         }
+         .upcrosssell h3 {
+             width: 150px;
+             text-align: center;
+             color: white;
+             margin-bottom: 10px;
+             font-weight: 600;
+             text-transform: uppercase;
+         }
+        .upCrossSellRadio {
+            /*position: absolute;*/
+            /*opacity: 0;*/
+            /*width: 0;*/
+            /*height: 0;*/
+            visibility: hidden;
+        }
+        .upcrosssell {
+            flex-wrap: wrap;
+            background-color: #C6E2FF;
+            margin-bottom: 20px !important;
+        }
+        .upcrosssell label {
+            margin-bottom: 0px;
+        }
+        .img-holder {
+            padding: 10px;
+            border: 2px solid #ffffff;
+            max-width: 320px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .img {
+            max-width: 180px;
+        }
+        input[type="radio"]:checked+label > .img-holder {
+            border: 2px solid #E84343;
+        }
+        .cancelUpCrossSell button {
+            background: white !important;
+            color: black;
+            font-weight: lighter;
+        }
+        .pricesUpCrossSell {
+            width: 100%;
+            display: block;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        .oldPriceUpCrossSell {
+            color:red;
+            text-decoration:line-through;
+            text-decoration-thickness: 2px;
+        }
+        .oldPriceUpCrossSell p {
+            color: black;
+            display: inline;
+            margin-right: 2px;
+        }
+        .newPriceUpCrossSell {
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .labelUpCrossSell {
+            position: relative;
+        }
+        .quantity-badge {
+            background-color:rgba(242,242,242,1);
+            text-align: center;
+            border-radius: 50%;
+            border: 1px solid grey;
+            padding:10px;
+            font-size:20px;
+            position: absolute;
+            top: -10px;
+            left: -15px;
+            width: 50px !important;
+            height: 50px !important;
+        }
+        .best-option-badge {
+            position: absolute;
+            top: -25px;
+            right: -30px;
+            width: 90px !important;
+            height: 90px !important;
+        }
+        @media (max-width:767px) {
+            .upcrosssell {
+                margin: 0px -10px 20px -10px !important;
+            }
+        }
     </style>
 
 </head>
 <body>
+@include('components.display_errors')
 <div class="mod success-page">
     <div class="container1">
         <div class="success-page__header">
@@ -220,169 +310,62 @@
         </div>
         <div class="success-page__body">
             <div class="success-page__body-wrapper">
-                <h3 class="success-page__text">Super akcija samo sada</h3>
-                {{--<div class="list-info">--}}
-                    {{--<ul class="list-info__list">--}}
-                        {{--<li class="list-info__item">--}}
-                            {{--<span class="list-info__text">Telefon: </span>--}}
-
-                        {{--</li>--}}
-                    {{--</ul>--}}
-                {{--</div>--}}
-                <br/>
-                @isset($upSells)
-                    <form action="/upCrossSellOrder" method="POST" id="upCrossSellOrderForm">
-                        {{ csrf_field() }}
-                        <input type="hidden" name="orderIdUpCrossSell" value="1"/>
-                        <input type="hidden" name="variationIdUpCrossSell" value="1"/>
-                        <input type="hidden" name="sessionIdUpCrossSell" value="{{ $session_id }}"/>
-                        <div class="upcrosssell d-inline-flex p-2 justify-content-center">
-                            @foreach($upSells as $upSell)
-                                <input type="hidden" name="hiddenPriceUpCrossSell-{{ $upSell->quantity }}" value="{{ $upSell->price*$upSell->quantity }}"/>
-                                <input type="hidden" name="isFreeShippingUpCrossSell-{{ $upSell->quantity }}" value="0"/>
-                                <h3 class="success-page__text">{{ $upSell->description }}</h3>
-                                <input type="radio" class="upCrossSellRadio" value="{{ $upSell->quantity }}" id="rb-{{ $upSell->quantity }}" name="upCrossSellQuantity" @if($upSell->isBestOption) checked @endif/>
-                                <label class="labelUpCrossSell" for="rb-{{ $upSell->quantity }}">
-                                @if(count($upSells) > 1)
-                                    <span class="quantity-badge">{{ $upSell->quantity }}</span>
-                                @endif
-                                @if($upSell->isBestOption)
-                                    <span class="best-option-badge"><img src="{{ asset('/')}}thankyouFiles/thankyouUpSell/best-offer-badge.png"/></span>
-                                @endif
-                                <div class="img-holder">
-                                    <img class="img" src="{{ asset('/').$product->product_image }}"/>
-                                </div>
-                                </label>
-                            @if(count($prices) === 1)
-                                <span class="pricesUpCrossSell"><span class="oldPriceUpCrossSell"><p>{{ $prices[1]['amount']*$upSell->quantity }} RSD</p></span> <span class="newPriceUpCrossSell">{{ $upSell->price*$upSell->quantity }} RSD</span></span>
-                            @else
-                                <span class="pricesUpCrossSell">SAMO SADA <span class="newPriceUpCrossSell">{{ $upSell->price*$upSell->quantity }} RSD</span></span>
-                            @endif
-                            @endforeach
-                        </div>
-                        <div class="success-page__form__button"><button type="submit">DODAJ U PORUDŽBINU</button></div>
-                        <div class="success-page__form__button cancelUpCrossSell"><button id="cancelUpCrossSell" type="button">NE, HVALA</button></div>
-                    </form>
-                @endisset
-
-                <style>
-                    .upcrosssell h3 {
-                        width: 150px;
-                        text-align: center;
-                        color: white;
-                        margin-bottom: 10px;
-                        font-weight: 600;
-                        text-transform: uppercase;
-                    }
-                    .upCrossSellRadio {
-                        /*position: absolute;*/
-                        /*opacity: 0;*/
-                        /*width: 0;*/
-                        /*height: 0;*/
-                        visibility: hidden;
-                    }
-                    .upcrosssell {
-                        flex-wrap: wrap;
-                        background-color: #C6E2FF;
-                        margin-bottom: 20px !important;
-                    }
-                    .upcrosssell label {
-                        margin-bottom: 0px;
-                    }
-                    .img-holder {
-                        padding: 10px;
-                        border: 2px solid #ffffff;
-                        max-width: 320px;
-                        margin: 10px;
-                        cursor: pointer;
-                    }
-                    .img {
-                        max-width: 180px;
-                    }
-                    input[type="radio"]:checked+label > .img-holder {
-                        border: 2px solid #E84343;
-                    }
-                    .cancelUpCrossSell button {
-                        background: white !important;
-                        color: black;
-                        font-weight: lighter;
-                    }
-                    .pricesUpCrossSell {
-                        width: 100%;
-                        display: block;
-                        text-align: center;
-                        margin-bottom: 10px;
-                        font-size: 18px;
-                    }
-                    .oldPriceUpCrossSell {
-                        color:red;
-                        text-decoration:line-through;
-                        text-decoration-thickness: 2px;
-                    }
-                    .oldPriceUpCrossSell p {
-                        color: black;
-                        display: inline;
-                        margin-right: 2px;
-                    }
-                    .newPriceUpCrossSell {
-                        font-size: 22px;
-                        font-weight: bold;
-                    }
-                    .labelUpCrossSell {
-                        position: relative;
-                    }
-                    .quantity-badge {
-                        background-color:rgba(242,242,242,1);
-                        text-align: center;
-                        border-radius: 50%;
-                        border: 1px solid grey;
-                        padding:10px;
-                        font-size:20px;
-                        position: absolute;
-                        top: -10px;
-                        left: -15px;
-                        width: 50px !important;
-                        height: 50px !important;
-                    }
-                    .best-option-badge {
-                        position: absolute;
-                        top: -25px;
-                        right: -30px;
-                        width: 90px !important;
-                        height: 90px !important;
-                    }
-                    @media (max-width:767px) {
-                        .upcrosssell {
-                            margin: 0px -10px 20px -10px !important;
-                        }
-                    }
-                </style>
-
+                @if (session('success'))
+                    <div class="alert alert-success">
+                        Proizvod je uspešeno dodat Vašoj porudžbini!
+                    </div>
+                @else
+                    <h3 class="success-page__text">Super akcija samo sada</h3>
+                    <br/>
+                    @isset($upCrossSells)
+                        <form action="/upCrossSellOrder" method="POST" id="upCrossSellOrderForm">
+                            {{ csrf_field() }}
+                            <input type="hidden" name="orderIdUpCrossSell" value="1"/>
+                            <input type="hidden" name="variationIdUpCrossSell" value="1"/>
+                            <input type="hidden" name="sessionIdUpCrossSell" value="{{ $session_id }}"/>
+                            <input type="hidden" name="firstOrderQuantity" value="1"/>
+                            <div class="upcrosssell d-inline-flex p-2 justify-content-center">
+                                @foreach($upCrossSells as $upSell)
+                                    @if($upSell['is_upSell'])
+                                        <input type="hidden" name="isUpSell" value="1"/>
+                                        <input type="hidden" name="hiddenPriceUpCrossSell-{{ $upSell['id_upcrosssell'] }}" value="{{ $upSell['pricePerPiece']*$upSell['quantity'] }}"/>
+                                        <input type="hidden" name="quantityUpCrossSell-{{ $upSell['id_upcrosssell'] }}" value="{{ $upSell['quantity'] }}"/>
+                                        <input type="hidden" name="isFreeShippingUpCrossSell-{{ $upSell['id_upcrosssell'] }}" value="0"/>
+                                        <input type="hidden" name="productIdUpCrossSell-{{ $upSell['id_upcrosssell'] }}" value="{{ $upSell['upcrosssell_product_id'] }}"/>
+                                        <h3 class="success-page__text">{{ $upSell['description'] }}</h3>
+                                        <input type="radio" class="upCrossSellRadio" value="{{ $upSell['id_upcrosssell'] }}" id="rb-{{ $upSell['id_upcrosssell'] }}" name="upCrossSellId" @if($upSell['isBestOption']) checked @endif/>
+                                        <label class="labelUpCrossSell" for="rb-{{ $upSell['id_upcrosssell'] }}">
+                                        @if($upCrossSells[0]['upSellCount'] > 1)
+                                            <span class="quantity-badge">{{ $upSell['quantity'] }}</span>
+                                        @endif
+                                        @if($upSell['isBestOption'])
+                                            <span class="best-option-badge"><img src="{{ asset('/')}}thankyouFiles/thankyouUpSell/best-offer-badge.png"/></span>
+                                        @endif
+                                        <div class="img-holder">
+                                            <img class="img" src="{{ asset('/').$upSell['product_image'] }}"/>
+                                        </div>
+                                        </label>
+                                        @if(count($prices) === 1)
+                                            <span class="pricesUpCrossSell"><span class="oldPriceUpCrossSell"><p>{{ $prices[1]['amount']*$upSell['quantity'] }} RSD</p></span> <span class="newPriceUpCrossSell">{{ $upSell['pricePerPiece']*$upSell['quantity'] }} RSD</span></span>
+                                        @else
+                                            <span class="pricesUpCrossSell">SAMO SADA <span class="newPriceUpCrossSell">{{ $upSell['pricePerPiece']*$upSell['quantity'] }} RSD</span></span>
+                                        @endif
+                                    @endif
+                                @endforeach
+                            </div>
+                            <div class="success-page__form__button"><button type="submit">DODAJ U PORUDŽBINU</button></div>
+                            <div class="success-page__form__button cancelUpCrossSell"><button id="cancelUpCrossSell" type="button">NE, HVALA</button></div>
+                        </form>
+                    @endisset
+                @endif
                 <h3 class="success-page__text" id="lowerH">
                     Za sve informacije možete nas kontaktirati putem društvenih mreža i na <b>060/046-0469</b>
-                    {{--Kako bismo ubrzali proces potvrde porudžbine, unesite svoju adresu:--}}<br/><br/>
+                    <br/><br/>
                     <p style="text-align: center;">Vaš </p>
                 </h3>
-                <div class="form">
-                    {{--<form action="#" class="success-page__form" id="details" method="post">--}}
-                    {{--<input name="order_id" type="hidden" value="{{ $order->id_order }}" />--}}
-                    {{--<span class="success-page__form__error" id="error_mail"></span>--}}
-                    {{--<div class="success-page__form__container">--}}
-                    {{--<label for="" class="success-page__form__label">Adresa</label>--}}
-                    {{--<input class="success-page__form__input" name="address"--}}
-                    {{--placeholder="" type="text" required/>--}}
-                    {{--<div class="success-page__form__button">Pošalji</div>--}}
-                    {{--</div>--}}
-                    {{--</form>--}}
-                    {{--<img src="{{ asset('/') }}kinokiFiles/img/safe_purchase.png" alt="Safe purchase icons"/>--}}
+                <img src="{{ asset('/') }}shared_files/safe_purchase.png" alt="Safe purchase icons"/>
                 </div>
-                {{--<div>--}}
-                {{--<img src="{{ asset('/') }}kinokiFiles/img/safe_purchase.png" alt="Safe purchase icons"/>--}}
-                {{--</div>--}}
                 <p class="success-page__message_fail" style="margin-top: 20px; text-align: center;">
-                    {{--<a class="success-page__message_fail__link" href="javascript:history.back()">--}}
-                    {{--Ukoliko uneti podaci zahtevaju izmenu, kliknite ovde--}}
-                    {{--</a>--}}
                     <a href="/{{$product->slug}}">Povratak na početnu stranu</a>
                 </p>
             </div>

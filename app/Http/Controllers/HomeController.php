@@ -298,7 +298,6 @@ class HomeController extends Controller
 
         $this->data['fb_event'] = "Purchase";
 
-//        Log::info('Test - Thankyou view - '.$this->customerData['session_id']);
         $this->data['landerView'] = $this->returnedData['landerView'];
         return view($this->returnedData['thankyouView'], $this->data);
     }
@@ -673,26 +672,54 @@ class HomeController extends Controller
             $upCrossSellData = [];
             $response = $client->get('https://new.serverwombat.com/api/getProductCrossUpSellData?SKU='.$sku);
             $productUpCrossResponse = json_decode($response->getBody());
-            dump($productUpCrossResponse);
+//            dump($productUpCrossResponse);
             try {
                 if($productUpCrossResponse->code === 200) {
                     $productUpSells = $productUpCrossResponse->up;
                     $productCrossSells = $productUpCrossResponse->cross;
                     $i = 0;
+                    $upSellCount = 0;
+                    $crossSellCount = 0;
                     if(count($productUpSells)>0) {
-                        foreach($productUpSells as $upsell) {
-                            $upSellProduct = $this->modelProduct->groupProductBySku($upsell->SKU, null, $country_id);
-                            $upCrossSellData[$i]['sku'] = $upsell->SKU;
+                        foreach($productUpSells as $Singlesell) {
+                            $upSellProduct = $this->modelProduct->groupProductBySku($Singlesell->SKU, null, $country_id);
+                            $upCrossSellData[$i]['sku'] = $Singlesell->SKU;
                             $upCrossSellData[$i]['product_name'] = $upSellProduct[0]->product_name;
                             $upCrossSellData[$i]['upcrosssell_product_id'] = $upSellProduct[0]->id_product;
+                            $upCrossSellData[$i]['product_image'] = $upSellProduct[0]->product_image;
+                            $upCrossSellData[$i]['id_upcrosssell'] = $Singlesell->id_product_crossupsell;
+                            $upCrossSellData[$i]['quantity'] = $Singlesell->quantity;
+                            $upCrossSellData[$i]['pricePerPiece'] = $Singlesell->price;
+                            $upCrossSellData[$i]['isBestOption'] = $Singlesell->isBestOption;
+                            $upCrossSellData[$i]['description'] = $Singlesell->description;
+                            $upCrossSellData[$i]['is_upSell'] = $Singlesell->is_upSell;
+                            $upCrossSellData[$i]['is_crossSell'] = $Singlesell->is_crossSell;
                             $i++;
+                            $upSellCount++;
                         }
                     }
                     if(count($productCrossSells)>0) {
-//                        dd($productCrossSells);
+                        foreach($productCrossSells as $Singlesell) {
+                            $upSellProduct = $this->modelProduct->groupProductBySku($Singlesell->SKU, null, $country_id);
+                            $upCrossSellData[$i]['sku'] = $Singlesell->SKU;
+                            $upCrossSellData[$i]['product_name'] = $upSellProduct[0]->product_name;
+                            $upCrossSellData[$i]['upcrosssell_product_id'] = $upSellProduct[0]->id_product;
+                            $upCrossSellData[$i]['product_image'] = $upSellProduct[0]->product_image;
+                            $upCrossSellData[$i]['id_upcrosssell'] = $Singlesell->id_product_crossupsell;
+                            $upCrossSellData[$i]['quantity'] = $Singlesell->quantity;
+                            $upCrossSellData[$i]['pricePerPiece'] = $Singlesell->price;
+                            $upCrossSellData[$i]['isBestOption'] = $Singlesell->isBestOption;
+                            $upCrossSellData[$i]['description'] = $Singlesell->description;
+                            $upCrossSellData[$i]['is_upSell'] = $Singlesell->is_upSell;
+                            $upCrossSellData[$i]['is_crossSell'] = $Singlesell->is_crossSell;
+                            $i++;
+                            $crossSellCount++;
+                        }
                     }
+                    $upCrossSellData[0]['upSellCount'] = $upSellCount;
+                    $upCrossSellData[0]['crossSellCount'] = $crossSellCount;
+                    return $upCrossSellData;
                 }
-//                dd($upCrossSellData);
             } catch (\Exception $exception) {
                 Log::error("Error: Gettings Up/Cross Sells | Exception: " . $exception->getMessage());
             }

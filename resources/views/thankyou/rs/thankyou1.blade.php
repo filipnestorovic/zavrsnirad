@@ -52,7 +52,7 @@
                             {{--<div class="success-page__form__button">Pošalji</div>--}}
                         {{--</div>--}}
                     {{--</form>--}}
-                    <img src="{{ asset('/') }}kinokiFiles/img/safe_purchase.png" alt="Safe purchase icons"/>
+                    <img src="{{ asset('/') }}shared_files/safe_purchase.png" alt="Safe purchase icons"/>
                 </div>
                 {{--<div>--}}
                     {{--<img src="{{ asset('/') }}kinokiFiles/img/safe_purchase.png" alt="Safe purchase icons"/>--}}

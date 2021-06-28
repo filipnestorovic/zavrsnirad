@@ -366,7 +366,7 @@ class OrderController extends Controller
         $rules = [
             'orderIdUpCrossSell' => ['required'],
             'variationIdUpCrossSell' => ['required'],
-            'upCrossSellQuantity' => ['required'],
+            'upCrossSellId' => ['required'],
         ];
 
         $messages = [
@@ -387,21 +387,35 @@ class OrderController extends Controller
             $this->modelOrder->variation_id = $request->get('variationIdUpCrossSell');
             $this->modelOrder->session_id = $request->get('sessionIdUpCrossSell');
             $this->modelOrder->country_id = $request->get('countryId');
-            $quantity = $request->get('upCrossSellQuantity');
-            $this->modelOrder->quantity = $quantity;
+            $upcrosssell_id = $request->get('upCrossSellId');
+            $firstOrderQuantity = $request->get('firstOrderQuantity');
+            ($request->get('isUpSell') != null) ? $this->modelOrder->is_up_sell = $request->get('isUpSell') : $this->modelOrder->is_up_sell = 0;
+            ($request->get('isCrossSell') != null) ? $this->modelOrder->is_cross_sell = $request->get('isCrossSell') : $this->modelOrder->is_cross_sell = 0;
 
-            $data = $request->except('_token','orderIdUpCrossSell','variationIdUpCrossSell','upCrossSellQuantity','countryShortcode','countryId');
+            $data = $request->except('_token','orderIdUpCrossSell','variationIdUpCrossSell','upCrossSellId','sessionIdUpCrossSell','countryShortcode','countryId');
             foreach($data as $key => $value) {
                 if(str_contains($key, 'hiddenPriceUpCrossSell') && $value != null) {
-                    $quantityPrice = substr($key, -1);
-                    if($quantity === $quantityPrice) {
+                    $crossupPrice = substr($key, strpos($key, "-") + 1);
+                    if($upcrosssell_id === $crossupPrice) {
                         $this->modelOrder->price = $value;
                     }
                 }
                 if(str_contains($key, 'isFreeShippingUpCrossSell') && $value != null) {
-                    $quantityShipping = substr($key, -1);
-                    if($quantity === $quantityShipping) {
+                    $crossupShipping = substr($key, strpos($key, "-") + 1);
+                    if($upcrosssell_id === $crossupShipping) {
                         $this->modelOrder->is_order_with_free_shipping = $value;
+                    }
+                }
+                if(str_contains($key, 'quantityUpCrossSell') && $value != null) {
+                    $crossupQuantity = substr($key, strpos($key, "-") + 1);
+                    if($upcrosssell_id === $crossupQuantity) {
+                        $this->modelOrder->quantity = $value;
+                    }
+                }
+                if(str_contains($key, 'productIdUpCrossSell') && $value != null) {
+                    $crossupProductId = substr($key, strpos($key, "-") + 1);
+                    if($upcrosssell_id === $crossupProductId) {
+                        $this->modelOrder->product_id = $value;
                     }
                 }
             }
@@ -410,6 +424,7 @@ class OrderController extends Controller
                 $upCrossSellId = $this->modelOrder->upCrossSellOrder($order_id);
                 if($upCrossSellId) {
                     //sendwebhook
+                    $this->data['order'] = $this->modelOrder->getOrderById($order_id, $firstOrderQuantity);
                     return redirect()->back()->with('success', 1);
                 }
             } catch (\Exception $exception) {

@@ -20,6 +20,9 @@ class Order
     public $test_variation_id;
     public $country_id;
     public $session_id;
+    public $is_up_sell;
+    public $is_cross_sell;
+    public $product_id;
 
     public function insertOrder(){
         $result = DB::table('order')
@@ -95,6 +98,20 @@ class Order
     }
 
     public function upCrossSellOrder($order_id) {
-        return $order_id;
+        $result = DB::table('up_cross_sell')
+            ->insertGetId([
+                'variation_id' => $this->variation_id,
+                'upcrosssell_product_id' => $this->product_id,
+                'quantity' => $this->quantity,
+                'price' => $this->price,
+                'free_shipping_upcrosssell' => $this->is_order_with_free_shipping,
+                'is_up_sell' => $this->is_up_sell,
+                'is_cross_sell' => $this->is_cross_sell,
+                'order_id' => $order_id,
+                'country_id' => $this->country_id,
+                'session_id' => $this->session_id,
+            ]);
+
+        return $result;
     }
 }
