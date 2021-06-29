@@ -35,7 +35,7 @@ class AdminController extends Controller
 
     public function getActiveVariationsStatistic(Request $request) {
 
-        $orders = $this->modelStatistic->getLastOrders(10, 1);
+        $orders = $this->modelStatistic->getLastOrders( 1);
         $collection = collect($orders);
         $messagesUnique = $collection->unique('variation_id')->slice(0,10);
         $uniqueVariation = $messagesUnique->values()->all();

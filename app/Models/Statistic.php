@@ -53,9 +53,12 @@ class Statistic extends Model
         return $result;
     }
 
-    public function getLastOrders($order_count, $country_id) {
+    public function getLastOrders($country_id) {
         $result = DB::table('order')
-            ->where('country_id','=',$country_id)
+            ->where([
+                ['country_id','=',$country_id],
+                ['order.name','NOT LIKE','%TEST%']
+            ])
             ->orderByDesc('order.created_at')
             ->get();
 

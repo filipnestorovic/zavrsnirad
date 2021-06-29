@@ -600,67 +600,67 @@ class HomeController extends Controller
             $token = 'EAACOQyyltp0BAIXMsezZAgrZBZBZCzVUoWjZCH20tK8UphZC2Fs8T4DldoaQTiuqgbrxoWeLBq08heeofvyASFehWNvM44kct7QRclpqrJh03bYzaBTHcsWxoRbZAu25NpDQqP8yHuZBJZBCaazyzxJR45r2zDlzeFqHbJ3mepDbOn8lZBjrC5jVlOZCU9Ogp6zMCRSXIQ7eOfaMwZDZD';
         }
 
+        if($pixel_id != "937389627038619") { //nije setovan app, ne treba da salje na njega
+            $current_timestamp = Carbon::now()->unix();
+            $random_number = $this->generateUuid(1);
+            if(isset($_COOKIE['_fbp'])) {
+                $cookie_fbp = $_COOKIE['_fbp'];
+            } else {
+                $cookie_fbp = "fb.1.".$current_timestamp.".".$random_number;
+            }
+            if(isset($_COOKIE['_fbc'])) {
+                $cookie_fbc = $_COOKIE['_fbc'];
+            } else {
+                $cookie_fbc = null;
+            }
 
+            $access_token = $token;
+            $api = Api::init(null, null, $access_token);
+            $api->setLogger(new CurlLogger());
+            if($fb_event === "Purchase") {
+                $user_data = (new UserData())
+                    ->setFirstName($request->get('name'))
+                    ->setEmail($request->get('email'))
+                    ->setPhone($request->get('phone'))
+                    ->setCity($request->get('city'))
+                    ->setZipCode($request->get('zip'))
+                    ->setCountryCode($request->get('country_code'))
+                    ->setClientIpAddress($_SERVER['REMOTE_ADDR'])
+                    ->setClientUserAgent($_SERVER['HTTP_USER_AGENT'])
+                    ->setFbc($cookie_fbc)
+                    ->setFbp($cookie_fbp);
+                $custom_data = (new CustomData())
+                    ->setCurrency($request->get('currency_code'))
+                    ->setValue($request->get('amount'));
+            } else {
+                $user_data = (new UserData())
+                    ->setClientIpAddress($_SERVER['REMOTE_ADDR'])
+                    ->setClientUserAgent($_SERVER['HTTP_USER_AGENT'])
+                    ->setFbc($cookie_fbc)
+                    ->setFbp($cookie_fbp);
+                $client = $user_data->getFbp();
+                $custom_data = (new CustomData());
+            }
+            $event = (new FBEvent())
+                ->setEventName($fb_event)
+                ->setEventId($fb_event.'.'.$session_id)
+                ->setActionSource('website')
+                ->setEventTime(time())
+                ->setEventSourceUrl($request->getHost())
+                ->setUserData($user_data)
+                ->setCustomData($custom_data);
+            $events = array();
+            array_push($events, $event);
+            $api_request = (new EventRequest($pixel_id))
+                ->setTestEventCode('TEST35501')
+                ->setEvents($events);
+            $response = $api_request->execute();
 
-        $current_timestamp = Carbon::now()->unix();
-        $random_number = $this->generateUuid(1);
-        if(isset($_COOKIE['_fbp'])) {
-            $cookie_fbp = $_COOKIE['_fbp'];
-        } else {
-            $cookie_fbp = "fb.1.".$current_timestamp.".".$random_number;
-        }
-        if(isset($_COOKIE['_fbc'])) {
-            $cookie_fbc = $_COOKIE['_fbc'];
-        } else {
-            $cookie_fbc = null;
-        }
-
-        $access_token = $token;
-        $api = Api::init(null, null, $access_token);
-        $api->setLogger(new CurlLogger());
-        if($fb_event === "Purchase") {
-            $user_data = (new UserData())
-                ->setFirstName($request->get('name'))
-                ->setEmail($request->get('email'))
-                ->setPhone($request->get('phone'))
-                ->setCity($request->get('city'))
-                ->setZipCode($request->get('zip'))
-                ->setCountryCode($request->get('country_code'))
-                ->setClientIpAddress($_SERVER['REMOTE_ADDR'])
-                ->setClientUserAgent($_SERVER['HTTP_USER_AGENT'])
-                ->setFbc($cookie_fbc)
-                ->setFbp($cookie_fbp);
-            $custom_data = (new CustomData())
-                ->setCurrency($request->get('currency_code'))
-                ->setValue($request->get('amount'));
-        } else {
-            $user_data = (new UserData())
-                ->setClientIpAddress($_SERVER['REMOTE_ADDR'])
-                ->setClientUserAgent($_SERVER['HTTP_USER_AGENT'])
-                ->setFbc($cookie_fbc)
-                ->setFbp($cookie_fbp);
-            $client = $user_data->getFbp();
-            $custom_data = (new CustomData());
-        }
-        $event = (new FBEvent())
-            ->setEventName($fb_event)
-            ->setEventId($fb_event.'.'.$session_id)
-            ->setActionSource('website')
-            ->setEventTime(time())
-            ->setEventSourceUrl($request->getHost())
-            ->setUserData($user_data)
-            ->setCustomData($custom_data);
-        $events = array();
-        array_push($events, $event);
-        $api_request = (new EventRequest($pixel_id))
-            ->setTestEventCode('TEST35501')
-            ->setEvents($events);
-        $response = $api_request->execute();
-
-        if(!empty(json_decode($response, true))) {
-            return $response;
-        } else {
-            return $fb_event;
+            if(!empty(json_decode($response, true))) {
+                return $response;
+            } else {
+                return $fb_event;
+            }
         }
     }
 

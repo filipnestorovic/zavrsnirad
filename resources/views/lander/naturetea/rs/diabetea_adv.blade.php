@@ -14,7 +14,7 @@
     <div class="container">
         <div class="top-lft">
             <p class="top-txt1"> Advertorijal </p>
-            <a href="#product-box"><img class="logo" src="{{ asset('/') }}natureteaFiles/shared_files/logo.png"/></a>
+            <a href="#product-box"><img class="logo" src="{{ asset('/') }}natureteaFiles/shared_files/logo_invert.png"/></a>
             <ul class="social-icon">
                 <li><a href="#product-box"><img alt="facebook" src="{{ asset('/') }}natureteaFiles/diabetea_adv/f.png"/></a></li>
                 <li><a href="#product-box"><img alt="twitter" src="{{ asset('/') }}natureteaFiles/diabetea_adv/t.png"/></a></li>
@@ -356,7 +356,7 @@
 </div>
 <footer>
     <div class="container">
-        <img alt="img" class="footer-logo" src="{{ asset('/') }}natureteaFiles/shared_files/logo.png"/>
+        <img alt="img" class="footer-logo" src="{{ asset('/') }}natureteaFiles/shared_files/logo_invert.png"/>
         <p class="f-p1"> © DiebeTea
             <span class="ryear"></span>
         </p>

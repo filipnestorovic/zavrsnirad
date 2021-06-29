@@ -36,6 +36,8 @@ class OrderController extends Controller
 
     public function order(Request $request, $site = null, $domain = null){
 
+//        dd($request->all());
+
         $rules = [
             'name' => ['required'],
             'phone' => ['required'],
