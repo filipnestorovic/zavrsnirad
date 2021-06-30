@@ -600,7 +600,8 @@ class HomeController extends Controller
             $token = 'EAACOQyyltp0BAIXMsezZAgrZBZBZCzVUoWjZCH20tK8UphZC2Fs8T4DldoaQTiuqgbrxoWeLBq08heeofvyASFehWNvM44kct7QRclpqrJh03bYzaBTHcsWxoRbZAu25NpDQqP8yHuZBJZBCaazyzxJR45r2zDlzeFqHbJ3mepDbOn8lZBjrC5jVlOZCU9Ogp6zMCRSXIQ7eOfaMwZDZD';
         }
 
-        if($pixel_id != "937389627038619") { //nije setovan app, ne treba da salje na njega
+        $excludeCApi = ["937389627038619", "324231612589924"];
+        if(!in_array($pixel_id, $excludeCApi)) {
             $current_timestamp = Carbon::now()->unix();
             $random_number = $this->generateUuid(1);
             if(isset($_COOKIE['_fbp'])) {

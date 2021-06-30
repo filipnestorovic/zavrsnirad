@@ -433,9 +433,6 @@
                             @foreach($prices as $singlePrice)
                                 <div class="{{ $singlePrice['quantity'] }}_pack item-gift" id="{{ $singlePrice['quantity'] }}" @if($singlePrice['quantity'] === 1) style="display: block" @endif> {{ $singlePrice['quantity'] }} x {{ $product->product_name }} <br><strike class="old"> {{ $prices[$singlePrice['quantity']]['originalPrice'] }} RSD </strike> {{ $prices[$singlePrice['quantity']]['amount'] }} RSD </div>
                             @endforeach
-                            {{--<div class="1_pack item-gift" id="1" style="display: block"> 1 Paket <br><strike class="old"> {{ $prices[1]['originalPrice'] }} RSD </strike><span> {{ $prices[1]['amount'] }} RSD </span></div>--}}
-                            {{--<div class="2_pack item-gift" id="2"> 2 Paketa <br><strike class="old"> {{ $prices[2]['originalPrice'] }} RSD </strike> {{ $prices[2]['amount'] }} RSD </div>--}}
-                            {{--<div class="3_pack item-gift" id="3"> 3 Paketa <br><strike class="old"> {{ $prices[3]['originalPrice'] }} RSD </strike> {{ $prices[3]['amount'] }} RSD </div>--}}
                             <button class="btn js_submit button__text"> NARUČITE SADA </button>
                             <div class></div>
                             <div class="iva-wrap"> PDV uključen </div>
