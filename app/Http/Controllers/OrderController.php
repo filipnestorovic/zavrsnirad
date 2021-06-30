@@ -423,11 +423,21 @@ class OrderController extends Controller
             }
 
             try {
-                $upCrossSellId = $this->modelOrder->upCrossSellOrder($order_id);
+                $upCrossSellId = $this->modelOrder->upCrossSellOrderInsert($order_id);
                 if($upCrossSellId) {
-                    //sendwebhook
                     $this->data['order'] = $this->modelOrder->getOrderById($order_id, $firstOrderQuantity);
-                    return redirect()->back()->with('success', 1);
+                    $upCrossSellDetails = $this->modelOrder->getupCrossSellOrder($upCrossSellId);
+                    try {
+                        $webhookResult = $this->sendWebhookUpCrossSell($request, $upCrossSellDetails);
+                        if($webhookResult) {
+                            return redirect()->back()->with('success', 1);
+                        } else {
+
+                        }
+                    } catch (\Exception $exception) {
+                        Log::error("Error: UpCrossSell Webhook \nMessage: " . $exception->getMessage() . "\nDetails:". $upCrossSellId);
+                        return redirect()->back()->withErrors([$this->customerErrorMessage]);
+                    }
                 }
             } catch (\Exception $exception) {
                 Log::error("Error: Inserting UpCrossSell - DB \nMessage: " . $exception->getMessage() . "\nDetails:". json_encode($this->modelOrder, JSON_PRETTY_PRINT));
@@ -438,7 +448,70 @@ class OrderController extends Controller
             Log::error("UpCrossSell Error - " . $ex->getMessage());
             return redirect()->back()->withErrors([$this->customerErrorMessage]);
         }
-
     }
+
+    public function sendWebhookUpCrossSell(Request $request, $upCrossSellDetails){
+//        dd($request->all());
+        $client = new GuzzleHttp\Client([
+            'headers' => [ 'Content-Type' => 'application/json' ]
+        ]);
+
+        $jsonArray = array();
+
+        $jsonArray['site'] = $brandUrl;
+
+        $jsonArray['number'] = $orderDetails->id_order;
+        $jsonArray['date_created'] = $orderDetails->created_at;
+        $jsonArray['total'] = $orderDetails->price;
+        $jsonArray['shipping']['first_name'] = $orderDetails->name;
+        $jsonArray['shipping']['last_name'] = "";
+        $jsonArray['shipping']['address_1'] =  $orderDetails->street;
+        $jsonArray['shipping']['address_2'] =  "";
+        $jsonArray['shipping']['city'] = $orderDetails->city;
+        $jsonArray['shipping']['postcode'] = $orderDetails->zip;
+        $jsonArray['billing']['email'] = $orderDetails->email;
+        $jsonArray['billing']['phone'] = $orderDetails->phone;
+
+        if($orderDetails->is_free_shipping===1) {
+            $jsonArray['shipping_lines'] = array([
+                "method_id" => "free_shipping"
+            ]);
+        } else {
+            $jsonArray['shipping_lines'] = array([
+                "method_id" => "flat_rate"
+            ]);
+        }
+
+        $jsonArray['customer_note'] = "";
+
+        $jsonArray['line_items'] = array([
+            'sku' => $orderDetails->sku,
+            'quantity' => $orderDetails->quantity,
+            'subtotal' => $orderDetails->price,
+            'total' =>  $orderDetails->price,
+            'meta_data' => []
+        ]);
+
+
+        $webhookUrl = "";
+        switch($orderDetails->country_code) {
+            case "rs":
+                $webhookUrl = "https://new.serverwombat.com/api/orderWebhook";
+                break;
+            case "ba":
+                $webhookUrl = "https://ba.serverwombat.com/api/orderWebhook";
+                break;
+            default:
+                $webhookUrl = "https://new.serverwombat.com/api/orderWebhook";
+        }
+
+        try {
+            $response = $client->post($webhookUrl, ['body' => json_encode($jsonArray)]);
+            return $response;
+        } catch(\Exception $exception) {
+            Log::critical("Error: Webhook accepting error \nServer message: " . $exception->getMessage() . "\nJSON: " . json_encode($jsonArray, JSON_PRETTY_PRINT));
+        }
+    }
+
 
 }

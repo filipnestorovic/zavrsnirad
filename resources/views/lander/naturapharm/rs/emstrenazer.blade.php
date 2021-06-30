@@ -272,7 +272,7 @@
                 <input class="field" name="shipping_address" placeholder="Adresa" type="text"/>
                 <input class="field" name="shipping_city" placeholder="Grad" type="text"/>
                 <button type="submit" class="button-m js_pre_toform button__text">Naruči odmah</button>
-                <div class="toform"></div>
+                <div id="toform"></div>
             </form>
         </div>
     </section>

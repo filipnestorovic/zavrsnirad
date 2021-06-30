@@ -673,7 +673,6 @@ class HomeController extends Controller
             $upCrossSellData = [];
             $response = $client->get('https://new.serverwombat.com/api/getProductCrossUpSellData?SKU='.$sku);
             $productUpCrossResponse = json_decode($response->getBody());
-//            dump($productUpCrossResponse);
             try {
                 if($productUpCrossResponse->code === 200) {
                     $productUpSells = $productUpCrossResponse->up;
@@ -695,6 +694,7 @@ class HomeController extends Controller
                             $upCrossSellData[$i]['description'] = $Singlesell->description;
                             $upCrossSellData[$i]['is_upSell'] = $Singlesell->is_upSell;
                             $upCrossSellData[$i]['is_crossSell'] = $Singlesell->is_crossSell;
+                            $upCrossSellData[$i]['isFreeShipping'] = $Singlesell->isFreeShippingClaimed;
                             $i++;
                             $upSellCount++;
                         }
@@ -713,6 +713,7 @@ class HomeController extends Controller
                             $upCrossSellData[$i]['description'] = $Singlesell->description;
                             $upCrossSellData[$i]['is_upSell'] = $Singlesell->is_upSell;
                             $upCrossSellData[$i]['is_crossSell'] = $Singlesell->is_crossSell;
+                            $upCrossSellData[$i]['isFreeShipping'] = $Singlesell->isFreeShippingClaimed;
                             $i++;
                             $crossSellCount++;
                         }

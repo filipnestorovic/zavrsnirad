@@ -97,7 +97,7 @@ class Order
         return $result;
     }
 
-    public function upCrossSellOrder($order_id) {
+    public function upCrossSellOrderInsert($order_id) {
         $result = DB::table('up_cross_sell')
             ->insertGetId([
                 'variation_id' => $this->variation_id,
@@ -111,6 +111,15 @@ class Order
                 'country_id' => $this->country_id,
                 'session_id' => $this->session_id,
             ]);
+
+        return $result;
+    }
+
+    public function getupCrossSellOrder($upcrosssell_id) {
+        $result = DB::table('up_cross_sell')
+            ->leftJoin('order', 'up_cross_sell.order_id', '=', 'order.id_order')
+            ->where('id_up_cross_sell','=',$upcrosssell_id)
+            ->first();
 
         return $result;
     }
