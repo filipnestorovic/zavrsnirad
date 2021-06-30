@@ -17,6 +17,7 @@
     </style>
 </head>
 <body class="template-index data-animations" id="the-shakti-acupressure-mat-your-personal-masseuse">
+@include('components.display_errors')
 <header>
     <h1>Jastuk i prostirka za akupunkturu</h1>
 </header>
