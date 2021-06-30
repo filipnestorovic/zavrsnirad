@@ -332,6 +332,7 @@
                                         <input type="hidden" name="quantityUpCrossSell-{{ $upSell['id_upcrosssell'] }}" value="{{ $upSell['quantity'] }}"/>
                                         <input type="hidden" name="isFreeShippingUpCrossSell-{{ $upSell['id_upcrosssell'] }}" value="{{ $upSell['isFreeShipping'] }}"/>
                                         <input type="hidden" name="productIdUpCrossSell-{{ $upSell['id_upcrosssell'] }}" value="{{ $upSell['upcrosssell_product_id'] }}"/>
+                                        <input type="hidden" name="skuUpCrossSell-{{ $upSell['id_upcrosssell'] }}" value="{{ $upSell['sku'] }}"/>
                                         <h3 class="success-page__text">{{ $upSell['description'] }}</h3>
                                         <input type="radio" class="upCrossSellRadio" value="{{ $upSell['id_upcrosssell'] }}" id="rb-{{ $upSell['id_upcrosssell'] }}" name="upCrossSellId" @if($upSell['isBestOption']) checked @endif/>
                                         <label class="labelUpCrossSell" for="rb-{{ $upSell['id_upcrosssell'] }}">

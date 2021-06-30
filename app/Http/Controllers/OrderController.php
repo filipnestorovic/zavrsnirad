@@ -395,6 +395,7 @@ class OrderController extends Controller
             ($request->get('isCrossSell') != null) ? $this->modelOrder->is_cross_sell = $request->get('isCrossSell') : $this->modelOrder->is_cross_sell = 0;
 
             $data = $request->except('_token','orderIdUpCrossSell','variationIdUpCrossSell','upCrossSellId','sessionIdUpCrossSell','countryShortcode','countryId');
+            $sku = "";
             foreach($data as $key => $value) {
                 if(str_contains($key, 'hiddenPriceUpCrossSell') && $value != null) {
                     $crossupPrice = substr($key, strpos($key, "-") + 1);
@@ -420,6 +421,12 @@ class OrderController extends Controller
                         $this->modelOrder->product_id = $value;
                     }
                 }
+                if(str_contains($key, 'skuUpCrossSell') && $value != null) {
+                    $crossupSku = substr($key, strpos($key, "-") + 1);
+                    if($upcrosssell_id === $crossupSku) {
+                        $sku = $value;
+                    }
+                }
             }
 
             try {
@@ -427,12 +434,20 @@ class OrderController extends Controller
                 if($upCrossSellId) {
                     $this->data['order'] = $this->modelOrder->getOrderById($order_id, $firstOrderQuantity);
                     $upCrossSellDetails = $this->modelOrder->getupCrossSellOrder($upCrossSellId);
+                    $pricePerPiece = $upCrossSellDetails->UpCrossSellPrice/$upCrossSellDetails->UpCrossSellQuantity;
+                    $upCrossSellDetails = (array)$upCrossSellDetails;
+                    $upCrossSellDetails['id_upcrossell'] = $upcrosssell_id;
+                    $upCrossSellDetails['pricePerPiece'] = $pricePerPiece;
+                    $upCrossSellDetails['sku'] = $sku;
+                    $upCrossSellDetails['site'] = 'https://'.$request->getHost();
+                    $upCrossSellDetails = (object)$upCrossSellDetails;
+
                     try {
-                        $webhookResult = $this->sendWebhookUpCrossSell($request, $upCrossSellDetails);
+                        $webhookResult = $this->sendWebhookUpCrossSell($upCrossSellDetails);
                         if($webhookResult) {
                             return redirect()->back()->with('success', 1);
                         } else {
-
+                            //vidi response code, ukoliko treba prikazi gresku korisniku
                         }
                     } catch (\Exception $exception) {
                         Log::error("Error: UpCrossSell Webhook \nMessage: " . $exception->getMessage() . "\nDetails:". $upCrossSellId);
@@ -450,68 +465,29 @@ class OrderController extends Controller
         }
     }
 
-    public function sendWebhookUpCrossSell(Request $request, $upCrossSellDetails){
-//        dd($request->all());
+    public function sendWebhookUpCrossSell($upCrossSellDetails){
+
         $client = new GuzzleHttp\Client([
             'headers' => [ 'Content-Type' => 'application/json' ]
         ]);
 
         $jsonArray = array();
 
-        $jsonArray['site'] = $brandUrl;
-
-        $jsonArray['number'] = $orderDetails->id_order;
-        $jsonArray['date_created'] = $orderDetails->created_at;
-        $jsonArray['total'] = $orderDetails->price;
-        $jsonArray['shipping']['first_name'] = $orderDetails->name;
-        $jsonArray['shipping']['last_name'] = "";
-        $jsonArray['shipping']['address_1'] =  $orderDetails->street;
-        $jsonArray['shipping']['address_2'] =  "";
-        $jsonArray['shipping']['city'] = $orderDetails->city;
-        $jsonArray['shipping']['postcode'] = $orderDetails->zip;
-        $jsonArray['billing']['email'] = $orderDetails->email;
-        $jsonArray['billing']['phone'] = $orderDetails->phone;
-
-        if($orderDetails->is_free_shipping===1) {
-            $jsonArray['shipping_lines'] = array([
-                "method_id" => "free_shipping"
-            ]);
-        } else {
-            $jsonArray['shipping_lines'] = array([
-                "method_id" => "flat_rate"
-            ]);
-        }
-
-        $jsonArray['customer_note'] = "";
-
-        $jsonArray['line_items'] = array([
-            'sku' => $orderDetails->sku,
-            'quantity' => $orderDetails->quantity,
-            'subtotal' => $orderDetails->price,
-            'total' =>  $orderDetails->price,
-            'meta_data' => []
-        ]);
-
-
-        $webhookUrl = "";
-        switch($orderDetails->country_code) {
-            case "rs":
-                $webhookUrl = "https://new.serverwombat.com/api/orderWebhook";
-                break;
-            case "ba":
-                $webhookUrl = "https://ba.serverwombat.com/api/orderWebhook";
-                break;
-            default:
-                $webhookUrl = "https://new.serverwombat.com/api/orderWebhook";
-        }
+        $jsonArray['wToken'] = "AlI5hHY4Y4FaUgIDoMMSubRBCvlLCNQyJVfmHfMG";
+        $jsonArray['id_product_crossupsell'] = $upCrossSellDetails->id_upcrossell;
+        $jsonArray['brandOrderId'] = $upCrossSellDetails->order_id;
+        $jsonArray['sku'] = $upCrossSellDetails->sku;
+        $jsonArray['price'] = $upCrossSellDetails->pricePerPiece;
+        $jsonArray['quantity'] = $upCrossSellDetails->UpCrossSellQuantity;
+        $jsonArray['isFreeShippingClaimed'] = $upCrossSellDetails->free_shipping_upcrosssell;
+        $jsonArray['site'] = $upCrossSellDetails->site;
 
         try {
-            $response = $client->post($webhookUrl, ['body' => json_encode($jsonArray)]);
+            $response = $client->post("https://new.serverwombat.com/api/insertOrderCrossUpSellData", ['body' => json_encode($jsonArray)]);
             return $response;
         } catch(\Exception $exception) {
             Log::critical("Error: Webhook accepting error \nServer message: " . $exception->getMessage() . "\nJSON: " . json_encode($jsonArray, JSON_PRETTY_PRINT));
         }
     }
-
 
 }
