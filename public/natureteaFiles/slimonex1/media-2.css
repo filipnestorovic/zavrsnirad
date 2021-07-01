@@ -211,9 +211,8 @@
   .sec1__prod {
     position: relative;
     left: 0;
-
     display: block;
-    width: 55%;
+    width: 250px;
     margin: 20px auto;
   }
 
@@ -535,9 +534,8 @@
     top: auto;
     right: auto;
     z-index: 4;
-
     display: block;
-    width: 55%;
+    width: 200px;
     margin: 15px auto;
   }
 
@@ -1305,11 +1303,11 @@
   .sec8 .prod {
     position: relative;
     bottom: auto;
-    left: auto;
+    left: 60px;
     z-index: 8;
-
+    margin-top: 10px;
     display: block;
-    width: 160px;
+    width: 130px;
   }
 
   .sec8 .up_block {
@@ -1403,8 +1401,7 @@
   .sec10 .prod {
     position: relative;
     left: auto;
-
-    width: 55%;
+    width: 250px;
     margin: 10px auto 20px;
   }
 
@@ -1499,7 +1496,7 @@
     left: auto;
     z-index: 0;
 
-    width: 55%;
+    width: 250px;
     margin: 14px auto 20px;
   }
 

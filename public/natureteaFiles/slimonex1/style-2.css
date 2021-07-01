@@ -325,9 +325,8 @@ b {
   position: relative;
   right: 0;
   left: 0;
-
   display: block;
-  width: 205px;
+  width: 500px;
   margin: 0 auto 25px;
 }
 
@@ -1030,10 +1029,8 @@ p {
   right: -140px;
   bottom: 7px;
   z-index: 1;
-
   width: 710px;
-  height: 473px;
-
+  height: 410px;
   background: url("photo4.jpg") no-repeat;
 }
 
@@ -1103,10 +1100,9 @@ p {
 .sec3__grid .prod {
   position: absolute;
   top: -28px;
-  right: 120px;
-
+  right: 80px;
   display: block;
-  width: 200px;
+  width: 250px;
 }
 
 .sec3__grid .girl {
@@ -1947,11 +1943,11 @@ p {
 .sec8 .prod {
   position: absolute;
   bottom: -95px;
-  left: 325px;
+  left: 315px;
   z-index: 1;
 
   display: block;
-  width: 170px;
+  width: 230px;
 }
 
 .sec8 .up_block {
@@ -2017,15 +2013,14 @@ p {
 .sec9__container:before {
   content: "";
   position: absolute;
-  right: 90px;
-  bottom: 70px;
+  right: -90px;
+  bottom: -400px;
   z-index: 1;
-
   display: block;
-  width: 250px;
-  height: 450px;
+  width: 500px;
+  height: 900px;
 
-  background: url(prod.png) no-repeat;
+  background: url(prod2.png) no-repeat;
   -webkit-background-size: contain;
           background-size: contain;
 }
@@ -2375,11 +2370,10 @@ form .inp {
 
 .sec12__part:first-of-type .prod {
   position: relative;
-  left: 150px;
+  left: 80px;
   z-index: 0;
-
-  width: 250px;
-  margin-top: 38px;
+  width: 450px;
+  margin-top: 20px;
 }
 
 .sec6 .list {
@@ -2442,17 +2436,19 @@ form .inp {
 
   width: 100%;
   max-width: 415px;
+  z-index: 99;
 }
 
 .sec6 .prod {
   position: absolute;
-  top: 80px;
-  right: -319px;
+  top: 30px;
+  right: -250px;
+  width: 400px;
 }
 
 .sec10__part img {
   width: 250px;
-  margin-left: 130px;
+  margin-left: 80px;
 }
 
 @-moz-document url-prefix() {
