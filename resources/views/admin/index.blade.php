@@ -21,7 +21,7 @@
             <div class="col-xl-12 col-md-12">
                 <div class="card">
                     <div class="card-header text-center font-weight-bold text-uppercase py-3">
-                        Serbia - last orders
+                        Last orders
                     </div>
                     <div class="card-body">
                         <div id="tableStatistic" class="table-editable">

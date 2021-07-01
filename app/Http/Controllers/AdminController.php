@@ -103,6 +103,8 @@ class AdminController extends Controller
             } else {
                 return $paginatedItems;
             }
+        } else {
+            return "<p>Still no orders for selected country!</p>";
         }
     }
 

@@ -30,13 +30,13 @@
             {{--$('#fileName').html(file);--}}
         {{--});--}}
 
-        {{--$(document).ajaxStart(function () {--}}
-            {{--$("body").css("cursor", "wait");--}}
-            {{--$("#loading-spinner").fadeIn();--}}
-        {{--}).ajaxStop(function () {--}}
-            {{--$("body").css("cursor", "default");--}}
-            {{--$("#loading-spinner").fadeOut();--}}
-        {{--});--}}
+        $(document).ajaxStart(function () {
+            $("body").css("cursor", "not-allowed");
+            $("#loading-spinner").fadeIn();
+        }).ajaxStop(function () {
+            $("body").css("cursor", "default");
+            $("#loading-spinner").fadeOut();
+        });
 
 
         {{--window.formatAgoDate = function(){--}}

@@ -1,4 +1,4 @@
-@if(count($paginatedItems)>0)
+@if(count($paginatedItems->items())>1)
     <thead>
     <tr class="text-center">
         <th class="text-center">#</th>
@@ -51,10 +51,10 @@
         </tr>
     </tfoot>
 @else
-    {{--<tbody>--}}
-        {{--<tr class="text-center">--}}
-            {{--<th class="text-center">No orders for this country</th>--}}
-        {{--</tr>--}}
-    {{--</tbody>--}}
+    <thead>
+        <tr class="text-center">
+            <th class="text-center">No orders for this country</th>
+        </tr>
+    </thead>
 @endif
 
