@@ -226,7 +226,7 @@
                                 <div class="elScreenshot_text">
                                     <div class="elScreenshot_text_padding" style="padding: 0 10px">
                                         <h3 class="ne elScreenshot_text_headline ssHeadlineSize2" contenteditable="false" style="font-size: 12px; color: rgb(125, 125, 125);">
-                                            <b>POVRAĆAJ NOVCA U ROKU OD 30 DANA: </b><div>Ukoliko niste potpuno zadovoljni proizvodom - nudimo Vam povraćaj novca u roku od 30 dana za sve kupovine. Jednostavno nam pošaljite proizvod nazad i dobićete potpuni povraćaj novca ili zamenu proizvoda.</div>
+                                            <b>POVRAĆAJ NOVCA U ROKU OD 14 DANA: </b><div>Ukoliko niste potpuno zadovoljni proizvodom - nudimo Vam povraćaj novca u roku od 14 dana za sve kupovine. Jednostavno nam pošaljite proizvod nazad i dobićete potpuni povraćaj novca ili zamenu proizvoda.</div>
                                         </h3>
                                         <div class="ne elScreenshot_text_body ssBodySize1" contenteditable="false"></div>
                                     </div>

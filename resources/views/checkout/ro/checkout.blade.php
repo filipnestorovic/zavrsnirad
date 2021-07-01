@@ -226,7 +226,7 @@
                                 <div class="elScreenshot_text">
                                     <div class="elScreenshot_text_padding" style="padding: 0 10px">
                                         <h3 class="ne elScreenshot_text_headline ssHeadlineSize2" contenteditable="false" style="font-size: 12px; color: rgb(125, 125, 125);">
-                                            <b>RAMBURSĂRI ÎN 30 DE ZILE: </b><div>Dacă nu sunteți complet mulțumit de produs - vă oferim o rambursare în termen de 30 de zile pentru toate achizițiile. Pur și simplu trimiteți produsul înapoi la noi și veți primi o rambursare completă sau înlocuirea produsului.</div>
+                                            <b>RAMBURSĂRI ÎN 14 DE ZILE: </b><div>Dacă nu sunteți complet mulțumit de produs - vă oferim o rambursare în termen de 14 de zile pentru toate achizițiile. Pur și simplu trimiteți produsul înapoi la noi și veți primi o rambursare completă sau înlocuirea produsului.</div>
                                         </h3>
                                         <div class="ne elScreenshot_text_body ssBodySize1" contenteditable="false"></div>
                                     </div>

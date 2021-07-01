@@ -3,7 +3,7 @@
         <p>Wombat Media d.o.o.</p>
         <p>Živka Davidovića 13G, Beograd</p>
         <p>PIB: 112115089 | MB: 21610283</p>
-        <p><a target="_blank" href="http://zahtev.wombatsbrand.com/">Obrazac za odustanak od ugovora na daljinu</a></p>
+        <p><a target="_blank" href="http://forma.wombatsbrand.com/">Obrazac za odustanak od ugovora na daljinu</a></p>
         <p><a id="terms">Opšti uslovi</a> | <a id="policy">Politika privatnosti</a> | <a id="refund">Reklamacije</a></p>
     </div>
 </div>
@@ -13,10 +13,10 @@
         <span class="close">&times;</span>
         <div>
             <h1>Opšti uslovi</h1>
-            <p>Prodaja robe putem naše online prodavnice <b>flexonik.com</b> obavlja se u okviru registrovane delatnosti privrednog društva <b>Wombat Media doo Beograd , Zivka Davidovica 13g, 11050 Zvezdara, beograd, pib: 112115089, matični broj: 21610283</b></p>
+            <p>Prodaja robe putem naše online prodavnice <b>{{ substr($product->domain_url, 8) }}</b> obavlja se u okviru registrovane delatnosti privrednog društva <b>Wombat Media doo Beograd , Zivka Davidovica 13g, 11050 Zvezdara, beograd, pib: 112115089, matični broj: 21610283</b></p>
             <p>Roba koja se prodaje preko naše on line prodavnice poseduje svojstva potrebna za redovnu upotrebu te vrste robe u skladu sa njenom namenom koja je definisana u deklaraciji.</p>
             <p>Saobraznost robe ugovoru ISKLJUČIVO utvrđuje prema svojstvima i nameni robe kako je to definisano u deklaraciji.</p>
-            <p>Prodajna cena robe je naznačena uz svaki artikal, a mogućnost kupovine robe uz posebne cenovne pogodnosti ili uz posebne prodajne podsticaje (akcijska prodaja), obavlja se u skladu sa uslovima koji su objavljeni na <b>flexonik.com</b></p>
+            <p>Prodajna cena robe je naznačena uz svaki artikal, a mogućnost kupovine robe uz posebne cenovne pogodnosti ili uz posebne prodajne podsticaje (akcijska prodaja), obavlja se u skladu sa uslovima koji su objavljeni na <b>{{ substr($product->domain_url, 8) }}</b></p>
             <p>Nastojimo da budemo što precizniji u opisu proizvoda, prikazu slika i samih cena, ali ne možemo garantovati da su sve informacije kompletne i bez grešaka. Slike ne moraju biti 100% identične proizvodima. Svi artikli prikazani na sajtu su deo naše ponude i ne podrazumeva da su dostupni u svakom trenutku.</p>
         </div>
     </div>
@@ -28,7 +28,7 @@
         <div>
             <h1>Politika privatnosti</h1>
             <h4>1. Definicije politike privatnosti</h4>
-            <p>Ova Politika privatnosti reguliše praksu prikupljanja informacija od korisnika prilikom korišćenja internet stranice <b>flexonik.com</b>, kao i njihovo skladištenje u bazama podataka našeg preduzeća <b>Wombat Media doo Beograd</b>. Naša politika privatnosti obuhvata razloge kako i zašto sakupljamo, koristimo i štitimo Vaše lične podatke.</p>
+            <p>Ova Politika privatnosti reguliše praksu prikupljanja informacija od korisnika prilikom korišćenja internet stranice <b>{{ substr($product->domain_url, 8) }}</b>, kao i njihovo skladištenje u bazama podataka našeg preduzeća <b>Wombat Media doo Beograd</b>. Naša politika privatnosti obuhvata razloge kako i zašto sakupljamo, koristimo i štitimo Vaše lične podatke.</p>
             <p>Zadržavamo diskreciono pravo da ovu Politiku privatnosti možemo izmeniti u svako doba i da tako izmenjen tekst postane važeći odmah po objavi istog na Web sajtu.</p>
             <p>Nastavak Vašeg korišćenja naše internet prodavnice nakon izmena, podrazumeva da prihvatate sve uslove tako izmenjene Politike privatnosti. Stoga savetujemo korisnike da periodično ponovo detaljno pročitaju informacije sadržane u Politici privatnosti, kako bi bili informisani o eventualnim promenama.</p>
             <h4>2. Način prikupljanja i upotrebe podataka</h4>

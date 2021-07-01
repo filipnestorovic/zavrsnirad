@@ -15,6 +15,7 @@
     </thead>
     <tbody style="vertical-align: middle;">
     @foreach($paginatedItems as $singleVariation)
+        <tr></tr>
         <tr style="padding-top: 0px;">
             @isset($singleVariation['id_variation'])
                 <td>{{ isset($singleVariation['id_variation']) ? $singleVariation['id_variation'] : '' }}</td>
@@ -33,7 +34,7 @@
                     @endif
                 </td>
                 <td>{{ isset($singleVariation['orders_count']) ? $singleVariation['orders_count'] : '0' }}</td>
-                <td>{{ isset($singleVariation['orders_revenue']) ? $singleVariation['orders_revenue'] : '0' }} RSD</td>
+                <td>{{ isset($singleVariation['orders_revenue']) ? $singleVariation['orders_revenue'] : '0' }} {{ $singleVariation['currency'] }}</td>
                 <td>
                     <span class="table-edit"><a href="{{ route('variation',['id' => $singleVariation['id_variation']]) }}"><button type="button" class="btn btn-success btn-rounded btn-sm my-0">DETAILS</button></a></span>
                 </td>
@@ -41,16 +42,19 @@
         </tr>
     @endforeach
     </tbody>
-    {{--<tfoot>--}}
-    {{--<tr>--}}
-        {{--<td colspan="8">{{$paginatedItems->appends(request()->input())->render("pagination::bootstrap-4")}}</td>--}}
-    {{--</tr>--}}
-    {{--</tfoot>--}}
+    <tfoot>
+        <tr class="table-info">
+            <th colspan="7">Today</th>
+            <th>{{ $paginatedItems->values()->get(0)['todayOrders'] }}</th>
+            <th>{{ $paginatedItems->values()->get(0)['todayRevenue'] }} {{ $paginatedItems->values()->get(0)['currency'] }}</th>
+            <th></th>
+        </tr>
+    </tfoot>
 @else
     {{--<tbody>--}}
-    {{--<tr class="text-center">--}}
-        {{--<th class="text-center">No variations for selected criteria</th>--}}
-    {{--</tr>--}}
+        {{--<tr class="text-center">--}}
+            {{--<th class="text-center">No orders for this country</th>--}}
+        {{--</tr>--}}
     {{--</tbody>--}}
 @endif
 

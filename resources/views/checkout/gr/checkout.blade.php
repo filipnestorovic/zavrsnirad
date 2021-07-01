@@ -226,7 +226,7 @@
                                 <div class="elScreenshot_text">
                                     <div class="elScreenshot_text_padding" style="padding: 0 10px">
                                         <h3 class="ne elScreenshot_text_headline ssHeadlineSize2" contenteditable="false" style="font-size: 12px; color: rgb(125, 125, 125);">
-                                            <b>ΕΠΙΣΤΡΟΦΕΣ ΕΙΣΟΔΟΥ 30 ΜΕΡΕΣ: </b><div>Εάν δεν είστε απόλυτα ικανοποιημένοι με το προϊόν - σας προσφέρουμε επιστροφή χρημάτων εντός 30 ημερών για όλες τις αγορές. Απλώς στείλτε το προϊόν σε εμάς και θα λάβετε πλήρη επιστροφή χρημάτων ή αντικατάσταση του προϊόντος.</div>
+                                            <b>ΕΠΙΣΤΡΟΦΕΣ ΕΙΣΟΔΟΥ 14 ΜΕΡΕΣ: </b><div>Εάν δεν είστε απόλυτα ικανοποιημένοι με το προϊόν - σας προσφέρουμε επιστροφή χρημάτων εντός 14 ημερών για όλες τις αγορές. Απλώς στείλτε το προϊόν σε εμάς και θα λάβετε πλήρη επιστροφή χρημάτων ή αντικατάσταση του προϊόντος.</div>
                                         </h3>
                                         <div class="ne elScreenshot_text_body ssBodySize1" contenteditable="false"></div>
                                     </div>

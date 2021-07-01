@@ -226,7 +226,7 @@
                                 <div class="elScreenshot_text">
                                     <div class="elScreenshot_text_padding" style="padding: 0 10px">
                                         <h3 class="ne elScreenshot_text_headline ssHeadlineSize2" contenteditable="false" style="font-size: 12px; color: rgb(125, 125, 125);">
-                                            <b>Връщане в рамките на 30 дни: </b><div>Ако не си напълно удовлетворен от продукта – ние ти предлагаме връщане в рамките на 30 дни за всички покупки. Изпрати продукта обратно към нас и ще получиш пълно връщане на сумата или замяна на продукта.</div>
+                                            <b>Връщане в рамките на 14 дни: </b><div>Ако не си напълно удовлетворен от продукта – ние ти предлагаме връщане в рамките на 14 дни за всички покупки. Изпрати продукта обратно към нас и ще получиш пълно връщане на сумата или замяна на продукта.</div>
                                         </h3>
                                         <div class="ne elScreenshot_text_body ssBodySize1" contenteditable="false"></div>
                                     </div>

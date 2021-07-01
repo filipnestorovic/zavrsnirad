@@ -377,7 +377,7 @@
                                                 <img src="{{ asset('/') }}checkoutFiles/shared_files/thegadgetreview_guarantee.png" data-src="" alt="" class="img-view">
                                             </div>
                                             <div class="w_desc">
-                                                <p>{{ $product->brand_name }} daje rok od 30 dana za vraćanje neiskorišćenih paketa. Samo nam pošaljite proizvod nazad i dobićete zamenu ili potpuni povraćaj novca.</p>
+                                                <p>{{ $product->brand_name }} daje rok od 14 dana za vraćanje neiskorišćenih paketa. Samo nam pošaljite proizvod nazad i dobićete zamenu ili potpuni povraćaj novca.</p>
                                             </div>
                                         </div>
                                     </div>

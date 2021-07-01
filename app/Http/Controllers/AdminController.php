@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Pixel;
 use App\Models\Statistic;
 use App\Models\Variation;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Models;
 use App\Models\Country;
@@ -44,8 +45,19 @@ class AdminController extends Controller
         $messagesUnique = $collection->unique('variation_id')->slice(0,10);
         $uniqueVariation = $messagesUnique->values()->all();
 
+        $todayOrders = 0;
+        $todayRevenue = 0;
+        $orderDate = $collection->where('created_at','>=',Carbon::now()->toDateString());
+        if(count($orderDate) > 0) {
+            foreach($orderDate as $singleOrder) {
+                $todayOrders++;
+                $todayRevenue += $singleOrder->price;
+            }
+        }
+
         foreach($uniqueVariation as $order) {
             $singleVariationVisits = $this->modelStatistic->getSingleTestStatistic(null, null, $order->variation_id);
+            $array[0] = [];
             $array[$order->variation_id] = [];
             if(count($singleVariationVisits)>0) {
                 foreach ($singleVariationVisits as $key => $value) {
@@ -67,6 +79,12 @@ class AdminController extends Controller
                 }
                 $array[$order->variation_id]['orders_count'] = $allOrdersCount;
                 $array[$order->variation_id]['orders_revenue'] = $revenueTotal;
+
+                $selectedCountry = $this->modelCountry->getCountry($country_id);
+                $array[$order->variation_id]['currency'] = $selectedCountry->currency_symbol;
+                $array[0]['todayOrders'] = $todayOrders;
+                $array[0]['todayRevenue'] = $todayRevenue;
+                $array[0]['currency'] = $selectedCountry->currency_symbol;
             }
         }
 
