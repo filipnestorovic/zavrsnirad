@@ -6,6 +6,16 @@
             <li class="breadcrumb-item active" aria-current="page"></li>
         </ol>
     </nav>
+    <div class="card-body">
+        <div class="col-xl-12 col-md-12">
+            Country:
+            <select name="countryDdl" id="countryDdl" data-toggle="dropdown">
+                @foreach($countries as $country)
+                    <option value="{{ $country->id_country }}">{{ $country->country_name }}</option>
+                @endforeach
+            </select>
+        </div>
+    </div>
     <div class="mb-4 wow fadeIn">
         <div class="card-body d-sm-flex justify-content-between">
             <div class="col-xl-12 col-md-12">
@@ -27,34 +37,17 @@
 @endsection
 @section('scripts')
     <script>
-
         $(document).ready(function () {
-
-            function fetch_data(goToPage) {
-
+            function fetch_data() {
+                let country_id = $('#countryDdl').val();
                 let currentPage = 1;
-
-                if(goToPage){
-                    currentPage = goToPage;
-                }
-
-                if(currentPage==null||currentPage==""){
-                    currentPage = 1;
-                } else{
-                    currentPage = getQueryVariable("page");
-                }
-
                 $.ajax({
                     url: baseURL + "ajaxData/getActiveVariationsStatistic?page=" + currentPage,
-                    // data: {searchFilter:searchFilter, landerFilter:landerFilter, checkoutFilter:checkoutFilter, thankyouFilter: thankyouFilter, productFilter: productFilter, brandFilter:brandFilter},
+                    data: {country_id:country_id},
                     success: function (data) {
-                        // console.log(new Date().toLocaleString());
+                        console.log(data);
                         $('#tableStatisticAjax').html('');
                         $('#tableStatisticAjax').html(data);
-                        // $('[data-toggle="tooltip"]').tooltip();
-                        // $('[data-toggle="popover"]').popover({
-                        //     html: true
-                        // });
                     },
                     error: function (req, err) {
                         $('#errorMessageHeader').html('Error on getting variations list');
@@ -62,18 +55,9 @@
                     }
                 });
             }
-
             fetch_data();
             setInterval(fetch_data, 10000);
-
-            // $('body').on('click', function (e) {
-            //     $('[data-toggle=popover]').each(function () {
-            //         if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-            //             $(this).popover('hide');
-            //         }
-            //     });
-            // });
-
+            $('#countryDdl').change(fetch_data);
         });
     </script>
 @endsection

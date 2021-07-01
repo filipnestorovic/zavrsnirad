@@ -288,6 +288,12 @@
                 margin: 0px -10px 20px -10px !important;
             }
         }
+        .specialOfferHeading {
+
+        }
+        .specialOfferSubheading {
+
+        }
     </style>
 
 </head>
@@ -315,7 +321,8 @@
                         Proizvod je uspešeno dodat Vašoj porudžbini!
                     </div>
                 @else
-                    <h3 class="success-page__text">Super akcija samo sada</h3>
+                    <h3 class="success-page__text specialOfferHeading">ISKORISTI PONUDU KOJA SE NE PROPUŠTA</h3>
+                    <h3 class="success-page__text specialOfferSubheading">SAMO SADA</h3>
                     <br/>
                     @isset($upCrossSells)
                         <form action="/upCrossSellOrder" method="POST" id="upCrossSellOrderForm">

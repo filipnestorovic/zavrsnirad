@@ -12,6 +12,7 @@
     <link href="{{ asset('/') }}natureteaFiles/diabetea/animate.css" rel="stylesheet">
     <link href="{{ asset('/') }}natureteaFiles/diabetea/style.css" rel="stylesheet">
     <link href="{{ asset('/') }}natureteaFiles/diabetea/media.css" rel="stylesheet">
+    <link href="{{ asset('/') }}natureteaFiles/shared_files/logo.png" rel="icon" type="image/png">
 </head>
 <body>
 @include('components.display_errors')

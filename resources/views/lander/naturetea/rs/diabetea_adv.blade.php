@@ -6,6 +6,7 @@
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
     <link href="{{ asset('/') }}natureteaFiles/diabetea_adv/combined.css" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('/') }}natureteaFiles/shared_files/logo.png" rel="icon" type="image/png">
     <script type="text/javascript" src="{{ asset('/') }}shared_files/jquery-1.12.4.min.js"></script>
 </head>
 <body>

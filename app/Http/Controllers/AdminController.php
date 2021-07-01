@@ -22,10 +22,12 @@ class AdminController extends Controller
 //        $this->middleware('countryCheck');
         $this->modelStatistic = new Statistic();
         $this->modelVariation = new Variation();
+        $this->modelCountry = new Country();
     }
 
     public function admin() {
-        return view('admin.index');
+        $this->data['countries'] = $this->modelCountry->getAllCountries();
+        return view('admin.index', $this->data);
     }
 
     public function logout() {
@@ -35,7 +37,9 @@ class AdminController extends Controller
 
     public function getActiveVariationsStatistic(Request $request) {
 
-        $orders = $this->modelStatistic->getLastOrders( 1);
+        $country_id = $request->get('country_id');
+
+        $orders = $this->modelStatistic->getLastOrders($country_id);
         $collection = collect($orders);
         $messagesUnique = $collection->unique('variation_id')->slice(0,10);
         $uniqueVariation = $messagesUnique->values()->all();
