@@ -600,7 +600,7 @@ class HomeController extends Controller
             $token = 'EAACOQyyltp0BAIXMsezZAgrZBZBZCzVUoWjZCH20tK8UphZC2Fs8T4DldoaQTiuqgbrxoWeLBq08heeofvyASFehWNvM44kct7QRclpqrJh03bYzaBTHcsWxoRbZAu25NpDQqP8yHuZBJZBCaazyzxJR45r2zDlzeFqHbJ3mepDbOn8lZBjrC5jVlOZCU9Ogp6zMCRSXIQ7eOfaMwZDZD';
         }
 
-        $excludeCApi = ["937389627038619", "324231612589924","171186311596788","228655165563052"];
+        $excludeCApi = ["937389627038619", "324231612589924","171186311596788","228655165563052","486215135791311"];
         if(!in_array($pixel_id, $excludeCApi)) {
             $current_timestamp = Carbon::now()->unix();
             $random_number = $this->generateUuid(1);
