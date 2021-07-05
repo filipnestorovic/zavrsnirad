@@ -459,7 +459,8 @@ class OrderController extends Controller
                                     Log::error("Error: Session -  UpCrossSellPurchase - DB | Exception: " . $exception->getMessage());
                                 }
                             }
-                            return redirect()->back()->with('data', $upCrossSellDetails);
+                            return redirect()->to('/'.$originalOrder->slug.'/thankyou')->with('data', $upCrossSellDetails);
+//                            return redirect()->back()->with('data', $upCrossSellDetails);
                         } else {
                             return redirect()->back()->withErrors([$this->customerErrorMessage]);
                         }
