@@ -10,7 +10,7 @@
         let landerCheckout = $('#landerCheckout').val();
         let sentAddToCart = 0;
 
-        @if($fb_event === "Purchase" && $order != null)
+        @if(($fb_event === "Purchase" || $fb_event === "Purchase2") && $order != null)
              name = "{{ $order->name }}";
              email = "{{ $order->email }}";
              phone = "{{ $order->phone }}";
@@ -54,6 +54,10 @@
             if(landerCheckout === "1" && sentAddToCart === 0) {
                 sendEventDB(sessionId,2);
             }
+        });
+
+        $('#cancelUpCrossSell').click(function() {
+            sendEventDB(sessionId,11);
         });
 
         function sendEventDB($session_id, $event_id) {

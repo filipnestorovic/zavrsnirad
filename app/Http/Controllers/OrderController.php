@@ -432,7 +432,7 @@ class OrderController extends Controller
             try {
                 $upCrossSellId = $this->modelOrder->upCrossSellOrderInsert($order_id);
                 if($upCrossSellId) {
-                    $this->data['order'] = $this->modelOrder->getOrderById($order_id, $firstOrderQuantity);
+                    $originalOrder = $this->modelOrder->getOrderById($order_id, $firstOrderQuantity);
                     $upCrossSellDetails = $this->modelOrder->getupCrossSellOrder($upCrossSellId);
                     $pricePerPiece = $upCrossSellDetails->UpCrossSellPrice/$upCrossSellDetails->UpCrossSellQuantity;
                     $upCrossSellDetails = (array)$upCrossSellDetails;
@@ -440,12 +440,25 @@ class OrderController extends Controller
                     $upCrossSellDetails['pricePerPiece'] = $pricePerPiece;
                     $upCrossSellDetails['sku'] = $sku;
                     $upCrossSellDetails['site'] = 'https://'.$request->getHost();
+                    $upCrossSellDetails['product_name'] = $originalOrder->product_name;
+                    $upCrossSellDetails['brand_name'] = $originalOrder->brand_name;
+                    $upCrossSellDetails['country_code'] = $originalOrder->country_code;
+                    $upCrossSellDetails['currency_code'] = $originalOrder->currency_code;
+                    $upCrossSellDetails['currency_symbol'] = $originalOrder->currency_symbol;
+                    $upCrossSellDetails['amount'] = $upCrossSellDetails['UpCrossSellPrice'];
                     $upCrossSellDetails = (object)$upCrossSellDetails;
 
                     try {
                         $webhookResult = $this->sendWebhookUpCrossSell($upCrossSellDetails);
                         if($webhookResult) {
-                            return redirect()->back()->with('success', 1);
+                            if(isset($session_id)) {
+                                try {
+                                    $this->modelEvent->insertSessionEvent($session_id, 10);
+                                } catch (\Exception $exception) {
+                                    Log::error("Error: Session -  UpCrossSellPurchase - DB | Exception: " . $exception->getMessage());
+                                }
+                            }
+                            return redirect()->back()->with('data', $upCrossSellDetails);
                         } else {
                             //vidi response code, ukoliko treba prikazi gresku korisniku
                             return redirect()->back()->withErrors([$this->customerErrorMessage]);

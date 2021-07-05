@@ -296,7 +296,25 @@ class HomeController extends Controller
             return abort('404');
         }
 
-        $this->data['fb_event'] = "Purchase";
+        if(isset($this->data['order']->id_up_cross_sell)) {
+            $this->data['fb_event'] = "Purchase2";
+            $this->data['successUpCrossSell'] = 1;
+        } else {
+            $this->data['fb_event'] = "Purchase";
+        }
+
+        switch ($this->returnedData['thankyouView']) {
+            case "thankyouupsell":
+            case "thankyoucrosssell":
+                if(isset($this->customerData['session_id'])) {
+                    try {
+                        $this->modelEvent->insertSessionEvent($this->customerData['session_id'], 9);
+                    } catch (\Exception $exception) {
+                        Log::error("Error: Session - UpCrossSell view - DB | Exception: " . $exception->getMessage());
+                    }
+                }
+                break;
+        }
 
         $this->data['landerView'] = $this->returnedData['landerView'];
         return view($this->returnedData['thankyouView'], $this->data);

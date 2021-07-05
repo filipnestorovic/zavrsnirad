@@ -28,10 +28,11 @@
         </div>
         <div class="success-page__body">
             <div class="success-page__body-wrapper">
-                @if (session('success'))
+                @if(isset($successUpCrossSell))
                     <div class="alert alert-success">
                         Hvala! Proizvod je uspešeno dodat Vašoj porudžbini!
                     </div>
+                    <br>
                 @else
                     <h3 class="success-page__text specialOfferHeading">ISKORISTI PONUDU KOJA SE NE PROPUŠTA</h3>
                     <h3 class="success-page__text specialOfferSubheading">SAMO SADA</h3>
