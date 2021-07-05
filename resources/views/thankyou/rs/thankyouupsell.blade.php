@@ -30,7 +30,7 @@
             <div class="success-page__body-wrapper">
                 @if (session('success'))
                     <div class="alert alert-success">
-                        Proizvod je uspešeno dodat Vašoj porudžbini!
+                        Hvala! Proizvod je uspešeno dodat Vašoj porudžbini!
                     </div>
                 @else
                     <h3 class="success-page__text specialOfferHeading">ISKORISTI PONUDU KOJA SE NE PROPUŠTA</h3>
