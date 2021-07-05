@@ -13,7 +13,7 @@
     <link rel=stylesheet href="{{ asset('/') }}natureteaFiles/arterotea/libs.min.css">
     <link rel=stylesheet href="{{ asset('/') }}natureteaFiles/arterotea/styles.min.css">
     {{--<script src="shared_files/js/custom-functions2.min33e7.js?28" defer></script>--}}
-    </head>
+</head>
 <body>
 <div id=top_anch> </div>
 <header>

@@ -448,6 +448,7 @@ class OrderController extends Controller
                             return redirect()->back()->with('success', 1);
                         } else {
                             //vidi response code, ukoliko treba prikazi gresku korisniku
+                            return redirect()->back()->withErrors([$this->customerErrorMessage]);
                         }
                     } catch (\Exception $exception) {
                         Log::error("Error: UpCrossSell Webhook \nMessage: " . $exception->getMessage() . "\nDetails:". $upCrossSellId);
