@@ -228,7 +228,7 @@ class HomeController extends Controller
             $this->data['orderRoute'] = '/order';
             $this->customerData['variation_id'] = $this->returnedData['variationId'];
 
-//            $this->data['upCrossSells'] = $this->getProductUpAndCrossSells($product->sku, $country_id);
+            $this->data['upCrossSells'] = $this->getProductUpAndCrossSells($product->sku, $country_id);
 
             $this->customerData['uuid'] = $request->session()->get('uuid');
 

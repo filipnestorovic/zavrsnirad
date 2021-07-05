@@ -22,7 +22,7 @@
                 <p class="success-page__message_success">
                     Vaša porudžbina sa brojem <b>#{{ $order->id_order }}</b> je prihvaćena i uskoro će biti spremna za slanje!
                     <br>
-                    Molimo proverite uneti broj telefona jer će Vas uskoro kontaktirati naša korisnička služba kako bi dogovorili detalje isporuke.
+                    {{--Molimo proverite uneti broj telefona jer će Vas uskoro kontaktirati naša korisnička služba kako bi dogovorili detalje isporuke.--}}
                 </p>
             </div>
         </div>
