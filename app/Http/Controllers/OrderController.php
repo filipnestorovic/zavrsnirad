@@ -480,27 +480,39 @@ class OrderController extends Controller
     }
 
     public function sendWebhookUpCrossSell($upCrossSellDetails){
-
         $client = new GuzzleHttp\Client([
-            'headers' => [ 'Content-Type' => 'application/json' ]
+//            'headers' => [ 'Content-Type' => 'application/json' ]
         ]);
 
-        $jsonArray = array();
+//        $jsonArray = array();
+//
+//        $jsonArray['wToken'] = "AlI5hHY4Y4FaUgIDoMMSubRBCvlLCNQyJVfmHfMG";
+//        $jsonArray['id_product_crossupsell'] = $upCrossSellDetails->id_upcrossell;
+//        $jsonArray['brandOrderId'] = $upCrossSellDetails->order_id;
+//        $jsonArray['sku'] = $upCrossSellDetails->sku;
+//        $jsonArray['price'] = $upCrossSellDetails->pricePerPiece;
+//        $jsonArray['quantity'] = $upCrossSellDetails->UpCrossSellQuantity;
+//        $jsonArray['isFreeShippingClaimed'] = $upCrossSellDetails->free_shipping_upcrosssell;
+//        $jsonArray['site'] = $upCrossSellDetails->site;
 
-        $jsonArray['wToken'] = "AlI5hHY4Y4FaUgIDoMMSubRBCvlLCNQyJVfmHfMG";
-        $jsonArray['id_product_crossupsell'] = $upCrossSellDetails->id_upcrossell;
-        $jsonArray['brandOrderId'] = $upCrossSellDetails->order_id;
-        $jsonArray['sku'] = $upCrossSellDetails->sku;
-        $jsonArray['price'] = $upCrossSellDetails->pricePerPiece;
-        $jsonArray['quantity'] = $upCrossSellDetails->UpCrossSellQuantity;
-        $jsonArray['isFreeShippingClaimed'] = $upCrossSellDetails->free_shipping_upcrosssell;
-        $jsonArray['site'] = $upCrossSellDetails->site;
+        $queryParams = [
+            'wToken=AlI5hHY4Y4FaUgIDoMMSubRBCvlLCNQyJVfmHfMG',
+            'id_product_crossupsell='.$upCrossSellDetails->id_upcrossell,
+            'brandOrderId='.$upCrossSellDetails->order_id,
+            'sku='.$upCrossSellDetails->sku,
+            'price='.$upCrossSellDetails->pricePerPiece,
+            'quantity='.$upCrossSellDetails->UpCrossSellQuantity,
+            'isFreeShippingClaimed='.$upCrossSellDetails->free_shipping_upcrosssell,
+            'site='.$upCrossSellDetails->site,
+        ];
 
         try {
-            $response = $client->post("https://new.serverwombat.com/api/insertOrderCrossUpSellData", ['body' => json_encode($jsonArray)]);
+//            $response = $client->post("https://new.serverwombat.com/api/insertOrderCrossUpSellData", ['body' => json_encode($jsonArray)]);
+            $content = implode('&', $queryParams);
+            $response = $client->request('POST', 'ttps://new.serverwombat.com/api/insertOrderCrossUpSellData', [], [], ['HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'], $content);
             return $response;
         } catch(\Exception $exception) {
-            Log::critical("Error: Webhook accepting error \nServer message: " . $exception->getMessage() . "\nJSON: " . json_encode($jsonArray, JSON_PRETTY_PRINT));
+            Log::critical("Error: UpCrossSell Webhook error \nServer message: " . $exception->getMessage() . "\nDETAILS: " .$queryParams);
         }
     }
 

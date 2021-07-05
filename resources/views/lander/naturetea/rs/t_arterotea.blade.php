@@ -5,10 +5,9 @@
     <meta http-equiv=X-UA-Compatible content="IE=edge">
     <meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-    
+    <style>@font-face{font-family:PTSansBold;src:url({{asset('/')}}fonts/PTSansBold.eot);src:url({{asset('/')}}fonts/PTSansBoldd41d.eot?#iefix) format("embedded-opentype"),url({{asset('/')}}fonts/PTSansBold.woff2) format("woff2"),url({{asset('/')}}fonts/PTSansBold.woff) format("woff"),url({{asset('/')}}fonts/PTSansBold.ttf) format("truetype"),url({{asset('/')}}fonts/PTSansBoldd41d.svg?#PTSansBold) format("svg");font-weight:400;font-style:normal}@font-face{font-family:PTSansBoldItalic;src:url({{asset('/')}}fonts/PTSansBoldItalic.eot);src:url({{asset('/')}}fonts/PTSansBoldItalicd41d.eot?#iefix) format("embedded-opentype"),url({{asset('/')}}fonts/PTSansBoldItalic.woff2) format("woff2"),url({{asset('/')}}fonts/PTSansBoldItalic.woff) format("woff"),url({{asset('/')}}fonts/PTSansBoldItalic.ttf) format("truetype"),url({{asset('/')}}fonts/PTSansBoldItalicd41d.svg?#PTSansBoldItalic) format("svg");font-weight:400;font-style:normal}@font-face{font-family:PTSansRegular;src:url({{asset('/')}}fonts/PTSansRegular.eot);src:url({{asset('/')}}fonts/PTSansRegulard41d.eot?#iefix) format("embedded-opentype"),url({{asset('/')}}fonts/PTSansRegular.woff2) format("woff2"),url({{asset('/')}}fonts/PTSansRegular.woff) format("woff"),url({{asset('/')}}fonts/PTSansRegular.ttf) format("truetype"),url({{asset('/')}}fonts/PTSansRegulard41d.svg?#PTSansRegular) format("svg");font-weight:400;font-style:normal}@font-face{font-family:PTSansItalic;src:url({{asset('/')}}fonts/PTSansItalic.eot);src:url({{asset('/')}}fonts/PTSansItalicd41d.eot?#iefix) format("embedded-opentype"),url({{asset('/')}}fonts/PTSansItalic.woff2) format("woff2"),url({{asset('/')}}fonts/PTSansItalic.woff) format("woff"),url({{asset('/')}}fonts/PTSansItalic.ttf) format("truetype"),url({{asset('/')}}fonts/PTSansItalicd41d.svg?#PTSansItalic) format("svg");font-weight:400;font-style:normal}</style>
     <link rel=icon type="image/png" href="{{ asset('/') }}natureteaFiles/arterotea/logo.png">
     <link rel=stylesheet href="{{ asset('/') }}natureteaFiles/arterotea/bootstrap.min.css">
-    <link rel=stylesheet href="{{ asset('/') }}natureteaFiles/arterotea/fonts.min.css">
     <link rel=stylesheet href="{{ asset('/') }}natureteaFiles/arterotea/header.min.css">
     <link rel=stylesheet href="{{ asset('/') }}natureteaFiles/arterotea/libs.min.css">
     <link rel=stylesheet href="{{ asset('/') }}natureteaFiles/arterotea/styles.min.css">
@@ -17,62 +16,62 @@
 <body>
 <div id=top_anch> </div>
 <header>
-    <div class="top-line kma-oldmenu-test">
-        <div class=container>
-            <div class=row>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class=top-block>
-                        <div class=logo><a href=""><img src="{{ asset('/') }}natureteaFiles/arterotea/logo.png" alt="Arterotea"></a></div>
-                        <div class="slogan-block hidden-xs hidden-sm">
-                            <div class="slogan-item item1">
-                                <div class=bolditalic>Более 800 000</div>
-                                <div class=italic>положительных отзывов</div>
-                            </div>
-                            <div class="slogan-item item2">
-                                <div class=bolditalic>Клинически</div>
-                                <div class=bolditalic>протестирован</div>
-                            </div>
-                        </div>
-                        <div class="top-timer timer hidden-xs hidden-sm hidden-md">
-                            <div class=timer-header>До конца акции осталось:</div>
-                            <div class=clock-top></div>
-                        </div>
-                        <div class="top-btn hidden-xs">
-                            <div class=btn-header>Звонок бесплатный по России и СНГ</div><a href="#pu-form" class="btn call-form">Заказать звонок</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="top-line kma-newmenu-test">
-        <div class=container>
-            <div class=row>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class=top-block>
-                        <div class=logo><a href="#top_anch"><img src="{{ asset('/') }}natureteaFiles/arterotea/logo.png" alt="Arterotea"></a></div>
-                        <nav class=nav>
-                            <li>
-                                <a href="#use">Действие</a>
-                            </li>
-                            <li>
-                                <a href="#sost">Состав</a>
-                            </li>
-                            <li>
-                                <a href="#rev">Отзывы</a>
-                            </li>
-                            <li>
-                                <a href="#dost">Доставка</a>
-                            </li>
-                        </nav>
-                        <div class=top-btn>
-                            <div class=btn-header>Звонок бесплатный по России и СНГ</div><a href="#pu-form" class="kma-newmenu-button-test btn call-form">Заказать звонок</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    {{--<div class="top-line kma-oldmenu-test">--}}
+        {{--<div class=container>--}}
+            {{--<div class=row>--}}
+                {{--<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">--}}
+                    {{--<div class=top-block>--}}
+                        {{--<div class=logo><a href=""><img src="{{ asset('/') }}natureteaFiles/arterotea/logo.png" alt="Arterotea"></a></div>--}}
+                        {{--<div class="slogan-block hidden-xs hidden-sm">--}}
+                            {{--<div class="slogan-item item1">--}}
+                                {{--<div class=bolditalic>Более 800 000</div>--}}
+                                {{--<div class=italic>положительных отзывов</div>--}}
+                            {{--</div>--}}
+                            {{--<div class="slogan-item item2">--}}
+                                {{--<div class=bolditalic>Клинически</div>--}}
+                                {{--<div class=bolditalic>протестирован</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                        {{--<div class="top-timer timer hidden-xs hidden-sm hidden-md">--}}
+                            {{--<div class=timer-header>До конца акции осталось:</div>--}}
+                            {{--<div class=clock-top></div>--}}
+                        {{--</div>--}}
+                        {{--<div class="top-btn hidden-xs">--}}
+                            {{--<div class=btn-header>Звонок бесплатный по России и СНГ</div><a href="#pu-form" class="btn call-form">Заказать звонок</a>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
+    {{--<div class="top-line kma-newmenu-test">--}}
+        {{--<div class=container>--}}
+            {{--<div class=row>--}}
+                {{--<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">--}}
+                    {{--<div class=top-block>--}}
+                        {{--<div class=logo><a href="#top_anch"><img src="{{ asset('/') }}natureteaFiles/arterotea/logo.png" alt="Arterotea"></a></div>--}}
+                        {{--<nav class=nav>--}}
+                            {{--<li>--}}
+                                {{--<a href="#use">Действие</a>--}}
+                            {{--</li>--}}
+                            {{--<li>--}}
+                                {{--<a href="#sost">Состав</a>--}}
+                            {{--</li>--}}
+                            {{--<li>--}}
+                                {{--<a href="#rev">Отзывы</a>--}}
+                            {{--</li>--}}
+                            {{--<li>--}}
+                                {{--<a href="#dost">Доставка</a>--}}
+                            {{--</li>--}}
+                        {{--</nav>--}}
+                        {{--<div class=top-btn>--}}
+                            {{--<div class=btn-header>Звонок бесплатный по России и СНГ</div><a href="#pu-form" class="kma-newmenu-button-test btn call-form">Заказать звонок</a>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
     <div class=header-body>
         <div class=container>
             <div class=row>
@@ -774,27 +773,27 @@
                 </div>
             </div>
         </div>
-        <div class=video-reviews>
-            <div class=container>
-                <div class=row>
-                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                        <div class=video-reviews-item>
-                            <div data-type=youtube data-video-id=9GbpEqh-NM8></div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                        <div class=video-reviews-item>
-                            <div data-type=youtube data-video-id=M71Dwc7yxXk></div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                        <div class=video-reviews-item>
-                            <div data-type=youtube data-video-id=rFbQerCL54Q></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {{--<div class=video-reviews>--}}
+            {{--<div class=container>--}}
+                {{--<div class=row>--}}
+                    {{--<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">--}}
+                        {{--<div class=video-reviews-item>--}}
+                            {{--<div data-type=youtube data-video-id=9GbpEqh-NM8></div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">--}}
+                        {{--<div class=video-reviews-item>--}}
+                            {{--<div data-type=youtube data-video-id=M71Dwc7yxXk></div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">--}}
+                        {{--<div class=video-reviews-item>--}}
+                            {{--<div data-type=youtube data-video-id=rFbQerCL54Q></div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
         <div class=text-reviews>
             <div class=container>
                 <div class=row>
@@ -835,7 +834,7 @@
                     </div>
                 </div>
                 <div class=row>
-                    {{--<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">--}}
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                         {{--<div class=audio-reviews-items>--}}
                             {{--<div class=audio-reviews-item>--}}
                                 {{--<div class=audio-reviews-title>Евгения Михайловна</div>--}}
@@ -856,7 +855,7 @@
                                 {{--</audio>--}}
                             {{--</div>--}}
                         {{--</div>--}}
-                    {{--</div>--}}
+                    </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                         <div class=diag-img><img src="{{ asset('/') }}natureteaFiles/arterotea/diag.png" alt="Arterotea"></div>
                     </div>
@@ -884,110 +883,110 @@
             </div>
         </div>
     </section>
-    <section class=team>
-        <div class=container>
-            <div class=row>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <h2>Официальный интернет-магазин <br class="hidden-xs hidden-sm">Холемин® — работаем для Вас!</h2>
-                </div>
-            </div>
-            <div class=row>
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                    <div class=team-item>
-                        <div class=team-img><img src="{{ asset('/') }}natureteaFiles/arterotea/t01.png" alt="Arterotea"></div>
-                        <div class=team-header>
-                            <div class=bold>Андрей Полукаров</div>
-                            <div>Директор <br>по качеству</div>
-                        </div>
-                        <div class="team-descr italic">“Мы не экономим на качестве, поэтому для производства используются лучшие ингредиенты и технологии”</div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                    <div class=team-item>
-                        <div class=team-img><img src="{{ asset('/') }}natureteaFiles/arterotea/t02.png" alt="Arterotea"></div>
-                        <div class=team-header>
-                            <div class=bold>Анна Семенова</div>
-                            <div>Директор <br>колл-центра</div>
-                        </div>
-                        <div class="team-descr italic">“Оставьте свой номер, и наши специалисты подробно расскажут Вам, как получить заказ и правильно использовать средство”</div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                    <div class=team-item>
-                        <div class=team-img><img src="{{ asset('/') }}natureteaFiles/arterotea/t03.png" alt="Arterotea"></div>
-                        <div class=team-header>
-                            <div class=bold>Даниил Типаков</div>
-                            <div>Руководитель службы <br>доставки</div>
-                        </div>
-                        <div class="team-descr italic">“Ваш заказ будет доставлен в сжатые сроки, чтобы Вы могли как можно скорее начать использовать Холемин®”</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class=fact>
-        <div class=container>
-            <div class=row>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <h2>Факты о нас</h2>
-                </div>
-            </div>
-            <div class=row>
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                    <div class=fact-item>
-                        <div class="fact-title bold">12 лет</div>
-                        <div class=fact-text>на рынке средств для здоровья и долголетия</div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                    <div class=fact-item>
-                        <div class="fact-title bold">85%</div>
-                        <div class=fact-text>клиентов рекомендуют нас своим друзьям</div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                    <div class=fact-item>
-                        <div class="fact-title bold">4 700 000+</div>
-                        <div class=fact-text>человек вернули здоровье с нашей помощью</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class=into>
-        <div class=container>
-            <div class=row>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <h2>9 000 000 долларов вложено в создание средства Холемин®</h2>
-                </div>
-            </div>
-            <div class=row>
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                    <div class=into-item>
-                        <div class="into-title bold">4 года</div>
-                        <div class=into-text><span class=bold>Формула дорабатывалась </span>на протяжении 4 лет в <span class=bold>независимых </span>исследовательских <span class=bold>лабораториях.</span></div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                    <div class=into-item>
-                        <div class="into-title bold">90%</div>
-                        <div class=into-text><span class=bold>Более 90% </span>ингредиентов добываются в <span class=bold>ограниченных </span>количествах в <span class=bold>труднодоступных </span>районах <span class=bold>мира.</span></div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                    <div class=into-item>
-                        <div class="into-title bold">Качество ЕС</div>
-                        <div class=into-text><span class=bold>Для производства </span>средства закуплена <span class=bold>линия</span>, отвечающая <span class=bold>международным стандартам </span>в области <span class=bold>качества.</span></div>
-                    </div>
-                </div>
-            </div>
-            <div class=row>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="into-footer bold">На время проведения промо-акции в России и СНГ установлена специальная <br class="hidden-xs hidden-sm">цена на Холемин® <span class=price_land_s1>67</span> <span class=price_land_curr>L</span> вместо <span class=into-new><span class=price_land_s4>798</span> <span class=price_land_curr>L</span>*</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
+    {{--<section class=team>--}}
+        {{--<div class=container>--}}
+            {{--<div class=row>--}}
+                {{--<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">--}}
+                    {{--<h2>Официальный интернет-магазин <br class="hidden-xs hidden-sm">Холемин® — работаем для Вас!</h2>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<div class=row>--}}
+                {{--<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">--}}
+                    {{--<div class=team-item>--}}
+                        {{--<div class=team-img><img src="{{ asset('/') }}natureteaFiles/arterotea/t01.png" alt="Arterotea"></div>--}}
+                        {{--<div class=team-header>--}}
+                            {{--<div class=bold>Андрей Полукаров</div>--}}
+                            {{--<div>Директор <br>по качеству</div>--}}
+                        {{--</div>--}}
+                        {{--<div class="team-descr italic">“Мы не экономим на качестве, поэтому для производства используются лучшие ингредиенты и технологии”</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">--}}
+                    {{--<div class=team-item>--}}
+                        {{--<div class=team-img><img src="{{ asset('/') }}natureteaFiles/arterotea/t02.png" alt="Arterotea"></div>--}}
+                        {{--<div class=team-header>--}}
+                            {{--<div class=bold>Анна Семенова</div>--}}
+                            {{--<div>Директор <br>колл-центра</div>--}}
+                        {{--</div>--}}
+                        {{--<div class="team-descr italic">“Оставьте свой номер, и наши специалисты подробно расскажут Вам, как получить заказ и правильно использовать средство”</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">--}}
+                    {{--<div class=team-item>--}}
+                        {{--<div class=team-img><img src="{{ asset('/') }}natureteaFiles/arterotea/t03.png" alt="Arterotea"></div>--}}
+                        {{--<div class=team-header>--}}
+                            {{--<div class=bold>Даниил Типаков</div>--}}
+                            {{--<div>Руководитель службы <br>доставки</div>--}}
+                        {{--</div>--}}
+                        {{--<div class="team-descr italic">“Ваш заказ будет доставлен в сжатые сроки, чтобы Вы могли как можно скорее начать использовать Холемин®”</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</section>--}}
+    {{--<section class=fact>--}}
+        {{--<div class=container>--}}
+            {{--<div class=row>--}}
+                {{--<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">--}}
+                    {{--<h2>Факты о нас</h2>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<div class=row>--}}
+                {{--<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">--}}
+                    {{--<div class=fact-item>--}}
+                        {{--<div class="fact-title bold">12 лет</div>--}}
+                        {{--<div class=fact-text>на рынке средств для здоровья и долголетия</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">--}}
+                    {{--<div class=fact-item>--}}
+                        {{--<div class="fact-title bold">85%</div>--}}
+                        {{--<div class=fact-text>клиентов рекомендуют нас своим друзьям</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">--}}
+                    {{--<div class=fact-item>--}}
+                        {{--<div class="fact-title bold">4 700 000+</div>--}}
+                        {{--<div class=fact-text>человек вернули здоровье с нашей помощью</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</section>--}}
+    {{--<section class=into>--}}
+        {{--<div class=container>--}}
+            {{--<div class=row>--}}
+                {{--<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">--}}
+                    {{--<h2>9 000 000 долларов вложено в создание средства Холемин®</h2>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<div class=row>--}}
+                {{--<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">--}}
+                    {{--<div class=into-item>--}}
+                        {{--<div class="into-title bold">4 года</div>--}}
+                        {{--<div class=into-text><span class=bold>Формула дорабатывалась </span>на протяжении 4 лет в <span class=bold>независимых </span>исследовательских <span class=bold>лабораториях.</span></div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">--}}
+                    {{--<div class=into-item>--}}
+                        {{--<div class="into-title bold">90%</div>--}}
+                        {{--<div class=into-text><span class=bold>Более 90% </span>ингредиентов добываются в <span class=bold>ограниченных </span>количествах в <span class=bold>труднодоступных </span>районах <span class=bold>мира.</span></div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">--}}
+                    {{--<div class=into-item>--}}
+                        {{--<div class="into-title bold">Качество ЕС</div>--}}
+                        {{--<div class=into-text><span class=bold>Для производства </span>средства закуплена <span class=bold>линия</span>, отвечающая <span class=bold>международным стандартам </span>в области <span class=bold>качества.</span></div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<div class=row>--}}
+                {{--<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">--}}
+                    {{--<div class="into-footer bold">На время проведения промо-акции в России и СНГ установлена специальная <br class="hidden-xs hidden-sm">цена на Холемин® <span class=price_land_s1>67</span> <span class=price_land_curr>L</span> вместо <span class=into-new><span class=price_land_s4>798</span> <span class=price_land_curr>L</span>*</span></div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</section>--}}
     <section class=how id=dost>
         <div class=container>
             <div class=row>
@@ -1030,39 +1029,39 @@
             </div>
         </div>
     </section>
-    <section class=map>
-        <div class=container>
-            <div class=row>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <h2>Мы доставим Ваш заказ в любую <br class="hidden-xs hidden-sm">точку России, СНГ и Европы!</h2>
-                </div>
-            </div>
-            <div class=row>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class=map-block><img src="{{ asset('/') }}natureteaFiles/arterotea/map.png" alt="Arterotea"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class=s-text01>
-        <div class=container>
-            <div class=row>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <h2>Если тянуть время, холестерин искалечит <br class="hidden-xs hidden-sm">сосуды и приведет к смерти</h2>
-                </div>
-            </div>
-            <div class=row>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class=text>
-                        <p>
-                            Если не начать <span class=bold>снижать холестерин прямо сейчас</span>, то скоро <span class=bold>сосуды </span>будут необратимо <span class=bold>изношены и искалечены</span>, а человека <span class=bold>неизбежно </span>ждет <span class=bold>атеросклероз</span>, инфаркт или <span class=bold>кровоизлияние в мозг!</span>
-                        </p>
-                        <p>Стоит ли дожидаться <span class=bold>тяжелых последствий </span>высокого холестерина, если <span class=bold>эффективное и доступное </span>средство лежит прямо <span class=bold>перед Вами</span>? Просто <span class=bold>возьмите Холемин® </span>и приведите <span class=bold>холестерин</span>, сосуды и <span class=bold>давление </span>в норму <span class=bold>за 1 курс!</span></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    {{--<section class=map>--}}
+        {{--<div class=container>--}}
+            {{--<div class=row>--}}
+                {{--<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">--}}
+                    {{--<h2>Мы доставим Ваш заказ в любую <br class="hidden-xs hidden-sm">точку России, СНГ и Европы!</h2>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<div class=row>--}}
+                {{--<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">--}}
+                    {{--<div class=map-block><img src="{{ asset('/') }}natureteaFiles/arterotea/map.png" alt="Arterotea"></div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</section>--}}
+    {{--<section class=s-text01>--}}
+        {{--<div class=container>--}}
+            {{--<div class=row>--}}
+                {{--<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">--}}
+                    {{--<h2>Если тянуть время, холестерин искалечит <br class="hidden-xs hidden-sm">сосуды и приведет к смерти</h2>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<div class=row>--}}
+                {{--<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">--}}
+                    {{--<div class=text>--}}
+                        {{--<p>--}}
+                            {{--Если не начать <span class=bold>снижать холестерин прямо сейчас</span>, то скоро <span class=bold>сосуды </span>будут необратимо <span class=bold>изношены и искалечены</span>, а человека <span class=bold>неизбежно </span>ждет <span class=bold>атеросклероз</span>, инфаркт или <span class=bold>кровоизлияние в мозг!</span>--}}
+                        {{--</p>--}}
+                        {{--<p>Стоит ли дожидаться <span class=bold>тяжелых последствий </span>высокого холестерина, если <span class=bold>эффективное и доступное </span>средство лежит прямо <span class=bold>перед Вами</span>? Просто <span class=bold>возьмите Холемин® </span>и приведите <span class=bold>холестерин</span>, сосуды и <span class=bold>давление </span>в норму <span class=bold>за 1 курс!</span></p>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</section>--}}
     <section class=s-end>
         <div class=container>
             <div class=row>
