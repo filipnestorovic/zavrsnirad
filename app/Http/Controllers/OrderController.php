@@ -387,12 +387,13 @@ class OrderController extends Controller
         try {
             $order_id = $request->get('orderIdUpCrossSell');
             $this->modelOrder->variation_id = $request->get('variationIdUpCrossSell');
-            $this->modelOrder->session_id = $request->get('sessionIdUpCrossSell');
+            $session_id = $request->get('sessionIdUpCrossSell');
             $this->modelOrder->country_id = $request->get('countryId');
             $upcrosssell_id = $request->get('upCrossSellId');
             $firstOrderQuantity = $request->get('firstOrderQuantity');
             ($request->get('isUpSell') != null) ? $this->modelOrder->is_up_sell = $request->get('isUpSell') : $this->modelOrder->is_up_sell = 0;
             ($request->get('isCrossSell') != null) ? $this->modelOrder->is_cross_sell = $request->get('isCrossSell') : $this->modelOrder->is_cross_sell = 0;
+            $this->modelOrder->session_id = $session_id;
 
             $data = $request->except('_token','orderIdUpCrossSell','variationIdUpCrossSell','upCrossSellId','sessionIdUpCrossSell','countryShortcode','countryId');
             $sku = "";
@@ -460,7 +461,6 @@ class OrderController extends Controller
                             }
                             return redirect()->back()->with('data', $upCrossSellDetails);
                         } else {
-                            //vidi response code, ukoliko treba prikazi gresku korisniku
                             return redirect()->back()->withErrors([$this->customerErrorMessage]);
                         }
                     } catch (\Exception $exception) {

@@ -304,8 +304,8 @@ class HomeController extends Controller
         }
 
         switch ($this->returnedData['thankyouView']) {
-            case "thankyouupsell":
-            case "thankyoucrosssell":
+            case "thankyou.rs.thankyouupsell":
+            case "thankyou.rs.thankyoucrosssell":
                 if(isset($this->customerData['session_id'])) {
                     try {
                         $this->modelEvent->insertSessionEvent($this->customerData['session_id'], 9);
