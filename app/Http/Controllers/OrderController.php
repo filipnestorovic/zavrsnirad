@@ -450,7 +450,7 @@ class OrderController extends Controller
 
                     try {
                         $webhookResult = $this->sendWebhookUpCrossSell($upCrossSellDetails);
-                        if($webhookResult) {
+                        if($webhookResult === 200) {
                             if(isset($session_id)) {
                                 try {
                                     $this->modelEvent->insertSessionEvent($session_id, 10);
@@ -484,35 +484,29 @@ class OrderController extends Controller
 //            'headers' => [ 'Content-Type' => 'application/json' ]
         ]);
 
-//        $jsonArray = array();
-//
-//        $jsonArray['wToken'] = "AlI5hHY4Y4FaUgIDoMMSubRBCvlLCNQyJVfmHfMG";
-//        $jsonArray['id_product_crossupsell'] = $upCrossSellDetails->id_upcrossell;
-//        $jsonArray['brandOrderId'] = $upCrossSellDetails->order_id;
-//        $jsonArray['sku'] = $upCrossSellDetails->sku;
-//        $jsonArray['price'] = $upCrossSellDetails->pricePerPiece;
-//        $jsonArray['quantity'] = $upCrossSellDetails->UpCrossSellQuantity;
-//        $jsonArray['isFreeShippingClaimed'] = $upCrossSellDetails->free_shipping_upcrosssell;
-//        $jsonArray['site'] = $upCrossSellDetails->site;
-
-        $queryParams = [
-            'wToken=AlI5hHY4Y4FaUgIDoMMSubRBCvlLCNQyJVfmHfMG',
-            'id_product_crossupsell='.$upCrossSellDetails->id_upcrossell,
-            'brandOrderId='.$upCrossSellDetails->order_id,
-            'sku='.$upCrossSellDetails->sku,
-            'price='.$upCrossSellDetails->pricePerPiece,
-            'quantity='.$upCrossSellDetails->UpCrossSellQuantity,
-            'isFreeShippingClaimed='.$upCrossSellDetails->free_shipping_upcrosssell,
-            'site='.$upCrossSellDetails->site,
-        ];
+        $client = new \GuzzleHttp\Client();
+        $url = "https://new.serverwombat.com/api/insertOrderCrossUpSellData";
+        $response = $client->post($url, [
+            'form_params' => [
+                'wToken' => 'AlI5hHY4Y4FaUgIDoMMSubRBCvlLCNQyJVfmHfMG',
+                'id_product_crossupsell' => $upCrossSellDetails->id_upcrossell,
+                'brandOrderId' => $upCrossSellDetails->order_id,
+                'sku' => $upCrossSellDetails->sku,
+                'price' => $upCrossSellDetails->pricePerPiece,
+                'quantity' => $upCrossSellDetails->UpCrossSellQuantity,
+                'isFreeShippingClaimed' => $upCrossSellDetails->free_shipping_upcrosssell,
+                'site' => $upCrossSellDetails->site,
+            ]
+        ]);
 
         try {
-//            $response = $client->post("https://new.serverwombat.com/api/insertOrderCrossUpSellData", ['body' => json_encode($jsonArray)]);
-            $content = implode('&', $queryParams);
-            $response = $client->request('POST', 'ttps://new.serverwombat.com/api/insertOrderCrossUpSellData', [], [], ['HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'], $content);
-            return $response;
+            if($response->getStatusCode() === 200) {
+                return 200;
+            } else {
+                return 400;
+            }
         } catch(\Exception $exception) {
-            Log::critical("Error: UpCrossSell Webhook error \nServer message: " . $exception->getMessage() . "\nDETAILS: " .$queryParams);
+            Log::critical("Error: UpCrossSell Webhook error \nServer message: " . $exception->getMessage() . "\nDETAILS: " .$upCrossSellDetails);
         }
     }
 
