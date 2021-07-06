@@ -266,9 +266,7 @@
                                 </span>
                             </span>
                         </div>
-                        <div class="col-md-12 mt-5">
-                            <table class="table table-bordered table-responsive-sm table-striped text-center" id="dateStatisticTable">
-                            </table>
+                        <div class="col-md-12 mt-5" id="dateStatisticTable">
                         </div>
                     </div>
                 </div>
@@ -338,11 +336,21 @@
                     success: function (data) {
                         $('#dateStatisticTable').html('');
                         $('#dateStatisticTable').html(data);
+                        $('[data-toggle="tooltip"]').tooltip();
+                        $('[data-toggle="popover"]').popover({
+                            html: true
+                        });
                     },
                     error: function (req, err) {
                         $('#errorMessageHeader').html('Error on getting variations statistic');
                         $('#errorMessageHeader').slideDown();
                     }
+                });
+
+                $(document).ajaxStart(function () {
+                    $('#dateStatisticTable').slideUp('slow');
+                }).ajaxStop(function () {
+                    $('#dateStatisticTable').slideDown('slow');
                 });
             }
 

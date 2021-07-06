@@ -7,6 +7,7 @@ use App\Models\Checkout;
 use App\Models\Country;
 use App\Models\Coupon;
 use App\Models\Lander;
+use App\Models\Order;
 use App\Models\Price;
 use App\Models\Product;
 use App\Models\Statistic;
@@ -30,6 +31,7 @@ class VariationController extends Controller
         $this->modelPrice = new Price();
         $this->modelCoupon = new Coupon();
         $this->modelStatistic = new Statistic();
+        $this->modelOrder = new Order();
     }
 
     public function variationsIndex() {
@@ -193,6 +195,32 @@ class VariationController extends Controller
             $revenueTotal += $order->price;
         }
 
+        $upCrossSellOrders = $this->modelOrder->getUpCrossSellByVariationOrTest($variation_id, $dateFrom, $dateTo);
+        $upCrossSellCount = 0;
+        $upCrossSellRevenue = 0;
+//        $quantityCount[1] = 0;
+//        $quantityCount[2] = 0;
+//        $quantityCount[3] = 0;
+        $quantityCount = [];
+        foreach($upCrossSellOrders as $order) {
+            $quantityCount[$order->quantity] = 0;
+            $upCrossSellCount++;
+            $upCrossSellRevenue += $order->price;
+        }
+
+        foreach($quantityCount as $key => $value) {
+            foreach($upCrossSellOrders as $order) {
+                if($order->quantity === $key) {
+                    $quantityCount[$key] = $quantityCount[$key] + 1;
+                }
+            }
+        }
+
+        $quantityText = "";
+        foreach($quantityCount as $key => $value) {
+            $quantityText .= "Quantity ".$key.": ".$value." Orders<br/>";
+        }
+
         $singleVariationVisits = $this->modelStatistic->getSingleTestStatistic(null, null, $variation_id, $dateFrom, $dateTo);
 
         $newArray = [];
@@ -203,10 +231,16 @@ class VariationController extends Controller
         $this->data['landerVisits'] = isset($newArray['LanderView']) ? $newArray['LanderView'] : 0;
         $this->data['checkoutVisits'] = isset($newArray['CheckoutView']) ? $newArray['CheckoutView'] : 0;
         $this->data['thankyouVisits'] = isset($newArray['Purchase']) ? $newArray['Purchase'] : 0;
+        $this->data['upcrossSellViews'] = isset($newArray['UpCrossSellShown']) ? $newArray['UpCrossSellShown'] : 0;
+        $this->data['upcrossSellCancelled'] = isset($newArray['UpCrossSellCancelled']) ? $newArray['UpCrossSellCancelled'] : 0;
+        $this->data['upcrossSellPurchase'] = isset($newArray['Purchase2']) ? $newArray['Purchase2'] : 0;
         $this->data['allOrders'] = $allOrdersCount;
         $this->data['totalRevenue'] = $revenueTotal;
+        $this->data['upCrossSellOrders'] = $upCrossSellCount;
+        $this->data['upCrossSellRevenue'] = $upCrossSellRevenue;
 
-        $tableContent = "<tbody>";
+        $tableContent = "<table class='table table-bordered table-responsive-lg table-striped text-center'>";
+        $tableContent .= "<tbody>";
         $tableContent .= "<tr><th>Lander</th><th>Checkout</th><th>Thankyou</th><th>CTR</th><th>CR</th><th>Orders</th><th>Revenue</th></tr><tr>";
         $tableContent .= "<td>".$this->data['landerVisits']."</td>";
         $tableContent .= "<td>".$this->data['checkoutVisits']."</td>";
@@ -215,7 +249,21 @@ class VariationController extends Controller
         $tableContent .= "<td>".($this->data['landerVisits'] != 0 ? number_format(($this->data['thankyouVisits']/$this->data['landerVisits'])*100, 2) : 0)."%</td>";
         $tableContent .= "<td>".$this->data['allOrders']."</td>";
         $tableContent .= "<td>".$this->data['totalRevenue']." RSD</td>";
-        $tableContent .= "</tr></tbody>";
+        $tableContent .= "</tr></tbody></table>";
+
+        if($this->data['upcrossSellViews']) {
+            $tableContent .= "<div class='p-2 text-center'><h4 class='mb-3'>Up/Cross Sells</h4></div>";
+            $tableContent .= "<table class='table table-bordered table-responsive-lg table-striped text-center'>";
+            $tableContent .= "<tbody>";
+            $tableContent .= "<tr><th>Views</th><th>Cancelled</th><th><a data-toggle='popover' data-placement='right' title='Quantity' data-content='".$quantityText."'>Purchase <i class='fas fa-info-circle'></i></a></th><th>CR</th><th>Revenue</th><th>AOV</th></tr><tr>";
+            $tableContent .= "<td>".$this->data['upcrossSellViews']."</td>";
+            $tableContent .= "<td>".$this->data['upcrossSellCancelled']."</td>";
+            $tableContent .= "<td>".$this->data['upcrossSellPurchase']."</td>";
+            $tableContent .= "<td>".($this->data['upcrossSellViews'] != 0 ? number_format(($this->data['upcrossSellPurchase']/$this->data['upcrossSellViews'])*100, 2) : 0)."%</td>";
+            $tableContent .= "<td>".$this->data['upCrossSellRevenue']." RSD</td>";
+            $tableContent .= "<td>".($this->data['upCrossSellOrders'] != 0 ? number_format($this->data['upCrossSellRevenue']/$this->data['upCrossSellOrders'], 2) : 0)." RSD</td>";
+            $tableContent .= "</tr></tbody></table>";
+        }
 
         return $tableContent;
 

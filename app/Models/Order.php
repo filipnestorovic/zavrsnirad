@@ -124,4 +124,19 @@ class Order
 
         return $result;
     }
+
+    public function getUpCrossSellByVariationOrTest($variation_id, $dateFrom, $dateTo) {
+        $result = DB::table('up_cross_sell')
+            ->where('variation_id','=',$variation_id);
+
+        if(!empty($dateFrom)){
+            if(!empty($dateTo)) {
+                $result->whereBetween('up_cross_sell.created_at', [$dateFrom, $dateTo]);
+            } else {
+                $result->whereDate('up_cross_sell.created_at', '=', $dateFrom);
+            }
+        }
+
+        return $result->get();
+    }
 }

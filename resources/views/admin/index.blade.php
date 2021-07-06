@@ -56,7 +56,7 @@
                 });
             }
             fetch_data();
-            setInterval(fetch_data, 10000);
+            setInterval(fetch_data, 20000);
             $('#countryDdl').change(fetch_data);
         });
     </script>
