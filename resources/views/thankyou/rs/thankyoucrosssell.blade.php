@@ -17,12 +17,19 @@
             <div class="success-page__header-wrapper">
                 <div class="success-page__header-check"></div>
                 <h2 class="success-page__title">
-                    <span>{{ $order->name }}</span>, hvala na porudžbini!
+                    @if(isset($order))
+                        <span>{{ $order->name }}</span>, hvala na porudžbini!
+                    @else
+                        Hvala na porudžbini!
+                    @endif
                 </h2>
                 <p class="success-page__message_success">
-                    Vaša porudžbina sa brojem <b>#{{ $order->id_order }}</b> je prihvaćena i uskoro će biti spremna za slanje!
+                    @if(isset($order))
+                        Vaša porudžbina sa brojem <b>#{{ $order->id_order }}</b> je prihvaćena i uskoro će biti spremna za slanje!
+                    @else
+                        Vaša porudžbina je prihvaćena i uskoro će biti spremna za slanje!
+                    @endif
                     <br>
-                    {{--Molimo proverite uneti broj telefona jer će Vas uskoro kontaktirati naša korisnička služba kako bi dogovorili detalje isporuke.--}}
                 </p>
             </div>
         </div>
@@ -34,10 +41,11 @@
                     </div>
                     <br>
                 @else
-                    <h3 class="success-page__text specialOfferHeading">ISKORISTI PONUDU KOJA SE NE PROPUŠTA</h3>
-                    <h3 class="success-page__text specialOfferSubheading">SAMO SADA</h3>
-                    <br/>
+                    @if(isset($order))
                     @isset($upCrossSells)
+                        <h3 class="success-page__text specialOfferHeading">ISKORISTI PONUDU KOJA SE NE PROPUŠTA</h3>
+                        <h3 class="success-page__text specialOfferSubheading">SAMO SADA</h3>
+                        <br/>
                         <form action="/upCrossSellOrder" method="POST" id="upCrossSellOrderForm">
                             {{ csrf_field() }}
                             <input type="hidden" name="orderIdUpCrossSell" value="{{ $order->id_order }}"/>
@@ -78,11 +86,12 @@
                             <div class="success-page__form__button cancelUpCrossSell"><button id="cancelUpCrossSell" type="button">NE, HVALA</button></div>
                         </form>
                     @endisset
+                    @endif
                 @endif
                 <h3 class="success-page__text" id="lowerH">
                     Za sve informacije možete nas kontaktirati putem društvenih mreža i na <b>060/046-0469</b>
                     <br/><br/>
-                    <p style="text-align: center;">Vaš {{ $order->brand_name }}</p>
+                    <p style="text-align: center;">Vaš {{ $product->brand_name }}</p>
                 </h3>
                 <img src="{{ asset('/') }}shared_files/safe_purchase.png" alt="Safe purchase icons"/>
             </div>

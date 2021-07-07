@@ -289,12 +289,12 @@ class HomeController extends Controller
     public function thankyou(Request $request, $site = null, $domain = null, $slug = null) {
         $this->index($request, $site, $domain, $slug);
 
-        if((session('data') != null)) {
-            $this->data['order'] = session('data');
-        } else {
-            Log::error("Error: Thank you page without Order details in session!");
-            return abort('404');
-        }
+//        if((session('data') != null)) {
+//            $this->data['order'] = session('data');
+//        } else {
+//            Log::error("Error: Thank you page without Order details in session!");
+//            return abort('404');
+//        }
 
         if(isset($this->data['order']->id_up_cross_sell)) {
             $this->data['fb_event'] = "Purchase2";

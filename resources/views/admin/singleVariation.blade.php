@@ -323,7 +323,14 @@
                 $('.datepicker').hide();
             });
 
-            $('#selectedDatePickerSubmit').click(getVariationStatistic);
+            $('#selectedDatePickerSubmit').click(function () {
+                getVariationStatistic();
+                $(document).ajaxStart(function () {
+                    $('#dateStatisticTable').slideUp('slow');
+                }).ajaxStop(function () {
+                    $('#dateStatisticTable').slideDown('slow');
+                });
+            });
 
             function getVariationStatistic() {
                 let dateFrom = $('#selectedDatePickerFrom').val();
@@ -335,7 +342,7 @@
                     data: {dateFrom:dateFrom, dateTo:dateTo, variationId:variationId},
                     success: function (data) {
                         $('#dateStatisticTable').html('');
-                        $('#dateStatisticTable').html(data);
+                        $('#dateStatisticTable').html(data).slideDown('slow');
                         $('[data-toggle="tooltip"]').tooltip();
                         $('[data-toggle="popover"]').popover({
                             html: true
@@ -345,12 +352,6 @@
                         $('#errorMessageHeader').html('Error on getting variations statistic');
                         $('#errorMessageHeader').slideDown();
                     }
-                });
-
-                $(document).ajaxStart(function () {
-                    $('#dateStatisticTable').slideUp('slow');
-                }).ajaxStop(function () {
-                    $('#dateStatisticTable').slideDown('slow');
                 });
             }
 

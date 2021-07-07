@@ -10,16 +10,18 @@
         let landerCheckout = $('#landerCheckout').val();
         let sentAddToCart = 0;
 
-        @if(($fb_event === "Purchase" || $fb_event === "Purchase2") && $order != null)
-             name = "{{ $order->name }}";
-             email = "{{ $order->email }}";
-             phone = "{{ $order->phone }}";
-             city = "{{ $order->city }}";
-             zip = "{{ $order->zip }}";
-             country_code = "{{ $order->country_code }}";
-             currency_symbol = "{{ $order->currency_symbol }}";
-             currency_code = "{{ $order->currency_code }}";
-             amount = "{{ $order->amount }}";
+        @if($fb_event === "Purchase" || $fb_event === "Purchase2")
+            @isset($order)
+                 name = "{{ $order->name }}";
+                 email = "{{ $order->email }}";
+                 phone = "{{ $order->phone }}";
+                 city = "{{ $order->city }}";
+                 zip = "{{ $order->zip }}";
+                 country_code = "{{ $order->country_code }}";
+                 currency_symbol = "{{ $order->currency_symbol }}";
+                 currency_code = "{{ $order->currency_code }}";
+                 amount = "{{ $order->amount }}";
+             @endisset
         @endif
 
         @foreach($pixels as $pixel)
