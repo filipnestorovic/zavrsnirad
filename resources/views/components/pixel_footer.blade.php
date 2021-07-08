@@ -24,9 +24,12 @@
              @endisset
         @endif
 
-        @foreach($pixels as $pixel)
-            sendFbEvent('{{$pixel}}','{{$fb_event}}');
-        @endforeach
+        @if(($fb_event === "Purchase" || $fb_event === "Purchase2") && (!isset($order)))
+        @else
+            @foreach($pixels as $pixel)
+                sendFbEvent('{{$pixel}}','{{$fb_event}}');
+            @endforeach
+        @endif
 
         $('form').submit(function(){
             $(this).find(':submit').attr('disabled','disabled');
