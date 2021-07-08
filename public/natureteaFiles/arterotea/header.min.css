@@ -399,6 +399,18 @@ header {
     text-indent: 13px;
 }
 
+.sale-input select {
+    height: 36px;
+    width: 300px;
+    float: right;
+    line-height: 34px;
+    background-color: #fff;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #838383;
+    text-indent: 13px;
+}
+
 .sale-input input:placeholder {
     color: #606060;
 }
@@ -613,6 +625,9 @@ header {
     .sale-input input {
         width: 240px;
     }
+    .sale-input select {
+        width: 240px;
+    }
     .attention-descr {
         margin: 0;
     }
@@ -695,6 +710,9 @@ header {
     .sale-input input {
         width: 100%;
     }
+    .sale-input select {
+        width: 100%;
+    }
     .sale-input .input-block:first-child {
         margin: 0;
     }
@@ -711,7 +729,22 @@ header {
         margin: 15px 15px 15px 30px;
     }
 }
+.form3 {
+    display: none;
+}
 @media only screen and (max-width: 479px) {
+    .form3 {
+        display: block;
+    }
+    .form3 .sale-circs {
+        padding: 0px 13px 20px 26px;
+    }
+    .form2 {
+        display: none;
+    }
+    .img-absolute {
+        display: none;
+    }
     .container {
         width: 320px;
     }
@@ -738,8 +771,8 @@ header {
         padding: 15px 15px 15px 55px;
     }
     .first-screen .pack {
-        top: 420px;
-        left: 25px;
+        top: 310px;
+        left: 35px;
     }
     .first-screen .sale {
         top: -60px;
@@ -751,7 +784,7 @@ header {
         padding: 101px 0 0 31px;
     }
     .sale-circs {
-        padding: 24px 13px 0 26px;
+        padding: 120px 13px 0 26px;
     }
     .sale-price,
     .sale-terr {

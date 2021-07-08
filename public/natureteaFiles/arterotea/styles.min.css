@@ -384,6 +384,14 @@ iframe {
         -webkit-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
         box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
     }
+    .form2 {
+        height: auto;
+        margin-bottom: 20px !important;
+    }
+    .form2 .sale-btn {
+        height: auto;
+        margin-top: 10px;
+    }
 }
 .waswird {
     text-align: center;
@@ -481,8 +489,9 @@ iframe {
 }
 .doc-wrapp .imgdoc {
     position: absolute;
-    right: 25px;
+    right: 100px;
     bottom: 0;
+    height: 380px;
 }
 @media only screen and (max-width: 1199px) {
     .doc .text {
@@ -912,7 +921,7 @@ iframe {
     }
     .sform .sale-price {
         margin: 0;
-        padding: 130px 10px 0;
+        padding: 30px 10px 0;
     }
     .sform .sale-price .price.old {
         margin: 0 17px 0 0;
@@ -921,6 +930,10 @@ iframe {
         margin: 10px;
     }
     .sform .sale-input .input-block input {
+        width: 100%;
+        float: none;
+    }
+    .sform .sale-input .input-block select {
         width: 100%;
         float: none;
     }
