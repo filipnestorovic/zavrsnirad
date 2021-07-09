@@ -393,6 +393,7 @@ class OrderController extends Controller
             $firstOrderQuantity = $request->get('firstOrderQuantity');
             ($request->get('isUpSell') != null) ? $this->modelOrder->is_up_sell = $request->get('isUpSell') : $this->modelOrder->is_up_sell = 0;
             ($request->get('isCrossSell') != null) ? $this->modelOrder->is_cross_sell = $request->get('isCrossSell') : $this->modelOrder->is_cross_sell = 0;
+            if($request->get('testVariationIdUpCrossSell') != null) $this->modelOrder->test_variation_id = $request->get('testVariationIdUpCrossSell');
             $this->modelOrder->session_id = $session_id;
 
             $data = $request->except('_token','orderIdUpCrossSell','variationIdUpCrossSell','upCrossSellId','sessionIdUpCrossSell','countryShortcode','countryId');

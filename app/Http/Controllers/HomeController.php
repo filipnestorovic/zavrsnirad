@@ -232,6 +232,8 @@ class HomeController extends Controller
 
             $this->customerData['uuid'] = $request->session()->get('uuid');
 
+            if(isset($this->customerData['test_variation_id'])) $this->data['test_variation_id'] = $this->customerData['test_variation_id'];
+
             try {
                 $session_id = $this->insertSession($this->customerData);
                 $this->customerData['session_id'] = $session_id;

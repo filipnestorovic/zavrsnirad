@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    @include('components.pixel_init')
     <meta charset=UTF-8>
     <meta http-equiv=X-UA-Compatible content="IE=edge">
     <meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -14,6 +15,7 @@
     <script src="{{ asset('/') }}shared_files/jquery-1.12.4.min.js" type="text/javascript"></script>
 </head>
 <body>
+@include('components.display_errors')
 <header>
     <div class=header-body>
         <div class=container>
@@ -841,5 +843,6 @@
         });
 </script>
 <script src="{{ asset('/') }}natureteaFiles/arterotea/libs.min.js"></script>
+@include('components.pixel_footer')
 </body>
 </html>

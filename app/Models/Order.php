@@ -101,6 +101,7 @@ class Order
         $result = DB::table('up_cross_sell')
             ->insertGetId([
                 'variation_id' => $this->variation_id,
+                'test_variation_id' => $this->test_variation_id,
                 'upcrosssell_product_id' => $this->product_id,
                 'quantity' => $this->quantity,
                 'price' => $this->price,
