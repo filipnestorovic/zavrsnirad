@@ -1160,6 +1160,7 @@ iframe {
     background-size: cover;
     color: #000;
     background-color: #f3ebee;
+    height: 620px;
 }
 .f-item {
     position: relative;
@@ -1246,10 +1247,13 @@ iframe {
     line-height: 24px;
 }
 .n100 {
-    padding: 35px 0 0 140px;
+    /*padding: 35px 0 0 140px;*/
 }
 .n100 img {
-    max-width: 100%;
+    position: relative;
+    left: 480px;
+    bottom: 300px;
+    /*max-width: 100%;*/
 }
 @media only screen and (max-width: 1199px) {
     .f-item .arrd {
@@ -1278,6 +1282,12 @@ iframe {
 @media only screen and (max-width: 991px) {
     .formula {
         background-image: none;
+        height: auto;
+    }
+    .n100 img {
+        left: 0;
+        bottom: 0;
+        top: 20px;
     }
     .f-item.left,
     .f-item.right {

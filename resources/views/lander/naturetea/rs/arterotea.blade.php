@@ -422,8 +422,9 @@
                             <div class="f-item-header bold">Артишок <br>Cynara cardunculus</div>
                             <div class=f-item-body>Нормализует триглицериды, приводящие к атеросклерозу, слабоумию и потере памяти.</div>
                         </div>
-                        <div class=f-item-img><img src="{{ asset('/') }}natureteaFiles/arterotea/f01.png" alt="Arterotea"></div>
-                        <div class=clear></div><img src="{{ asset('/') }}natureteaFiles/arterotea/arr-black.jpg" alt="Arterotea" class="arrd arrd01"   >
+                        <div class=f-item-img><img src="{{ asset('/') }}natureteaFiles/arterotea/s01.png" alt="Arterotea"></div>
+                        <div class=clear></div>
+                        {{--<img src="{{ asset('/') }}natureteaFiles/arterotea/arr-black.jpg" alt="Arterotea" class="arrd arrd01">--}}
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -432,8 +433,9 @@
                             <div class="f-item-header bold">Диоскорея кавказская <br>Dioscorea caucasica</div>
                             <div class=f-item-body>Снижает уровень холестерина, предотвращает отложение липидов в артериях.</div>
                         </div>
-                        <div class=f-item-img><img src="{{ asset('/') }}natureteaFiles/arterotea/f02.png" alt="Arterotea"></div>
-                        <div class=clear></div><img src="{{ asset('/') }}natureteaFiles/arterotea/arr-black.jpg" alt="Arterotea" class="arrd arrd02"   >
+                        <div class=f-item-img><img src="{{ asset('/') }}natureteaFiles/arterotea/s02.png" alt="Arterotea"></div>
+                        <div class=clear></div>
+                        {{--<img src="{{ asset('/') }}natureteaFiles/arterotea/arr-black.jpg" alt="Arterotea" class="arrd arrd02">--}}
                     </div>
                 </div>
             </div>
@@ -444,8 +446,9 @@
                             <div class="f-item-header bold">Софора японская <br>Callisia fragrans</div>
                             <div class=f-item-body>Восстанавливает эластичность кровеносных сосудов, предотвращает инсульт и атеросклероз</div>
                         </div>
-                        <div class=f-item-img><img src="{{ asset('/') }}natureteaFiles/arterotea/f03.png" alt="Arterotea"></div>
-                        <div class=clear></div><img src="{{ asset('/') }}natureteaFiles/arterotea/arr-black.jpg" alt="Arterotea" class="arrd arrd03"   >
+                        <div class=f-item-img><img src="{{ asset('/') }}natureteaFiles/arterotea/s03.png" alt="Arterotea"></div>
+                        <div class=clear></div>
+                        {{--<img src="{{ asset('/') }}natureteaFiles/arterotea/arr-black.jpg" alt="Arterotea" class="arrd arrd03">--}}
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -454,26 +457,33 @@
                             <div class="f-item-header bold">Масло Амаранта <br>Amaranthus cruentus</div>
                             <div class=f-item-body>Популярное на Западе, но почти неизвестное в России средство регуляции холестерина и давления.</div>
                         </div>
-                        <div class=f-item-img><img src="{{ asset('/') }}natureteaFiles/arterotea/f04.png" alt="Arterotea"></div>
-                        <div class=clear></div><img src="{{ asset('/') }}natureteaFiles/arterotea/arr-black.jpg" alt="Arterotea" class="arrd arrd04"   >
+                        <div class=f-item-img><img src="{{ asset('/') }}natureteaFiles/arterotea/s04.png" alt="Arterotea"></div>
+                        <div class=clear></div>
+                        {{--<img src="{{ asset('/') }}natureteaFiles/arterotea/arr-black.jpg" alt="Arterotea" class="arrd arrd04">--}}
                     </div>
                 </div>
-            </div>
-            <div class=row>
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                    <div class="f-item left">
-                        <div class=f-item-text>
-                            <div class="f-item-header bold">Чертополох святой <br>Carduus nutans</div>
-                            <div class=f-item-body>Удаляет из организма лишний холестерин и нормализует его уровень</div>
-                        </div>
-                        <div class=f-item-img><img src="{{ asset('/') }}natureteaFiles/arterotea/f05.png" alt="Arterotea"></div>
-                        <div class=clear></div><img src="{{ asset('/') }}natureteaFiles/arterotea/arr-black.jpg" alt="Arterotea" class="arrd arrd05"   >
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                    <div class=n100><img src="{{ asset('/') }}natureteaFiles/arterotea/100natur.png" alt="Arterotea"></div>
+                <div class="n100">
+                    <img src="{{ asset('/') }}natureteaFiles/arterotea/100natur.png" alt="Arterotea">
                 </div>
             </div>
+
+            {{--<div class=row>--}}
+                {{--<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">--}}
+                    {{--<div class="f-item left">--}}
+                        {{--<div class=f-item-text>--}}
+                            {{--<div class="f-item-header bold">Чертополох святой <br>Carduus nutans</div>--}}
+                            {{--<div class=f-item-body>Удаляет из организма лишний холестерин и нормализует его уровень</div>--}}
+                        {{--</div>--}}
+                        {{--<div class=f-item-img><img src="{{ asset('/') }}natureteaFiles/arterotea/f05.png" alt="Arterotea"></div>--}}
+                        {{--<div class=clear></div><img src="{{ asset('/') }}natureteaFiles/arterotea/arr-black.jpg" alt="Arterotea" class="arrd arrd05">--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">--}}
+                    {{--<div class="n100">--}}
+                        {{--<img src="{{ asset('/') }}natureteaFiles/arterotea/100natur.png" alt="Arterotea">--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
         </div>
     </section>
     <section class=action>
