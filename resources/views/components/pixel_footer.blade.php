@@ -90,7 +90,7 @@
                 url: baseURL + "ajax/sendConversionApiFB",
                 data: {pixel_id:pixel_id, fb_event:fb_event, session_id:sessionId, fbclid:fbclid, name:name, email:email, phone:phone, city:city, zip:zip, country_code:country_code, currency_symbol:currency_symbol, currency_code:currency_code, amount:amount},
                 success: function (data) {
-                    console.log(data);
+                    // console.log(data);
                 },
                 error: function (req, err) {
                     console.log(req);
