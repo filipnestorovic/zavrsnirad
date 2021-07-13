@@ -195,7 +195,7 @@ class VariationController extends Controller
             $revenueTotal += $order->price;
         }
 
-        $upCrossSellOrders = $this->modelOrder->getUpCrossSellByVariationOrTest($variation_id, $dateFrom, $dateTo);
+        $upCrossSellOrders = $this->modelOrder->getUpCrossSellByVariationOrTest($variation_id, null, $dateFrom, $dateTo);
         $upCrossSellCount = 0;
         $upCrossSellRevenue = 0;
 //        $quantityCount[1] = 0;

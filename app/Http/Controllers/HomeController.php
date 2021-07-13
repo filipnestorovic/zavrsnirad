@@ -243,6 +243,9 @@ class HomeController extends Controller
 
             $this->data['session_id'] = $this->customerData['session_id'];
 
+            $singleSession = $this->modelSession->getSingleSession($this->data['session_id']);
+            $this->data['test_variation_id'] = $singleSession->test_variation_id;
+
         } else {
             Log::error("Error: No active variation for this product - Product: ".$product_id);
             return abort('404');

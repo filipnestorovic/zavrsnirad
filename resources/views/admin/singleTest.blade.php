@@ -120,6 +120,8 @@
                         @if($singleTest->ended_at != null)
                             This test has been ended, you can create another one!
                         @endif
+                        <p style="display: inline-block; margin-left: 20px;">Started at: {{ $singleTest->started_at }}</p>
+                        <p style="display: inline-block; margin-left: 20px;">Ended at: {{ $singleTest->ended_at }}</p>
                     </div>
                 </div>
             </div>
@@ -144,9 +146,15 @@
                                 <th>CR</th>
                                 <th>Orders</th>
                                 <th>Revenue</th>
+                                <th style="border-right: 3px solid #4a5568;">AOV</th>
+                                <th>Views</th>
+                                <th>Purchase</th>
+                                <th>CR</th>
+                                <th>Revenue</th>
                                 <th>AOV</th>
                             </tr>
                             @foreach($singleVariationStatistic as $key => $singleVariation)
+                                @isset($singleVariation['VariationName'])
                                 <tr>
                                     <td>{{ $key }}</td>
                                     <th>{{ isset($singleVariation['VariationName']) ? $singleVariation['VariationName'] : "" }}</th>
@@ -165,16 +173,30 @@
                                     </td>
                                     <td class="ordersColumn">{{ $testOrders[$key]['orders'] }}</td>
                                     <td class="revenueColumn">{{ $testOrders[$key]['revenue'] }} RSD</td>
-                                    <td class="aovColumn">
+                                    <td class="aovColumn" style="border-right: 3px solid #4a5568;">
                                         @if($testOrders[$key]['orders'] != 0)
                                             {{ number_format(($testOrders[$key]['revenue']/$testOrders[$key]['orders']), 2) }} RSD
                                         @endif
                                     </td>
+                                    <td class="upCrossSellViews">{{ isset($singleVariation['UpCrossSellShown']) ? $singleVariation['UpCrossSellShown'] : 0 }}</td>
+                                    <td class="upCrossSellPurchases">{{ isset($singleVariation['Purchase2']) ? $singleVariation['Purchase2'] : 0 }}</td>
+                                    <td>
+                                        @if(isset($singleVariation['Purchase2']) && isset($singleVariation['UpCrossSellShown']))
+                                            {{ number_format(($singleVariation['Purchase2']/$singleVariation['UpCrossSellShown'])*100, 2) }}%
+                                        @endif
+                                    </td>
+                                    <td class="upCrossSellRevenue">{{ $testOrders[$key]['RevenueUpCrossSells'] }} RSD</td>
+                                    <td>
+                                        @if($testOrders[$key]['UpCrossSells'] != 0)
+                                            {{ number_format(($testOrders[$key]['RevenueUpCrossSells']/$testOrders[$key]['UpCrossSells']), 2) }} RSD
+                                        @endif
+                                    </td>
                                 </tr>
+                                @endisset
                             @endforeach
                             <tr class="table-secondary">
                                 <th></th>
-                                <th>Total</th>
+                                <th><b>Total</b></th>
                                 <th id="landerTotal"></th>
                                 <th id="checkoutTotal"></th>
                                 <th id="thankyouTotal"></th>
@@ -182,21 +204,17 @@
                                 <th id="conversionTotal"></th>
                                 <th id="ordersTotal"></th>
                                 <th id="revenueTotal"></th>
-                                <th id="aovTotal"></th>
+                                <th id="aovTotal" style="border-right: 3px solid #4a5568;"></th>
+                                <th id="upSellViewsTotal"></th>
+                                <th id="upSellPurchasesTotal"></th>
+                                <th id="upSellCrTotal"></th>
+                                <th id="upSellRevenueTotal"></th>
+                                <th id="upSellAovTotal"></th>
                             </tr>
                         </table>
                     </div>
                 </div>
             </div>
-            {{--<div class="col-xl-8 col-md-8">--}}
-                {{--<div class="card">--}}
-                    {{--<div class="card-body">--}}
-                        {{--<div class="chart">--}}
-                            {{--<canvas id="myChart"></canvas>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
         </div>
     </div>
     <div class="modal fade" id="editTestVariation" tabindex="-1" role="dialog" aria-labelledby="editTestVariation" aria-hidden="true">
@@ -259,86 +277,6 @@
 @endsection
 
 @section('scripts')
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-
-    {{--<script>--}}
-        {{--function BuildChart(labels, values, chartTitle) {--}}
-            {{--var ctx = document.getElementById("myChart").getContext('2d');--}}
-            {{--var myChart = new Chart(ctx, {--}}
-                {{--type: 'line',--}}
-                {{--data: {--}}
-                    {{--labels: labels, // Our labels--}}
-                    {{--datasets: [{--}}
-                        {{--label: chartTitle, // Name the series--}}
-                        {{--data: values, // Our values--}}
-                        {{--backgroundColor: [ // Specify custom colors--}}
-                            {{--'rgba(255, 99, 132, 0.2)',--}}
-                            {{--'rgba(54, 162, 235, 0.2)',--}}
-                            {{--'rgba(255, 206, 86, 0.2)',--}}
-                            {{--'rgba(75, 192, 192, 0.2)',--}}
-                            {{--'rgba(153, 102, 255, 0.2)',--}}
-                            {{--'rgba(255, 159, 64, 0.2)'--}}
-                        {{--],--}}
-                        {{--borderColor: [ // Add custom color borders--}}
-                            {{--'rgba(255,99,132,1)',--}}
-                            {{--'rgba(54, 162, 235, 1)',--}}
-                            {{--'rgba(255, 206, 86, 1)',--}}
-                            {{--'rgba(75, 192, 192, 1)',--}}
-                            {{--'rgba(153, 102, 255, 1)',--}}
-                            {{--'rgba(255, 159, 64, 1)'--}}
-                        {{--],--}}
-                        {{--fill: false,--}}
-                        {{--borderWidth: 1 // Specify bar border width--}}
-                    {{--}]--}}
-                {{--},--}}
-                {{--options: {--}}
-                    {{--responsive: true, // Instruct chart js to respond nicely.--}}
-                    {{--maintainAspectRatio: false, // Add to prevent default behavior of full-width/height--}}
-                {{--}--}}
-            {{--});--}}
-            {{--return myChart;--}}
-        {{--}--}}
-
-        {{--var table = document.getElementById('dataTable');--}}
-        {{--var json = []; // First row needs to be headers--}}
-        {{--var headers =[];--}}
-        {{--for (var i = 0; i < table.rows[0].cells.length; i++) {--}}
-            {{--headers[i] = table.rows[0].cells[i].innerHTML.toLowerCase().replace(/ /gi, '');--}}
-        {{--}--}}
-
-        {{--// Go through cells--}}
-        {{--for (var i = 1; i < table.rows.length; i++) {--}}
-            {{--var tableRow = table.rows[i];--}}
-            {{--var rowData = {};--}}
-            {{--for (var j = 0; j < tableRow.cells.length; j++) {--}}
-                {{--rowData[headers[j]] = tableRow.cells[j].innerHTML;--}}
-            {{--}--}}
-
-            {{--json.push(rowData);--}}
-        {{--}--}}
-
-        {{--console.log(json);--}}
-
-
-        {{--// Map JSON values back to label array--}}
-        {{--var labels = json.map(function (e) {--}}
-            {{--return e.event;--}}
-        {{--});--}}
-        {{--console.log(labels); // ["2016", "2017", "2018", "2019"]--}}
-
-
-        {{--// Map JSON values back to values array--}}
-        {{--var values = json.map(function (e) {--}}
-            {{--return e.test2;--}}
-        {{--});--}}
-        {{--console.log(values); // ["10", "25", "55", "120"]--}}
-
-        {{--var chart = BuildChart(labels, values, "Items Sold Over Time");--}}
-
-
-    {{--</script>--}}
-
-
     <script>
         $(document).ready(function () {
 
@@ -347,6 +285,10 @@
             $thankyouSum = 0;
             $orderSum = 0;
             $revenueSum = 0;
+
+            $upCrossViewsSum = 0;
+            $upCrossPurchaseSum = 0;
+            $upCrossRevenueSum = 0;
 
             $('.landerViews').each(function() {
                 $landerSum += parseInt($(this).html());
@@ -366,9 +308,23 @@
                 $revenueSum += parseInt($slicedField);
             });
 
+            $('.upCrossSellViews').each(function() {
+                $upCrossViewsSum += parseInt($(this).html());
+            });
+            $('.upCrossSellPurchases').each(function() {
+                $upCrossPurchaseSum += parseInt($(this).html());
+            });
+            $('.upCrossSellRevenue').each(function() {
+                $singleField = $(this).html();
+                $slicedField = $singleField.slice(0, -4);
+                $upCrossRevenueSum += parseInt($slicedField);
+            });
+
             $ctrTotal = ($checkoutSum/$landerSum)*100;
             $conversionTotal = ($thankyouSum/$landerSum)*100;
             $aovTotal = $revenueSum/$orderSum;
+            $upCrossSellCrTotal = ($upCrossPurchaseSum/$upCrossViewsSum)*100;
+            $upCrossSellAovTotal = $upCrossRevenueSum/$upCrossPurchaseSum;
 
             $('#landerTotal').html($landerSum);
             $('#checkoutTotal').html($checkoutSum);
@@ -378,6 +334,12 @@
             $('#ordersTotal').html($orderSum);
             $('#revenueTotal').html($revenueSum + " RSD");
             $('#aovTotal').html($aovTotal.toLocaleString('rs', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + " RSD");
+
+            $('#upSellViewsTotal').html($upCrossViewsSum);
+            $('#upSellPurchasesTotal').html($upCrossPurchaseSum);
+            $('#upSellCrTotal').html($upCrossSellCrTotal.toFixed(2) + "%");
+            $('#upSellRevenueTotal').html($upCrossRevenueSum + " RSD");
+            $('#upSellAovTotal').html($upCrossSellAovTotal.toLocaleString('rs', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + " RSD");
 
             let max = 0;
             let maxIndex = 0;

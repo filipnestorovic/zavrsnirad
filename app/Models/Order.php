@@ -126,9 +126,16 @@ class Order
         return $result;
     }
 
-    public function getUpCrossSellByVariationOrTest($variation_id, $dateFrom, $dateTo) {
-        $result = DB::table('up_cross_sell')
-            ->where('variation_id','=',$variation_id);
+    public function getUpCrossSellByVariationOrTest($variation_id = null, $test_variation_id = null, $dateFrom, $dateTo) {
+        $result = DB::table('up_cross_sell');
+
+        if(!empty($variation_id)){
+            $result->where('variation_id','=',$variation_id);
+        }
+
+        if(!empty($test_variation_id)){
+            $result->where('test_variation_id','=',$test_variation_id);
+        }
 
         if(!empty($dateFrom)){
             if(!empty($dateTo)) {

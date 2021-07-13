@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Order;
 use App\Models\Price;
 use App\Models\Product;
 use App\Models\Statistic;
@@ -19,6 +20,7 @@ class TestController extends Controller
         $this->modelVariation = new Variation();
         $this->modelStatistic = new Statistic();
         $this->modelPrice = new Price();
+        $this->modelOrder = new Order();
     }
 
     public function testsIndex() {
@@ -115,18 +117,16 @@ class TestController extends Controller
                         }
                         $totalVariationOrders[$testVariationId]['orders'] = $countOrders;
                         $totalVariationOrders[$testVariationId]['revenue'] = $revenueOrders;
-//                        if ($variation['removed_at'] === null) {
-//                            $variationPrices = $this->modelPrice->getPricesForVariation($variation['id_variation'], $id);
-//                            $variationPriceNotSet = 0;
-//                            foreach ($variationPrices as $vp) {
-//                                if ($vp->id_variations_prices === null || $vp->PriceDeleted != null) {
-//                                    $variationPriceNotSet++;
-//                                }
-//                            }
-//                            if (count($variationPrices) === $variationPriceNotSet) {
-//                                $pricesNotSet++;
-//                            }
-//                        }
+
+                        $upcrossSells = $this->modelOrder->getUpCrossSellByVariationOrTest(null, $testVariationId, null, null);
+                        $countupcrossSells = 0;
+                        $revenueupcrossSells = 0;
+                        foreach ($upcrossSells as $singleOrder) {
+                            $countupcrossSells++;
+                            $revenueupcrossSells += $singleOrder->price;
+                        }
+                        $totalVariationOrders[$testVariationId]['UpCrossSells'] = $countupcrossSells;
+                        $totalVariationOrders[$testVariationId]['RevenueUpCrossSells'] = $revenueupcrossSells;
                     }
                 }
             }
