@@ -126,7 +126,7 @@
 <div class="block-4">
     <div class="container">
         <div class="clearfix">
-            <img src="{{ asset('/') }}flexonikFiles/helanke/helankeProduct.png" alt="HOT SHAPERS"/>
+            <img src="{{ asset('/') }}flexonikFiles/helanke/Helanke_image.png" alt="HOT SHAPERS"/>
             <h2>PRESTANI RAZMIŠLJATI – OSTVARI SVE!</h2>
             <h3><b>VRUĆE HELANKE</b> - <br/> su realna šansa da budete u sjajnoj formi!</h3>
         </div>
@@ -200,7 +200,7 @@
                 ISKORISTI POPUST
             </a>
         </div>
-        <div style="font-family: 'Montserrat Black', sans-serif; font-size: 22px; margin-top: 20px;"><span style="color: #ff4e00">+ VRUĆI POJAS </span><span style="color: #ff0000">GRATIS</span></div>
+        <div style="font-family: 'Montserrat Black', sans-serif; font-size: 22px; margin-top: 20px; margin-left: 50px;"><span style="color: #ff4e00">+ VRUĆI POJAS </span><span style="color: #ff0000">GRATIS</span></div>
     </div>
 </div>
 <div class="block-11" id="feedbacks">
@@ -317,20 +317,22 @@
                 <form action="{{$orderRoute}}" method="post">
                     {{csrf_field()}}
                     @include('lander.naturapharm.components.form_hidden_fields')
+                    <input type="hidden" name="gpid" value="18"/>
                     <div><input type="text" name="name" placeholder="Ime i prezime" required></div>
                     <div><input type="text" name="phone" class="only_number" placeholder="Telefon" required></div>
                     <div><input type="text" name="shipping_address" placeholder="Adresa" required></div>
                     <div><input type="text" name="shipping_city" placeholder="Grad" required></div>
                     <div><button type="submit" class="js_submit">Kupi odmah</button></div>
                 </form>
+                <div style="font-family: 'Montserrat Black', sans-serif; font-size: 22px; margin-top: 20px; text-align: center"><span style="color: #ff4e00">+ VRUĆI POJAS </span><span style="color: #ff0000">GRATIS</span></div>
             </div>
         </div>
     </div>
 </div>
-<div class="footer">
-    <div class="container">
-    </div>
-</div>
+{{--<div class="footer">--}}
+    {{--<div class="container">--}}
+    {{--</div>--}}
+{{--</div>--}}
 @include('components.pixel_footer')
 </body>
 </html>

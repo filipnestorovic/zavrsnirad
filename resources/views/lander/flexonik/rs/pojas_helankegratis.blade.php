@@ -32,6 +32,7 @@
                 <a href="#form-section" class="green-btn toform">
                     KUPITE S POPUSTOM
                 </a>
+                <div style="font-family: 'Montserrat Black', sans-serif; font-size: 22px; margin-top: 20px;"><span style="color: #ff4e00">+ VRUĆE HELANKE </span><span style="color: #ff0000">GRATIS</span></div>
             </div>
         </div>
     </div>
@@ -127,6 +128,7 @@
             PORUČITE ODMAH
         </a>
         <img src="{{ asset('/') }}flexonikFiles/hotshaper/arrow-red-left.webp" alt="Hot Shapers" class="arrow"/>
+        <div style="font-family: 'Montserrat Black', sans-serif; font-size: 22px; margin-top: 20px;"><span style="color: #ff4e00">+ VRUĆE HELANKE </span><span style="color: #ff0000">GRATIS</span></div>
     </div>
 </div>
 <div class="block-5" id="advise">
@@ -191,6 +193,7 @@
             <a href="#form-section" class="green-btn toform">
                 ISKORISTI POPUST
             </a>
+            <div style="font-family: 'Montserrat Black', sans-serif; font-size: 22px; margin-top: 40px;"><span style="color: #ff4e00">+ VRUĆE HELANKE </span><span style="color: #ff0000">GRATIS</span></div>
         </div>
     </div>
 </div>
@@ -312,12 +315,14 @@
                 <form action="{{$orderRoute}}" method="post">
                     {{csrf_field()}}
                     @include('lander.naturapharm.components.form_hidden_fields')
+                    <input type="hidden" name="gpid" value="19"/>
                     <div><input type="text" name="name" placeholder="Ime i prezime" required></div>
                     <div><input type="text" name="phone" class="only_number" placeholder="Telefon" required></div>
                     <div><input type="text" name="shipping_address" placeholder="Adresa" required></div>
                     <div><input type="text" name="shipping_city" placeholder="Grad" required></div>
                     <div><button type="submit" class="js_submit">Kupi odmah</button></div>
                 </form>
+                <div style="font-family: 'Montserrat Black', sans-serif; font-size: 22px; margin-top: 20px; text-align: center;"><span style="color: #ff4e00">+ VRUĆE HELANKE </span><span style="color: #ff0000">GRATIS</span></div>
             </div>
         </div>
     </div>

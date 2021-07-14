@@ -163,11 +163,18 @@ class OrderController extends Controller
 //                        Log::error('Error: Deleting from abandoned cart \n Message: ' . $exception->getMessage() . '\n Details:'. json_encode($modelOrders, JSON_PRETTY_PRINT) . '\n orderDetails'. json_encode($orderDetails, JSON_PRETTY_PRINT));
 //                    }
 
+                    if($request->get('gpid') != null) {
+                        $gpid = $request->get('gpid');
+                        $gratisProduct = $this->modelProduct->getProduct($gpid);
+                    } else {
+                        $gratisProduct = null;
+                    }
+
                     try {
                         //webhooks
                         if($orderDetails->woocommerce_product_id === null) {
                             try {
-                                $webhookResult = $this->sendWebhook($orderDetails, $brandUrl);
+                                $webhookResult = $this->sendWebhook($orderDetails, $brandUrl, $gratisProduct);
                             } catch(\Exception $exception){
                                 Log::error("Error: ServerWombat Webhook \nMessage: " . $exception->getMessage() . "\nDetails: ". json_encode($orderDetails, JSON_PRETTY_PRINT));
                                 return redirect()->back()->withErrors([$this->customerErrorMessage]);
@@ -206,7 +213,7 @@ class OrderController extends Controller
         }
     }
 
-    public function sendWebhook($orderDetails, $brandUrl){
+    public function sendWebhook($orderDetails, $brandUrl, $gratisProduct = null){
 
         $client = new GuzzleHttp\Client([
             'headers' => [ 'Content-Type' => 'application/json' ]
@@ -248,6 +255,15 @@ class OrderController extends Controller
             'meta_data' => []
         ]);
 
+        if($gratisProduct != null) {
+            array_push($jsonArray['line_items'],[
+                'sku' => $gratisProduct->sku,
+                'quantity' => 1,
+                'subtotal' => 0,
+                'total' =>  0,
+                'meta_data' => []
+            ]);
+        }
 
         $webhookUrl = "";
         switch($orderDetails->country_code) {
