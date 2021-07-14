@@ -4,12 +4,12 @@
     @include('components.pixel_init')
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-50R8WSYNSY"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-202248199-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-50R8WSYNSY');
+        gtag('config', 'UA-202248199-1');
     </script>
 
     <meta charset="utf-8" />
