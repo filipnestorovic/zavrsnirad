@@ -301,7 +301,7 @@
             <div class="left">
                 <h3>Vrući pojas za oblikovanje i sagorevanje masnoće</h3>
                 <img src="{{ asset('/') }}flexonikFiles/hotshaper/arrow-dark-left.png" class="arrow" alt="Hot Shapers" >
-                <p><span>Samo danas po posebnom ceni!</span></p>
+                <p><span>Samo danas po posebnoj ceni!</span></p>
                 <div class="cost clearfix">
                     <span class="old-cost"><span class="js_old_price"><span class="price_land_s4">{{ $prices[1]['originalPrice'] }}</span></span><small class="js_curs"><span class="price_land_curr"> RSD</span> </small></span>
                     <span class="new-cost"><span class="js_new_price"><span class="price_land_s1">{{ $prices[1]['amount'] }}</span></span><small class="js_curs"><span class="price_land_curr"> RSD</span> </small></span>
