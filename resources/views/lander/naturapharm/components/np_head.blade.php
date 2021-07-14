@@ -2,16 +2,6 @@
 <html>
 <head>
     @include('components.pixel_init')
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-202248199-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-202248199-1');
-    </script>
-
     <meta charset="utf-8" />
     <meta content="initial-scale=1, maximum-scale=1, width=device-width" name="viewport" />
 

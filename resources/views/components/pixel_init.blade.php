@@ -38,3 +38,11 @@
 <meta property="og:image" content="{{ asset('/').$product->product_image }}">
 <meta property="og:url" content="{{ $product->domain_url }}/{{ $product->slug }}">
 <title>{{ $product->product_name }} | {{ $product->brand_name }}</title>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-202248199-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-202248199-1');
+</script>
