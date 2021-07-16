@@ -58,6 +58,10 @@
             .gratisProduct {
                 display: none;
             }
+            .img-thumb {
+                 position: relative;
+                 top: 80px !important;
+            }
         }
         #accordion h3::before {
             content: url('https://api.iconify.design/icomoon-free:arrow-down.svg?height=16');
@@ -214,7 +218,7 @@
                                     @endphp
                                     <div class="productRadioListItem item-{{$singlePrice['quantity']}} @if($singlePrice['is_default']) checked-item @endif ">
                                         <div class="w_radio">
-                                            <input type="radio" id="product{{$singlePrice['quantity']}}" name="quantity" value="{{$singlePrice['quantity']}}" data-product-name="{{$singlePrice['quantity']}} x {{ $product->product_name }}" data-product-amount="{{ $singlePrice['amount'] }}" is-free-shipping="{{$singlePrice['is_free_shipping']}}" data-product-quantity="{{$singlePrice['quantity']}}" data-product-currency-code="{{ $singlePrice['currency'] }}" @if($singlePrice['is_default']) checked @endif @if(old('quantity') == $singlePrice['quantity']) checked @endif>
+                                            <input type="radio" id="product{{$singlePrice['quantity']}}" name="quantity" class="quantity" value="{{$singlePrice['quantity']}}" data-product-name="{{$singlePrice['quantity']}} x {{ $product->product_name }}" data-product-amount="{{ $singlePrice['amount'] }}" is-free-shipping="{{$singlePrice['is_free_shipping']}}" data-product-quantity="{{$singlePrice['quantity']}}" data-product-currency-code="{{ $singlePrice['currency'] }}" @if($singlePrice['is_default']) checked @endif @if(old('quantity') == $singlePrice['quantity']) checked @endif>
                                             <i class="icon-check"></i>
                                             <label class="js-unitDiscountRate" for="product{{$singlePrice['quantity']}}">
                                                 <div class="product-name">
@@ -253,7 +257,12 @@
                                                                     <span class="img-thumb gratisProduct"><img src="{{ asset('/').$value->product_image }}" data-src=""><span class="quantity-badge">+</span></span>
                                                                 </p>
                                                                 <p>
-                                                                    <span class="">UZ KUPLJENA <span style="color: red; font-weight: bold;">{{ $singlePrice['quantity'] }}</span> KOMADA</span><br>
+                                                                    @if($singlePrice['quantity'] === 1)
+                                                                        <span class="">UZ <span style="color: red; font-weight: bold;">{{ $singlePrice['quantity'] }}</span> KUPLJEN KOMAD</span>
+                                                                    @else
+                                                                        <span class="">UZ <span style="color: red; font-weight: bold;">{{ $singlePrice['quantity'] }}</span> KUPLJENA KOMADA</span>
+                                                                    @endif
+                                                                    <br>
                                                                     <span class=""><b>DOBIJATE POTPUNO BESPLATNO</b></span>
                                                                     <strong style="color: red;">{{ strtoupper($value->product_name) }}</strong>
                                                                     <span style="font-size: 12px;">* Do isteka zaliha</span>
@@ -494,6 +503,11 @@
             $( function() {
                 $( "#divFaq" ).accordion();
             } );
+
+            $('.quantity').click(function () {
+                $('.productRadioListItem').removeClass('checked-item');
+                $(this).closest(".productRadioListItem").addClass('checked-item');
+            })
 
         </script>
         <section class="section-5">

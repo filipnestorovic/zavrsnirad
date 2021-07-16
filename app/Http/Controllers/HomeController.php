@@ -254,13 +254,13 @@ class HomeController extends Controller
 //                0 => [
 //                    'product_id' => 65,
 //                    'quantity' => 3,
-//                    'gratis_product_id' => 19,
+//                    'gratis_product_id' => 8,
 //                ],
 //                1 => [
 //                    'product_id' => 65,
 //                    'quantity' => 2,
 //                    'gratis_product_id' => 18,
-//                ]
+//                ],
 //            ];
 
             if(isset($gratisProducts)) {
@@ -731,52 +731,54 @@ class HomeController extends Controller
             $productUpCrossResponse = json_decode($response->getBody());
             try {
                 if($productUpCrossResponse->code === 200) {
-                    $productUpSells = $productUpCrossResponse->up;
-                    $productCrossSells = $productUpCrossResponse->cross;
-                    $i = 0;
-                    $upSellCount = 0;
-                    $crossSellCount = 0;
-                    if(count($productUpSells)>0) {
-                        foreach($productUpSells as $Singlesell) {
-                            $upSellProduct = $this->modelProduct->groupProductBySku($Singlesell->SKU, null, $country_id);
-                            $upCrossSellData[$i]['sku'] = $Singlesell->SKU;
-                            $upCrossSellData[$i]['product_name'] = $upSellProduct[0]->product_name;
-                            $upCrossSellData[$i]['upcrosssell_product_id'] = $upSellProduct[0]->id_product;
-                            $upCrossSellData[$i]['product_image'] = $upSellProduct[0]->product_image;
-                            $upCrossSellData[$i]['id_upcrosssell'] = $Singlesell->id_product_crossupsell;
-                            $upCrossSellData[$i]['quantity'] = $Singlesell->quantity;
-                            $upCrossSellData[$i]['pricePerPiece'] = $Singlesell->price;
-                            $upCrossSellData[$i]['isBestOption'] = $Singlesell->isBestOption;
-                            $upCrossSellData[$i]['description'] = $Singlesell->description;
-                            $upCrossSellData[$i]['is_upSell'] = $Singlesell->is_upSell;
-                            $upCrossSellData[$i]['is_crossSell'] = $Singlesell->is_crossSell;
-                            $upCrossSellData[$i]['isFreeShipping'] = $Singlesell->isFreeShippingClaimed;
-                            $i++;
-                            $upSellCount++;
+                    if(isset($productUpCrossResponse->up) || isset($productUpCrossResponse->cross)) {
+                        $productUpSells = $productUpCrossResponse->up;
+                        $productCrossSells = $productUpCrossResponse->cross;
+                        $i = 0;
+                        $upSellCount = 0;
+                        $crossSellCount = 0;
+                        if (count($productUpSells) > 0) {
+                            foreach ($productUpSells as $Singlesell) {
+                                $upSellProduct = $this->modelProduct->groupProductBySku($Singlesell->SKU, null, $country_id);
+                                $upCrossSellData[$i]['sku'] = $Singlesell->SKU;
+                                $upCrossSellData[$i]['product_name'] = $upSellProduct[0]->product_name;
+                                $upCrossSellData[$i]['upcrosssell_product_id'] = $upSellProduct[0]->id_product;
+                                $upCrossSellData[$i]['product_image'] = $upSellProduct[0]->product_image;
+                                $upCrossSellData[$i]['id_upcrosssell'] = $Singlesell->id_product_crossupsell;
+                                $upCrossSellData[$i]['quantity'] = $Singlesell->quantity;
+                                $upCrossSellData[$i]['pricePerPiece'] = $Singlesell->price;
+                                $upCrossSellData[$i]['isBestOption'] = $Singlesell->isBestOption;
+                                $upCrossSellData[$i]['description'] = $Singlesell->description;
+                                $upCrossSellData[$i]['is_upSell'] = $Singlesell->is_upSell;
+                                $upCrossSellData[$i]['is_crossSell'] = $Singlesell->is_crossSell;
+                                $upCrossSellData[$i]['isFreeShipping'] = $Singlesell->isFreeShippingClaimed;
+                                $i++;
+                                $upSellCount++;
+                            }
                         }
-                    }
-                    if(count($productCrossSells)>0) {
-                        foreach($productCrossSells as $Singlesell) {
-                            $upSellProduct = $this->modelProduct->groupProductBySku($Singlesell->SKU, null, $country_id);
-                            $upCrossSellData[$i]['sku'] = $Singlesell->SKU;
-                            $upCrossSellData[$i]['product_name'] = $upSellProduct[0]->product_name;
-                            $upCrossSellData[$i]['upcrosssell_product_id'] = $upSellProduct[0]->id_product;
-                            $upCrossSellData[$i]['product_image'] = $upSellProduct[0]->product_image;
-                            $upCrossSellData[$i]['id_upcrosssell'] = $Singlesell->id_product_crossupsell;
-                            $upCrossSellData[$i]['quantity'] = $Singlesell->quantity;
-                            $upCrossSellData[$i]['pricePerPiece'] = $Singlesell->price;
-                            $upCrossSellData[$i]['isBestOption'] = $Singlesell->isBestOption;
-                            $upCrossSellData[$i]['description'] = $Singlesell->description;
-                            $upCrossSellData[$i]['is_upSell'] = $Singlesell->is_upSell;
-                            $upCrossSellData[$i]['is_crossSell'] = $Singlesell->is_crossSell;
-                            $upCrossSellData[$i]['isFreeShipping'] = $Singlesell->isFreeShippingClaimed;
-                            $i++;
-                            $crossSellCount++;
+                        if (count($productCrossSells) > 0) {
+                            foreach ($productCrossSells as $Singlesell) {
+                                $upSellProduct = $this->modelProduct->groupProductBySku($Singlesell->SKU, null, $country_id);
+                                $upCrossSellData[$i]['sku'] = $Singlesell->SKU;
+                                $upCrossSellData[$i]['product_name'] = $upSellProduct[0]->product_name;
+                                $upCrossSellData[$i]['upcrosssell_product_id'] = $upSellProduct[0]->id_product;
+                                $upCrossSellData[$i]['product_image'] = $upSellProduct[0]->product_image;
+                                $upCrossSellData[$i]['id_upcrosssell'] = $Singlesell->id_product_crossupsell;
+                                $upCrossSellData[$i]['quantity'] = $Singlesell->quantity;
+                                $upCrossSellData[$i]['pricePerPiece'] = $Singlesell->price;
+                                $upCrossSellData[$i]['isBestOption'] = $Singlesell->isBestOption;
+                                $upCrossSellData[$i]['description'] = $Singlesell->description;
+                                $upCrossSellData[$i]['is_upSell'] = $Singlesell->is_upSell;
+                                $upCrossSellData[$i]['is_crossSell'] = $Singlesell->is_crossSell;
+                                $upCrossSellData[$i]['isFreeShipping'] = $Singlesell->isFreeShippingClaimed;
+                                $i++;
+                                $crossSellCount++;
+                            }
                         }
+                        $upCrossSellData[0]['upSellCount'] = $upSellCount;
+                        $upCrossSellData[0]['crossSellCount'] = $crossSellCount;
+                        return $upCrossSellData;
                     }
-                    $upCrossSellData[0]['upSellCount'] = $upSellCount;
-                    $upCrossSellData[0]['crossSellCount'] = $crossSellCount;
-                    return $upCrossSellData;
                 }
             } catch (\Exception $exception) {
                 Log::error("Error: Gettings Up/Cross Sells | Exception: " . $exception->getMessage());

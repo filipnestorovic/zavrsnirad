@@ -164,11 +164,19 @@ class OrderController extends Controller
 //                        Log::error('Error: Deleting from abandoned cart \n Message: ' . $exception->getMessage() . '\n Details:'. json_encode($modelOrders, JSON_PRETTY_PRINT) . '\n orderDetails'. json_encode($orderDetails, JSON_PRETTY_PRINT));
 //                    }
 
+                    $gratisProduct = null;
                     if($request->get('gpid') != null) {
                         $gpid = $request->get('gpid');
                         $gratisProduct = $this->modelProduct->getProduct($gpid);
                     } else {
-                        $gratisProduct = null;
+                        foreach($request->all() as $key => $value) {
+                            if(str_contains($key, 'gpid') && $value != null) {
+                                $gpid_quantity = substr($key, strpos($key, "-") + 1);
+                                if($gpid_quantity === $request->get('quantity')) {
+                                    $gratisProduct = $this->modelProduct->getProduct($value);
+                                }
+                            }
+                        }
                     }
 
                     try {

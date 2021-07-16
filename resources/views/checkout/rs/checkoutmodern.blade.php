@@ -116,6 +116,7 @@
         #showFaq {
             font-weight: bold;
         }
+
     </style>
 </head>
 <body class="ordersttemplate order-gs-new ">
@@ -214,7 +215,7 @@
                                     @endphp
                                     <div class="productRadioListItem item-{{$singlePrice['quantity']}} @if($singlePrice['is_default']) checked-item @endif ">
                                         <div class="w_radio">
-                                            <input type="radio" id="product{{$singlePrice['quantity']}}" name="quantity" value="{{$singlePrice['quantity']}}" data-product-name="{{$singlePrice['quantity']}} x {{ $product->product_name }}" data-product-amount="{{ $singlePrice['amount'] }}" is-free-shipping="{{$singlePrice['is_free_shipping']}}" data-product-quantity="{{$singlePrice['quantity']}}" data-product-currency-code="{{ $singlePrice['currency'] }}" @if($singlePrice['is_default']) checked @endif @if(old('quantity') == $singlePrice['quantity']) checked @endif>
+                                            <input type="radio" id="product{{$singlePrice['quantity']}}" name="quantity" class="quantity" value="{{$singlePrice['quantity']}}" data-product-name="{{$singlePrice['quantity']}} x {{ $product->product_name }}" data-product-amount="{{ $singlePrice['amount'] }}" is-free-shipping="{{$singlePrice['is_free_shipping']}}" data-product-quantity="{{$singlePrice['quantity']}}" data-product-currency-code="{{ $singlePrice['currency'] }}" @if($singlePrice['is_default']) checked @endif @if(old('quantity') == $singlePrice['quantity']) checked @endif>
                                             <i class="icon-check"></i>
                                             <label class="js-unitDiscountRate" for="product{{$singlePrice['quantity']}}">
                                                 <div class="product-name">
@@ -476,6 +477,11 @@
             $( function() {
                 $( "#divFaq" ).accordion();
             } );
+
+            $('.quantity').click(function () {
+                $('.productRadioListItem').removeClass('checked-item');
+                $(this).closest(".productRadioListItem").addClass('checked-item');
+            })
 
         </script>
         <section class="section-5">
