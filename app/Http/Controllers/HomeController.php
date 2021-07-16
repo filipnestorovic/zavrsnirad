@@ -722,78 +722,79 @@ class HomeController extends Controller
     }
 
     public function getProductUpAndCrossSells($sku, $country_id) {
-        $client = new GuzzleHttp\Client([
-            'headers' => [ 'Content-Type' => 'application/json' ]
-        ]);
-        try {
-            $upCrossSellData = array();
-            $response = $client->get('https://new.serverwombat.com/api/getProductCrossUpSellData?SKU='.$sku);
-            $productUpCrossResponse = json_decode($response->getBody());
+        if($country_id === 1) { //trenutno radimo samo RS, da ne vraca gresku za BA
+            $client = new GuzzleHttp\Client([
+                'headers' => [ 'Content-Type' => 'application/json' ]
+            ]);
             try {
-                if($productUpCrossResponse->code === 200) {
-                    if(isset($productUpCrossResponse->up) || isset($productUpCrossResponse->cross)) {
-                        $productUpSells = $productUpCrossResponse->up;
-                        $productCrossSells = $productUpCrossResponse->cross;
-                        $i = 0;
-                        $upSellCount = 0;
-                        $crossSellCount = 0;
-                        if (count($productUpSells) > 0) {
-                            foreach ($productUpSells as $Singlesell) {
-                                $upSellProduct = $this->modelProduct->groupProductBySku($Singlesell->SKU, null, $country_id);
-                                if(count($upSellProduct)>0) {
-                                    $upCrossSellData[$i]['sku'] = $Singlesell->SKU;
-                                    $upCrossSellData[$i]['product_name'] = $upSellProduct[0]->product_name;
-                                    $upCrossSellData[$i]['upcrosssell_product_id'] = $upSellProduct[0]->id_product;
-                                    $upCrossSellData[$i]['product_image'] = $upSellProduct[0]->product_image;
-                                    $upCrossSellData[$i]['id_upcrosssell'] = $Singlesell->id_product_crossupsell;
-                                    $upCrossSellData[$i]['quantity'] = $Singlesell->quantity;
-                                    $upCrossSellData[$i]['pricePerPiece'] = $Singlesell->price;
-                                    $upCrossSellData[$i]['isBestOption'] = $Singlesell->isBestOption;
-                                    $upCrossSellData[$i]['description'] = $Singlesell->description;
-                                    $upCrossSellData[$i]['is_upSell'] = $Singlesell->is_upSell;
-                                    $upCrossSellData[$i]['is_crossSell'] = $Singlesell->is_crossSell;
-                                    $upCrossSellData[$i]['isFreeShipping'] = $Singlesell->isFreeShippingClaimed;
-                                    $i++;
-                                    $upSellCount++;
-                                } else {
-                                    Log::error("Error: DB - Unexisting UpSell Product - SKU: ".$Singlesell->SKU);
+                $upCrossSellData = array();
+                $response = $client->get('https://new.serverwombat.com/api/getProductCrossUpSellData?SKU='.$sku);
+                $productUpCrossResponse = json_decode($response->getBody());
+                try {
+                    if($productUpCrossResponse->code === 200) {
+                        if(isset($productUpCrossResponse->up) || isset($productUpCrossResponse->cross)) {
+                            $productUpSells = $productUpCrossResponse->up;
+                            $productCrossSells = $productUpCrossResponse->cross;
+                            $i = 0;
+                            $upSellCount = 0;
+                            $crossSellCount = 0;
+                            if (count($productUpSells) > 0) {
+                                foreach ($productUpSells as $Singlesell) {
+                                    $upSellProduct = $this->modelProduct->groupProductBySku($Singlesell->SKU, null, $country_id);
+                                    if(count($upSellProduct)>0) {
+                                        $upCrossSellData[$i]['sku'] = $Singlesell->SKU;
+                                        $upCrossSellData[$i]['product_name'] = $upSellProduct[0]->product_name;
+                                        $upCrossSellData[$i]['upcrosssell_product_id'] = $upSellProduct[0]->id_product;
+                                        $upCrossSellData[$i]['product_image'] = $upSellProduct[0]->product_image;
+                                        $upCrossSellData[$i]['id_upcrosssell'] = $Singlesell->id_product_crossupsell;
+                                        $upCrossSellData[$i]['quantity'] = $Singlesell->quantity;
+                                        $upCrossSellData[$i]['pricePerPiece'] = $Singlesell->price;
+                                        $upCrossSellData[$i]['isBestOption'] = $Singlesell->isBestOption;
+                                        $upCrossSellData[$i]['description'] = $Singlesell->description;
+                                        $upCrossSellData[$i]['is_upSell'] = $Singlesell->is_upSell;
+                                        $upCrossSellData[$i]['is_crossSell'] = $Singlesell->is_crossSell;
+                                        $upCrossSellData[$i]['isFreeShipping'] = $Singlesell->isFreeShippingClaimed;
+                                        $i++;
+                                        $upSellCount++;
+                                    } else {
+                                        Log::error("Error: DB - Unexisting UpSell Product - SKU: ".$Singlesell->SKU);
+                                    }
                                 }
                             }
-                        }
-                        if (count($productCrossSells) > 0) {
-                            foreach ($productCrossSells as $Singlesell) {
-                                $crossSellProduct = $this->modelProduct->groupProductBySku($Singlesell->SKU, null, $country_id);
-                                if(count($crossSellProduct)>0) {
-                                    $upCrossSellData[$i]['sku'] = $Singlesell->SKU;
-                                    $upCrossSellData[$i]['product_name'] = $crossSellProduct[0]->product_name;
-                                    $upCrossSellData[$i]['upcrosssell_product_id'] = $crossSellProduct[0]->id_product;
-                                    $upCrossSellData[$i]['product_image'] = $crossSellProduct[0]->product_image;
-                                    $upCrossSellData[$i]['id_upcrosssell'] = $Singlesell->id_product_crossupsell;
-                                    $upCrossSellData[$i]['quantity'] = $Singlesell->quantity;
-                                    $upCrossSellData[$i]['pricePerPiece'] = $Singlesell->price;
-                                    $upCrossSellData[$i]['isBestOption'] = $Singlesell->isBestOption;
-                                    $upCrossSellData[$i]['description'] = $Singlesell->description;
-                                    $upCrossSellData[$i]['is_upSell'] = $Singlesell->is_upSell;
-                                    $upCrossSellData[$i]['is_crossSell'] = $Singlesell->is_crossSell;
-                                    $upCrossSellData[$i]['isFreeShipping'] = $Singlesell->isFreeShippingClaimed;
-                                    $i++;
-                                    $crossSellCount++;
-                                } else {
-                                    Log::error("Error: DB - Unexisting CrossSell Product - SKU: ".$Singlesell->SKU);
+                            if (count($productCrossSells) > 0) {
+                                foreach ($productCrossSells as $Singlesell) {
+                                    $crossSellProduct = $this->modelProduct->groupProductBySku($Singlesell->SKU, null, $country_id);
+                                    if(count($crossSellProduct)>0) {
+                                        $upCrossSellData[$i]['sku'] = $Singlesell->SKU;
+                                        $upCrossSellData[$i]['product_name'] = $crossSellProduct[0]->product_name;
+                                        $upCrossSellData[$i]['upcrosssell_product_id'] = $crossSellProduct[0]->id_product;
+                                        $upCrossSellData[$i]['product_image'] = $crossSellProduct[0]->product_image;
+                                        $upCrossSellData[$i]['id_upcrosssell'] = $Singlesell->id_product_crossupsell;
+                                        $upCrossSellData[$i]['quantity'] = $Singlesell->quantity;
+                                        $upCrossSellData[$i]['pricePerPiece'] = $Singlesell->price;
+                                        $upCrossSellData[$i]['isBestOption'] = $Singlesell->isBestOption;
+                                        $upCrossSellData[$i]['description'] = $Singlesell->description;
+                                        $upCrossSellData[$i]['is_upSell'] = $Singlesell->is_upSell;
+                                        $upCrossSellData[$i]['is_crossSell'] = $Singlesell->is_crossSell;
+                                        $upCrossSellData[$i]['isFreeShipping'] = $Singlesell->isFreeShippingClaimed;
+                                        $i++;
+                                        $crossSellCount++;
+                                    } else {
+                                        Log::error("Error: DB - Unexisting CrossSell Product - SKU: ".$Singlesell->SKU);
+                                    }
                                 }
                             }
+                            $upCrossSellData[0]['upSellCount'] = $upSellCount;
+                            $upCrossSellData[0]['crossSellCount'] = $crossSellCount;
+                            return $upCrossSellData;
                         }
-                        $upCrossSellData[0]['upSellCount'] = $upSellCount;
-                        $upCrossSellData[0]['crossSellCount'] = $crossSellCount;
-                        return $upCrossSellData;
                     }
+                } catch (\Exception $exception) {
+                    Log::error("Error: Gettings Up/Cross Sells | Exception: " . $exception->getMessage());
                 }
-            } catch (\Exception $exception) {
-                Log::error("Error: Gettings Up/Cross Sells | Exception: " . $exception->getMessage());
+            } catch(\Exception $exception) {
+                Log::critical("Error: Webhook - Up/CrossSell error \nServer message: " . $exception->getMessage());
             }
-        } catch(\Exception $exception) {
-            Log::critical("Error: Webhook - Up/CrossSell error \nServer message: " . $exception->getMessage());
         }
     }
-
 }
