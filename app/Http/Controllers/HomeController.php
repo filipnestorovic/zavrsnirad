@@ -234,6 +234,10 @@ class HomeController extends Controller
 
             if(isset($this->customerData['test_variation_id'])) $this->data['test_variation_id'] = $this->customerData['test_variation_id'];
 
+            $this->customerData['wb_campaign'] = $request->get('wb_campaign');
+            $this->customerData['wb_adset'] = $request->get('wb_adset');
+            $this->customerData['wb_ad'] = $request->get('wb_ad');
+
             try {
                 $session_id = $this->insertSession($this->customerData);
                 $this->customerData['session_id'] = $session_id;
@@ -245,6 +249,29 @@ class HomeController extends Controller
 
             $singleSession = $this->modelSession->getSingleSession($this->data['session_id']);
             $this->data['test_variation_id'] = $singleSession->test_variation_id;
+
+//            $gratisProducts = [
+//                0 => [
+//                    'product_id' => 65,
+//                    'quantity' => 3,
+//                    'gratis_product_id' => 19,
+//                ],
+//                1 => [
+//                    'product_id' => 65,
+//                    'quantity' => 2,
+//                    'gratis_product_id' => 18,
+//                ]
+//            ];
+
+            if(isset($gratisProducts)) {
+                $gratisProductsArray = [];
+                foreach($gratisProducts as $key => $value) {
+                    if($value['product_id'] === $product_id) {
+                        $gratisProductsArray[$value['quantity']] = $this->modelProduct->getProduct($value['gratis_product_id']);
+                    }
+                }
+                $this->data['gratisProduct'] = $gratisProductsArray;
+            }
 
         } else {
             Log::error("Error: No active variation for this product - Product: ".$product_id);
@@ -388,6 +415,15 @@ class HomeController extends Controller
         $this->modelSession->variation_id = $sessionData['variation_id'];
         if(isset($sessionData['test_variation_id'])) {
             $this->modelSession->test_variation_id = $sessionData['test_variation_id'];
+        }
+        if(isset($sessionData['wb_campaign'])) {
+            $this->modelSession->wb_campaign = $sessionData['wb_campaign'];
+        }
+        if(isset($sessionData['wb_adset'])) {
+            $this->modelSession->wb_adset = $sessionData['wb_adset'];
+        }
+        if(isset($sessionData['wb_ad'])) {
+            $this->modelSession->wb_ad = $sessionData['wb_ad'];
         }
 
         try {

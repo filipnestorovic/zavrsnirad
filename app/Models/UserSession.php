@@ -19,6 +19,9 @@ class UserSession extends Model
     public $variation_id;
     public $country_id;
     public $event_id;
+    public $wb_campaign;
+    public $wb_adset;
+    public $wb_ad;
 
     public function insertSession() {
         $result = DB::table('session')
@@ -29,6 +32,9 @@ class UserSession extends Model
                 'country_id' => $this->country_id,
                 'test_variation_id' => $this->test_variation_id,
                 'variation_id' => $this->variation_id,
+                'wb_campaign' => $this->wb_campaign,
+                'wb_adset' => $this->wb_adset,
+                'wb_ad' => $this->wb_ad,
             ]);
         return $result;
     }

@@ -115,9 +115,10 @@ class OrderController extends Controller
 
                 $session_id = $request->get('session_id');
                 $userSession = $this->modelSession->getSingleSession($session_id);
-                $test_variation_id = 0;
-                if($userSession) {
-                    if($userSession->test_variation_id) $test_variation_id = $userSession->test_variation_id;
+                if(isset($userSession->test_variation_id)) {
+                   $test_variation_id = $userSession->test_variation_id;
+                } else {
+                    $test_variation_id = null;
                 }
 
                 $this->modelOrder->is_order_with_free_shipping = (int)$variation->is_free_shipping;
@@ -234,6 +235,10 @@ class OrderController extends Controller
         $jsonArray['shipping']['postcode'] = $orderDetails->zip;
         $jsonArray['billing']['email'] = $orderDetails->email;
         $jsonArray['billing']['phone'] = $orderDetails->phone;
+
+        $jsonArray['wb_campaign'] = $orderDetails->wb_campaign;
+        $jsonArray['wb_adset'] = $orderDetails->wb_adset;
+        $jsonArray['wb_ad'] = $orderDetails->wb_ad;
 
         if($orderDetails->is_free_shipping===1) {
             $jsonArray['shipping_lines'] = array([

@@ -57,6 +57,7 @@ class Order
             ->leftJoin('product', 'variation.product_id', '=', 'product.id_product')
             ->leftJoin('brand', 'product.brand_id', '=', 'brand.id_brand')
             ->leftJoin('country', 'product.country_id', '=', 'country.id_country')
+            ->leftJoin('session', 'order.session_id', '=', 'session.id_session')
             ->where([
                 ['id_order', '=', $id],
                 ['variations_prices.quantity','=',$quantity]
