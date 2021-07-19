@@ -70,8 +70,12 @@ class CountryCheck
 
     private function getLocationByIp(Request $request) {
         $position = Location::get(request()->ip());
-        $countryCode = strtolower($position->countryCode);
-        $this->unexistingCountryName = $position->countryName;
-        return $countryCode;
+        if($position === null) {
+            return 'rs';
+        } else {
+            $countryCode = strtolower($position->countryCode);
+            $this->unexistingCountryName = $position->countryName;
+            return $countryCode;
+        }
     }
 }
