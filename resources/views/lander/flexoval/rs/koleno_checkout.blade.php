@@ -429,8 +429,8 @@
                     </div>
 
                     <div class="de elBTN elMargin0 ui-droppable elAlign_left de-editable" id="button-69382" data-de-type="button" data-de-editing="false" data-title="button" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 40px; outline: none; cursor: pointer; font-family: 'Open Sans', Helvetica, sans-serif !important;" aria-disabled="false" data-google-font="Open+Sans" data-elbuttontype="1">
-                        <a href="{{$checkoutView}}" class="elButton elButtonSize1 elButtonColor1 elButtonSquare elButtonPadding3 elButtonFull elButtonCorner5 elButtonShadow2 elBtnVP_15" style="color: rgb(255, 255, 255); background-color: rgb(26, 184, 0); font-size: 24px;" id="undefined-33">
-                            <span class="elButtonMain">Pogledajte kako da poručite</span>
+                        <a class="elButton elButtonSize1 elButtonColor1 elButtonSquare elButtonPadding3 elButtonFull elButtonCorner5 elButtonShadow2 elBtnVP_15" style="color: rgb(255, 255, 255); background-color: rgb(26, 184, 0); font-size: 24px;" id="undefined-33">
+                            <span class="elButtonMain">FORMA ZA NARUDŽBINU</span>
                             <span class="elButtonSub"></span>
                         </a>
                     </div>
@@ -494,21 +494,198 @@
                     </div>
 
                     <div class="de elBTN elMargin0 ui-droppable elAlign_left de-editable" id="button-69382-126" data-de-type="button" data-de-editing="false" data-title="button" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 40px; outline: none; cursor: pointer; font-family: 'Open Sans', Helvetica, sans-serif !important;" aria-disabled="false" data-google-font="Open+Sans" data-elbuttontype="1">
-                        <a href="{{$checkoutView}}" class="elButton elButtonSize1 elButtonColor1 elButtonSquare elButtonPadding3 elButtonFull elButtonCorner5 elButtonShadow2 elBtnVP_15" style="color: rgb(255, 255, 255); background-color: rgb(26, 184, 0); font-size: 22px;" id="undefined-33-268">
-                            <span class="elButtonMain">Pogledajte kako da poručite</span>
+                        <a class="elButton elButtonSize1 elButtonColor1 elButtonSquare elButtonPadding3 elButtonFull elButtonCorner5 elButtonShadow2 elBtnVP_15" style="color: rgb(255, 255, 255); background-color: rgb(26, 184, 0); font-size: 22px;" id="undefined-33-268">
+                            <span class="elButtonMain">FORMA ZA NARUDŽBINU</span>
                             <span class="elButtonSub"></span>
                         </a>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 <div class="dropZoneForSections ui-droppable" style="display: none;"><div class="dropIconr"><i class="fa fa-plus"></i></div></div>
 <div class="container noTopMargin padding20-top padding20-bottom padding40H noBorder borderSolid border3px cornersAll radius0 shadow0 bgNoRepeat wideContainer emptySection addBonusBottomSpacing activeSection innerToolsTop" id="section--46713" data-title="Section" data-block-color="0074C7" style="padding-top: 20px; padding-bottom: 20px; background-color: rgb(255, 255, 255); outline: none;" data-trigger="none" data-animate="fade" data-delay="500" data-hide-on="">
-    
+    <div class="containerInner ui-sortable" style="padding-left: 0px; padding-right: 0px;">
+        <div class="row bgCover noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin" id="row--19325" data-trigger="none" data-animate="fade" data-delay="500" data-title="2 column row" style="margin-bottom: 0px; outline: none; padding-top: 0px; padding-left: 10px; padding-right: 10px; width: 90%; max-width: 100%; margin-left: auto; margin-right: auto;">
+            <form action="{{$orderRoute}}" method="POST">
+                {{ csrf_field() }}
+                @include('lander.naturapharm.components.form_hidden_fields')
+                <div class="col-md-12 allProductsHolder">
+                    <div class="step-title js-customer-title">
+                        <h2 class="title">
+                            Korak 1: <strong>Izaberite količinu</strong>
+                        </h2>
+                    </div>
+                    @php
+                        $columns = number_format(12/count($prices), 0);
+                    @endphp
+                    @foreach($prices as $singlePrice)
+                        <div class="col-md-{{$columns}} productHolder text-center">
+                            <input type="radio" id="product{{$singlePrice['quantity']}}" name="quantity" class="quantity" value="{{$singlePrice['quantity']}}" @if($singlePrice['is_default']) checked @endif @if(old('quantity') == $singlePrice['quantity']) checked @endif>
+                            <label class="productLabel" for="product{{$singlePrice['quantity']}}">
+                                @if($singlePrice['is_default'])
+                                    <span class="best-option-badge"><img src="{{ asset('/')}}thankyouFiles/thankyouUpSell/best-offer-badge.png"/></span>
+                                @endif
+                                <div class="img-holder">
+                                    <img src="{{asset('/').$product->product_image}}">
+                                </div>
+                                <div class="productDetails">
+                                    @if($singlePrice['is_free_shipping'])
+                                        <span style="color: rgb(26, 184, 0);">* Besplatna dostava</span>
+                                    @endif
+                                </div>
+                                <div class="productPrices">
+                                    <span class="old-price">{{ $singlePrice['originalPrice'] }} RSD</span>
+                                    <span class="new-price">{{ $singlePrice['amount'] }} RSD</span>
+                                </div>
+                                <div class="productOrder">
+                                    <div class="productOrderBtn">PORUČI</div>
+                                </div>
+                            </label>
+                        </div>
+                    @endforeach
+                </div>
+                <div class="col-md-12">
+                    <div class="orderst-form">
+                        <div class="step-title js-customer-title">
+                            <h2 class="title">
+                                Korak 2: <strong>Podaci za dostavu</strong>
+                            </h2>
+                        </div>
+                        <div class="widget-customer-form">
+                            <div class="full-name">
+                                <div class="form-group">
+                                    <input id="customer_firstname" value="{{ old('name') }}" name="name" class="shipping-firstname" type="text" maxlength="30" placeholder="Ime i prezime" required="">
+                                </div>
+                            </div>
+                            <div class="form-group form-group--email">
+                                <input id="customer_email" value="{{ old('email') }}" name="email" class="customer-email" type="email" maxlength="200" placeholder="Email adresa" required="" type="email">
+                            </div>
+                            <div class="form-group form-group--phone">
+                                <input id="customer_phone" value="{{ old('phone') }}" name="phone" class="customer-phone" type="tel" maxlength="20" placeholder="Broj telefona" required="">
+                            </div>
+                        </div>
+                        <div class="widget-shipping-form ">
+                            <div class="form-group">
+                                <input id="shipping_address" value="{{ old('shipping_address') }}" name="shipping_address" class="shipping-address" type="text" maxlength="80" placeholder="Ulica i broj" required="">
+                            </div>
+                            <div class="form-group">
+                                <input id="shipping_city" value="{{ old('shipping_city') }}" name="shipping_city" class="shipping-city" type="text" maxlength="30" placeholder="Grad" required="">
+                            </div>
+                            <div class="form-group">
+                                <input id="shipping_zip" value="{{ old('shipping_zip') }}" name="shipping_zip" class="shipping-postal" type="text" placeholder="Postanski broj" required="" pattern="\d*" maxlength="5">
+                            </div>
+                        </div>
+                        <div class="w_button btn-order-now">
+                            <button type="submit">
+                                <span>ZAVRŠI KUPOVINU</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
+<style>
+    .orderst-form {
+        display: none;
+    }
+    .allProductsHolder {
+        margin-bottom: 20px;
+    }
+    .quantity {
+        /*visibility: hidden;*/
+        display: none;
+    }
+    .productLabel {
+        cursor: pointer;
+    }
+    .img-holder {
+        max-width: 300px;
+        padding: 10px 0px;
+    }
+    .img-holder img {
+        max-width: 180px;
+    }
+    .productHolder {
+        border:2px solid rgb(255, 255, 255);
+    }
+    input {
+        width: 100%;
+    }
+    .btn-order-now button {
+        border-radius: 3px;
+        color: #fff;
+        font-weight: 700;
+        font-size: 16px;
+        background-color: rgb(26, 184, 0);
+        padding: 18px 5px 17px;
+        display: block;
+        width: 100%;
+        line-height: 1;
+        text-transform: uppercase;
+        box-shadow: none;
+    }
+    .btn-order-now button:hover {
+        transform: scale(1)
+    }
+    .productOrderBtn {
+        border-radius: 3px;
+        color: #fff;
+        font-weight: 700;
+        font-size: 16px;
+        background-color: rgb(26, 184, 0);
+        padding: 10px;
+        display: block;
+        margin-left: 10%;
+        width: 80%;
+        text-transform: uppercase;
+        border: 1px solid rgb(26, 84, 0);
+    }
+    .productPrices {
+
+    }
+    .productPrices > span {
+        display: block;
+        font-size: 22px;
+    }
+    .productPrices > .old-price {
+        color:red;
+        text-decoration:line-through;
+    }
+    .productPrices > .new-price {
+
+    }
+    .productDetails {
+        min-height: 20px;
+    }
+    .best-option-badge img {
+        position:absolute;
+        top:0px;
+        left:0px;
+        width:90px!important;
+        height:90px!important;
+        z-index: 2;
+    }
+    @media (max-width:795px) {
+
+    }
+</style>
+<script>
+    $(document).ready(function() {
+        $('.productHolder').css('border','3px solid rgb(255, 255, 255)');
+        $('input[name=quantity]:checked').parent().css('border','3px solid rgb(26, 184, 0)');
+        $('.quantity').click(function () {
+            $('.productHolder').css('border','3px solid rgb(255, 255, 255)');
+            $(this).parent().css('border','3px solid rgb(26, 184, 0)');
+            $('.orderst-form').slideDown('slow');
+            // $([document.documentElement, document.body]).animate({
+            //     scrollTop: $(".orderst-form").offset().top-260
+            // }, 1000);
+        })
+    })
+</script>
 @include('lander.flexoval.components.footer')
 @include('components.company_footer')
