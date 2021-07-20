@@ -40,7 +40,7 @@
 
 
                     <div class="de elBTN elMargin0 elAlign_center ui-droppable elButtonBlock de-editable" id="button-68776-154-100-177" data-de-type="button" data-de-editing="false" data-title="button" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 15px; outline: none; cursor: pointer; font-family: 'Open Sans', Helvetica, sans-serif !important;" aria-disabled="false" data-hide-on="mobile" data-google-font="Open+Sans">
-                        <a href="{{$checkoutView}}" class="elButton elButtonSize1 elButtonColor1 elButtonSquare elButtonPadding3 elButtonShadow2 elButtonCorner3 elBTNone elButtonFull elBtnHP_00 elBtnVP_20" style="color: rgb(255, 255, 255); background-color: rgb(26, 184, 0); font-size: 16px;" id="undefined-46-116">
+                        <a href="#allProductsHolder" class="elButton elButtonSize1 elButtonColor1 elButtonSquare elButtonPadding3 elButtonShadow2 elButtonCorner3 elBTNone elButtonFull elBtnHP_00 elBtnVP_20" style="color: rgb(255, 255, 255); background-color: rgb(26, 184, 0); font-size: 16px;" id="undefined-46-116">
                             <span class="elButtonMain" aria-label="">PORUČITE VAŠ STEZNIK ZA KOLENO!</span>
                             <span class="elButtonSub" style="font-size: 13px;">KLIKNITE OVDE</span>
                         </a>
@@ -118,7 +118,7 @@
                     </div>
 
                     <div class="de elBTN elMargin0 ui-droppable elAlign_left de-editable" id="button-96499" data-de-type="button" data-de-editing="false" data-title="button" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 20px; outline: none; cursor: pointer; font-family: 'Open Sans', Helvetica, sans-serif !important;" aria-disabled="false" data-google-font="Open+Sans">
-                        <a href="{{$checkoutView}}" class="elButton elButtonSize1 elButtonColor1 elButtonSquare elButtonPadding3 elButtonCorner5 elButtonShadow2 elBtnVP_15 elBtnHP_40 elButtonFull" style="color: rgb(255, 255, 255); background-color: rgb(26, 184, 0); font-size: 26px;" id="undefined-33-1021">
+                        <a href="#allProductsHolder" class="elButton elButtonSize1 elButtonColor1 elButtonSquare elButtonPadding3 elButtonCorner5 elButtonShadow2 elBtnVP_15 elBtnHP_40 elButtonFull" style="color: rgb(255, 255, 255); background-color: rgb(26, 184, 0); font-size: 26px;" id="undefined-33-1021">
                             <span class="elButtonMain">PORUČITE VAŠ STEZNIK ZA KOLENO!</span>
                             <span class="elButtonSub">KLIKNITE OVDE</span>
                         </a>
@@ -230,7 +230,7 @@
                         </ul>
                     </div>
                     <div class="de elBTN elMargin0 ui-droppable elAlign_left de-editable" id="button-22079" data-de-type="button" data-de-editing="false" data-title="button" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 20px; outline: none; cursor: pointer; font-family: 'Open Sans', Helvetica, sans-serif !important;" aria-disabled="false" data-google-font="Open+Sans" data-elbuttontype="1">
-                        <a href="{{$checkoutView}}" class="elButton elButtonSize1 elButtonColor1 elButtonSquare elButtonPadding3 elButtonFull elButtonCorner5 elButtonShadow2 elBtnVP_15" style="color: rgb(255, 255, 255); background-color: rgb(26, 184, 0); font-size: 24px;" id="undefined-33-1021-1183">
+                        <a href="#allProductsHolder" class="elButton elButtonSize1 elButtonColor1 elButtonSquare elButtonPadding3 elButtonFull elButtonCorner5 elButtonShadow2 elBtnVP_15" style="color: rgb(255, 255, 255); background-color: rgb(26, 184, 0); font-size: 24px;" id="undefined-33-1021-1183">
                             <span class="elButtonMain">Pogledajte kako da poručite</span>
                             <span class="elButtonSub"></span>
                         </a>
@@ -286,7 +286,7 @@
                         </ul>
                     </div>
                     <div class="de elBTN elMargin0 ui-droppable elAlign_left de-editable" id="button-69741" data-de-type="button" data-de-editing="false" data-title="button" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 20px; outline: none; cursor: pointer; font-family: 'Open Sans', Helvetica, sans-serif !important;" aria-disabled="false" data-google-font="Open+Sans" data-elbuttontype="1">
-                        <a href="{{$checkoutView}}" class="elButton elButtonSize1 elButtonColor1 elButtonSquare elButtonPadding3 elButtonFull elButtonCorner5 elButtonShadow2 elBtnVP_15" style="color: rgb(255, 255, 255); background-color: rgb(26, 184, 0); font-size: 22px;" id="undefined-33-1021-346-512">
+                        <a href="#allProductsHolder" class="elButton elButtonSize1 elButtonColor1 elButtonSquare elButtonPadding3 elButtonFull elButtonCorner5 elButtonShadow2 elBtnVP_15" style="color: rgb(255, 255, 255); background-color: rgb(26, 184, 0); font-size: 22px;" id="undefined-33-1021-346-512">
                             <span class="elButtonMain">Pogledajte kako da poručite</span>
                             <span class="elButtonSub"></span>
                         </a>
@@ -378,7 +378,7 @@
 </div>
 
 <!-- display:desktop -->
-<div class="container noTopMargin padding20-top padding20-bottom padding40H noBorder borderSolid border3px cornersAll radius0 shadow0 bgNoRepeat emptySection wideContainer" id="section--92045" data-title="Section" data-block-color="0074C7" style="padding-top: 20px; padding-bottom: 40px; background-color: rgb(255, 255, 255); outline: none;" data-trigger="none" data-animate="fade" data-delay="500" data-hide-on="desktop">
+<div class="container noTopMargin padding20-top padding20-bottom padding40H noBorder borderSolid border3px cornersAll radius0 shadow0 bgNoRepeat emptySection wideContainer" id="section--92045" data-title="Section" data-block-color="0074C7" style="padding-top: 20px; background-color: rgb(255, 255, 255); outline: none;" data-trigger="none" data-animate="fade" data-delay="500" data-hide-on="desktop">
     <div class="containerInner ui-sortable">
         <div class="row bgCover noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin" id="row--74627" data-trigger="none" data-animate="fade" data-delay="500" data-title="1 column row" style="padding-top: 20px; padding-bottom: 20px; margin: 0px; outline: none;">
             <div id="col-full-160" class="col-md-12 innerContent col_left" data-col="full" data-trigger="none" data-animate="fade" data-delay="500" data-title="1st column" style="outline: none;">
@@ -442,7 +442,7 @@
 
 <!-- display:mobile -->
 <div class="dropZoneForSections ui-droppable" style="display: none;"><div class="dropIconr"><i class="fa fa-plus"></i></div></div>
-<div class="container midWideContainer noTopMargin padding20-top padding20-bottom padding40H noBorder borderSolid border3px cornersAll radius0 shadow0 bgNoRepeat emptySection" id="section--92045-166" data-title="Section - Clone" data-block-color="0074C7" style="padding-top: 20px; padding-bottom: 40px; background-color: rgb(255, 255, 255); outline: none;" data-trigger="none" data-animate="fade" data-delay="500" data-hide-on="mobile">
+<div class="container midWideContainer noTopMargin padding20-top padding20-bottom padding40H noBorder borderSolid border3px cornersAll radius0 shadow0 bgNoRepeat emptySection" id="section--92045-166" data-title="Section - Clone" data-block-color="0074C7" style="padding-top: 20px; background-color: rgb(255, 255, 255); outline: none;" data-trigger="none" data-animate="fade" data-delay="500" data-hide-on="mobile">
     <div class="containerInner ui-sortable">
         <div class="row bgCover noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin" id="row--74627-159" data-trigger="none" data-animate="fade" data-delay="500" data-title="1 column row" style="padding-top: 20px; padding-bottom: 20px; margin: 0px; outline: none;">
             <div id="col-full-160-113" class="col-md-12 innerContent col_left" data-col="full" data-trigger="none" data-animate="fade" data-delay="500" data-title="1st column" style="outline: none;">
@@ -511,8 +511,8 @@
             <form action="{{$orderRoute}}" method="POST">
                 {{ csrf_field() }}
                 @include('lander.naturapharm.components.form_hidden_fields')
-                <div class="col-md-12 allProductsHolder">
-                    <div class="step-title js-customer-title">
+                <div class="col-md-12 allProductsHolder" id="allProductsHolder">
+                    <div class="step-title js-customer-title" style="padding-top: 10px;">
                         <h2 class="title">
                             Korak 1: <strong>Izaberite količinu</strong>
                         </h2>
@@ -522,13 +522,14 @@
                     @endphp
                     @foreach($prices as $singlePrice)
                         <div class="col-md-{{$columns}} productHolder text-center">
-                            <input type="radio" id="product{{$singlePrice['quantity']}}" name="quantity" class="quantity" value="{{$singlePrice['quantity']}}" @if($singlePrice['is_default']) checked @endif @if(old('quantity') == $singlePrice['quantity']) checked @endif>
+                            <input type="radio" id="product{{$singlePrice['quantity']}}" name="quantity" class="quantity" value="{{$singlePrice['quantity']}}" @if(old('quantity') == $singlePrice['quantity']) checked @elseif($singlePrice['is_default']) checked @endif>
                             <label class="productLabel" for="product{{$singlePrice['quantity']}}">
                                 @if($singlePrice['is_default'])
                                     <span class="best-option-badge"><img src="{{ asset('/')}}thankyouFiles/thankyouUpSell/best-offer-badge.png"/></span>
                                 @endif
                                 <div class="img-holder">
                                     <img src="{{asset('/').$product->product_image}}">
+                                    <span class="quantity-badge">{{ $singlePrice['quantity'] }}x</span>
                                 </div>
                                 <div class="productDetails">
                                     @if($singlePrice['is_free_shipping'])
@@ -546,7 +547,7 @@
                         </div>
                     @endforeach
                 </div>
-                <div class="col-md-12">
+                <div class="col-md-12" id="scroll-form">
                     <div class="orderst-form">
                         <div class="step-title js-customer-title">
                             <h2 class="title">
@@ -589,6 +590,9 @@
     </div>
 </div>
 <style>
+    html {
+        scroll-behavior: smooth;
+    }
     .orderst-form {
         display: none;
     }
@@ -605,9 +609,10 @@
     .img-holder {
         max-width: 300px;
         padding: 10px 0px;
+        position: relative;
     }
     .img-holder img {
-        max-width: 180px;
+        max-width: 150px;
     }
     .productHolder {
         border:2px solid rgb(255, 255, 255);
@@ -669,8 +674,25 @@
         height:90px!important;
         z-index: 2;
     }
-    @media (max-width:795px) {
+    .quantity-badge {
+        background-color: rgba(242, 242, 242, 1);
+        text-align: center;
+        border-radius: 50%;
+        border: 1px solid grey;
+        padding: 10px;
+        font-size: 20px;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        width: 50px !important;
+        height: 50px !important;
+    }
 
+    @media (max-width:795px) {
+        .quantity-badge {
+            bottom: 10px;
+            right: 10px;
+        }
     }
 </style>
 <script>
@@ -680,10 +702,17 @@
         $('.quantity').click(function () {
             $('.productHolder').css('border','3px solid rgb(255, 255, 255)');
             $(this).parent().css('border','3px solid rgb(26, 184, 0)');
-            $('.orderst-form').slideDown('slow');
-            // $([document.documentElement, document.body]).animate({
-            //     scrollTop: $(".orderst-form").offset().top-260
-            // }, 1000);
+            $('.orderst-form').show(); //slidedown ne skroluje lepo na prvi klik, posle hoce
+            function scrollToForm(formHeight) {
+                $('html, body').animate({
+                    scrollTop: $("#scroll-form").offset().top-formHeight
+                }, 1);
+            }
+            if(window.outerWidth < 425) {
+                scrollToForm(260);
+            } else {
+                scrollToForm(780);
+            }
         })
     })
 </script>
