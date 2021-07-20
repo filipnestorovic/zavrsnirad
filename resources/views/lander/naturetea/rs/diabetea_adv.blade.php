@@ -47,11 +47,6 @@
             <li><a href="#product-box">  Putovanja  </a>
             </li>
         </ul>
-        {{--<div id="searchwrapper">--}}
-            {{--<form action="#">--}}
-                {{--<input class="searchbox" name="s" placeholder="Pretraga" type="text"/>--}}
-            {{--</form>--}}
-        {{--</div>--}}
     </div>
 </div>
 <div class="mobile-hdr">
@@ -142,10 +137,6 @@
             <p class="txt-head f-26">Prestanite da bacate novac. Preuzmite kontrolu već danas.</p>
             <p class="comn-para"> Ako vam povišeni nivo šećera u krvi uzrokuje frustraciju i smanjuje vam kvalitet života, onda vam je potrebno bolje rešenje. Preuzmite kontrolu i uzmite <a href="#product-box"><span class="blue-clr bld"><b>  DiabeTea.  </b></span></a></p>
             <p class="special-p"> Posebna akcija za naše čitaoce </p>
-            {{--<p class="update-p"><img alt="img" class="g-tik" src="{{ asset('/') }}natureteaFiles/diabetea_adv/g-tik.png"/>--}}
-                {{--<b>  Dodatak:  </b> Dostupno je samo još 20 pakovanja.--}}
-            {{--</p>--}}
-            {{--<p class="update-p"><b>  Posebna ponuda završava:  </b> <b class="red-clr"></b></p>--}}
             <img alt="img" class="secr" src="{{ asset('/') }}natureteaFiles/diabetea_adv/secr.png"/>
             <div class="product-box" id="product-box">
                 <div class="prd-lft">
@@ -171,132 +162,7 @@
             </div>
         </div>
         <div class="rit-sec">
-            {{--
-            <div class="sticky-wrapper" id="sticky-sticky-wrapper" style="height: 224px;">
-               --}}
-            {{--
-            <div id="sticky">
-               --}}
-            {{--
-            <div class="prod-side">
-               --}}
-            {{--
-            <div class="prod-side__top">
-               --}}
-            {{--
-            <p class="prod-side__heading"> DiabeTea </p>
-            --}}
-            {{--
-         </div>
-         --}}
-            {{--
-            <div class="prod-side__main">
-               --}}
-            {{--
-            <div class="ad-blocl__main-wrapper">
-               --}}
-            {{--
-            <p class="prod-side__hook"> Osvojite 3 pakovanja besplatno </p>
-            --}}
-            {{--<img alt="" class="prod-side__img" src="{{ asset('/') }}natureteaFiles/diabetea_adv/prod.png"/>--}}
-            {{--
-         </div>
-         --}}
-            {{--
-            <p class="prod-side__text"> Ekskluzivna ponuda za naše čitaoce </p>
-            --}}
-            {{--<a class="prod-side__btn btn" href="#product-box">  Uzmite vaša besplatna pakovanja  </a>--}}
-            {{--
-         </div>
-         --}}
-            {{--
-         </div>
-         --}}
-            {{--
-         </div>
-         --}}
-            {{--
-         </div>
-         --}}
-            <div class="srti-box">
-                <p class="arti-p1"><img alt="img" src="{{ asset('/') }}natureteaFiles/diabetea_adv/article-ic.png"/> Povezani članci
-                </p>
-                <a href="#product-box">
-                    <div class="rit-arti-blk">
-                        <img alt="img" src="{{ asset('/') }}natureteaFiles/diabetea_adv/art-img-1.png"/>
-                        <p> Prirodni preparat za održavanje nivoa šećera u krvi. </p>
-                    </div>
-                </a>
-                <a href="#product-box">
-                    <div class="rit-arti-blk">
-                        <img alt="img" src="{{ asset('/') }}natureteaFiles/diabetea_adv/art-img-2.png"/>
-                        <p> Živite aktivnijim životom sa pritiskom od 80/120. </p>
-                    </div>
-                </a>
-                <a href="#product-box">
-                    <div class="rit-arti-blk">
-                        <img alt="img" src="{{ asset('/') }}natureteaFiles/diabetea_adv/art-img-3.png"/>
-                        <p> Savršena ishrana za držanje šećera pod kontrolom. </p>
-                    </div>
-                </a>
-            </div>
-            <!--===sticky===-->
             <div class="clearall"></div>
-        {{--
-        <div class="sticky-wrapper" id="sticky-sticky-wrapper" style="height: 224px;">
-           --}}
-        {{--
-        <div id="sticky">
-           --}}
-        {{--
-        <div class="prod-side">
-           --}}
-        {{--
-        <div class="prod-side__top">
-           --}}
-        {{--
-        <p class="prod-side__heading"> DiabeTea </p>
-        --}}
-        {{--
-     </div>
-     --}}
-        {{--
-        <div class="prod-side__main">
-           --}}
-        {{--
-        <div class="ad-blocl__main-wrapper">
-           --}}
-        {{--
-        <p class="prod-side__hook"> Osvojite 3 pakovanja besplatno </p>
-        --}}
-        {{--<img alt="" class="prod-side__img" src="{{ asset('/') }}natureteaFiles/diabetea_adv/prod.png"/>--}}
-        {{--
-     </div>
-     --}}
-        {{--
-        <p class="prod-side__text"> Ekskluzivna ponuda za naše čitaoce </p>
-        --}}
-        {{--<a class="prod-side__btn btn" href="#product-box">  Uzmite vaša besplatna pakovanja  </a>--}}
-        {{--
-     </div>
-     --}}
-        {{--
-     </div>
-     --}}
-        {{--
-     </div>
-     --}}
-        {{--
-     </div>
-     --}}
-        {{--
-        <div id="stickyalias_offer" style="display: none;"></div>
-        --}}
-        <!-- /Close Stick header -->
-        {{--
-        <div id="stickspace" style="display: none; height: 0px;"></div>
-        --}}
-        <!--===END sticky===-->
         </div>
         <div class="left-sec">
             <p class="cmnt-p1"> Komentari <span><img alt="img" src="{{ asset('/') }}natureteaFiles/diabetea_adv/msg.png"/> <img alt="img" src="{{ asset('/') }}natureteaFiles/diabetea_adv/print.png"/></span></p>
@@ -347,11 +213,6 @@
                 <p class="cmnt-p4"> Ponovo se osećam normalno. Noge mi izgledaju normalno i osećam se puno bolje nego ranije. </p>
                 <p class="cmnt-p5"></p>
             </div>
-            {{--<div class="cmnt-block">--}}
-                {{--<img alt="img" class="man" src="{{ asset('/') }}natureteaFiles/diabetea_adv/man.png"/>--}}
-                {{--<input class="inp-cmnt" type="text"/>--}}
-                {{--<a href="#product-box"><img alt="img" class="cmnt-btn" src="{{ asset('/') }}natureteaFiles/diabetea_adv/cmnt-btn.png"/></a>--}}
-            {{--</div>--}}
         </div>
     </div>
 </div>

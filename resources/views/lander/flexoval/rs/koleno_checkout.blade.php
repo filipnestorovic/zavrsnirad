@@ -590,9 +590,6 @@
     </div>
 </div>
 <style>
-    html {
-        scroll-behavior: smooth;
-    }
     .orderst-form {
         display: none;
     }
