@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="" >
     <link rel="stylesheet" href="{{ asset('/') }}flexovalFiles/koleno3/style_mb.css">
+    <link rel=icon type="image/png" href="{{ asset('/') }}flexovalFiles/koleno3/0-1ec8318cb6c67b59fee79f014394a12e.png">
 </head>
 <body>
 <div class="mobile">

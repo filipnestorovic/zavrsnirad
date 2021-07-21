@@ -1,31 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
+    @include('components.pixel_init')
     <meta charset=utf-8>
     <meta content='user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0' name=viewport>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <link rel=stylesheet href="{{ asset('/') }}purplerelaxFiles/flawless/styles.css">
+    <link rel=icon type="image/png" href="{{ asset('/') }}purplerelaxFiles/flawless/2.png">
     <style>
         .newprice {
             margin-bottom: 10px;
+        }
+        @media (min-width:720px){
+            .form_left {
+                width: 30%;
+            }
+            .form_right {
+                width: 70%;
+            }
+            .orderBtnCustom {
+                width: 40%;
+                margin-left: 30%;
+            }
+            .orderBtnCustom1 {
+                width: 40%;
+            }
         }
     </style>
 </head>
 <body>
 <header>
+    @include('components.display_errors')
     <div class=mw>
         <div class=r>
-            <div class='s m g6'></div>
-            <div class='s m g6 ch'>
+            <div class='s m g6 form_left' ></div>
+            <div class='s m g6 ch form_right'>
                 <img class=logo src='{{ asset('/') }}purplerelaxFiles/flawless/logo.svg'>
-                <p class=ch> Αποκτήστε την πιο ολοκληρωμένη αποτριχωτική μηχανή που έχει κυκλοφορήσει ποτέ! </p>
+                <p class=ch>NABAVITE NAJMODERNIJI UREĐAJ ZA UKLANJANJE DLAČICA IKADA NAPRAVLJEN</p>
                 <div class=r>
                     <div class='s m6 g6'>
                         <ul class=ul>
-                            <li> <span>Σχεδιάστηκε και κατασκευάζεται στην Γερμανία</span> </li>
-                            <li> <span>4 κυμαινόμενες κεφαλές με επίστρωση χρυσού 18 καρατίων</span> </li>
-                            <li> <span>Ανώδυνο, δεν τραυματίζει το δέρμα, δεν προκαλεί ερεθισμούς</span> </li>
-                            <li> <span>Κατάλληλο για όλους τους τύπους επιδερμίδας</span> </li>
+                            <li> <span>Dizajniran i proizveden prema najvišim svetskim standardima</span> </li>
+                            <li> <span>4 plutajuće glave sa 18 karatnom pozlatom</span> </li>
+                            <li> <span>Bezbolno, ne povređuje kožu, ne izaziva iritaciju</span> </li>
+                            <li> <span>Pogodno za sve tipove kože</span> </li>
                         </ul>
                         <img class=slogan2 src='{{ asset('/') }}purplerelaxFiles/flawless/1.svg'>
                     </div>
@@ -33,7 +51,7 @@
                         <form action="{{$orderRoute}}" method=post>
                             {{ csrf_field() }}
                             @include('lander.naturapharm.components.form_hidden_fields')
-                            <p></p>
+                            <p style="margin-bottom: 25px;">FORMA ZA PORUČIVANJE</p>
                             <div class=timer>
                             </div>
                             <div class=price>
@@ -42,6 +60,8 @@
                             </div>
                             <input placeholder='Ime i prezime' type=text name=name value="" required>
                             <input placeholder='Broj telefona' type=text name=phone value="" required>
+                            <input placeholder='Adresa' type=text name=shipping_address value="" required>
+                            <input placeholder='Grad' type=text name=shipping_city value="" required>
                             <div class=reolader>
                                 <input type=submit class="mm_button js_submit" value='PORUČI ODMAH'>
                             </div>
@@ -56,7 +76,7 @@
     <div class=mw>
         <div class=r>
             <div class=s>
-                <h2 class=bg> ΕΥΚΟΛΗ ΑΠΟΤΡΙΧΩΣΗ <strong>για ανεπανάληπτη απαλότητα!</strong> </h2>
+                <h2 class=bg> LAKO UKLANJANJE DLAČICA <strong>uz izuzetnu mekoću kože!</strong> </h2>
             </div>
         </div>
         <div class=r>
@@ -64,10 +84,11 @@
                 <figure> <img src='{{ asset('/') }}purplerelaxFiles/flawless/3.png'> </figure>
             </div>
             <div class='s m6 g6'>
-                <p class=ch>Η αποτρίχωση δεν ήταν ποτέ τόσο απλή, προσβάσιμη και γρήγορη!</p>
-                <p> Η αποτριχωτική μηχανή "Flawless Legs" είναι εξοπλισμένο με <strong style=color:black>4 κυμαινόμενες κεφαλές, οι οποίες επαναλαμβάνουν ακριβώς τις καμπύλες του σώματος.</strong> Κατά τη διάρκεια της ομαλής κίνησης της συσκευής αποτρίχωσης, όλες οι τρίχες, ακόμη και οι πιο κοντές, αφαιρούνται. Για απόλυτη, τέλεια αποτρίχωση, αρκεί να περάσετε το σημείο με την συσκευή αποτρίχωσης μία φορά. </p>
-                <p class=chh> <img class=num src='{{ asset('/') }}purplerelaxFiles/flawless/num1.svg'> <span> Το Flawless Legs παρέχουν ένα ξηρό ξυρίσμα χωρίς νερό και σαπούνι, με αποτέλεσμα να μπορεί να χρησιμοποιηθεί οποιαδήποτε στιγμή οπουδήποτε. </span> </p>
-                <p class=chh> <img class=num src='{{ asset('/') }}purplerelaxFiles/flawless/num2.svg'> <span> Λόγω του μικρού μεγέθους και της αυτονομίας του, είναι ιδανικό για γρήγορη αποτρίχωση, για παράδειγμα, σε ένα διάλειμμα μεταξύ εργασίας ή πριν από μια σημαντική συνάντηση! Αποτρίχωση χωρίς ερεθισμό και τραυματισμούς! </span> </p>
+                <p class=ch>Depiliranje voskom je vrlo bolno, nije higijenski i oduzima dosta vremena.</p>
+                <p> Depilator "Flawless Legs" poseduje <strong style=color:black>4 plutajuće - rotirajuće glave koje tačno prate konture tela i prilagođavaju mu se.</strong> Tokom glatkog kretanja uklanjaju se sve dlačice, čak i one najkraće. Za apsolutno savršeno uklanjanje dlaka dovoljno je
+                    napraviti samo jednom preći određenu površinu i dlačice nestaju. </p>
+                <p class=chh> <img class=num src='{{ asset('/') }}purplerelaxFiles/flawless/num1.svg'> <span>Besprekorne oštrice pružaju suvo depiliranje bez sapuna i vode, tako da se mogu koristiti bilo kada i bilo gde.</span> </p>
+                <p class=chh> <img class=num src='{{ asset('/') }}purplerelaxFiles/flawless/num2.svg'> <span>Zbog svoje male veličine idealan je za brzo uklanjanje dlaka, na primer u pauzi između posla ili pre važnog sastanka. Uklanjanje dlaka bez iritacija i povreda.</span> </p>
             </div>
         </div>
     </div>
@@ -76,15 +97,16 @@
     <div class=mw>
         <div class=r>
             <div class='s m g'>
-                <h2 class=bg2> ΑΠΟΤΡΙΧΩΣΗ <strong>χωρίς ερεθισμούς και κοψήματα!</strong> </h2>
+                <h2 class=bg2> Depilacija <strong>bez iritacija i posekotina!</strong> </h2>
             </div>
         </div>
         <div class=r>
             <div class='s m6 g6'>
-                <p class=ch>Flawless Legs – η πρώτη αποτριχωτική μηχανή που οι κεφαλές της οποίας καλύπτονται με πραγματικό ιατρικό χρυσό 18 καρατίων.</p>
-                <p> Αυτό σας επιτρέπει να αποφύγετε εντελώς τον ερεθισμό του δέρματος και να εξασφαλίσετε 100% υποαλλεργικότητα. Το Flawless Legs δεν προκαλεί ερεθισμούς ακόμα και στο πιο ευαίσθητο δέρμα. </p>
-                <p> Η συσκευή αποτρίχωσης είναι εξοπλισμένη με ιδιαίτερα αιχμηρές λεπίδες, κατασκευασμένες από χάλυβα υψηλής ποιότητας. Τέτοιες λεπίδες παρέχουν ανώδυνη αφαίρεση ακόμη και λεπτών τριχών και δεν αμβλύνουνται για τουλάχιστον 5 χρόνια. Προκειμένου να εξαλειφθούν εντελώς τα κοψίματα και οι μικρο-τραύματισμοί του δέρματος, τα πτερύγια περικλείονται σε ειδικά περιβλήματα. </p>
-                <a class='btn chhh' href="#buy_form" src='{{ asset('/') }}purplerelaxFiles/flawless/unknown-12'>Αποκτήστε το</a>
+                <p class=ch>"Flawless Legs" - prvi uređaj za uklanjanje dlaka čije su glave prekrivene pravim medicinskim zlatom od 18 karata.</p>
+                <p>Ovo vam omugućava da u potpunosti izbegnete iritaciju kože i osigurate 100% ugodnu depilaciju. Besprekorne oštrice ne izazivaju iritaciju ni na najosetljivijoj koži.</p>
+                <p>Depilator poseduje laserski precizna i oštra sečiva koja su izrađena od hirurškog čelika. Takve oštrice omogućavaju bezbolno uklanjanje čak i finih dlačica. Da bi se
+                    u potpunosti eliminisale posekotine i mikro povrede kože, oštrice su zatvorene u posebna kućišta.</p>
+                <a class='btn chhh orderBtnCustom' href="#buy_form">PORUČITE SADA</a>
             </div>
             <div class='s m6 g6'>
                 <video width="100%" controls>
@@ -93,53 +115,53 @@
                 </video>
                 <div class=chh>
                     <img src='{{ asset('/') }}purplerelaxFiles/flawless/logo-min.svg'>
-                    <p>Πράγματι η πιο εξειδηκευμένη γυναικεία αποτριχωτική μηχανή που υπήρξε ποτέ!</p>
+                    <p>Zaista, najspecijalizovaniji proizvod za uklanjanje dlačica ikada!</p>
                 </div>
             </div>
         </div>
     </div>
 </article>
-<article id=art3>
-    <div class=mw>
-        <div class=r>
-            <div class=s>
-                <h2> ΚΑΤΑΛΛΗΛΟ ΓΙΑ ΑΠΟΤΡΙΧΩΣΗ <strong>οποιουδήποτε μέρους του σώματος</strong> </h2>
-                <figure class=chh> <img src='{{ asset('/') }}purplerelaxFiles/flawless/3.jpg'> </figure>
-            </div>
-        </div>
-    </div>
-</article>
-<article id=art33>
-    <div class=mw>
-        <div class=r>
-            <div class=s>
-                <ul class=ul>
-                    <li>Πρόσωπο</li>
-                    <li>Ντεκολτέ</li>
-                    <li>Στήθος</li>
-                    <li>Μασχάλες</li>
-                    <li>Χέρια + δάχτυλα</li>
-                    <li>Πλευρά</li>
-                    <li>Ηβική περιοχή</li>
-                    <li>Κοιλιά</li>
-                    <li>Μπικίνι εξωτερικά</li>
-                    <li>Μπικίνι εσωτερικά</li>
-                    <li>Μηροί</li>
-                    <li>Γόνατα</li>
-                    <li>Γάμπες</li>
-                    <li>Αστράγαλοι</li>
-                    <li>Δάχτυλα ποδιών</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</article>
+{{--<article id=art3>--}}
+    {{--<div class=mw>--}}
+        {{--<div class=r>--}}
+            {{--<div class=s>--}}
+                {{--<h2> ΚΑΤΑΛΛΗΛΟ ΓΙΑ ΑΠΟΤΡΙΧΩΣΗ <strong>οποιουδήποτε μέρους του σώματος</strong> </h2>--}}
+                {{--<figure class=chh> <img src='{{ asset('/') }}purplerelaxFiles/flawless/3.jpg'> </figure>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
+{{--</article>--}}
+{{--<article id=art33>--}}
+    {{--<div class=mw>--}}
+        {{--<div class=r>--}}
+            {{--<div class=s>--}}
+                {{--<ul class=ul>--}}
+                    {{--<li>Πρόσωπο</li>--}}
+                    {{--<li>Ντεκολτέ</li>--}}
+                    {{--<li>Στήθος</li>--}}
+                    {{--<li>Μασχάλες</li>--}}
+                    {{--<li>Χέρια + δάχτυλα</li>--}}
+                    {{--<li>Πλευρά</li>--}}
+                    {{--<li>Ηβική περιοχή</li>--}}
+                    {{--<li>Κοιλιά</li>--}}
+                    {{--<li>Μπικίνι εξωτερικά</li>--}}
+                    {{--<li>Μπικίνι εσωτερικά</li>--}}
+                    {{--<li>Μηροί</li>--}}
+                    {{--<li>Γόνατα</li>--}}
+                    {{--<li>Γάμπες</li>--}}
+                    {{--<li>Αστράγαλοι</li>--}}
+                    {{--<li>Δάχτυλα ποδιών</li>--}}
+                {{--</ul>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
+{{--</article>--}}
 <article id=art4>
     <div class=mw>
         <div class=r>
             <div class='s m g'>
-                <h2>ΑΠΟΤΕΛΕΣΜΑΤΑ ΧΡΗΣΗΣ</h2>
-                <p class=ch> Η τακτική χρήση του Flawless Legs βοηθά στη επιβράδυνση της ανάπτυξης της τρίχας, την αραίωση και τον αποχρωματισμό της</p>
+                <h2>REZULTATI UPOTREBE</h2>
+                <p class=ch>Redovna upotreba "Flawless Legs" uređaja pomaže proređivanju i usporavanju rasta dlačica.</p>
                 <br/>
             </div>
         </div>
@@ -147,19 +169,19 @@
             <li class='s m4 g4'>
                 <div class=i>
                     <span>100%</span>
-                    <p>απομάκρυνση τριχών οποιουδήποτε μήκους, πάχους και δομής</p>
+                    <p>uklanjanje dlaka bilo koje dužine, debljine i strukture</p>
                 </div>
             </li>
             <li class='s m4 g4'>
                 <div class=i>
                     <span>70%</span>
-                    <p>πιο λεία, απαλή και βελούδινη επιδερμίδα</p>
+                    <p>mekša i baršunastija koža</p>
                 </div>
             </li>
             <li class='s m4 g4'>
                 <div class=i>
-                    <span>2 φορές</span>
-                    <p>λιγότερος χρόνος αποτρίχωσης</p>
+                    <span>2 puta</span>
+                    <p>manje vemena za uklanjanje dlaka</p>
                 </div>
             </li>
         </ul>
@@ -169,79 +191,79 @@
     <div class=mw>
         <div class=r>
             <div class=s>
-                <h2 class=bg2> Flawless Legs <strong>Γιατί να το χρησιμοποιήσω?</strong> </h2>
+                <h2 class=bg2> Flawless Legs <strong>Zašto ga koristiti?</strong> </h2>
             </div>
         </div>
         <ul class='crds r'>
             <li class='s m4 g3'>
                 <div class=i>
                     <figure> <img src='{{ asset('/') }}purplerelaxFiles/flawless/4.jpg'> </figure>
-                    <p>Εργονομικός, πρωτοποριακός και σύγχρονος σχεδιασμός</p>
+                    <p>Ergonomski, inovativan i moderan dizajn</p>
                 </div>
             </li>
             <li class='s m4 g3'>
                 <div class=i>
                     <figure> <img src='{{ asset('/') }}purplerelaxFiles/flawless/5.jpg'> </figure>
-                    <p>Εξαιρετικά αποδοτικές λεπίδες</p>
+                    <p>Izuzetno efikasne oštrice</p>
                 </div>
             </li>
             <li class='s m4 g3'>
                 <div class=i>
                     <figure> <img src='{{ asset('/') }}purplerelaxFiles/flawless/6.jpg'> </figure>
-                    <p>Χωρίς κοψίματα, ερεθισμούς και πόνο </p>
+                    <p>Bez posekotina, iritacija i bolova</p>
                 </div>
             </li>
             <li class='s m4 g3'>
                 <div class=i>
                     <figure> <img src='{{ asset('/') }}purplerelaxFiles/flawless/7.jpg'> </figure>
-                    <p>Μικρό μέγεθος, χωράει εύκολα σε γυναικείο τσαντάκι</p>
+                    <p>Male veličine, lako stane u žensku torbu</p>
                 </div>
             </li>
             <li class='s m4 g3'>
                 <div class=i>
                     <figure> <img src='{{ asset('/') }}purplerelaxFiles/flawless/8.jpg'> </figure>
-                    <p>4 κυμαινόμενες κεφαλές, εξασφαλίζουν απόλυτη απομάκρυνση τριχών</p>
+                    <p>4 plutajuće glave osiguravaju potpuno uklanjanje dlaka</p>
                 </div>
             </li>
             <li class='s m4 g3'>
                 <div class=i>
                     <figure> <img src='{{ asset('/') }}purplerelaxFiles/flawless/9.jpg'> </figure>
-                    <p>Αυτόνομη λειτουργία έως και 4 ώρες από μία μόνο φόρτιση</p>
+                    <p>Baterija traje do 4 sata pri jednom punjenju</p>
                 </div>
             </li>
             <li class='s m4 g3'>
                 <div class=i>
                     <figure> <img src='{{ asset('/') }}purplerelaxFiles/flawless/10.jpg'> </figure>
-                    <p>Ενσωματωμένα LED φωτάκια που σας καθοδηγούν κατά την αποτρίχωση</p>
+                    <p>Ugrađene led lampice koje vas vode tokom uklanjanja dlaka</p>
                 </div>
             </li>
             <li class='s m4 g3'>
                 <div class=i>
                     <figure> <img src='{{ asset('/') }}purplerelaxFiles/flawless/11.jpg'> </figure>
-                    <p>Κατάλληλο για όλους τους τύπους επιδερμίδας, συμπεριλαμβανομένης και της εξαιρετικά ευαίσθητης</p>
+                    <p>Pogodno za sve tipove kože, uključujući i izuzetno osetljivu</p>
                 </div>
             </li>
         </ul>
         <ul class='r chhh'>
             <li class='s m4 g55'>
                 <img src='{{ asset('/') }}purplerelaxFiles/flawless/3.svg'>
-                <p>Μπορεί να χρησιμοποιηθεί στο μπάνιο</p>
+                <p>Može se koristiti u kupatilu</p>
             </li>
             <li class='s m4 g55'>
                 <img src='{{ asset('/') }}purplerelaxFiles/flawless/4.svg'>
-                <p>Για γυναίκες όλων των ηλικιών</p>
+                <p>Za žene svih starosnih grupa</p>
             </li>
             <li class='s m4 g55'>
                 <img src='{{ asset('/') }}purplerelaxFiles/flawless/5.svg'>
-                <p>Απολύτως υποαλλεργικό</p>
+                <p>Apsolutno nežan</p>
             </li>
             <li class='s m4 g55'>
                 <img src='{{ asset('/') }}purplerelaxFiles/flawless/6.svg'>
-                <p>Σχεδιασμένο και κατασκευασμένο στη Γερμανία</p>
+                <p>Dizajniran i proizveden prema najvišim standardima</p>
             </li>
             <li class='s m4 g55'>
                 <img src='{{ asset('/') }}purplerelaxFiles/flawless/7.svg'>
-                <p>Περιλαμβάνει φόρτιση μέσω USB</p>
+                <p>Usb punjenje</p>
             </li>
         </ul>
     </div>
@@ -250,8 +272,8 @@
     <div class=mw>
         <div class=r>
             <div class='s m g'>
-                <h2 class=bg2> ΓΙΑΤΙ ΤΟ FLAWLESS LEGS ΕΙΝΑΙ ΚΑΛΥΤΕΡΟ <strong>από άλλες μεθόδους αφαίρεσης ανεπιθύμητης τριχοφυΐας?</strong> </h2>
-                <a class='btn chhh' href="#buy_form" src='{{ asset('/') }}purplerelaxFiles/flawless/unknown-12'>Παραγγελία με έκπτωση</a>
+                <h2 class=bg2> DOPADLJIVE I DAMSKE NOGE UZ "FLAWLESS LEGS" <strong>Uz druge metode uklanjanja dlačica to nije moguće!</strong> </h2>
+                <a class='btn chhh' href="#buy_form" src='{{ asset('/') }}purplerelaxFiles/flawless/unknown-12'>PORUČITE SA POPUSTOM</a>
             </div>
         </div>
         <div class='r r1'>
@@ -260,19 +282,20 @@
             </div>
             <div class='s m6 g6 ctr'>
                 <div>
-                    <h3>Ξυράφια</h3>
-                    <p>Δύσκολο και χρονοβόρο, είναι απαραίτητο να χρησιμοποιήσετε κρέμες και αφρούς. Συχνά μετά από ξυράφια υπάρχει ερεθισμός, γυρισμένες τριχούλες και ξηροδερμία.</p>
-                    <p> <strong>Μπορείτε να κοπείτε.</strong> Μετά το ξύρισμα, η τρίχα επανεμφανίζεται σε 2 ημέρες. Όσο πιο συχνά ξυρίζεστε, τόσο πιο παχιά, σκληρή και σκουρόχρωμη γίνεται η τρίχα. </p>
-                    <a class=link src='{{ asset('/') }}purplerelaxFiles/flawless/unknown-12'> <img src='{{ asset('/') }}purplerelaxFiles/flawless/check.svg'> <span>Είναι καλύτερο να παραγγείλετε Flawless Legs</span> </a>
+                    <h3>Obični brijači</h3>
+                    <p>Teško i dugotrajno, potrebno je koristiti kreme i pene. Često nakon brijanja dolazi do iritacije, uraslih dlaka i suve kože.</p>
+                    <p>Moguće je poseći se. Nakon brijanja, dlačice se ponovo pojavlju za 2 dana.
+                        Što se češće brijete, dlaka postaje gušća, tvrđa i tamnija.</p>
+                    <a class=link href="#buy_form"> <img src='{{ asset('/') }}purplerelaxFiles/flawless/check.svg'> <span>Najbolje rešenje je poručiti "Flawless Legs"</span> </a>
                 </div>
             </div>
         </div>
         <div class='r r2'>
             <div class='s m6 g6 ctr'>
                 <div>
-                    <h3>Κρέμες αποτρίχωσης</h3>
-                    <p>Η τρίχα μεγαλώνει γρήγορα και γίνεται ακόμα πιο σκληρή. Μπορεί να προκαλέσει ερεθισμό και αλλεργία, δυσάρεστη οσμή.</p>
-                    <a class=link src='{{ asset('/') }}purplerelaxFiles/flawless/unknown-12'> <img src='{{ asset('/') }}purplerelaxFiles/flawless/check.svg'> <span>Είναι καλύτερο να παραγγείλετε Flawless Legs</span> </a>
+                    <h3>Kreme za depilaciju</h3>
+                    <p>Dlačice brzo rastu i postaju još tvrđe. Mogu izazvati iritaciju i alergiju i neprijatnog su mirisa.</p>
+                    <a class=link href="#buy_form"> <img src='{{ asset('/') }}purplerelaxFiles/flawless/check.svg'> <span>Najbolje rešenje je poručiti "Flawless Legs"</span> </a>
                 </div>
             </div>
             <div class='s m6 g6 ctr'>
@@ -282,10 +305,10 @@
         <div class='r r3'>
             <div class='s m6 g6 ctr'>
                 <div>
-                    <h3>Αποτρίχωση με κερί η χαλάουα</h3>
-                    <p>Πολύ τραυματικές διαδικασίες για το δέρμα.</p>
-                    <p> Εάν κάνετε συχνά αποτρίχωση με αυτούς τους τρόπους, <strong>μπορείτε να προκαλέσετε επικίνδυνες δερματικές παθήσεις,</strong> μέχρι και καρκίνο. </p>
-                    <a class=link src='{{ asset('/') }}purplerelaxFiles/flawless/unknown-12'> <img src='{{ asset('/') }}purplerelaxFiles/flawless/check.svg'> <span>Είναι καλύτερο να παραγγείλετε Flawless Legs</span> </a>
+                    <h3>Depilacija voskom</h3>
+                    <p>Veoma traumatični postupci na koži.</p>
+                    <p>Često uklanjanje dlačica na ovaj način može da izazove opasne kožne bolesti.</p>
+                    <a class=link href="#buy_form"> <img src='{{ asset('/') }}purplerelaxFiles/flawless/check.svg'> <span>Najbolje rešenje je poručiti "Flawless Legs"</span> </a>
                 </div>
             </div>
             <div class='s m6 g6 ctr'>
@@ -295,10 +318,11 @@
         <div class='r r4'>
             <div class='s m6 g6 ctr'>
                 <div>
-                    <h3>Laser ή Φωτόλυση</h3>
-                    <p>Χωρίς χημική αναισθησία με λιδοκαΐνη (ή άλλους παράγοντες) δεν πραγματοποιούνται. Πολλές αντενδείξεις, σοβαρό οίδημα και ερεθισμοί του δέρματος.</p>
-                    <p class=ch>Υψηλό κόστος. Μετά από ορμονικές αλλαγές ή διαταραχές, η τριχοφυΐα μπορεί να επανεμφανιστεί.</p>
-                    <a class=link src='{{ asset('/') }}purplerelaxFiles/flawless/unknown-12'> <img src='{{ asset('/') }}purplerelaxFiles/flawless/check.svg'> <span>Είναι καλύτερο να παραγγείλετε Flawless Legs</span> </a>
+                    <h3>Laser ili fotoliza</h3>
+                    <p>Bez hemijske anestezije lidokainom (ili drugim agensima) ovi tretmani se ne izvode.
+                        Mnogo kontraindikacija, jak otok i iritacija kože.</p>
+                    <p class=ch>Veoma skupi tretmani. Rast dlačica se može ponovo pojaviti.</p>
+                    <a class=link href="#buy_form"> <img src='{{ asset('/') }}purplerelaxFiles/flawless/check.svg'> <span>Najbolje rešenje je poručiti "Flawless Legs"</span> </a>
                 </div>
             </div>
             <div class='s m6 g6'>
@@ -311,32 +335,44 @@
     <div class=mw>
         <div class=r>
             <div class='s gm g'>
-                <h2 class=bg2> ΓΝΩΜΗ ΕΛΛΗΝΩΝ ΠΕΛΑΤΩΝ ΓΙΑ ΤΟ FLAWLESS LEGS </h2>
+                <h2 class=bg2>MIŠLJENJE KUPACA O "FLAWLESS LEGS" UREĐAJU</h2>
             </div>
         </div>
         <ul class='crds r'>
             <li class='s m4 g4'>
                 <div class=i>
-                    <div class=iline> <img src='{{ asset('/') }}purplerelaxFiles/flawless/12.jpg'> <span> Μαρίνα <strong>24 ετών, Αθήνα</strong> </span> <img class=dots src='{{ asset('/') }}purplerelaxFiles/flawless/8.svg'> </div>
+                    <div class=iline> <img src='{{ asset('/') }}purplerelaxFiles/flawless/12.jpg'> <span> Marina, 24 godine, Zrenjanin <strong></strong> </span>
+                        {{--<img class=dots src='{{ asset('/') }}purplerelaxFiles/flawless/8.svg'>--}}
+                    </div>
                     <figure> <img src='{{ asset('/') }}purplerelaxFiles/flawless/13.jpg'> </figure>
-                    <img src='{{ asset('/') }}purplerelaxFiles/flawless/9.svg'>
-                    <p>Είναι πραγματικά το κάτι άλλο! Το Flawless Legs είναι εξαιρετικό από όλες τις απόψεις. Μου αρέσει και η εμφάνισή του, και το πώς κάθεται στο χέρι μου, και το πώς αποτριχώνει. Πολύ απαλό και λείο δέρμα. Ποιότητα εξαιρετική. Ο σχεδιασμός είναι υπέροχος. Πρότεινα και στις φίλες μου αυτή την συσκευή αποτρίχωσης. Τους άρεσε επίσης. Είναι απλά μια εξαιρετική συσκευή αποτρίχωσης.</p>
+                    {{--<img src='{{ asset('/') }}purplerelaxFiles/flawless/9.svg'>--}}
+                    <p>Ovo je zaista nešto drugačije. Flawless Legs je sjajan uređaj u svakom smislu.
+                        Takođe mi se sviša njegov izgled. Koža mi je veoma mekana i glatka, a i moj dečko je primetio razliku. :)
+                        Odličan je dizajn i kvalitet proizvoda i preporučila sam ga svojim prijateljicama.</p>
                 </div>
             </li>
             <li class='s m4 g4'>
                 <div class=i>
-                    <div class=iline> <img src='{{ asset('/') }}purplerelaxFiles/flawless/14.jpg'> <span> Φωτεινή <strong>31 ετών, Χίος</strong> </span> <img class=dots src='{{ asset('/') }}purplerelaxFiles/flawless/8.svg'> </div>
+                    <div class=iline> <img src='{{ asset('/') }}purplerelaxFiles/flawless/14.jpg'> <span> Bojana, 31 godina, Beograd <strong></strong> </span>
+                        {{--<img class=dots src='{{ asset('/') }}purplerelaxFiles/flawless/8.svg'> --}}
+                    </div>
                     <figure> <img src='{{ asset('/') }}purplerelaxFiles/flawless/15.jpg'> </figure>
-                    <img src='{{ asset('/') }}purplerelaxFiles/flawless/9.svg'>
-                    <p>Χρησιμοποιώ το Flawless Legs εδώ και δύο μήνες, είμαι απόλυτα ικανοποιημένη. Το δέρμα είναι απαλό, χωρίς ερεθισμούς, η τρίχα μετά την αποτρίχωση βγαίνει αργά, όχι όπως μετά το ξύρισμα. Πριν από αυτό, είχα δοκιμάσει και άλλες αποτριχωτικές μηχανές, αλλά τα Flawless Legs με ικανοποίησε περισσότερο απ’ όλα. Κάθεται εξαιρετικά στο χέρι μου, αφαιρεί την τρίχα πολύ καλά, δεν καταλαμβάνει πολύ χώρο στο τσαντάκι. Ιδανικό για την γρήγορη και τοπική αφαίρεση τριχών, αν κάπου κατά λάθος εμφανίστηκαν. Λόγω των 4 κεφαλών, επαναλαμβάνει καλά τις στροφές του σώματος - γι 'αυτή την αποτριχωτική μηχανή δεν υπάρχουν δύσκολες σημεία. Προτείνω σε όλους!</p>
+                    {{--<img src='{{ asset('/') }}purplerelaxFiles/flawless/9.svg'>--}}
+                    <p>Već dva meseca koristim "Flawless Legs i potpuno sam zadovoljna. Koža mi je meka, bez iritacija,
+                        dlačice nakon depilacije jako sporo rastu. Pored toga, isprobala sam i druge uređaje za uklanjanje dlaka, ali ovaj je najbolji i najviše mi odgovara.
+                        Izuzetno mi leži u ruci, vrlo dobro uklanja dlačice i ne zauzima mnogo prostora u torbi. Idealan je za brzinsko uklanjanje dlaka. Preporučujem ga svima.</p>
                 </div>
             </li>
             <li class='s m4 g4'>
                 <div class=i>
-                    <div class=iline> <img src='{{ asset('/') }}purplerelaxFiles/flawless/16.jpg'> <span> Τζένη <strong>28 ετών, Λάρισα</strong> </span> <img class=dots src='{{ asset('/') }}purplerelaxFiles/flawless/8.svg'> </div>
+                    <div class=iline> <img src='{{ asset('/') }}purplerelaxFiles/flawless/16.jpg'> <span> Jelica, 28 godina, Niš <strong></strong> </span>
+                        {{--<img class=dots src='{{ asset('/') }}purplerelaxFiles/flawless/8.svg'> --}}
+                    </div>
                     <figure> <img src='{{ asset('/') }}purplerelaxFiles/flawless/1.gif'> </figure>
-                    <img src='{{ asset('/') }}purplerelaxFiles/flawless/9.svg'>
-                    <p>Για το λεπτεπίλεπτο και ευαίσθητο δέρμα μου ταίριαξε τέλεια. Παλαιότερα, κάθε φορά που αποφάσιζα να κάνω αποτρίχωση, ήταν εφιάλτης. Οι ερεθισμοί στο δέρμα δεν υποχωρούσαν για πολλές ημέρες. Με το Flawless Legs, δεν υπάρχει καθόλου ερεθισμός. Επίσης, άλλες αποτριχωτικές μηχανές τραβάνε πολλές φορές την τρίχα, αυτή όχι. Απόλυτα ανώδυνη αποτρίχωση και χωρίς ερεθισμό, και χωρίς κόκκινες κουκίδες. Τελικά βρήκα την συσκευή αποτρίχωσης που με ικανοποίησε απόλυτα. Σας ευχαριστώ πολύ!</p>
+                    {{--<img src='{{ asset('/') }}purplerelaxFiles/flawless/9.svg'>--}}
+                    <p>Za moju nežnu i osetljivu kožu, ovaj depilator je pravo osveženje. Ranije, svako uklanjanje dlačica mi je bilo noćna mora. Iritacije na koži nisu nestajale danima.
+                        Uz "Flawless Legs uopšte nema iritacija. Drugi uređaji su mi čupali dlačice i bilo je bolno, ali to nije slučaj sa "Flawless Legs" depilatorom.
+                        Apsolutno bezbolno uklanja dlačice nez iritacije i bez crvenih tačkica. Konačno sam pronašla uređaj za uklanjanje dlaka koji je potpuno zadovoljio moja očekivanja. Mnogo vam hvala!</p>
                 </div>
             </li>
         </ul>
@@ -346,7 +382,7 @@
     <div class=mw>
         <div class=r>
             <div class='s m g'>
-                <h2 class=bg> ΠΕΡΙΕΧΟΜΕΝΟ <strong>Τι περιέχει η συσκευασία?</strong> </h2>
+                <h2 class=bg> SADRŽAJ <strong>Šta sadrži paket?</strong> </h2>
             </div>
         </div>
         <div class=r>
@@ -355,16 +391,15 @@
             </div>
             <div class='s m6 g6'>
                 <ol>
-                    <li>Αποτριχωτική μηχανή Flawless Legs</li>
-                    <li>Όμορφη συσκευασία δώρου</li>
-                    <li>Οδηγίες χρήσης</li>
-                    <li>Φορτιστή</li>
+                    <li>"Flawless Legs" depilator</li>
+                    <li>Uputstvo za upotrebu</li>
+                    <li>Punjač</li>
                 </ol>
                 <div class=price>
                     <span style='text-decoration: line-through'> <span class="js_old_price oldproductsum"></span> </span>
                     <div class=price> <span class="js_new_price productsum"></span> <strong> <span class=js_curs></span> </strong> </div>
                 </div>
-                <a class='btn chhh' href="#buy_form" src='{{ asset('/') }}purplerelaxFiles/flawless/unknown-12'>ΠΑΡΑΓΓΕΛΙΑ ΜΕ ΕΚΠΤΩΣΗ</a>
+                <a class='btn chhh orderBtnCustom1' href="#buy_form">ISKORISTITE POPUST</a>
             </div>
         </div>
     </div>
@@ -373,32 +408,32 @@
     <div class=mw>
         <div class=r>
             <div class='s m g'>
-                <h2>ΠΩΣ ΛΕΙΤΟΥΡΓΟΥΜΕ</h2>
+                <h2>KAKO RADIMO</h2>
             </div>
         </div>
         <ul class=r>
             <li class='s m6 g3'>
                 <div class=i>
                     <img src='{{ asset('/') }}purplerelaxFiles/flawless/10.svg'>
-                    <p>Αφήνετε την παραγγελία στην ιστοσελίδα μας</p>
+                    <p>Popunite formu ispod podacima za dostavu</p>
                 </div>
             </li>
             <li class='s m6 g3'>
                 <div class=i>
                     <img src='{{ asset('/') }}purplerelaxFiles/flawless/11.svg'>
-                    <p>Ένας εκπρόσωπός μας σας καλεί για επιβεβαίωση της παραγγελίας</p>
+                    <p>Kontaktiraćemo Vas da potvrdimo Vašu porudžbinu</p>
                 </div>
             </li>
             <li class='s m6 g3'>
                 <div class=i>
                     <img src='{{ asset('/') }}purplerelaxFiles/flawless/12.svg'>
-                    <p>Σας παραδίδουμε το Flawless Legs σε οποιοδήποτε σημείο της Ελλάδος</p>
+                    <p>Poslaćemo Vam paket brzom poštom bilo gde u Srbiji</p>
                 </div>
             </li>
             <li class='s m6 g3'>
                 <div class=i>
                     <img src='{{ asset('/') }}purplerelaxFiles/flawless/13.svg'>
-                    <p>Πληρώνετε στην παραλαβή</p>
+                    <p>Pošiljku plaćate tek po prijemu</p>
                 </div>
             </li>
         </ul>
@@ -407,36 +442,37 @@
 <footer>
     <div class=mw>
         <div class=r>
-            <div class='s m g6'>
+            <div class='s m g6 form_left'>
             </div>
-            <div class='s m g6 ch'>
+            <div class='s m g6 ch form_right'>
                 <img class=logo src='{{ asset('/') }}purplerelaxFiles/flawless/logo.svg'>
-                <p class=ch> Αποκτήστε την πιο ολοκληρωμένη αποτριχωτική μηχανή που έχει κυκλοφορήσει ποτέ! </p>
+                <p class=ch>NABAVITE NAJMODERNIJI UREĐAJ ZA UKLANJANJE DLAČICA IKADA NAPRAVLJEN</p>
                 <div class=r>
                     <div class='s m6 g6'>
                         <ul class=ul>
-                            <li> <span>Σχεδιάστηκε και κατασκευάζεται στην Γερμανία</span> </li>
-                            <li> <span>4 κυμαινόμενες κεφαλές με επίστρωση χρυσού 18 καρατίων</span> </li>
-                            <li> <span>Ανώδυνο, δεν τραυματίζει το δέρμα, δεν προκαλεί ερεθισμούς</span> </li>
-                            <li> <span>Κατάλληλο για όλους τους τύπους επιδερμίδας</span> </li>
+                            <li> <span>Dizajniran i proizveden prema najvišim svetskim standardima</span> </li>
+                            <li> <span>4 plutajuće glave sa 18 karatnom pozlatom</span> </li>
+                            <li> <span>Bezbolno, ne povređuje kožu, ne izaziva iritaciju</span> </li>
+                            <li> <span>Pogodno za sve tipove kože</span> </li>
                         </ul>
                     </div>
                     <div class='s m6 g6'>
                         <form action="{{$orderRoute}}" method=post id="buy_form">
-                            <p>ΖΕΣΤΑΙ ΠΩΛΗΣΗ 2019</p>
+                            {{ csrf_field() }}
+                            @include('lander.naturapharm.components.form_hidden_fields')
+                            <p style="margin-bottom: 25px;">FORMA ZA PORUČIVANJE</p>
                             <div class=timer>
-                                {{--
-                                <div id=timer6cc94deb8168d75418be5ef86d3dcf630 style='min-width:283px;height:72px;'></div>
-                                --}}
                             </div>
                             <div class=price>
                                 <span style='text-decoration: line-through'> <b class=price_land_s4>{{ $prices[1]['originalPrice'] }}</b> <b class=price_land_curr> RSD</b> </span>
                                 <div class=price> <b class='price_land_s4 newprice'>{{ $prices[1]['amount'] }}</b> <b class=price_land_curr> RSD</b> </div>
                             </div>
-                            <input placeholder='Εισάγετε ονοματεπώνυμο' type=text name=name value="" required>
-                            <input placeholder='Εισάγετε τηλέφωνο' type=text name=phone value="" required>
+                            <input placeholder='Ime i prezime' type=text name=name value="" required>
+                            <input placeholder='Broj telefona' type=text name=phone value="" required>
+                            <input placeholder='Adresa' type=text name=shipping_address value="" required>
+                            <input placeholder='Grad' type=text name=shipping_city value="" required>
                             <div class=reolader>
-                                <input type=submit class="mm_button js_submit" value='Παραγγείλετε με έκπτωση'>
+                                <input type=submit class="mm_button js_submit" value='PORUČI ODMAH'>
                             </div>
                         </form>
                     </div>
@@ -445,9 +481,10 @@
         </div>
     </div>
 </footer>
-<div class=footer style="text-align: center; font-size: 14px;">
-    <footer style="padding: 20px 0">
-    </footer>
-</div>
+{{--<div class=footer style="text-align: center; font-size: 14px;">--}}
+    {{--<footer style="padding: 20px 0">--}}
+    {{--</footer>--}}
+{{--</div>--}}
+@include('components.pixel_footer')
 </body>
 </html>
