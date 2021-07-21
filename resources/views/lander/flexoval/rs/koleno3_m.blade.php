@@ -20,7 +20,8 @@
                                 <div font-family="gilroy" font-size="35px" font-weight="600" letter-spacing="1.6px" class="Box-sc-1063fjo-0 Box-sc-1063fjo-0 Text-oy5r1a-0 jCbWlg Card-sc-16nnnkc-0 cjQdkt">
                                     STEZNIK ZA KOLENO
                                     <div font-size="18px" font-weight="300" letter-spacing="0.68px" class="Box-sc-1063fjo-0 Text-oy5r1a-0 cBHsuP">
-                                        «FLEXOVAL»
+                                        {{--«FLEXOVAL»--}}
+                                        <img src="{{ asset('/') }}flexovalFiles/shared_files/Flexoval_logo.png" class="elIMG ximg" width="170" height="">
                                     </div>
                                 </div>
                                 <div height="363px" font-size="18px" font-weight="600" class="Box-sc-1063fjo-0 Box-sc-1063fjo-0 Flex-lw4abu-0 OrderScreen___StyledFlex-sc-3z9c1a-1 hCojAQ Text-oy5r1a-0 iKtyOM">
@@ -702,7 +703,8 @@
                                 <div font-size="22px" font-weight="600" font-family="gilroy" class="Box-sc-1063fjo-0 Text-oy5r1a-0 VMcIR">
                                     Steznik za koleno
                                     <div font-weight="300" class="Box-sc-1063fjo-0 Text-oy5r1a-0 klWLkV">
-                                        «FLEXOVAL»
+                                        {{--«FLEXOVAL»--}}
+                                        <img src="{{ asset('/') }}flexovalFiles/shared_files/Flexoval_logo.png" class="elIMG ximg" width="170" height="">
                                     </div>
                                 </div>
                                 <div font-family="gilroy" font-size="15px" font-weight="600" class="Box-sc-1063fjo-0 Box-sc-1063fjo-0 Text-oy5r1a-0 feGeRz Card-sc-16nnnkc-0 iNjJcz">

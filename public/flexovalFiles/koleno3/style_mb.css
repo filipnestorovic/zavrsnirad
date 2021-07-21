@@ -602,7 +602,7 @@ html {
 
 .klWLkV {
     margin-top: 7px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     font-weight: 300;
     text-transform: uppercase;
 }
@@ -611,12 +611,10 @@ html {
     margin-bottom: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-right: 90px;
     font-size: 15px;
-    text-align: right;
+    text-align: center;
     font-family: Gilroy, Arial, system-ui, sans-serif;
     font-weight: 600;
-    text-align: right;
 }
 
 .cLlWrm {

@@ -25,7 +25,7 @@
                                                 STEZNIK ZA KOLENO
                                                 <div font-size="35px" font-weight="300" letter-spacing="0.68px" class="Box-sc-1063fjo-0 Text-oy5r1a-0 lkIyFh">
                                                     {{--«FLEXOVAL»--}}
-                                                    <img src="{{ asset('/') }}flexovalFiles/shared_files/flexoval_logo.png" class="elIMG ximg" width="220" height="">
+                                                    <img src="{{ asset('/') }}flexovalFiles/shared_files/Flexoval_logo.png" class="elIMG ximg" width="220" height="">
                                                 </div>
                                             </div>
                                             <div font-size="20px" font-weight="600" class="Box-sc-1063fjo-0 Text-oy5r1a-0 FirstScreen___StyledText-sc-1o6fxu4-1 jSGOIr">
@@ -822,7 +822,7 @@
                                         </div>
                                         <div font-weight="300" font-size="35px" class="Box-sc-1063fjo-0 Text-oy5r1a-0 cKkSxg">
                                             {{--«FLEXOVAL»--}}
-                                            <img src="{{ asset('/') }}flexovalFiles/shared_files/flexoval_logo.png" class="elIMG ximg" width="220" height="">
+                                            <img src="{{ asset('/') }}flexovalFiles/shared_files/Flexoval_logo.png" class="elIMG ximg" width="220" height="">
                                         </div>
                                         <div font-size="20px" font-weight="600" class="Box-sc-1063fjo-0 Text-oy5r1a-0 OrderScreen___StyledText-sc-1ou1eia-1 iIQsoN">
                                             Oslobodite se ukočenih, umornih i bolnih kolena
