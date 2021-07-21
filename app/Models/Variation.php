@@ -259,6 +259,8 @@ class Variation extends Model
 
     public function getAllOrdersForVariation($variation_id, $dateFrom = null, $dateTo = null) {
         $result = DB::table('order')
+            ->leftJoin('country', 'order.country_id', '=', 'country.id_country')
+            ->leftJoin('currency', 'country.currency_id', '=', 'currency.id_currency')
             ->where('variation_id','=',$variation_id);
 
         if(!empty($dateFrom)){

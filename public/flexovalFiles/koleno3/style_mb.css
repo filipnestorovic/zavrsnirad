@@ -1,4 +1,6 @@
-
+html {
+    scroll-behavior: smooth;
+}
 .fcWDWT {
     margin-bottom: 37px;
     padding-left: 15px;
@@ -49,7 +51,7 @@
 }
 
 .ifzqnV {
-    margin-top: 59px;
+    margin-top: 30px;
 }
 
 .jsjIKM {
@@ -328,15 +330,15 @@
     justify-content: space-between;
 }
 
-.cjQdkt {
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: 35px;
-    background-image: url(pic-bc6fbabd04e31a3450478e3fed2b0423.png);
-    background-size: 61px;
-    background-position: 235px calc(50% + 4px);
-    background-repeat: no-repeat;
-}
+/*.cjQdkt {*/
+    /*padding-left: 15px;*/
+    /*padding-right: 15px;*/
+    /*font-size: 35px;*/
+    /*background-image: url(pic-bc6fbabd04e31a3450478e3fed2b0423.png);*/
+    /*background-size: 61px;*/
+    /*background-position: 235px calc(50% + 4px);*/
+    /*background-repeat: no-repeat;*/
+/*}*/
 
 .exMjpH {
     margin-top: 0;
@@ -346,17 +348,17 @@
     background-repeat: no-repeat;
 }
 
-.iNjJcz {
-    margin-bottom: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 90px;
-    font-size: 15px;
-    text-align: right;
-    background-image: url(pic-bc6fbabd04e31a3450478e3fed2b0423.png);
-    background-position: center right;
-    background-repeat: no-repeat;
-}
+/*.iNjJcz {*/
+    /*margin-bottom: 20px;*/
+    /*padding-top: 10px;*/
+    /*padding-bottom: 10px;*/
+    /*padding-right: 90px;*/
+    /*font-size: 15px;*/
+    /*text-align: right;*/
+    /*background-image: url(pic-bc6fbabd04e31a3450478e3fed2b0423.png);*/
+    /*background-position: center right;*/
+    /*background-repeat: no-repeat;*/
+/*}*/
 
 .jCbWlg {
     padding-left: 15px;
@@ -556,6 +558,7 @@
     font-size: 12px;
     color: #385898;
     font-weight: 700;
+    font-family: Montserrat, sans-serif;
 }
 
 .hHWbes {
@@ -783,7 +786,7 @@
     margin-right: auto;
     height: auto;
     background-image: url(bg-df4589b19ec36b4832ae1c8bd8c32fcd.png);
-    background-position: center top;
+    background-position: center 55px;
     background-repeat: no-repeat;
     height: auto;
     position: relative;
@@ -843,11 +846,10 @@
 .iGFmeD {
     margin-left: auto;
     margin-right: auto;
-    height: 1210px;
+    height: 1310px;
     background-image: url(bg_foot-8712c3a745e2e9caf2b73d8ee502530c.jpg);
     background-position: center top;
     background-repeat: no-repeat;
-    height: 1210px;
     position: relative;
 }
 
@@ -877,7 +879,7 @@
 .hFPqcP {
     margin-left: auto;
     margin-right: auto;
-    padding-top: 88px;
+    padding-top: 40px;
     padding-left: 15px;
     padding-right: 15px;
     width: 320px;
@@ -912,7 +914,7 @@
 .jmvIZc {
     margin-left: auto;
     margin-right: auto;
-    padding-top: 78px;
+    padding-top: 50px;
     padding-left: 0;
     padding-right: 0;
     width: 320px;
@@ -924,11 +926,11 @@
 .fsUtir {
     margin-left: auto;
     margin-right: auto;
-    padding-top: 68px;
+    padding-top: 10px;
     padding-left: 0;
     padding-right: 0;
     width: 320px;
-    height: 760px;
+    height: 700px;
     max-width: 336px;
     text-align: center;
     max-width: 336px;
@@ -961,9 +963,9 @@
 .dyvXRQ {
     margin-left: auto;
     margin-right: auto;
-    padding: 63px 8px 65px;
-    padding-left: 8px;
-    padding-right: 8px;
+    padding: 63px 8px 40px;
+    /*padding-left: 8px;*/
+    /*padding-right: 8px;*/
     width: 320px;
     max-width: 336px;
     max-width: 336px;
@@ -1620,7 +1622,7 @@ body {
     margin-bottom: 20px;
     padding-left: 15px;
     padding-right: 15px;
-    height: 363px;
+    height: 390px;
     font-size: 18px;
     display: -webkit-box;
     display: -webkit-flex;
@@ -1952,4 +1954,18 @@ body {
     background-repeat: no-repeat;
     background-position: center 11px, center;
     background-size: 166px 24px, auto;
+}
+
+input[type="radio"] {
+    width: 15px !important;
+    height: 15px !important;
+    cursor: pointer;
+}
+label {
+    height: 15px !important;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 3px;
+    font-weight: 600;
+    font-family: Gilroy, Arial, system-ui, sans-serif;
 }

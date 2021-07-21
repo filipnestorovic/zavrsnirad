@@ -195,6 +195,12 @@ class VariationController extends Controller
             $revenueTotal += $order->price;
         }
 
+        if(count($allOrders)>0) {
+            $this->data['currency_symbol'] = $allOrders[0]->currency_symbol;
+        } else {
+            $this->data['currency_symbol'] = "NaN";
+        }
+
         $upCrossSellOrders = $this->modelOrder->getUpCrossSellByVariationOrTest($variation_id, null, $dateFrom, $dateTo);
         $upCrossSellCount = 0;
         $upCrossSellRevenue = 0;
@@ -248,7 +254,7 @@ class VariationController extends Controller
         $tableContent .= "<td>".($this->data['landerVisits'] != 0 ? number_format(($this->data['checkoutVisits']/$this->data['landerVisits'])*100, 2) : 0)."%</td>";
         $tableContent .= "<td>".($this->data['landerVisits'] != 0 ? number_format(($this->data['thankyouVisits']/$this->data['landerVisits'])*100, 2) : 0)."%</td>";
         $tableContent .= "<td>".$this->data['allOrders']."</td>";
-        $tableContent .= "<td>".$this->data['totalRevenue']." RSD</td>";
+        $tableContent .= "<td>".$this->data['totalRevenue']." ".$this->data['currency_symbol']."</td>";
         $tableContent .= "</tr></tbody></table>";
 
         if($this->data['upcrossSellViews']) {
@@ -260,8 +266,8 @@ class VariationController extends Controller
             $tableContent .= "<td>".$this->data['upcrossSellCancelled']."</td>";
             $tableContent .= "<td>".$this->data['upcrossSellPurchase']."</td>";
             $tableContent .= "<td>".($this->data['upcrossSellViews'] != 0 ? number_format(($this->data['upcrossSellPurchase']/$this->data['upcrossSellViews'])*100, 2) : 0)."%</td>";
-            $tableContent .= "<td>".$this->data['upCrossSellRevenue']." RSD</td>";
-            $tableContent .= "<td>".($this->data['upCrossSellOrders'] != 0 ? number_format($this->data['upCrossSellRevenue']/$this->data['upCrossSellOrders'], 2) : 0)." RSD</td>";
+            $tableContent .= "<td>".$this->data['upCrossSellRevenue']." ".$this->data['currency_symbol']."</td>";
+            $tableContent .= "<td>".($this->data['upCrossSellOrders'] != 0 ? number_format($this->data['upCrossSellRevenue']/$this->data['upCrossSellOrders'], 2) : 0)." ".$this->data['currency_symbol']."</td>";
             $tableContent .= "</tr></tbody></table>";
         }
 
