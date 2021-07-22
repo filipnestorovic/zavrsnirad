@@ -43,6 +43,8 @@ class Statistic extends Model
             }
         }
 
+        $result->where('session.customer_ip','<>','89.216.27.78');
+
         return $result->get();
     }
 
