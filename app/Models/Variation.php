@@ -261,7 +261,10 @@ class Variation extends Model
         $result = DB::table('order')
             ->leftJoin('country', 'order.country_id', '=', 'country.id_country')
             ->leftJoin('currency', 'country.currency_id', '=', 'currency.id_currency')
-            ->where('variation_id','=',$variation_id);
+            ->where([
+                ['variation_id','=',$variation_id],
+                ['order.name','NOT LIKE','%TEST%']
+            ]);
 
         if(!empty($dateFrom)){
             if(!empty($dateTo)) {
@@ -276,7 +279,10 @@ class Variation extends Model
 
     public function countOrdersForVariation($variation_id) {
         $result = DB::table('order')
-            ->where('variation_id','=',$variation_id)
+            ->where([
+                ['variation_id','=',$variation_id],
+                ['order.name','NOT LIKE','%TEST%']
+            ])
             ->groupBy('quantity')
             ->selectRaw('count(*) as order_count, quantity')
             ->get();

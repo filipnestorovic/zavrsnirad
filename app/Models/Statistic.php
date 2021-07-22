@@ -50,7 +50,10 @@ class Statistic extends Model
 
     public function getOrdersForVariationInActiveTest($test_variation_id) {
         $result = DB::table('order')
-            ->where('test_variation_id','=',$test_variation_id)
+            ->where([
+                ['test_variation_id','=',$test_variation_id],
+                ['order.name','NOT LIKE','%TEST%']
+            ])
             ->get();
         return $result;
     }
