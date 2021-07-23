@@ -9,7 +9,7 @@
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <link type="text/css" href="{{ asset('/') }}flexonikFiles/smartwatch/style.css" rel="stylesheet">
     <link type="text/css" href="{{ asset('/') }}shared_files/font-awesome.min.css" rel="stylesheet">
-    <link rel="icon" href="{{ asset('/') }}flexonikFiles/smartwatch/big_watch.jpg" type="image/png">
+    <link rel="icon" href="{{ asset('/') }}flexonikFiles/smartwatch/big_watch.png" type="image/png">
     <link rel="preload" href="{{ asset('/') }}fonts/GothamPro.woff" as="font" type="font/woff" crossorigin="anonymous">
     <link rel="preload" href="{{ asset('/') }}fonts/GothamPro-Bold.woff" as="font" type="font/woff" crossorigin="anonymous">
     <style>
@@ -81,7 +81,7 @@
         <div class="clear"></div>
         <div class="header__preview preview container">
             <div class="preview__photo col-6">
-                <img src="{{ asset('/') }}flexonikFiles/smartwatch/big_watch.jpg" alt="xPower Smart Watch" title="xPower Smart Watch">
+                <img src="{{ asset('/') }}flexonikFiles/smartwatch/big_watch.png" alt="xPower Smart Watch" title="xPower Smart Watch">
             </div>
             <div class="preview__info info col-6">
                 <!-- <div class="info__headline">xPower Smart Watch</div> -->
@@ -201,31 +201,31 @@
         <div class="specs__gallery col-6">
             <div class="product-gallery owl-carousel">
                 <div data-hash="photo-one" class="product-gallery__item">
-                    <img alt="xPower Smart Watch" title="xPower Smart Watch" src="{{ asset('/') }}flexonikFiles/smartwatch/big_watch.jpg">
+                    <img alt="xPower Smart Watch" title="xPower Smart Watch" src="{{ asset('/') }}flexonikFiles/smartwatch/big_watch.png">
                 </div>
                 <div data-hash="photo-two" class="product-gallery__item">
-                    <img alt="xPower Smart Watch" title="xPower Smart Watch" src="{{ asset('/') }}flexonikFiles/smartwatch/GT08-03.jpg">
+                    <img alt="xPower Smart Watch" title="xPower Smart Watch" src="{{ asset('/') }}flexonikFiles/smartwatch/GT08-03.png">
                 </div>
                 <div data-hash="photo-three" class="product-gallery__item">
-                    <img alt="xPower Smart Watch" title="xPower Smart Watch" src="{{ asset('/') }}flexonikFiles/smartwatch/lateral_watch.jpg">
+                    <img alt="xPower Smart Watch" title="xPower Smart Watch" src="{{ asset('/') }}flexonikFiles/smartwatch/lateral_watch.png">
                 </div>
             </div>
             <div class="product-gallery__image-nav">
                 <div class="image-nav__item">
                     <a href="#photo-one" class="image-nav__link">
-                        <img src="{{ asset('/') }}flexonikFiles/smartwatch/big_watch.jpg" alt="xPower Smart Watch" title="xPower Smart Watch"
+                        <img src="{{ asset('/') }}flexonikFiles/smartwatch/big_watch.png" alt="xPower Smart Watch" title="xPower Smart Watch"
                              class="image-nav__img">
                     </a>
                 </div>
                 <div class="image-nav__item">
                     <a href="#photo-two" class="image-nav__link">
-                        <img alt="xPower Smart Watch" title="xPower Smart Watch" src="{{ asset('/') }}flexonikFiles/smartwatch/GT08-03.jpg"
+                        <img alt="xPower Smart Watch" title="xPower Smart Watch" src="{{ asset('/') }}flexonikFiles/smartwatch/GT08-03.png"
                              class="image-nav__img">
                     </a>
                 </div>
                 <div class="image-nav__item">
                     <a href="#photo-three" class="image-nav__link">
-                        <img alt="xPower Smart Watch" title="xPower Smart Watch" src="{{ asset('/') }}flexonikFiles/smartwatch/lateral_watch.jpg"
+                        <img alt="xPower Smart Watch" title="xPower Smart Watch" src="{{ asset('/') }}flexonikFiles/smartwatch/lateral_watch.png"
                              class="image-nav__img">
                     </a>
                 </div>
@@ -540,7 +540,7 @@
         <!-- <h2 class="heading__headline">xPower Smart Watch</h2> -->
         <h1 class="heading heading--secondary heading--has-headline heading--extra">Smart Watch</h1>
         <div class="buy__photo col-6">
-            <img alt="xPower Smart Watch" title="xPower Smart Watch" src="{{ asset('/') }}flexonikFiles/smartwatch/big_watch.jpg">
+            <img alt="xPower Smart Watch" title="xPower Smart Watch" src="{{ asset('/') }}flexonikFiles/smartwatch/big_watch.png">
         </div>
         <div class="buy__form form col-6">
             <div class="form__price price price--buynow">
