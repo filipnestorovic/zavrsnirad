@@ -8,18 +8,17 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('/') }}purplerelaxFiles/celluless/styles.css">
     <link rel="shortcut icon" href="">
 </head>
-
 <body>
 <!-- offer -->
+@include('components.display_errors')
 <header class="offer_section">
     <div class="wrapper clearfix">
-        <h1> Vákuový masážny prístroj proti celulitíde <span class="accent_color">Cellulite Massage</span>
-        </h1>
+        <h1> MASAŽER <span class="accent_color">"UBICA CELULITA" </span>- ZA SAVRŠENO TELO</h1>
         <div class="info">
             <ul>
-                <li> účinok po<span class="accent_color"> prvom použití</span></li>
-                <li> vyrobený z<span class="accent_color"> kvalitných materiálov</span></li>
-                <li><span class="accent_color"> zabraňuje vzniknutia</span> celulitídy v budúcnosti</li>
+                <li> Efekat nakon <span class="accent_color">prve upotrebe</span></li>
+                <li> Izrađen od <span class="accent_color"> kvalitetnih materijala</span></li>
+                <li><span class="accent_color"> Uklanja celulit</span> i sprečava taloženje novog</li>
             </ul>
             {{--<div class="products_count_block"><span> 17</span> Zostáva<br> balíčkov</div>--}}
             <div class="discount"><span> Popust<b> 40%</b></span></div>
@@ -66,29 +65,29 @@
 <section class="diseases_section">
     <div class="wrapper">
 
-        <h2> aké má<span class="accent_color"> nebezpečenstvo</span> celulitída?</h2>
+        <h2> Koja je <span class="accent_color"> opasnost</span> od celulita?</h2>
 
-        <p> Je známe, že celulitída je vytváraná v miestach s veľmi pomalým krvným obehom. Ak sa toho nemôžete
-            zbaviť včas, potom v priebehu času, nadbytok tuku vyvoláva oslabenie kapilárnej siete a následnú<b
-                    class="accent_color"> infiltráciu</b> (Akumulácia tekutín v medzibunkovom priestore). To vedie k
-            rozvoju<b class="accent_color"> onkologických ochorení.</b></p>
+        <p> Poznato je da se celulit formira na mestima sa vrlo sporom cirkulacijom krvi. Ako se on na vreme ne reši, vremenom uzrokuje
+            <b class="accent_color">slabljenje kapilarne mreže</b> i
+            <b class="accent_color">nakupljanje tečnosti u međućelijskom prostoru.</b> To dovodi do razvoja onkoloških bolesti.
+        </p>
 
-        <p> Celulitída je lokalizovaná tesne pred epidermou a bráni normálnemu pôsobeniu elastínových a kolagénových
-            vlákien. Z tohto dôvodu je narušená funkcia lymfatických a krvných ciev. To môže viesť k rozvoju
-            cievnych ochorení -<b class="accent_color"> aterosklerózy, ischémie a ďalších.</b></p>
+        <p>Celulit se nalazi neposredno pre epidermisa i sprečava normalno delovanje elastinskih i kolagenih vlakana. Zbog toga dolazi do slabljenja
+            funkcije limfnih i krvnih sudova. To može dovesti do razvoja <b class="accent_color">vaskularnih bolesti - ateroskleroze, ishemije i drugih.</b>
+        </p>
 
         <div class="items_list diseases_list">
 
             <div class="item disease_item">
-                <h3> rakovinové bujnenie</h3>
+                <h3> NASTANAK KARCINOMA</h3>
             </div>
 
             <div class="item disease_item">
-                <h3> trombóza</h3>
+                <h3> TROMBOZA</h3>
             </div>
 
             <div class="item disease_item">
-                <h3> ateroskleróza</h3>
+                <h3> ATEROSKLEROZA</h3>
             </div>
         </div>
     </div>
@@ -98,7 +97,7 @@
 <section class="cellulite_types_section">
     <div class="wrapper">
 
-        <h2><span> Aká býva celulitída</span></h2>
+        <h2><span>VRSTE CELULITA</span></h2>
 
         <div class="types_list owl-carousel">
 
@@ -108,10 +107,10 @@
                          title="Cellulite Massage">
                 </div>
                 <div class="text">
-                    <h3> tuková celulitída</h3>
-                    <p> Tento typ celulitídy sa vyskytuje u ľudí <span>s nadváhou</span>. Spravidla sa tvorí na
-                        bokoch, zadku a bruchu. Táto forma deformácia podkožného tkaniva nespôsobuje bolesť, ale v
-                        priebehu času môže viesť <span>na vážnejšie dôsledky</span>.</p>
+                    <h3>MASNI CELULIT</h3>
+                    <p>Ova vrsta celulita se javlja kod ljudi sa <span>prekomernom težinom.</span> Obično se formira na bokovima,
+                        zadnjici i stomaku. Ovaj oblik deformacije potkožnog tkiva ne uzrokuje bol, ali vremenom može dovesti
+                        do <span>ozbiljnih posledica.</span></p>
                 </div>
             </div>
 
@@ -121,12 +120,11 @@
                          title="Cellulite Massage">
                 </div>
                 <div class="text">
-                    <h3> Vodná celulitída</h3>
-                    <p> Objavuje sa u ľudí <span>so sedavým životným štýlom</span>. K jeho výskytu tiež prispieva
-                        nadbytok slaných a korenistých potravín v strave. Táto forma je nebezpečnejší: ak sa opuch
-                        stane výrazným, potom je v postihnutých oblastiach narušený krvný obeh, ktorý <span>môže
-                                viesť k vaskulárnym ochoreniam</span>.</p>
-                </div>
+                    <h3>VODENI CELULIT</h3>
+                    <p>Pojavljuje se kod ljudi sa fizički <span>neaktivnim načinom života.</span> Njegovom nastanku doprinosi i višak slane i začinjene hrane u ishrani.
+                        Ovaj oblik je opasan ako dođe do prekomernog nakupljanja celulita jer je cirkulacija krvi u
+                        pogođenim područjima poremećena, što može dovesti do <span>vaskularnih bolesti.</span></p>
+            </div>
             </div>
 
             <div class="type_item clearfix">
@@ -135,11 +133,11 @@
                          title="Cellulite Massage">
                 </div>
                 <div class="text">
-                    <h3> Vláknitá celulitída</h3>
-                    <p><span> Vážne porušenie</span> tvorby podkožného tkaniva. S takou celulitídou sa pokožka stáva
-                        tvrdou na dotyk, nepríjemnú a <span>bolestivú</span>. Farba naberá namodralý nádych. Táto
-                        forma celulitídy v priebehu času spravidla vyplýva z predchádzajúcich. Ak sa tomuto problému
-                        nevenujete ďalej, potom v podstate <span>zvyšuje sa riziko vzniku rakoviny</span>.</p>
+                    <h3>VLAKNASTI CELULIT</h3>
+                    <p>Ozbiljan poremećaj <span>formiranja potkožnog tkiva.</span> Sa takvim celulitom, koža postaje bolna i tvrda na dodir.
+                        Boja poprima plavkasti odsjaj. Ovaj oblik celulita vremenom postaje opasan,
+                        i ako se ne deluje preventivno onda je <span>rizik od karcinoma u osnovi povećan.</span>
+                    </p>
                 </div>
             </div>
 
@@ -152,16 +150,16 @@
 <section class="effects_section">
     <div class="wrapper">
 
-        <h2> Začnite bojovať proti celulitíde<span> Tu a teraz</span> <small> a budete prekvapení, keď ho dokážete
-                poraziť</small></h2>
+        <h2> BORBA PROTIV CELULITA MOŽE DA POČNE <span>OVDE I ODMAH</span>
+            <small>REZULTATI ĆE BITI IZNENAĐUJUĆE DOBRI</small>
+        </h2>
 
-        <p> Jedinečnosť prostriedku spočíva v tom, že jeho zloženie vám umožní sa zbaviť<span> práve príčiny</span>
-            výskytu celulitídy - stagnácia v obehovom systéme.</p>
+        <p>Jedinstvenost proizvoda leži u činjenici da njegov sastav omogućava <span>rešavanje uzroka celulita</span> i trajno uklanjanje.</p>
 
         <ul>
-            <li> Účinné po prvom použití</li>
-            <li> Aktivuje krvný obeh a intercelulárnej metabolizmus</li>
-            <li> Eliminuje "pomarančovú kôru" a zabraňuje jej vzniku v budúcnosti</li>
+            <li>Efekat već nakon prve upotrebe</li>
+            <li>Aktivira cirkulaciju krvi i međućelijski metabolizam</li>
+            <li>Eliminiše "pomorandžinu koru" i sprečava njeno stvaranje u budućnosti</li>
         </ul>
 
     </div>
@@ -170,40 +168,38 @@
 <!-- components -->
 <section class="components_section">
     <div class="wrapper">
-        <h2><span> vlastnosti masérky</span></h2>
+        <h2><span>EFEKEAT ANTICELULIT MASAŽE</span></h2>
 
         <div class="items_list components_list">
             <div class="item component_item">
                 <img class="item-img-1" src="{{ asset('/') }}purplerelaxFiles/celluless/components__component1_image.jpg" alt="Cellulite Massage"
                      title="Cellulite Massage">
-                <p> Unikátny vákuový masážny stroj pre telo, využívajúce princíp klasickej masáže, ale oveľa ľahšie
-                    sa používa a je účinný</p>
+                <p>Jedinstvena sprava za skidanje celulita koristi princip klasične masaže, ali je mnogo lakša za upotrebu, efikasnija i jeftinija.</p>
             </div>
             <div class="item component_item">
                 <img class="item-img-2" src="{{ asset('/') }}purplerelaxFiles/celluless/components__component2_image.jpg" alt="Cellulite Massage"
                      title="Cellulite Massage">
-                <p> Vhodný pre masáž tváre a tela (paží, brucha, poprsie, bokov, teliat)</p>
+                <p>Pogodno za masažu ruku, stomaka, grudi, kukovi, zadnjica, leđa, vrata, butina i listova.</p>
             </div>
             <div class="item component_item">
                 <img class="item-img-3" src="{{ asset('/') }}purplerelaxFiles/celluless/components__component3_image.jpg" alt="Cellulite Massage"
                      title="Cellulite Massage">
-                <p> Pri pravidelnom používaní vám umožní zbaviť sa celulitídy a v krátkej dobe znížiť objem
-                    problémových oblastí.</p>
+                <p>Redovnom upotrebom omogućava rešavanje celulita i smanjenje obima problematičnih područja za kratko vreme.</p>
             </div>
             <div class="item component_item">
                 <img class="item-img-4" src="{{ asset('/') }}purplerelaxFiles/celluless/components__component4_image.jpg" alt="Cellulite Massage"
                      title="Cellulite Massage">
-                <p> Zjemňuje pokožku, dodáva jej pevnosť a pružnosť a odstraňuje účinok "pomarančovej kôry"</p>
+                <p>Omekšava kožu, daje joj čvrstoću i elastičnost. Eliminiše efekat "pomorandžine kore".</p>
             </div>
             <div class="item component_item">
                 <img class="item-img-5" src="{{ asset('/') }}purplerelaxFiles/celluless/components__component5_image.jpg" alt="Cellulite Massage"
                      title="Cellulite Massage">
-                <p> Výrazne zlepšuje koaguláciu krvi a inhibuje tvorbu trombu</p>
+                <p>Značajno poboljšava cirkulaciju krvi i sprečava stvaranje tromba.</p>
             </div>
             <div class="item component_item">
                 <img class="item-img-6" src="{{ asset('/') }}purplerelaxFiles/celluless/components__component6_image.jpg" alt="Cellulite Massage"
                      title="Cellulite Massage">
-                <p> K masáži môžete použiť akýkoľvek masážny olej alebo krém.</p>
+                <p>Može se koristiti uz bilo koje masažno ulje ili kremu.</p>
             </div>
         </div>
     </div>
@@ -214,10 +210,10 @@
 <section class="use_section">
     <div class="wrapper">
         <div class="info">
-            <h2> Oblasť použitia <span> Cellulite Massage</span></h2>
-            <p> Vákuový masážny prístroj sa odporúča pre masáže tváre a tela. Účelom tvárových procedúr je vyhladiť
-                tón pleti tváre, zabrániť vzniku vrások a starnutie pokožky a opraviť ovál tváre (najmä oblasti
-                brady). <span>Cellulite Massage</span> Bojuje dobre so zväčšenými pórmi, znižuje ich priemer.
+            <h2> MOŽE DA SE KORISTI I ZA <span>RELAX MASAŽU</span></h2>
+            <p>Anticelulit masažer može da se koristi i kao obični masažer za opuštanje.
+                Nakon napornog radnog dana idealan je za <span>opuštanje tela, posebno vratnog i ramenog pojasa</span> koji postane vrlo napet usled dugog sedenja.
+                Vrhunska masaža kod kuće, zar ne zvuči odlično?
             </p>
         </div>
     </div>
@@ -227,22 +223,19 @@
 <!-- methods -->
 <section class="methods_section">
     <div class="wrapper">
-        <h2> Špecifikácie</h2>
+        <h2> ŠTA SE SVE DOBIJA U KOMPLETU</h2>
         <div class="items_list methods_list">
             <div class="item method_item">
                 <img src="{{ asset('/') }}purplerelaxFiles/celluless/methods__method2_image.jpg" alt="Cellulite Massage" title="Cellulite Massage">
-                <h3> Cellulite Massage</h3>
+                <h3>"UBICA CELULITA"</h3>
                 <ul class="tech_list">
-                    <li class="yes"> Maximálny generovaný tlak je 50 kPa</li>
-                    <li class="yes"> Vstavaný dobíjacie zdroj Ni-MH 2,4 V</li>
-                    <li class="yes"> Doba nabíjania batérie - 8 hodín.</li>
-                    <li class="yes"> Nabíjačka s prevádzkovým napätím 220-230 V.</li>
-                    <li class="yes"> Prevádzkové teploty: relatívna vlhkosť 25 ... 85%, teplota + 18 ... + 35 ° С
-                    </li>
-                    <li class="yes"> Výrobca: Francúzska spoločnosť Gezanne ITC (adresa: Saint Avertin 39, Rue des
-                        Granges, Galandu)</li>
+                    <li class="yes">8 rotacionih kuglica - Koristi se za smanjenje obima tela i skidanje celulita.</li>
+                    <li class="yes">Tanka ravna glava - za masažu vrata, ramena i leđa. Ublažava umor i vraća snagu telu.</li>
+                    <li class="yes">Podloga sa talasastom površinom - uklanja prve znake celulita</li>
+                    <li class="yes">Nastavak za brušenje - za uklanjanje grube kože na stopalima</li>
+                    <li class="yes">Zaštitna glava - štiti od mršenja kose u uređaj.</li>
                 </ul>
-                <a href="#order_form" class="button"> Objednajte sa zľavou</a>
+                <a href="#order_form" class="button">PORUČITE SADA</a>
             </div>
         </div>
     </div>
@@ -251,39 +244,28 @@
 <!-- reviews -->
 <section class="reviews_section">
     <div class="wrapper">
-        <h2> Výsledky<span> našich klientov</span></h2>
+        <h2> REZULTATI<span> NAŠIH KUPACA</span></h2>
         <div class="reviews_list owl-carousel clearfix">
             <div class="review_item">
                 <img src="{{ asset('/') }}purplerelaxFiles/celluless/reviews__review1_photo.jpg" alt="Cellulite Massage" title="Cellulite Massage">
-                <div class="author_info"><span> Zuzana Latová</span><br></div>
-                <p> Nedokážem si predstaviť, ako som žila bez tohto maséra! Nákup sa ukázal byť tak užitočným, že
-                    som jednoducho zabudla na výlety do hydromasáže a ručná masáž tela špecialistom. Kúpila som
-                    masér, pretože moje ruky z používania plechoviek sú veľmi unavené, ale zariadenie má oveľa
-                    vyššiu účinnosť! Pre použitie po dobu 1,5 mesiaca od celulitídy na zadku a po stranách nebolo
-                    pozorované žiadne stopy. Pravda, tuk je stále na vnútornej strane stehna, ale myslím si, že je
-                    to otázka času. Bolesť je mierna, môžete vydržať! Tiež sa mi páči, že existuje špeciálne
-                    tlačidlo, a ak to veľa bolí, môžete náhle zastaviť vstrebávanie kože</p>
+                <div class="author_info"><span>SUZANA KOJIĆ</span><br></div>
+                <p>Ne mogu da zamislim kako sam živela bez ovog masera! Kupovina se pokazala toliko korisnom da sam jednostavno prestala da idem u masažne salone.
+                    Već nakon nekoliko dana korišćenja primetila sam prve rezultate. Već nakon 2 meseca uopšte nisam imala celulit na zadnjici i bokovima.
+                    Nije bolno, jako je opuštajuće. Koža mi je postala mekana i elastična i mogu da kažem da sam jako zadovoljna ovim proizvodom.</p>
             </div>
             <div class="review_item">
                 <img src="{{ asset('/') }}purplerelaxFiles/celluless/reviews__review2_photo.jpg" alt="Cellulite Massage" title="Cellulite Massage">
-                <div class="author_info"><span> Lucia Tatrová</span><br></div>
-                <p> Po narodení tretieho dieťaťa zostal stav brucha a zadku veľa žiaduce. Som chudá, ale ako sa
-                    ukázalo, takí ľudia majú celulitídu. Vákuový masážny stroj je pre mňa len dar z nebies, pretože
-                    do salónu nie sú peniaze a čas. Procedúra nie je príjemná, ale použitie mastného
-                    anticelulitidového oleja pred masážou bolesť trochu uľahčí. Vykonávam 10 minút len dvakrát
-                    týždenne, pretože sa obávam zvýšených prejavov kŕčových žíl. Počas mesiaca začalo telo vyzerať
-                    oveľa lepšie, robím masáže nielen na problémové oblasti, ale aj na spodnú časť chrbta, na
-                    predlaktí. Chcem povedať, že masér naozaj funguje, nákup som neľutovala!</p>
+                <div class="author_info"><span>LUCIJA MACIĆ</span><br></div>
+                <p>Posle rođenja trećeg deteta, stanje stomaka i zadnjice mi je bilo jako loše. Na nagovor sestre poručila sam ovaj uređaj.
+                    Bila sam skeptična, ali je jako brzo došlo do odličnih rezultat. Masiram se po 20 minuta svaki dan, i tako već 3 meseca. Već nakon jednog meseca
+                    telo mi je počelo da izgleda mnogo bolje, a moj suprug se oduševio. Sve preporuke za ovaj masažer!</p>
             </div>
             <div class="review_item">
                 <img src="{{ asset('/') }}purplerelaxFiles/celluless/reviews__review3_photo.jpg" alt="Cellulite Massage" title="Cellulite Massage">
-                <div class="author_info"><span> Michaela Polková</span><br></div>
-                <p> Vždy som snívala o Masér pre chudnutie, ako som videl veľa reklamy, a moje boky nevyzerali
-                    najlepšie po narodení dieťaťa. Okrem toho, zadok boli tak zväčšené, že sa nezmestia do nohavíc,
-                    bolo veľa strií. Po prvý domáci masáži sa brucho stalo pružnejším a po 4 procedúrach sa
-                    rozťahovanie na bokoch a pásu začalo odľahčovať! Najprv som na masáž použila anticelulitídový
-                    krém, teraz nanášam med na koži. Postupne (asi po mesiaci používania zariadení každý druhý deň)
-                    sa tvary tela viac tónovali, celulitída prakticky zmizla, celkom som stratila 3,5 kg.!</p>
+                <div class="author_info"><span>DRAGANA MARKOVIĆ</span><br></div>
+                <p>Oduvek sam se trudila da moje telo izgleda savršeno, ali kako sam prestala da treniram i približila se tridesetim godinama, počeo je postepeno da mi se nakuplja celulit
+                    na zadnjici i butinama. Htela sam da idem na anticelulit masaže, ali mi oduzimaju mnogo vremena i jako su skupe za moj standard. Videla sam reklamu za ovaj proizvod na internetu
+                    i rekoh zašto da ne poručim. Sada iz ove perspektive sam sigurna da nisam ni malo pogrešila. Ništa mi nije dalo ovako dobre rezultate. Toplo preporučujem kupovinu!</p>
             </div>
         </div>
     </div>
@@ -292,40 +274,40 @@
 
 <section class="order_steps_section">
     <div class="wrapper">
-        <h2> Ako objednať -<span> Doprava a platba</span></h2>
+        <h2> KAKO PORUČITI -<span>ISPORUKA I PLAĆANJE</span></h2>
         <div class="items_list steps_list">
             <div class="item step_item">
                 <div class="icon"></div>
-                <p><b> Vyplňte nižšie uvedený formulár</b><br> uveďte svoje meno, priezvisko<br> a telefónne číslo
+                <p><b>Poručite masažer na sajtu</b><br> Popunite formu <br>podacima za dostavu
                 </p>
             </div>
             <div class="item step_item">
                 <div class="icon"></div>
-                <p><b> Naši zamestnanci budú kontaktovať</b><br> S vami a spresní<br> Podrobnosti o objednávke</p>
+                <p><b>Potvrdićemo Vašu porudžbinu</b><br> Porudžbina će biti potvrđena <br>u najkraćem roku</p>
             </div>
             <div class="item step_item">
                 <div class="icon"></div>
-                <p><b> Vašu objednávku zašleme</b><br> ten istý deň kuriérom</p>
+                <p><b> Slanje paketa</b><br> Paket će Vam biti poslat <br>u roku od 1-2 radna dana</p>
             </div>
             <div class="item step_item">
                 <div class="icon"></div>
-                <p><b> Žiadne zálohy!</b><br> Platba sa uskutočňuje<br> po obdržaní objednávky</p>
+                <p><b> Plaćanje pouzećem</b><br> Plaćate kuriru prilikom <br>dostave paketa</p>
             </div>
         </div>
-        <div class="info">Doručenie kuriérom<b> do 1-3 dní</b></div>
+        <div class="info"></div>
     </div>
 </section>
 <!-- /order steps -->
 <!-- offer -->
 <section class="offer_section">
     <div class="wrapper clearfix">
-        <h2> Vákuový masážny prístroj proti celulitíde <span class="accent_color">Cellulite Massage</span>
+        <h2> MASAŽER <span class="accent_color">"UBICA CELULITA"</span> - ZA SAVRŠENO TELO
         </h2>
         <div class="info">
             <ul>
-                <li> Učinok po<span class="accent_color"> prvom použití</span></li>
-                <li> Vyrobený z<span class="accent_color"> kvalitných materiálov</span></li>
-                <li><span class="accent_color"> Zabraňuje vzniknutia</span> celulitídy v budúcnosti</li>
+                <li> Efekat nakon <span class="accent_color">prve upotrebe</span></li>
+                <li> Izrađen od <span class="accent_color">kvalitetnih materijala</span></li>
+                <li><span class="accent_color"> Uklanja celulit</span> i sprečava taloženje novog</li>
             </ul>
             {{--<div class="products_count_block"><span> 17</span> Zostáva<br> balíčkov</div>--}}
             <div class="discount"><span> Popust<b> 40%</b></span></div>
@@ -369,15 +351,14 @@
 <!-- /offer -->
 
 <!-- footer -->
-<footer>
+{{--<footer>--}}
 
-</footer>
+{{--</footer>--}}
 <!-- /footer -->
 <!-- scripts -->
 <link rel="stylesheet" type="text/css" href="{{ asset('/') }}shared_files/owl.carousel.min.css">
 <script type="text/javascript" src="{{ asset('/') }}shared_files/owl.carousel.min.js"></script>
-
 <script type="text/javascript" src="{{ asset('/') }}purplerelaxFiles/celluless/scripts.js"></script>
+@include('components.pixel_footer')
 </body>
-
 </html>

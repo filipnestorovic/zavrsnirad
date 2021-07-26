@@ -595,9 +595,10 @@
         </div>
     </section>
 </div>
-</body>
 <script type="text/javascript" src="{{ asset('/') }}shared_files/bootstrap.min.js"></script>
 <script src="{{ asset('/') }}flexonikFiles/smartwatch/slicknav.js"></script>
 <script src="{{ asset('/') }}shared_files/owl.carousel.min.js"></script>
 <script type="text/javascript" src="{{ asset('/') }}flexonikFiles/smartwatch/script.js"></script>
+@include('components.pixel_footer')
+</body>
 </html>

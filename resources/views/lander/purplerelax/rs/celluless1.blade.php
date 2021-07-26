@@ -31,6 +31,7 @@
 </head>
 <body>
 <div class="main_wrapper">
+    @include('components.display_errors')
     <header class="offer_section offer3">
         <h1 class="main_title">Relax Active</h1>
         <div class="info_block">
@@ -322,10 +323,8 @@
             {{--</div>--}}
         </section>
 </div>
-
 <script src="{{ asset('/') }}shared_files/owl.carousel.min.js"></script>
 <script src="{{ asset('/') }}purplerelaxFiles/relaxactive/scripts.js"></script>
-
+@include('components.pixel_footer')
 </body>
-
 </html>

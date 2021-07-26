@@ -1,0 +1,378 @@
+/*reset*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
+em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b,
+u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table,
+caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details,
+embed, figure, figcaption, footer, header, menu, nav, output, ruby, section,
+summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%;}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, menu, nav, section, main {display: block;}
+
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+img{max-width: 100%; height: auto;}
+a{text-decoration: underline;}
+a:hover{cursor: pointer;}
+*::-webkit-input-placeholder {color: #a9a9a9; opacity: 1;}
+*:-moz-placeholder {color: #a9a9a9; opacity: 1;}
+*::-moz-placeholder {color: #a9a9a9; opacity: 1;}
+*:-ms-input-placeholder {color: #a9a9a9; opacity: 1;}
+*{margin: 0; padding: 0;}
+*{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+button,input,a{outline: none;}
+button, input, select{-webkit-appearance: none; -moz-appearance: none; appearance: none;}
+html{
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: subpixel-antialiased !important;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* my_presets */
+input::-webkit-input-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+input::-moz-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+input:-moz-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+input:-ms-input-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+input:focus::-webkit-input-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+input:focus::-moz-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+input:focus:-moz-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+input:focus:-ms-input-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.center {
+    text-align: center;
+}
+
+.just {
+    text-align: justify;
+    -moz-text-align-last: center;
+    text-align-last: center;
+}
+
+.clearfix:after, .container:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.clear {
+    clear: both;
+    height: 0px;
+}
+
+.ulfix {
+    font-size: 0;
+}
+
+/* END my_presets */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.2em;
+}
+
+b, strong {
+    font-weight: 700;
+}
+
+body {
+    width: 100%;
+    min-width: 320px;
+    padding: 0px;
+    margin: 0px auto;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: #fff;
+    background: #010003;
+}
+
+section {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+img {
+    align-self: center;
+    flex-shrink: 0;
+}
+
+.wrap {
+    width: 1120px;
+    padding: 0px 10px;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+}
+.wrap:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.nopad {
+    padding: 0;
+}
+
+.main-form {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.main-form fieldset {
+    display: inline-flex;
+    flex-flow: column nowrap;
+    margin-left: 5px;
+}
+
+.main-form label {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.main-form input.field {
+    position: relative;
+    display: inline-block;
+    outline: 0;
+    border: none;
+    border-radius: 32px;
+    -webkit-border-radius: 32px;
+    max-width: 300px;
+    width: 100%;
+    height: 64px;
+    line-height: 64px;
+    margin: 0 5px;
+    padding: 0 20px;
+    background: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-family: "AvenirNextCyr", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    color: #0a2930;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    max-width: 300px;
+    width: 100%;
+    height: 64px;
+    line-height: 64px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 32px;
+    -webkit-border-radius: 32px;
+    text-align: center;
+    font-family: "AvenirNextCyr", Arial, Helvetica, sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 0.76px;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+    background: #ffae00;
+    background: -moz-linear-gradient(top, #ffae00 0%, #ff684a 100%);
+    background: -webkit-linear-gradient(top, #ffae00 0%, #ff684a 100%);
+    background: linear-gradient(to bottom, #ffae00 0%, #ff684a 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ffae00", endColorstr="#ff684a",GradientType=0 );
+    -webkit-box-shadow: 0 3px 0 0 #d2481a;
+    box-shadow: 0 3px 0 0 #d2481a;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    transition: all 0.2s;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.btn:hover {
+    background: #ff684a;
+    background: -moz-linear-gradient(top, #ff684a 0%, #ffae00 100%);
+    background: -webkit-linear-gradient(top, #ff684a 0%, #ffae00 100%);
+    background: linear-gradient(to bottom, #ff684a 0%, #ffae00 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ff684a", endColorstr="#ffae00",GradientType=0 );
+}
+.btn:active {
+    top: 1px;
+    -webkit-box-shadow: 0 2px 0 0 #d2481a;
+    box-shadow: 0 2px 0 0 #d2481a;
+}
+.btn.alone {
+    display: block;
+    margin: 0 auto;
+}
+
+.main-form {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 0;
+    text-align: center;
+}
+
+h2.title {
+    margin: 0 0 30px 0;
+    text-align: center;
+    font-size: 38px;
+    letter-spacing: 1.5px;
+    line-height: 1.4em;
+}
+h2.title > span {
+    color: #ffba27;
+}
+
+.price {
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.old-cost {
+    float: left;
+}
+.old-cost p {
+    font-size: 48px;
+    line-height: 40px;
+}
+.old-cost p span {
+    text-decoration: line-through;
+}
+.old-cost > span {
+    font-size: 16px;
+}
+
+.new-cost {
+    float: right;
+    width: 50%;
+}
+.new-cost > span {
+    font-size: 16px;
+}
+.new-cost p {
+    font-size: 48px;
+    line-height: 40px;
+}
+
+.old-cost {
+    width: 50%;
+}
+.old-cost p small {
+    font-size: 0.7em;
+}
+
+.new-cost p small {
+    font-size: 0.7em;
+}
+
+.autoink {
+    position: relative;
+    overflow: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.ink {
+    display: block;
+    position: absolute;
+    background: white;
+    border-radius: 100%;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    z-index: 20;
+}
+
+.animate {
+    webkit-animation: ripple 4s linear infinite;
+    -moz-animation: ripple 4s linear infinite;
+    -ms-animation: ripple 4s linear infinite;
+    -o-animation: ripple 4s linear infinite;
+    animation: ripple 4s linear infinite;
+}
+
+@keyframes ripple {
+    20% {
+        opacity: 0;
+        transform: scale(2.5);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(2.5);
+    }
+}
+@media screen and (max-width: 1119px) {
+    .wrap {
+        width: 660px;
+    }
+    .main-form {
+        display: block;
+    }
+}
+@media screen and (max-width: 659px) {
+    .wrap {
+        width: 320px;
+    }
+}
