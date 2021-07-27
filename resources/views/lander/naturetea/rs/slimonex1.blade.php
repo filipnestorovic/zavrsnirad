@@ -10,13 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700&subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
     <link href="{{ asset('/') }}natureteaFiles/slimonex1/style-2.css" rel="stylesheet">
-    {{--<link href="{{ asset('/') }}natureteaFiles/slimonex1/flipclock-2.css" rel="stylesheet">--}}
     <link href="{{ asset('/') }}natureteaFiles/slimonex1/media-2.css" rel="stylesheet">
-    <script src="{{ asset('/') }}shared_files/jquery-1.12.4.min.js" type="text/javascript"></script>
-    {{--<script src="js/9.min.js" type="text/javascript"></script>--}}
-    {{--<script src="js/flipclock.min.js"></script>--}}
-    {{--<script src="js/jquery.onlymask.min.js"></script>--}}
-    {{--<script src="{{ asset('/') }}natureteaFiles/slimonex1/main-2.js"></script>--}}
 </head>
 <body>
 @include('components.display_errors')
@@ -411,23 +405,16 @@
                 </div>
                 <div class="sec12__part">
                     <div class="order">
-                        {{--<div class="secret" data-xd="t5">--}}
-                            {{--<span class="font-mons"> Ponuda završava: </span>--}}
-                            {{--<div class="border-clock">--}}
-                                {{--<div class="digits2"></div>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
                         <form action="{{$orderRoute}}" class="form font-mons main_form" data-xd="t76" id="order_form" method="post">
                             {{ csrf_field() }}
                             @include('lander.naturapharm.components.form_hidden_fields')
                             <div class="zakaz blue"> Naručite </div>
                             <div class="old_price" data-xd="t74" style="text-decoration: line-through"> {{ $prices[1]['originalPrice'] }} RSD </div>
                             <div class="new_price" data-xd="t75"> {{ $prices[1]['amount'] }} RSD </div>
-                            {{--<select class="font-mons" id="country_code_selector" name="country">--}}
-                                {{--<option value="RS"> Republika Srbija </option>--}}
-                            {{--</select>--}}
                             <input class="inp font-mons" name="name" placeholder="Ime" type="text" required>
                             <input class="inp only_number phone-js font-mons" name="phone" placeholder="Broj telefona" type="tel" required>
+                            <input class="inp font-mons" name="shipping_address" placeholder="Adresa" type="text" required>
+                            <input class="inp font-mons" name="shipping_city" placeholder="Grad" type="text" required>
                             <select class="form-content__element form-content__select change-package-selector2 form_control font-mons" name="quantity" required>
                                 @foreach($prices as $singlePrice)
                                     <option value="{{ $singlePrice['quantity'] }}"
@@ -449,8 +436,6 @@
     </section>
 </div>
 <script src="{{ asset('/') }}natureteaFiles/slimonex1/main.js"></script>
-{{--<script src="js/js.cookie.min.js" type="text/javascript"></script>--}}
-{{--<script src="js/12.min.js" type="text/javascript"></script>--}}
 @include('components.pixel_footer')
 </body>
 </html>

@@ -13,34 +13,19 @@
 @include('components.display_errors')
 <header class="offer_section">
     <div class="wrapper clearfix">
-        <h1> MASAŽER <span class="accent_color">"UBICA CELULITA" </span>- ZA SAVRŠENO TELO</h1>
+        <h1> MASAŽER <span class="accent_color">CELLULESS </span>- ZA SAVRŠENO TELO</h1>
         <div class="info">
             <ul>
-                <li> Efekat nakon <span class="accent_color">prve upotrebe</span></li>
+                <li> <br>Efekat nakon <span class="accent_color">prve upotrebe</span></li>
                 <li> Izrađen od <span class="accent_color"> kvalitetnih materijala</span></li>
                 <li><span class="accent_color"> Uklanja celulit</span> i sprečava taloženje novog</li>
             </ul>
-            {{--<div class="products_count_block"><span> 17</span> Zostáva<br> balíčkov</div>--}}
             <div class="discount"><span> Popust<b> 40%</b></span></div>
         </div>
         <form action="{{$orderRoute}}" method="post">
             {{--<div class="arrow"></div>--}}
             <div class="timer_block">
                 <p class="description">FORMA ZA PORUDŽBINU</p>
-                {{--<div class="timer clearfix">--}}
-                    {{--<div class="timer_item">--}}
-                        {{--<div class="count hours"> 00</div>--}}
-                        {{--<div class="text"> hodin</div>--}}
-                    {{--</div>--}}
-                    {{--<div class="timer_item">--}}
-                        {{--<div class="count minutes"> 00</div>--}}
-                        {{--<div class="text"> minut</div>--}}
-                    {{--</div>--}}
-                    {{--<div class="timer_item">--}}
-                        {{--<div class="count seconds"> 00</div>--}}
-                        {{--<div class="text"> sekúnd</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
             </div>
             <div class="price_block clearfix">
                 <div class="price_item old">
@@ -103,7 +88,7 @@
 
             <div class="type_item clearfix">
                 <div class="photo_block">
-                    <img src="{{ asset('/') }}purplerelaxFiles/celluless/cellulite_types__type1_image.jpg" alt="Cellulite Massage"
+                    <img src="{{ asset('/') }}purplerelaxFiles/celluless/cellulite_types__type1_image.png" alt="Cellulite Massage"
                          title="Cellulite Massage">
                 </div>
                 <div class="text">
@@ -116,7 +101,7 @@
 
             <div class="type_item clearfix">
                 <div class="photo_block">
-                    <img src="{{ asset('/') }}purplerelaxFiles/celluless/cellulite_types__type2_image.jpg" alt="Cellulite Massage"
+                    <img src="{{ asset('/') }}purplerelaxFiles/celluless/cellulite_types__type2_image.png" alt="Cellulite Massage"
                          title="Cellulite Massage">
                 </div>
                 <div class="text">
@@ -129,7 +114,7 @@
 
             <div class="type_item clearfix">
                 <div class="photo_block">
-                    <img src="{{ asset('/') }}purplerelaxFiles/celluless/cellulite_types__type3_image.jpg" alt="Cellulite Massage"
+                    <img src="{{ asset('/') }}purplerelaxFiles/celluless/cellulite_types__type3_image.png" alt="Cellulite Massage"
                          title="Cellulite Massage">
                 </div>
                 <div class="text">
@@ -226,8 +211,8 @@
         <h2> ŠTA SE SVE DOBIJA U KOMPLETU</h2>
         <div class="items_list methods_list">
             <div class="item method_item">
-                <img src="{{ asset('/') }}purplerelaxFiles/celluless/methods__method2_image.jpg" alt="Cellulite Massage" title="Cellulite Massage">
-                <h3>"UBICA CELULITA"</h3>
+                <img src="{{ asset('/') }}purplerelaxFiles/celluless/methods__method2_image.png" alt="Cellulite Massage" title="Cellulite Massage">
+                <h3>CELLULESS</h3>
                 <ul class="tech_list">
                     <li class="yes">8 rotacionih kuglica - Koristi se za smanjenje obima tela i skidanje celulita.</li>
                     <li class="yes">Tanka ravna glava - za masažu vrata, ramena i leđa. Ublažava umor i vraća snagu telu.</li>
@@ -247,21 +232,21 @@
         <h2> REZULTATI<span> NAŠIH KUPACA</span></h2>
         <div class="reviews_list owl-carousel clearfix">
             <div class="review_item">
-                <img src="{{ asset('/') }}purplerelaxFiles/celluless/reviews__review1_photo.jpg" alt="Cellulite Massage" title="Cellulite Massage">
+                <img src="{{ asset('/') }}purplerelaxFiles/celluless/reviews__review1_photo.png" alt="Cellulite Massage" title="Cellulite Massage">
                 <div class="author_info"><span>SUZANA KOJIĆ</span><br></div>
                 <p>Ne mogu da zamislim kako sam živela bez ovog masera! Kupovina se pokazala toliko korisnom da sam jednostavno prestala da idem u masažne salone.
                     Već nakon nekoliko dana korišćenja primetila sam prve rezultate. Već nakon 2 meseca uopšte nisam imala celulit na zadnjici i bokovima.
                     Nije bolno, jako je opuštajuće. Koža mi je postala mekana i elastična i mogu da kažem da sam jako zadovoljna ovim proizvodom.</p>
             </div>
             <div class="review_item">
-                <img src="{{ asset('/') }}purplerelaxFiles/celluless/reviews__review2_photo.jpg" alt="Cellulite Massage" title="Cellulite Massage">
+                <img src="{{ asset('/') }}purplerelaxFiles/celluless/reviews__review2_photo.png" alt="Cellulite Massage" title="Cellulite Massage">
                 <div class="author_info"><span>LUCIJA MACIĆ</span><br></div>
                 <p>Posle rođenja trećeg deteta, stanje stomaka i zadnjice mi je bilo jako loše. Na nagovor sestre poručila sam ovaj uređaj.
                     Bila sam skeptična, ali je jako brzo došlo do odličnih rezultat. Masiram se po 20 minuta svaki dan, i tako već 3 meseca. Već nakon jednog meseca
                     telo mi je počelo da izgleda mnogo bolje, a moj suprug se oduševio. Sve preporuke za ovaj masažer!</p>
             </div>
             <div class="review_item">
-                <img src="{{ asset('/') }}purplerelaxFiles/celluless/reviews__review3_photo.jpg" alt="Cellulite Massage" title="Cellulite Massage">
+                <img src="{{ asset('/') }}purplerelaxFiles/celluless/reviews__review3_photo.png" alt="Cellulite Massage" title="Cellulite Massage">
                 <div class="author_info"><span>DRAGANA MARKOVIĆ</span><br></div>
                 <p>Oduvek sam se trudila da moje telo izgleda savršeno, ali kako sam prestala da treniram i približila se tridesetim godinama, počeo je postepeno da mi se nakuplja celulit
                     na zadnjici i butinama. Htela sam da idem na anticelulit masaže, ali mi oduzimaju mnogo vremena i jako su skupe za moj standard. Videla sam reklamu za ovaj proizvod na internetu
@@ -301,35 +286,20 @@
 <!-- offer -->
 <section class="offer_section">
     <div class="wrapper clearfix">
-        <h2> MASAŽER <span class="accent_color">"UBICA CELULITA"</span> - ZA SAVRŠENO TELO
+        <h2> MASAŽER <span class="accent_color">CELLULESS</span> - ZA SAVRŠENO TELO
         </h2>
         <div class="info">
             <ul>
-                <li> Efekat nakon <span class="accent_color">prve upotrebe</span></li>
+                <li> <br>Efekat nakon <span class="accent_color">prve upotrebe</span></li>
                 <li> Izrađen od <span class="accent_color">kvalitetnih materijala</span></li>
                 <li><span class="accent_color"> Uklanja celulit</span> i sprečava taloženje novog</li>
             </ul>
-            {{--<div class="products_count_block"><span> 17</span> Zostáva<br> balíčkov</div>--}}
             <div class="discount"><span> Popust<b> 40%</b></span></div>
         </div>
         <form id="order_form" action="{{$orderRoute}}" method="post">
             {{--<div class="arrow"></div>--}}
             <div class="timer_block">
                 <p class="description">FORMA ZA PORUDŽBINU</p>
-                {{--<div class="timer clearfix">--}}
-                    {{--<div class="timer_item">--}}
-                        {{--<div class="count hours"> 00</div>--}}
-                        {{--<div class="text"> hodin</div>--}}
-                    {{--</div>--}}
-                    {{--<div class="timer_item">--}}
-                        {{--<div class="count minutes"> 00</div>--}}
-                        {{--<div class="text"> minut</div>--}}
-                    {{--</div>--}}
-                    {{--<div class="timer_item">--}}
-                        {{--<div class="count seconds"> 00</div>--}}
-                        {{--<div class="text"> sekúnd</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
             </div>
 
             <div class="price_block clearfix">
@@ -349,10 +319,8 @@
     </div>
 </section>
 <!-- /offer -->
-
 <!-- footer -->
 {{--<footer>--}}
-
 {{--</footer>--}}
 <!-- /footer -->
 <!-- scripts -->

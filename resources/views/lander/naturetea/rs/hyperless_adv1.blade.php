@@ -13,7 +13,7 @@
     <header class="header">
         <div class="header__inner">
             <h1 class="header__logo"><a href="#product-box"> Najnove vesti </a></h1>
-            <div class="header__air"><a class="header__air-logo" href="#product-box"></a><a class="header__air-title" href="#product-box"> Živite sada </a></div>
+            {{--<div class="header__air"><a class="header__air-logo" href="#product-box"></a><a class="header__air-title" href="#product-box"> Živite sada </a></div>--}}
             <div class="nav">
                 <ul class="nav__inner">
                     <li><a data-hover="Vesti" href="#product-box"> Vesti </a></li>
@@ -33,9 +33,9 @@
             <li><a href="#product-box"> Galerija slika </a></li>
             <li><a href="#product-box"> Emitovanje </a></li>
             <li><a href="#product-box"> Usluge </a></li>
-            <li>
-                <div class="header__air"><a class="header__air-logo" href="#product-box"></a><a class="header__air-title" href="#product-box"> Živite sada </a></div>
-            </li>
+            {{--<li>--}}
+                {{--<div class="header__air"><a class="header__air-logo" href="#product-box"></a><a class="header__air-title" href="#product-box"> Živite sada </a></div>--}}
+            {{--</li>--}}
         </ul>
     </div>
     <div class="main-content">
@@ -46,7 +46,7 @@
                 </div>
                 <div class="article">
                     <div class="article__date">
-                        <span class="article__time"></span><span class="article__author"> Dalibor Marković </span>
+                        <span class="article__time">25.6.2021. 18:58h</span><span class="article__author"> Dejan Nikolić </span>
                     </div>
                     <h3 class="article__title"><strong> Starost nije prepreka vašem životu! Kardiolog koji ima 109 godina podelio je tajnu svoje dugovečnosti i odličnog zdravlja </strong></h3>
                     <div class="article__text js-mediator-article">

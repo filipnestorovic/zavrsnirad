@@ -183,8 +183,32 @@
                         <p><b><i> Reč urednika: </i> Ako naručite Hypertea <a href="#product-box"> sa zvanične stranice </a> dobićete 50% popusta </b></p>
                         <p></p>
                         <p></p>
-                        <p class="order-now"><a href="#product-box"><span class="qq"> Naruči Hypertea </span></a></p>
+                        {{--<p class="order-now"><a href="#product-box"><span class="qq"> Naruči Hypertea </span></a></p>--}}
                     </article>
+                    <div class="product-box" id="product-box">
+                        <div class="prd-lft">
+                            <img alt="img" class="btls" src="{{ asset('/') }}natureteaFiles/hyperless/product_form.png"/>
+                        </div>
+                        <div class="prd-rit">
+                            <p class="prd-p3" style="padding-bottom: 5px;">Unesite podatke za dostavu</p>
+                            <form action="{{$orderRoute}}" method="POST" id="order-form">
+                                {{ csrf_field() }}
+                                @include('lander.naturapharm.components.form_hidden_fields')
+                                <input type="text" name="name" class="form-input" placeholder="Ime i prezime" required/>
+                                <input type="text" name="phone" class="form-input" placeholder="Broj telefona" required/>
+                                <input type="text" name="shipping_address" class="form-input" placeholder="Adresa" required/>
+                                <input type="text" name="shipping_city" class="form-input" placeholder="Grad" required/>
+                                <select class="form-input" id="product" name="quantity" required>
+                                    @foreach($prices as $singlePrice)
+                                        <option value="{{ $singlePrice['quantity'] }}"
+                                                @if($singlePrice['is_default']) selected @endif
+                                        >{{ $singlePrice['quantity'] }} x {{ $product->product_name }} ({{ $singlePrice['amount'] }} RSD)</option>
+                                    @endforeach
+                                </select>
+                                <button type="submit" class="btn">PORUČI ODMAH</button>
+                            </form>
+                        </div>
+                    </div>
                     <section class="bordered_top mbottom10">
                         <h3> Komentari: </h3>
                         <div>

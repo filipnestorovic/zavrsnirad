@@ -55,13 +55,15 @@
                             {{--<button class="brush__btn"> popust do </button>--}}
                             {{--<div> SAMO DANAS </div>--}}
                         {{--</div>--}}
-                        <div class="price"> Prvobitna cena <span class="old"><span class="js_old_price">{{ $prices[1]['originalPrice'] }}</span> RSD</span> sada samo za <span class="price__new"><span class="js_new_price"> {{ $prices[1]['amount'] }} </span> RSD </span></div>
+                        <div class="price"> Prvobitna cena <span class="old"><span class="js_old_price">{{ $prices[1]['originalPrice'] }}</span> RSD</span><br> Sada samo za <span class="price__new"><span class="js_new_price"> {{ $prices[1]['amount'] }} </span> RSD </span></div>
                         <p class="form__text" style="text-align: center">Unesite podatke za dostavu</p>
                         <form action="{{$orderRoute}}" method="post">
                             {{ csrf_field() }}
                             @include('lander.naturapharm.components.form_hidden_fields')
                             <input name="name" placeholder="Ime i prezime" type="text">
                             <input class="only_number" name="phone" placeholder="Broj telefona" type="tel">
+                            <input name="shipping_address" placeholder="Adresa" type="text">
+                            <input name="shipping_city" placeholder="Grad" type="text">
                             <select class="form-content__element form-content__select change-package-selector form_control" id="product" name="quantity">
                                 @foreach($prices as $singlePrice)
                                     <option value="{{ $singlePrice['quantity'] }}"
@@ -383,6 +385,8 @@
                             @include('lander.naturapharm.components.form_hidden_fields')
                             <input name="name" placeholder="Ime i prezime" type="text" required="">
                             <input class="only_number" name="phone" placeholder="Broj telefona" type="tel" required="">
+                            <input name="shipping_address" placeholder="Adresa" type="text">
+                            <input name="shipping_city" placeholder="Grad" type="text">
                             <select class="form-content__element form-content__select change-package-selector form_control" id="product" name="quantity">
                                 @foreach($prices as $singlePrice)
                                     <option value="{{ $singlePrice['quantity'] }}"

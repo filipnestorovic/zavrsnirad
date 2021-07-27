@@ -66,6 +66,16 @@
                                     <div class=clear></div>
                                 </div>
                                 <div class=input-block>
+                                    <label for=a01>Adresa</label>
+                                    <input id=a01 name=shipping_address type=text required placeholder="">
+                                    <div class=clear></div>
+                                </div>
+                                <div class=input-block>
+                                    <label for=c01>Grad</label>
+                                    <input id=c01 name=shipping_city type=text required placeholder="">
+                                    <div class=clear></div>
+                                </div>
+                                <div class=input-block>
                                     <label for=q01>Količina</label>
                                     <select id="q01" name="quantity" required>
                                         @foreach($prices as $singlePrice)
@@ -321,18 +331,28 @@
                             </div>
                             <div class=sale-input>
                                 <div class=input-block>
-                                    <label for=n03>Ime i prezime</label>
-                                    <input id=n03 name=name type=text required placeholder="">
+                                    <label for=n02>Ime i prezime</label>
+                                    <input id=n02 name=name type=text required placeholder="">
                                     <div class=clear></div>
                                 </div>
                                 <div class=input-block>
-                                    <label for=p03>Telefon</label>
-                                    <input id=p03 name=phone type=tel required placeholder="">
+                                    <label for=p02>Telefon</label>
+                                    <input id=p02 name=phone type=tel required placeholder="">
                                     <div class=clear></div>
                                 </div>
                                 <div class=input-block>
-                                    <label for=q01>Količina</label>
-                                    <select id="q01" name="quantity" required>
+                                    <label for=a02>Adresa</label>
+                                    <input id=a02 name=shipping_address type=text required placeholder="">
+                                    <div class=clear></div>
+                                </div>
+                                <div class=input-block>
+                                    <label for=c02>Grad</label>
+                                    <input id=c02 name=shipping_city type=text required placeholder="">
+                                    <div class=clear></div>
+                                </div>
+                                <div class=input-block>
+                                    <label for=q02>Količina</label>
+                                    <select id="q02" name="quantity" required>
                                         @foreach($prices as $singlePrice)
                                             <option value="{{ $singlePrice['quantity'] }}"
                                                     @if($singlePrice['is_default']) selected @endif
@@ -378,18 +398,28 @@
                             </div>
                             <div class="sale-input clearfix">
                                 <div class=input-block>
-                                    <label for=n01>Ime i prezime</label>
-                                    <input id=n01 name=name type=text required placeholder="">
+                                    <label for=n03>Ime i prezime</label>
+                                    <input id=n03 name=name type=text required placeholder="">
                                     <div class=clear></div>
                                 </div>
                                 <div class=input-block>
-                                    <label for=p01>Telefon</label>
-                                    <input id=p01 name=phone type=tel required placeholder="">
+                                    <label for=p03>Telefon</label>
+                                    <input id=p03 name=phone type=tel required placeholder="">
                                     <div class=clear></div>
                                 </div>
                                 <div class=input-block>
-                                    <label for=q01>Količina</label>
-                                    <select id="q01" name="quantity" required>
+                                    <label for=a03>Adresa</label>
+                                    <input id=a03 name=shipping_address type=text required placeholder="">
+                                    <div class=clear></div>
+                                </div>
+                                <div class=input-block>
+                                    <label for=c03>Grad</label>
+                                    <input id=c03 name=shipping_city type=text required placeholder="">
+                                    <div class=clear></div>
+                                </div>
+                                <div class=input-block>
+                                    <label for=q03>Količina</label>
+                                    <select id="q03" name="quantity" required>
                                         @foreach($prices as $singlePrice)
                                             <option value="{{ $singlePrice['quantity'] }}"
                                                     @if($singlePrice['is_default']) selected @endif
@@ -421,8 +451,8 @@
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                     <div class="f-item left">
                         <div class=f-item-text>
-                            <div class="f-item-header bold">Артишок <br>Cynara cardunculus</div>
-                            <div class=f-item-body>Нормализует триглицериды, приводящие к атеросклерозу, слабоумию и потере памяти.</div>
+                            <div class="f-item-header bold">Piskavica <br></div>
+                            <div class=f-item-body>Lekovita biljka koja ima ogromna lekovita dejstva.<br>Čisti krvne sudove i organizam od toksina, povećava energiju tela.</div>
                         </div>
                         <div class=f-item-img><img src="{{ asset('/') }}natureteaFiles/arterotea/s01.png" alt="Arterotea"></div>
                         <div class=clear></div>
@@ -432,8 +462,8 @@
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                     <div class="f-item right">
                         <div class=f-item-text>
-                            <div class="f-item-header bold">Диоскорея кавказская <br>Dioscorea caucasica</div>
-                            <div class=f-item-body>Снижает уровень холестерина, предотвращает отложение липидов в артериях.</div>
+                            <div class="f-item-header bold">Cimet <br></div>
+                            <div class=f-item-body>Čisti telo od masnoće, pomaže pri skidanju kilograma i ima antibakterijsko delovanje.</div>
                         </div>
                         <div class=f-item-img><img src="{{ asset('/') }}natureteaFiles/arterotea/s02.png" alt="Arterotea"></div>
                         <div class=clear></div>
@@ -445,8 +475,8 @@
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                     <div class="f-item left">
                         <div class=f-item-text>
-                            <div class="f-item-header bold">Софора японская <br>Callisia fragrans</div>
-                            <div class=f-item-body>Восстанавливает эластичность кровеносных сосудов, предотвращает инсульт и атеросклероз</div>
+                            <div class="f-item-header bold">Limunska kiselina <br></div>
+                            <div class=f-item-body>Ima svojstvo da razgrađuje masnoću u krvnim sudovima, a otrkiveno je da poseduje i antikancerogena svojstva.</div>
                         </div>
                         <div class=f-item-img><img src="{{ asset('/') }}natureteaFiles/arterotea/s03.png" alt="Arterotea"></div>
                         <div class=clear></div>
@@ -456,8 +486,8 @@
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                     <div class="f-item right">
                         <div class=f-item-text>
-                            <div class="f-item-header bold">Масло Амаранта <br>Amaranthus cruentus</div>
-                            <div class=f-item-body>Популярное на Западе, но почти неизвестное в России средство регуляции холестерина и давления.</div>
+                            <div class="f-item-header bold">Šećer <br></div>
+                            <div class=f-item-body>Pošto su svi sastojci izuzetno gorki, da bi se čaj mogao piti dodat je šećer kao obavezan sastojak.</div>
                         </div>
                         <div class=f-item-img><img src="{{ asset('/') }}natureteaFiles/arterotea/s04.png" alt="Arterotea"></div>
                         <div class=clear></div>
@@ -468,24 +498,6 @@
                     <img src="{{ asset('/') }}natureteaFiles/arterotea/100natur.png" alt="Arterotea">
                 </div>
             </div>
-
-            {{--<div class=row>--}}
-                {{--<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">--}}
-                    {{--<div class="f-item left">--}}
-                        {{--<div class=f-item-text>--}}
-                            {{--<div class="f-item-header bold">Чертополох святой <br>Carduus nutans</div>--}}
-                            {{--<div class=f-item-body>Удаляет из организма лишний холестерин и нормализует его уровень</div>--}}
-                        {{--</div>--}}
-                        {{--<div class=f-item-img><img src="{{ asset('/') }}natureteaFiles/arterotea/f05.png" alt="Arterotea"></div>--}}
-                        {{--<div class=clear></div><img src="{{ asset('/') }}natureteaFiles/arterotea/arr-black.jpg" alt="Arterotea" class="arrd arrd05">--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-                {{--<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">--}}
-                    {{--<div class="n100">--}}
-                        {{--<img src="{{ asset('/') }}natureteaFiles/arterotea/100natur.png" alt="Arterotea">--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
         </div>
     </section>
     <section class=action>
@@ -500,7 +512,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                     <div class=easy-item>
                         <div class=easy-img><img src="{{ asset('/') }}natureteaFiles/arterotea/e01.png" alt="Arterotea"></div>
-                        <div class="easy-title bold">Ежедневно</div>
+                        <div class="easy-title bold"></div>
                         <div class=easy-text>Supenu kašiku čajne mešavine preliti sa 2dcl vrele vode i promešati.</div>
                         <img src="{{ asset('/') }}natureteaFiles/arterotea/arrow-dotted-white.png" alt="Arterotea" class=arrd>
                     </div>
@@ -508,7 +520,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                     <div class=easy-item>
                         <div class=easy-img><img src="{{ asset('/') }}natureteaFiles/arterotea/e02.png" alt="Arterotea"></div>
-                        <div class="easy-title bold">Курсом</div>
+                        <div class="easy-title bold"></div>
                         <div class=easy-text>Piti po jedan čaj ujutru i uveče.</div>
                         <img src="{{ asset('/') }}natureteaFiles/arterotea/arrow-dotted-white.png" alt="Arterotea" class=arrd>
                     </div>
@@ -516,7 +528,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                     <div class=easy-item>
                         <div class=easy-img><img src="{{ asset('/') }}natureteaFiles/arterotea/e03.png" alt="Arterotea"></div>
-                        <div class="easy-title bold">Без ограничений</div>
+                        <div class="easy-title bold"></div>
                         <div class=easy-text>Jako je važno popiti i talog sa dna šoljice i ispiti do kraja.</div>
                     </div>
                 </div>
@@ -544,18 +556,28 @@
                             </div>
                             <div class=sale-input>
                                 <div class=input-block>
-                                    <label for=n03>Ime i prezime</label>
-                                    <input id=n03 name=name type=text required placeholder="">
+                                    <label for=n04>Ime i prezime</label>
+                                    <input id=n04 name=name type=text required placeholder="">
                                     <div class=clear></div>
                                 </div>
                                 <div class=input-block>
-                                    <label for=p03>Telefon</label>
-                                    <input id=p03 name=phone type=tel required placeholder="">
+                                    <label for=p04>Telefon</label>
+                                    <input id=p04 name=phone type=tel required placeholder="">
                                     <div class=clear></div>
                                 </div>
                                 <div class=input-block>
-                                    <label for=q01>Količina</label>
-                                    <select id="q01" name="quantity" required>
+                                    <label for=a04>Adresa</label>
+                                    <input id=a04 name=shipping_address type=text required placeholder="">
+                                    <div class=clear></div>
+                                </div>
+                                <div class=input-block>
+                                    <label for=c04>Grad</label>
+                                    <input id=c04 name=shipping_city type=text required placeholder="">
+                                    <div class=clear></div>
+                                </div>
+                                <div class=input-block>
+                                    <label for=q04>Količina</label>
+                                    <select id="q04" name="quantity" required>
                                         @foreach($prices as $singlePrice)
                                             <option value="{{ $singlePrice['quantity'] }}"
                                                     @if($singlePrice['is_default']) selected @endif
@@ -772,18 +794,28 @@
                             </div>
                             <div class="sale-input clearfix">
                                 <div class=input-block>
-                                    <label for=n01>Ime i prezime</label>
-                                    <input id=n01 name=name type=text required placeholder="">
+                                    <label for=n05>Ime i prezime</label>
+                                    <input id=n05 name=name type=text required placeholder="">
                                     <div class=clear></div>
                                 </div>
                                 <div class=input-block>
-                                    <label for=p01>Telefon</label>
-                                    <input id=p01 name=phone type=tel required placeholder="">
+                                    <label for=p05>Telefon</label>
+                                    <input id=p05 name=phone type=tel required placeholder="">
                                     <div class=clear></div>
                                 </div>
                                 <div class=input-block>
-                                    <label for=q01>Količina</label>
-                                    <select id="q01" name="quantity" required>
+                                    <label for=a05>Adresa</label>
+                                    <input id=a05 name=shipping_address type=text required placeholder="">
+                                    <div class=clear></div>
+                                </div>
+                                <div class=input-block>
+                                    <label for=c05>Grad</label>
+                                    <input id=c05 name=shipping_city type=text required placeholder="">
+                                    <div class=clear></div>
+                                </div>
+                                <div class=input-block>
+                                    <label for=q05>Količina</label>
+                                    <select id="q05" name="quantity" required>
                                         @foreach($prices as $singlePrice)
                                             <option value="{{ $singlePrice['quantity'] }}"
                                                     @if($singlePrice['is_default']) selected @endif
@@ -813,10 +845,6 @@
         </div>
     </section>
 </main>
-{{--<footer>--}}
-    {{--<div class=container style="text-align: center;">--}}
-    {{--</div>--}}
-{{--</footer>--}}
 <script>
         $(document).ready(function(){
             $(".faq-q").on("click", function() {

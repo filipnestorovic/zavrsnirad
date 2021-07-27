@@ -72,7 +72,7 @@
                     <div class="col xl4 l4 m6 s12">
                         <div class="formBox">
                             <div class="formBox-content">
-                                <div class="dflex priceBox">
+                                <div class="dflex priceBox" style="margin-top: 10px;">
                                     <div class="priceBox-item">
                                         <div class="oldPrice">
                                             <div class="priceBox-title"> Puna cena: </div>
@@ -90,8 +90,10 @@
                                     <form action="{{$orderRoute}}" id="order_form" method="post">
                                         {{ csrf_field() }}
                                         @include('lander.naturapharm.components.form_hidden_fields')
-                                        <div class="input-field"><input id="name" name="name" placeholder="Unesite vaše ime" type="text"><label for="name"></label></div>
-                                        <div class="input-field"><input class="only_number" id="phone" name="phone" placeholder="Unesite vaš broj telefona" type="text"><label for="phone"></label></div>
+                                        <div class="input-field"><input id="name" name="name" placeholder="Ime i prezime" type="text"><label for="name"></label></div>
+                                        <div class="input-field"><input class="only_number" id="phone" name="phone" placeholder="Broj telefona" type="text"><label for="phone"></label></div>
+                                        <div class="input-field"><input id="shipping_address" name="shipping_address" placeholder="Adresa" type="text"><label for="shipping_address"></label></div>
+                                        <div class="input-field"><input id="shipping_city" name="shipping_city" placeholder="Grad" type="text"><label for="shipping_city"></label></div>
                                         <select class="browser-default customSelect change-package-selector" name="quantity">
                                             @foreach($prices as $singlePrice)
                                                 <option value="{{ $singlePrice['quantity'] }}"
@@ -260,8 +262,10 @@
                                 <form action="{{$orderRoute}}" id="order_form" method="post">
                                     {{ csrf_field() }}
                                     @include('lander.naturapharm.components.form_hidden_fields')
-                                    <div class="input-field"><input id="name" name="name" placeholder="Unesite vaše ime" type="text"><label for="name"></label></div>
-                                    <div class="input-field"><input class="only_number" id="phone" name="phone" placeholder="Unesite vaš broj telefona" type="text"><label for="phone"></label></div>
+                                    <div class="input-field"><input id="name" name="name" placeholder="Ime i prezime" type="text"><label for="name"></label></div>
+                                    <div class="input-field"><input class="only_number" id="phone" name="phone" placeholder="Broj telefona" type="text"><label for="phone"></label></div>
+                                    <div class="input-field"><input id="shipping_address" name="shipping_address" placeholder="Adresa" type="text"><label for="shipping_address"></label></div>
+                                    <div class="input-field"><input id="shipping_city" name="shipping_city" placeholder="Grad" type="text"><label for="shipping_city"></label></div>
                                     <select class="browser-default customSelect change-package-selector" name="quantity">
                                         @foreach($prices as $singlePrice)
                                             <option value="{{ $singlePrice['quantity'] }}"
@@ -426,12 +430,14 @@
                                 <div class="img_box productBox"><img src="{{ asset('/') }}natureteaFiles/hyperless/product_form.png"><img class="obj objArrow" src="{{ asset('/') }}natureteaFiles/hyperless/arrow.png"></div>
                             </div>
                             <div class="customForm-item">
-                                <div class="customForm-title"> Unesite vaše podatke u obrazac ispod: </div>
+                                {{--<div class="customForm-title"> Unesite vaše podatke u obrazac ispod: </div>--}}
                                 <form action="{{$orderRoute}}" id="order_form" method="post">
                                     {{ csrf_field() }}
                                     @include('lander.naturapharm.components.form_hidden_fields')
-                                    <div class="input-field"><input id="name" name="name" placeholder="Unesite vaše ime" type="text"><label for="name"></label></div>
-                                    <div class="input-field"><input class="only_number" id="phone" name="phone" placeholder="Unesite vaš broj telefona" type="text"><label for="phone"></label></div>
+                                    <div class="input-field"><input id="name" name="name" placeholder="Ime i prezime" type="text"><label for="name"></label></div>
+                                    <div class="input-field"><input class="only_number" id="phone" name="phone" placeholder="Broj telefona" type="text"><label for="phone"></label></div>
+                                    <div class="input-field"><input id="shipping_address" name="shipping_address" placeholder="Adresa" type="text"><label for="shipping_address"></label></div>
+                                    <div class="input-field"><input id="shipping_city" name="shipping_city" placeholder="Grad" type="text"><label for="shipping_city"></label></div>
                                     <select class="browser-default customSelect change-package-selector" name="quantity">
                                         @foreach($prices as $singlePrice)
                                             <option value="{{ $singlePrice['quantity'] }}"

@@ -140,7 +140,7 @@
             <img alt="img" class="secr" src="{{ asset('/') }}natureteaFiles/diabetea_adv/secr.png"/>
             <div class="product-box" id="product-box">
                 <div class="prd-lft">
-                    <img alt="img" class="btls" src="{{ asset('/') }}natureteaFiles/diabetea_adv/prod.png"/>
+                    <img alt="img" class="btls" src="{{ asset('/') }}natureteaFiles/diabetea/prod.png"/>
                 </div>
                 <div class="prd-rit">
                     <p class="prd-p3">Unesite podatke za dostavu</p>
@@ -149,6 +149,8 @@
                         @include('lander.naturapharm.components.form_hidden_fields')
                         <input type="text" name="name" class="form-input" placeholder="Ime i prezime" required/>
                         <input type="text" name="phone" class="form-input" placeholder="Broj telefona" required/>
+                        <input type="text" name="shipping_address" class="form-input" placeholder="Adresa" required/>
+                        <input type="text" name="shipping_city" class="form-input" placeholder="Grad" required/>
                         <select class="form-input" id="product" name="quantity" required>
                             @foreach($prices as $singlePrice)
                                 <option value="{{ $singlePrice['quantity'] }}"
@@ -161,9 +163,9 @@
                 </div>
             </div>
         </div>
-        <div class="rit-sec">
-            <div class="clearall"></div>
-        </div>
+        {{--<div class="rit-sec">--}}
+            {{--<div class="clearall"></div>--}}
+        {{--</div>--}}
         <div class="left-sec">
             <p class="cmnt-p1"> Komentari <span><img alt="img" src="{{ asset('/') }}natureteaFiles/diabetea_adv/msg.png"/> <img alt="img" src="{{ asset('/') }}natureteaFiles/diabetea_adv/print.png"/></span></p>
             <p class="cmnt-p2"></p>
