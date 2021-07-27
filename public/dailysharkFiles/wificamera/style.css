@@ -540,6 +540,7 @@
     border-radius: 5px;
     overflow: hidden;
     margin: 0 auto;
+    height: 620px;
 }
 .rev-item > img {
     display: block;
@@ -934,14 +935,20 @@
 }
 /*-------------------------------------- Media Queries ----639---------------------------------*/
 @media screen and (max-width: 659px) {
+
+    .block2 .wrap > h2 {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+
     section {
         padding: 40px 0;
     }
 
     .block1 {
         background-image: url(b1s.jpg);
-        background-position: center top;
-        background-color: #252527;
+        background-position: center 60px;
+        background-color: #0d0b0c;
     }
 
     .toppromise, .slick-dots, .block8 .wrap:before {
@@ -992,7 +999,7 @@
         font-size: 5px;
         padding: 18px 0 0; */
         left: 32px;
-        top: 178px;
+        top: 260px;
         /* line-height: 1.7em; */
     }
     .sale span {
@@ -1003,6 +1010,7 @@
         flex-direction: column;
         align-items: center;
         margin-bottom: 15px;
+        padding-top: 50px;
     }
     .bullites li {
         width: 90%;

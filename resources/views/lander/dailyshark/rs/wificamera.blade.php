@@ -264,7 +264,7 @@
                     <li>Slot za memorijsku karticu<span> do 128 GB</span></li>
                     <li>Materijal<span> Plastika, elektronske komponente</span></li>
                     <li>
-                        Dodatno<span>Mini USB port,<br/>antena,<br/>dugme za restart</span>
+                        Dodatno<span>Mini USB port,<br/> antena,<br/> dugme za restart</span>
                     </li>
                 </ul>
             </div>
@@ -363,7 +363,7 @@
         </ul>
     </div>
 </section>
-<section class="block1" id="order_form">
+<section class="block1">
     <div class="wrap topline">
         <div class="logo">
             <h1>
@@ -418,7 +418,7 @@
                 <b>Kontrolišite sve preko telefona</b> Potpuna kontrola nad kamerom preko aplikacije
             </li>
         </ul>
-        <div class="formbox">
+        <div class="formbox" id="order_form">
             <div class="formbox__wink">
                 <div class="formbox__price">
                     <div class="formbox__old-cost">{{ $prices[1]['originalPrice'] }} <small> RSD</small></div>

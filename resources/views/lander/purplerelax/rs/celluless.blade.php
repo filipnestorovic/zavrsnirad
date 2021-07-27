@@ -23,6 +23,8 @@
             <div class="discount"><span> Popust<b> 40%</b></span></div>
         </div>
         <form action="{{$orderRoute}}" method="post">
+            {{ csrf_field() }}
+            @include('lander.naturapharm.components.form_hidden_fields')
             {{--<div class="arrow"></div>--}}
             <div class="timer_block">
                 <p class="description">FORMA ZA PORUDŽBINU</p>
@@ -297,6 +299,8 @@
             <div class="discount"><span> Popust<b> 40%</b></span></div>
         </div>
         <form id="order_form" action="{{$orderRoute}}" method="post">
+            {{ csrf_field() }}
+            @include('lander.naturapharm.components.form_hidden_fields')
             {{--<div class="arrow"></div>--}}
             <div class="timer_block">
                 <p class="description">FORMA ZA PORUDŽBINU</p>
