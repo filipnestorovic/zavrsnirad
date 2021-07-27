@@ -41,20 +41,8 @@
                     </div>
                     <div class="sec1__prod sec1__cell">
                         <img alt class="sec1__prod-tube" src="{{ asset('/') }}natureteaFiles/diabetea/prod.png">
-                        {{--<div class="chevron sec1__chevron">--}}
-                            {{--<div class="chevron__container">--}}
-                                {{--<div><b> 89% </b><span> poboljšanja nivoa <br> šećera u krvi </span></div>--}}
-                                {{--<div><b> 11% </b><span> poboljšanja </span></div>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
                     </div>
                     <div class="sec1__form form sec1__cell">
-                        {{--<div class="brush">--}}
-                            {{--<div class="brush__percent"> 50% </div>--}}
-                            {{--<div> Posebna ponuda </div>--}}
-                            {{--<button class="brush__btn"> popust do </button>--}}
-                            {{--<div> SAMO DANAS </div>--}}
-                        {{--</div>--}}
                         <div class="price"> Prvobitna cena <span class="old"><span class="js_old_price">{{ $prices[1]['originalPrice'] }}</span> RSD</span><br> Sada samo za <span class="price__new"><span class="js_new_price"> {{ $prices[1]['amount'] }} </span> RSD </span></div>
                         <p class="form__text" style="text-align: center">Unesite podatke za dostavu</p>
                         <form action="{{$orderRoute}}" method="post">
@@ -66,11 +54,14 @@
                             <input name="shipping_city" placeholder="Grad" type="text">
                             <select class="form-content__element form-content__select change-package-selector form_control" id="product" name="quantity">
                                 @foreach($prices as $singlePrice)
-                                    <option value="{{ $singlePrice['quantity'] }}"
+                                    <option value="{{ $singlePrice['quantity'] }}" placeholder="{{ $singlePrice['is_free_shipping'] }}"
                                             @if($singlePrice['is_default']) selected @endif
-                                    >{{ $singlePrice['quantity'] }} x {{ $product->product_name }} ({{ $singlePrice['amount'] }} RSD)</option>
+                                    >{{ $singlePrice['quantity'] }} x {{ $product->product_name }} ({{ $singlePrice['amount'] }} RSD)
+                                        @if($singlePrice['is_free_shipping']) * @endif
+                                    </option>
                                 @endforeach
                             </select>
+                            <div class="freeShippingDiv">* BESPLATNA DOSTAVA</div>
                             <button class="btn button__text js_submit"> NARUČI ODMAH </button>
                         </form>
                     </div>
@@ -158,44 +149,6 @@
                 <p>Analizom nadležne Laboratorije u Republici Srbiji potvrđena je bezbednost i efikasnost DiabeTea preparata. Proizvod je 100% prirodan, bez nuspojava i bez ograničenja u korišćenju. Mogu ga koristiti sve starosne grupe. </p>
             </div>
         </section>
-        {{--<section class="sec6">--}}
-            {{--<div class="wrapper">--}}
-                {{--<div class="sec6__left">--}}
-                    {{--<div class="sec6__percent">--}}
-                        {{--<div class="percent-graph">--}}
-                            {{--<div class="graph-container">--}}
-                                {{--<svg height="250px" id="my-svg" width="250px"></svg>--}}
-                                {{--<b class="percent-text"> 100% </b><span> EFIKASAN </span>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                        {{--<p> Nijedan preparat nije tako delotvoran. </p>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-                {{--<div class="sec6__right">--}}
-                    {{--<div class="sec6__right-title"> REZULTATI EKSPERIMENATA IZNENADILI SU SVE DOKTORE! </div>--}}
-                    {{--<div class="table">--}}
-                        {{--<div class="t-row">--}}
-                            {{--<div class="t-cell">--}}
-                                {{--<p> poboljšanja nivoa šećera u krvi </p>--}}
-                            {{--</div>--}}
-                            {{--<div class="t-cell">--}}
-                                {{--<div class="t-cell__line wow slideInLeft2" data-wow-duration="2.5s"></div>--}}
-                                {{--<span> 89% </span>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                        {{--<div class="t-row">--}}
-                            {{--<div class="t-cell">--}}
-                                {{--<p> Značajna poboljšanja </p>--}}
-                            {{--</div>--}}
-                            {{--<div class="t-cell">--}}
-                                {{--<div class="t-cell__line wow slideInLeft2" data-wow-duration="2.5s"></div>--}}
-                                {{--<span> 11% </span>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</section>--}}
         <section class="sec7"> Prejednostavno! Uz 2 šolje dnevno, zdravu ishranu i vežbanje kontrolišite nivo šećera u krvi. </section>
         <section class="sec8">
             <div class="wrapper">
@@ -358,26 +311,13 @@
         <section class="sec15">
             <div class="wrapper">
                 <div class="sec15__title title">NARUČITE JOŠ DANAS</div>
-                {{--<button class="btn btn--bigger pre_toform"> </button>--}}
                 <p class="sec15__price-text"> "OBEZBEDITE ZLATNI PROIZVOD ZA KONTROLU ŠEĆERA U KRVI" </p>
                 <span> SAMO ZA {{ $prices[1]['amount'] }} RSD </span>
                 <div class="sec15__container">
                     <div class="sec15__prod wow fadeInDown" data-wow-duration="2s">
                         <img alt src="{{ asset('/') }}natureteaFiles/diabetea/prod.png">
-                        {{--<div class="chevron">--}}
-                            {{--<div class="chevron__container">--}}
-                                {{--<div><b> 89% </b><span> poboljšanja nivoa <br> šećera u krvi </span></div>--}}
-                                {{--<div><b> 11% </b><span> poboljšanja </span></div>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
                     </div>
                     <div class="sec15__form form">
-                        {{--<div class="brush">--}}
-                            {{--<div class="brush__percent"> 50% </div>--}}
-                            {{--<div> Posebna ponuda </div>--}}
-                            {{--<button class="brush__btn"> popust do </button>--}}
-                            {{--<div> SAMO DANAS </div>--}}
-                        {{--</div>--}}
                         <div class="price"> Prvobitna cena <span class="old"><span class="js_old_price"> {{ $prices[1]['originalPrice'] }} </span> RSD </span><br> samo za <span class="price__new"><span class="js_new_price"> {{ $prices[1]['amount'] }} </span> RSD </span></div>
                         <p class="form__text" style="text-align: center">Unesite podatke za dostavu!</p>
                         <form action="{{$orderRoute}}" id="order_form" method="post">
@@ -389,11 +329,14 @@
                             <input name="shipping_city" placeholder="Grad" type="text">
                             <select class="form-content__element form-content__select change-package-selector form_control" id="product" name="quantity">
                                 @foreach($prices as $singlePrice)
-                                    <option value="{{ $singlePrice['quantity'] }}"
+                                    <option value="{{ $singlePrice['quantity'] }}" placeholder="{{ $singlePrice['is_free_shipping'] }}"
                                     @if($singlePrice['is_default']) selected @endif
-                                    >{{ $singlePrice['quantity'] }} x {{ $product->product_name }} ({{ $singlePrice['amount'] }} RSD)</option>
+                                    >{{ $singlePrice['quantity'] }} x {{ $product->product_name }} ({{ $singlePrice['amount'] }} RSD)
+                                    @if($singlePrice['is_free_shipping']) * @endif
+                                    </option>
                                 @endforeach
                             </select>
+                            <div class="freeShippingDiv">* BESPLATNA DOSTAVA</div>
                             <button class="btn button__text js_submit"> NARUČI ODMAH </button>
                             <div class></div>
                         </form>
@@ -404,11 +347,28 @@
 
     </div>
 </div>
-{{--<script src="{{ asset('/') }}natureteaFiles/diabetea/snap.svg.js"></script>--}}
+<style>
+    .freeShippingDiv {
+        color: rgb(174, 8, 8);
+        text-align: center;
+        margin-bottom: 10px;
+        display: none;
+        font-weight: bold;
+    }
+</style>
+<script>
+    $('.change-package-selector').click(function () {
+        let fsh = $('option:selected', this).attr('placeholder');
+        if(fsh == 1) {
+            $(this).next('.freeShippingDiv').slideDown();
+        } else {
+            $(this).next('.freeShippingDiv').slideUp();
+        }
+    })
+</script>
 <script src="{{ asset('/') }}natureteaFiles/diabetea/slick.min.js"></script>
 <script src="{{ asset('/') }}natureteaFiles/diabetea/wow.js"></script>
 <script src="{{ asset('/') }}natureteaFiles/diabetea/common.js"></script>
-{{--<script src="{{ asset('/') }}natureteaFiles/diabetea/js.cookie.min.js" type="text/javascript"></script>--}}
 @include('components.pixel_footer')
 </body>
 </html>

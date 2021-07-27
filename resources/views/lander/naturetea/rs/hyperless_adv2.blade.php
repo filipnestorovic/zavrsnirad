@@ -198,13 +198,16 @@
                                 <input type="text" name="phone" class="form-input" placeholder="Broj telefona" required/>
                                 <input type="text" name="shipping_address" class="form-input" placeholder="Adresa" required/>
                                 <input type="text" name="shipping_city" class="form-input" placeholder="Grad" required/>
-                                <select class="form-input" id="product" name="quantity" required>
+                                <select class="form-input change-package-selector" id="product" name="quantity" required>
                                     @foreach($prices as $singlePrice)
-                                        <option value="{{ $singlePrice['quantity'] }}"
+                                        <option value="{{ $singlePrice['quantity'] }}" placeholder="{{ $singlePrice['is_free_shipping'] }}"
                                                 @if($singlePrice['is_default']) selected @endif
-                                        >{{ $singlePrice['quantity'] }} x {{ $product->product_name }} ({{ $singlePrice['amount'] }} RSD)</option>
+                                        >{{ $singlePrice['quantity'] }} x {{ $product->product_name }} ({{ $singlePrice['amount'] }} RSD)
+                                            @if($singlePrice['is_free_shipping']) * @endif
+                                        </option>
                                     @endforeach
                                 </select>
+                                <div class="freeShippingDiv">* BESPLATNA DOSTAVA</div>
                                 <button type="submit" class="btn">PORUČI ODMAH</button>
                             </form>
                         </div>
@@ -271,13 +274,16 @@
                                     <input type="text" name="phone" class="form-input" placeholder="Broj telefona" required/>
                                     <input type="text" name="shipping_address" class="form-input" placeholder="Adresa" required/>
                                     <input type="text" name="shipping_city" class="form-input" placeholder="Grad" required/>
-                                    <select class="form-input" id="product" name="quantity" required>
+                                    <select class="form-input change-package-selector" id="product" name="quantity" required>
                                         @foreach($prices as $singlePrice)
-                                            <option value="{{ $singlePrice['quantity'] }}"
+                                            <option value="{{ $singlePrice['quantity'] }}" placeholder="{{ $singlePrice['is_free_shipping'] }}"
                                                     @if($singlePrice['is_default']) selected @endif
-                                            >{{ $singlePrice['quantity'] }} x {{ $product->product_name }} ({{ $singlePrice['amount'] }} RSD)</option>
+                                            >{{ $singlePrice['quantity'] }} x {{ $product->product_name }} ({{ $singlePrice['amount'] }} RSD)
+                                                @if($singlePrice['is_free_shipping']) * @endif
+                                            </option>
                                         @endforeach
                                     </select>
+                                    <div class="freeShippingDiv">* BESPLATNA DOSTAVA</div>
                                     <button type="submit" class="btn">PORUČI ODMAH</button>
                                 </form>
                             </div>
@@ -339,5 +345,24 @@
         {{--</div>--}}
     {{--</footer>--}}
 </div>
+<style>
+    .freeShippingDiv {
+        color: #ff0000;
+        text-align: center;
+        display: none;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+</style>
+<script>
+    $('.change-package-selector').click(function () {
+        let fsh = $('option:selected', this).attr('placeholder');
+        if(fsh == 1) {
+            $(this).next('.freeShippingDiv').slideDown();
+        } else {
+            $(this).next('.freeShippingDiv').slideUp();
+        }
+    })
+</script>
 </body>
 </html>

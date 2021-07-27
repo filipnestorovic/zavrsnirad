@@ -77,14 +77,17 @@
                                 </div>
                                 <div class=input-block>
                                     <label for=q01>Količina</label>
-                                    <select id="q01" name="quantity" required>
+                                    <select id="q01" name="quantity" class="change-package-selector" required>
                                         @foreach($prices as $singlePrice)
-                                            <option value="{{ $singlePrice['quantity'] }}"
+                                            <option value="{{ $singlePrice['quantity'] }}" placeholder="{{ $singlePrice['is_free_shipping'] }}"
                                                     @if($singlePrice['is_default']) selected @endif
-                                            >{{ $singlePrice['quantity'] }} x {{ $product->product_name }} ({{ $singlePrice['amount'] }} RSD)</option>
+                                            >{{ $singlePrice['quantity'] }} x {{ $product->product_name }} ({{ $singlePrice['amount'] }} RSD)
+                                                @if($singlePrice['is_free_shipping']) * @endif
+                                            </option>
                                         @endforeach
                                     </select>
                                     <div class=clear></div>
+                                    <div class="freeShippingDiv">* BESPLATNA DOSTAVA</div>
                                 </div>
                             </div>
                             <div class=sale-btn><img src="{{ asset('/') }}natureteaFiles/arterotea/arrow-red.png" alt="Arterotea" class="arrow hidden-xs">
@@ -352,14 +355,17 @@
                                 </div>
                                 <div class=input-block>
                                     <label for=q02>Količina</label>
-                                    <select id="q02" name="quantity" required>
+                                    <select id="q02" name="quantity" class="change-package-selector" required>
                                         @foreach($prices as $singlePrice)
-                                            <option value="{{ $singlePrice['quantity'] }}"
+                                            <option value="{{ $singlePrice['quantity'] }}" placeholder="{{ $singlePrice['is_free_shipping'] }}"
                                                     @if($singlePrice['is_default']) selected @endif
-                                            >{{ $singlePrice['quantity'] }} x {{ $product->product_name }} ({{ $singlePrice['amount'] }} RSD)</option>
+                                            >{{ $singlePrice['quantity'] }} x {{ $product->product_name }} ({{ $singlePrice['amount'] }} RSD)
+                                                @if($singlePrice['is_free_shipping']) * @endif
+                                            </option>
                                         @endforeach
                                     </select>
                                     <div class=clear></div>
+                                    <div class="freeShippingDiv" style="margin-bottom: 0">* BESPLATNA DOSTAVA</div>
                                 </div>
                             </div>
                             <div class=clear></div>
@@ -419,14 +425,17 @@
                                 </div>
                                 <div class=input-block>
                                     <label for=q03>Količina</label>
-                                    <select id="q03" name="quantity" required>
+                                    <select id="q03" name="quantity" class="change-package-selector" required>
                                         @foreach($prices as $singlePrice)
-                                            <option value="{{ $singlePrice['quantity'] }}"
+                                            <option value="{{ $singlePrice['quantity'] }}" placeholder="{{ $singlePrice['is_free_shipping'] }}"
                                                     @if($singlePrice['is_default']) selected @endif
-                                            >{{ $singlePrice['quantity'] }} x {{ $product->product_name }} ({{ $singlePrice['amount'] }} RSD)</option>
+                                            >{{ $singlePrice['quantity'] }} x {{ $product->product_name }} ({{ $singlePrice['amount'] }} RSD)
+                                                @if($singlePrice['is_free_shipping']) * @endif
+                                            </option>
                                         @endforeach
                                     </select>
                                     <div class=clear></div>
+                                    <div class="freeShippingDiv" style="margin-bottom: 0">* BESPLATNA DOSTAVA</div>
                                 </div>
                             </div>
                             <div class=sale-btn><img src="{{ asset('/') }}natureteaFiles/arterotea/arrow-red.png" alt="Arterotea" class="arrow hidden-xs">
@@ -577,14 +586,17 @@
                                 </div>
                                 <div class=input-block>
                                     <label for=q04>Količina</label>
-                                    <select id="q04" name="quantity" required>
+                                    <select id="q04" name="quantity" class="change-package-selector" required>
                                         @foreach($prices as $singlePrice)
-                                            <option value="{{ $singlePrice['quantity'] }}"
+                                            <option value="{{ $singlePrice['quantity'] }}" placeholder="{{ $singlePrice['is_free_shipping'] }}"
                                                     @if($singlePrice['is_default']) selected @endif
-                                            >{{ $singlePrice['quantity'] }} x {{ $product->product_name }} ({{ $singlePrice['amount'] }} RSD)</option>
+                                            >{{ $singlePrice['quantity'] }} x {{ $product->product_name }} ({{ $singlePrice['amount'] }} RSD)
+                                                @if($singlePrice['is_free_shipping']) * @endif
+                                            </option>
                                         @endforeach
                                     </select>
                                     <div class=clear></div>
+                                    <div class="freeShippingDiv">* BESPLATNA DOSTAVA</div>
                                 </div>
                             </div>
                             <div class=clear></div>
@@ -815,14 +827,17 @@
                                 </div>
                                 <div class=input-block>
                                     <label for=q05>Količina</label>
-                                    <select id="q05" name="quantity" required>
+                                    <select id="q05" name="quantity" class="change-package-selector" required>
                                         @foreach($prices as $singlePrice)
-                                            <option value="{{ $singlePrice['quantity'] }}"
+                                            <option value="{{ $singlePrice['quantity'] }}" placeholder="{{ $singlePrice['is_free_shipping'] }}"
                                                     @if($singlePrice['is_default']) selected @endif
-                                            >{{ $singlePrice['quantity'] }} x {{ $product->product_name }} ({{ $singlePrice['amount'] }} RSD)</option>
+                                            >{{ $singlePrice['quantity'] }} x {{ $product->product_name }} ({{ $singlePrice['amount'] }} RSD)
+                                                @if($singlePrice['is_free_shipping']) * @endif
+                                            </option>
                                         @endforeach
                                     </select>
                                     <div class=clear></div>
+                                    <div class="freeShippingDiv">* BESPLATNA DOSTAVA</div>
                                 </div>
                             </div>
                             <div class=sale-btn><img src="{{ asset('/') }}natureteaFiles/arterotea/arrow-red.png" alt="Arterotea" class="arrow hidden-xs">
@@ -869,6 +884,26 @@
                 navText: [, ]
             });
         });
+</script>
+<style>
+    .freeShippingDiv {
+        color: rgb(174, 8, 8);
+        text-align: center;
+        margin-bottom: 10px;
+        display: none;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+</style>
+<script>
+    $('.change-package-selector').click(function () {
+        let fsh = $('option:selected', this).attr('placeholder');
+        if(fsh == 1) {
+            $(this).next().next('.freeShippingDiv').slideDown();
+        } else {
+            $(this).next().next('.freeShippingDiv').slideUp();
+        }
+    })
 </script>
 <script src="{{ asset('/') }}natureteaFiles/arterotea/libs.min.js"></script>
 @include('components.pixel_footer')

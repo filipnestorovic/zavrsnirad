@@ -96,11 +96,13 @@
                                         <div class="input-field"><input id="shipping_city" name="shipping_city" placeholder="Grad" type="text"><label for="shipping_city"></label></div>
                                         <select class="browser-default customSelect change-package-selector" name="quantity">
                                             @foreach($prices as $singlePrice)
-                                                <option value="{{ $singlePrice['quantity'] }}"
+                                                <option value="{{ $singlePrice['quantity'] }}" placeholder="{{ $singlePrice['is_free_shipping'] }}"
                                                         @if($singlePrice['is_default']) selected @endif
-                                                >{{ $singlePrice['quantity'] }} x {{ $product->product_name }} ({{ $singlePrice['amount'] }} RSD)</option>
+                                                >{{ $singlePrice['quantity'] }} x {{ $product->product_name }} ({{ $singlePrice['amount'] }} RSD)
+                                                    @if($singlePrice['is_free_shipping']) * @endif</option>
                                             @endforeach
                                         </select>
+                                        <div class="freeShippingDiv">* BESPLATNA DOSTAVA</div>
                                         <div class="buttonBox"><button class="waves-effect btn red button__text customBtn js_submit" type="submit"> Naruči </button></div>
                                     </form>
                                 </div>
@@ -268,11 +270,13 @@
                                     <div class="input-field"><input id="shipping_city" name="shipping_city" placeholder="Grad" type="text"><label for="shipping_city"></label></div>
                                     <select class="browser-default customSelect change-package-selector" name="quantity">
                                         @foreach($prices as $singlePrice)
-                                            <option value="{{ $singlePrice['quantity'] }}"
+                                            <option value="{{ $singlePrice['quantity'] }}" placeholder="{{ $singlePrice['is_free_shipping'] }}"
                                                     @if($singlePrice['is_default']) selected @endif
-                                            >{{ $singlePrice['quantity'] }} x {{ $product->product_name }} ({{ $singlePrice['amount'] }} RSD)</option>
+                                            >{{ $singlePrice['quantity'] }} x {{ $product->product_name }} ({{ $singlePrice['amount'] }} RSD)
+                                                @if($singlePrice['is_free_shipping']) * @endif</option>
                                         @endforeach
                                     </select>
+                                    <div class="freeShippingDiv">* BESPLATNA DOSTAVA</div>
                                     <div class="buttonBox"><button class="waves-effect btn red button__text customBtn js_submit" type="submit"> Naruči </button></div>
                                 </form>
                             </div>
@@ -440,11 +444,13 @@
                                     <div class="input-field"><input id="shipping_city" name="shipping_city" placeholder="Grad" type="text"><label for="shipping_city"></label></div>
                                     <select class="browser-default customSelect change-package-selector" name="quantity">
                                         @foreach($prices as $singlePrice)
-                                            <option value="{{ $singlePrice['quantity'] }}"
+                                            <option value="{{ $singlePrice['quantity'] }}" placeholder="{{ $singlePrice['is_free_shipping'] }}"
                                                     @if($singlePrice['is_default']) selected @endif
-                                            >{{ $singlePrice['quantity'] }} x {{ $product->product_name }} ({{ $singlePrice['amount'] }} RSD)</option>
+                                            >{{ $singlePrice['quantity'] }} x {{ $product->product_name }} ({{ $singlePrice['amount'] }} RSD)
+                                                @if($singlePrice['is_free_shipping']) * @endif</option>
                                         @endforeach
                                     </select>
+                                    <div class="freeShippingDiv">* BESPLATNA DOSTAVA</div>
                                     <div class="buttonBox"><button class="waves-effect btn red button__text customBtn js_submit" type="submit"> Naruči </button></div>
                                 </form>
                             </div>
@@ -455,6 +461,25 @@
         </section>
     </main>
 </div>
+<style>
+    .freeShippingDiv {
+        color: #F44336;
+        text-align: center;
+        margin-bottom: 10px;
+        display: none;
+        font-weight: bold;
+    }
+</style>
+<script>
+    $('.change-package-selector').click(function () {
+        let fsh = $('option:selected', this).attr('placeholder');
+        if(fsh == 1) {
+            $(this).next('.freeShippingDiv').slideDown();
+        } else {
+            $(this).next('.freeShippingDiv').slideUp();
+        }
+    })
+</script>
 @include('components.pixel_footer')
 </body>
 </html>

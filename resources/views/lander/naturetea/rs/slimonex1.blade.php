@@ -408,9 +408,9 @@
                         <form action="{{$orderRoute}}" class="form font-mons main_form" data-xd="t76" id="order_form" method="post">
                             {{ csrf_field() }}
                             @include('lander.naturapharm.components.form_hidden_fields')
-                            <div class="zakaz blue"> Naručite </div>
-                            <div class="old_price" data-xd="t74" style="text-decoration: line-through"> {{ $prices[1]['originalPrice'] }} RSD </div>
-                            <div class="new_price" data-xd="t75"> {{ $prices[1]['amount'] }} RSD </div>
+                            <div class="zakaz blue"> UNESITE PODATKE ZA DOSTAVU </div>
+                            {{--<div class="old_price" data-xd="t74" style="text-decoration: line-through"> {{ $prices[1]['originalPrice'] }} RSD </div>--}}
+                            {{--<div class="new_price" data-xd="t75"> {{ $prices[1]['amount'] }} RSD </div>--}}
                             <input class="inp font-mons" name="name" placeholder="Ime" type="text" required>
                             <input class="inp only_number phone-js font-mons" name="phone" placeholder="Broj telefona" type="tel" required>
                             <input class="inp font-mons" name="shipping_address" placeholder="Adresa" type="text" required>
@@ -423,7 +423,7 @@
                                 @endforeach
                             </select>
                             @foreach($prices as $singlePrice)
-                                <div class="{{ $singlePrice['quantity'] }}_pack item-gift" id="{{ $singlePrice['quantity'] }}" @if($singlePrice['quantity'] === 1) style="display: block" @endif> {{ $singlePrice['quantity'] }} x {{ $product->product_name }} <br><strike class="old"> {{ $prices[$singlePrice['quantity']]['originalPrice'] }} RSD </strike> {{ $prices[$singlePrice['quantity']]['amount'] }} RSD </div>
+                                <div class="{{ $singlePrice['quantity'] }}_pack item-gift" id="{{ $singlePrice['quantity'] }}" @if($singlePrice['quantity'] === 1) style="display: block" @endif> {{ $singlePrice['quantity'] }} x {{ $product->product_name }} <br><strike class="old"> {{ $prices[$singlePrice['quantity']]['originalPrice'] }} RSD </strike> {{ $prices[$singlePrice['quantity']]['amount'] }} RSD <br> @if($singlePrice['is_free_shipping']) + BESPLATNA DOSTAVA @endif</div>
                             @endforeach
                             <button class="btn js_submit button__text"> NARUČITE SADA </button>
                             <div class></div>
