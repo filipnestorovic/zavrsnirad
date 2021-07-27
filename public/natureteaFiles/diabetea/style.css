@@ -79,7 +79,7 @@ ul {
 }
 
 section {
-    padding: 70px 0;
+    padding: 50px 0 90px 0;
     position: relative;
 }
 
@@ -94,7 +94,7 @@ section {
 .sec1 {
     background: url('sec1__bg.jpg') no-repeat center/cover;
     color: #fff;
-    padding-bottom: 180px;
+    padding-bottom: 200px;
 }
 
 .sec1::before {
@@ -151,7 +151,7 @@ section {
 
 .sec1__list {
     line-height: 1.1;
-    padding-bottom: 30px;
+    padding-bottom: 120px;
 }
 
 .sec1__item {
@@ -770,7 +770,7 @@ input:-ms-input-placeholder {
     content: "";
     background: url('prod.png') no-repeat;
     position: absolute;
-    left: -160px;
+    left: -90px;
     top: 20px;
     width: 315px;
     height: 329px;

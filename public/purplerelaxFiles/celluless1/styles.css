@@ -704,6 +704,11 @@ section .image {
     margin: 0 0 30px;
 }
 
+.description_section p {
+    padding: 10px 30px;
+    text-align: justify;
+}
+
 /* social proof */
 .social_proof_block {
     padding: 0 30px 30px;
@@ -1559,7 +1564,7 @@ section .image {
 }
 .reviews2_section .review_item {
     padding: 30px;
-    height: 450px;
+    height: 380px;
 }
 .reviews2_section .review_item .photo {
     margin: 0 0 25px;

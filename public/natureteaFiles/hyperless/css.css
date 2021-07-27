@@ -285,6 +285,7 @@ header {
 
 .priceBox {
     align-items: flex-end;
+    margin-top: 80px;
 }
 
 .priceBox-item {
@@ -611,7 +612,7 @@ header {
 }
 
 .customForm .productBox {
-    margin: 0 auto;
+    margin: 40px auto;
 }
 
 .objArrow {
@@ -996,7 +997,7 @@ header {
     }
 
     .customForm .productBox {
-        margin: 20px auto;
+        margin: 0 auto;
     }
 
     .objArrow {
@@ -1045,6 +1046,10 @@ header {
 
     .howToUse-text {
         font-size: 20px;
+    }
+
+    .priceBox {
+        margin-top: 20px;
     }
 
 }

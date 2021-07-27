@@ -392,10 +392,9 @@ form button:active {
 .offer_section {
     padding: 40px 0 0 0;
     height: auto;
-    background: #1b7ac2 url(desctop__offer_bg.jpg) center top no-repeat;
+    background: #1b7ac2 url(desctop__offer_bg.png) center top no-repeat;
     background-size: cover;
     color: #fff;
-    padding-bottom: 20px;
 }
 
 .offer_section .accent_color {
@@ -436,7 +435,7 @@ form button:active {
 }
 
 .offer_section ul {
-    margin: 0 0 40px 0;
+    margin: 8px 0 40px 0;
     width: 420px;
 }
 
@@ -750,7 +749,7 @@ form button:active {
 
 .components_section {
     padding: 41px 0 43px 0;
-    background: url(components__product_image.jpg) center 130px no-repeat;
+    background: url(components__product_image.png) center 130px no-repeat;
 }
 
 .components_section h2 {
@@ -807,7 +806,7 @@ form button:active {
 /* use */
 
 .use_section {
-    background: #0172a0 url(desctop__use_bg.jpg) center -36px no-repeat;
+    background: #0172a0 url(desctop__use_bg.png) center -36px no-repeat;
 }
 
 .use_section .info {
@@ -2160,8 +2159,9 @@ footer a:hover {
 
     .offer_section {
         height: auto;
-        background: #1b7ac2 url(mobile__offer_bg.jpg) center -15px no-repeat;
+        background: #0086cd url(mobile__offer_bg.png) center 85px no-repeat;
         padding-bottom: 20px;
+        background-size: 520px auto;
     }
 
     .offer_section .wrapper {
@@ -2186,8 +2186,8 @@ footer a:hover {
     }
 
     .offer_section .discount {
-        top: 20px;
-        right: 19px;
+        top: 55px;
+        right: 60px;
     }
 
     .offer_section form {
