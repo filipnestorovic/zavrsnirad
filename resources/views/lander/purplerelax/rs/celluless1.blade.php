@@ -19,7 +19,7 @@
             <p class="subtitle">MASAŽER PROTIV CELULITA</p>
             <div class="discount"> <b>40% popusta</b>
             </div>
-            <img class="image" src="{{ asset('/') }}purplerelaxFiles/celluless1/offer3__image8e0b7.jpg"></div>
+            <img class="image" src="{{ asset('/') }}purplerelaxFiles/celluless1/offer3__image8e0b7.png"></div>
         <div class="price_block">
             <div class="price_item old">
                 <div class="text">Stara cena:</div>
@@ -242,7 +242,7 @@
                 <div class="discount">
                     <b>40% popusta</b>
                 </div>
-                <img class="image" src="{{ asset('/') }}purplerelaxFiles/celluless1/offer3__image8e0b7.jpg">
+                <img class="image" src="{{ asset('/') }}purplerelaxFiles/celluless1/offer3__image8e0b7.png">
                 <!--<img class="gift" src="files/gift9eed3.png">--></div>
             <div class="price_block clearfix">
                 <div class="price_item old">

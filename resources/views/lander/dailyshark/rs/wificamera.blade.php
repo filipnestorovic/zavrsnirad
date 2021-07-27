@@ -13,6 +13,7 @@
     {{--<style>@font-face{font-family:'Montserrat';font-style:normal;font-weight:400;src:url(../fonts/montserrat-v15-latin-ext_latin-regular.eot);src:local(''),url('../fonts/montserrat-v15-latin-ext_latin-regular.eot@#iefix') format('embedded-opentype'),url(../fonts/montserrat-v15-latin-ext_latin-regular.woff2) format('woff2'),url(../fonts/montserrat-v15-latin-ext_latin-regular.woff) format('woff'),url(../fonts/montserrat-v15-latin-ext_latin-regular.ttf) format('truetype'),url('../fonts/montserrat-v15-latin-ext_latin-regular.svg#Montserrat') format('svg')}@font-face{font-family:'Montserrat';font-style:italic;font-weight:400;src:url(../fonts/montserrat-v15-latin-ext_latin-italic.eot);src:local(''),url('../fonts/montserrat-v15-latin-ext_latin-italic.eot@#iefix') format('embedded-opentype'),url(../fonts/montserrat-v15-latin-ext_latin-italic.woff2) format('woff2'),url(../fonts/montserrat-v15-latin-ext_latin-italic.woff) format('woff'),url(../fonts/montserrat-v15-latin-ext_latin-italic.ttf) format('truetype'),url('../fonts/montserrat-v15-latin-ext_latin-italic.svg#Montserrat') format('svg')}@font-face{font-family:'Montserrat';font-style:normal;font-weight:500;src:url(../fonts/montserrat-v15-latin-ext_latin-500.eot);src:local(''),url('../fonts/montserrat-v15-latin-ext_latin-500.eot@#iefix') format('embedded-opentype'),url(../fonts/montserrat-v15-latin-ext_latin-500.woff2) format('woff2'),url(../fonts/montserrat-v15-latin-ext_latin-500.woff) format('woff'),url(../fonts/montserrat-v15-latin-ext_latin-500.ttf) format('truetype'),url('../fonts/montserrat-v15-latin-ext_latin-500.svg#Montserrat') format('svg')}@font-face{font-family:'Montserrat';font-style:normal;font-weight:700;src:url(../fonts/montserrat-v15-latin-ext_latin-700.eot);src:local(''),url('../fonts/montserrat-v15-latin-ext_latin-700.eot@#iefix') format('embedded-opentype'),url(../fonts/montserrat-v15-latin-ext_latin-700.woff2) format('woff2'),url(../fonts/montserrat-v15-latin-ext_latin-700.woff) format('woff'),url(../fonts/montserrat-v15-latin-ext_latin-700.ttf) format('truetype'),url('../fonts/montserrat-v15-latin-ext_latin-700.svg#Montserrat') format('svg')}@font-face{font-family:'Montserrat';font-style:normal;font-weight:900;src:url(../fonts/montserrat-v15-latin-ext_latin-900.eot);src:local(''),url('../fonts/montserrat-v15-latin-ext_latin-900.eot@#iefix') format('embedded-opentype'),url(../fonts/montserrat-v15-latin-ext_latin-900.woff2) format('woff2'),url(../fonts/montserrat-v15-latin-ext_latin-900.woff) format('woff'),url(../fonts/montserrat-v15-latin-ext_latin-900.ttf) format('truetype'),url('../fonts/montserrat-v15-latin-ext_latin-900.svg#Montserrat') format('svg')}@font-face{font-family:'AvenirNextCyr';src:url(../fonts/subset-AvenirNextCyr-Light.woff2) format('woff2'),url(../fonts/subset-AvenirNextCyr-Light.woff) format('woff'),url(../fonts/subset-AvenirNextCyr-Light.ttf) format('truetype');font-weight:300;font-style:normal}@font-face{font-family:'AvenirNextCyr';src:url(../fonts/subset-AvenirNextCyr-Regular.woff2) format('woff2'),url(../fonts/subset-AvenirNextCyr-Regular.woff) format('woff'),url(../fonts/subset-AvenirNextCyr-Regular.ttf) format('truetype');font-weight:400;font-style:normal}@font-face{font-family:'AvenirNextCyr';src:url(../fonts/subset-AvenirNextCyr-Medium.woff2) format('woff2'),url(../fonts/subset-AvenirNextCyr-Medium.woff) format('woff'),url(../fonts/subset-AvenirNextCyr-Medium.ttf) format('truetype');font-weight:500;font-style:normal}@font-face{font-family:'AvenirNextCyr';src:url(../fonts/subset-AvenirNextCyr-Bold.woff2) format('woff2'),url(../fonts/subset-AvenirNextCyr-Bold.woff) format('woff'),url(../fonts/subset-AvenirNextCyr-Bold.ttf) format('truetype');font-weight:700;font-style:normal}</style>--}}
 </head>
 <body class>
+@include('components.display_errors')
 <section class="block1">
     <div class="wrap topline">
         <div class="logo">
@@ -32,45 +33,39 @@
                     ><span class="gr-letter" style="color: rgb(255, 137, 5)">R</span
                     ><span class="gr-letter" style="color: rgb(255, 146, 4)">A</span
                     ></span
-                ></span
-            >
+                ></span>
             </h1>
         </div>
         <ul class="toppromise">
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/wificamera/top1.png" alt />
-                <p>Calitatea garantată</p>
+                <p>Kvalitet zagarantovan</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/wificamera/top2.png" alt />
-                <p><a href="#ship"> Transport rapid</a></p>
+                <p><a href="#ship">Brza dostava</a></p>
             </li>
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/wificamera/top3.png" alt />
-                <p>Plata la primire</p>
+                <p>Plaćanje pouzećem</p>
             </li>
         </ul>
     </div>
     <div class="wrap">
         <h2>
-            Security camera<span
-            ><span class="sh"> care poate înlocui</span> câteva asemenea
-            dispozitive.</span
-            >
+            SIGURNOSNA WI-FI KAMERA <span>sa rotirajućom glavomi alarmnim sistemom po potrebi</span>
         </h2>
         <div class="sale">POPUST<span> 40%</span></div>
         <ul class="bullites">
             <li>
-                <b> Unghiul de vizualizare fără precedent</b> 350 de grade
-                orizontal, 110 grade vertical.
+                <b>Neverovatan ugao gledanja</b>
+                350 stepeni vodoravno, 100 stepeni vertikalno
             </li>
             <li>
-                <b> Recepția și transmiterea sunetului.</b> Camera microfonul și
-                difuzorul
+                <b>Prijem i prenos zvuka</b> Kamera ima mikrofon i zvučnik
             </li>
             <li>
-                <b> Controlația camera cu telefonul </b> Toate funcțiile sunt
-                disponibile cu aplicația specială
+                <b>Kontrolišite sve preko telefona</b> Potpuna kontrola nad kamerom preko aplikacije
             </li>
         </ul>
         <div class="formbox">
@@ -106,25 +101,19 @@
 <section class="block2">
     <div class="wrap">
         <h2 class="title">
-            <span> Camera wireless cu WiFi fiabilă,</span> rotativă
+            <span>Bežična Wi-Fi kamera sa rotirajućom glavom </span>i alarmom po potrebi
         </h2>
-        <p>
-            <b> WiFi Camera 360</b> este dotată cu<span>
-            senzorul de mișcare foarte sensibil,</span
-            >
-            care îi oferă funcții de securitate reacționând la mișcările
-            obiectelor. Iluminarea puternică infraroșie cu LED oferă calitatea
-            excelentă a imaginii la o distanță de până la 10 metri, chiar și în
-            absența luminii.
-        </p>
+        <p><b>Wi-Fi Camera 360</b> opremljena je <span>vrlo osetljivim senzorom pokreta,</span> koji mu daje sigurnosne funkcije reagujući na kretanje predmeta.
+            Možete da podesite da se pri pokretu uključuje alarm i da vas aplikacija momentalno alarmira, bilo gde da ste.
+            Jaka infracrvena led rasveta pruža odličan kvalitet slike na rastojanu i do 10 metara, čak i u nedostatku svetlosti.</p>
         <ul class="angles">
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/wificamera/170.png" alt />
-                <p>Vizualizare orizontală:<b> 350°</b></p>
+                <p>Horizontalni prikaz:<b> 350°</b></p>
             </li>
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/wificamera/150.png" alt />
-                <p>Vizualizare verticală: <b> 110°</b></p>
+                <p>Vertikalni prikaz: <b> 110°</b></p>
             </li>
         </ul>
         <ul class="aboutimg">
@@ -146,27 +135,21 @@
             <img src="{{ asset('/') }}dailysharkFiles/wificamera/product1.jpg" alt />
             <div class="info">
                 <h2 class="title">
-                    Videourile tale<br />
-                    sunt întotdeauna<span> disponibile</span>
+                    VAŠI VIDEO SNIMCI<br/>
+                    SU UVEK<span> DOSTUPNI</span>
                 </h2>
                 <ul class="rec">
                     <li class="clearfix">
                         <img src="{{ asset('/') }}dailysharkFiles/wificamera/rec1.png" alt />
-                        <p>Filmare video FULL HD 1080</p>
+                        <p>FULL HD 1080p video snimanje</p>
                     </li>
                     <li class="clearfix">
                         <img src="{{ asset('/') }}dailysharkFiles/wificamera/rec2.png" alt />
-                        <p>
-                            Camera poate trimite datele de monitorizare către cloud în
-                            timp real
-                        </p>
+                        <p>Kamera može u realnom vremenu da šalje snimke na Cloud ili na memorijsku karticu. Možete uživo da snimate iz aplikacije na memoriju telefona i da delite bilo gde</p>
                     </li>
                     <li class="clearfix">
                         <img src="{{ asset('/') }}dailysharkFiles/wificamera/rec3.png" alt />
-                        <p>
-                            Compresia H.264 avansată permite transmiterea videourilor de
-                            înaltă calitate
-                        </p>
+                        <p>Napredna X.264 kompresija omogućava prenos video zapisa visokog kvaliteta</p>
                     </li>
                 </ul>
             </div>
@@ -204,20 +187,14 @@
 <section class="block4">
     <div class="wrap">
         <h2 class="title">
-            Security camera<br />
-            Într-un corp elegant<span> și durabil</span>
+            Sigurnosna kamera<br />
+            u elegantnom i<span> izdržljivom kućištu</span>
         </h2>
-        <p>
-            WiFi Camera 360 este o inovație a experților în domeniul securității
-            care îndeplinește toate cerințele pentru o cameră de securitate.
-            Combinația perfectă de calitate și fiabilitate. Toate camerele WiFi
-            360 sunt fabricate pe fabrici inovatoare și din materiale și
-            componente moderne, ceea ce ne permite să producem camere de încredere
-            cu cea mai bogată funcționalitate.
-        </p>
+        <p><b>Wi-Fi Camera 360</b> je inovacija bezbednosnih stručnjaka koja ispunjava sve zahteve za sigurnosnu kameru. Sve naše Wi-Fi 360 kamere se proizvode od savrmenih materijala i komponenata
+            u modernim svetskim fabrikama. Ukratko - savršena kombinacija kvaliteta i pouzdanosti.</p>
         <img src="{{ asset('/') }}dailysharkFiles/wificamera/product2.jpg" alt />
         <a href="#order_form" class="btn alone autoink">
-            Comandați acum
+            PORUČITE SADA
             <div
                     class="ink animate"
                     style="height: 200px; width: 250px; top: -20px; left: -140px"
@@ -227,39 +204,36 @@
 </section>
 <section class="block5">
     <div class="wrap">
-        <h2>WiFi Camera 360 — o gamă largă<span> a funcțiilor utile:</span></h2>
+        <h2>Wi Fi Camera 360 - širok spektar <span>korisnih funkcija:</span></h2>
         <ul class="function">
-            <li><span> 1.</span> Detectorul mișcării</li>
-            <li><span> 2.</span> Calitatea Full HD 1080P</li>
-            <li><span> 3.</span> Primirea și redarea sunetului</li>
-            <li><span> 4.</span> Live video în smartphone</li>
+            <li><span> 1.</span> Detektor pokreta</li>
+            <li><span> 2.</span> Full HD kvalitet 1080p</li>
+            <li><span> 3.</span> Prijem i reprodukcija zvuka</li>
+            <li><span> 4.</span> Video uživo na Vašem pametnom telefonu</li>
         </ul>
         <ul class="function f2">
-            <li><span> 5.</span> Conexiune WiFi</li>
-            <li><span> 6.</span> Vedere nocturnă</li>
-            <li><span> 7.</span> Micro SD până la 128Gb</li>
-            <li><span> 8.</span> Rotire și înclinare</li>
+            <li><span> 5.</span> Wi-Fi veza</li>
+            <li><span> 6.</span> Noćni režim</li>
+            <li><span> 7.</span> Micro SD do 128 GB</li>
+            <li><span> 8.</span> Rotacija i nagib</li>
         </ul>
         <ul class="function f3">
-            <li><span> 9.</span> Acces complet la distanță</li>
-            <li><span> 10.</span> Suportul fiabil</li>
-            <li><span> 11.</span> Notificări push pentru mișcare și sunet</li>
-            <li><span> 12.</span> Complet în română</li>
+            <li><span> 9.</span> Potpuni daljinski pristup</li>
+            <li><span> 10.</span> Pouzdana podrška</li>
+            <li><span> 11.</span> Push obaveštenja</li>
+            <li><span> 12.</span> Glasan alarm protiv provalnika</li>
         </ul>
         <ul class="gifki">
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/wificamera/3.jpg" class="b-lazy" alt />
                 <p>
-                    <span> modul zi/noapte</span> Transmitanța crescută a luminii vă
-                    permite să înregistrați tot ce se întâmplă chiar și noaptea.
+                    <span>Dnevni / noćni režim</span> Povećana propustljivost svetlosti omogućava snimanje svega što se dešava.
                 </p>
             </li>
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/wificamera/2.jpg" class="b-lazy" alt />
                 <p>
-                    <span> Sistemul detectării mișcării</span> Camera este dotată cu
-                    sistemul inteligent unic de urmărire a obiectelor în mișcare și
-                    poate urmări obiectele.
+                    <span>Sistem za detekciju pokreta</span> Kamera je opremljena jedinstvenim inteligentnim sistemom za praćenje pokreta i detektovanje lica.
                 </p>
             </li>
         </ul>
@@ -269,38 +243,34 @@
     <div class="wrap">
         <div class="container">
             <div class="char-left">
-                <h2>Conținut pachet</h2>
+                <h2>Sadržaj paketa</h2>
                 <img src="{{ asset('/') }}dailysharkFiles/wificamera/kit.jpg" alt />
             </div>
             <div class="char-right">
-                <h2>Caracteristici</h2>
+                <h2>Karakteristike</h2>
                 <ul class="char">
-                    <li>OS<span> Android, IOS</span></li>
-                    <li>Dimensiunea obiectivului camerei:<span> 3,6 mm</span></li>
-                    <li>Rezoluție video:<span> Full HD 1080P</span></li>
-                    <li>Compresie video:<span> Н.264</span></li>
-                    <li>Microfon:<span> este</span></li>
-                    <li>Detectorul mișcării<span> este</span></li>
-                    <li>Iluminare IR:<span> este</span></li>
-                    <li>Înregistrare după orar:<span> este</span></li>
-                    <li>Vedere nocturnă la distanța:<span> 10 m</span></li>
-                    <li>Unghi de vizualizare:<span> 360° la 90°</span></li>
-                    <li>Alimentație:<span> 5V / 2.0A / 8W</span></li>
-                    <li>Interfețe wireless:<span> Wi-Fi 2.4 GHz</span></li>
-                    <li>Carduri de memorie:<span> pînă la 128 GB</span></li>
-                    <li>Material:<span> plastic, component electronic</span></li>
+                    <li>Kompatibilnost<span> Android, IOS</span></li>
+                    <li>Veličina sočiva kamere<span> 3,6 mm</span></li>
+                    <li>Video rezolucija<span> Full HD 1080P</span></li>
+                    <li>Video kompresija<span> Н.264</span></li>
+                    <li>Mikrofon<span> da</span></li>
+                    <li>Detektor pokreta<span> da</span></li>
+                    <li>IC osvetljenje<span> da</span></li>
+                    <li>Alarmni sistem<span> da</span></li>
+                    <li>Daljinski noćni pogled<span> 10 m</span></li>
+                    <li>Ugao gledanja<span> 350° - 110°</span></li>
+                    <li>Napajanje<span> 5V / 2.0A / 8W</span></li>
+                    <li>Bežično povezivanje<span> Wi-Fi, 2.4 GHz</span></li>
+                    <li>Slot za memorijsku karticu<span> do 128 GB</span></li>
+                    <li>Materijal<span> Plastika, elektronske komponente</span></li>
                     <li>
-                        Suplimentar<span>
-                  portul mini USB,<br />
-                  antena,<br />
-                  butonul restart</span
-                        >
+                        Dodatno<span>Mini USB port,<br/>antena,<br/>dugme za restart</span>
                     </li>
                 </ul>
             </div>
         </div>
         <a href="#order_form" class="btn alone autoink">
-            Comandați acum
+            PORUČI SADA
             <div
                     class="ink animate"
                     style="height: 200px; width: 250px; top: -20px; left: -140px"
@@ -310,70 +280,48 @@
 </section>
 <section class="block7">
     <div class="wrap">
-        <h2 class="title"><span> Recenziile</span> cumpărătorilor</h2>
+        <h2 class="title"><span> KOMENTARI</span> KUPACA</h2>
         <p>
-            Mai mult decât<span> 7350 de oameni</span> și-au cumpărat deja WiFi
-            Camera 360
+            Više od <span> 7350 ljudi </span> je već kupilo ovaj proizvod
         </p>
         <div class="reviews">
             <div>
                 <div class="rev-item">
                     <img src="{{ asset('/') }}dailysharkFiles/wificamera/rev1.jpg" alt />
-                    <span>
-                Se reglează ușor<br />
-                pentru tine</span
-                    >
-                    <p>
-                        Camera are multe setări și funcții, o puteți personaliza cu
-                        ușurință. Foarte convenabil de utilizat! Datorită unghiului de
-                        vizualizare de 360 de grade, imaginea este clară. Are și un
-                        senzor de mișcare cu posibilitatea de a trimite notificări către
-                        smartphone. Recomand!
-                    </p>
+                    <span>Najbolja kamera <br>koju sam ikada kupio</span>
+                    <p>Kamera ima mnoga podešavanja i funkcije koje je vrlo lako prilagoditi.
+                        Veoma je zgodna za upotrebu i daje kristalno jasnu sliku.
+                        Takođe, ima senzor pokreta sa mogućnošću slanja obaveštenja na vaš pametni telefon.
+                        Preporučujem!</p>
                     <div class="person">
                         <img src="{{ asset('/') }}dailysharkFiles/wificamera/ava1.jpg" alt />
-                        <p><b> Alex</b> Brașov</p>
+                        <p><b> Branko</b> Zrenjanin</p>
                     </div>
                 </div>
             </div>
             <div>
                 <div class="rev-item">
                     <img src="{{ asset('/') }}dailysharkFiles/wificamera/rev2.jpg" alt />
-                    <span>
-                Merită<br />
-                din plin!</span
-                    >
-                    <p>
-                        E o cameră de înaltă calitate și are o fixare convenabilă, bine
-                        făcută. Funcțiile sunt foarte utile, ușor de instalat, se pot
-                        regla foarte rapid. Calitatea filmării este, de asemenea,
-                        plăcută, sincer să fiu, nu mă așteptam la un asemenea nivel.
-                        Mulțumesc, vreau să comand încă una pentru prieten. Merită din
-                        plin!
-                    </p>
+                    <span>Vredi!</span>
+                    <p>Wi Fi kamera visokog kvaliteta sa odličnom aplikacijom i korisnim funkcijama.
+                        Vrlo jednostavna za povezivanje i korišćenje.
+                        Koristim je na vikendici i već 5. dan korišćenja uplašila je lopove koji su pokušali da naprave provalu, a ja sam uspeo da ih prepoznam i prijavim.
+                        Preporučujem je svima koji imaju potrebu za takvom opremom!</p>
                     <div class="person">
                         <img src="{{ asset('/') }}dailysharkFiles/wificamera/ava2.jpg" alt />
-                        <p><b> George</b> Tâtgu-Jiu</p>
+                        <p><b> Jovan</b> Avala</p>
                     </div>
                 </div>
             </div>
             <div>
                 <div class="rev-item">
                     <img src="{{ asset('/') }}dailysharkFiles/wificamera/rev3.jpg" alt />
-                    <span>
-                Are conecție cu smartphone,<br />
-                ceea ce căutam.</span
-                    >
-                    <p>
-                        Camera e bună. Am instalat totul rapid, într-adevăr în 5 minute.
-                        Totul funcționează, nu îngheață, imaginea este clară, chiar și
-                        noaptea. Are conecție cu telefon, e tocmai ceea ce căutam.
-                        Sunetul este bun, cuvintele se aud foarte clar. Vă mulțumesc
-                        pentru produs.
-                    </p>
+                    <span>Ima vezu sa pametnim telefonom, to sam i tražio!</span>
+                    <p>Odlična kamera! Povezao sam je i instalirao aplikaciju za 5 minuta. Sve funkcioniše, slika je veoma jasna i ne zamrzava se.
+                        Zvuk prenosi dobro, reči su vrlo jasne. Hvala vam na ovom proizvodu.</p>
                     <div class="person">
                         <img src="{{ asset('/') }}dailysharkFiles/wificamera/ava3.jpg" alt />
-                        <p><b> Vlad</b> Iași</p>
+                        <p><b> Vlada</b> Novi Sad</p>
                     </div>
                 </div>
             </div>
@@ -382,34 +330,34 @@
 </section>
 <section class="block8" id="ship">
     <div class="wrap">
-        <h2 class="title"><span> Cum să comandați</span> WiFi Camera 360?</h2>
+        <h2 class="title"><span> Kako naručiti</span> kameru?</h2>
         <ul class="ship">
             <li>
                 <span><img src="{{ asset('/') }}dailysharkFiles/wificamera/1.png" alt /></span>
                 <p>
-                    <a href="#order_form"> Plasați comanda</a><br />
-                    pe site
+                    Popunite <a href="#order_form">formu</a><br/> ispod
                 </p>
             </li>
             <li>
                 <span><img src="{{ asset('/') }}dailysharkFiles/wificamera/2.png" alt /></span>
                 <p>
-                    Managerul va preciza<br />
-                    detaliile comenzii
+                    Potvrdićemo porudžbinu<br />
+                    u najkraćem roku
                 </p>
             </li>
             <li>
                 <span><img src="{{ asset('/') }}dailysharkFiles/wificamera/3.png" alt /></span>
                 <p>
-                    Livrăm comanda<br />
-                    În 1-3 zile
+                    Poslaćemo paket u roku<br />
+                    od 1-2 radna dana
                 </p>
             </li>
             <li>
                 <span><img src="{{ asset('/') }}dailysharkFiles/wificamera/4.png" alt /></span>
                 <p>
-                    Plătiți curierului<br />
-                    la primire
+                    Plaćanje kuriru<br />
+                    prilikom preuzimanja <br />
+                    pošiljke
                 </p>
             </li>
         </ul>
@@ -441,38 +389,33 @@
         <ul class="toppromise">
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/wificamera/top1.png" alt />
-                <p>Calitatea este garantată</p>
+                <p>Kvalitet zagarantovan</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/wificamera/top2.png" alt />
-                <p><a href="#ship"> Transportul rapid</a></p>
+                <p><a href="#ship">Brza dostava</a></p>
             </li>
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/wificamera/top3.png" alt />
-                <p>Plata la primire</p>
+                <p>Plaćanje pouzećem</p>
             </li>
         </ul>
     </div>
     <div class="wrap">
         <h2>
-            Security camera<span
-            ><span class="sh"> care poate înlocui</span> câteva asemenea
-            dispozitive.</span
-            >
+            SIGURNOSNA WI-FI KAMERA <span>sa rotirajućom glavomi alarmnim sistemom po potrebi</span>
         </h2>
         <div class="sale">POPUST<span> 40%</span></div>
         <ul class="bullites">
             <li>
-                <b> Unghiul de vizualizare fără precedent</b> 350 de grade
-                orizontal, 110 grade vertical.
+                <b>Neverovatan ugao gledanja</b>
+                350 stepeni vodoravno, 100 stepeni vertikalno
             </li>
             <li>
-                <b> Primirea și redarea sunetului</b> Camera este dotată cu
-                microfonul și difuzorul
+                <b>Prijem i prenos zvuka</b> Kamera ima mikrofon i zvučnik
             </li>
             <li>
-                <b> Se controlează cu telefonul</b> Toate funcțiile sunt disponibile
-                cu aplicația specială
+                <b>Kontrolišite sve preko telefona</b> Potpuna kontrola nad kamerom preko aplikacije
             </li>
         </ul>
         <div class="formbox">
@@ -505,14 +448,13 @@
         </div>
     </div>
 </section>
-<footer class="footer">
-    <div class="wrap">
-
-    </div>
-</footer>
+{{--<footer class="footer">--}}
+    {{--<div class="wrap">--}}
+    {{--</div>--}}
+{{--</footer>--}}
 
 <script src="{{ asset('/') }}shared_files/slick.min.js"></script>
 <script src="{{ asset('/') }}dailysharkFiles/wificamera/main.js"></script>
-
+@include('components.pixel_footer')
 </body>
 </html>
