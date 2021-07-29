@@ -127,7 +127,7 @@ class Order
         return $result;
     }
 
-    public function getUpCrossSellByVariationOrTest($variation_id = null, $test_variation_id = null, $dateFrom, $dateTo) {
+    public function getUpCrossSellByVariationOrTest($variation_id = null, $test_variation_id = null, $dateFrom, $dateTo, $country_id = null) {
         $result = DB::table('up_cross_sell');
 
         if(!empty($variation_id)){
@@ -136,6 +136,10 @@ class Order
 
         if(!empty($test_variation_id)){
             $result->where('test_variation_id','=',$test_variation_id);
+        }
+
+        if(!empty($country_id)){
+            $result->where('country_id','=',$country_id);
         }
 
         if(!empty($dateFrom)){

@@ -63,7 +63,7 @@ class AdminController extends Controller
         $todayCrossSellsRevenue = 0;
         $todayTotal = 0;
         $todayTotalRevenue = 0;
-        $UpCrossSellOrders = $this->modelOrder->getUpCrossSellByVariationOrTest(null,null,Carbon::now()->toDateString(),null);
+        $UpCrossSellOrders = $this->modelOrder->getUpCrossSellByVariationOrTest(null,null,Carbon::now()->toDateString(),null,$country_id);
         foreach($UpCrossSellOrders as $singleUpSell) {
             $todayTotal++;
             $todayTotalRevenue += $singleUpSell->price;
