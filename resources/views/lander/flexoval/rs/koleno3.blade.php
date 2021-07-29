@@ -80,7 +80,7 @@
                                                 <input class="input w-input styled__Input-sc-91uzmk-0 dTjgh" type="text" placeholder="Grad" id="city" name="shipping_city" required="">
                                                 @foreach($prices as $singlePrice)
                                                     <div style="margin-top: 10px; margin-left: 10px;">
-                                                     <input type="radio" name="quantity" value="{{ $singlePrice['quantity'] }}" id="productLabel{{ $singlePrice['quantity'] }}"
+                                                     <input type="radio" name="quantity" class="quantity" value="{{ $singlePrice['quantity'] }}" id="productLabel{{ $singlePrice['quantity'] }}" placeholder="{{ $singlePrice['is_free_shipping'] }}"
                                                             @if($singlePrice['is_default']) checked @endif
                                                             @if(old('quantity') == $singlePrice['quantity']) checked @endif >
                                                     <label for="productLabel{{$singlePrice['quantity']}}">
@@ -88,6 +88,7 @@
                                                     </label>
                                                     </div>
                                                 @endforeach
+                                                <div class="freeShippingDiv">* BESPLATNA DOSTAVA</div>
                                                 <button class="Button-sc-1u3615l-0 submit w-button Form___StyledButton-sc-1skpxzk-1 hCwHxj" type="submit" font-size="18" color="black" font-family="gilroy" height="63" font-weight="800">
                                                     PORUČITE ODMAH
                                                 </button>
@@ -218,62 +219,6 @@
                                 <div class="slick-slider slick-initialized" dir="ltr">
                                     <div class="slick-list">
                                         <div class="slick-track" style="width: 9972px; opacity: 1;">
-                                            {{--<div data-index="-1" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 1108px;">--}}
-                                                {{--<div>--}}
-                                                    {{--<div tabindex="-1" class="Box-sc-1063fjo-0 BeforeAfter___StyledBox-sc-1n4ecp9-1 cSIXDY" style="width: 100%; display: inline-block;">--}}
-                                                        {{--<div width="100%" class="Box-sc-1063fjo-0 Flex-lw4abu-0 PyWwh">--}}
-                                                            {{--<div width="540" class="Box-sc-1063fjo-0 evpxuO">--}}
-                                                                {{--<div class="Box-sc-1063fjo-0 iHsBTO">--}}
-                                                                    {{--<img src="{{ asset('/') }}flexovalFiles/koleno3/7-f59dd188c6237149deeb5f408b3d31ea.jpg" width="1" height="374" class="Box-sc-1063fjo-0 Image-sc-1ruv6ez-0 iIwral">--}}
-                                                                    {{--<div color="black" height="180" class="Box-sc-1063fjo-0 Flex-lw4abu-0 burDbi">--}}
-                                                                        {{--<div font-family="gilroy" font-weight="300" font-size="20" class="Box-sc-1063fjo-0 Text-oy5r1a-0 jdBWxe">--}}
-                                                                            {{--Старые травмы могут напомнить о себе--}}
-                                                                        {{--</div>--}}
-                                                                    {{--</div>--}}
-                                                                {{--</div>--}}
-                                                            {{--</div>--}}
-                                                            {{--<div width="540" class="Box-sc-1063fjo-0 evpxuO">--}}
-                                                                {{--<div class="Box-sc-1063fjo-0 lnqAci">--}}
-                                                                    {{--<img src="{{ asset('/') }}flexovalFiles/koleno3/8-43c6a02fbc3448266665cb59c953e773.jpg" width="1" height="374" class="Box-sc-1063fjo-0 Image-sc-1ruv6ez-0 iIwral">--}}
-                                                                    {{--<div color="black" height="180" class="Box-sc-1063fjo-0 Flex-lw4abu-0 burDbi">--}}
-                                                                        {{--<div font-family="gilroy" font-weight="300" font-size="20" class="Box-sc-1063fjo-0 Text-oy5r1a-0 jdBWxe">--}}
-                                                                            {{--Снижает нагрузку на сустав, чтобы прежние боли не возвращались--}}
-                                                                        {{--</div>--}}
-                                                                    {{--</div>--}}
-                                                                {{--</div>--}}
-                                                            {{--</div>--}}
-                                                        {{--</div>--}}
-                                                    {{--</div>--}}
-                                                {{--</div>--}}
-                                            {{--</div>--}}
-                                            {{--<div data-index="0" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 1108px;">--}}
-                                                {{--<div>--}}
-                                                    {{--<div tabindex="-1" class="Box-sc-1063fjo-0 BeforeAfter___StyledBox-sc-1n4ecp9-1 cSIXDY" style="width: 100%; display: inline-block;">--}}
-                                                        {{--<div width="100%" class="Box-sc-1063fjo-0 Flex-lw4abu-0 PyWwh">--}}
-                                                            {{--<div width="540" class="Box-sc-1063fjo-0 evpxuO">--}}
-                                                                {{--<div class="Box-sc-1063fjo-0 iHsBTO">--}}
-                                                                    {{--<img src="{{ asset('/') }}flexovalFiles/koleno3/1-c536b837c7c4fc3e13376c3a22c802d7.jpg" width="1" height="374" class="Box-sc-1063fjo-0 Image-sc-1ruv6ez-0 iIwral">--}}
-                                                                    {{--<div color="black" height="180" class="Box-sc-1063fjo-0 Flex-lw4abu-0 burDbi">--}}
-                                                                        {{--<div font-family="gilroy" font-weight="300" font-size="20" class="Box-sc-1063fjo-0 Text-oy5r1a-0 jdBWxe">--}}
-                                                                            {{--Скованность движений--}}
-                                                                        {{--</div>--}}
-                                                                    {{--</div>--}}
-                                                                {{--</div>--}}
-                                                            {{--</div>--}}
-                                                            {{--<div width="540" class="Box-sc-1063fjo-0 evpxuO">--}}
-                                                                {{--<div class="Box-sc-1063fjo-0 lnqAci">--}}
-                                                                    {{--<img src="{{ asset('/') }}flexovalFiles/koleno3/2-cd4cadf3a1de6a67cc72b0859eb59ece.jpg" width="1" height="374" class="Box-sc-1063fjo-0 Image-sc-1ruv6ez-0 iIwral">--}}
-                                                                    {{--<div color="black" height="180" class="Box-sc-1063fjo-0 Flex-lw4abu-0 burDbi">--}}
-                                                                        {{--<div font-family="gilroy" font-weight="300" font-size="20" class="Box-sc-1063fjo-0 Text-oy5r1a-0 jdBWxe">--}}
-                                                                            {{--Микромассажное действие снимает напряжение--}}
-                                                                        {{--</div>--}}
-                                                                    {{--</div>--}}
-                                                                {{--</div>--}}
-                                                            {{--</div>--}}
-                                                        {{--</div>--}}
-                                                    {{--</div>--}}
-                                                {{--</div>--}}
-                                            {{--</div>--}}
                                             <div data-index="1" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none; width: 1108px;">
                                                 <div>
                                                     <div tabindex="-1" class="Box-sc-1063fjo-0 BeforeAfter___StyledBox-sc-1n4ecp9-1 cSIXDY" style="width: 100%; display: inline-block;">
@@ -302,175 +247,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            {{--<div data-index="2" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 1108px;">--}}
-                                                {{--<div>--}}
-                                                    {{--<div tabindex="-1" class="Box-sc-1063fjo-0 BeforeAfter___StyledBox-sc-1n4ecp9-1 cSIXDY" style="width: 100%; display: inline-block;">--}}
-                                                        {{--<div width="100%" class="Box-sc-1063fjo-0 Flex-lw4abu-0 PyWwh">--}}
-                                                            {{--<div width="540" class="Box-sc-1063fjo-0 evpxuO">--}}
-                                                                {{--<div class="Box-sc-1063fjo-0 iHsBTO">--}}
-                                                                    {{--<img src="{{ asset('/') }}flexovalFiles/koleno3/5-3936d33679e9573343fb6a503695a3f2.jpg" width="1" height="374" class="Box-sc-1063fjo-0 Image-sc-1ruv6ez-0 iIwral">--}}
-                                                                    {{--<div color="black" height="180" class="Box-sc-1063fjo-0 Flex-lw4abu-0 burDbi">--}}
-                                                                        {{--<div font-family="gilroy" font-weight="300" font-size="20" class="Box-sc-1063fjo-0 Text-oy5r1a-0 jdBWxe">--}}
-                                                                            {{--Травмированный сустав может деформироваться--}}
-                                                                        {{--</div>--}}
-                                                                    {{--</div>--}}
-                                                                {{--</div>--}}
-                                                            {{--</div>--}}
-                                                            {{--<div width="540" class="Box-sc-1063fjo-0 evpxuO">--}}
-                                                                {{--<div class="Box-sc-1063fjo-0 lnqAci">--}}
-                                                                    {{--<img src="{{ asset('/') }}flexovalFiles/koleno3/6-723ecd72295a52bafc4b70d128fbd8cb.jpg" width="1" height="374" class="Box-sc-1063fjo-0 Image-sc-1ruv6ez-0 iIwral">--}}
-                                                                    {{--<div color="black" height="180" class="Box-sc-1063fjo-0 Flex-lw4abu-0 burDbi">--}}
-                                                                        {{--<div font-family="gilroy" font-weight="300" font-size="20" class="Box-sc-1063fjo-0 Text-oy5r1a-0 jdBWxe">--}}
-                                                                            {{--Обеспечивает трехмерную фиксацию и безопасность движений--}}
-                                                                        {{--</div>--}}
-                                                                    {{--</div>--}}
-                                                                {{--</div>--}}
-                                                            {{--</div>--}}
-                                                        {{--</div>--}}
-                                                    {{--</div>--}}
-                                                {{--</div>--}}
-                                            {{--</div>--}}
-                                            {{--<div data-index="3" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 1108px;">--}}
-                                                {{--<div>--}}
-                                                    {{--<div tabindex="-1" class="Box-sc-1063fjo-0 BeforeAfter___StyledBox-sc-1n4ecp9-1 cSIXDY" style="width: 100%; display: inline-block;">--}}
-                                                        {{--<div width="100%" class="Box-sc-1063fjo-0 Flex-lw4abu-0 PyWwh">--}}
-                                                            {{--<div width="540" class="Box-sc-1063fjo-0 evpxuO">--}}
-                                                                {{--<div class="Box-sc-1063fjo-0 iHsBTO">--}}
-                                                                    {{--<img src="{{ asset('/') }}flexovalFiles/koleno3/7-f59dd188c6237149deeb5f408b3d31ea.jpg" width="1" height="374" class="Box-sc-1063fjo-0 Image-sc-1ruv6ez-0 iIwral">--}}
-                                                                    {{--<div color="black" height="180" class="Box-sc-1063fjo-0 Flex-lw4abu-0 burDbi">--}}
-                                                                        {{--<div font-family="gilroy" font-weight="300" font-size="20" class="Box-sc-1063fjo-0 Text-oy5r1a-0 jdBWxe">--}}
-                                                                            {{--Старые травмы могут напомнить о себе--}}
-                                                                        {{--</div>--}}
-                                                                    {{--</div>--}}
-                                                                {{--</div>--}}
-                                                            {{--</div>--}}
-                                                            {{--<div width="540" class="Box-sc-1063fjo-0 evpxuO">--}}
-                                                                {{--<div class="Box-sc-1063fjo-0 lnqAci">--}}
-                                                                    {{--<img src="{{ asset('/') }}flexovalFiles/koleno3/8-43c6a02fbc3448266665cb59c953e773.jpg" width="1" height="374" class="Box-sc-1063fjo-0 Image-sc-1ruv6ez-0 iIwral">--}}
-                                                                    {{--<div color="black" height="180" class="Box-sc-1063fjo-0 Flex-lw4abu-0 burDbi">--}}
-                                                                        {{--<div font-family="gilroy" font-weight="300" font-size="20" class="Box-sc-1063fjo-0 Text-oy5r1a-0 jdBWxe">--}}
-                                                                            {{--Снижает нагрузку на сустав, чтобы прежние боли не возвращались--}}
-                                                                        {{--</div>--}}
-                                                                    {{--</div>--}}
-                                                                {{--</div>--}}
-                                                            {{--</div>--}}
-                                                        {{--</div>--}}
-                                                    {{--</div>--}}
-                                                {{--</div>--}}
-                                            {{--</div>--}}
-                                            {{--<div data-index="4" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 1108px;">--}}
-                                                {{--<div>--}}
-                                                    {{--<div tabindex="-1" class="Box-sc-1063fjo-0 BeforeAfter___StyledBox-sc-1n4ecp9-1 cSIXDY" style="width: 100%; display: inline-block;">--}}
-                                                        {{--<div width="100%" class="Box-sc-1063fjo-0 Flex-lw4abu-0 PyWwh">--}}
-                                                            {{--<div width="540" class="Box-sc-1063fjo-0 evpxuO">--}}
-                                                                {{--<div class="Box-sc-1063fjo-0 iHsBTO">--}}
-                                                                    {{--<img src="{{ asset('/') }}flexovalFiles/koleno3/1-c536b837c7c4fc3e13376c3a22c802d7.jpg" width="1" height="374" class="Box-sc-1063fjo-0 Image-sc-1ruv6ez-0 iIwral">--}}
-                                                                    {{--<div color="black" height="180" class="Box-sc-1063fjo-0 Flex-lw4abu-0 burDbi">--}}
-                                                                        {{--<div font-family="gilroy" font-weight="300" font-size="20" class="Box-sc-1063fjo-0 Text-oy5r1a-0 jdBWxe">--}}
-                                                                            {{--Скованность движений--}}
-                                                                        {{--</div>--}}
-                                                                    {{--</div>--}}
-                                                                {{--</div>--}}
-                                                            {{--</div>--}}
-                                                            {{--<div width="540" class="Box-sc-1063fjo-0 evpxuO">--}}
-                                                                {{--<div class="Box-sc-1063fjo-0 lnqAci">--}}
-                                                                    {{--<img src="{{ asset('/') }}flexovalFiles/koleno3/2-cd4cadf3a1de6a67cc72b0859eb59ece.jpg" width="1" height="374" class="Box-sc-1063fjo-0 Image-sc-1ruv6ez-0 iIwral">--}}
-                                                                    {{--<div color="black" height="180" class="Box-sc-1063fjo-0 Flex-lw4abu-0 burDbi">--}}
-                                                                        {{--<div font-family="gilroy" font-weight="300" font-size="20" class="Box-sc-1063fjo-0 Text-oy5r1a-0 jdBWxe">--}}
-                                                                            {{--Микромассажное действие снимает напряжение--}}
-                                                                        {{--</div>--}}
-                                                                    {{--</div>--}}
-                                                                {{--</div>--}}
-                                                            {{--</div>--}}
-                                                        {{--</div>--}}
-                                                    {{--</div>--}}
-                                                {{--</div>--}}
-                                            {{--</div>--}}
-                                            {{--<div data-index="5" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 1108px;">--}}
-                                                {{--<div>--}}
-                                                    {{--<div tabindex="-1" class="Box-sc-1063fjo-0 BeforeAfter___StyledBox-sc-1n4ecp9-1 cSIXDY" style="width: 100%; display: inline-block;">--}}
-                                                        {{--<div width="100%" class="Box-sc-1063fjo-0 Flex-lw4abu-0 PyWwh">--}}
-                                                            {{--<div width="540" class="Box-sc-1063fjo-0 evpxuO">--}}
-                                                                {{--<div class="Box-sc-1063fjo-0 iHsBTO">--}}
-                                                                    {{--<img src="{{ asset('/') }}flexovalFiles/koleno3/3-ffb03540f87272957410e1d8bea7d05e.jpg" width="1" height="374" class="Box-sc-1063fjo-0 Image-sc-1ruv6ez-0 iIwral">--}}
-                                                                    {{--<div color="black" height="180" class="Box-sc-1063fjo-0 Flex-lw4abu-0 burDbi">--}}
-                                                                        {{--<div font-family="gilroy" font-weight="300" font-size="20" class="Box-sc-1063fjo-0 Text-oy5r1a-0 jdBWxe">--}}
-                                                                            {{--Больно ходить и невозможно подниматься по лестнице--}}
-                                                                        {{--</div>--}}
-                                                                    {{--</div>--}}
-                                                                {{--</div>--}}
-                                                            {{--</div>--}}
-                                                            {{--<div width="540" class="Box-sc-1063fjo-0 evpxuO">--}}
-                                                                {{--<div class="Box-sc-1063fjo-0 lnqAci">--}}
-                                                                    {{--<img src="{{ asset('/') }}flexovalFiles/koleno3/4-9a3351ec73a880144feccdbaafb17574.jpg" width="1" height="374" class="Box-sc-1063fjo-0 Image-sc-1ruv6ez-0 iIwral">--}}
-                                                                    {{--<div color="black" height="180" class="Box-sc-1063fjo-0 Flex-lw4abu-0 burDbi">--}}
-                                                                        {{--<div font-family="gilroy" font-weight="300" font-size="20" class="Box-sc-1063fjo-0 Text-oy5r1a-0 jdBWxe">--}}
-                                                                            {{--Сможете сгибать и разгибать ногу без боли--}}
-                                                                        {{--</div>--}}
-                                                                    {{--</div>--}}
-                                                                {{--</div>--}}
-                                                            {{--</div>--}}
-                                                        {{--</div>--}}
-                                                    {{--</div>--}}
-                                                {{--</div>--}}
-                                            {{--</div>--}}
-                                            {{--<div data-index="6" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 1108px;">--}}
-                                                {{--<div>--}}
-                                                    {{--<div tabindex="-1" class="Box-sc-1063fjo-0 BeforeAfter___StyledBox-sc-1n4ecp9-1 cSIXDY" style="width: 100%; display: inline-block;">--}}
-                                                        {{--<div width="100%" class="Box-sc-1063fjo-0 Flex-lw4abu-0 PyWwh">--}}
-                                                            {{--<div width="540" class="Box-sc-1063fjo-0 evpxuO">--}}
-                                                                {{--<div class="Box-sc-1063fjo-0 iHsBTO">--}}
-                                                                    {{--<img src="{{ asset('/') }}flexovalFiles/koleno3/5-3936d33679e9573343fb6a503695a3f2.jpg" width="1" height="374" class="Box-sc-1063fjo-0 Image-sc-1ruv6ez-0 iIwral">--}}
-                                                                    {{--<div color="black" height="180" class="Box-sc-1063fjo-0 Flex-lw4abu-0 burDbi">--}}
-                                                                        {{--<div font-family="gilroy" font-weight="300" font-size="20" class="Box-sc-1063fjo-0 Text-oy5r1a-0 jdBWxe">--}}
-                                                                            {{--Травмированный сустав может деформироваться--}}
-                                                                        {{--</div>--}}
-                                                                    {{--</div>--}}
-                                                                {{--</div>--}}
-                                                            {{--</div>--}}
-                                                            {{--<div width="540" class="Box-sc-1063fjo-0 evpxuO">--}}
-                                                                {{--<div class="Box-sc-1063fjo-0 lnqAci">--}}
-                                                                    {{--<img src="{{ asset('/') }}flexovalFiles/koleno3/6-723ecd72295a52bafc4b70d128fbd8cb.jpg" width="1" height="374" class="Box-sc-1063fjo-0 Image-sc-1ruv6ez-0 iIwral">--}}
-                                                                    {{--<div color="black" height="180" class="Box-sc-1063fjo-0 Flex-lw4abu-0 burDbi">--}}
-                                                                        {{--<div font-family="gilroy" font-weight="300" font-size="20" class="Box-sc-1063fjo-0 Text-oy5r1a-0 jdBWxe">--}}
-                                                                            {{--Обеспечивает трехмерную--}}
-                                                                            {{--фиксацию и безопасность движений--}}
-                                                                        {{--</div>--}}
-                                                                    {{--</div>--}}
-                                                                {{--</div>--}}
-                                                            {{--</div>--}}
-                                                        {{--</div>--}}
-                                                    {{--</div>--}}
-                                                {{--</div>--}}
-                                            {{--</div>--}}
-                                            {{--<div data-index="7" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 1108px;">--}}
-                                                {{--<div>--}}
-                                                    {{--<div tabindex="-1" class="Box-sc-1063fjo-0 BeforeAfter___StyledBox-sc-1n4ecp9-1 cSIXDY" style="width: 100%; display: inline-block;">--}}
-                                                        {{--<div width="100%" class="Box-sc-1063fjo-0 Flex-lw4abu-0 PyWwh">--}}
-                                                            {{--<div width="540" class="Box-sc-1063fjo-0 evpxuO">--}}
-                                                                {{--<div class="Box-sc-1063fjo-0 iHsBTO">--}}
-                                                                    {{--<img src="{{ asset('/') }}flexovalFiles/koleno3/7-f59dd188c6237149deeb5f408b3d31ea.jpg" width="1" height="374" class="Box-sc-1063fjo-0 Image-sc-1ruv6ez-0 iIwral">--}}
-                                                                    {{--<div color="black" height="180" class="Box-sc-1063fjo-0 Flex-lw4abu-0 burDbi">--}}
-                                                                        {{--<div font-family="gilroy" font-weight="300" font-size="20" class="Box-sc-1063fjo-0 Text-oy5r1a-0 jdBWxe">--}}
-                                                                            {{--Старые травмы могут напомнить о себе--}}
-                                                                        {{--</div>--}}
-                                                                    {{--</div>--}}
-                                                                {{--</div>--}}
-                                                            {{--</div>--}}
-                                                            {{--<div width="540" class="Box-sc-1063fjo-0 evpxuO">--}}
-                                                                {{--<div class="Box-sc-1063fjo-0 lnqAci">--}}
-                                                                    {{--<img src="{{ asset('/') }}flexovalFiles/koleno3/8-43c6a02fbc3448266665cb59c953e773.jpg" width="1" height="374" class="Box-sc-1063fjo-0 Image-sc-1ruv6ez-0 iIwral">--}}
-                                                                    {{--<div color="black" height="180" class="Box-sc-1063fjo-0 Flex-lw4abu-0 burDbi">--}}
-                                                                        {{--<div font-family="gilroy" font-weight="300" font-size="20" class="Box-sc-1063fjo-0 Text-oy5r1a-0 jdBWxe">--}}
-                                                                            {{--Снижает нагрузку на сустав, чтобы прежние боли не возвращались--}}
-                                                                        {{--</div>--}}
-                                                                    {{--</div>--}}
-                                                                {{--</div>--}}
-                                                            {{--</div>--}}
-                                                        {{--</div>--}}
-                                                    {{--</div>--}}
-                                                {{--</div>--}}
-                                            {{--</div>--}}
                                         </div>
                                     </div>
                                 </div>
@@ -520,17 +296,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                {{--<div width="280px" height="454px" class="Box-sc-1063fjo-0 Flex-lw4abu-0 gzOwBp">--}}
-                                    {{--<img src="{{ asset('/') }}flexovalFiles/koleno3/mark-7b7abe3861fd1ff156e66706f0f62fa6.png" height="auto" class="Box-sc-1063fjo-0 Image-sc-1ruv6ez-0 kaXtFV">--}}
-                                    {{--<div width="220px" class="Box-sc-1063fjo-0 dtgCvM">--}}
-                                        {{--<div font-size="20px" font-weight="bold" class="Box-sc-1063fjo-0 Text-oy5r1a-0 TextBold-sc-10ffoo0-0 khUyLd">--}}
-                                            {{--Осторожно:--}}
-                                        {{--</div>--}}
-                                        {{--<div font-size="20px" class="Box-sc-1063fjo-0 Text-oy5r1a-0 kNHKAL">--}}
-                                            {{--наколенник не должен пережимать ногу или сползать с ноги--}}
-                                        {{--</div>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
                             </div>
                             <div class="Box-sc-1063fjo-0 Flex-lw4abu-0 bhOuaK">
                                 <a href="#form" style="text-decoration: none">
@@ -548,12 +313,6 @@
                                     <div font-family="gilroy" font-size="40px" font-weight="800" class="Box-sc-1063fjo-0 Text-oy5r1a-0 Comments___StyledText-sc-1srpurr-2 jEXkVs">
                                         Šta kažu neki od kupaca o našem proizvodu:
                                     </div>
-                                    {{--<div class="Box-sc-1063fjo-0 Flex-lw4abu-0 dymhSt">--}}
-                                        {{--<div font-family="tahoma" font-size="12px" font-weight="400" color="#444950" class="Box-sc-1063fjo-0 Text-oy5r1a-0 mqEPO">--}}
-                                            {{--Самые актуальные--}}
-                                        {{--</div>--}}
-                                        {{--<div class="Comments__Triangle-sc-1srpurr-0 gcbeCo"></div>--}}
-                                    {{--</div>--}}
                                     <div font-family="tahoma" class="Box-sc-1063fjo-0 Text-oy5r1a-0 jRZiQS">
                                         <section class="Box-sc-1063fjo-0 Card-sc-16nnnkc-0 Section-tj5oh1-0 bDTgGT">
                                             <div class="Box-sc-1063fjo-0 Flex-lw4abu-0 cEJE">
@@ -568,30 +327,6 @@
                                                     </span>
                                                 </div>
                                             </div>
-                                            {{--<div width="225px" font-family="tahoma" font-size="12px" font-weight="400" class="Box-sc-1063fjo-0 Box-sc-1063fjo-0 Flex-lw4abu-0 lknUyW Text-oy5r1a-0 hOMkPC">--}}
-                                                {{--<div color="#385898" class="Box-sc-1063fjo-0 Text-oy5r1a-0 gVrJsk">--}}
-                                                    {{--Нравится--}}
-                                                {{--</div>--}}
-                                                {{--<div class="Comments__Circle-sc-1srpurr-1 gsjlju"></div>--}}
-                                                {{--<div color="#385898" class="Box-sc-1063fjo-0 Text-oy5r1a-0 gVrJsk">--}}
-                                                    {{--Ответить--}}
-                                                {{--</div>--}}
-                                                {{--<div class="Comments__Circle-sc-1srpurr-1 gsjlju"></div>--}}
-                                                {{--<div color="#898989" class="Box-sc-1063fjo-0 Box-sc-1063fjo-0 Text-oy5r1a-0 bdxoUn Flex-lw4abu-0 dcKILk">--}}
-                                                    {{--<div class="Box-sc-1063fjo-0 Text-oy5r1a-0 kNQVhW">Сообщение</div>--}}
-                                                    {{--<div color="#444950" class="Box-sc-1063fjo-0 Text-oy5r1a-0 fnheXH"> 1--}}
-                                                        {{--дн.--}}
-                                                    {{--</div>--}}
-                                                {{--</div>--}}
-                                            {{--</div>--}}
-                                            {{--<div class="Box-sc-1063fjo-0 Position-t5gbtq-0 Absolute-sc-2057zu-0 jRCReP">--}}
-                                                {{--<div width="100%" class="Box-sc-1063fjo-0 Flex-lw4abu-0 Comments___StyledFlex-sc-1srpurr-5 iqchJr">--}}
-                                                    {{--<img src="{{ asset('/') }}flexovalFiles/koleno3/smiles0-57e36981806e504e4b4d89e435f05403.png" alt="" height="auto" class="Box-sc-1063fjo-0 Image-sc-1ruv6ez-0 bfRkSv">--}}
-                                                    {{--<div font-family="tahoma" font-size="12px" font-weight="400" color="#898989" class="Box-sc-1063fjo-0 Text-oy5r1a-0 jYWUet">--}}
-                                                        {{--12--}}
-                                                    {{--</div>--}}
-                                                {{--</div>--}}
-                                            {{--</div>--}}
                                         </section>
                                         <section class="Box-sc-1063fjo-0 Card-sc-16nnnkc-0 Section-tj5oh1-0 gDMknZ">
                                             <div class="Box-sc-1063fjo-0 Flex-lw4abu-0 cEJE">
@@ -606,30 +341,6 @@
                                                     </span>
                                                 </div>
                                             </div>
-                                            {{--<div width="235px" font-family="tahoma" font-size="12px" font-weight="400" class="Box-sc-1063fjo-0 Box-sc-1063fjo-0 Flex-lw4abu-0 ihuHeB Text-oy5r1a-0 hRNHrc">--}}
-                                                {{--<div color="#385898" class="Box-sc-1063fjo-0 Text-oy5r1a-0 gVrJsk">--}}
-                                                    {{--Нравится--}}
-                                                {{--</div>--}}
-                                                {{--<div class="Comments__Circle-sc-1srpurr-1 gsjlju"></div>--}}
-                                                {{--<div color="#385898" class="Box-sc-1063fjo-0 Text-oy5r1a-0 gVrJsk">--}}
-                                                    {{--Ответить--}}
-                                                {{--</div>--}}
-                                                {{--<div class="Comments__Circle-sc-1srpurr-1 gsjlju"></div>--}}
-                                                {{--<div color="#898989" class="Box-sc-1063fjo-0 Box-sc-1063fjo-0 Text-oy5r1a-0 bdxoUn Flex-lw4abu-0 dcKILk">--}}
-                                                    {{--<div class="Box-sc-1063fjo-0 Text-oy5r1a-0 kNQVhW">Сообщение</div>--}}
-                                                    {{--<div color="#444950" class="Box-sc-1063fjo-0 Text-oy5r1a-0 fnheXH">--}}
-                                                        {{--1 дн.--}}
-                                                    {{--</div>--}}
-                                                {{--</div>--}}
-                                            {{--</div>--}}
-                                            {{--<div class="Box-sc-1063fjo-0 Position-t5gbtq-0 Absolute-sc-2057zu-0 jRCReP">--}}
-                                                {{--<div width="100%" class="Box-sc-1063fjo-0 Flex-lw4abu-0 Comments___StyledFlex-sc-1srpurr-5 eyJYgv">--}}
-                                                    {{--<img src="{{ asset('/') }}flexovalFiles/koleno3/smiles1-ff62b696b8c153a0c045abbd6d3dc6f9.png" alt="" height="auto" class="Box-sc-1063fjo-0 Image-sc-1ruv6ez-0 bfRkSv">--}}
-                                                    {{--<div font-family="tahoma" font-size="12px" font-weight="400" color="#898989" class="Box-sc-1063fjo-0 Text-oy5r1a-0 jYWUet">--}}
-                                                        {{--7--}}
-                                                    {{--</div>--}}
-                                                {{--</div>--}}
-                                            {{--</div>--}}
                                         </section>
                                         <section class="Box-sc-1063fjo-0 Card-sc-16nnnkc-0 Section-tj5oh1-0 bDTgGT">
                                             <div class="Box-sc-1063fjo-0 Flex-lw4abu-0 cEJE">
@@ -644,68 +355,7 @@
                                                     </span>
                                                 </div>
                                             </div>
-                                            {{--<div width="225px" font-family="tahoma" font-size="12px" font-weight="400" class="Box-sc-1063fjo-0 Box-sc-1063fjo-0 Flex-lw4abu-0 lknUyW Text-oy5r1a-0 hOMkPC">--}}
-                                                {{--<div color="#385898" class="Box-sc-1063fjo-0 Text-oy5r1a-0 gVrJsk">--}}
-                                                    {{--Нравится--}}
-                                                {{--</div>--}}
-                                                {{--<div class="Comments__Circle-sc-1srpurr-1 gsjlju"></div>--}}
-                                                {{--<div color="#385898" class="Box-sc-1063fjo-0 Text-oy5r1a-0 gVrJsk">--}}
-                                                    {{--Ответить--}}
-                                                {{--</div>--}}
-                                                {{--<div class="Comments__Circle-sc-1srpurr-1 gsjlju"></div>--}}
-                                                {{--<div color="#898989" class="Box-sc-1063fjo-0 Box-sc-1063fjo-0 Text-oy5r1a-0 bdxoUn Flex-lw4abu-0 dcKILk">--}}
-                                                    {{--<div class="Box-sc-1063fjo-0 Text-oy5r1a-0 kNQVhW">Сообщение</div>--}}
-                                                    {{--<div color="#444950" class="Box-sc-1063fjo-0 Text-oy5r1a-0 fnheXH">--}}
-                                                        {{--2 дн.--}}
-                                                    {{--</div>--}}
-                                                {{--</div>--}}
-                                            {{--</div>--}}
-                                            {{--<div class="Box-sc-1063fjo-0 Position-t5gbtq-0 Absolute-sc-2057zu-0 jRCReP">--}}
-                                                {{--<div width="100%" class="Box-sc-1063fjo-0 Flex-lw4abu-0 Comments___StyledFlex-sc-1srpurr-5 eyJYgv">--}}
-                                                    {{--<img src="{{ asset('/') }}flexovalFiles/koleno3/smiles2-1af84911dbb4d6a79cdf99445748bf5d.png" alt="" height="auto" class="Box-sc-1063fjo-0 Image-sc-1ruv6ez-0 bfRkSv">--}}
-                                                    {{--<div font-family="tahoma" font-size="12px" font-weight="400" color="#898989" class="Box-sc-1063fjo-0 Text-oy5r1a-0 jYWUet">--}}
-                                                        {{--7--}}
-                                                    {{--</div>--}}
-                                                {{--</div>--}}
-                                            {{--</div>--}}
                                         </section>
-                                        {{--<section class="Box-sc-1063fjo-0 Card-sc-16nnnkc-0 Section-tj5oh1-0 bDTgGT">--}}
-                                            {{--<div class="Box-sc-1063fjo-0 Flex-lw4abu-0 cEJE">--}}
-                                                {{--<img src="{{ asset('/') }}flexovalFiles/koleno3/3-bf17f05d221c4ce5bde076c122234dde.png" alt="" width="40px" height="40px" class="Box-sc-1063fjo-0 Image-sc-1ruv6ez-0 heodWB">--}}
-                                                {{--<div width="100%" class="Box-sc-1063fjo-0 Comments___StyledBox-sc-1srpurr-3 bflCYj">--}}
-                                                    {{--<span font-size="12px" font-weight="700" color="#385898" class="Box-sc-1063fjo-0 Text-oy5r1a-0 hoUbbW">--}}
-                                                        {{--Мария Полежаева--}}
-                                                    {{--</span>--}}
-                                                    {{--<span font-size="12px" font-weight="400" class="Box-sc-1063fjo-0 Text-oy5r1a-0 Comments___StyledText2-sc-1srpurr-4 fbMtwq">--}}
-                                                        {{--Обычно я хожу очень медленно и мало гуляю, потому что после любой нагрузки у меня болят колени. Поэтому я приобрела наколенник «Двигайся легко» и теперь ходить гораздо проще, нагрузка снижена и ничего не болит.--}}
-                                                    {{--</span>--}}
-                                                {{--</div>--}}
-                                            {{--</div>--}}
-                                            {{--<div width="225px" font-family="tahoma" font-size="12px" font-weight="400" class="Box-sc-1063fjo-0 Box-sc-1063fjo-0 Flex-lw4abu-0 lknUyW Text-oy5r1a-0 hOMkPC">--}}
-                                                {{--<div color="#385898" class="Box-sc-1063fjo-0 Text-oy5r1a-0 gVrJsk">--}}
-                                                    {{--Нравится--}}
-                                                {{--</div>--}}
-                                                {{--<div class="Comments__Circle-sc-1srpurr-1 gsjlju"></div>--}}
-                                                {{--<div color="#385898" class="Box-sc-1063fjo-0 Text-oy5r1a-0 gVrJsk">--}}
-                                                    {{--Ответить--}}
-                                                {{--</div>--}}
-                                                {{--<div class="Comments__Circle-sc-1srpurr-1 gsjlju"></div>--}}
-                                                {{--<div color="#898989" class="Box-sc-1063fjo-0 Box-sc-1063fjo-0 Text-oy5r1a-0 bdxoUn Flex-lw4abu-0 dcKILk">--}}
-                                                    {{--<div class="Box-sc-1063fjo-0 Text-oy5r1a-0 kNQVhW">Сообщение</div>--}}
-                                                    {{--<div color="#444950" class="Box-sc-1063fjo-0 Text-oy5r1a-0 fnheXH">--}}
-                                                        {{--3 дн.--}}
-                                                    {{--</div>--}}
-                                                {{--</div>--}}
-                                            {{--</div>--}}
-                                            {{--<div class="Box-sc-1063fjo-0 Position-t5gbtq-0 Absolute-sc-2057zu-0 jRCReP">--}}
-                                                {{--<div width="100%" class="Box-sc-1063fjo-0 Flex-lw4abu-0 Comments___StyledFlex-sc-1srpurr-5 eyJYgv">--}}
-                                                    {{--<img src="{{ asset('/') }}flexovalFiles/koleno3/smiles3-401bad7fd315f042aa05a813edbcfb07.png" alt="" height="auto" class="Box-sc-1063fjo-0 Image-sc-1ruv6ez-0 bfRkSv">--}}
-                                                    {{--<div font-family="tahoma" font-size="12px" font-weight="400" color="#898989" class="Box-sc-1063fjo-0 Text-oy5r1a-0 jYWUet">--}}
-                                                        {{--21--}}
-                                                    {{--</div>--}}
-                                                {{--</div>--}}
-                                            {{--</div>--}}
-                                        {{--</section>--}}
                                         <section class="Box-sc-1063fjo-0 Card-sc-16nnnkc-0 Section-tj5oh1-0 gdrpPM">
                                             <div class="Box-sc-1063fjo-0 Flex-lw4abu-0 cEJE">
                                                 <img src="{{ asset('/') }}flexovalFiles/koleno3/4-9ed4b3528e22058055b936c16ec5a53f.png" alt="" width="40px" height="40px" class="Box-sc-1063fjo-0 Image-sc-1ruv6ez-0 heodWB">
@@ -719,97 +369,9 @@
                                                     </span>
                                                 </div>
                                             </div>
-                                            {{--<div width="225px" font-family="tahoma" font-size="12px" font-weight="400" class="Box-sc-1063fjo-0 Box-sc-1063fjo-0 Flex-lw4abu-0 lknUyW Text-oy5r1a-0 hOMkPC">--}}
-                                                {{--<div color="#385898" class="Box-sc-1063fjo-0 Text-oy5r1a-0 gVrJsk">--}}
-                                                    {{--Нравится--}}
-                                                {{--</div>--}}
-                                                {{--<div class="Comments__Circle-sc-1srpurr-1 gsjlju"></div>--}}
-                                                {{--<div color="#385898" class="Box-sc-1063fjo-0 Text-oy5r1a-0 gVrJsk">--}}
-                                                    {{--Ответить--}}
-                                                {{--</div>--}}
-                                                {{--<div class="Comments__Circle-sc-1srpurr-1 gsjlju"></div>--}}
-                                                {{--<div color="#898989" class="Box-sc-1063fjo-0 Box-sc-1063fjo-0 Text-oy5r1a-0 bdxoUn Flex-lw4abu-0 dcKILk">--}}
-                                                    {{--<div class="Box-sc-1063fjo-0 Text-oy5r1a-0 kNQVhW">Сообщение</div>--}}
-                                                    {{--<div color="#444950" class="Box-sc-1063fjo-0 Text-oy5r1a-0 fnheXH">--}}
-                                                        {{--4 дн.--}}
-                                                    {{--</div>--}}
-                                                {{--</div>--}}
-                                            {{--</div>--}}
-                                            {{--<div class="Box-sc-1063fjo-0 Position-t5gbtq-0 Absolute-sc-2057zu-0 jRCReP">--}}
-                                                {{--<div width="100%" class="Box-sc-1063fjo-0 Flex-lw4abu-0 Comments___StyledFlex-sc-1srpurr-5 eyJYgv">--}}
-                                                    {{--<img src="{{ asset('/') }}flexovalFiles/koleno3/smiles4-98f68c7f94fcf8ac167377f079864091.png" alt="" height="auto" class="Box-sc-1063fjo-0 Image-sc-1ruv6ez-0 bfRkSv">--}}
-                                                    {{--<div font-family="tahoma" font-size="12px" font-weight="400" color="#898989" class="Box-sc-1063fjo-0 Text-oy5r1a-0 jYWUet">--}}
-                                                        {{--9--}}
-                                                    {{--</div>--}}
-                                                {{--</div>--}}
-                                            {{--</div>--}}
                                         </section>
                                     </div>
                                 </div>
-                                {{--<div width="380px" class="Box-sc-1063fjo-0 Reviews___StyledBox-sc-4x0tv5-0 ckfgUG">--}}
-                                    {{--<div font-family="tahoma" class="Box-sc-1063fjo-0 Card-sc-16nnnkc-0 jJRvU">--}}
-                                        {{--<img src="{{ asset('/') }}flexovalFiles/koleno3/logo0-9404272e8afd369efc319943217baf7e.png" height="auto" class="Box-sc-1063fjo-0 Image-sc-1ruv6ez-0 bPIiTU">--}}
-                                        {{--<div font-size="14px" font-weight="700" font-family="tahoma" class="Box-sc-1063fjo-0 Text-oy5r1a-0 bOWeig">Обеспечивает легкость движений--}}
-                                        {{--</div>--}}
-                                        {{--<div class="Box-sc-1063fjo-0 Flex-lw4abu-0 jDdzQu">--}}
-                                            {{--<img src="{{ asset('/') }}flexovalFiles/koleno3/product0-46a601dfbc647146aa0626a80aebfa82.jpg" height="auto" class="Box-sc-1063fjo-0 Image-sc-1ruv6ez-0 eiwbUw">--}}
-                                            {{--<div class="Box-sc-1063fjo-0 Card-sc-16nnnkc-0 TDmCU">--}}
-                                                {{--<div class="Box-sc-1063fjo-0 Flex-lw4abu-0 Flex__FlexCenter-lw4abu-1 knLdE">--}}
-                                                    {{--<img src="{{ asset('/') }}flexovalFiles/koleno3/avatar0-677aad5863cd09551d671831d53a4bcc.jpg" width="75px" height="auto" class="Box-sc-1063fjo-0 Image-sc-1ruv6ez-0 bUmyQw">--}}
-                                                    {{--<div font-size="10px" color="#3b5998" font-weight="bold" class="Box-sc-1063fjo-0 Text-oy5r1a-0 TextBold-sc-10ffoo0-0 cBwNjq">--}}
-                                                        {{--Герман--}}
-                                                    {{--</div>--}}
-                                                    {{--<div font-size="10px" color="#000" font-weight="700" class="Box-sc-1063fjo-0 Text-oy5r1a-0 kVtRKH">--}}
-                                                        {{--Отзывов: 3--}}
-                                                    {{--</div>--}}
-                                                    {{--<div font-size="10px" color="#000" font-weight="700" class="Box-sc-1063fjo-0 Text-oy5r1a-0 cUpAAl">--}}
-                                                        {{--Репутация: 1--}}
-                                                        {{--<span color="#1d9c1d" class="Box-sc-1063fjo-0 Text-oy5r1a-0 bNAzpC"></span>--}}
-                                                    {{--</div>--}}
-                                                {{--</div>--}}
-                                            {{--</div>--}}
-                                        {{--</div>--}}
-                                        {{--<div class="Box-sc-1063fjo-0 fovtcb">--}}
-                                            {{--<div font-size="12px" font-weight="600" class="Box-sc-1063fjo-0 Text-oy5r1a-0 yEnRq">Отзыв:--}}
-                                            {{--</div>--}}
-                                            {{--<div width="325px" font-size="12px" font-weight="400" font-family="tahoma" class="Box-sc-1063fjo-0 Text-oy5r1a-0 gNElZO">--}}
-                                                {{--Я занимаюсь спортом каждый день и иногда, чувствую, что перегружаю свои суставы. Тренер посоветовал мне наколенник "Двигайся легко", чтобы снимать ...--}}
-                                            {{--</div>--}}
-                                        {{--</div>--}}
-                                    {{--</div>--}}
-                                    {{--<div font-family="tahoma" class="Box-sc-1063fjo-0 Card-sc-16nnnkc-0 jJRvU">--}}
-                                        {{--<img src="{{ asset('/') }}flexovalFiles/koleno3/logo1-d14519bfc7fc76b8c3839da954f993c1.png" height="auto" class="Box-sc-1063fjo-0 Image-sc-1ruv6ez-0 bPIiTU">--}}
-                                        {{--<div font-size="14px" font-weight="700" font-family="tahoma" class="Box-sc-1063fjo-0 Text-oy5r1a-0 bOWeig">--}}
-                                            {{--Неощутимые при ходьбе!--}}
-                                        {{--</div>--}}
-                                        {{--<div class="Box-sc-1063fjo-0 Flex-lw4abu-0 jDdzQu">--}}
-                                            {{--<img src="{{ asset('/') }}flexovalFiles/koleno3/product1-6dc51996292cd583a0ac7218fa09b7f5.jpg" height="auto" class="Box-sc-1063fjo-0 Image-sc-1ruv6ez-0 eiwbUw">--}}
-                                            {{--<div class="Box-sc-1063fjo-0 Card-sc-16nnnkc-0 TDmCU">--}}
-                                                {{--<div class="Box-sc-1063fjo-0 Flex-lw4abu-0 Flex__FlexCenter-lw4abu-1 knLdE">--}}
-                                                    {{--<img src="{{ asset('/') }}flexovalFiles/koleno3/avatar1-46d5fef1dbb2a5f11dfe74f1bcb3ce87.jpg" width="75px" height="auto" class="Box-sc-1063fjo-0 Image-sc-1ruv6ez-0 bUmyQw">--}}
-                                                    {{--<div font-size="10px" color="#3b5998" font-weight="bold" class="Box-sc-1063fjo-0 Text-oy5r1a-0 TextBold-sc-10ffoo0-0 cBwNjq">--}}
-                                                        {{--Angelina--}}
-                                                    {{--</div>--}}
-                                                    {{--<div font-size="10px" color="#000" font-weight="700" class="Box-sc-1063fjo-0 Text-oy5r1a-0 kVtRKH">--}}
-                                                        {{--Отзывов: 13--}}
-                                                    {{--</div>--}}
-                                                    {{--<div font-size="10px" color="#000" font-weight="700" class="Box-sc-1063fjo-0 Text-oy5r1a-0 cUpAAl">--}}
-                                                        {{--Репутация: +3--}}
-                                                        {{--<span color="#1d9c1d" class="Box-sc-1063fjo-0 Text-oy5r1a-0 bNAzpC"></span>--}}
-                                                    {{--</div>--}}
-                                                {{--</div>--}}
-                                            {{--</div>--}}
-                                        {{--</div>--}}
-                                        {{--<div class="Box-sc-1063fjo-0 kueLRD">--}}
-                                            {{--<div font-size="12px" font-weight="600" class="Box-sc-1063fjo-0 Text-oy5r1a-0 yEnRq">--}}
-                                                {{--Отзыв:--}}
-                                            {{--</div>--}}
-                                            {{--<div width="325px" font-size="12px" font-weight="400" font-family="tahoma" class="Box-sc-1063fjo-0 Text-oy5r1a-0 gNElZO">--}}
-                                                {{--Спасает меня после травмы! После того, как я упала, коленка часто напоминает о себе ноющей болью. Иногда мне даже больно сгибать ...--}}
-                                            {{--</div>--}}
-                                        {{--</div>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
                             </div>
                         </div>
                     </section>
@@ -884,7 +446,7 @@
                                                 <input class="input w-input styled__Input-sc-91uzmk-0 dTjgh" type="text" placeholder="Grad" id="city" name="shipping_city" required="">
                                                 @foreach($prices as $singlePrice)
                                                     <div style="margin-top: 10px; margin-left: 10px;">
-                                                        <input type="radio" name="quantity" value="{{ $singlePrice['quantity'] }}" id="product1Label{{ $singlePrice['quantity'] }}"
+                                                        <input type="radio" name="quantity" class="quantity" value="{{ $singlePrice['quantity'] }}" id="product1Label{{ $singlePrice['quantity'] }}" placeholder="{{ $singlePrice['is_free_shipping'] }}"
                                                                @if($singlePrice['is_default']) checked @endif
                                                                @if(old('quantity') == $singlePrice['quantity']) checked @endif >
                                                         <label for="product1Label{{$singlePrice['quantity']}}">
@@ -892,6 +454,7 @@
                                                         </label>
                                                     </div>
                                                 @endforeach
+                                                <div class="freeShippingDiv">* BESPLATNA DOSTAVA</div>
                                                 <button class="Button-sc-1u3615l-0 submit w-button Form___StyledButton-sc-1skpxzk-1 hCwHxj" type="submit" font-size="18" color="black" font-family="gilroy" height="63" font-weight="800">
                                                     PORUČITE ODMAH
                                                 </button>
@@ -917,12 +480,27 @@
                 </div>
             </div>
         </div>
-        {{--<div class="css__Root-sc-2plcm6-0 fNhtLw">--}}
-            {{--<div class="css__Inner-sc-2plcm6-1 fixIGV">--}}
-            {{--</div>--}}
-        {{--</div>--}}
     </div>
 </div>
+<style>
+    .freeShippingDiv {
+        color: #d31f07;
+        text-align: center;
+        margin-bottom: 0;
+        display: none;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+</style>
+<script>
+    $('.quantity').click(function () {
+        let fsh = $(this).attr('placeholder');
+        if(parseInt(fsh) === 1) {
+            $(this).closest('.orderformcdn').find('.freeShippingDiv').slideDown();
+        } else {
+            $(this).closest('.orderformcdn').find('.freeShippingDiv').slideUp();        }
+    })
+</script>
 @include('components.pixel_footer')
 </body>
 </html>

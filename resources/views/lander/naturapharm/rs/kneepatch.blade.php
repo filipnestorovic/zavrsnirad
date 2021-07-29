@@ -64,7 +64,7 @@
                             <div>
                                 @foreach($prices as $singlePrice)
                                     <input type="hidden" id="product{{ $singlePrice['quantity'] }}" value="{{ $singlePrice['originalPrice'] }}" placeholder="{{ $singlePrice['amount'] }}"/>
-                                    <input type="radio" name="quantity" value="{{$singlePrice['quantity']}}" class="productQuantity{{$singlePrice['quantity']}}" id="productLabel{{$singlePrice['quantity']}}"
+                                    <input type="radio" name="quantity" value="{{$singlePrice['quantity']}}" class="productQuantity{{$singlePrice['quantity']}} quantity" id="productLabel{{$singlePrice['quantity']}}" placeholder="{{ $singlePrice['is_free_shipping'] }}"
                                            @if($singlePrice['is_default']) checked @endif
                                            @if(old('quantity') == $singlePrice['quantity']) checked @endif >
                                     <label for="productLabel{{$singlePrice['quantity']}}">
@@ -73,6 +73,7 @@
                                     <br>
                                 @endforeach
                             </div>
+                            <div class="freeShippingDiv">* BESPLATNA DOSTAVA</div>
                             <input class="form__submit js_submit button__text" type="submit" value="Naručiti odmah"/>
                         </form>
                     </div>
@@ -333,7 +334,7 @@
                             <input class="only_number" name="phone" placeholder="Telefon" type="text" required/>
                             <div>
                                 @foreach($prices as $singlePrice)
-                                    <input type="radio" name="quantity" value="{{$singlePrice['quantity']}}" class="productQuantity{{$singlePrice['quantity']}}" id="SecondProductLabel{{$singlePrice['quantity']}}"
+                                    <input type="radio" name="quantity" value="{{$singlePrice['quantity']}}" class="productQuantity{{$singlePrice['quantity']}} quantity" id="SecondProductLabel{{$singlePrice['quantity']}}" placeholder="{{ $singlePrice['is_free_shipping'] }}"
                                            @if($singlePrice['is_default']) checked @endif
                                            @if(old('quantity') == $singlePrice['quantity']) checked @endif >
                                     <label for="SecondProductLabel{{$singlePrice['quantity']}}">
@@ -342,6 +343,7 @@
                                     <br>
                                 @endforeach
                             </div>
+                            <div class="freeShippingDiv">* BESPLATNA DOSTAVA</div>
                             <input class="form__submit js_submit button__text" type="submit" value="Naručiti odmah"/>
                         </form>
 
@@ -504,7 +506,7 @@
                             <input class="only_number" name="phone" placeholder="Telefon" type="text" required/>
                             <div>
                                 @foreach($prices as $singlePrice)
-                                    <input type="radio" name="quantity" value="{{$singlePrice['quantity']}}" class="productQuantity{{$singlePrice['quantity']}}" id="ThirdProductLabel{{$singlePrice['quantity']}}"
+                                    <input type="radio" name="quantity" value="{{$singlePrice['quantity']}}" class="productQuantity{{$singlePrice['quantity']}} quantity" id="ThirdProductLabel{{$singlePrice['quantity']}}" placeholder="{{ $singlePrice['is_free_shipping'] }}"
                                            @if($singlePrice['is_default']) checked @endif
                                            @if(old('quantity') == $singlePrice['quantity']) checked @endif >
                                     <label for="ThirdProductLabel{{$singlePrice['quantity']}}">
@@ -513,6 +515,7 @@
                                     <br>
                                 @endforeach
                             </div>
+                            <div class="freeShippingDiv">* BESPLATNA DOSTAVA</div>
                             <input class="form__submit js_submit button__text" type="submit" value="Naručiti odmah"/>
                         </form>
                     </div>
@@ -526,6 +529,25 @@
         <span>&copy;{{ now()->year }} {{ $product->brand_name }} | Sva prava zadržana.</span>
     </div>
 </footer>
+<style>
+    .freeShippingDiv {
+        color: #d31f07;
+        text-align: center;
+        margin-bottom: 0;
+        display: none;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+</style>
+<script>
+    $('.quantity').click(function () {
+        let fsh = $(this).attr('placeholder');
+        if(parseInt(fsh) === 1) {
+            $(this).closest('.orderformcdn').find('.freeShippingDiv').slideDown();
+        } else {
+            $(this).closest('.orderformcdn').find('.freeShippingDiv').slideUp();        }
+    })
+</script>
 @include('components.pixel_footer')
 <script type="text/javascript" src="{{ asset('/') }}naturapharmFiles/kneepatch/form.js"></script>
 </body>

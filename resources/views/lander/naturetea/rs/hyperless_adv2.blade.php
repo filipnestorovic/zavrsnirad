@@ -134,90 +134,91 @@
                             <div class="zoom_min_press"><a href="#product-box"><i></i></a><a href="#product-box"><i></i></a><a href="#product-box"><i></i></a></div>
                         </div>
                         <h1> "Kada sam pronašao biljni proizvod koji čisti krvne sudove, počeo sam da se osećam mlađe, mozak mi je bio kao kod 35-godišnjaka, a krvni pritisak se vratio u normalu." </h1>
-                        <p><i> Bojan Tadić je poljoprivrednik iz okoline Niša. Visok pritisak imao je 8 godina. Sad je zdrav i ponovo živi normalnim životom. </i></p>
+                        <p><i> Rodoljub Aleksić je poljoprivrednik iz okoline Topole. Visok pritisak imao je 8 godina. Sad je zdrav i ponovo živi normalnim životom. </i></p>
                     </section>
                     <article class="material_content">
                         <center>
                             <img src="{{ asset('/') }}natureteaFiles/hyperless_adv2/01a.jpg">
-                            <p> Bojan Tadić, 64 </p>
+                            <p> Rodoljub Aleksić, 64 </p>
                         </center>
                         <h2 class="material_title"> Prvo sam izlečio sebe i ženu, a onda i majku koja je imala vrlo visok pritisak. Kada su ljudi počeli da me preporučuju prijateljima i rodbini, shvatio sam da mogu da pomognem mnogim ljudima. </h2>
                         <p> Ceo život sam proveo radeći na imanju. Sejao, žeo itd... Nikada se nisam žalio na zdravlje - nije bilo razloga. Oduvek sam pun snage. Nikada čak ni prehladu nisam imao. Ali sve ovo se promenilo kada sam napunio 40 godina. </p>
                         <p> Na početku sam imao samo par simptoma koje čak nisam ni primećivao. Mislio sam da je sve to zbog starenja. Počeo sam se brzo umarati, svake večeri bio sam potpuno iscrpljen. Ujutru se nisam osećao dovoljno odmorno. Imao sam problema sa spavanjem, pa nisam imao dovoljno energije. I zato nisam bio dovoljno snažan, a moji prijatelji i žena primetili su da sam postao umorniji i sporiji. A još sam postao i osetljiviji na promenu vremena. Svaki put kada se vreme menja, počeo bih osećati bol. </p>
                         <p> Ovo je trajalo nekoliko godina. Nisam ni pomišljao na odlazak kod doktora. Najgore je što sam ja još mislio da sam zdrav. Svi oko mene su se žalili na slične probleme i mislio sam da je ovo normalan deo starenja. Ali moja bolest se pogoršala kada sam napunio 46 godina. </p>
                         <p> U početku sam bio bolestan samo par puta nedeljno, a onda skoro svaki dan... Jednog dana sam shvatio da se više i ne sećam kada sam se poslednji put osećao dobro. Nije lako opisati u kakvom sam stanju bio tada. Svakog jutra sam bio veoma umoran i imao sam glavobolje. Svaka fizička aktivnost me je iscrpljivala. Pritisak mi je stalno bio 160/100. </p>
-                        <h3> Bilo mi je jasno da u ovom stanju moram da odem doktoru. </h3>
+                        <h3> Bilo mi je jasno da u ovom stanju moram da odem kod doktora. </h3>
                         <p> Porodični doktor mi je rekao da imam visok pritisak drugog stepena. Dao mi je neke lekove kao što su diuretici, Captopril (da mi spusti pritisak), Atorvastatin (da spusti holesterol) i Cardiomagnyl (da razredi krv). Spisak lekova je bio dug. Osim toga morao sam da budem i na dijeti i da vežbam. </p>
                         <p> Šest meseci sam radio sve što mi doktor kaže, pio lekove i žena mi je davala samo zdravu hranu. Činilo mi se da je moj problem rešen jer sam se osećao mnogo bolje. Ali nešto me je mučilo - morao sam da uzimam šaku tableta svakog dana i da pratim krvni pritisak. Ponavljao sam to i svake večeri. </p>
                         <p> Doktor mi je rekao da ću ovo verovatno morati da radim do kraja života. Rekao je da se visok pritisak ne može izlečiti i da je jedino moguće sniziti ga. Prosto rečeno, lekovi protiv visokog pritiska su poput lekova protiv bolova - ako ih uzimate, pritisak će biti normalan i vaše zdravlje će se popraviti. Ali ako ih prestanete uzimati, pritisak će vam ponovno skočiti. </p>
-                        <p> Šokirao sam se. Shvatio sam da taj način lečenja uopšte ne utiče na moj pritisak i da se verojatno nikada neću otarasiti mog problema. Nisam mogao da verujem da će moje zdravlje zavisiti o lekovima zauvek. Nisam bio spreman da to prihvatim i bojao sam se kakve posledice bi lekovi mogli imati jer, kao što svi znamo, lekovi imaju mnogo negativnih posledica. </p>
+                        <p> Šokirao sam se. Shvatio sam da taj način lečenja uopšte ne utiče na moj pritisak i da se verovatno nikada neću otarasiti mog problema. Nisam mogao da verujem da će moje zdravlje zavisiti o lekovima zauvek. Nisam bio spreman da to prihvatim i bojao sam se kakve posledice bi lekovi mogli imati jer, kao što svi znamo, lekovi imaju mnogo negativnih posledica. </p>
                         <p> Najmanje negativne posledice bile su nesanica i umor. A šta sam trebao da radim ako bih imao probleme sa vidom, bolest bubrega ili aritmiju? Šta ako bi mi udovi otekli ili ako bih imao giht? Ako pročitate informacije o lekovima, naći ćete sve ove negativne posledice. Doktori za to znaju i svejedno propisuju te tablete. </p>
                         <h3> Nažalost, savremena medicina još uvek ne može da nam da alternativno rešenje. </h3>
                         <p> Hteo sam da imam normalan krvni pritisak, ali nisam želeo da rizikujem da oštetim druge organe u telu. Moj doktor mi nije mogao pomoći, pa sam počeo sam da izučavam ovu tematiku i počeo da tražim metode za samolečenje. Ja sam poljoprivrednik, pa sam počeo tražiti preparate sa lekovitim biljem ili drugim biljkama. Pre sto godina ljudi su koristili trave i biljke za lečenje mnogih bolesti, uključujući i one najozbiljnije. Znao sam da je to moguće i verovao sam da biljni lekovi deluju. Ali prvo sam hteo da razumem moju bolesti i saznam uzroke hipertenzije tako da bih mogao naći najbolji mogući lek. I uspeo sam. </p>
                         <h3> Uzrok bolesti </h3>
-                        <p> Nažalost, bez obzira koliko smo zdravi kad smo mladi, svi starimo. Ovaj proces započinje mnogo pre nego što bilo ko od nas može da zamisli. Upravo tako telo funkcioniše. Pre nego što napunite 40 godina, vaši krvni sudovi počinju da razvijaju omotač koji na kraju može da ig blokira. Vene i krvni sudovi gube elastičnost i napune se masnim tkivom. Usporava se protok krvi, a srce mora pumpati mnogo jače da bi dostavilo krv u celo telo. Krvni pritisak se povećava i vaše zdravlje se urušava. </p>
+                        <p> Nažalost, bez obzira koliko smo zdravi kad smo mladi, svi starimo. Ovaj proces započinje mnogo pre nego što bilo ko od nas može da zamisli. Upravo tako telo funkcioniše. Pre nego što napunite 40 godina, vaši krvni sudovi počinju da razvijaju omotač koji na kraju može da ih blokira. Vene i krvni sudovi gube elastičnost i napune se masnim tkivom. Usporava se protok krvi, a srce mora pumpati mnogo jače da bi dostavilo krv u celo telo. Krvni pritisak se povećava i vaše zdravlje se urušava. </p>
                         <p> Ako imate visok pritisak, to znači da su vam krvni sudovi bolesni. Visok pritisak znači da vaše vene treba očistiti. Zato je neophodno da se pobrinete za vaše vene i da ih "očistite". </p>
                         <p> Čišćenjem krvnih sudova možete da poboljšate celokupno zdravlje, izbegnete kardiovaskularne bolesti i izlečite bolesti krvnih sudova. Otarasićete se svih štetnih stvari u telu, očistićete krvne sudove od holesterola i proširiti ih. Takođe ćete se otarasiti glavobolje i popraviće vam se vid i sluh. Štaviše, bićete puni energije i snage i zaboravićete na umor i visok pritisak zauvijek. </p>
-                        <h3> Ako ne očistite krvne sudove, posledice će da budu strašne. </h3>
-                        <p> Ako se ne pobrinete za krvne sudove, imat ćete mnogo problema: visok pritisak, slabo srce što dovodi do zastoja srca i imat ćete veći rizik od dobijanja dijabetesa. Djelovanje visokog pritiska je naročito ozbiljno jer može dovesti do infarkta i moždanog udara. Ovo će imati trajnu štetu na tijelo, pa čak i smrt. Ovi problemi su jako ozbiljni. </p>
+                        <h3> Ako ne očistite krvne sudove, posledice će biti strašne! </h3>
+                        <p> Ako se ne pobrinete za krvne sudove, imaćete mnogo problema: visok pritisak, slabo srce što dovodi do zastoja srca i imaćete veći rizik od dobijanja dijabetesa. Delovanje visokog pritiska je naročito ozbiljno jer može dovesti do infarkta i moždanog udara. Ovo će imati trajnu štetu na telo, pa čak i smrt. Ovi problemi su jako ozbiljni. </p>
                         <h3> Kako lečiti visok pritisak </h3>
                         <p> Da budem iskren, mislim da bi svi trebali da čiste krvne sudove bar jednom godišnje ako su stariji od 40 godina. Mnogo je jeftinije od lečenja visokog pritiska. Ako već imate visok pritisak, popraviće vam opšte zdravstveno stanje i u mnogim slučajevima može da olakša sve simptome. </p>
                         <p> Najlakši i najdelotvorniji način čišćenja krvnih sudova je upotreba biljne terapije. Lekovite biljke leče telo, njihov efekat je kumulativan i deluju dugoročno tako da možete dobiti stvarno odlične rezultate. </p>
                         <p> Trebalo mi je malo vremena da pronađem recept koji stvarno deluje. Jednog dana sam gledao u enciklopediji lekovitog bilja i pronašao opis jednog leka koji se prvi put pominje u 18. veku. Prvi ga je koristio neki iscelitelj Celesta koji je lečio kraljevsku porodicu. </p>
-                        <p> Moderni proizvod na bazi ovog leka se zove Hypertea. </p>
-                        <p> Ovaj proizvod sadrži veoma delotvorne sastojke koji doprinose obnovi krvotoka, uklanjanju štetnih tvari iz tela, rastvaranju krvnih ugrušaka, lečenju upale, poboljšanju propustljivosti krvnih sudova i obnovi njihove elastičnosti. Ovaj proizvod nema nikakvih neželjenih posledica. </p>
-                        <p> Odmah sam znao da je to ono što sam tražio. Nakon jednog meseca upotrebe leka Hypertea svaki dan, izlečio sam visok pritisak i osetio nalet vitalnosti. Mozak mi je ponovo radio kao kad sam imao 35 godina. Osećao sam se slobodno (nakon 8 dugih godina!). </p>
-                        <p> Ako vam se pritisak postepeno pogoršava i jako se razbolite, umorni ste i ne želite samo preživeti, nego živeti punim životom, a ne želite ni ovisiti o lekovima, trebate početi da uzimate Hypertea. Ako to uradite, kvalitet života će se poboljšati i moći ćete zaboraviti na glavobolje, probadanje srca (anginu) i umorne noge. Oticanje, vrećice ispod očiju i sva prekomerna težina će nestati. Osećaćete kao da ste ponovo počeli živeti. Vaše opšte zdravstveno stanje i produktivnost će se poboljšati i izbeći ćete prevremenu smrt uzrokovanu infarktom ili moždanim udarom. </p>
+                        <p> Moderni proizvod na bazi ovog leka se zove <b>Hyperless.</b> </p>
+                        <p> Ovaj proizvod sadrži veoma delotvorne sastojke koji doprinose obnovi krvotoka, uklanjanju štetnih stvari iz tela, rastvaranju krvnih ugrušaka, lečenju upale, poboljšanju propustljivosti krvnih sudova i obnovi njihove elastičnosti. Ovaj proizvod nema nikakvih neželjenih posledica. </p>
+                        <p> Odmah sam znao da je to ono što sam tražio. Nakon jednog meseca upotrebe leka Hyperless svaki dan, izlečio sam visok pritisak i osetio nalet vitalnosti. Mozak mi je ponovo radio kao kad sam imao 35 godina. Osećao sam se slobodno (nakon 8 dugih godina!). </p>
+                        <p> Ako vam se pritisak postepeno pogoršava i jako se razbolite, umorni ste i ne želite samo preživeti, nego živeti punim životom, a ne želite ni zavisiti od lekova, treba početi sa uzimanjem Hyperless-a. Ako to uradite, kvalitet života će se poboljšati i moći ćete da zaboravite na glavobolje, probadanje srca (anginu) i umorne noge. Oticanje, vrećice ispod očiju i sva prekomerna težina će nestati. Osećaćete kao da ste ponovo počeli živeti. Vaše opšte zdravstveno stanje i produktivnost će se poboljšati i izbeći ćete prevremenu smrt uzrokovanu infarktom ili moždanim udarom. </p>
                         <h3> Počeo sam da osećam delovanje proizvoda skoro pa odmah. </h3>
-                        <p> Nakon mesec dana korišćenja proizvoda prestao sam da uzimam lekove koje mi je doktor dao. Zdravlje mi se popravljalo svakog dana, pa sam preporučio Hypertea ženi i majci. Ponovo ću to da kažem. Svi trebaju da čiste krvne sudove. A za starije ljude poput moje majke, poboljšanje će biti čak i bolje. Cela moja porodica je počela da koristi ovaj proizvod. </p>
-                        <p> Nakon otprilike šest meseci, otarasio sam se svih simptoma visokog pritiska i počeo se osećati odlično. Moja žena se takođe osećala bolje, a moja majka mnogo mlađe. Svi naši prijatelji su primetili ovu promenu i bili su znatiželjni i hteli da znaju šta sam radio. Nakon toga su i oni hteli da probaju Hypertea. Pomogao sam im. </p>
+                        <p> Nakon mesec dana korišćenja proizvoda osetio sam znatno poboljšanje. Zdravlje mi se popravljalo svakog dana, pa sam preporučio Hyperless ženi i majci. Ponovo ću to da kažem. Svi trebaju da čiste krvne sudove. A za starije ljude poput moje majke, poboljšanje će biti čak i bolje. Cela moja porodica je počela da koristi ovaj proizvod. </p>
+                        <p> Nakon otprilike šest meseci, otarasio sam se svih simptoma visokog pritiska i počeo se osećati odlično. Moja žena se takođe osećala bolje, a moja majka mnogo mlađe. Svi naši prijatelji su primetili ovu promenu i bili su znatiželjni i hteli da znaju šta sam radio. Nakon toga su i oni hteli da probaju Hyperless. Pomogao sam im. </p>
                         <center>
                             <a href="#product-box"><img src="{{ asset('/') }}natureteaFiles/hyperless/product_form.png"></a>
-                            <p> Evo kako izgleda originalni Hypertea. </p>
+                            <p> Evo kako izgleda originalni Hyperless. </p>
                         </center>
-                        <p> Ako imate visok pritisak, preporučujem da odmah donesete ispravne odluke. Ne gubite vreme. Što duže odgađate lečenje, više holesterola ćete imati u telu i lošije ćete se osećati. Prestanite da čekate čuda. Ne ignorišite vašu situaciju dok ne bude puno gore. Evo jednog pravila narodne medicine: </p>
+                        <p> Ako imate visok pritisak, preporučujem da odmah donesete ispravne odluke. Ne gubite vreme. Što duže odlažete lečenje, više holesterola ćete imati u telu i lošije ćete se osećati. Prestanite da čekate čuda. Ne ignorišite vašu situaciju dok ne bude puno gore. Evo jednog pravila narodne medicine: </p>
                         <p><i> "Mudar čovek leči one koji su zdravi, a ne one koji su već bolesni. Lečenje bolesnika je kao da čekaš da ožedniš, a onda počneš da kopaš bunar." </i></p>
                         <p> Ako čišćenje krvnih sudova uzmete kao glavni način borbe protiv visokog pritiska, otarasićete se svih simptoma za jedan mesec. Glavobolje, problemi sa disanjem, nesvestica, gubljenje osećaja u rukama će nestati. Ako znate da imate visok pritisak, takođe trebate da znate kako je lepo kada se ponovo osećate zdravo! </p>
-                        <p> Ako odlučite da naručite Hypertea, ne zaboravite da se originalni proizvod prodaje samo na <a href="#product-box"> zvaničnoj stranici Hypertea </a></p>
+                        <p> Ako odlučite da naručite Hyperless, ne zaboravite da se originalni proizvod prodaje samo na <a href="#product-box"> zvaničnoj stranici Hyperless </a></p>
                         <p> Želim vam ugodan dan i budite zdravi! Zdravlje je nešto najvrednije što imamo. </p>
-                        <p><b><i> Reč urednika: </i> Ako naručite Hypertea <a href="#product-box"> sa zvanične stranice </a> dobićete 50% popusta </b></p>
+                        <p><b><i> Reč urednika: </i> Ako naručite Hyperless <a href="#product-box"> sa zvanične stranice </a> dobićete 40% popusta </b></p>
                         <p></p>
                         <p></p>
-                        {{--<p class="order-now"><a href="#product-box"><span class="qq"> Naruči Hypertea </span></a></p>--}}
+                        {{--<p class="order-now"><a href="#product-box"><span class="qq"> Naruči Hyperless </span></a></p>--}}
                     </article>
-                    <div class="product-box" id="product-box">
-                        <div class="prd-lft">
-                            <img alt="img" class="btls" src="{{ asset('/') }}natureteaFiles/hyperless/product_form.png"/>
-                        </div>
-                        <div class="prd-rit">
-                            <p class="prd-p3" style="padding-bottom: 5px;">Unesite podatke za dostavu</p>
-                            <form action="{{$orderRoute}}" method="POST" id="order-form">
-                                {{ csrf_field() }}
-                                @include('lander.naturapharm.components.form_hidden_fields')
-                                <input type="text" name="name" class="form-input" placeholder="Ime i prezime" required/>
-                                <input type="text" name="phone" class="form-input" placeholder="Broj telefona" required/>
-                                <input type="text" name="shipping_address" class="form-input" placeholder="Adresa" required/>
-                                <input type="text" name="shipping_city" class="form-input" placeholder="Grad" required/>
-                                <select class="form-input change-package-selector" id="product" name="quantity" required>
-                                    @foreach($prices as $singlePrice)
-                                        <option value="{{ $singlePrice['quantity'] }}" placeholder="{{ $singlePrice['is_free_shipping'] }}"
-                                                @if($singlePrice['is_default']) selected @endif
-                                        >{{ $singlePrice['quantity'] }} x {{ $product->product_name }} ({{ $singlePrice['amount'] }} RSD)
-                                            @if($singlePrice['is_free_shipping']) * @endif
-                                        </option>
-                                    @endforeach
-                                </select>
-                                <div class="freeShippingDiv">* BESPLATNA DOSTAVA</div>
-                                <button type="submit" class="btn">PORUČI ODMAH</button>
-                            </form>
-                        </div>
-                    </div>
                     <section class="bordered_top mbottom10">
+                        <div class="product-box" id="product-box">
+                            <div class="prd-lft">
+                                <img alt="img" class="btls" src="{{ asset('/') }}natureteaFiles/hyperless/product_form.png"/>
+                            </div>
+                            <div class="prd-rit">
+                                <p class="prd-p3" style="padding-bottom: 5px;">Unesite podatke za dostavu</p>
+                                <form action="{{$orderRoute}}" method="POST" id="order-form">
+                                    {{ csrf_field() }}
+                                    @include('lander.naturapharm.components.form_hidden_fields')
+                                    <input type="text" name="name" class="form-input" placeholder="Ime i prezime" required/>
+                                    <input type="text" name="phone" class="form-input" placeholder="Broj telefona" required/>
+                                    <input type="text" name="shipping_address" class="form-input" placeholder="Adresa" required/>
+                                    <input type="text" name="shipping_city" class="form-input" placeholder="Grad" required/>
+                                    <select class="form-input change-package-selector" id="product" name="quantity" required>
+                                        @foreach($prices as $singlePrice)
+                                            <option value="{{ $singlePrice['quantity'] }}" placeholder="{{ $singlePrice['is_free_shipping'] }}"
+                                                    @if($singlePrice['is_default']) selected @endif
+                                            >{{ $singlePrice['quantity'] }} x {{ $product->product_name }} ({{ $singlePrice['amount'] }} RSD)
+                                                @if($singlePrice['is_free_shipping']) * @endif
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                    <div class="freeShippingDiv">* BESPLATNA DOSTAVA</div>
+                                    <button type="submit" class="btn">PORUČI ODMAH</button>
+                                </form>
+                            </div>
+                        </div>
+                        <hr><br>
                         <h3> Komentari: </h3>
                         <div>
                             <div>
                                 <div class="author"> Sandra R. </div>
-                                <div class="comment"> Neka te bog čuva, Bojane! Odlično je što si prošao kroz sve ovo, a još uvek možeš da imaš vedar duh. Mora da je bilo teško... I ja imam visok pritisak i znam šta doktori misle o ljudima poput nas. Loše nas leče. Propisuju lekove koji nas na kraju ubijaju i baš ih briga za nas. <br></div>
+                                <div class="comment"> Neka te bog čuva, Rodoljube! Odlično je što si prošao kroz sve ovo, a još uvek možeš da imaš vedar duh. Mora da je bilo teško... I ja imam visok pritisak i znam šta doktori misle o ljudima poput nas. Loše nas leče. Propisuju lekove koji nas na kraju ubijaju i baš ih briga za nas. <br></div>
                             </div>
                             <div>
                                 <div class="author"> Miloš Brkić </div>
@@ -225,23 +226,23 @@
                             </div>
                             <div>
                                 <div class="author"> Jelena Krstić </div>
-                                <div class="comment"> Ranije sam bila stalno umorna i bezvoljna. Nisam znala u čemu je problem. Nisam mogla ništa da radim. Ništa nisam htela da jedem, a pritisak mi je bio nestabilan. Otišla sam doktoru jer sam htela da znam šta je sa mnom. Uradili su neke nalaze i otkrili da imam visok holesterol. Sama sam bila kriva - jela sam nezdravu hranu što je dovelo do ovih problema. Naravno da sam odmah počela da jedem zdravo, ali nije bilo lako. Morate pomoći svom telu da se otarasi holesterola što pre. Zato sam kupila Hypertea. Kolega mi ga je preporučio. Sada sam opet zdrava. </div>
+                                <div class="comment"> Ranije sam bila stalno umorna i bezvoljna. Nisam znala u čemu je problem. Nisam mogla ništa da radim. Ništa nisam htela da jedem, a pritisak mi je bio nestabilan. Otišla sam doktoru jer sam htela da znam šta je sa mnom. Uradili su neke nalaze i otkrili da imam visok holesterol. Sama sam bila kriva - jela sam nezdravu hranu što je dovelo do ovih problema. Naravno da sam odmah počela da jedem zdravo, ali nije bilo lako. Morate pomoći svom telu da se otarasi holesterola što pre. Zato sam kupila Hyperless. Kolega mi ga je preporučio. Sada sam opet zdrava. </div>
                             </div>
                             <div>
                                 <div class="author"> Nada Tadić </div>
-                                <div class="comment"> Dobar dan. Mnogo ljudi ima visok holesterol, a ja ovaj problem imam hronično. Pre mesec dana doktor mi je propisao Hypertea da mi umiri žuč. Sviđa mi se što je ovo prirodan proizvod i nema nikakvih hemikalija. Takođe čisti i limfu i snižava nivo "lošeg" holesterola. Prestala sam da da koristim pre nekoliko dana, jedna terapija traje mesec dana. Tokom ovog perioda mi se popravila cirkulacija i holesterol se spustio. Osećam se puno bolje i više nemam bolove. Mogu preporučiti ovaj proizvod svima koji žele da se brinu o svom zdravlju. <br></div>
+                                <div class="comment"> Dobar dan. Mnogo ljudi ima visok holesterol, a ja ovaj problem imam hronično. Pre mesec dana doktor mi je propisao Hyperless da mi umiri žuč. Sviđa mi se što je ovo prirodan proizvod i nema nikakvih hemikalija. Takođe čisti i limfu i snižava nivo "lošeg" holesterola. Prestala sam da ga koristim pre nekoliko dana, jedna terapija traje mesec dana. Tokom ovog perioda mi se popravila cirkulacija i holesterol se spustio. Osećam se puno bolje i više nemam bolove. Mogu preporučiti ovaj proizvod svima koji žele da se brinu o svom zdravlju. <br></div>
                             </div>
                             <div>
                                 <div class="author"> Nikola T. </div>
-                                <div class="comment"> Kupio sam Hypeartea za baku jer je imala problema sa srcem. Ona ništa ne može da kupi preko interneta, njoj je kupovanje preko interneta špansko selo, pa sam joj ja naručio. Puno joj je pomogao, a imala je puno ozbiljnih problema i to dugo vremena. Nekoliko godina je pila lekove. Sada joj je sve lakše jer je očistila krvne sudove. <br></div>
+                                <div class="comment"> Kupio sam Hyperless za baku jer je imala problema sa srcem. Ona ništa ne može da kupi preko interneta, njoj je kupovanje preko interneta špansko selo, pa sam joj ja naručio. Puno joj je pomogao, a imala je puno ozbiljnih problema i to dugo vremena. Nekoliko godina je pila lekove. Sada joj je sve lakše jer je očistila krvne sudove. <br></div>
                             </div>
                             <div>
                                 <div class="author"> Marina </div>
-                                <div class="comment"> Ovo će da bude moje prvo naručivanje preko interneta. Lako je. Samo sam ubacila svoje podatke i za 5 minuta operater me je pozvao. Bio je baš fin. Potvrdio je detalje moje narudžbe sa sve adresom i rekao da ću paket da dobijem za nedelju. E to se zove savršena usluga! <br></div>
+                                <div class="comment"> Ovo će da bude moje prvo naručivanje preko interneta. Lako je. Samo sam ubacila svoje podatke i za 5 minuta operater me je pozvao. Bio je baš fin. Potvrdio je detalje moje porudžbine sa sve adresom i rekao da ću paket da dobijem u naredna 2 do 3 dana. E to se zove savršena usluga! <br></div>
                             </div>
                             <div>
                                 <div class="author"> Tamara Vujić </div>
-                                <div class="comment"> Nadam se da Hypertea nije skup. </div>
+                                <div class="comment"> Nadam se da Hyperless nije skup. </div>
                             </div>
                             <div>
                                 <div class="author"> Sanja: </div>
@@ -249,7 +250,7 @@
                             </div>
                             <div>
                                 <div class="author"> Marinko J. </div>
-                                <div class="comment"> Život je težak i tužan kad moraš da se odrekneš nečeg što voliš i ideš na strogu dijetu. Ništa slatko i ništa fino. Lečio sam se raznim lekovima, dijetama i napitkom od zobi. Nisam mogao to više da podnesem! Onda sam video članak o Hypertea u jednom stručnom časopisu. Tu sam pročitao da je ovaj preparat savršeno rešenje za visok holesterol i visok pritisak! Otišao sam mojoj doktorici i ona je to potvrdila i počeo sam da uzimam Hypertea. Najbolja stvar je da ovo uopšte i nije lek. Ovaj proizvod osigurava da se previše holesterola ne nagomila u telu i uklanja holesterol iz organa. Sada mogu da jedem sve što poželim, dovoljno je da s vremena na vreme uzimam Hypertea i sve je ok! </div>
+                                <div class="comment"> Život je težak i tužan kad moraš da se odrekneš nečeg što voliš i ideš na strogu dijetu. Ništa slatko i ništa fino. Lečio sam se raznim lekovima, dijetama i napitkom od zobi. Nisam mogao to više da podnesem! Onda sam video članak o Hyperless u jednom stručnom časopisu. Tu sam pročitao da je ovaj preparat savršeno rešenje za visok holesterol i visok pritisak! Otišao sam mojoj doktorici i ona je to potvrdila i počeo sam da uzimam Hyperless. Najbolja stvar je da ovo uopšte i nije lek. Ovaj proizvod osigurava da se previše holesterola ne nagomila u telu i uklanja holesterol iz organa. Sada mogu da jedem sve što poželim, dovoljno je da s vremena na vreme uzimam Hyperless i sve je ok! </div>
                             </div>
                             <div>
                                 <div class="author"> Rada K. </div>
@@ -257,10 +258,10 @@
                             </div>
                             <div>
                                 <div class="author"> Nenad Z. </div>
-                                <div class="comment"> Hypertea je dobro poznat u Evropi gde sam ja i odrastao. Ljudi ga koriste već dugo vremena. Moja baka ga je uzimala. Dobro je da je sad dostupan u Srbiji tako da svi mogu kupiti ovaj čudotvorni lek. </div>
+                                <div class="comment"> Hyperless je dobro poznat u Evropi gde sam ja i odrastao. Ljudi ga koriste već dugo vremena. Moja baka ga je uzimala. Dobro je da je sad dostupan u Srbiji tako da svi mogu kupiti ovaj čudotvorni preparat. </div>
                             </div>
                         </div>
-                        {{--<p class="order-now"><a href="#product-box"><span class="qq"> Naruči Hypertea </span></a></p>--}}
+                        {{--<p class="order-now"><a href="#product-box"><span class="qq"> Naruči Hyperless </span></a></p>--}}
                         <div class="product-box" id="product-box">
                             <div class="prd-lft">
                                 <img alt="img" class="btls" src="{{ asset('/') }}natureteaFiles/hyperless/product_form.png"/>

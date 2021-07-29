@@ -6,7 +6,7 @@
                 <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne">Today - Regular Orders</button>
             </h2>
         </div>
-        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
             <div class="card-body">
                 <div id="tableStatistic" class="table-editable">
                     <table class="table table-bordered table-responsive-lg table-striped text-center">
@@ -37,7 +37,7 @@
                 <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo">Today - Up/Cross Orders</button>
             </h2>
         </div>
-        <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
+        <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo">
             <div class="card-body">
                 <div id="tableStatistic" class="table-editable">
                     <table class="table table-bordered table-responsive-lg table-striped text-center" id="">
@@ -82,7 +82,7 @@
                 <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree">Last 10 Regular orders</button>
             </h2>
         </div>
-        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree">
             <div class="card-body">
                 <div id="tableStatistic" class="table-editable">
                     <table class="table table-bordered table-responsive-lg table-striped text-center" id="">

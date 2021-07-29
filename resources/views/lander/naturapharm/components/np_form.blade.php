@@ -6,7 +6,7 @@
     <div>
         @foreach($prices as $singlePrice)
             <input type="hidden" id="product{{ $singlePrice['quantity'] }}" value="{{ $singlePrice['originalPrice'] }}" placeholder="{{ $singlePrice['amount'] }}"/>
-            <input type="radio" name="quantity" value="{{ $singlePrice['quantity'] }}" id="productLabel{{ $singlePrice['quantity'] }}"
+            <input type="radio" name="quantity" class="quantity" value="{{ $singlePrice['quantity'] }}" id="productLabel{{ $singlePrice['quantity'] }}" placeholder="{{ $singlePrice['is_free_shipping'] }}"
                    @if($singlePrice['is_default']) checked @endif
                    @if(old('quantity') == $singlePrice['quantity']) checked @endif >
             <label for="productLabel{{$singlePrice['quantity']}}">
@@ -15,5 +15,25 @@
             <br>
         @endforeach
     </div>
+    <div class="freeShippingDiv">* BESPLATNA DOSTAVA</div>
     <button type="submit" class="sr1__btn js_submit button__text">Naručiti odmah</button>
 </form>
+<style>
+    .freeShippingDiv {
+        color: rgb(161, 22, 121);
+        text-align: center;
+        margin-bottom: 20px;
+        display: none;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+</style>
+<script>
+    $('.quantity').click(function () {
+        let fsh = $(this).attr('placeholder');
+        if(parseInt(fsh) === 1) {
+            $(this).parent().next('.freeShippingDiv').slideDown();
+        } else {
+            $(this).parent().next('.freeShippingDiv').slideUp();        }
+    })
+</script>

@@ -84,7 +84,7 @@
                 <div id="loading-spinner" class="spinner-grow text-primary" role="status" style="display:none;">
                     <span class="sr-only">Loading...</span>
                 </div>
-                <b>Current User: {{Auth::user()->name}}</b>
+                <b>User: {{Auth::user()->name}} | <a href="{{ route('logoutAdmin') }}">Logout</a> </b>
             </div>
         </nav>
         <!-- Navbar -->
