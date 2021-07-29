@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Order;
 use App\Models\Pixel;
 use App\Models\Statistic;
 use App\Models\Variation;
@@ -24,6 +25,7 @@ class AdminController extends Controller
         $this->modelStatistic = new Statistic();
         $this->modelVariation = new Variation();
         $this->modelCountry = new Country();
+        $this->modelOrder = new Order();
     }
 
     public function admin() {
@@ -52,6 +54,26 @@ class AdminController extends Controller
             foreach($orderDate as $singleOrder) {
                 $todayOrders++;
                 $todayRevenue += $singleOrder->price;
+            }
+        }
+
+        $todayUpSells = 0;
+        $todayUpSellsRevenue = 0;
+        $todayCrossSells = 0;
+        $todayCrossSellsRevenue = 0;
+        $todayTotal = 0;
+        $todayTotalRevenue = 0;
+        $UpCrossSellOrders = $this->modelOrder->getUpCrossSellByVariationOrTest(null,null,Carbon::now()->toDateString(),null);
+        foreach($UpCrossSellOrders as $singleUpSell) {
+            $todayTotal++;
+            $todayTotalRevenue += $singleUpSell->price;
+            if($singleUpSell->is_up_sell) {
+                $todayUpSells++;
+                $todayUpSellsRevenue += $singleUpSell->price;
+            }
+            if($singleUpSell->is_cross_sell) {
+                $todayCrossSells++;
+                $todayCrossSellsRevenue += $singleUpSell->price;
             }
         }
 
@@ -85,6 +107,13 @@ class AdminController extends Controller
                 $array[0]['todayOrders'] = $todayOrders;
                 $array[0]['todayRevenue'] = $todayRevenue;
                 $array[0]['currency'] = $selectedCountry->currency_symbol;
+
+                $array[0]['todayTotal'] = $todayTotal;
+                $array[0]['todayTotalRevenue'] = $todayTotalRevenue;
+                $array[0]['todayUpSells'] = $todayUpSells;
+                $array[0]['todayUpSellsRevenue'] = $todayUpSellsRevenue;
+                $array[0]['todayCrossSells'] = $todayCrossSells;
+                $array[0]['todayCrossSellsRevenue'] = $todayCrossSellsRevenue;
             }
         }
 
@@ -104,7 +133,7 @@ class AdminController extends Controller
                 return $paginatedItems;
             }
         } else {
-            return "<p>Still no orders for selected country!</p>";
+            return "<table class='table table-bordered table-responsive-lg table-striped text-center'><tbody><tr class='text-center'><th class='text-center'>No orders for selected country</th></tr></tbody></table>";
         }
     }
 

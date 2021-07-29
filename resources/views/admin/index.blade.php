@@ -19,25 +19,25 @@
     <div class="mb-4 wow fadeIn">
         <div class="card-body d-sm-flex justify-content-between">
             <div class="col-xl-12 col-md-12">
-                <div class="card">
-                    <div class="card-header text-center font-weight-bold text-uppercase py-3">
-                        Last orders
-                    </div>
-                    <div class="card-body">
-                        <div id="tableStatistic" class="table-editable">
-                            <table class="table table-bordered table-responsive-lg table-striped text-center" id="tableStatisticAjax">
-
-                            </table>
-                        </div>
-                    </div>
+                <div class="card" id="tableStatisticAjax">
                 </div>
             </div>
         </div>
     </div>
+    <style>
+        h2 {
+            text-align: center;
+        }
+        .btn-link {
+            font-size: 15px;
+            font-weight: bold;
+        }
+    </style>
 @endsection
 @section('scripts')
     <script>
         $(document).ready(function () {
+
             function fetch_data() {
                 let country_id = $('#countryDdl').val();
                 let currentPage = 1;

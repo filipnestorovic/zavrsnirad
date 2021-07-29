@@ -5,11 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-
     <link rel="stylesheet" type="text/css" href="{{ asset('/') }}shared_files/owl.carousel.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('/') }}flexonikFiles/massagegun/styles.css">
-    <link rel="icon" type="image/png" href="">
-
+    <link rel="icon" type="image/png" href="{{ asset('/') }}flexonikFiles/massagegun/use__use1_image.jpg">
 </head>
 <body>
 @include('components.display_errors')
@@ -19,7 +17,7 @@
     <div class="content_block" id="content_block">
         <div class="wrapper">
             <div class="title_block">
-                <h3 class="main_title">Терапевтический<br> массажный пистолет</h3>
+                <h3 class="main_title">TERAPIJSKI I OPUŠTAJUĆI<br> MASAŽNI PIŠTOLJ</h3>
             </div>
             <div>
                 <img src="{{ asset('/') }}flexonikFiles/massagegun/masager.gif" alt=""/>
@@ -39,17 +37,18 @@
         </div>
     </div>
 </header>
-
 <section class="results_section">
     <div class="wrapper">
-        <h2><span style="color:#ff8a00">Массажный пистолет</span> что это и зачем нужен?</h2>
+        <h2>ŠTA JE <span style="color:#ff8a00">MASAŽNI PIŠTOLJ</span> I ZAŠTO JE POTREBAN?</h2>
         <div class="box-osob" id="os">
             <div class="img-toptop"> <!--left-img-->
                 <img src="{{ asset('/') }}flexonikFiles/massagegun/2e43918a516d7d1b6e3ef36318d74b52.4.gif" class="top">
             </div>
             <div class="img-toptop">
                 <div class="main-text" style="margin: 10px 20px 20px 20px;"><h3 class="box__body-title">  </h3>
-                    <div class="box__body-text" style="font-size: 19px">Ручные массажеры, они же так называемые пистолеты, представляют собой уникальный девайс, которым пользуются не только спортсмены, но и те, кто активно следит за здоровьем и хочет развивать свои мышцы. Так, подобный ручной массажер оказывает точечное воздействие на проблемные зоны, устраняет боль в мышцах, что особенно актуально после силовых тренировок, а также для людей, которые предпочитают кроссфит и воркаут.</div>
+                    <div class="box__body-text" style="font-size: 19px">Pištolj masažeri su jedinstveni uređaji koji koriste ne samo sportisti, već i oni koji aktivno prate svoje zdravlje i žele da razviju
+                        mišićnu masu. Dakle, takav masažer ima tačkasto delovanje na problematična područja, uklanja bolove u mišićima, što je posebno važno nakon treninga,
+                        kao i za ljude koji preferiraju Crossfit i druge naporne vežbe.</div>
                 </div>
             </div>
         </div>
@@ -57,12 +56,14 @@
             <div class="img-toptop">
                 <div class="main-text">  <h3 class="box__body-title"></h3>
                     <div class="box__body-text">
-                        <p>Воздействие массажера на мышечные фасции сопоставимо с действием устройства ударно-волновой терапии. Снимает боль и усталость в мышцах после работы, тренировки или проведенного за компьютером времени.</p>
+                        <p>Efekat masažera na mišićnu muskulaturu uporediv je sa efektom uređaja za terapiju udarnim talasima. Ublažava bolove u mišićima i umor nakon posla,
+                            vežbe ili vremena provedenog za računarom.</p>
+                        <br>
                         <ul>
-                            <li>- <b>Снимает боль в области шеи</b></li>
-                            <li>- <b>Области рук, плеча, лопатки,ног</b></li>
-                            <li>- <b>Восстановление мышц рук и ног после физической работы</b></li>
-                            <li>- <b>Растяжения</b></li>
+                            <li>&#x2705; <b>Ublažava bolove u vratu</b></li>
+                            <li>&#x2705; <b>Područja ruku, ramena, leđa i nogu</b></li>
+                            <li>&#x2705; <b>Oporavak mišića nakon fizičkog napora</b></li>
+                            <li>&#x2705; <b>Opuštanje i istezanje</b></li>
                         </ul>
                     </div> </div>
             </div>
@@ -72,65 +73,62 @@
         </div>
     </div>
 </section>
-
 <section class="use_section" id="use_section">
     <div class="wrapper">
-        <h2><span style="color: #02bf02;">4 НАСАДКИ</span> ДЛЯ МАССАЖНОГО ПИСТОЛЕТА</h2>
+        <h2><span style="color: #02bf02;">4 NASTAVKA</span> ZA MASAŽNI PIŠTOLJ</h2>
         <div class="use_list">
             <div class="use_item">
                 <img src="{{ asset('/') }}flexonikFiles/massagegun/use__use1_image.jpg" alt="Kelvin Safety Tool">
-                <h4>Круглая насадка</h4>
-                <p>Отлично подойдет для обработки крупных мышечных массивов
-                    (грудная, широчайшая, ягодичные мышцы, а так же мышцы ног)</p>
+                <h4>OKRUGLI NASTAVAK</h4>
+                <p>Savršeno za tretiranje velikih mišića (grudni koš, biceps, gluteus, kao i mišiće nogu)</p>
             </div>
             <div class="use_item">
                 <img src="{{ asset('/') }}flexonikFiles/massagegun/use__use2_image.jpg" alt="Kelvin Safety Tool">
-                <h4>Насадка Вилка</h4>
-                <p>Вид насадки,который с легкостью устранит болезненные ощущения и мышечные зажимы в области шеи и позвоночного столба</p>
+                <h4>VILJUŠKA NASTAVAK</h4>
+                <p>Odlično za uklanjanje bola i pritiska u vratu i kičmenom stubu</p>
             </div>
             <div class="use_item">
                 <img src="{{ asset('/') }}flexonikFiles/massagegun/use__use3_image.jpg" alt="Kelvin Safety Tool">
-                <h4>Плоская насадка</h4>
-                <p>Насадка,предназначенная для работы со всеми частями тела,а так же для коррекции контуров тела,путем проработки подкожно-жировой клетчаки</p>
+                <h4>RAVNI NASTAVAK</h4>
+                <p>Dizajniran za rad na svim delovima tela, za zatezanje kože i razbijanje potkožnih masnih ćelija</p>
             </div>
             <div class="use_item">
                 <img src="{{ asset('/') }}flexonikFiles/massagegun/use__use4_image.jpg" alt="Kelvin Safety Tool">
-                <h4>Насадка пуля</h4>
-                <p>Вид насадки для отличной проработки триггерных точек.
-                    Триггерная точка - местное уплотнение мышечной ткани,вызывающее систематическую боль в состояние покоя или при надавливании.</p>
+                <h4>METAK NASTAVAK</h4>
+                <p>Odličan za tretiranje ciljaniih tačaka i lokalno delovanje na određenim i malim mišićnim površinama</p>
             </div>
             <a href="#order_form" class="button">PORUČITE SADA</a>
         </div>
+    </div>
 </section>
 <section class="use_steps_section" id="haracter">
     <div class="wrapper clearfix">
         <div class="comp">
-            <h2 style="color:#da1c4d">Технические характеристики</h2>
+            <h2 style="color:#da1c4d">Tehničke karakteristike</h2>
             <div class="comp-left"> <img src="{{ asset('/') }}flexonikFiles/massagegun/ver3.jpg" alt="Kelvin Safety Tool"></div>
             <div class="comp-right"> <ul>
-                    <li><b>Емкость батареи:</b> 2600 Mah;</li>
-                    <li><b>Сила нажатия:</b> 0 - 5.1 kg/cm;</li>
-                    <li><b>Амплитуда:</b> 11 mm;</li>
-                    <li><b>Максимальный уровень шума:</b> 45dB;</li>
-                    <li>Массажный пистолет имеет 6 скоростей;</li>
-                    <li>4 насадки;</li>
+                    <li><b>Kapacitet baterije:</b> 2600 Mah;</li>
+                    <li><b>Sila pritiska:</b> 0 - 5.1 kg/cm;</li>
+                    <li><b>Amplituda:</b> 11 mm;</li>
+                    <li><b>Maksimalni nivo buke:</b> 45dB;</li>
+                    <li>Pištolj za masažu ima 6 brzina</li>
+                    <li>4 nastavka</li>
                 </ul>
             </div>
         </div>
     </div>
 </section>
-
 <section  style="margin: 40px auto; background: #f7f7f7;     padding: 40px 0 10px;" id="select">
-    <h2 style="color: #ff8a00;">В ЧЁМ ПОЛЬЗА ТЕРАПЕВТИЧЕСКОГО МАССАЖЕРА?</h2>
+    <h2 style="color: #ff8a00;">UPOTREBA TERAPEUTSKOG MASAŽERA?</h2>
     <div class="box-osob">
         <div class="img-toptop"> <!--left-img-->
             <img src="{{ asset('/') }}flexonikFiles/massagegun/box-1_ver1.jpg" >
         </div>
         <div class="img-toptop">
             <div class="main-text">
-                <div class="box__body-text"><p> <span class="top-number">1</span> - c его помощью можно проводить массаж любых областей тела, тем самым стимулируя кровоток;</p>
-                    <p> <span class="top-number">2</span> - массажер благодаря вибрации снимает напряжение тела, ликвидирует усталость и позволяет устранить крепатуру после тренировок;</p>
-                    <p> <span class="top-number">3</span> - также он прекрасно подходит для спортсменов, которые испытывают боль от спазмов или восстанавливаются от травм;</p>
+                <div class="box__body-text"><p> <span class="top-number">1</span> - može se koristiti za masažu bilo kog dela tela, čime se stimuliše protok krvi</p>
+                    <p> <span class="top-number">2</span> - masažer, zahvaljujući vibracijama oslobađa napetost u telu, otklanja umor i omogućava eliminisanje napetosti mišića nakon treninga</p>
+                    <p> <span class="top-number">3</span> - odličan je za sportiste koji osećaju bol, grčeve ili se oporavljaju od povreda</p>
                 </div></div>
         </div>
     </div>
@@ -138,83 +136,77 @@
         <div class="img-toptop">
             <div class="main-text">
                 <div class="box__body-text">
-                    <p> <span class="top-number">4</span> - с помощью массажера улучшается состояние не только кожи, но и мышц, а также мягких тканей;</p>
-                    <p> <span class="top-number">5</span> - технология массажа с помощью такого девайса также отлично влияет на внешний вид кожи, омолаживая её;</p>
-                    <p> <span class="top-number">6</span> - постоянные сеансы с массажным пистолетом гарантируют, что работоспособность мышц будет значительно повышена.</p>
+                    <p> <span class="top-number">4</span> - uz pomoć masažera poboljšava se stanje kože, mišića i mekih tkiva</p>
+                    <p> <span class="top-number">5</span> - tehnologija masaže uz pomoć takvog uređaja takođe ima efekat na izgled kože, dajući joj mladalačku elastičnost i sjaj</p>
+                    <p> <span class="top-number">6</span> - Kontinuirane sesite sa pištoljem za masažu garantuju da će se performanse mišića značajno povećati</p>
                 </div> </div>
         </div>
         <div class="img-toptop flex-left">
-            <img src="{{ asset('/') }}flexonikFiles/massagegun/box-3_ver1.jpg" class="img-my-top">
+            <img src="{{ asset('/') }}flexonikFiles/massagegun/box-3_ver1.png" class="img-my-top">
         </div>
     </div>
 </section>
-
 <section class="reviews_section" id="otzv">
     <div class="wrapper">
-        <h2 style="color:#3d268e">Отзывы покупателей</h2>
-        <h3 class="otz-my"><span style="color: #fb723f">97,5% ПОКУПАТЕЛЕЙ </span>ОТМЕТИЛИ ЭФФЕКТИВНОСТЬ МАССАЖЕРА!</h3>
+        <h2 style="color:#3d268e">UTISCI KUPACA</h2>
+        <h3 class="otz-my"><span style="color: #fb723f">97.5% kupaca </span>poslalo nam je da su zadovoljni pištolj masažerom!</h3>
         <div class="reviews_list owl-carousel">
             <div class="review_item">
-                <!--					<img src="images/reviews__review1_photo.jpg" alt="спиннер">-->
-                <p>«У нас на работе целое сообщество ее почитателей. Довольно часто пользуюсь массажером, советую всем своим девочкам.Хорошая штука,расслабляет ! Спасибо.»</p>
-                <div class="author_name">Ирина, 24 лет<br>(фитнес треннер из г. Москва)</div>
+                <p>Svi sa mog posla su kupili ovaj masažer i obožavaju ga. Ja ga često koristim, a koriste ga i moje kćerke. Odlično opušta mišiće. Hvala vam!</p>
+                <div class="author_name">Irena, 24 godine <br>Bankar za poslove sa stanovništvom</div>
             </div>
             <div class="review_item">
-                <p>«Шея начала болеть давно, порой боли не давали мне покоя на протяжении долгого времени. Отвлекали от работы, будили ночью. Знакомые порекомендовали приобрести массажер. Пользуюсь им уже больше полгода.Боль полностью проходит, появляется ощущение легкости. Массажер замечательно приводит тело в тонус.»</p>
-                <div class="author_name">Елена, 42 года <br>(бухгалтер из г. Воронеж) </div>
+                <p>Vrat me je često boleo, ponekad je to trajalo i po nekoliko dana. Budio sam se noću i imao sam loš san. Prijatelji su me nagovorili da kupim ovaj masažer,
+                    ja sam u početku bio skeptičan ali sam kasnije odlučio da pokušam. Koristim ga više od 6 meseci, bol je već posle par korišćenja bio manji, a sada je potpuno
+                    nestao. Masažer je savršen, odlično radi! Sve preporuke!</p>
+                <div class="author_name">Elena, 42 godine <br>Knjigovođa</div>
             </div>
             <div class="review_item">
-                <!--					<img src="images/reviews__review3_photo.jpg" alt="спиннер">-->
-                <p>«Приходится много времени проводить за рулем. Усталость и боли в спине до недавнего времени были моими постоянными попутчиками. Теперь реально все изменилось. Беру аксессуар в дорогу. За руль сажусь без опасений, дискомфорт прошел.»</p>
-                <div class="author_name">Михаил, 35 лет <br>(водитель из г. Екатеринбург)</div>
+                <p>Provodim mnogo vremena za volanom. Do nedavno su mi bol i umor bili stalni saputnici. Sada se zaista sve promenilo. Sa zadovoljstvom putujem i sedam za
+                    volan bez straha od bolova koje sam ranije imao.</p>
+                <div class="author_name">Mihajlo, 55 godina <br>Profesionalni vozač autobusa</div>
             </div>
         </div>
     </div>
 </section>
-<!-- /reviews -->
-
-<!-- order steps -->
 <section class="order_steps_section">
     <div class="wrapper">
-        <h2 style="color:#3d268e">ДОСТАВКА И ГАРАНТИЯ</h2>
+        <h2 style="color:#3d268e">DOSTAVA I GARANCIJA</h2>
         <div class="steps_list">
             <div class="step_item">
                 <div class="image_block">
                     <img src="{{ asset('/') }}flexonikFiles/massagegun/order_steps__step2_image.jpg" alt="Гамак для отдыха">
                 </div>
-                <p><b>Гарантия</b></p>
-                <p>Перед отправкой все товары проходят тщательную проверку на предмет брака.</p>
+                <p><b>Garancija</b></p>
+                <p>Sve proizvode temeljno proveravamo pre slanja i dajemo garanciju na iste.</p>
             </div>
             <div class="step_item">
                 <div class="image_block">
                     <img src="{{ asset('/') }}flexonikFiles/massagegun/order_steps__step3_image.jpg" alt="Гамак для отдыха">
                 </div>
-                <p><b>Доставка</b></p>
-                <p>Доставка почтой в течение 3 рабочих дней.</p>
+                <p><b>Isporuka</b></p>
+                <p>Dostava brzom poštom u roku od 1-2 radna dana.</p>
             </div>
             <div class="step_item">
                 <div class="image_block">
                     <img src="{{ asset('/') }}flexonikFiles/massagegun/order_steps__step4_image.jpg" alt="Гамак для отдыха">
                 </div>
-                <p><b>Никаких предоплат!</b></p>
-                <p>Оплата заказов осуществляется по факту получения товара.</p>
+                <p><b>Nema plaćanja unapred!</b></p>
+                <p>Plaćanje porudžbine vrši se po prijemu paketa.</p>
             </div>
         </div>
     </div>
 </section>
-<!-- /order steps -->
-
-<!-- order -->
 <section class="order_section" id="order-form">
     <div class="top_title_block">
         <div class="wrapper">
-            <h3>Закажите сейчас <span>со скидкой 55%</span></h3>
+            <h3>PORUČITE SADA <span>SA POPUSTOM OD 40%</span></h3>
         </div>
     </div>
     <div class="content_block">
         <div class="wrapper">
             <div class="title_block">
-                <h3 class="main_title">Терапевтический<br> массажный пистолет</h3>
+                <h3 class="main_title">TERAPIJSKI I OPUŠTAJUĆI <br> MASAŽNI PIŠTOLJ</h3>
             </div>
             <div class="form_block">
                 <div class="price_block clearfix">
@@ -240,12 +232,8 @@
         </div>
     </div>
 </section>
-
-<center></center>
-
-{{--<script src="http://pistmass.xcartpro.com/r2/js/previewYouTube.js"></script>--}}
 <script src="{{ asset('/') }}shared_files/owl.carousel.min.js"></script>
 <script src="{{ asset('/') }}flexonikFiles/massagegun/scripts.js"></script>
-
+@include('components.pixel_footer')
 </body>
 </html>

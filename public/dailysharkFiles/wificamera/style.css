@@ -428,7 +428,8 @@
 }
 .gifki li {
     display: inline-block;
-    width: 550px;
+    width: 48%;
+    margin-left: 10px;
 }
 .gifki img {
     display: block;

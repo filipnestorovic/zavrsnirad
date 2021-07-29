@@ -35,7 +35,7 @@ table {
 }
 
 /* styles */
-
+@font-face {font-family: "AvenirNextCyr"; src: url("//db.onlinewebfonts.com/t/11d164da9b46e6f7955e396757e5ca70.eot"); src: url("//db.onlinewebfonts.com/t/11d164da9b46e6f7955e396757e5ca70.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/11d164da9b46e6f7955e396757e5ca70.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/11d164da9b46e6f7955e396757e5ca70.woff") format("woff"), url("//db.onlinewebfonts.com/t/11d164da9b46e6f7955e396757e5ca70.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/11d164da9b46e6f7955e396757e5ca70.svg#Avenir Next Cyr") format("svg"); }
 body {
     min-width: 320px;
     background: #fff;
@@ -176,7 +176,7 @@ h2 {
     padding: 0 0 0 42px;
     background-image: url(offer__trigger3_icon.png);
 }
-*/
+
 .title_block{
     margin: 0 0 30px;
     padding: 0 0 0 20px;
@@ -545,7 +545,7 @@ h2 {
     padding: 20px 50px;
     background: #fff;
     text-align: center;
-    height: 520px;
+    height: 500px;
 }
 reviews_section .review_item img {
     margin: 0 0 15px;
@@ -1064,7 +1064,7 @@ reviews_section .review_item img {
     .offer_section {
         padding: 20px 0 25px;
         height: auto;
-        background-image: url(mobile__offer_bg.jpg);
+        background-image: url(mobile__offer_bg.png);
     }
 
     .offer_section .triggers_block {
@@ -1222,7 +1222,7 @@ reviews_section .review_item img {
     .order_section .content_block {
         padding: 20px 0 25px;
         height: auto;
-        background-image: url(mobile__offer_bg.jpg);
+        background-image: url(mobile__offer_bg.png);
     }
 
     .order_section .title_block {
@@ -1316,9 +1316,8 @@ reviews_section .review_item img {
     margin-top: 15px;
     letter-spacing: .3px;
     font-size: 18px;
-    font-family: "segoeuisemilight";
+    font-family: "AvenirNextCyr";
     line-height: 1.5;
-
 }
 
 
