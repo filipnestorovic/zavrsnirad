@@ -511,9 +511,9 @@ class OrderController extends Controller
     }
 
     public function sendWebhookUpCrossSell($upCrossSellDetails){
-        $client = new GuzzleHttp\Client([
-//            'headers' => [ 'Content-Type' => 'application/json' ]
-        ]);
+//        $client = new GuzzleHttp\Client([
+////            'headers' => [ 'Content-Type' => 'application/json' ]
+//        ]);
 
         $client = new \GuzzleHttp\Client();
         $url = "https://new.serverwombat.com/api/insertOrderCrossUpSellData";
