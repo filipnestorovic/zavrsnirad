@@ -19,7 +19,7 @@
         <div class="container-1 clearfix">
             <div class="cost old-cost">
                 <p>Stara cijena:</p>
-                <strong><span class="price_land_s4">{{ $prices[1]['originalPrice'] }}</span> <span class="price_land_curr"> RSD</span></strong>
+                <strong><span class="price_land_s4">{{ $prices[1]['originalPrice'] }}</span> <span class="price_land_curr"> KM</span></strong>
             </div>
             <div class=sale>
                 <p>Popust</p>
@@ -27,7 +27,7 @@
             </div>
             <div class="cost new-cost">
                 <p>Nova cijena:</p>
-                <strong><span class="price_land_s1">{{ $prices[1]['amount'] }}</span> <span class="price_land_curr"> RSD</span></strong>
+                <strong><span class="price_land_s1">{{ $prices[1]['amount'] }}</span> <span class="price_land_curr"> KM</span></strong>
             </div>
         </div>
         <div class="container-2">
@@ -97,11 +97,11 @@
             <div class="tov-2">
                 <div class="cost old-cost">
                     <p>Stara cijena:</p>
-                    <strong><span class="price_land_s4">{{ $prices[1]['originalPrice'] }}</span> <span class="price_land_curr"> RSD</span></strong>
+                    <strong><span class="price_land_s4">{{ $prices[1]['originalPrice'] }}</span> <span class="price_land_curr"> KM</span></strong>
                 </div>
                 <div class="cost new-cost">
                     <p>Nova cijena:</p>
-                    <strong><span class="price_land_s1">{{ $prices[1]['amount'] }}</span> <span class="price_land_curr"> RSD</span></strong>
+                    <strong><span class="price_land_s1">{{ $prices[1]['amount'] }}</span> <span class="price_land_curr"> KM</span></strong>
                 </div>
             </div>
             {{--<div class="attention">Осталось всего 9 упаковок по акции!</div>--}}
@@ -161,7 +161,7 @@
         <div class="container-1 clearfix">
             <div class="cost old-cost">
                 <p>Stara cijena:</p>
-                <strong><span class="price_land_s4">{{ $prices[1]['originalPrice'] }}</span> <span class="price_land_curr"> RSD</span></strong>
+                <strong><span class="price_land_s4">{{ $prices[1]['originalPrice'] }}</span> <span class="price_land_curr"> KM</span></strong>
             </div>
             <div class="sale">
                 <p>Popust</p>
@@ -169,7 +169,7 @@
             </div>
             <div class="cost new-cost">
                 <p>Nova cijena:</p>
-                <strong><span class="price_land_s1">{{ $prices[1]['amount'] }}</span> <span class="price_land_curr"> RSD</span></strong>
+                <strong><span class="price_land_s1">{{ $prices[1]['amount'] }}</span> <span class="price_land_curr"> KM</span></strong>
             </div>
         </div>
         <div class="order" id="order">

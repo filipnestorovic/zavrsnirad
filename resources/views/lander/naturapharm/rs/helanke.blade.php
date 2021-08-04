@@ -210,7 +210,7 @@
             <div class="slider-item">
                 <img src="{{ asset('/') }}flexonikFiles/hotshaper/darya.jpg" alt="Hot Shapers" class=girl />
                 <h4><b>"Moj rezultat za mesec dana – minus 8 kg"</b></h4>
-                <p>Videla sam oglas i odlučila sam da pokušam. Rezultati su neverovatni! Sviđa mi se što steže bočne strane i nije vidljiv ispod odeće. Samo nedelju dana kasnije ljudi iz moje okoline su počeli da mi govore da sam smršala! Moj rezultat za mesec dana je čak minus 8 kilograma! Preporučujem svakome ovaj proizvod!</p>
+                <p>Videla sam oglas i odlučila sam da pokušam. Rezultati su neverovatni! Sviđa mi se što stežu bočne strane i nisu vidljive ispod odeće. Samo nedelju dana kasnije ljudi iz moje okoline su počeli da mi govore da sam smršala! Moj rezultat za mesec dana je čak minus 8 kilograma! Preporučujem svakome ovaj proizvod!</p>
                 <p class="name">Marina Krstić, 43 godine</p>
             </div>
             <div class="slider-item">

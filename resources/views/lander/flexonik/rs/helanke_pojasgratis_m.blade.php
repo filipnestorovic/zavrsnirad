@@ -117,7 +117,7 @@
             <div class="rev rev-1">
                 <div class="rev-pic"></div>
                 <p class="rev-title">Marina Krstić, 43 godine</p>
-                <p class="rev-text">Videla sam oglas i odlučila sam da pokušam. Rezultati su neverovatni! Sviđa mi se što steže bočne strane i nije vidljiv ispod odeće. Samo nedelju dana kasnije ljudi iz moje okoline su počeli da mi govore da sam smršala! Moj rezultat za mesec dana je čak minus 8 kilograma! Preporučujem svakome ovaj proizvod!</p>
+                <p class="rev-text">Videla sam oglas i odlučila sam da pokušam. Rezultati su neverovatni! Sviđa mi se što stežu bočne strane i nisu vidljive ispod odeće. Samo nedelju dana kasnije ljudi iz moje okoline su počeli da mi govore da sam smršala! Moj rezultat za mesec dana je čak minus 8 kilograma! Preporučujem svakome ovaj proizvod!</p>
             </div>
             <div class="rev rev-2">
                 <div class="rev-pic"></div>

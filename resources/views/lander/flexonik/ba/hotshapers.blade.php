@@ -26,8 +26,8 @@
                 <span class="orange">{{ $discount != null ? "-".(40+$discount)."%" : "-40%" }}</span>
                 <p><span>Naručite do kraja dana</span><br/><span>po posebnoj cijeni:</span></p>
                 <div class="cost clearfix">
-                    <span class="old-cost"><span class="js_old_price"><span class="price_land_s4">{{ $prices[1]['originalPrice'] }}</span></span><small class="js_curs"><span class="price_land_curr"> RSD</span> </small></span>
-                    <span class="new-cost"><span class="js_new_price"><span class="price_land_s1">{{ $prices[1]['amount'] }}</span></span><small class="js_curs"><span class="price_land_curr"> RSD</span> </small></span>
+                    <span class="old-cost"><span class="js_old_price"><span class="price_land_s4">{{ $prices[1]['originalPrice'] }}</span></span><small class="js_curs"><span class="price_land_curr"> KM</span> </small></span>
+                    <span class="new-cost"><span class="js_new_price"><span class="price_land_s1">{{ $prices[1]['amount'] }}</span></span><small class="js_curs"><span class="price_land_curr"> KM</span> </small></span>
                 </div>
                 <a href="#form-section" class="green-btn toform">
                     KUPITE S POPUSTOM
@@ -185,8 +185,8 @@
             <h4>Hot Shapers</h4>
             <p><span>Još samo danas </span><br/><span>Po specijalnoj cijeni:</span></p>
             <div class="cost clearfix">
-                <span class="old-cost"><span class="js_old_price"><span class="price_land_s4">{{ $prices[1]['originalPrice'] }}</span></span><small class="js_curs"><span class="price_land_curr"> RSD</span> </small></span>
-                <span class="new-cost"><span class="js_new_price"><span class="price_land_s1">{{ $prices[1]['amount'] }}</span></span><small class="js_curs"><span class="price_land_curr"> RSD</span> </small></span>
+                <span class="old-cost"><span class="js_old_price"><span class="price_land_s4">{{ $prices[1]['originalPrice'] }}</span></span><small class="js_curs"><span class="price_land_curr"> KM</span> </small></span>
+                <span class="new-cost"><span class="js_new_price"><span class="price_land_s1">{{ $prices[1]['amount'] }}</span></span><small class="js_curs"><span class="price_land_curr"> KM</span> </small></span>
             </div>
             <a href="#form-section" class="green-btn toform">
                 ISKORISTI POPUST
@@ -204,7 +204,7 @@
             <div class="slider-item">
                 <img src="{{ asset('/') }}flexonikFiles/hotshaper/darya.jpg" alt="Hot Shapers" class=girl />
                 <h4><b>"Moj rezultat za mjesec dana – minus 8 kg"</b></h4>
-                <p>Vidjela sam oglas i i odlučila sam da pokušam. Rezultati su nevjerovatni! Sviđa mi se što steže bočne strane i nije vidljiv ispod odjeće. Samo nedelju dana kasnije ljudi iz moje okoline su počeli da mi govore da sam smršala! Moj rezultat za mjesec dana je čak minus 8 kilograma! Preporučujem svakome ovaj proizvod!</p>
+                <p>Vidjela sam oglas i i odlučila sam da pokušam. Rezultati su nevjerovatni! Sviđa mi se što stežu bočne strane i nije vidljiv ispod odjeće. Samo nedelju dana kasnije ljudi iz moje okoline su počeli da mi govore da sam smršala! Moj rezultat za mjesec dana je čak minus 8 kilograma! Preporučujem svakome ovaj proizvod!</p>
                 <p class="name">Milica Mitrović, 33 godine</p>
             </div>
             <div class="slider-item">
@@ -303,8 +303,8 @@
                 <img src="{{ asset('/') }}flexonikFiles/hotshaper/arrow-dark-left.png" class="arrow" alt="Hot Shapers" >
                 <p><span>Samo danas po posebnoj cijeni!</span></p>
                 <div class="cost clearfix">
-                    <span class="old-cost"><span class="js_old_price"><span class="price_land_s4">{{ $prices[1]['originalPrice'] }}</span></span><small class="js_curs"><span class="price_land_curr"> RSD</span> </small></span>
-                    <span class="new-cost"><span class="js_new_price"><span class="price_land_s1">{{ $prices[1]['amount'] }}</span></span><small class="js_curs"><span class="price_land_curr"> RSD</span> </small></span>
+                    <span class="old-cost"><span class="js_old_price"><span class="price_land_s4">{{ $prices[1]['originalPrice'] }}</span></span><small class="js_curs"><span class="price_land_curr"> KM</span> </small></span>
+                    <span class="new-cost"><span class="js_new_price"><span class="price_land_s1">{{ $prices[1]['amount'] }}</span></span><small class="js_curs"><span class="price_land_curr"> KM</span> </small></span>
                 </div>
             </div>
             <div class="right" id="form-section">

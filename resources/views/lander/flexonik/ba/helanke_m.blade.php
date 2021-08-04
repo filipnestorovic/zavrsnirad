@@ -21,7 +21,7 @@
         <div class="container-1 clearfix">
             <div class="cost old-cost">
                 <p>Stara cijena:</p>
-                <strong><span class="price_land_s4">{{ $prices[1]['originalPrice'] }}</span> <span class="price_land_curr"> RSD</span></strong>
+                <strong><span class="price_land_s4">{{ $prices[1]['originalPrice'] }}</span> <span class="price_land_curr"> KM</span></strong>
             </div>
             <div class=sale>
                 <p>Popust</p>
@@ -29,7 +29,7 @@
             </div>
             <div class="cost new-cost">
                 <p>Nova cijena:</p>
-                <strong><span class="price_land_s1">{{ $prices[1]['amount'] }}</span> <span class="price_land_curr"> RSD</span></strong>
+                <strong><span class="price_land_s1">{{ $prices[1]['amount'] }}</span> <span class="price_land_curr"> KM</span></strong>
             </div>
         </div>
         <div class="container-2">
@@ -99,11 +99,11 @@
             <div class="tov-2">
                 <div class="cost old-cost">
                     <p>Stara cijena:</p>
-                    <strong><span class="price_land_s4">{{ $prices[1]['originalPrice'] }}</span> <span class="price_land_curr"> RSD</span></strong>
+                    <strong><span class="price_land_s4">{{ $prices[1]['originalPrice'] }}</span> <span class="price_land_curr"> KM</span></strong>
                 </div>
                 <div class="cost new-cost">
                     <p>Nova cijena:</p>
-                    <strong><span class="price_land_s1">{{ $prices[1]['amount'] }}</span> <span class="price_land_curr"> RSD</span></strong>
+                    <strong><span class="price_land_s1">{{ $prices[1]['amount'] }}</span> <span class="price_land_curr"> KM</span></strong>
                 </div>
             </div>
             <div class="center"><a href="#order" class="button-m"></a></div>
@@ -115,7 +115,7 @@
             <div class="rev rev-1">
                 <div class="rev-pic"></div>
                 <p class="rev-title">Marina Krstić, 43 godine</p>
-                <p class="rev-text">Vidjela sam oglas i odlučila sam da pokušam. Rezultati su nevjerovatni! Sviđa mi se što steže bočne strane i nije vidljiv ispod odjeće. Samo nedelju dana kasnije ljudi iz moje okoline su počeli da mi govore da sam smršala! Moj rezultat za mjesec dana je čak minus 8 kilograma! Preporučujem svakome ovaj proizvod!</p>
+                <p class="rev-text">Vidjela sam oglas i odlučila sam da pokušam. Rezultati su nevjerovatni! Sviđa mi se što stežu bočne strane i nisu vidljive ispod odjeće. Samo nedelju dana kasnije ljudi iz moje okoline su počeli da mi govore da sam smršala! Moj rezultat za mjesec dana je čak minus 8 kilograma! Preporučujem svakome ovaj proizvod!</p>
             </div>
             <div class="rev rev-2">
                 <div class="rev-pic"></div>
@@ -157,7 +157,7 @@
         <div class="container-1 clearfix">
             <div class="cost old-cost">
                 <p>Stara cijena:</p>
-                <strong><span class="price_land_s4">{{ $prices[1]['originalPrice'] }}</span> <span class="price_land_curr"> RSD</span></strong>
+                <strong><span class="price_land_s4">{{ $prices[1]['originalPrice'] }}</span> <span class="price_land_curr"> KM</span></strong>
             </div>
             <div class="sale">
                 <p>Popust</p>
@@ -165,7 +165,7 @@
             </div>
             <div class="cost new-cost">
                 <p>Nova cijena:</p>
-                <strong><span class="price_land_s1">{{ $prices[1]['amount'] }}</span> <span class="price_land_curr"> RSD</span></strong>
+                <strong><span class="price_land_s1">{{ $prices[1]['amount'] }}</span> <span class="price_land_curr"> KM</span></strong>
             </div>
         </div>
         <div class="order" id="order">
