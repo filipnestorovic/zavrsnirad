@@ -168,11 +168,11 @@
         <h2>KADA NOSITI <b>VRUĆE HELANKE:</b></h2>
         <img src="{{ asset('/') }}flexonikFiles/hotshaper/hotshapersDt1.png" alt="Hot Shapers"/>
         <img src="{{ asset('/') }}flexonikFiles/hotshaper/hotshapersDt2.png" alt="Hot Shapers"/>
-        <img src="{{ asset('/') }}flexonikFiles/hotshaper/hotshapersDt3.png" alt="Hot Shapers"/>
+        <img src="{{ asset('/') }}flexonikFiles/hotshaper/ba_hotshapersDt3.png" alt="Hot Shapers"/>
         <img src="{{ asset('/') }}flexonikFiles/hotshaper/hotshapersDt4.png" alt="Hot Shapers"/>
         <img src="{{ asset('/') }}flexonikFiles/hotshaper/hotshapersDt5.png" alt="Hot Shapers"/>
         <img src="{{ asset('/') }}flexonikFiles/hotshaper/hotshapersDt6.png" alt="Hot Shapers"/>
-        <img src="{{ asset('/') }}flexonikFiles/hotshaper/hotshapersDt7.png" alt="Hot Shapers"/>
+        <img src="{{ asset('/') }}flexonikFiles/hotshaper/ba_hotshapersDt7.png" alt="Hot Shapers"/>
         <img src="{{ asset('/') }}flexonikFiles/hotshaper/hotshapersDt8.png" alt="Hot Shapers"/>
         <h3>Živite svojim normalnim životom: radite, hodate,<br/>bavite se sportom, spavate – i gubite kilograme!</h3>
     </div>
