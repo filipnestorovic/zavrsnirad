@@ -5,19 +5,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=480">
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('/') }}flexonikFiles/skleker1/doska-03.png" type="image/x-icon">
     <link rel="stylesheet" href="{{ asset('/') }}flexonikFiles/skleker1/styles.css">
+    <style>html{scroll-behavior: smooth}</style>
 </head>
 <body>
 <div class="main_wrapper">
     @include('components.display_errors')
     <header class="offer_section">
-        <h1 class="main_title"><span>Buy Power Push Board</span></h1>
+        <h1 class="main_title"><span>KUPITE MOĆNI SKLEKER</span></h1>
         <div class="offer_image">
             <p class="main_subtitle"></p>
             <img class="offer_product" src="{{ asset('/') }}flexonikFiles/skleker1/doska.jpg" alt="Push-up board">
             <div class="desc">
-                <p><span>Bestseller </span> 2021!</p>
+                <p><span>BESTSELLER </span> U 2021!</p>
             </div>
         </div>
         <div class="price clearfix">
@@ -30,117 +31,115 @@
             </div>
         </div>
         <ul class="bull clearfix">
-            <li> Targets all muscle groups in the upper body </li>
-            <li> Locks the wrist during exercise </li>
-            <li> Portable, easy to mount and dismantle </li>
+            <li>Pogađa sve grupe mišića u gornjem delu tela</li>
+            <li>Fiksira zglob tokom vežbe</li>
+            <li>Prenosiv i lagan za montažu i demontažu</li>
         </ul>
         <a href="#order_form" class="button-m">PORUČI ODMAH</a>
     </header>
     <section class="sect_2 gradient_theme">
-        <br></b>
-        <h2 class="title separator"><span>Innovative format </span> HOME TRAINING</h2>
-        <p>The push-up trainer is suitable for athletes of all skill levels. A beginner is able to perform exercises for the chest and back on it, as well as correct posture.
-
-        </p>
+        <br>
+        <h2 class="title separator"><span>INOVATIVNA KUĆNA </span> SPRAVA ZA VEŽBANJE</h2>
+        <p>Skleker je pogodan za sportiste svih nivoa i veština. Mogu se trenirati grudi, biceps, triceps, leđa i ramena na njemu.</p>
         <img src="{{ asset('/') }}flexonikFiles/skleker1/doska-01.jpg" alt="Push-up board">
-        <p>The multi-functional color-coded push-up trainer strengthens and shapes the workout of 4 muscle groups: back, shoulders, chest and triceps. The ability to change the position and angle of the stop will allow you to maximize the use of the necessary
-            muscles. </p>
+        <p>Višenamenska sprava za sklekove označena je bojama koje određuju položaje ručki za vežbanje određenih mišićnih grupa.
+            Mogućnost promene položaja i ugla omogućava maksimalni efekat pokretanja željenih mišićnih grupa.</p>
         <div class="info"></div>
     </section>
     <section class="sect_3">
-        <br></b>
-        <h2 class="title">Benefits of <span> Power Push</span></h2>
+        <br>
+        <h2 class="title">Prednosti <span> SPRAVE ZA SKLEKOVE</span></h2>
         <ul class="list_4">
             <li>
                 <img src="{{ asset('/') }}flexonikFiles/skleker1/doska-03.png" alt="Push-up board">
-                <p>Intensively works all muscle groups in the upper body</p>
+                <p>Intenzivno radi na svim mišićnim grupama u gornjem delu tela</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}flexonikFiles/skleker1/doska-04.png" alt="Push-up board">
-                <p>Reduces the likelihood of injury compared to standard push-ups.</p>
+                <p>Smanjuje verovatnoću povreda u poređenju sa standardnim sklekovima</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}flexonikFiles/skleker1/doska-05.png" alt="Push-up board">
-                <p>Foldable design greatly reduces storage space and overall weight</p>
+                <p>Sklopivi dizajn značanjno smanjuje prostor za skladištenje i ukupnu težinu</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}flexonikFiles/skleker1/doska-06.jpg" alt="Push-up board">
-                <p>Compact and easy to transport while relaxing in nature</p>
+                <p>Kompaktan i jednostavan za transport i idealan za trening u prirodi</p>
             </li>
         </ul>
         <a href="#order_form" class="button-m">PORUČI ODMAH</a>
         <!--      <img src="doska-02.jpg" alt="Push-up board"> -->
     </section>
     <section class="sect_4 gradient_theme">
-        <br></b>
-        <h2 class="title">Dips Trainer <span> Features</span></h2>
+        <br>
+        <h2 class="title">Osnovne <span> KARAKTERISTIKE</span></h2>
 
         <ul class="char_list">
-            <li><span>Material:</span> high strength plastic</li>
-            <li><span>Dimensions: </span> 65x19x9 cm</li>
-            <li><span>Stop material: </span> rubber</li>
-            <li><span>Color: </span> multicolored</li>
+            <li><span>Materijal:</span> plastika visoke čvrstoće</li>
+            <li><span>Dimenzije: </span> 65 x 19 x 9 CM</li>
+            <li><span>Materijal ručki: </span> guma</li>
+            <li><span>Boja: </span> višebojan</li>
         </ul>
     </section>
     <section class="sect_5">
-        <br></b>
-        <h2 class="title"><span>1349 people </span> have already rated the novelty</h2>
+        <br>
+        <h2 class="title"><span>1349 LJUDI </span> JE VEĆ OCENILO OVAJ PROIZVOD</h2>
         <div class="reviews">
             <div class="rev_item">
                 <img src="{{ asset('/') }}flexonikFiles/skleker1/doska-07.jpg" alt="Push-up board">
-                <p class="name">Jabal</p>
-                <p class="text">Finally I found a machine that I really do. Houses are already standing 2 unit - gathering dust. It's compact, handy, easy to customize your level. Cool that you can pump nearly the whole body on one machine. I'm very glad I got it.)</p>
+                <p class="name">MARKO</p>
+                <p class="text">Konačno sam pronašao proizvod koji mi zaista odgovara i ne skuplja prašinu. Kompaktan je, zgodan i mogu da radim pravilne sklekove sa njim.
+                    Pogađa mišiće skoro celog tela, i veoma mi je drago što sam ga kupio.</p>
             </div>
             <div class="rev_item">
                 <img src="{{ asset('/') }}flexonikFiles/skleker1/doska-08.jpg" alt="Push-up board">
-                <p class="name">Adilya</p>
-                <p class="text">
-                    I rarely write reviews, but this is really a great device, well worth the money. Bought a couple of weeks back. We work with the whole family almost every day. It distributes the load on the whole body very cool. Can safely recommend for home workouts!
-                </p>
+                <p class="name">RADE</p>
+                <p class="text">Retko pišem recenzije, ali ovo je zaista odličan proizvod vredan svakog dinara. Kupio sam ga pre par nedelja. Skoro svaki dan vežbam sa celom porodicom.
+                    Lepo raspoređuje opterećenje na celo telo. Preporučujem ga za kućno vežbanje.</p>
             </div>
             <div class="rev_item stars">
                 <img src="{{ asset('/') }}flexonikFiles/skleker1/doska-09.jpg" alt="Push-up board">
-                <p class="name">Hassan</p>
-                <p class="text">Gave it to my husband for his birthday. For home, ideal, he is satisfied and everyone is engaged day. He said that he would take it with him to the park in the summer. The order came on the second day, for which thanks to the store. Recommended)
-                </p>
+                <p class="name">TAMARA</p>
+                <p class="text">Poklonila sam ga mužu za rođendan. Idealan je za kućne vežbe i on ga koristi svaki dan. Rekao je da će ga početi nositi sa sobom u park.
+                    Porudžbina je stigla sutradan, sve je bilo kako je dogovoreno. Sve preporuke!</p>
             </div>
         </div>
     </section>
     <section class="sect_6">
-        <br></b>
-        <h2 class="title">How to order <span> Delivery and payment</span></h2>
+        <br>
+        <h2 class="title">KAKO PORUČITI <span> ISPORUKA I PLAĆANJE</span></h2>
         <ul class="order_list">
             <li class="clearfix">
                 <img src="{{ asset('/') }}flexonikFiles/skleker1/order_1.jpg" alt="Push-up board">
                 <div class="text">
-                    <h4>Application </h4>
-                    <p> Leave a request on our website. The manager will contact you shortly.</p>
+                    <h4>Poručivanje</h4>
+                    <p>Ostavite podatke na našem sajtu. Kontaktiraćemo Vas da potvrdimo porudžbinu.</p>
                 </div>
             </li>
             <li class="clearfix">
                 <img src="{{ asset('/') }}flexonikFiles/skleker1/order_2.jpg" alt="Push-up board">
                 <div class="text">
-                    <h4>Delivery</h4>
-                    <p>Free delivery in UAE! Delivery 1-3 days! Pay upon delivery!</p>
+                    <h4>Isporuka</h4>
+                    <p>Dostava brzom poštom u roku od 1-2 radna dana. Plaćanje po prijemu pošiljke.</p>
                 </div>
             </li>
             <li class="clearfix">
                 <img src="{{ asset('/') }}flexonikFiles/skleker1/order_3.jpg" alt="Push-up board">
                 <div class="text">
-                    <h4>Warranties </h4>
-                    <p> 100% quality guarantee. Each item is carefully checked before shipping.</p>
+                    <h4>Garancija </h4>
+                    <p>100% garancija kvaliteta. Ukoliko ne budeze zadovoljni proizvodom vratićemo vam novac.</p>
                 </div>
             </li>
         </ul>
-        <div class="order_info">Your goods will arrive safe and sound within 1-3 days</div>
+{{--        <div class="order_info">Your goods will arrive safe and sound within 1-3 days</div>--}}
     </section>
     <section class="offer_section offer_bot">
-        <h1 class="main_title"><span>Push-up board </span> Power Push</h1>
+        <h1 class="main_title"><span>KUPITE </span><br> MOĆNI SKLEKER </h1>
         <div class="offer_image">
-            <p class="main_subtitle">For effective workouts at home</p>
+            <p class="main_subtitle">Za efektivno vežbanje kod kuće</p>
             <img class="offer_product" src="{{ asset('/') }}flexonikFiles/skleker1/doska.jpg" alt="Push-up board">
             <div class="desc">
-                <p><span>Bestseller </span> 2021!</p>
+                <p><span>Bestseller </span> u 2021!</p>
             </div>
         </div>
         <div class="price clearfix">
@@ -163,7 +162,7 @@
         </form>
     </section>
 </div>
-<div class="foot_en_center" style="text-align: center; margin: 0px auto; padding: 30px;"></div>
+{{--<div class="foot_en_center" style="text-align: center; margin: 0px auto; padding: 30px;"></div>--}}
 @include('components.pixel_footer')
 </body>
 </html>
