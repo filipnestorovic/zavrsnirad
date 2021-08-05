@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-    <link rel="stylesheet" type="text/css" href="{{ asset('/') }}purplerelaxFiles/celluless/styles.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/') }}purplerelaxFiles/beautyderm/styles.css">
     <link rel="shortcut icon" href="">
 </head>
 <body>
@@ -213,7 +213,7 @@
         <h2> ŠTA SE SVE DOBIJA U KOMPLETU</h2>
         <div class="items_list methods_list">
             <div class="item method_item">
-                <img src="{{ asset('/') }}purplerelaxFiles/celluless/methods__method2_image.png" alt="Cellulite Massage" title="Cellulite Massage">
+                <img src="{{ asset('/') }}purplerelaxFiles/beautyderm/methods__method2_image.png" alt="Cellulite Massage" title="Cellulite Massage">
                 <h3>CELLULESS</h3>
                 <ul class="tech_list">
                     <li class="yes">8 rotacionih kuglica - Koristi se za smanjenje obima tela i skidanje celulita.</li>
