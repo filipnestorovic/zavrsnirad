@@ -8,7 +8,7 @@
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 
     <link rel="stylesheet" href="{{ asset('/') }}dailysharkFiles/kamera1/settings.css" type="text/css">
-    <link rel="stylesheet" href="{{ asset('/') }}dailysharkFiles/kamera2/main.css" type="text/css">
+    <link rel="stylesheet" href="{{ asset('/') }}dailysharkFiles/kamera3/main.css" type="text/css">
 </head>
 <body>
 @include('components.display_errors')
@@ -72,7 +72,7 @@
 <section class="block-3" id="blk3">
     <div class="wrap clearfix">
         <h2 class="title"> Karakteristike<span>DVR KAMERE</span></h2>
-        <img class="pic-1" src="{{ asset('/') }}dailysharkFiles/kamera2/b3-1.jpg" alt="HD Cam Mirror">
+        <img class="pic-1" src="{{ asset('/') }}dailysharkFiles/kamera3/b3-1.jpg" alt="HD Cam Mirror">
         <ul class="list spec-1">
             <li>Senzor pokreta i udara</li>
             <li>Ugao snimanja 170°</li>
@@ -83,7 +83,7 @@
             <li>Slot za memorijsku karticu do 32 GB</li>
         </ul>
         <h3 class="title"><span> U PAKETU SE DOBIJA</span></h3>
-        <img class="pic-2" src="{{ asset('/') }}dailysharkFiles/kamera2/b3-2.jpg" alt="HD Cam Mirror">
+        <img class="pic-2" src="{{ asset('/') }}dailysharkFiles/kamera3/b3-2.jpg" alt="HD Cam Mirror">
         <ul class="list spec-2">
             <li>DVR Car Cam Recorder</li>
             <li>Postolje</li>
@@ -95,10 +95,10 @@
 <section class="block-5">
     <div class="wrap">
         {{--<h2 class="title"> Visszajelzés<span> Car Cam Recorder</span></h2>--}}
-        <div class="center"><img src="{{ asset('/') }}dailysharkFiles/kamera2/b5-0.jpg" alt="HD Cam Mirror"></div>
+        <div class="center"><img src="{{ asset('/') }}dailysharkFiles/kamera3/b5-0.jpg" alt="HD Cam Mirror"></div>
         <div class="img-cont clearfix">
-            <img src="{{ asset('/') }}dailysharkFiles/kamera2/b5-1.jpg" alt="HD Cam Mirror">
-            <img src="{{ asset('/') }}dailysharkFiles/kamera2/b5-2.jpg" alt="HD Cam Mirror">
+            <img src="{{ asset('/') }}dailysharkFiles/kamera3/b5-1.jpg" alt="HD Cam Mirror">
+            <img src="{{ asset('/') }}dailysharkFiles/kamera3/b5-2.jpg" alt="HD Cam Mirror">
         </div>
         <a href="#order-form" class="button-m">PORUČITE SADA</a>
     </div>
@@ -110,20 +110,20 @@
             <div>
                 <div>
                     <div class="rev-item" style="width: 291.2px;">
-                        <div><img src="{{ asset('/') }}dailysharkFiles/kamera2/rev-1.jpg" alt="HD Cam Mirror"></div>
+                        <div><img src="{{ asset('/') }}dailysharkFiles/kamera3/rev-1.jpg" alt="HD Cam Mirror"></div>
                         <h3>IVAN AVRAMOVIĆ</h3>
                         <p>Kamera je odlična, super snima, a kvalitet mi se jako dopada.
                             Imao sam problem sa komšijom koji mi je grebao automobil, ali sam ga nakon 7 dana snimio i prijavio.
                             Preporučujem svima!</p>
                     </div>
                     <div class="rev-item" style="width: 291.2px;">
-                        <div><img src="{{ asset('/') }}dailysharkFiles/kamera2/rev-2.jpg" alt="HD Cam Mirror"></div>
+                        <div><img src="{{ asset('/') }}dailysharkFiles/kamera3/rev-2.jpg" alt="HD Cam Mirror"></div>
                         <h3>MARKO SIMANIĆ</h3>
                         <p>Kompaktna kamera, lepo izgleda u automobilu. Kvalitet snimka je ok, sasvim dovoljan da se sve jasno vidi.
                             Video zapisi ne zauzimaju mnogo memorije. Za malo novca kupio sam vrhunski proizvod.</p>
                     </div>
                     <div class="rev-item" style="width: 291.2px;">
-                        <div><img src="{{ asset('/') }}dailysharkFiles/kamera2/rev-3.jpg" alt="HD Cam Mirror"></div>
+                        <div><img src="{{ asset('/') }}dailysharkFiles/kamera3/rev-3.jpg" alt="HD Cam Mirror"></div>
                         <h3>DOBRIVOJE PETROVIĆ</h3>
                         <p>Sve je odlično, i cena i kvalitet. Snimam sve u toku vožnje, a i ostavljam je uključenu kada parkiram automobil.
                             Ima i noćni režim, tako da sam snimio ko mi noću skida brisače.</p>

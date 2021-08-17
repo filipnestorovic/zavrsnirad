@@ -68,7 +68,7 @@
                             @endisset
                             <div class="upcrosssell d-inline-flex p-2 justify-content-center">
                                 @foreach($upCrossSells as $crossSell)
-                                    @if($crossSell['is_crossSell'])
+                                    @if(isset($crossSell['is_crossSell']))
                                         <input type="hidden" name="isCrossSell" value="1"/>
                                         <input type="hidden" name="hiddenPriceUpCrossSell-{{ $crossSell['id_upcrosssell'] }}" value="{{ $crossSell['pricePerPiece']*$crossSell['quantity'] }}"/>
                                         <input type="hidden" name="quantityUpCrossSell-{{ $crossSell['id_upcrosssell'] }}" value="{{ $crossSell['quantity'] }}"/>
