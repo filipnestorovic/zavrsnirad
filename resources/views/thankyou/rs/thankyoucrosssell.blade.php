@@ -66,40 +66,40 @@
                             @isset($test_variation_id)
                             <input type="hidden" name="testVariationIdUpCrossSell" value="{{ $test_variation_id }}"/>
                             @endisset
-                            @foreach($upCrossSells as $crossSell)
-                                @isset($crossSell['is_crossSell'])
+                            @isset($upCrossSells)
                             <div class="upcrosssell d-inline-flex p-2 justify-content-center">
-                                @if($crossSell['is_crossSell'])
-                                    <input type="hidden" name="isCrossSell" value="1"/>
-                                    <input type="hidden" name="hiddenPriceUpCrossSell-{{ $crossSell['id_upcrosssell'] }}" value="{{ $crossSell['pricePerPiece']*$crossSell['quantity'] }}"/>
-                                    <input type="hidden" name="quantityUpCrossSell-{{ $crossSell['id_upcrosssell'] }}" value="{{ $crossSell['quantity'] }}"/>
-                                    <input type="hidden" name="isFreeShippingUpCrossSell-{{ $crossSell['id_upcrosssell'] }}" value="{{ $crossSell['isFreeShipping'] }}"/>
-                                    <input type="hidden" name="productIdUpCrossSell-{{ $crossSell['id_upcrosssell'] }}" value="{{ $crossSell['upcrosssell_product_id'] }}"/>
-                                    <input type="hidden" name="skuUpCrossSell-{{ $crossSell['id_upcrosssell'] }}" value="{{ $crossSell['sku'] }}"/>
-                                    <h3 class="success-page__text">{{ $crossSell['description'] }}</h3>
-                                    <input type="radio" class="upCrossSellRadio" value="{{ $crossSell['id_upcrosssell'] }}" id="rb-{{ $crossSell['id_upcrosssell'] }}" name="upCrossSellId" @if($crossSell['isBestOption']) checked @endif @if($upCrossSells[0]['crossSellCount'] == 1) checked @endif/>
-                                    <label class="labelUpCrossSell" for="rb-{{ $crossSell['id_upcrosssell'] }}">
-                                    @if($upCrossSells[0]['upSellCount'] > 1)
-                                        <span class="quantity-badge">{{ $crossSell['quantity'] }}</span>
+                                @foreach($upCrossSells as $crossSell)
+                                    @if($crossSell['is_crossSell'])
+                                        <input type="hidden" name="isCrossSell" value="1"/>
+                                        <input type="hidden" name="hiddenPriceUpCrossSell-{{ $crossSell['id_upcrosssell'] }}" value="{{ $crossSell['pricePerPiece']*$crossSell['quantity'] }}"/>
+                                        <input type="hidden" name="quantityUpCrossSell-{{ $crossSell['id_upcrosssell'] }}" value="{{ $crossSell['quantity'] }}"/>
+                                        <input type="hidden" name="isFreeShippingUpCrossSell-{{ $crossSell['id_upcrosssell'] }}" value="{{ $crossSell['isFreeShipping'] }}"/>
+                                        <input type="hidden" name="productIdUpCrossSell-{{ $crossSell['id_upcrosssell'] }}" value="{{ $crossSell['upcrosssell_product_id'] }}"/>
+                                        <input type="hidden" name="skuUpCrossSell-{{ $crossSell['id_upcrosssell'] }}" value="{{ $crossSell['sku'] }}"/>
+                                        <h3 class="success-page__text">{{ $crossSell['description'] }}</h3>
+                                        <input type="radio" class="upCrossSellRadio" value="{{ $crossSell['id_upcrosssell'] }}" id="rb-{{ $crossSell['id_upcrosssell'] }}" name="upCrossSellId" @if($crossSell['isBestOption']) checked @endif @if($upCrossSells[0]['crossSellCount'] == 1) checked @endif/>
+                                        <label class="labelUpCrossSell" for="rb-{{ $crossSell['id_upcrosssell'] }}">
+                                        @if($upCrossSells[0]['upSellCount'] > 1)
+                                            <span class="quantity-badge">{{ $crossSell['quantity'] }}</span>
+                                        @endif
+                                        @if($crossSell['isBestOption'])
+                                            <span class="best-option-badge"><img src="{{ asset('/')}}thankyouFiles/thankyouUpSell/best-offer-badge.png"/></span>
+                                        @endif
+                                        <div class="img-holder">
+                                            <img class="img" src="{{ asset('/').$crossSell['product_image'] }}"/>
+                                        </div>
+                                        </label>
+                                        @if(count($prices) === 1)
+                                            <span class="pricesUpCrossSell"><span class="oldPriceUpCrossSell"><p>{{ $prices[1]['amount']*$crossSell['quantity'] }} RSD</p></span> <span class="newPriceUpCrossSell">{{ $crossSell['pricePerPiece']*$crossSell['quantity'] }} RSD</span></span>
+                                        @else
+                                            <span class="pricesUpCrossSell">SAMO SADA <span class="newPriceUpCrossSell">{{ $crossSell['pricePerPiece']*$crossSell['quantity'] }} RSD</span></span>
+                                        @endif
                                     @endif
-                                    @if($crossSell['isBestOption'])
-                                        <span class="best-option-badge"><img src="{{ asset('/')}}thankyouFiles/thankyouUpSell/best-offer-badge.png"/></span>
-                                    @endif
-                                    <div class="img-holder">
-                                        <img class="img" src="{{ asset('/').$crossSell['product_image'] }}"/>
-                                    </div>
-                                    </label>
-                                    @if(count($prices) === 1)
-                                        <span class="pricesUpCrossSell"><span class="oldPriceUpCrossSell"><p>{{ $prices[1]['amount']*$crossSell['quantity'] }} RSD</p></span> <span class="newPriceUpCrossSell">{{ $crossSell['pricePerPiece']*$crossSell['quantity'] }} RSD</span></span>
-                                    @else
-                                        <span class="pricesUpCrossSell">SAMO SADA <span class="newPriceUpCrossSell">{{ $crossSell['pricePerPiece']*$crossSell['quantity'] }} RSD</span></span>
-                                    @endif
-                                @endif
+                                @endforeach
                             </div>
                             <div class="success-page__form__button"><button type="submit">DODAJ U PORUDŽBINU</button></div>
                             <div class="success-page__form__button cancelUpCrossSell"><button id="cancelUpCrossSell" type="button">NE, HVALA</button></div>
-                                @endisset
-                            @endforeach
+                            @endisset
                         </form>
                     @endisset
                     @endif
