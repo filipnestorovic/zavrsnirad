@@ -67,7 +67,7 @@
                             <input type="hidden" name="testVariationIdUpCrossSell" value="{{ $test_variation_id }}"/>
                             @endisset
                             @foreach($upCrossSells as $crossSell)
-                                @isset($upSell['is_crossSell'])
+                                @isset($crossSell['is_crossSell'])
                             <div class="upcrosssell d-inline-flex p-2 justify-content-center">
                                 @if($crossSell['is_crossSell'])
                                     <input type="hidden" name="isCrossSell" value="1"/>
