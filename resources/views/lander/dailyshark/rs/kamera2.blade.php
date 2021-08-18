@@ -83,7 +83,7 @@
             <li>Slot za memorijsku karticu do 32 GB</li>
         </ul>
         <h3 class="title"><span> U PAKETU SE DOBIJA</span></h3>
-        <img class="pic-2" src="{{ asset('/') }}dailysharkFiles/kamera3/b3-2.jpg" alt="HD Cam Mirror">
+        <img class="pic-2" src="{{ asset('/') }}dailysharkFiles/kamera3/b3-2.jpg" alt="HD Cam Mirror" style="margin-top: -30px;">
         <ul class="list spec-2">
             <li>DVR Car Cam Recorder</li>
             <li>Postolje</li>
