@@ -67,13 +67,13 @@
     <section class="section-2">
         <div class="container">
             <div class="wysiwyg-content product-banner top-banner ">
-                <h2><span style="color: #015bd3;">ODMORNO TELO I SAN KAKAV STE ODUVEK ŽELELI</span></h2>
+                <h2><span style="color: #015bd3;">ODMORNO TIJELO I SAN KAKAV STE ODUVEK ŽELJELI</span></h2>
                 <p><span style="color: #4ba7ff;"><strong>Uživajte u komforu i budite se odmorni <br>– Kupite odmah i znatno uštedite!</strong></span></p>
                 <ul>
                     <li><img src="{{ asset('/') }}purplerelaxFiles/shared_files/icon.png" alt="tick-icon-01">Oslobađa bola</li>
                     <li><img src="{{ asset('/') }}purplerelaxFiles/shared_files/icon.png" alt="tick-icon-01">Ispravlja kičmu</li>
                     <li><img src="{{ asset('/') }}purplerelaxFiles/shared_files/icon.png" alt="tick-icon-01">Unikatan dizajn</li>
-                    <li><img src="{{ asset('/') }}purplerelaxFiles/shared_files/icon.png" alt="tick-icon-01">Nežna memorijska pena</li>
+                    <li><img src="{{ asset('/') }}purplerelaxFiles/shared_files/icon.png" alt="tick-icon-01">Nježna memorijska pena</li>
                 </ul>
                 <p><span style="color: #4ba7ff;"><strong>Ostvarićete specijalni popust od <span style="color: #e02020;">40%</span> <br>ukoliko poručite odmah!</strong></span></p>
                 <p class="btn-order"><a class="btn-primary shop-link" href="{{$checkoutView}}"><span>PORUČITE SVOJ JASTUK</span></a></p>
@@ -87,7 +87,7 @@
     <section class="section-3">
         <div class="container">
             <div class="wysiwyg-content line-divider ">
-                <p><strong>Trajanje specijalnog popusta od <span style="color: #feee00;">40% </span> je ograničeno. Uskoro vraćamo regularnu cenu!</strong></p>
+                <p><strong>Trajanje specijalnog popusta od <span style="color: #feee00;">40% </span> je ograničeno. Uskoro vraćamo regularnu cijenu!</strong></p>
             </div>
         </div> <!--/container-->
     </section> <!-- /row-wrapper-->
@@ -103,7 +103,7 @@
                             <div class="w_content_wrap">
                                 <div class="w_desc">
                                     <h4>GARANTOVANO <br>VISOK KVALITET</h4>
-                                    <p>Napravljen od najboljih materijala za maksimalnu izdržjivost i dugovečnost</p>
+                                    <p>Napravljen od najboljih materijala za maksimalnu izdržjivost i dugovječnost</p>
                                 </div>
                             </div>
                         </div>
@@ -114,7 +114,7 @@
                             <div class="w_content_wrap">
                                 <div class="w_desc">
                                     <h4>JEDNOSTAVAN POVRAT</h4>
-                                    <p>Ukoliko niste zadovoljni našim ortopetskim jastukom, vratićemo vam novac bez suvišnih pitanja</p>
+                                    <p>Ukoliko niste zadovoljni našim ortopedskim jastukom, vratićemo vam novac bez suvišnih pitanja</p>
                                 </div>
                             </div>
                         </div>
@@ -152,8 +152,8 @@
                         <div class="columns col-left">
                             <div class="wrap-col">
                                 <h2>ZAPOČNITE SVAKI DAN PUNI ENERGIJE I SA ELANOM</h2>
-                                <p>Ortopedski jastuk za noge je savšen u otklanjanju bolova u leđima i vratu koji se javljaju usled dugog sedenja i fizičke nekativnosti.
-                                    Anatomski dizajn se prilagođava svakom telu, garantuje visok nivo komfora, i rešava vas bolova već posle par korišćenja.</p>
+                                <p>Ortopedski jastuk za noge je savšen u otklanjanju bolova u leđima i vratu koji se javljaju usljed dugog sjedenja i fizičke neaktivnosti.
+                                    Anatomski dizajn se prilagođava svakom tijelu, garantuje visok nivo komfora, i rješava vas bolova već posle par korišćenja.</p>
                                 <p>Poboljšava kvalitet sna, držanje, kao i sveukupno stanje organizma. Jastuk pomaže u otklanjanju bola, popravlja san,
                                     ispravlja držanje i sve to na lak i prirodan način.</p>
                                </div>
@@ -169,9 +169,9 @@
                     <div class="wrap-inner layt-50-50">
                         <div class="columns col-left">
                             <div class="wrap-col">
-                                <h2>ERGONOSMKI DIZAJN ZA PRAVILAN POLOŽAJ TELA</h2>
-                                <p>Kada spavate bočno, ne spavate savršeno ravno. Gornja noga vam se spušta i vrši pritisak na leđa, zglobovi kolena se dodiruju,
-                                    uzrokujući bol. Ortopedski jastuk najbolji je jastuk za noge za one koji traže olakšanje, jer udobno podupire noge i kolena kako bi
+                                <h2>ERGONOSMKI DIZAJN ZA PRAVILAN POLOŽAJ TIJELA</h2>
+                                <p>Kada spavate bočno, ne spavate savršeno ravno. Gornja noga vam se spušta i vrši pritisak na leđa, zglobovi koljena se dodiruju,
+                                    uzrokujući bol. Ortopedski jastuk najbolji je jastuk za noge za one koji traže olakšanje, jer udobno podupire noge i koljena kako bi
                                     se osiguralo pravilno držanje, položaj spavanja i kako bi se uklonile bolne tačke pritiska.</p>
                             </div>
                         </div>
@@ -207,7 +207,7 @@
                                 <img src="{{ asset('/') }}purplerelaxFiles/shared_files/step-2.jpg" alt="step2" class="img-view">
                             </div>
                             <div class="w_desc">
-                                <p>Kada poručite obavestićemo vas da smo poslali na vašu adresu. Za 1 do 2 radna dana jastuk će biti u vašem domu.</p>
+                                <p>Kada poručite obavijestićemo vas da smo poslali na vašu adresu. Za 1 do 2 radna dana jastuk će biti u vašem domu.</p>
                             </div>
                         </div>
                         <div class="w_item ">
@@ -216,7 +216,7 @@
                                 <img src="{{ asset('/') }}purplerelaxFiles/ortopedskijastuk/jastuk2_dt.png" alt="step3" class="img-view">
                             </div>
                             <div class="w_desc">
-                                <p>Uživajte u udobnosti i lepom snu, sigurni da spavate u pravilnom i zdravom položaju. Sigurni smo da ćete biti oduševljeni svojim jastukom!</p>
+                                <p>Uživajte u udobnosti i lijepom snu, sigurni da spavate u pravilnom i zdravom položaju. Sigurni smo da ćete biti oduševljeni svojim jastukom!</p>
                             </div>
                         </div>
                     </div>
@@ -228,10 +228,10 @@
         <div class="container">
             <div class="wysiwyg-content best-reviews shop-link ">
                 <h2><span style="color: #005bd4;">ŠTA NAŠI KUPCI KAŽU O</span><br><span style="color: #005bd4;">ORTOPEDSKOM JASTUKU</span></h2>
-                <h3>Kupite ovaj jastuk ukoliko želite lepo da spavate</h3>
+                <h3>Kupite ovaj jastuk ukoliko želite lijepo da spavate</h3>
                 <p>Spavam kao beba, svaka čast izumitelju. Kupila sam 2 komada i za sestru koja je takođe prezadovoljna.
-                    Takođe sve pohvale za devojke iz korisničke podrške.</p>
-                <p><strong><span>Jelena T. - Novi Sad</span></strong></p>
+                    Takođe sve pohvale za djevojke iz korisničke podrške.</p>
+                <p><strong><span>Indira T. - Tuzla</span></strong></p>
                 <p class="btn-order"><a class="shop-link" href="{{$checkoutView}}"><span>PORUČITE SVOJ JASTUK</span></a></p>
             </div>
         </div> <!--/container-->
@@ -283,7 +283,7 @@
                 <div class="w_outer">
                     <div class="w_inner">
                         <div class="w_item ">
-                            <h3 class="w_toptext"><strong>Goran T.</strong> - Bajina Bašta</h3>
+                            <h3 class="w_toptext"><strong>Goran T.</strong> - Teslić</h3>
                             <div class="w_thumb">
                                 <img src="{{ asset('/') }}purplerelaxFiles/shared_files/5-stars.png" alt="5stars" class="img-view">
                             </div>
@@ -292,12 +292,12 @@
                             </div>
                         </div>
                         <div class="w_item ">
-                            <h3 class="w_toptext"><strong>Tijana R.</strong> – Kragujevac</h3>
+                            <h3 class="w_toptext"><strong>Tijana R.</strong> – Trebinje</h3>
                             <div class="w_thumb">
                                 <img src="{{ asset('/') }}purplerelaxFiles/shared_files/5-stars.png" alt="5stars" class="img-view">
                             </div>
                             <div class="w_desc">
-                                <p>Mirniji san nego ikada, obično sam imala problema da se namestim a i kada zaspim često sam se budila.
+                                <p>Mirniji san nego ikada, obično sam imala problema da se namjestim a i kada zaspim često sam se budila.
                                     Sada nema tih problema uopste, preeezadovoljna.</p>
                             </div>
                         </div>
@@ -307,7 +307,7 @@
                                 <img src="{{ asset('/') }}purplerelaxFiles/shared_files/5-stars.png" alt="5stars" class="img-view">
                             </div>
                             <div class="w_desc">
-                                <p>Još kao mala imala sam problem sa leđima i od tada povremeno imam bolove usled nepravilnog držanja.
+                                <p>Još kao mala imala sam problem sa leđima i od tada povremeno imam bolove usljed nepravilnog držanja.
                                     Na nagovor majke kupila sam ortopedski jastuk i od kako ga koristim znatno manje problema imam.</p>
                             </div>
                         </div>
@@ -321,8 +321,8 @@
             <div class="wysiwyg-content special-offer ">
                 <h2>SPECIJALNA PONUDA SAMO DANAS</h2>
                 <h3><span style="color: #00aeef;">Poručite odmah i iskoristite 40% popusta</span></h3>
-                <p class="offer_text">Ne dozvolite da neudobnost pokvari vaš san i vreme kada opuštate svoje telo.
-                    Zdravlje je dragoceno i morate misliti na sebe.
+                <p class="offer_text">Ne dozvolite da neudobnost pokvari vaš san i vrijeme kada opuštate svoje tijelo.
+                    Zdravlje je dragocjeno i morate misliti na sebe.
                     Količine su ograničene, zato poručite još danas!</p>
                 <p class="btn-order"><a class="shop-link" href="{{$checkoutView}}"><span>PORUČITE SVOJ JASTUK</span></a></div>
         </div> <!--/container-->
@@ -330,20 +330,20 @@
     <section class="section-11">
         <div class="container">
             <div class="wysiwyg-content line-divider ">
-                <p><strong>Trajanje specijalnog popusta od <span style="color: #feee00;">40% </span> je ograničeno. Uskoro vraćamo regularnu cenu!</strong></p>
+                <p><strong>Trajanje specijalnog popusta od <span style="color: #feee00;">40% </span> je ograničeno. Uskoro vraćamo regularnu cijenu!</strong></p>
             </div>
         </div> <!--/container-->
     </section> <!-- /row-wrapper-->
     <section class="section-12">
         <div class="container">
             <div class="wysiwyg-content product-banner top-banner ">
-                <h2><span style="color: #015bd3;">ODMORNO TELO I SAN KAKAV STE ODUVEK ŽELELI</span></h2>
+                <h2><span style="color: #015bd3;">ODMORNO TIJELO I SAN KAKAV STE ODUVEK ŽELJELI</span></h2>
                 <p><span style="color: #4ba7ff;"><strong>Uživajte u komforu i budite se odmorni <br>– Kupite odmah i znatno uštedite!</strong></span></p>
                 <ul>
                     <li><img src="{{ asset('/') }}purplerelaxFiles/shared_files/icon.png" alt="tick-icon-01">Oslobađa bola</li>
                     <li><img src="{{ asset('/') }}purplerelaxFiles/shared_files/icon.png" alt="tick-icon-01">Ispravlja kičmu</li>
                     <li><img src="{{ asset('/') }}purplerelaxFiles/shared_files/icon.png" alt="tick-icon-01">Unikatan dizajn</li>
-                    <li><img src="{{ asset('/') }}purplerelaxFiles/shared_files/icon.png" alt="tick-icon-01">Nežna memorijska pena</li>
+                    <li><img src="{{ asset('/') }}purplerelaxFiles/shared_files/icon.png" alt="tick-icon-01">Nježna memorijska pena</li>
                 </ul>
                 <p><span style="color: #4ba7ff;"><strong>Ostvarićete specijalni popust od <span style="color: #e02020;">40%</span> <br>ukoliko poručite odmah!</strong></span></p>
                 <p class="btn-order"><a class="btn-primary shop-link" href="{{$checkoutView}}"><span>PORUČITE SVOJ JASTUK</span></a></p>
