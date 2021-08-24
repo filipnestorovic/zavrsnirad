@@ -1,12 +1,3 @@
-<script>
-    window.onload=function(){
-        const url = new URL(window.location);
-        url.searchParams.delete('wb_campaign');
-        url.searchParams.delete('wb_adset');
-        url.searchParams.delete('wb_ad');
-        window.history.pushState({}, '', url);
-    }
-</script>
 <script src="{{ asset('/') }}shared_files/jquery-1.12.4.min.js" type="text/javascript"></script>
 <!-- Facebook Pixel Code -->
 <script>
@@ -55,3 +46,5 @@
     gtag('js', new Date());
     gtag('config', 'UA-202248199-1');
 </script>
+
+{{--<script src="http://admin.serverwombat.com/js/trck.js" type="text/javascript"></script>--}}

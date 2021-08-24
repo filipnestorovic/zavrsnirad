@@ -10,6 +10,10 @@
         let landerCheckout = $('#landerCheckout').val();
         let sentAddToCart = 0;
 
+        {{--if(cookie_uuid) {--}}
+            {{--wbSendEvent(cookie_uuid, '{{$fb_event}}', baseURL);--}}
+        {{--}--}}
+
         @if($fb_event === "Purchase" || $fb_event === "Purchase2")
             @isset($order)
                  name = "{{ $order->name }}";
@@ -97,5 +101,18 @@
                 }
             });
         }
+
     });
+</script>
+
+<script>
+    window.onload=function(){
+        const url = new URL(window.location);
+        url.searchParams.delete('wb_medium');
+        url.searchParams.delete('wb_campaign');
+        url.searchParams.delete('wb_adset');
+        url.searchParams.delete('wb_ad');
+        url.searchParams.delete('affID');
+        window.history.pushState({}, '', url);
+    }
 </script>
