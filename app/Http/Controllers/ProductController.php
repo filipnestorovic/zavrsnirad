@@ -74,7 +74,7 @@ class ProductController extends Controller
                 if($productData->country_code === "rs") {
                     $urlPreview = "https://".$urlHost."/".$productData->slug;
                 } else {
-                    $urlPreview = "htts://".$productData->country_code.".".$urlHost."/".$productData->slug;
+                    $urlPreview = "https://".$productData->country_code.".".$urlHost."/".$productData->slug;
                 }
                 $productsList[$key]['urlPreview'] = $urlPreview;
             }
