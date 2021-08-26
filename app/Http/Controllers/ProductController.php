@@ -71,7 +71,11 @@ class ProductController extends Controller
             $productData = $this->modelVariation->getDataForProductPreview($product_id);
             if($productData) {
                 $urlHost = parse_url($productData->domain_url)['host'];
-                $urlPreview = "http://".$productData->country_code.".".$urlHost."/".$productData->slug;
+                if($productData->country_code === "rs") {
+                    $urlPreview = "https://".$urlHost."/".$productData->slug;
+                } else {
+                    $urlPreview = "htts://".$productData->country_code.".".$urlHost."/".$productData->slug;
+                }
                 $productsList[$key]['urlPreview'] = $urlPreview;
             }
         }
