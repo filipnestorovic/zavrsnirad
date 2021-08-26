@@ -63,7 +63,7 @@
                 @endif
             </td>
             <td>{{ $singleProduct[0]["sku"] }}</td>
-            <td>{{ $singleProduct[0]["slug"] }}</td>
+            <td>{{ $singleProduct[0]["slug"] }} @isset($singleProduct[0]["urlPreview"]) <a href="{{ $singleProduct[0]["urlPreview"] }}" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a> @endisset</td>
             <td><img src="{{ asset('/').$singleProduct[0]["product_image"] }}" height="70px"/></td>
             <td>{{ $singleProduct[0]["brand_name"] }}</td>
             <td>{{ $singleProduct[0]["country_name"] }}</td>

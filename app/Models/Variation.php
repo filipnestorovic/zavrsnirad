@@ -288,4 +288,16 @@ class Variation extends Model
             ->get();
         return $result;
     }
+
+    public function getDataForProductPreview($product_id) {
+        $result = DB::table('product')
+            ->leftJoin('country', 'product.country_id', '=', 'country.id_country')
+            ->leftJoin('brand', 'product.brand_id', '=', 'brand.id_brand')
+            ->leftJoin('domain', 'domain.brand_id', '=', 'brand.id_brand')
+            ->where('product.id_product','=',$product_id)
+            ->whereNotNull('domain.domain_url');
+
+        return $result->first();
+    }
+
 }

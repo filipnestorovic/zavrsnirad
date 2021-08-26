@@ -11,7 +11,7 @@
         let sentAddToCart = 0;
 
         {{--if(cookie_uuid) {--}}
-            {{--wbSendEvent(cookie_uuid, '{{$fb_event}}', baseURL);--}}
+            {{--wbSendEvent(cookie_uuid, url_medium, cookie_campaign, cookie_adset, cookie_ad, cookie_affid, '{{$fb_event}}', baseURL);--}}
         {{--}--}}
 
         @if($fb_event === "Purchase" || $fb_event === "Purchase2")
@@ -52,6 +52,9 @@
             if(landerCheckout === "1" && sentAddToCart === 0) {
                 sendEventDB(sessionId,2);
             }
+            // if(cookie_uuid) {
+            //     wbSendEvent(cookie_uuid, url_medium, cookie_campaign, cookie_adset, cookie_ad, cookie_affid, 'InitiateCheckout', baseURL);
+            // }
         });
 
         $("a[href^='#']").click(function(){

@@ -67,6 +67,13 @@ class ProductController extends Controller
             $productsList[$key]['criticals'] = $criticals;
             $productsList[$key]['errors'] = $errors;
             $productsList[$key]['warnings'] = $warnings;
+
+            $productData = $this->modelVariation->getDataForProductPreview($product_id);
+            if($productData) {
+                $urlHost = parse_url($productData->domain_url)['host'];
+                $urlPreview = "http://".$productData->country_code.".".$urlHost."/".$productData->slug;
+                $productsList[$key]['urlPreview'] = $urlPreview;
+            }
         }
 
         $paginatedData = $this->prepareDataForTableAjax($request, $productsList,'id_product', true, $perPage, $currentPage, 'productTable');
