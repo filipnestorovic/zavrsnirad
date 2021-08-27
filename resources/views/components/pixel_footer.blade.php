@@ -65,6 +65,9 @@
             @endforeach
             if(landerCheckout === "1" && sentAddToCart === 0) {
                 sendEventDB(sessionId,2);
+                // if(cookie_uuid) {
+                //     wbSendEvent(cookie_uuid, url_medium, cookie_campaign, cookie_adset, cookie_ad, cookie_affid, 'AddToCart', baseURL);
+                // }
             }
         });
 
