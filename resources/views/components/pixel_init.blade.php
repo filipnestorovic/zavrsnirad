@@ -47,4 +47,4 @@
     gtag('config', 'UA-202248199-1');
 </script>
 
-<script src="http://dev.serverwombat.com/js/trck.js" type="text/javascript"></script>
+<script src="https://dev.serverwombat.com/js/trck.js" type="text/javascript"></script>

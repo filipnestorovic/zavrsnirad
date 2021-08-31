@@ -114,11 +114,16 @@
 <script>
     window.onload=function(){
         const url = new URL(window.location);
-        url.searchParams.delete('wb_medium');
+        url.searchParams.delete('utm_medium');
+        url.searchParams.delete('wb_campaignID');
+        url.searchParams.delete('wb_adsetID');
+        url.searchParams.delete('wb_adID');
+        url.searchParams.delete('affID');
+
         url.searchParams.delete('wb_campaign');
         url.searchParams.delete('wb_adset');
         url.searchParams.delete('wb_ad');
-        url.searchParams.delete('affID');
+
         window.history.pushState({}, '', url);
     }
 </script>
