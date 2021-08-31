@@ -248,6 +248,8 @@ class OrderController extends Controller
         $jsonArray['wb_adset'] = $orderDetails->wb_adset;
         $jsonArray['wb_ad'] = $orderDetails->wb_ad;
 
+        $jsonArray['session_id'] = $_COOKIE['wbSessionId'];
+
         if($orderDetails->is_free_shipping===1) {
             $jsonArray['shipping_lines'] = array([
                 "method_id" => "free_shipping"
