@@ -10,9 +10,9 @@
         let landerCheckout = $('#landerCheckout').val();
         let sentAddToCart = 0;
 
-        {{--if(cookie_uuid) {--}}
-            {{--wbSendEvent(cookie_uuid, url_medium, cookie_campaign, cookie_adset, cookie_ad, cookie_affid, '{{$fb_event}}', baseURL);--}}
-        {{--}--}}
+        if(cookie_uuid) {
+            wbSendEvent(cookie_uuid, url_medium, cookie_campaign, cookie_adset, cookie_ad, cookie_affid, '{{$fb_event}}', baseURL);
+        }
 
         @if($fb_event === "Purchase" || $fb_event === "Purchase2")
             @isset($order)
@@ -52,9 +52,9 @@
             if(landerCheckout === "1" && sentAddToCart === 0) {
                 sendEventDB(sessionId,2);
             }
-            // if(cookie_uuid) {
-            //     wbSendEvent(cookie_uuid, url_medium, cookie_campaign, cookie_adset, cookie_ad, cookie_affid, 'InitiateCheckout', baseURL);
-            // }
+            if(cookie_uuid) {
+                wbSendEvent(cookie_uuid, url_medium, cookie_campaign, cookie_adset, cookie_ad, cookie_affid, 'InitiateCheckout', baseURL);
+            }
         });
 
         $("a[href^='#']").click(function(){
@@ -65,9 +65,9 @@
             @endforeach
             if(landerCheckout === "1" && sentAddToCart === 0) {
                 sendEventDB(sessionId,2);
-                // if(cookie_uuid) {
-                //     wbSendEvent(cookie_uuid, url_medium, cookie_campaign, cookie_adset, cookie_ad, cookie_affid, 'AddToCart', baseURL);
-                // }
+                if(cookie_uuid) {
+                    wbSendEvent(cookie_uuid, url_medium, cookie_campaign, cookie_adset, cookie_ad, cookie_affid, 'AddToCart', baseURL);
+                }
             }
         });
 
