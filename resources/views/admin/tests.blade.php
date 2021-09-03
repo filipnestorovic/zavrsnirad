@@ -27,7 +27,7 @@
                             </span>
                             <span class="col col-xl-auto col-lg-12 col-md-12 float-right" style="margin-left:auto;">
                                 <span style="margin-right: 10px;"><a href="{{ route('testsIndex') }}">Reset filters</a></span>
-                                <select id="productFilter"  name="productFilter">
+                                <select id="productFilter"  name="productFilter" data-live-search="true">
                                     <option value="" data-width="auto" selected>Product</option>
                                     @foreach($products as $product)
                                         <option value="{{ $product->id_product }}">{{ $product->product_name }}</option>
@@ -78,7 +78,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm">Please select product</span>
                             </div>
-                            <select name="productIdTestCreate" id="productIdTestCreate" data-toggle="dropdown" required>
+                            <select name="productIdTestCreate" id="productIdTestCreate" data-toggle="dropdown" required data-live-search="true">
                                 @foreach($products as $product)
                                     <option value="{{ $product->id_product }}">{{ $product->product_name }}</option>
                                 @endforeach

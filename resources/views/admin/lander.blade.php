@@ -25,7 +25,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm">Brand</span>
                             </div>
-                            <select name="brandIdLander" id="brandIdLander" data-toggle="dropdown" required>
+                            <select name="brandIdLander" id="brandIdLander" data-toggle="dropdown" required data-live-search="true">
                                 @foreach($brands as $brand)
                                     <option value="{{ $brand->id_brand }}">{{ $brand->brand_name }}</option>
                                 @endforeach
@@ -35,7 +35,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm">Product</span>
                             </div>
-                            <select name="productIdLander" id="productIdLander" data-toggle="dropdown" required>
+                            <select name="productIdLander" id="productIdLander" data-toggle="dropdown" required data-live-search="true">
                                 @foreach($products as $product)
                                     <option label="{{ $product->id_brand }}" value="{{ $product->id_product }}">{{ $product->product_name }} ({{ $product->country_name }})</option>
                                 @endforeach
@@ -69,7 +69,7 @@
                         </span>
                             <span class="col col-xl-auto col-lg-12 col-md-12 float-right" style="margin-left:auto;">
                             <span style="margin-right: 10px;"><a href="{{ route('landerIndex') }}">Reset filters</a></span>
-                            <select id="brandFilter"  name="brandFilter">
+                            <select id="brandFilter"  name="brandFilter" data-live-search="true">
                                 <option value="" data-width="auto" selected>Brand</option>
                                 @foreach($brands as $brand)
                                     <option value="{{ $brand->id_brand }}">{{ $brand->brand_name }}</option>
@@ -78,7 +78,7 @@
                             <script>
                                $("#brandFilter").selectpicker("render");
                             </script>
-                            <select id="productFilter"  name="productFilter">
+                            <select id="productFilter"  name="productFilter" data-live-search="true">
                                 <option value="" data-width="auto" selected>Product</option>
                                 @foreach($products as $product)
                                     <option value="{{ $product->id_product }}">{{ $product->product_name }} ({{ $product->country_name }})</option>
@@ -87,7 +87,7 @@
                             <script>
                                $("#productFilter").selectpicker("render");
                             </script>
-                            <select id="countryFilter"  name="countryFilter">
+                            <select id="countryFilter"  name="countryFilter" data-live-search="true">
                                 <option value="" data-width="auto" selected>Country</option>
                                     @foreach($countries as $country)
                                         <option value="{{ $country->id_country }}">{{ $country->country_name }}</option>
@@ -134,7 +134,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm">Brand</span>
                         </div>
-                        <select name="brandIdModal" id="brandIdModal" data-toggle="dropdown" required>
+                        <select name="brandIdModal" id="brandIdModal" data-toggle="dropdown" required data-live-search="true">
                             @foreach($brands as $brand)
                                 <option value="{{ $brand->id_brand }}">{{ $brand->brand_name }}</option>
                             @endforeach
@@ -144,7 +144,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm">Product</span>
                         </div>
-                        <select name="productIdModal" id="productIdModal" data-toggle="dropdown" required>
+                        <select name="productIdModal" id="productIdModal" data-toggle="dropdown" required data-live-search="true">
                             @foreach($products as $product)
                                 <option value="{{ $product->id_product }}">{{ $product->product_name }}</option>
                             @endforeach

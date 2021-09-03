@@ -33,7 +33,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm">Lander</span>
                                 </div>
-                                <select name="landerIdVariation" id="landerIdVariation" id="inputGroupSelect01" data-toggle="dropdown" required>
+                                <select name="landerIdVariation" id="landerIdVariation" id="inputGroupSelect01" data-toggle="dropdown" required data-live-search="true">
                                     @foreach($landers as $lander)
                                         <option value="{{ $lander->id_lander }}">{{ $lander->lander_name }}</option>
                                     @endforeach

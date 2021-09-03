@@ -43,7 +43,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm">Brand</span>
                                 </div>
-                                <select name="brandDdl" id="brandDdl" data-toggle="dropdown" required>
+                                <select name="brandDdl" id="brandDdl" data-toggle="dropdown" required data-live-search="true">
                                     @foreach($brands as $brand)
                                         <option value="{{ $brand->id_brand }}">{{ $brand->brand_name }}</option>
                                     @endforeach
@@ -53,7 +53,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm">Pixel</span>
                                 </div>
-                                <select name="pixelDdl" id="pixelDdl" data-toggle="dropdown" required>
+                                <select name="pixelDdl" id="pixelDdl" data-toggle="dropdown" required data-live-search="true">
                                     @foreach($pixelsDdl as $pixel)
                                         <option value="{{ $pixel->id_pixel }}">{{ $pixel->fb_pixel }} - {{ $pixel->pixel_name }}</option>
                                     @endforeach
@@ -81,7 +81,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm">Brand</span>
                                 </div>
-                                <select name="brandDdl" id="brandDdl" data-toggle="dropdown" required>
+                                <select name="brandDdl" id="brandDdl" data-toggle="dropdown" required data-live-search="true">
                                     @foreach($brands as $brand)
                                         <option value="{{ $brand->id_brand }}">{{ $brand->brand_name }}</option>
                                     @endforeach
@@ -103,7 +103,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm">Domain</span>
                                 </div>
-                                <select name="domainDdl" id="domainDdl" data-toggle="dropdown" required>
+                                <select name="domainDdl" id="domainDdl" data-toggle="dropdown" required data-live-search="true">
                                     @foreach($domains as $domain)
                                         <option value="{{ $domain->id_domain }}">{{ substr($domain->domain_url,8) }} ({{ $domain->brand_name }})</option>
                                     @endforeach
@@ -113,7 +113,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm">Pixel</span>
                                 </div>
-                                <select name="pixelDdl" id="pixelDdl" data-toggle="dropdown" required>
+                                <select name="pixelDdl" id="pixelDdl" data-toggle="dropdown" required data-live-search="true">
                                     @foreach($pixelsDdl as $pixel)
                                         <option value="{{ $pixel->id_pixel }}">{{ $pixel->fb_pixel }} ({{ $pixel->pixel_name }})</option>
                                     @endforeach
@@ -319,7 +319,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm">Brand</span>
                             </div>
-                            <select name="brandDdlModal" id="brandDdlModal" data-toggle="dropdown" required>
+                            <select name="brandDdlModal" id="brandDdlModal" data-toggle="dropdown" required data-live-search="true">
                                 @foreach($brands as $brand)
                                     <option value="{{ $brand->id_brand }}">{{ $brand->brand_name }}</option>
                                 @endforeach

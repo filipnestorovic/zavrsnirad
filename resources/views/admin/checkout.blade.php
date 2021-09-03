@@ -27,7 +27,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm">Country</span>
                                 </div>
-                                <select name="countryIdCheckout" id="countryIdCheckout" id="inputGroupSelect01" data-toggle="dropdown" required>
+                                <select name="countryIdCheckout" id="countryIdCheckout" id="inputGroupSelect01" data-toggle="dropdown" required data-live-search="true">
                                     @foreach($countries as $country)
                                         <option value="{{ $country->id_country }}">{{ $country->country_name }}</option>
                                     @endforeach
@@ -102,7 +102,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm">Country</span>
                             </div>
-                            <select name="countryIdModal" id="countryIdModal" data-toggle="dropdown" required>
+                            <select name="countryIdModal" id="countryIdModal" data-toggle="dropdown" required data-live-search="true">
                                 @foreach($countries as $country)
                                     <option value="{{ $country->id_country }}">{{ $country->country_name }}</option>
                                 @endforeach

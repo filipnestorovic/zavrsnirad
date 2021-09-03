@@ -485,27 +485,27 @@
                                         <div id="i5wro1i"></div>
                                         <div id="irakyuu">SAMO</div>
                                         <div id="iakxm4r" class="js-unitDiscountRates"><b>{{$prices[1]['amount']}} RSD</b></div>
-                                        <div id="iaywr1o" class="list-item__footer text-center">
-                                            <div id="iv8hb8x" class="list-item__prices">
-                                                <div id="i8ut9hi" class="retail-price">Stara cena <span id="i3magfl" class="js-retail-price">{{$prices[1]['originalPrice']}} RSD</span></div>
-                                            </div>
-                                            <div id="ix8slh8">Uštedi</div>
-                                            <div id="iczkzqh" class="js-save-price">{{$prices[1]['originalPrice']-$prices[1]['amount']}} RSD</div>
-                                            <div id="itinqw4"></div>
-                                        </div>
+                                        {{--<div id="iaywr1o" class="list-item__footer text-center">--}}
+                                            {{--<div id="iv8hb8x" class="list-item__prices">--}}
+                                                {{--<div id="i8ut9hi" class="retail-price">Stara cena <span id="i3magfl" class="js-retail-price">{{$prices[1]['originalPrice']}} RSD</span></div>--}}
+                                            {{--</div>--}}
+                                            {{--<div id="ix8slh8">Uštedi</div>--}}
+                                            {{--<div id="iczkzqh" class="js-save-price">{{$prices[1]['originalPrice']-$prices[1]['amount']}} RSD</div>--}}
+                                            {{--<div id="itinqw4"></div>--}}
+                                        {{--</div>--}}
                                     </div>
                                 </div>
                                 <div id="ihzectc" class="list-item__footer">
                                     <div id="i89bkn4" class="list-item__thumb">
                                         <div id="ines5o9" class="coupon-text"><span id="iw8c6ki" class="js-coupon-text"></span></div>
                                     </div>
-                                    <div id="ir2987h" class="list-item__prices">
-                                        <div id="irqpaji" class="retail-price"><span id="ihube4r">Stara cena</span> <span id="ivhh765" class="js-retail-price">{{$prices[1]['originalPrice']}} RSD</span></div>
-                                    </div>
-                                    <br>
-                                    <div id="iwvew0e">Uštedi</div>
-                                    <div id="ie4lkem" class="js-save-price">{{$prices[1]['originalPrice']-$prices[1]['amount']}} RSD</div>
-                                    <div id="ip2vxal"></div>
+                                    {{--<div id="ir2987h" class="list-item__prices">--}}
+                                        {{--<div id="irqpaji" class="retail-price"><span id="ihube4r">Stara cena</span> <span id="ivhh765" class="js-retail-price">{{$prices[1]['originalPrice']}} RSD</span></div>--}}
+                                    {{--</div>--}}
+                                    {{--<br>--}}
+                                    {{--<div id="iwvew0e">Uštedi</div>--}}
+                                    {{--<div id="ie4lkem" class="js-save-price">{{$prices[1]['originalPrice']-$prices[1]['amount']}} RSD</div>--}}
+                                    {{--<div id="ip2vxal"></div>--}}
                                 </div>
                                 <div id="ias1ntk"></div>
                                 <div id="iiz6gg" title="ULTRARADIANCE"  class="iiz6gg_global order-btn animated--hover infinite">
@@ -524,7 +524,7 @@
                                 <div id="imovkus" class="imovkus_global text-center">
                                     <div id="iqr8eg" class="title js-title">2 ULTRARADIANCE</div>
                                     <img alt="" id="ivvd8f" src="{{ asset('/') }}purplerelaxFiles/ultraradience/offer_2.png" class="product-img " width="1" height="1">
-                                    <div id="igwp2i">40% POPUSTA</div>
+                                    <div id="igwp2i">BESPLATNA DOSTAVA</div>
                                     <div id="iwjnwxs">SAMO</div>
                                     <span id="ins8xj">{{$prices[2]['amount']}}</span>
                                     <div id="iwmtgzb" class="js-unitDiscountRates"><b>{{$prices[2]['amount']}}</b></div>
@@ -538,7 +538,7 @@
                                         </div>
                                         <br>
                                         <div id="ixkrrzx">Uštedi</div>
-                                        <div id="ixezvz9" class="js-save-price">{{$prices[2]['originalPrice']-$prices[2]['amount']}} RSD</div>
+                                        <div id="ixezvz9" class="js-save-price">{{$prices[2]['originalPrice']-$prices[2]['amount']+300}} RSD</div>
                                         <div id="irfm5yx"></div>
                                     </div>
                                     <div id="ij98pp1"></div>
@@ -550,7 +550,7 @@
                                     </div>
                                     <div id="ismrb62" class="ismrb62_global">
                                         <div id="ieksr1k" class="title js-title">2 ULTRARADIANCE</div>
-                                        <div id="ihohc6a">40% POPUSTA</div>
+                                        <div id="ihohc6a">BESPLATNA DOSTAVA</div>
                                         <div id="ijon0mn">SAMO</div>
                                         <div id="ibhg87d" class="js-unitDiscountRates"><b>{{$prices[2]['amount']}}</b></div>
                                         <div id="ivt9o7g"><b>RSD</b></div>
@@ -559,7 +559,7 @@
                                                 <div id="ib3489i" class="retail-price">Stara cena <span id="ibnemyg" class="js-retail-price">{{$prices[2]['originalPrice']}} RSD</span></div>
                                             </div>
                                             <div id="ijihfz5">Uštedi</div>
-                                            <div id="iuxk0an" class="js-save-price">{{$prices[2]['originalPrice']-$prices[2]['amount']}} RSD</div>
+                                            <div id="iuxk0an" class="js-save-price">{{$prices[2]['originalPrice']-$prices[2]['amount']+300}} RSD</div>
                                             <div id="i4e11ry"></div>
                                         </div>
                                         <div id="ig0e9lq"></div>
@@ -572,17 +572,17 @@
                         </div>
                     </div>
                     <div data-id="{{$prices[3]['quantity']}}" id="i2oi2h" class="list-item js-list-item item-3">
-                        <div id="i2h02no">AKCIJA</div>
+                        <div id="i2h02no">NAJBOLJA PONUDA</div>
                         <div id="irlpipr" class="irlpipr_global">
                             <div id="iu0jfb" class="list-item__input list-item__input--checkbox item-check">
                                 <input type="radio" name="product" id="i1jyeg">
                             </div>
                             <div id="ipq3fd" class="list-item__content">
-                                <div id="iwog7zm">AKCIJA</div>
+                                <div id="iwog7zm">NAJBOLJA PONUDA</div>
                                 <div id="ig0ca0t" class="ig0ca0t_global text-center">
                                     <div id="in03dh" class="title js-title">3 ULTRARADIANCE</div>
                                     <img alt="" id="iflxso" src="{{ asset('/') }}purplerelaxFiles/ultraradience/offer_3.png" class="product-img " width="1" height="1">
-                                    <div id="itzada2">NEVEROVATNA PONUDA</div>
+                                    <div id="itzada2">40% POPUSTA + BESPLATNA DOSTAVA</div>
                                     <div id="i5w2tcb">SAMO</div>
                                     <span id="irbdex"></span>
                                     <div id="i78xifj" class="js-unitDiscountRates"><b>{{$prices[3]['amount']}}</b></div>
@@ -597,7 +597,7 @@
                                         </div>
                                         <br>
                                         <div id="iymjwj">Uštedi</div>
-                                        <div id="iyxjse" class="js-save-price">{{$prices[3]['originalPrice']-$prices[3]['amount']}} RSD</div>
+                                        <div id="iyxjse" class="js-save-price">{{$prices[3]['originalPrice']-$prices[3]['amount']+300}} RSD</div>
                                         <div id="igc565"></div>
                                     </div>
                                     <div id="iyvuej4"></div>
@@ -609,7 +609,7 @@
                                     </div>
                                     <div id="ijx8uns" class="ijx8uns_global">
                                         <div id="iiayfk5" class="title js-title">3 ULTRARADIANCE</div>
-                                        <div id="iydokp9">NEVEROVATNA PONUDA</div>
+                                        <div id="iydokp9">40% POPUSTA + BESPLATNA DOSTAVA</div>
                                         <div id="ie13xab">SAMO</div>
                                         <div id="i8tz6iq" class="js-unitDiscountRates"><b>{{$prices[3]['amount']}}</b></div>
                                         <div id="io0mg9l"><b>RSD</b></div>
@@ -618,7 +618,7 @@
                                                 <div id="isxltde" class="retail-price">Stara cena  <span id="ipesxmk" class="js-retail-price">{{$prices[3]['originalPrice']}} RSD</span></div>
                                             </div>
                                             <div id="ipi8ryu">Uštedi</div>
-                                            <div id="ix53oyf" class="js-save-price">{{$prices[3]['originalPrice']-$prices[3]['amount']}} RSD</div>
+                                            <div id="ix53oyf" class="js-save-price">{{$prices[3]['originalPrice']-$prices[3]['amount']+300}} RSD</div>
                                             <div id="igespnn"></div>
                                         </div>
                                         <div id="i0wjhf9"></div>
@@ -668,7 +668,7 @@
             <div class="form-group">
                 <select name="quantity" class="quantity">
                     @foreach($prices as $singlePrice)
-                        <option value="{{$singlePrice['quantity']}}">{{$singlePrice['quantity']}} x {{$product->product_name}} ({{$singlePrice['amount']}} RSD)</option>
+                        <option value="{{$singlePrice['quantity']}}">{{$singlePrice['quantity']}} x {{$product->product_name}} ({{$singlePrice['amount']}} RSD) @if(!$singlePrice['is_free_shipping']) + DOSTAVA @endif</option>
                     @endforeach
                 </select>
             </div>

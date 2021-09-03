@@ -43,7 +43,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm">Brand</span>
                                 </div>
-                                <select name="brandDdl" id="brandDdl" data-toggle="dropdown" required>
+                                <select name="brandDdl" id="brandDdl" data-toggle="dropdown" required data-live-search="true">
                                     @foreach($brandsDdl as $brand)
                                         <option value="{{ $brand->id_brand }}">{{ $brand->brand_name }}</option>
                                     @endforeach
@@ -62,7 +62,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm">Country</span>
                                 </div>
-                                <select name="countryDdl" id="countryDdl" data-toggle="dropdown" required>
+                                <select name="countryDdl" id="countryDdl" data-toggle="dropdown" required data-live-search="true">
                                     @foreach($countriesDdl as $country)
                                         <option value="{{ $country->id_country }}">{{ $country->country_name }}</option>
                                     @endforeach
@@ -93,7 +93,7 @@
                             </span>
                             <span class="col col-xl-auto col-lg-12 col-md-12 float-right" style="margin-left:auto;">
                                 <span style="margin-right: 10px;"><a href="{{ route('productIndex') }}">Reset filters</a></span>
-                                <select id="brandFilter"  name="brandFilter">
+                                <select id="brandFilter"  name="brandFilter" data-live-search="true">
                                     <option value="" data-width="auto" selected>Brand</option>
                                     @foreach($brandsDdl as $brand)
                                         <option value="{{ $brand->id_brand }}">{{ $brand->brand_name }}</option>
