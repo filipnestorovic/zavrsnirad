@@ -1,6 +1,7 @@
 <input type="hidden" id="currencyHidden" value="{{ $prices[1]['currency']}}"/>
 <script>
     $(document).ready(function () {
+
         let name, email, phone, city, zip, country_code, currency_symbol, currency_code, amount;
         const baseURL = "{{ asset('/') }}";
         const csrf_token = "{{ csrf_token() }}";
@@ -11,7 +12,7 @@
         let sentAddToCart = 0;
 
         if(cookie_uuid) {
-            wbSendEvent(cookie_uuid, url_medium, cookie_campaign, cookie_adset, cookie_ad, cookie_affid, '{{$fb_event}}', baseURL);
+            wbSendEvent(cookie_uuid, url_medium, cookie_campaign, cookie_adset, cookie_ad, cookie_affid, cookie_netid, cookie_clid, '{{strtoupper($product->country_code)}}', '{{$fb_event}}', baseURL);
         }
 
         @if($fb_event === "Purchase" || $fb_event === "Purchase2")
@@ -53,7 +54,7 @@
                 sendEventDB(sessionId,2);
             }
             if(cookie_uuid) {
-                wbSendEvent(cookie_uuid, url_medium, cookie_campaign, cookie_adset, cookie_ad, cookie_affid, 'InitiateCheckout', baseURL);
+                wbSendEvent(cookie_uuid, url_medium, cookie_campaign, cookie_adset, cookie_ad, cookie_affid, cookie_netid, cookie_clid, '{{strtoupper($product->country_code)}}', 'InitiateCheckout', baseURL);
             }
         });
 
@@ -66,7 +67,7 @@
             if(landerCheckout === "1" && sentAddToCart === 0) {
                 sendEventDB(sessionId,2);
                 if(cookie_uuid) {
-                    wbSendEvent(cookie_uuid, url_medium, cookie_campaign, cookie_adset, cookie_ad, cookie_affid, 'AddToCart', baseURL);
+                    wbSendEvent(cookie_uuid, url_medium, cookie_campaign, cookie_adset, cookie_ad, cookie_affid, cookie_netid, cookie_clid, '{{strtoupper($product->country_code)}}', 'AddToCart', baseURL);
                 }
             }
         });
@@ -118,7 +119,7 @@
         url.searchParams.delete('wb_campaignID');
         url.searchParams.delete('wb_adsetID');
         url.searchParams.delete('wb_adID');
-        url.searchParams.delete('affID');
+        // url.searchParams.delete('affID');
 
         url.searchParams.delete('wb_campaign');
         url.searchParams.delete('wb_adset');
