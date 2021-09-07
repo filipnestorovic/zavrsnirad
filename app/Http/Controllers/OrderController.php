@@ -250,11 +250,11 @@ class OrderController extends Controller
         $jsonArray['wb_adset'] = $orderDetails->wb_adset;
         $jsonArray['wb_ad'] = $orderDetails->wb_ad;
 
-        $jsonArray['session_id'] = $_COOKIE['wbSessionId'];
+        $jsonArray['session_id'] = $_COOKIE['wbSessionId'] ?? null;
 
-        $jsonArray['affiliate_id'] = $_COOKIE['affid'];
-        $jsonArray['network_id'] = $_COOKIE['netid'];
-        $jsonArray['click_id'] = $_COOKIE['clid'];
+        $jsonArray['affiliate_id'] = $_COOKIE['affid'] ?? null;
+        $jsonArray['network_id'] = $_COOKIE['netid'] ?? null;
+        $jsonArray['click_id'] = $_COOKIE['clid'] ?? null;
 
         if($orderDetails->is_free_shipping===1) {
             $jsonArray['shipping_lines'] = array([
