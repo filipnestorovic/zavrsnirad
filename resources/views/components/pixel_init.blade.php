@@ -45,6 +45,15 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'UA-202248199-1');
-</script>
 
-<script src="https://new.serverwombat.com/js/trck.js" type="text/javascript"></script>
+    let countrySubdomain = "new";
+    @if($product->country_code === "ba") countrySubdomain = "ba" @endif
+</script>
+@if($_SERVER['REMOTE_ADDR'] === "127.0.0.1")
+    <script src="http://admin.serverwombat.com/js/trck.js" type="text/javascript"></script>
+@else
+    <script>
+        document.write("<script type='text/javascript' src='https://"+ countrySubdomain + ".serverwombat.com/js/trck.js'><\/scr" + "ipt>");
+    </script>
+@endif
+
