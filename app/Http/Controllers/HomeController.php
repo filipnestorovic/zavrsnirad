@@ -238,6 +238,8 @@ class HomeController extends Controller
             $this->customerData['wb_adset'] = $request->get('wb_adset');
             $this->customerData['wb_ad'] = $request->get('wb_ad');
 
+            $this->data['brandUrl'] = $brandUrl;
+
             try {
                 $session_id = $this->insertSession($this->customerData);
                 $this->customerData['session_id'] = $session_id;
