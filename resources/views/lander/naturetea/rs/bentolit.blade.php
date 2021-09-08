@@ -23,7 +23,6 @@
     <link href="../../../febatigr.com/content/Me92Zyq3KdbLV2B/css/slick.css" rel="stylesheet"/>
     <link href="../../../febatigr.com/content/Me92Zyq3KdbLV2B/css/main.css" rel="stylesheet"/>
     <link href="../../../febatigr.com/content/Me92Zyq3KdbLV2B/css/media.css" rel="stylesheet"/>
-
 </head>
 <body>
 <div class="s__main">
