@@ -23,12 +23,14 @@ class CountryCheck
 
     public function handle(Request $request, Closure $next)
     {
-        if(request()->ip() === "127.0.0.1") {
-            $countryCodeFromIp = "rs";
-            $this->unexistingCountryName = "Localhost";
-        } else {
-            $countryCodeFromIp = $this->getLocationByIp($request); // get country from customer ip
-        }
+//        if(request()->ip() === "127.0.0.1") {
+//            $countryCodeFromIp = "rs";
+//            $this->unexistingCountryName = "Localhost";
+//        } else {
+//            $countryCodeFromIp = $this->getLocationByIp($request); // get country from customer ip
+//        }
+
+        $countryCodeFromIp = "rs";
 
         $countryModel = new Country();
         $countryShortcode = strtolower($request->route('country')); // get country from url
