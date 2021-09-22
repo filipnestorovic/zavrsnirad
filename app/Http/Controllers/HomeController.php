@@ -372,29 +372,30 @@ class HomeController extends Controller
             } else {
                 $generate = 1;
             }
-        } else {
-            $ipUuid = $this->modelSession->checkSessionIp(request()->ip());
-            $i = 0;
-            if(count($ipUuid)>0) {
-                foreach($ipUuid as $singleSession) {
-                    $variation = $this->modelVariation->getAllVariations(null,null,null,null,null, null, $singleSession->variation_id);
-                    if(count($variation)>0) {
-                        $variation_product_id = $variation[0]->id_product;
-                        if($variation_product_id === $product_id) {
-                            $this->variationField = $variation;
-                            $response = 1;
-                            $uuid = $ipUuid[$i]->uuid;
-                            $generate = 0;
-                        } else {
-                            $generate = 1;
-                        }
-                    }
-                    $i++;
-                }
-            } else {
-                $generate = 1;
-            }
         }
+//        else {
+//            $ipUuid = $this->modelSession->checkSessionIp(request()->ip());
+//            $i = 0;
+//            if(count($ipUuid)>0) {
+//                foreach($ipUuid as $singleSession) {
+//                    $variation = $this->modelVariation->getAllVariations(null,null,null,null,null, null, $singleSession->variation_id);
+//                    if(count($variation)>0) {
+//                        $variation_product_id = $variation[0]->id_product;
+//                        if($variation_product_id === $product_id) {
+//                            $this->variationField = $variation;
+//                            $response = 1;
+//                            $uuid = $ipUuid[$i]->uuid;
+//                            $generate = 0;
+//                        } else {
+//                            $generate = 1;
+//                        }
+//                    }
+//                    $i++;
+//                }
+//            } else {
+//                $generate = 1;
+//            }
+//        }
 
         if($generate === 1) {
             $uuid = $this->generateUuid();
