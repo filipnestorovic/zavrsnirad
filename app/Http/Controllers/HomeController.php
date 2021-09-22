@@ -373,7 +373,8 @@ class HomeController extends Controller
                 $generate = 1;
             }
         }
-//        else {
+        else {
+            $generate = 1;
 //            $ipUuid = $this->modelSession->checkSessionIp(request()->ip());
 //            $i = 0;
 //            if(count($ipUuid)>0) {
@@ -395,7 +396,7 @@ class HomeController extends Controller
 //            } else {
 //                $generate = 1;
 //            }
-//        }
+        }
 
         if($generate === 1) {
             $uuid = $this->generateUuid();
