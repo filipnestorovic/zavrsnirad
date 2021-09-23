@@ -9,43 +9,32 @@
 </head>
 <body>
 <div style="background-color: #b8b8b8; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;">
-    <div class="container">
+    <div class="container" id="main_div">
         <header>
-            <div style="color: #1c1c1c; font-size: 13px; font-weight: 400; text-align: right; padding: 10px 0 0; border-bottom: 1px solid #1b1b1b;">
-            </div>
-            <div class="header_content">
-                <h1> Portal o zdravlju <br><span> Samo proverene informacije! </span></h1>
-                <div class="search-container">
-                    <a class="cta" href="PASTE_REDIRECT_URL" style="width: 28%;">
-                        <div class="header_input"><input name type="text" value><img alt src="{{ asset('/') }}natureteaFiles/slimonex_adv/search.png" style="width: 31px; height: 20px;"></div>
-                    </a>
-                </div>
-            </div>
+            <div style="color: #1c1c1c; font-size: 13px; font-weight: 400; text-align: right; padding: 10px 0 0; border-bottom: 1px solid #1b1b1b;"></div>
             <div class="header_box"><img alt src="{{ asset('/') }}natureteaFiles/slimonex_adv/header_img1.png" style="max-width: 117px; width: 100%; margin: 15px 25px;">
                 <img alt src="{{ asset('/') }}natureteaFiles/slimonex_adv/header_img2.png" style="max-width: 116px; width: 100%; margin: 15px 25px;">
                 <img alt src="{{ asset('/') }}natureteaFiles/slimonex_adv/header_img3.png" style="max-width: 116px; width: 100%; margin: 15px 0px;">
                 <img alt src="{{ asset('/') }}natureteaFiles/slimonex_adv/header_img4.png" style="max-width: 147px; width: 100%; margin: 15px 25px;">
             </div>
             <ul>
-                <li><a class="cta" href="PASTE_REDIRECT_URL"> O nama </a></li>
-                <li><a class="cta" href="PASTE_REDIRECT_URL"> NAJNOVIJE VESTI </a></li>
-                <li><a class="cta" href="PASTE_REDIRECT_URL"> Stavke </a></li>
-                <li><a class="cta" href="PASTE_REDIRECT_URL"> DIJAGNOSTIČKI CENTAR </a></li>
-                <li><a class="cta" href="PASTE_REDIRECT_URL"> NAŠI SPECIJALISTI </a></li>
-                <li><a class="cta" href="PASTE_REDIRECT_URL"> PRIDRUŽITE NAM SE </a></li>
+                <li><a class="cta" href="#main_div"> O nama </a></li>
+                <li><a class="cta" href="#main_div"> NAJNOVIJE VESTI </a></li>
+                <li><a class="cta" href="#main_div"> Stavke </a></li>
+                <li><a class="cta" href="#main_div"> DIJAGNOSTIČKI CENTAR </a></li>
+                <li><a class="cta" href="#main_div"> NAŠI SPECIJALISTI </a></li>
+                <li><a class="cta" href="#main_div"> PRIDRUŽITE NAM SE </a></li>
             </ul>
         </header>
         <div class="wrapper">
             <section class="content">
-                <a class="cta" href="PASTE_REDIRECT_URL" style="text-decoration: none; color: #000dc3; font-size: 13px; font-weight: 400; line-height: 18px; text-align: left; margin: 0 0 25px;"> ČLANCI/NAJNOVIJA OTKRIĆA/"Vreme prekomerne težine je prošlo! Revolucionarno otkriće srpskog stručnjaka... </a>
-                <h2> Vreme prekomerne težine je prošlo! <br>
-                    <span>Srpski stručnjak kreirao je tretman sa velikom snagom smanjenja težine: 10+ kilograma u mesec dana , bez gladovanja, bez napornih vežbi i bez jojo efekta</span>
-                </h2>
+                <a class="cta" href="#main_div" style="text-decoration: none; color: #000dc3; font-size: 13px; font-weight: 400; line-height: 18px; text-align: left; margin: 0 0 25px;"> ČLANCI/NAJNOVIJA OTKRIĆA/"Vreme prekomerne težine je prošlo! Revolucionarno otkriće srpskog stručnjaka... </a>
+                <h1 style="margin: 20px 0;"> <span>Vreme prekomerne težine je prošlo!</span></h1>
+                <h3>Srpski stručnjak kreirao je tretman sa velikom snagom smanjenja težine: 10+ kilograma u mesec dana , bez gladovanja, bez napornih vežbi i bez jojo efekta</h3>
                 <img alt src="{{ asset('/') }}natureteaFiles/slimonex_adv/img1.jpg" style="width: 100%; margin: 25px 0 15px;">
-                <h3>Nutricionisti se plaše da bi mogli ostati bez posla. Da li je moguće da ih ova nova metoda za mršavljenje čini potpuno nebitnim? Poznati nutricionisti ne sumnjaju. Nakon što je u Srbiji kreirana prirodna formula Slimonex. stigla je očekivana revolucija u borbi protiv prekomerne težine!</h3>
-                <br>
-                <h3>Već više hiljada korisnika ovog proizvoda izgubilo je u proseku 14 kilograma za 28 dana: bez napora, bezbedno, bez jojo efekta. Zbog toga su rizici od srčanog i moždanog udara smanjeni, nivo lošeg holesterola smanjen takođem a  uspeli su da se zaštite od ateroskleroze. Vratili su atraktivan izgled, samopouzdanje i izvrsnu fizičku kondiciju. Kako je to moguće?</h3>
-                <p>Vaso Bicović odlučio je pomoći supruzi s viškom kilograma i kompleksima. Bio je to početak revolucije u borbi protiv prekomerne težine. Nakon godinu dana istraživanja, razvijen je 100% prirodni, bezbedni i jednostavni za upotrebu čaj za mršavljenje Slimonex. Zahvaljujući čaju Slimonex, supruga je smršala 37 kilograma za manje od 2 meseca i, kako ponosno priznaje, "dobila izgled modela!"</p>
+                <p>Nutricionisti se plaše da bi mogli ostati bez posla. Da li je moguće da ih ova nova metoda za mršavljenje čini potpuno nebitnim? Poznati nutricionisti ne sumnjaju. Nakon što je u Srbiji kreirana prirodna formula <a href="#product-box">Slimonex</a>. stigla je očekivana revolucija u borbi protiv prekomerne težine!</p>
+                <p>Već više hiljada korisnika ovog proizvoda izgubilo je u proseku 14 kilograma za 28 dana: bez napora, bezbedno, bez jojo efekta. Zbog toga su rizici od srčanog i moždanog udara smanjeni, nivo lošeg holesterola smanjen takođem a  uspeli su da se zaštite od ateroskleroze. Vratili su atraktivan izgled, samopouzdanje i izvrsnu fizičku kondiciju. Kako je to moguće?</p>
+                <p>Vaso Bicović odlučio je pomoći supruzi s viškom kilograma i kompleksima. Bio je to početak revolucije u borbi protiv prekomerne težine. Nakon godinu dana istraživanja, razvijen je 100% prirodni, bezbedni i jednostavni za upotrebu čaj za mršavljenje <a href="#product-box">Slimonex</a>. Zahvaljujući čaju <a href="#product-box">Slimonex</a>, supruga je smršala 37 kilograma za manje od 2 meseca i, kako ponosno priznaje, "dobila izgled modela!"</p>
                 <p>Popularni časopisi već su nazvali ovaj tretman "pionirskim dostignućem u dijetetici" , a Bicović je već dobio nekoliko prestižnih nagrada. Zahvaljujući uspehu njegove formule, čak i ljudi koji imaju prekomernu težinu ili već dugi niz godina pate od prekomerne težine (bez obzira na njihove uzroke) mogu da izgube približno dosta kilograma u kratkom periodu: vrlo efikasno i bez gladovanja ili vežbanja.</p>
                 <h4>"Držanje dijete je patnja i bačen novac!" Zašto ljudi tako razmišljaju?</h4>
                 <img alt class="img2" src="{{ asset('/') }}natureteaFiles/slimonex_adv/img2.jpg" style>
@@ -77,13 +66,13 @@
                         <p>Telo, oslabljeno izgladnjivanjem, počinje da skladišti energiju za kasnije, što uzrokuje usporavanje metabolizma, sve dok se on potpuno ne zaustavi. Posledično, nakon dijete telo se još brže vraća na prethodnu težinu , pre perioda mršavljenja.</p>
                     </li>
                 </ul>
-                <h5 style="margin-top: 40px;">Slimonex, formula čaja za mršavljenje koju je razvio Bicović, je revolucija u borbi za vitku liniju!</h5>
+                <h5 style="margin-top: 40px;"><a href="#product-box">Slimonex</a>, formula čaja za mršavljenje koju je razvio Bicović, je revolucija u borbi za vitku liniju!</h5>
                 <p>Držanje dijete ljudima oduzima zdravlje, energiju i novac. Stalno brojanje kalorija, briga o obroku i odbijanje uživanja u jelu. Glad, umor i uništavanje tela . Tu ogromnu cenu plaćamo za... Razočarenje jer su rezultati obično minimalni. Skoro odmah se pojavljuje jojo efekat koji uništava sav trud i odricanja učinjena tokom vremena.</p>
-                <p>Prirodna formula, čaj za mršavljenje Slimonex radi potpuno obrnuto. Ne trebate ničeg da se odričete, pazite šta i kada jedete ili patite od uporne gladi. Sagorevanje masti vrši se automatski. Kako je to opisao jedan od ispitanika: "Mršavite dok gledate televiziju!" Pored toga, ovaj tretman normalizuje metabolizam i trajno blokira jojo efekat. A sve to košta manje od limenke koka kole dnevno!</p>
+                <p>Prirodna formula, čaj za mršavljenje <a href="#product-box">Slimonex</a> radi potpuno obrnuto. Ne trebate ničeg da se odričete, pazite šta i kada jedete ili patite od uporne gladi. Sagorevanje masti vrši se automatski. Kako je to opisao jedan od ispitanika: "Mršavite dok gledate televiziju!" Pored toga, ovaj tretman normalizuje metabolizam i trajno blokira jojo efekat. A sve to košta manje od limenke koka kole dnevno!</p>
                 <h5>Sada svi mogu da izgube kilograme bez napora, brzo i bezbedno!</h5>
-                <p>Slimonex dolazi u obliku čaja. To ga čini praktičnim za korišćenje bilo gde. Da biste napravili napitak, pomešajte kašiku Slimonexa sa ključalom vodom (150 ml) i pustite da odstoji. Pored pomenutih svojstava, Slimonex nadoknađuje nedostatak tečnosti u telu jer 90% ljudi ne unosi dnevnu normu vode, što izaziva stagnaciju toksina, edeme, nekontrolisani apetit i loše stanje zdravlja. Njegovo korišćenje potpuno bezbedno, što je dokazano odobrenjem ministarstva zdravlja Republike Srbije broj 18848/2021</p>
+                <p><a href="#product-box">Slimonex</a> dolazi u obliku čaja. To ga čini praktičnim za korišćenje bilo gde. Da biste napravili napitak, pomešajte kašiku <a href="#product-box">Slimonexa</a> sa ključalom vodom (150 ml) i pustite da odstoji. Pored pomenutih svojstava, <a href="#product-box">Slimonex</a> nadoknađuje nedostatak tečnosti u telu jer 90% ljudi ne unosi dnevnu normu vode, što izaziva stagnaciju toksina, edeme, nekontrolisani apetit i loše stanje zdravlja. Njegovo korišćenje potpuno bezbedno, što je dokazano odobrenjem ministarstva zdravlja Republike Srbije broj 18848/2021</p>
                 <h5> Dokazana efikasnost </h5>
-                <p>Nakon nekoliko sati od prve šolje Slimonex čaj, telo počinje da se pročišćava od štetnih toksina, zahvaljujući čemu se smanjuje apetit i započinje se fazu intenzivnog sagorevanja kalorija I razlaganja masti. Nivo lošeg holesterola i šećera se smajuje, a održava se i zdrava funkcija jetre. </p>
+                <p>Nakon nekoliko sati od prve šolje <a href="#product-box">Slimonex</a> čaj, telo počinje da se pročišćava od štetnih toksina, zahvaljujući čemu se smanjuje apetit i započinje se fazu intenzivnog sagorevanja kalorija I razlaganja masti. Nivo lošeg holesterola i šećera se smajuje, a održava se i zdrava funkcija jetre. </p>
                 <p></p>
                 {{--<h5> Zabeleženi efekti tretmana govore sami za sebe: </h5>--}}
                 {{--<div class="chart">--}}
@@ -117,24 +106,25 @@
 
                 <h5>Mirka Vojisavljević (38  godina) iz Beograda jedna je od onih koja već duže vreme koristi Slimonex</h5>
                 <img alt src="{{ asset('/') }}natureteaFiles/slimonex_adv/img3.jpg" style="width: 100%; margin: 10px 0;">
-                <p>"Do nedavno sam se stidela moje gojaznosti i sakrivala se pod slojevima široke odeće. Mnogo puta sam pokušavala smršati, ali nisam postigla nikakve rezultate. Čak sam išla kod nutricioniste. Za tu posetu potrošila sam veliki deo plate, ali on mi nije pomogao. Morala sam da brojim svaki kolač koji sam pojela, svaku čašu vina koju sam popila. Vežbanje? Kako sam mogla, nakon dugog radnog dana, da završim dan u teretani? A ko bi se brinuo o kući, deci, psu? Vremenom sam saznala za Slimonex. Sada već znam da bih napravila životnu grešku da nisam koristila ovaj tretman. Bila sam baš gojazna, a nakon 4 nedelje mršavija sam od moje bratanice tinejdžerke. Nisam morala da mrdnem prstom, samo sam koristila ovaj Slimonex čaj. Prešla sam sa veličine 44 na 38, vratila samopouzdanje i sada se osećam senzacionalno, kao nikada pre. Kolegice mi zavide na mojoj prelepoj figuri. Preporučujem ovaj čaj svima!!!"</p>
+                <p>"Do nedavno sam se stidela moje gojaznosti i sakrivala se pod slojevima široke odeće. Mnogo puta sam pokušavala smršati, ali nisam postigla nikakve rezultate. Čak sam išla kod nutricioniste. Za tu posetu potrošila sam veliki deo plate, ali on mi nije pomogao. Morala sam da brojim svaki kolač koji sam pojela, svaku čašu vina koju sam popila. Vežbanje? Kako sam mogla, nakon dugog radnog dana, da završim dan u teretani? A ko bi se brinuo o kući, deci, psu? Vremenom sam saznala za <a href="#product-box">Slimonex</a>. Sada već znam da bih napravila životnu grešku da nisam koristila ovaj tretman. Bila sam baš gojazna, a nakon 4 nedelje mršavija sam od moje bratanice tinejdžerke. Nisam morala da mrdnem prstom, samo sam koristila ovaj <a href="#product-box">Slimonex</a> čaj. Prešla sam sa veličine 44 na 38, vratila samopouzdanje i sada se osećam senzacionalno, kao nikada pre. Kolegice mi zavide na mojoj prelepoj figuri. Preporučujem ovaj čaj svima!!!"</p>
                 <h5>Zašto patiti zbog prekomerne težine ili ubijanja dijetama, ako je moguće smršati na <u>jednostavan, brz i ekonomičan način?</u></h5>
-                <p>Efikasnost Slimonex čaja za mršavljenje bez sumnje je dokazalo Ministarstvo.  Bicović i dalje prima pozitivna mišljenja renomiranih stručnjaka, kao i prestižne nagrade zbog njegovih dostignuća.</p>
-                <p>Dobra vest je da možete Slimonex čaj da nabavite po neverovatnom popustu od 40%! Svim našim čitaocima obezbedili smo mogućnost da taj čaj naruče po promo ceni do isteka zaliha, tako da požurite.</p>
-                {{--<a class="cta" href="PASTE_REDIRECT_URL"> Kliknite ovde da biste dobili tretman sa popustom i izgubili 14 kilograma za 1 mesec >> </a>--}}
+                <p>Efikasnost <a href="#product-box">Slimonex</a> čaja za mršavljenje bez sumnje je dokazalo Ministarstvo.  Bicović i dalje prima pozitivna mišljenja renomiranih stručnjaka, kao i prestižne nagrade zbog njegovih dostignuća.</p>
+                <p>Dobra vest je da možete <a href="#product-box">Slimonex</a> čaj da nabavite po neverovatnom popustu od 40%! Svim našim čitaocima obezbedili smo mogućnost da taj čaj naruče po promo ceni do isteka zaliha, tako da požurite.</p>
+                {{--<a class="cta" href="#main_div"> Kliknite ovde da biste dobili tretman sa popustom i izgubili 14 kilograma za 1 mesec >> </a>--}}
+                <p><b>Preporučujem svima da poruče preko zvanične forme za poručivanje!</b></p>
                 <div class="product-box" id="product-box">
                     <div class="prd-lft">
                         <img alt="img" class="btls" src="{{ asset('/') }}natureteaFiles/slimonex/prod.png"/>
                     </div>
                     <div class="prd-rit">
-                        <p class="prd-p3" style="padding-bottom: 5px;">Unesite podatke za dostavu</p>
+                        <span class="prd-p3">Unesite podatke za dostavu</span>
                         <form action="{{$orderRoute}}" method="POST" id="order-form">
                             {{ csrf_field() }}
                             @include('lander.naturapharm.components.form_hidden_fields')
                             <input type="text" name="name" class="form-input" placeholder="Ime i prezime" required/>
                             <input type="text" name="phone" class="form-input" placeholder="Broj telefona" required/>
-                            <input type="text" name="shipping_address" class="form-input" placeholder="Adresa" required/>
-                            <input type="text" name="shipping_city" class="form-input" placeholder="Grad" required/>
+                            {{--<input type="text" name="shipping_address" class="form-input" placeholder="Adresa" required/>--}}
+                            {{--<input type="text" name="shipping_city" class="form-input" placeholder="Grad" required/>--}}
                             <select class="form-input change-package-selector" id="product" name="quantity" required>
                                 @foreach($prices as $singlePrice)
                                     <option value="{{ $singlePrice['quantity'] }}" placeholder="{{ $singlePrice['is_free_shipping'] }}"
@@ -149,76 +139,6 @@
                         </form>
                     </div>
                 </div>
-            </section>
-            <section class="sidebar">
-                <h2> Popularni članci <br> MRŠAVLJENJE: </h2>
-                <a class="cta" href="PASTE_REDIRECT_URL">
-                    <article class>
-                        <img alt src="{{ asset('/') }}natureteaFiles/slimonex_adv/sidebar_img1.jpg" style="width: 68px; height: 68px;">
-                        <p> 5 biljaka za detoksikovanje tela </p>
-                    </article>
-                </a>
-                <a class="cta" href="PASTE_REDIRECT_URL">
-                    <article class>
-                        <img alt src="{{ asset('/') }}natureteaFiles/slimonex_adv/sidebar_img2.jpg" style="width: 68px; height: 68px;">
-                        <p> Kako se uspešno boriti protiv celulita? </p>
-                    </article>
-                </a>
-                <a class="cta" href="PASTE_REDIRECT_URL">
-                    <article class>
-                        <img alt src="{{ asset('/') }}natureteaFiles/slimonex_adv/sidebar_img3.jpg" style="width: 68px; height: 68px;">
-                        <p> Kako imati ravan stomak? Ne radite trbušnjake! </p>
-                    </article>
-                </a>
-                <a class="cta" href="PASTE_REDIRECT_URL">
-                    <article class>
-                        <img alt src="{{ asset('/') }}natureteaFiles/slimonex_adv/sidebar_img4.jpg" style="width: 68px; height: 68px;">
-                        <p> Kuga gojaznosti dece </p>
-                    </article>
-                </a>
-                <a class="cta" href="PASTE_REDIRECT_URL">
-                    <article class>
-                        <img alt src="{{ asset('/') }}natureteaFiles/slimonex_adv/sidebar_img5.jpg" style="width: 68px; height: 68px;">
-                        <p> Šećer: beli ubica </p>
-                    </article>
-                </a>
-                <a class="cta" href="PASTE_REDIRECT_URL">
-                    <article class>
-                        <img alt src="{{ asset('/') }}natureteaFiles/slimonex_adv/sidebar_img6.jpg" style="width: 68px; height: 68px;">
-                        <p> Da li je kokosovo ulje zdravo? </p>
-                    </article>
-                </a>
-                <a class="cta" href="PASTE_REDIRECT_URL">
-                    <article class>
-                        <img alt src="{{ asset('/') }}natureteaFiles/slimonex_adv/sidebar_img7.jpg" style="width: 68px; height: 68px;">
-                        <p> Mitovi i istine o mršavljenju </p>
-                    </article>
-                </a>
-                <a class="cta" href="PASTE_REDIRECT_URL">
-                    <article class>
-                        <img alt src="{{ asset('/') }}natureteaFiles/slimonex_adv/sidebar_img8.jpg" style="width: 68px; height: 68px;">
-                        <p> Ishrana za bolji sluh </p>
-                    </article>
-                </a>
-                <a class="cta" href="PASTE_REDIRECT_URL">
-                    <article class>
-                        <img alt src="{{ asset('/') }}natureteaFiles/slimonex_adv/sidebar_img9.jpg" style="width: 68px; height: 68px;">
-                        <p> Šta vam dijetetičar nikada neće reći (jer od toga ne bi ništa zaradio) </p>
-                    </article>
-                </a>
-                <a class="cta" href="PASTE_REDIRECT_URL">
-                    <article class>
-                        <img alt src="{{ asset('/') }}natureteaFiles/slimonex_adv/sidebar_img10.jpg" style="width: 68px; height: 68px;">
-                        <p> 28 kilograma za 2 meseca: Marinina izvanredna priča </p>
-                    </article>
-                </a>
-                <a class="cta" href="PASTE_REDIRECT_URL">
-                    <div class="banner">
-                        <h2> Posebna ponuda! </h2>
-                        <img alt src="{{ asset('/') }}natureteaFiles/slimonex_adv/goslim_small.png" style="width: 100%;">
-                        <p> Pogledajte >>> </p>
-                    </div>
-                </a>
             </section>
         </div>
         <section class="comments">
@@ -245,7 +165,7 @@
 
                         </span>
                     </h3>
-                    <p> Koristila sam ovaj tretman za smanjenje kilograma koji sam dobila nakon promocije. Zapravo je koštao sasvim malo, a napokon sam smršala! Osećam se kao potpuno druga osoba. GoSlim čaj preporučujem svim srcem. </p>
+                    <p> Koristila sam ovaj tretman za smanjenje kilograma koji sam dobila nakon promocije. Zapravo je koštao sasvim malo, a napokon sam smršala! Osećam se kao potpuno druga osoba. Slimonex čaj preporučujem svim srcem. </p>
                 </div>
             </article>
             <article>
@@ -257,7 +177,7 @@
 
                         </span>
                     </h3>
-                    <p> Ja takođe sam probala GoSlim i smršala sam, uprkos genetskim tendencijama ka gojenju. Vrlo je jednostavno i već sam sve rekla o mojoj metamorfozi na mom blogu i preporučujem svima :) </p>
+                    <p> Ja sam takođe probala Slimonex i smršala sam, uprkos genetskim tendencijama ka gojenju. Vrlo je jednostavno i već sam sve rekla o mojoj metamorfozi na mom blogu i preporučujem svima :) </p>
                 </div>
             </article>
             <article>
@@ -269,7 +189,7 @@
 
                         </span>
                     </h3>
-                    <p> Već sam upala u zamku mnogih dodataka za mršavljenje. Očigledno mi ništa nije pomoglo, samo sam potrošila novac. Ali moram biti iskrena, GoSlim je prva metoda koja je mi je pomogla. Koristim ga samo nedelju dana, ali prestala sam jesti noću i apetit mi se smanjio. Jedem manje, zdravije i osećam se lakše. I uopšte ne vodim računa o tome šta jedem. I već sam smršala 8 kilograma, celulit je nestao, jedva čekam četvrtu nedelju!!!! </p>
+                    <p> Već sam upala u zamku mnogih dodataka za mršavljenje. Očigledno mi ništa nije pomoglo, samo sam potrošila novac. Ali moram biti iskrena, Slimonex je prva metoda koja je mi je pomogla. Koristim ga samo nedelju dana, ali prestala sam jesti noću i apetit mi se smanjio. Jedem manje, zdravije i osećam se lakše, i uopšte ne vodim računa o tome šta jedem. Već sam smršala, celulit je nestao, jedva čekam četvrtu nedelju!!!! </p>
                 </div>
             </article>
             <article>
@@ -281,7 +201,7 @@
 
                         </span>
                     </h3>
-                    <p> Dame i gospodo, takođe moram nešto da kažem jer sam sedam godina patio od prekomerne težine. Kao i svaki muškarac koji uživa u pivu, volim da jedem dobro. Supruga me gnjavila bez prestanka, govorila mi je da nešto učinim sa tim, jer sam imao povišen holesterol, a gojaznost nije zdrava. Sve dok mi ćerka nije kupila ovaj čaj, a zatim sam ga probao. Ali nisam promenio moj stil života. Izgubio sam 10 kilograma za 3 nedelje i moji medicinski nalazi su u redu. Dakle, zdraviji sam i oslobođen zvocanja moje supruge </p>
+                    <p> Dame i gospodo, takođe moram nešto da kažem jer sam sedam godina patio od prekomerne težine. Kao i svaki muškarac koji uživa u pivu, volim da jedem dobro. Supruga me gnjavila bez prestanka, govorila mi je da nešto učinim sa tim, jer sam imao povišen holesterol, a gojaznost nije zdrava. Sve dok mi ćerka nije kupila ovaj čaj, a zatim sam ga probao. Ali nisam promenio moj stil života. Izgubio sam dosta kilograma za 3 nedelje i moji medicinski nalazi su u redu. Dakle, zdraviji sam i oslobođen zvocanja moje supruge </p>
                 </div>
             </article>
             <article>
@@ -293,7 +213,7 @@
 
                         </span>
                     </h3>
-                    <p> Ja takođe sam koristio GoSlim i delovao je sjajno. Tretman koristim tek dve nedelje, ali već osećam da su mi pantalone široke. Morate to sami proveriti jer nikada nisam video negativno mišljenje o ovoj metodi za mršavljenje </p>
+                    <p> Ja sam takođe koristio Slimonex i delovao je sjajno. Tretman koristim tek dve nedelje, ali već osećam da su mi pantalone široke. Morate to sami proveriti jer nikada nisam video negativno mišljenje o ovoj metodi za mršavljenje </p>
                 </div>
             </article>
             <article>
@@ -305,21 +225,21 @@
 
                         </span>
                     </h3>
-                    <p> pregledajući ovu stranicu nisam mislila da ću čitati o čudima ove vrste. Moram na ovaj tretman. Umorna sam od ovog odvratnog stomaka i debelih bedara. Napokon, postoji nešto što deluje! </p>
+                    <p> Pregledajući ovu stranicu nisam mislila da ću čitati o čudima ove vrste. Moram na ovaj tretman. Umorna sam od ovog odvratnog stomaka i debelih bedara. Napokon, postoji nešto što deluje! </p>
                 </div>
             </article>
-            <article>
-                <img alt src="{{ asset('/') }}natureteaFiles/slimonex_adv/avatar.png" style="width: 41px; height: 41px;">
-                <div>
-                    <h3>
-                        Dara
-                        <span>
+            {{--<article>--}}
+                {{--<img alt src="{{ asset('/') }}natureteaFiles/slimonex_adv/avatar.png" style="width: 41px; height: 41px;">--}}
+                {{--<div>--}}
+                    {{--<h3>--}}
+                        {{--Dara--}}
+                        {{--<span>--}}
 
-                        </span>
-                    </h3>
-                    <p> Oslabila sam 16 kilograma! Pre 30 dana moja težina je bila 77 kilograma, danas 61 kg. Preporučujem vam da poručite dok traje promocija. </p>
-                </div>
-            </article>
+                        {{--</span>--}}
+                    {{--</h3>--}}
+                    {{--<p> Oslabila sam 16 kilograma! Pre 30 dana moja težina je bila 77 kilograma, danas 61 kg. Preporučujem vam da poručite dok traje promocija. </p>--}}
+                {{--</div>--}}
+            {{--</article>--}}
             <article>
                 <img alt src="{{ asset('/') }}natureteaFiles/slimonex_adv/avatar.png" style="width: 41px; height: 41px;">
                 <div>
@@ -353,7 +273,7 @@
 
                         </span>
                     </h3>
-                    <p> Kristina Da, ja na primer. U mom slučaju je to nasledno, svi smo debeli. Ali dobro, nakon 3 nedelje korišćenja GoSlima-a više ne izgledam kao moja porodica :) </p>
+                    <p> Kristina Da, ja na primer. U mom slučaju je to nasledno, svi smo debeli. Ali dobro, nakon 3 nedelje korišćenja Slimonex-a više ne izgledam kao moja porodica :) </p>
                 </div>
             </article>
             <article>
@@ -368,18 +288,18 @@
                     <p> Janko, cenim vaš odgovor. I ja ću da riskiram i pokušam, ionako mi ništa ne nedostaje... </p>
                 </div>
             </article>
-            <article>
-                <img alt src="{{ asset('/') }}natureteaFiles/slimonex_adv/avatar.png" style="width: 41px; height: 41px;">
-                <div>
-                    <h3>
-                        Jagoda
-                        <span>
+            {{--<article>--}}
+                {{--<img alt src="{{ asset('/') }}natureteaFiles/slimonex_adv/avatar.png" style="width: 41px; height: 41px;">--}}
+                {{--<div>--}}
+                    {{--<h3>--}}
+                        {{--Jagoda--}}
+                        {{--<span>--}}
 
-                        </span>
-                    </h3>
-                    <p> Oslabila sam 15 kilograma sa metodom prof. Lukića :), puno pozdrava, preporučujem! </p>
-                </div>
-            </article>
+                        {{--</span>--}}
+                    {{--</h3>--}}
+                    {{--<p> Oslabila sam 15 kilograma sa metodom prof. Lukića :), puno pozdrava, preporučujem! </p>--}}
+                {{--</div>--}}
+            {{--</article>--}}
             <article>
                 <img alt src="{{ asset('/') }}natureteaFiles/slimonex_adv/avatar.png" style="width: 41px; height: 41px;">
                 <div>
@@ -413,7 +333,7 @@
 
                         </span>
                     </h3>
-                    <p> moja majka je smršala sa ovim GoSlim čajem, nakon 20 godina ozbiljnih problema sa prekomernom težinom </p>
+                    <p> moja majka je smršala sa ovim Slimonex čajem, nakon 20 godina ozbiljnih problema sa prekomernom težinom </p>
                 </div>
             </article>
             <article>
@@ -432,6 +352,9 @@
     </div>
 </div>
 <style>
+    html {
+        scroll-behavior: smooth;
+    }
     .product-box {
         float: left;
         width: 100%;
@@ -463,6 +386,7 @@
         font-weight: 600;
         font-family: 'Open Sans', sans-serif;
         margin-bottom: 30px;
+        margin-left: 60px;
     }
     .product-box .btn {
         background-color: #ffb600;
@@ -509,7 +433,7 @@
             font-size: 16px;
             line-height: 23px;
             margin-bottom: 15px;
-            margin-left: 15px;
+            margin-left: 30px;
         }
         .btls {
             margin-top: 80px;
@@ -530,6 +454,28 @@
             width: 100%;
         }
     }
+    .freeShippingDiv {
+        color: #ff0000;
+        text-align: center;
+        display: none;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+    a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #1b478a;
+    }
 </style>
+<script>
+    $('.change-package-selector').click(function () {
+        let fsh = $('option:selected', this).attr('placeholder');
+        if(fsh == 1) {
+            $(this).next('.freeShippingDiv').slideDown();
+        } else {
+            $(this).next('.freeShippingDiv').slideUp();
+        }
+    })
+</script>
 </body>
 </html>

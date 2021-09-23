@@ -581,7 +581,6 @@ header ul li a {
 
 .content {
   width: auto;
-  max-width: 715px;
 }
 
 .content h2 {
@@ -624,10 +623,10 @@ header ul li a {
 }
 
 .content .img2 {
-  max-width: 230px;
+  max-width: 260px;
   width: 100%;
   float: left;
-  margin: 0 25px 25px 0;
+  margin: 0 25px 25px 25px;
 }
 
 .content ul {
