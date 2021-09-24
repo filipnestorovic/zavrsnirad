@@ -283,6 +283,6 @@
         </div>
     </div>
 </div>
-
+@include('components.pixel_footer')
 </body>
 </html>
