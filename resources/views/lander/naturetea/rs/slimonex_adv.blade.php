@@ -477,5 +477,6 @@
         }
     })
 </script>
+@include('components.pixel_footer')
 </body>
 </html>

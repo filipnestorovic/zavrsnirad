@@ -188,279 +188,162 @@
                             <img src="{{ asset('/') }}innodermFiles/innoderm_adv/person3.png" class="card-img-100 rounded-circle z-depth-1-half d-flex mr-3"  alt="Generic placeholder image">
                             <div class="media-body">
                                 <a>
-                                    <h5 class="user-name font-weight-bold">Nurse Kristen</h5>
+                                    <h5 class="user-name font-weight-bold">Ana Raičević</h5>
                                 </a>
-                                Rating
-                                <ul class="rating mb-2">
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                </ul>
+                                Ocena
+                                <ul class="rating mb-2"><li><i class="fas fa-star blue-text"></i></li><li><i class="fas fa-star blue-text"></i></li><li><i class="fas fa-star blue-text"></i></li><li><i class="fas fa-star blue-text"></i></li><li><i class="fas fa-star blue-text"></i></li></ul>
                                 <div class="card-data">
                                     <ul class="list-unstyled mb-1">
                                         <li class="comment-date font-small grey-text">
-                                            <i class="far fa-clock"></i> 04/18/2020
+                                            <i class="far fa-clock"></i> 21.7.2021.
                                         </li>
                                     </ul>
                                 </div>
-                                <p class="dark-grey-text article">When it stays in place, this works fantastic! However, I have a hard time keeping it from popping off, which is disappointing. I’ve tried adjusting to multiple spots as well as using both hands, and it’s still difficult to stay on.
-                                    UPDATE: The customer service this company has is amazing. After posting my initial review, they sent me two new aculiefs to try to see if they would stay in place, along with a hand-written note from the CEO! One is a more snug fit, and the other stays in place, even while working all night long! Living with chronic headaches and migraines is not easy, and finding products that work that are not drug-related are even harder, and this is one company dedicated to helping its customers!!
-                                </p>
+                                <p class="dark-grey-text article">Ne mogu da verujem da ova žena ima 47 godina :) Idem da naručim kremu! Jeste li pročitali sastojke na sajtu? Odlični su!!! :)</p>
                             </div>
                         </div>
                         <div class="media mb-3">
                             <img src="{{ asset('/') }}innodermFiles/innoderm_adv/person4.jpg" class="card-img-100 rounded-circle z-depth-1-half d-flex mr-3" alt="Generic placeholder image">
                             <div class="media-body">
                                 <a>
-                                    <h5 class="user-name font-weight-bold">Mark</h5>
+                                    <h5 class="user-name font-weight-bold">Tatjana Kapor</h5>
                                 </a>
-                                Rating
-                                <ul class="rating mb-2">
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star grey-text"></i>
-                                    </li>
-                                </ul>
+                                Ocena
+                                <ul class="rating mb-2"><li><i class="fas fa-star blue-text"></i></li><li><i class="fas fa-star blue-text"></i></li><li><i class="fas fa-star blue-text"></i></li><li><i class="fas fa-star blue-text"></i></li><li><i class="fas fa-star grey-text"></i></li></ul>
                                 <div class="card-data">
                                     <ul class="list-unstyled mb-1">
                                         <li class="comment-date font-small grey-text">
-                                            <i class="far fa-clock"></i> 04/26/2020
+                                            <i class="far fa-clock"></i> 08.05.2021.
                                         </li>
                                     </ul>
                                 </div>
-                                <p class="dark-grey-text article">I placed an order for my daughter who is doing her masters program. She suffers from frequent migraines following a car accident where she had whiplash. She loved it so much that I placed a second order for my daughter that suffered a severe traumatic brain injury in a wreck and also has migraines. We totally love this product! In her words... "These are FLIPPIN’ AWESOME!!!! They really help take the migraine pain away!" I’ve had migraines since my severe traumatic brain injury and I think that this is the best invention ever!!! Nothing comes close to helping like the aculief! THANK YOU! THANK YOU! THANK YOU!</p>
+                                <p class="dark-grey-text article">Innoderm je odličan! Prošle godine je postao baš popularan širom sveta.</p>
                             </div>
                         </div>
                         <div class="media mb-3">
                             <img src="{{ asset('/') }}innodermFiles/innoderm_adv/person2.jpg" class=" card-img-100 rounded-circle z-depth-1-half d-flex mr-3" alt="Generic placeholder image">
                             <div class="media-body">
                                 <a>
-                                    <h5 class="user-name font-weight-bold">M. Decker</h5>
+                                    <h5 class="user-name font-weight-bold">Svetlana Rakić</h5>
                                 </a>
-                                Rating
-                                <ul class="rating mb-2">
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                </ul>
+                                Ocena
+                                <ul class="rating mb-2"><li><i class="fas fa-star blue-text"></i></li><li><i class="fas fa-star blue-text"></i></li><li><i class="fas fa-star blue-text"></i></li><li><i class="fas fa-star blue-text"></i></li><li><i class="fas fa-star blue-text"></i></li></ul>
                                 <div class="card-data">
                                     <ul class="list-unstyled mb-1">
                                         <li class="comment-date font-small grey-text">
-                                            <i class="far fa-clock"></i> 04/29/2020
+                                            <i class="far fa-clock"></i> 02.09.2021.
                                         </li>
                                     </ul>
                                 </div>
-                                <p class="dark-grey-text article">The Aculief appears to be working just as described. It is relaxing and seems to keep headaches away. But I have small hands so it falls off easily when I move around. I found gel-type corn pads wrapped around the two ends makes it stay on and stay comfortable too.</p>
+                                <p class="dark-grey-text article">Da li je to konačno osmišljeno nešto efikasno? Potrošila sam brdo novca kupujući proizvode koji su bili potpuno beskorisni. Naručiću ovu kremu.</p>
                             </div>
                         </div>
                         <div class="media mb-3">
                             <img src="{{ asset('/') }}innodermFiles/innoderm_adv/person1.jpg" class=" card-img-100 rounded-circle z-depth-1-half d-flex mr-3" alt="Generic placeholder image">
                             <div class="media-body">
                                 <a>
-                                    <h5 class="user-name font-weight-bold">Matt Besley</h5>
+                                    <h5 class="user-name font-weight-bold">Marija Bjelić</h5>
                                 </a>
-                                Rating
-                                <ul class="rating mb-2">
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                </ul>
+                                Ocena
+                                <ul class="rating mb-2"><li><i class="fas fa-star blue-text"></i></li><li><i class="fas fa-star blue-text"></i></li><li><i class="fas fa-star blue-text"></i></li><li><i class="fas fa-star blue-text"></i></li><li><i class="fas fa-star blue-text"></i></li></ul>
                                 <div class="card-data">
                                     <ul class="list-unstyled mb-1">
                                         <li class="comment-date font-small grey-text">
-                                            <i class="far fa-clock"></i> 05/01/2020
+                                            <i class="far fa-clock"></i> 27.8.2021.
                                         </li>
                                     </ul>
                                 </div>
-                                <p class="dark-grey-text article">I found this product after my doctor told me I should stop taking so much Advil for my headaches. I have used several Advil a day for years and found out Advil could damage my liver. I was skeptical that this product would work for my level of pain but gave it a try to see what would happen. I was very impressed with how much relief it provided for my pain and headaches​. I have used it several times now and have been very happy with the results each time. If you are like me and suffer from chronic pain and headaches, you should give this product a try.</p>
+                                <p class="dark-grey-text article">Sve je tačno! Ovo je veoma moćan proizvod za podmlađivanje! Male bore nestaju bez traga. Naručila sam na ovom sajtu, sve je sigurno i brzo stiže! </p>
                             </div>
                         </div>
                         <div class="media mb-3">
                             <img src="{{ asset('/') }}innodermFiles/innoderm_adv/person5.jpg" class=" card-img-100 rounded-circle z-depth-1-half d-flex mr-3" alt="Generic placeholder image">
                             <div class="media-body">
                                 <a>
-                                    <h5 class="user-name font-weight-bold">Sonia Irizarry</h5>
+                                    <h5 class="user-name font-weight-bold">Žaklina Tankosić</h5>
                                 </a>
-                                Rating
-                                <ul class="rating mb-2">
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                </ul>
+                                Ocena
+                                <ul class="rating mb-2"><li><i class="fas fa-star blue-text"></i></li><li><i class="fas fa-star blue-text"></i></li><li><i class="fas fa-star blue-text"></i></li><li><i class="fas fa-star blue-text"></i></li><li><i class="fas fa-star blue-text"></i></li></ul>
                                 <div class="card-data">
                                     <ul class="list-unstyled mb-1">
                                         <li class="comment-date font-small grey-text">
-                                            <i class="far fa-clock"></i> 05/07/2020
+                                            <i class="far fa-clock"></i> 14.06.2021.
                                         </li>
                                     </ul>
                                 </div>
-                                <p class="dark-grey-text article">I received one for Xmas and it's been a life saver I get monthly migraine and I have stopped taking my medication for 2 months. Introduced a few coo-workers to it and they have loved it too.
-                                </p>
+                                <p class="dark-grey-text article">Uspela sam u potpunosti da se rešim bora nakon 3 tretmana, čak i najdublje bore su nestale! Ovo je ostvarenje sna! Presrećna sam jer sam pronašla ovaj blog, hvala vam! </p>
                             </div>
                         </div>
                         <div class="media mb-3">
                             <img src="{{ asset('/') }}innodermFiles/innoderm_adv/person6.jpg" class="card-img-100 rounded-circle z-depth-1-half d-flex mr-3" alt="Generic placeholder image">
                             <div class="media-body">
                                 <a>
-                                    <h5 class="user-name font-weight-bold">Patty Osgood Bell</h5>
+                                    <h5 class="user-name font-weight-bold">Kristina Donić</h5>
                                 </a>
-                                Rating
-                                <ul class="rating mb-2">
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                </ul>
+                                Ocena
+                                <ul class="rating mb-2"><li><i class="fas fa-star blue-text"></i></li><li><i class="fas fa-star blue-text"></i></li><li><i class="fas fa-star blue-text"></i></li><li><i class="fas fa-star blue-text"></i></li><li><i class="fas fa-star blue-text"></i></li></ul>
                                 <div class="card-data">
                                     <ul class="list-unstyled mb-1">
                                         <li class="comment-date font-small grey-text">
-                                            <i class="far fa-clock"></i> 06/14/2020
+                                            <i class="far fa-clock"></i> 11.04.2021.
                                         </li>
                                     </ul>
                                 </div>
-                                <p class="dark-grey-text article">Wow! So happy for all migraine sufferers! This sounds like a miracle for stopping migraines!
-                                </p>
+                                <p class="dark-grey-text article">Drago mi je da vam je pomogao :) I ja sam slušajno našla ovu kremu, nisam je namerno tražila. Mislim da je ovo definitivno nešto što treba podeliti sa drugima!</p>
+                            </div>
+                        </div>
+                        <div class="media mb-3">
+                            <img src="{{ asset('/') }}innodermFiles/innoderm_adv/person9.jpg" class="card-img-100 rounded-circle z-depth-1-half d-flex mr-3" alt="Generic placeholder image">
+                            <div class="media-body">
+                                <a>
+                                    <h5 class="user-name font-weight-bold">Olja Pantelić</h5>
+                                </a>
+                                Ocena
+                                <ul class="rating mb-2"><li><i class="fas fa-star blue-text"></i></li><li><i class="fas fa-star blue-text"></i></li><li><i class="fas fa-star blue-text"></i></li><li><i class="fas fa-star blue-text"></i></li><li><i class="fas fa-star grey-text"></i></li></ul>
+                                <div class="card-data">
+                                    <ul class="list-unstyled mb-1">
+                                        <li class="comment-date font-small grey-text">
+                                            <i class="far fa-clock"></i> 06.02.2021.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p class="dark-grey-text article">Ova žena je prelepa! Lepša je od mene iako imam samo 30 godina :( Odlučila sam da kupim ovu kremu.</p>
                             </div>
                         </div>
                         <div class="media mb-3">
                             <img src="{{ asset('/') }}innodermFiles/innoderm_adv/person7.jpg" class="card-img-100 rounded-circle z-depth-1-half d-flex mr-3" alt="Generic placeholder image">
                             <div class="media-body">
                                 <a>
-                                    <h5 class="user-name font-weight-bold">Mandy Schumacher</h5>
+                                    <h5 class="user-name font-weight-bold">Jelica Jeličić</h5>
                                 </a>
-                                Rating
-                                <ul class="rating mb-2">
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star grey-text"></i>
-                                    </li>
-                                </ul>
+                                Ocena
+                                <ul class="rating mb-2"><li><i class="fas fa-star blue-text"></i></li><li><i class="fas fa-star blue-text"></i></li><li><i class="fas fa-star blue-text"></i></li><li><i class="fas fa-star blue-text"></i></li><li><i class="fas fa-star blue-text"></i></li></ul>
                                 <div class="card-data">
                                     <ul class="list-unstyled mb-1">
                                         <li class="comment-date font-small grey-text">
-                                            <i class="far fa-clock"></i> 06/28/2020
+                                            <i class="far fa-clock"></i> 30.04.2021.
                                         </li>
                                     </ul>
                                 </div>
-                                <p class="dark-grey-text article">I get migraines quite a bit. I'm on perscriptions. I ordered this product. I've worn it now for 3 days. I feel great every morning when I get up and go about my day. I was skeptical, but just putting it on, I feel relief. I think it's worth the investment over meds.
-                                </p>
+                                <p class="dark-grey-text article">Muž mi je poklonio ovu kremu za rođendan. Rekao mi je da ću da budem najlepša žena na svetu :) I znate šta? Bio je u pravu! :)) &#x1F44D;</p>
                             </div>
                         </div>
                         <div class="media mb-3">
                             <img src="{{ asset('/') }}innodermFiles/innoderm_adv/person8.jpg" class="card-img-100 rounded-circle z-depth-1-half d-flex mr-3" alt="Generic placeholder image">
                             <div class="media-body">
                                 <a>
-                                    <h5 class="user-name font-weight-bold">Teri Hansbury</h5>
+                                    <h5 class="user-name font-weight-bold">Marija Ranđelović</h5>
                                 </a>
-                                Rating
-                                <ul class="rating mb-2">
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star blue-text"></i>
-                                    </li>
-                                </ul>
+                                Ocena
+                                <ul class="rating mb-2"><li><i class="fas fa-star blue-text"></i></li><li><i class="fas fa-star blue-text"></i></li><li><i class="fas fa-star blue-text"></i></li><li><i class="fas fa-star blue-text"></i></li><li><i class="fas fa-star blue-text"></i></li></ul>
                                 <div class="card-data">
                                     <ul class="list-unstyled mb-1">
                                         <li class="comment-date font-small grey-text">
-                                            <i class="far fa-clock"></i> 07/21/2020
+                                            <i class="far fa-clock"></i> 27.06.2021.
                                         </li>
                                     </ul>
                                 </div>
-                                <p class="dark-grey-text article">
-                                    I haven't had to take Exederian since, put it on soon as I fell migraine coming on! &#x1F44D;
-                                </p>
+                                <p class="dark-grey-text article">I ja sam kupila ovu kremu i pomogla mi je! Koristila sam je dva meseca i mogu sa sigurnošću da kažem da je ovo savršen proizvod za podmlađivanje.</p>
                             </div>
                         </div>
                     </section>
@@ -475,7 +358,7 @@
 </section>
 <footer class="page-footer text-center font-small mdb-color darken-2">
     <div class="footer-copyright py-3">
-        © {{ now()->year }} Copyright
+        © {{ now()->year }} {{$product->brand_name}}
     </div>
 </footer>
 </body>
@@ -617,4 +500,5 @@
 {{--<script type="text/javascript">--}}
     {{--new WOW().init();--}}
 {{--</script>--}}
+@include('components.pixel_footer')
 </html>
