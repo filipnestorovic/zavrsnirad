@@ -102,17 +102,17 @@
                 <p>Ovo je pomoglo meni da imam meku, nežnu i zdravu kožu sa 47 godina, i sigurna sam da će svakom da pomogne!</p>
 
                 <p><b>#1 Koristite kremu za sunčanje svaki dan! Baš svaki!</b></p>
-                <p>Ovo je možda najvažniji i najpodcenjeniji savet od svih. Verujte mi, do skoro sam mislila da se krema za sunčanje koristi samo kada se ide na more, ali sam pogrešila, i to dosta. Verujte kada vam kažem – <b>kremu za sunčanje nosite uvek</b>, pogotovo u kasnijem dobu. Zašto? Jer tako štitite kožu od UV zračenja i štete koju to zračenje svakoga dana, malo po malo prouzorkuje. UV zračenje znači stariju kožu, tj više bora, podočnjaka i crnila oko očiju, i to će vas garantovano činiti starijom. A to ne želimo! Čak i kad je napolju oblačno – nosite kremu, jer UV zraci nalaze put do vas. Crne flekice su dokaz tome. Ukratko, ako želite dugoročno zdravu kožu i lep mladalački izgled, uvek koristite kremu za sunčanje.</p>
+                <p>Ovo je možda najvažniji i najpotcenjeniji savet od svih. Verujte mi, do skoro sam mislila da se krema za sunčanje koristi samo kada se ide na more, ali sam pogrešila, i to dosta. Verujte kada vam kažem – <b>kremu za sunčanje nosite uvek</b>, pogotovo u kasnijem dobu. Zašto? Jer tako štitite kožu od UV zračenja i štete koju to zračenje svakoga dana, malo po malo prouzorkuje. UV zračenje znači stariju kožu, tj više bora, podočnjaka i crnila oko očiju, i to će vas garantovano činiti starijom. A to ne želimo! Čak i kad je napolju oblačno – nosite kremu, jer UV zraci nalaze put do vas. Crne flekice su dokaz tome. Ukratko, ako želite dugoročno zdravu kožu i lep mladalački izgled, uvek koristite kremu za sunčanje.</p>
 
                 <p><b>#2 Hidrirajte se!</b></p>
                 <p>Deluje lako i glupo, ali uglavnom zaboravimo ovu jako bitnu stvar. Unosite dosta tečnosti tokom celog dana, najbolje samo vode. Ne samo što je generalno zdravo, nego će vam i pomoći da regulišete težinu, imaćeet više energije i naposletku – čini čuda za vašu kožu.  Održava njenu elastičnost, i značajno će da uspori proces starenja. Ja se trudim da pijem 4l dnevno. </p>
                 <img src="{{ asset('/') }}innodermFiles/innoderm_adv/img2.jpg" class="" style="width: 100%; height: auto; ">
                 <p><b>#3 Male cake i domaći preparati</b></p>
-                <p>Dosta ovih stvarčica možete da pronadjete na internetu, ali treba znati koje zapravo rade.</p>
-                <p>Ja sam probala dosta – od stavljanja majoneza u kosu, belanaca na lice do još luđih stvari (ne biste verovali. Kako ne biste gubili vreme i pravili nered sa „babskim“ receptima, ovo su moje dve najbolje opcije koje možete da radite kod kuće i koje neće napraviti nered.</p>
+                <p>Dosta ovih stvarčica možete da pronađete na internetu, ali treba znati koje zapravo rade.</p>
+                <p>Ja sam probala dosta – od stavljanja majoneza u kosu, belanaca na lice do još luđih stvari (ne biste verovali). Kako ne biste gubili vreme i pravili nered sa „babskim“ receptima, ovo su moje dve najbolje opcije koje možete da radite kod kuće i koje neće napraviti nered.</p>
                 <p class="boxquote"><i>„Ne samo da pomažu tvojoj kosi, nego su i vrlo opuštajuće! Odvoj malo vremena svakog dana za sebe i probaj ih“</i></p>
                 <p>Uzmite <b>kocke leda</b>, i nežno trljate kožu, i osetite kako se ona zateže i bore se smanjuju.  Ovo je kratkotrajno rešenje, neće trajati dugo, ali je savršeno za jutarnju rutinu. Sjajni rezultati – ali kratkoročni</p>
-                <p>Uvek držite supenu kašiku u zamrzivaču. Jako jednostavan, ali efikasan trik da se rešite podočnjaka i nadutosti kože. Izgledaćete zdravije, mladje i zategnutije. Samo ujutru izvadite kašiku, i stavite je ispod očiju. Obožavam ovo kada se ne naspavam dovoljno za posao.</p>
+                <p>Uvek držite supenu kašiku u zamrzivaču. Jako jednostavan, ali efikasan trik da se rešite podočnjaka i nadutosti kože. Izgledaćete zdravije, mlađe i zategnutije. Samo ujutru izvadite kašiku, i stavite je ispod očiju. Obožavam ovo kada se ne naspavam dovoljno za posao.</p>
 
                 <p><b>#4 Izbegavajte stvari od kojih vam se pojavljuju bubuljice</b></p>
                 <p>Ako ste skloni pojavljivanju bubuljica (bar ja jesam) potrudite se da ne koristite proizvode, i ne jedete hranu koja ih izaziva. Dosta ljudi na to ne obraća pažnju, ali postoji dosta proizvoda koje koristimo svakodnevno, i koji zaista mogu biti korisni, ali ako ste kao i ja skloni aknama, izbegavajte sledeće:</p>
@@ -123,7 +123,7 @@
                         <li>alkohol – ako neki preparat za lice sadrži alkohol, preporučujem da ga izbacite iz upotrebe, pogotovo isopropil. To je zato što isušuje i iritira kožu.</li>
                     </ul>
                 </div>
-                <p><b>#5 I najvažnije - Vitamin C! Koristite preparate na bazi vitamina C svaki dan!</b></p>
+                <p><b>#5 i najvažnije - Vitamin C! Koristite preparate na bazi vitamina C svaki dan!</b></p>
                 <p>Ako zaista brinete o nezi kože sigurno znate o mnogobrojnim koristima <b>vitamina C</b>. Toliko je dobar, da je teško poverovati u sve to – ali iz iskustva mogu reći da je tako. Ne samo da usporava proces starenja, nego ga i zaustavlja i zapravo podmlađuje kožu.</p>
 
                 <div>
@@ -137,7 +137,7 @@
                 {{--<p>-proširuje pore i tako smanjuje i popunjava ožiljke i bore, </p>--}}
                 {{--<p>- povećava nivo kolagena kod grublje kože.</p>--}}
                 <img src="{{ asset('/') }}innodermFiles/innoderm_adv/innoderm_img2.jpg" class="full-width-img">
-                <p>Iskreno i ja sam bila skeptična po tom pitanju. Ako ste čitali do sad, znate koliko sam imala muka verujući u sve što sam pročitala. Mora da ima nešto što ne znam. I bilo je. Iako je Vitamin C stvarno odličan za kožu, i radi sve što je navedeno, jako je nestabilan. Osim ako se ne stabilizuje, posle 1-2 nedelje oksiduje, i krema gubi najznačajniji sastojak. Medjutim – prijateljica mi je rekla o kremi koja se zove <a href="#product-box"><b>InnoDerm</b></a> koji je ona naručila preko reklame koju je videla na društvenim mrežama. Njena koža izgleda fantastično! </p>
+                <p>Iskreno i ja sam bila skeptična po tom pitanju. Ako ste čitali do sad, znate koliko sam imala muka verujući u sve što sam pročitala. Mora da ima nešto što ne znam. I bilo je. Iako je Vitamin C stvarno odličan za kožu, i radi sve što je navedeno, jako je nestabilan. Osim ako se ne stabilizuje, posle 1-2 nedelje oksiduje, i krema gubi najznačajniji sastojak. Međutim – prijateljica mi je rekla o kremi koja se zove <a href="#product-box"><b>InnoDerm</b></a> koju je ona naručila preko reklame koju je videla na društvenim mrežama. Njena koža izgleda fantastično! </p>
                 <p><a href="#product-box"><b>InnoDerm</b></a> ima savršenu formulu koja stabilizuje vitamin C i omogućava mu da ispolji puno dejstvo. </p>
                 <div class="orange_block">
                     <ul>

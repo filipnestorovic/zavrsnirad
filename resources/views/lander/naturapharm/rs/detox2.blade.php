@@ -6,8 +6,7 @@
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Playfair+Display:400,700&amp;display=swap" rel="stylesheet"/>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-    <link href="" rel="shortcut icon" type="image/png"/>
-
+    <link href="{{ asset('/') }}natureteaFiles/bentolit/composition_pict_01.png" rel="shortcut icon" type="image/png"/>
     <link type="text/css" href="{{ asset('/') }}natureteaFiles/bentolit/order_me.min.css" rel="stylesheet" media="all">
     <link href="{{ asset('/') }}natureteaFiles/bentolit/fullpage.css" rel="stylesheet"/>
     <link href="{{ asset('/') }}natureteaFiles/bentolit/slick.css" rel="stylesheet"/>
@@ -50,6 +49,9 @@
                                     <b>100% učinkoviti</b> i bezbedni
                                 </li>
                             </ul>
+                            <div class="button__wrap button__wrap_mod" style="padding-bottom: 20px;">
+                                <button class="goToForm" type="button">PORUČITE SADA</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -142,44 +144,44 @@
                 <section class="composition">
                     <div class="container">
                         <h1 class="title title_centered">Kinoki</h1>
-                        <h3 class="composition__subtitle">Recept za flastere uključuje preko 9 lekovitih trava i
+                        <h3 class="composition__subtitle">Recept za flastere uključuje preko 7 lekovitih trava i
                             dobijen je kao rezultat vekovnih istraživanja narodnih iscelitelja.</h3>
                         <div class="composition__wrap">
                             <img class="composition__photo" src="{{ asset('/') }}natureteaFiles/bentolit/kinoki2.png"/>
                             <div class="composition__item composition__item_01 composition__item_left">
                                 <div class="composition__pict composition__pict_01"></div>
-                                <b class="composition__name">Hamalomena</b>
-                                <p class="composition__text">pokreće metabolizam</p>
+                                <b class="composition__name">Komorač</b>
+                                <p class="composition__text">poboljšava probavnu funkciju</p>
                             </div>
                             <div class="composition__item composition__item_02 composition__item_right">
                                 <div class="composition__pict composition__pict_02"></div>
-                                <b class="composition__name">Notopterygium incisum</b>
-                                <p class="composition__text">opušta telo i mišiće</p>
+                                <b class="composition__name">Turmalin</b>
+                                <p class="composition__text">mineral koji pojačava rad bubrega i jetre</p>
                             </div>
                             <div class="composition__item composition__item_03 composition__item_left">
                                 <div class="composition__pict composition__pict_03"></div>
-                                <b class="composition__name">Panax pseudoginseng</b>
-                                <p class="composition__text">poboljšava san</p>
-                            </div>
-                            <div class="composition__item composition__item_04 composition__item_right">
-                                <div class="composition__pict composition__pict_04"></div>
-                                <b class="composition__name">Millettia reticulata </b>
-                                <p class="composition__text">čisti telo od parazita</p>
-                            </div>
-                            <div class="composition__item composition__item_05 composition__item_left">
-                                <div class="composition__pict composition__pict_05"></div>
                                 <b class="composition__name">Divlji đumbir</b>
                                 <p class="composition__text">jača imunitet i ublažava razvoj brojnih bolesti</p>
                             </div>
-                            <div class="composition__item composition__item_06 composition__item_right">
-                                <div class="composition__pict composition__pict_06"></div>
+                            <div class="composition__item composition__item_04 composition__item_right">
+                                <div class="composition__pict composition__pict_04"></div>
+                                <b class="composition__name">Valeriana</b>
+                                <p class="composition__text">poboljšava san</p>
+                            </div>
+                            <div class="composition__item composition__item_05 composition__item_left">
+                                <div class="composition__pict composition__pict_05"></div>
                                 <b class="composition__name">Koren maslačka</b>
                                 <p class="composition__text">pospešuje izbacivanje toksina</p>
                             </div>
+                            <div class="composition__item composition__item_06 composition__item_right">
+                                <div class="composition__pict composition__pict_06"></div>
+                                <b class="composition__name">Sirće bambusa</b>
+                                <p class="composition__text">pospešuje procese čišćenja organizma</p>
+                            </div>
                             <div class="composition__item composition__item_07 composition__item_center">
                                 <div class="composition__pict composition__pict_07"></div>
-                                <b class="composition__name">Komorač</b>
-                                <p class="composition__text">poboljšava probavnu funkciju</p>
+                                <b class="composition__name">Anion</b>
+                                <p class="composition__text">normalizuje PH vrednost i hormone u organizmu</p>
                             </div>
                         </div>
                     </div>
@@ -302,10 +304,23 @@
                                         {{ csrf_field() }}
                                         @include('lander.naturapharm.components.form_hidden_fields')
                                         <div class="form__field">
-                                            <input name="name" placeholder="Ime i prezime" type="text"/>
+                                            <input name="name" id="name" placeholder="Ime i prezime" type="text"/>
                                         </div>
                                         <div class="form__field">
-                                            <input class="only_number" name="phone" placeholder="Broj telefona" type="text"/>
+                                            <input class="only_number" name="phone" id="phone" placeholder="Broj telefona" type="text"/>
+                                        </div>
+                                        <div class="form__field">
+                                            <label for="quantity">Izaberite količinu</label>
+                                            <select name="quantity" id="quantity" required>
+                                                @foreach($prices as $singlePrice)
+                                                    <option value="{{$singlePrice['quantity']}}"
+                                                            @if($singlePrice['is_default']) selected @endif
+                                                            @if(old('quantity') == $singlePrice['quantity']) selected @endif
+                                                    >
+                                                        {{$singlePrice['quantity']}} x {{$product->product_name}} ({{$singlePrice['amount']}} RSD)
+                                                    </option>
+                                                @endforeach
+                                            </select>
                                         </div>
                                         <div class="price">
                                             <div class="price__value price__old"><span>{{$prices[1]['originalPrice']}} RSD</span></div>
@@ -324,11 +339,9 @@
         </div>
     </div>
 </div>
-
 <script src="{{ asset('/') }}natureteaFiles/bentolit/fullpage.js"></script>
 <script src="{{ asset('/') }}shared_files/slick.min.js"></script>
 <script src="{{ asset('/') }}natureteaFiles/bentolit/common.js"></script>
-
 @include('components.pixel_footer')
 </body>
 </html>
