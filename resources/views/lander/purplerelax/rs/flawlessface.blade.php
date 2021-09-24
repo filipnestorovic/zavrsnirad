@@ -516,10 +516,10 @@
                               </span>
                             </div>
                             <div class="input_wrap">
-                                <input id="shipping_address" placeholder="Adresa" name="shipping_address" type="text">
+                                <input id="name" placeholder="Adresa" name="shipping_address" type="text">
                             </div>
                             <div class="input_wrap">
-                                <input id="shipping_city" placeholder="Grad" name="shipping_city" type="text">
+                                <input id="name" placeholder="Grad" name="shipping_city" type="text">
                             </div>
                             <div class="submit_line">
                                 <input class="mm_button" value="PORUČI SADA" type="submit" >
