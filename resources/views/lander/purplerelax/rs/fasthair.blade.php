@@ -18,13 +18,12 @@
             <div class=info>
                 <div class=info-right>
                     <h3 class=info-tel>
-                        <t class=phone___>
-                            <t class=highlight2>
-                                Прием заявок круглосуточно
+                        <p class=phone___>
+                            <p class=highlight2>
+                                Primamo porudžbine 24/7
+                            </p>
+                        </p>
                     </h3>
-                    <a href="#order-form"><label class="link modalButton " for=forms>
-                            Заказать обратный звонок
-                        </label></a>
                 </div>
             </div>
         </div>
@@ -32,13 +31,13 @@
             <div class=b-left>
                 <div class=banner-title>
                     <h2>
-                        Расческа-выпрямитель Fast Hair
+                        Četka za brzo ispravljanje kose – Fast Hair
                     </h2>
                     <p>
-                        Идеально ровные волосы за считаные минуты без специальной подготовки, с расческой-выпрямителем Fast Hair Straightener!
+                        Savršeno ravna kosa za par minuta, bez specijalne pripreme sa Fast Hair brzom četkom
                     </p>
                     <p>
-                        Создание идеальной прически теперь в Ваших руках!
+                        Napravite savršenu frizuru sopstvenim rukama, bez gorenja kose
                     </p>
                 </div>
                 <img alt="" class=banner-img src="{{asset('/')}}purplerelaxFiles/fasthair/pic1.png"/>
@@ -55,9 +54,9 @@
                 <div class=banner-form>
                     <div class=form-title>
                         <h3>
-                            Закажи сейчас
+                            Poručite po
                             <br/>
-                            по суперцене!
+                            specijalnoj ceni!
                         </h3>
                     </div>
                     <div id=formContainer1>
@@ -82,10 +81,10 @@
     <div class=container>
         <div class=title>
             <h2>
-                Fast Hair Straightener
+                Fast Hair četka
             </h2>
             <p>
-                Новое слово в сфере парикмахерских технологий
+                Nova stvar u svetu nege kose
             </p>
         </div>
         <div class=img-b>
@@ -93,16 +92,19 @@
         </div>
         <div class=descr>
             <p>
-                Лучший продукт 2018 года на рынке для ухода за волосами! Электрическая расческа-выпрямитель FAST HAIR STRAIGHTENER HQT-906 с функцией ионизации была создана специально для женщин, которые не желают тратить на укладку ни одной лишней секунды. С этим устройством укладка занимает 5-10 минут, а волосы становятся блестящими и гладкими.
+                Jedan od najboljih proizvoda za negu kose u 2021!
             </p>
             <p>
-                Это первый электрический выпрямитель в виде расчески. Он объединяет в себе массажную щетку для волос и утюжок. Теперь Вы можете выпрямлять и разглаживать волосы, просто расчесывая их.
+                Električna četka za brzo ispravljanje kose sa jonizirajućim efektom, napravljena je specijalno za žene koje ne žele da gube vreme po salonima. Sa ovim uređajem, za samo 5-10 minuta kosa postaje sjajna, glatka i mekana, bez gubljenja vremena i novca.
             </p>
             <p>
-                Расческа имеет турмалиновое покрытие. При нагревании покрытия образуются отрицательные ионы, которые благоприятно влияют на волосы и улучшают их внешний вид. Также благодаря турмалиновому покрытию происходит равномерное нагревание расчески-выпрямителя, поэтому волос не травмируется и не обжигается.
+                Ovo je prva električna četka na tržištu. Kombinuje četku i peglu za kosu u jednom uređaju tako da možete i da ravnjate i da omekšate vašu kosu, jednostavnim četkanjem. Sjajno, zar ne?
+            </p>
+            <p>
+                Četka ima krajeve od turmalina. Kada se zagreje stvaraju se negativni joni koji imaju pozitivan efekat na kosu i čine da ona izgleda lepše i bujnije. Takođe zahvaljjujući turmalinskim krajevina, četka se zagreva jednako celom površinom, tako da se kosa ne oštećuje i ne gori.
             </p>
             <a href="#order-form"><label class="btn border modalButton" for=forms>
-                    Заказать за <span class=price_land_s1>{{ $prices[1]['amount'] }}</span> <span class=price_land_curr>RSD</span>
+                    Poručite za <span class=price_land_s1>{{ $prices[1]['amount'] }}</span> <span class=price_land_curr>RSD</span>
                 </label></a>
         </div>
     </div>
@@ -111,28 +113,28 @@
     <div class=container>
         <div class=title>
             <h2>
-                Особенности
+                Karakteristike
             </h2>
             <p>
-                Fast Hair Straightener
+                Fast Hair četke
             </p>
         </div>
         <div class=descr>
             <ul>
                 <li>
-                    Удобство использования в отличие от утюжка.
+                    Za razliku od pegle, veoma laka za upotrebu i ne isušuje kosu pošto radi na nižoj temperaturi
                 </li>
                 <li>
-                    Аппарат разогревается за несколько секунд, не нужно ждать.
+                    Zagreva se za 30ak sekundi, tako da nema potrebe za čekanjem, može odmah da se koristi
                 </li>
                 <li>
-                    Керамическая часть проводит тепло и поддерживает температуру стабильной.
+                    Keramički delovi su odlični provodnici toplote, i održavaju temperaturu konstantnom
                 </li>
                 <li>
-                    Выпрямление занимает всего от 5 до 10 минут!
+                    Za ispravljanje kose je potrebno samo 5-10 minuta
                 </li>
                 <li>
-                    При использовании прибора волосы меньше секутся, становятся менее пушистыми. Это достигается за счет воздействия ионами, которые выделяет выпрямитель во время работы.
+                    Korišćenjem uređaja, kosa se manje cveta na krajevima. To se postiže zahvaljujući izloženosti negativnim jonima koji se emituju prilikom korišćenja
                 </li>
             </ul>
         </div>
@@ -145,10 +147,10 @@
     <div class=container>
         <div class=title>
             <h2 id=ancorAdvantages>
-                Преимущества
+                Zašto baš
             </h2>
             <p>
-                Fast Hair Straightener
+                Fast Hair četka?
             </p>
         </div>
         <div class=benefits-item>
@@ -157,13 +159,13 @@
                   01
                   </span>
                 <p>
-                    Устойчивый
+                    Postojani
                     <br/>
-                    результат
+                    rezultati
                 </p>
             </div>
             <p>
-                Используя расчёску, Вы получаете гладкие, мягкие волосы на длительный период.
+                Korišćenjem četke dobićete kosu meku kao svila na duge staze
             </p>
         </div>
         <div class=benefits-item>
@@ -172,13 +174,13 @@
                   02
                   </span>
                 <p>
-                    Для любой длины
+                    Pogodan za svaki tip
                     <br/>
-                    и типа волос
+                    i dužinu kose
                 </p>
             </div>
             <p>
-                Укладка любой длины и типа волос за считаные минуты.
+                Stilizovanje bilo koje dužine i tipa kose za samo par minuta
             </p>
         </div>
         <div class=benefits-item>
@@ -187,17 +189,14 @@
                   03
                   </span>
                 <p id=ancorTermsofUse>
-                    Элегантный образ в
+                    Savršen izgled
                     <br/>
-                    домашних условиях
+                    u udobnosti svoga doma
                 </p>
             </div>
             <p id=ancorTermsofUse>
-                Вы создаете прекрасный образ в домашних условиях, экономя время и деньги.
+                Napravite sjajnu frizuru u vašem domu. Uštedite i vreme i novac
             </p>
-            <a href="#order-form"><label class="btn border modalButton" for=forms>
-                    Заказать за <span class=price_land_s1>{{ $prices[1]['amount'] }}</span> <span class=price_land_curr>RSD</span>
-                </label></a>
         </div>
         <div class=benefits-item>
             <div class=b-title>
@@ -205,14 +204,20 @@
                   04
                   </span>
                 <p>
-                    Удобность
+                    Laka
                     <br/>
-                    в использовании.
+                    upotreba
                 </p>
             </div>
             <p>
-                Легкость и удобный дизайн устройства поможет легко создать необходимую укладку.
+                Mala težina i pogodan dizajn uređaja pomažu vam da je lako koristite i da lako stilizujete kosu onako kako vi želite. Možete je nositi sa vama gde god želite
             </p>
+        </div>
+        <div class=benefits-item style="width: 100%;min-height: 150px;">
+            <a href="#order-form" style="text-decoration: none;"><label class="btn border modalButton" for=forms>
+                    ISKORISTI CENU OD <span class=price_land_s1>{{ $prices[1]['amount'] }}</span> <span class=price_land_curr>RSD</span>
+                </label>
+            </a>
         </div>
     </div>
     <img alt="" class=woman-img src="{{asset('/')}}purplerelaxFiles/fasthair/pic3.jpg"   />
@@ -221,7 +226,7 @@
     <div class=container>
         <div class=title>
             <h2>
-                Использование расчёски
+                Način korišćenja:
             </h2>
         </div>
         <div class="row left">
@@ -235,7 +240,7 @@
                             01
                         </i>
                         <span>
-                        Вставьте расческу в розетку (220 вольт).
+                            Uključite četku u struju
                         </span>
                     </li>
                     <li>
@@ -243,7 +248,7 @@
                             02
                         </i>
                         <span>
-                        Выставите необходимую температуру.
+                            Podesite željenu temperaturu
                         </span>
                     </li>
                     <li>
@@ -251,7 +256,7 @@
                             03
                         </i>
                         <span>
-                        Разделите волосы на пряди.
+                            Podelite kosu na pramenove
                         </span>
                     </li>
                     <li>
@@ -259,7 +264,7 @@
                             04
                         </i>
                         <span>
-                        Возьмите нагретую расческу Fast Hair Straightener.
+                            Uzmite zagrejanu Fast Hair četku i
                         </span>
                     </li>
                 </ul>
@@ -273,7 +278,7 @@
                             05
                         </i>
                         <span>
-                        Расчёсывайте волосы сверху вниз плавными движениями.
+                            četkajte kosu od vrha do dna glatkim pokretima
                         </span>
                     </li>
                     <li>
@@ -281,7 +286,7 @@
                             06
                         </i>
                         <span>
-                        Зафиксируйте волосы лаком или воском для волос, если захотите.
+                            Po želji koristite sprej ili vosak za kosu
                         </span>
                     </li>
                     <li>
@@ -290,7 +295,7 @@
                             07
                         </i>
                         <span>
-                        По окончании выпрямления волос выключите расческу из розетки.
+                            Kada završite isključite četku iz utičnice
                         </span>
                     </li>
                 </ul>
@@ -300,10 +305,8 @@
             </div>
         </div>
         <div class=b-video>
-            <div class=video-descr>
-                <a href="#order-form"><label class="btn small modalButton" for=forms>
-                        Заказать за <span class=price_land_s1>{{ $prices[1]['amount'] }}</span> <span class=price_land_curr>RSD</span>
-                    </label></a>
+            <div class=video-descr style="width: 100%;">
+                <a href="#order-form" style="text-decoration: none;"><label class="btn small modalButton" for=forms>Poručite sada</label></a>
             </div>
         </div>
     </div>
@@ -312,7 +315,7 @@
     <div class=container>
         <div class=title>
             <h2 id=ancorHowWeWork>
-                Как мы работаем
+                Kako naručiti?
             </h2>
         </div>
         <div class=work-steps-items>
@@ -324,9 +327,9 @@
                     <img alt="" src="{{asset('/')}}purplerelaxFiles/fasthair/how-we-work1.png"   />
                 </div>
                 <p>
-                    Вы оставляете
+                    Popunite formu
                     <br/>
-                    заявку
+                    za naručivanje
                 </p>
             </div>
             <div class=work-steps-item>
@@ -337,9 +340,9 @@
                     <img alt="" src="{{asset('/')}}purplerelaxFiles/fasthair/how-we-work2.png"   />
                 </div>
                 <p>
-                    Наш менеджер связывается с Вами
+                    Potvrdićemo narudžbinu
                     <br/>
-                    для уточнения деталей
+                    i zakazati dostavu u najkraćem roku
                 </p>
             </div>
             <div class=work-steps-item>
@@ -350,7 +353,9 @@
                     <img alt="" src="{{asset('/')}}purplerelaxFiles/fasthair/how-we-work3.png"   />
                 </div>
                 <p>
-                    Отправляем Вам заказ почтой или курьером
+                    Paket će stići u roku od
+                    <br/>
+                    1-2 radna dana brzom poštom
                 </p>
             </div>
             <div class=work-steps-item>
@@ -361,9 +366,9 @@
                     <img alt="" src="{{asset('/')}}purplerelaxFiles/fasthair/how-we-work4.png"   />
                 </div>
                 <p>
-                    Вы оплачиваете заказ
+                    Plaćate tek
                     <br/>
-                    при получении
+                    po preuzimanju
                 </p>
             </div>
         </div>
@@ -373,7 +378,7 @@
     <div class=container>
         <div class=title>
             <h2 id=ancorComments>
-                Отзывы покупателей
+                Utisci kupaca
             </h2>
         </div>
         <div class=reviews-row>
@@ -383,12 +388,12 @@
                         <img alt="" height="" src="{{asset('/')}}purplerelaxFiles/fasthair/avatar.png" width=70   />
                     </div>
                     <h4>
-                        Анастасия
+                        Anastasija
                     </h4>
                 </div>
                 <div class=reviews-box-descr>
                     <p>
-                        У меня от природы очень вьются волосы и на укладку уходило много времени и терпения. Расческу эту нашла случайно, очень понравилась, за 4 минуты волосы прямые)
+                        Imam prirodno kovrdžavu kosu, i inače mi treba dosta vremena i još više strpljenja da napravim nešto od nje. Slučajno sam videla reklamu za ovu četku, naručila sam i sad mi treba 4-5 minuta i moja kosa je prava.
                     </p>
                 </div>
             </div>
@@ -398,12 +403,12 @@
                         <img alt="" height="" src="{{asset('/')}}purplerelaxFiles/fasthair/avatar.png" width=70   />
                     </div>
                     <h4>
-                        Юлия
+                        Julija
                     </h4>
                 </div>
                 <div class=reviews-box-descr>
                     <p>
-                        Этот выпрямитель удивил! Очень хорошо выпрямляет волосы! С доставкой немного подвели, но расческа что надо!
+                        Dakle, četkom sam oduševljena, željenu frizuru dobijam za bukvalno 4-5 minuta, zaista imam utisak da manje šteti kosi od prese, i definitivno je lakše korišćenje ove četke nego fena. Čak je nekada koristim isključivo radi sjaja i tek da kosi dam malo lepšu formu. I dalje volim i presu, i koristiću je kada mi bude potrebno, ali i ovom četkom sam prezadovoljna!
                     </p>
                 </div>
             </div>
@@ -417,9 +422,9 @@
         </div>
         <div class=order-descr>
             <h3 class=title>
-                Заказать Fast Hair Straightener
+                Naručite Fast Hair
                 <br/>
-                в нашем магазине
+                još danas
             </h3>
             <div class=order-price id=ancorFooterForm>
                 <div class=old>
@@ -433,9 +438,9 @@
                 <div class=b-info>
                     <div class=form-title>
                         <h3>
-                            Закажи сейчас
+                            Iskoristite
                             <br/>
-                            по суперцене!
+                            40% popusta
                         </h3>
                     </div>
                 </div>
