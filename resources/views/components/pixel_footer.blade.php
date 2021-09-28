@@ -34,7 +34,7 @@
         @if(($fb_event === "Purchase" || $fb_event === "Purchase2") && (!isset($order)))
         @else
             @foreach($pixels as $pixel)
-                sendFbEvent('{{$pixel}}','{{$fb_event}}');
+                {{--sendFbEvent('{{$pixel}}','{{$fb_event}}');--}}
             @endforeach
         @endif
 
@@ -50,7 +50,7 @@
             fbq('track', 'InitiateCheckout');
             @php $fb_event = "InitiateCheckout" @endphp
             @foreach($pixels as $pixel)
-                sendFbEvent('{{$pixel}}','{{$fb_event}}');
+                {{--sendFbEvent('{{$pixel}}','{{$fb_event}}');--}}
             @endforeach
             if(landerCheckout === "1" && sentAddToCart === 0) {
                 sendEventDB(sessionId,2);
@@ -64,7 +64,7 @@
             fbq('track', 'AddToCart');
             @php $fb_event = "AddToCart" @endphp
             @foreach($pixels as $pixel)
-                sendFbEvent('{{$pixel}}','{{$fb_event}}');
+                {{--sendFbEvent('{{$pixel}}','{{$fb_event}}');--}}
             @endforeach
             if(landerCheckout === "1" && sentAddToCart === 0) {
                 sendEventDB(sessionId,2);
