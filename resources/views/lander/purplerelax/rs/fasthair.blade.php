@@ -63,10 +63,10 @@
                         <form action="{{$orderRoute}}" method=post>
                             {{ csrf_field() }}
                             @include('lander.naturapharm.components.form_hidden_fields')
-                            <input name=name placeholder="Ime i prezime" type=text>
-                            <input name=phone placeholder="Broj telefona" type=text>
-                            <input name=shipping_address placeholder="Adresa" type=text>
-                            <input name=shipping_city placeholder="Grad" type=text>
+                            <input name=name placeholder="Ime i prezime" type=text required>
+                            <input name=phone placeholder="Broj telefona" type=text required>
+                            <input name=shipping_address placeholder="Adresa" type=text required>
+                            <input name=shipping_city placeholder="Grad" type=text required>
                             <button class="btn-color2 large" type=submit>
                                 Poruči
                             </button>
@@ -448,10 +448,10 @@
                     <form id=order-form action="{{$orderRoute}}" method=post>
                         {{ csrf_field() }}
                         @include('lander.naturapharm.components.form_hidden_fields')
-                        <input name=name placeholder="Ime i prezime" type=text>
-                        <input name=phone placeholder="Broj telefona" type=text>
-                        <input name=shipping_address placeholder="Adresa" type=text>
-                        <input name=shipping_city placeholder="Grad" type=text>
+                        <input name=name placeholder="Ime i prezime" type=text required>
+                        <input name=phone placeholder="Broj telefona" type=text required>
+                        <input name=shipping_address placeholder="Adresa" type=text required>
+                        <input name=shipping_city placeholder="Grad" type=text required>
                         <button class="btn-color2 large" type=submit>
                             PORUČI
                         </button>

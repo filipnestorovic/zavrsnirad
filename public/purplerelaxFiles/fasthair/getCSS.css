@@ -2310,3 +2310,13 @@ footer .footer-links a {
 .btn-form:hover {
     background: #f2f2f2
 }
+
+button, .btn {
+    background-color: rgba(24, 149, 215, 1) !important;
+    border: rgba(24, 149, 215, 1) 1px solid !important;
+    color: #fff !important;
+}
+
+button:hover, .btn:hover {
+    background-color: #59c9f3 !important;
+}
