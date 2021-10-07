@@ -49,7 +49,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="labelmain firstCircle">
+            <div class="labelmain firstCircle discountCircle">
                 <div condensed="" roboto="" style="margin-top: 40px;font-size: 33px;padding-left: 10px;padding-right: 10px;font-size:2em;color: #029648;font-weight:bold;">
                     <div style="color:red">АКЦИЯ!</div>
                     <div style="color: black;margin-top: 5px;font-size: 24px;">нова цена</div>
@@ -59,7 +59,7 @@
             </div>
             <div class="col-xs-12 col-md-3 hidden-xs hidden-sm">
                 <div class="monk"><img alt="" src="{{ asset('/') }}naturapharmFiles/kneepatch/monk.png"/></div>
-                <div class="ingredients"><img alt="" src="{{ asset('/') }}naturapharmFiles/kneepatch/ingredients.png"/></div>
+                <div class="ingredients" id="ingredientsFirst"><img alt="" src="{{ asset('/') }}naturapharmFiles/kneepatch/ingredients.png"/></div>
             </div>
             <div class="col-xs-12 col-md-5 product">
                 <div class="product__picture">
@@ -307,7 +307,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="labelmain2">
+            <div class="labelmain2 discountCircle">
                 <div condensed="" roboto="" style="margin-top: 40px;font-size: 33px;padding-left: 10px;padding-right: 10px;font-size:2em;color: #029648;font-weight:bold;">
                     <div style="color:red"> АКЦИЯ!</div>
                     <div style="color: black;margin-top: 5px;font-size: 24px;"> нова цена</div>
@@ -484,7 +484,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="labelmain2 ThirdCircle">
+            <div class="labelmain2 ThirdCircle discountCircle">
                 <div condensed="" roboto="" style="margin-top: 40px;font-size: 33px;padding-left: 10px;padding-right: 10px;font-size:2em;color: #029648;font-weight:bold;">
                     <div style="color:red"> АКЦИЯ!</div>
                     <div style="color: black;margin-top: 5px;font-size: 24px;"> нова цена</div>
