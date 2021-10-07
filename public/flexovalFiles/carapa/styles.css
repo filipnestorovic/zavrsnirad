@@ -509,7 +509,7 @@ h2 {
 
 .risks_section .risk_item img {
     display: block;
-    border: 6px solid #fcb8b8;
+    border: 6px solid #45576f;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
@@ -835,7 +835,7 @@ h2 {
 }
 
 .opinion_section .author_info .image_block {
-    margin: 0 auto 15px auto;
+    margin: 0 auto 60px auto;
     padding: 6px;
     width: 190px;
     border: 2px solid rgba(255,255,255,0.4);
@@ -1013,6 +1013,10 @@ h2 {
 
 .footer_section a:hover {
     text-decoration: none;
+}
+
+.order_form {
+    margin-top: 20px;
 }
 
 @media screen and (max-width: 959px) {
@@ -1236,7 +1240,6 @@ h2 {
         padding: 20px;
         text-align: left;
     }
-
 }
 
 @media screen and (max-width: 639px) {
@@ -1491,7 +1494,7 @@ h2 {
     }
 
     .opinion_section .opinion_block {
-        padding: 100px 15px 20px 15px;
+        padding: 140px 15px 20px 15px;
     }
 
     .opinion_section .author_info {

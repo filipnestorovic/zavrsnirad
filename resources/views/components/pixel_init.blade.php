@@ -38,6 +38,9 @@
 <meta property="og:image" content="{{ asset('/').$product->product_image }}">
 <meta property="og:url" content="{{ $product->domain_url }}/{{ $product->slug }}">
 <title>{{ $product->product_name }} | {{ $product->brand_name }}</title>
+@if($product->brand_name === "Kyrok")
+    <link rel="icon" type='image/png' href="{{ asset('/') }}kyrokFiles/shared_files/kyrok_favicon.png">
+@endif
 <script>
     let countrySubdomain = "new";
     @if($product->country_code === "ba") countrySubdomain = "ba"; @endif

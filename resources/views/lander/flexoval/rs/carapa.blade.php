@@ -15,14 +15,14 @@
 <header class="offer_section offer_top">
     <div class="wrapper clearfix">
         <ul>
-            <li><b>Улучшают</b><br>проходимость крови</li>
-            <li><b>Снимают</b><br>воспаление и отечность</li>
-            <li><b>Не имеют</b><br>побочных эффектов</li>
+            <li><b>Poboljšava </b><br>cirkulaciju</li>
+            <li><b>Smanjuje </b><br>upale i otoke</li>
+            <li><b>Bez </b><br>nuspojava</li>
         </ul>
         <div class="info">
             <div class="title_block">
-                <h1 class="main_title">VenuSocks</h1>
-                <p>Компрессионные гольфы <span>от варикоза</span></p>
+                <h1 class="main_title">Kompres</h1>
+                <p>Za poboljšanu cirkulaciju <span>i protiv proširenih vena</span></p>
             </div>
             <div class="discount">Popust <span>-40%</span></div>
             <div class="price_block clearfix">
@@ -49,48 +49,48 @@
 </header>
 <section class="risks_section">
     <div class="wrapper">
-        <h2>Почему варикоз <span>нельзя игнорировать?</span></h2>
+        <h2>Zašto ne smemo da <span>ignorišemo proširene vene?</span></h2>
         <div class="risks_list">
             <div class="risk_item">
                 <div class="image_block">
                     <img src="{{asset('/')}}flexovalFiles/carapa/risks__risk1_image.jpg" alt="" title="">
                 </div>
-                <p><b>Даже нулевая степень</b> заболевания может привести к хронической венозной недостаточности, перед которой медицина до сих пор бессильна</p>
+                <p><b>Čak i najblaži stepen</b> proširenih vena može da dovede do venske insuficijencije – trajnog stanja za koje ne postoji lek</p>
             </div>
             <div class="risk_item">
                 <div class="image_block">
                     <img src="{{asset('/')}}flexovalFiles/carapa/risks__risk2_image.jpg" alt="" title="">
                 </div>
-                <p><b>Варикоз</b> - это в первую очередь высочайший риск тромбоза. Тромб может порваться в любую минуту и в одно мгновенье отправить человека на тот свет!</p>
+                <p><b>Varikozne vene</b> su pre svega veliki rizik za trombozu i pogodne su za stvaranje krvnih ugrušaka</p>
             </div>
             <div class="risk_item">
                 <div class="image_block">
                     <img src="{{asset('/')}}flexovalFiles/carapa/risks__risk3_image.jpg" alt="" title="">
                 </div>
-                <p><b>Прогрессирующий варикоз</b> вызывает распространение на всем теле трофической язвы, избавиться от которой можно только с помощью пересадки кожи.</p>
+                <p><b>Proširene vene izazivaju</b> širenje trofičnog gira po celom telu, što se može ukloniti samo transplatacijom kože</p>
             </div>
         </div>
     </div>
 </section>
 <section class="about_section">
     <div class="wrapper">
-        <h2>VenuSocks <span>защитит ваше здоровье!</span></h2>
-        <img src="{{asset('/')}}flexovalFiles/carapa/about__image.png" alt="" title="">
+        <h2>Kompres čarape <span>štite zdravlje!</span></h2>
+        <img src="{{asset('/')}}flexovalFiles/carapa/about__image1.png" alt="" title="">
         <div class="text_block">
-            <p>Секрет их эффективности заключается в <b>уникальном составе:</b> гольфы изготовлены из комбинированного медицинского трикотажа и четырех видов водорослевых волокон, широко использующихся в азиатских странах для лечения варикоза - хлороглеи, ламинарии, спирогиры и зигнемы. Действуя в комплексе, водоросли воздействуют на первопричину заболевания - нарушение кровообращения. В отличие от множества других средств, Venusocks не просто облегчают состояние пациента - <b>гольфы способны решить проблему полностью и избавить от варикоза навсегда.</b></p>
+            <p>Tajna njihove efikasnosti leži u <b>jedinstvenom sastavu </b> - Kombinovana medicinska trikotaža i pamuk. Protkane su specijalnim aluminijumskim vlaknima koja regulišu telesnu temperaturu, a ne samo da pružaju jako prijatan osećaj, već regulišu i nivo vlažnosti kože. Za razliku od ostalih čarapa, <b>Kompres dokolenice rešavaju problem u korenu!</b></p>
         </div>
         <ul>
-            <li><b>Избавляют ноги от усталости</b> и ноющей боли, снимают воспаление и отечность</li>
-            <li><b>Оказывают компрессионное воздействие</b>, за счет чего отток крови в венах проходит быстрее</li>
-            <li><b>Нормализуют кровообращение</b> и укрепляют стенки сосудов</li>
-            <li><b>Оказывают необходимую тромботическую профилактику</b>, защищая от несчастных случаев</li>
+            <li>Rešavaju noge <b>umora, bola, trnjenja</b> kao i upala i otoka</li>
+            <li>Normalizuju <b>cirkulaciju i jačaju zidove</b> krvnih sudova</li>
+            <li>Zahvaljujući <b>efektu kompresije</b>, krv brže cirkuliše venama</li>
+            <li>Pružaju neophodnu <b>trombiotičku profilaksu</b>, štiteći od nezgoda</li>
         </ul>
         <a href="#order_form" class="button">ISKORISTI PONUDU</a>
     </div>
 </section>
 <section class="components_section">
     <div class="wrapper">
-        <h2>Чем полезны <span>водорослевые волокна?</span></h2>
+        <h2>Kome su <span>namenjene Kompres carape?</span></h2>
     </div>
     <div class="components_list">
         <div class="component_item">
@@ -99,8 +99,8 @@
                     <img src="{{asset('/')}}flexovalFiles/carapa/components__component1_image.png" alt="" title="">
                 </div>
                 <div class="text_block">
-                    <h3>Хлороглея</h3>
-                    <p>Основной компонент в структуре водорослевых волокон. Снижают опасную густоту крови до допустимых значений и существенно облегчают ее транспортировку по венам.</p>
+                    <h3>Zaposleni</h3>
+                    <p>Onima koji većinu dana ili radnog vremena provode stojeći</p>
                 </div>
             </div>
         </div>
@@ -110,8 +110,8 @@
                     <img src="{{asset('/')}}flexovalFiles/carapa/components__component2_image.png" alt="" title="">
                 </div>
                 <div class="text_block">
-                    <h3>Ламинария</h3>
-                    <p>Помимо широкого использования в пищевой промышленности, ламинария применяется наружно для укрепления стенок кровеносных сосудов и защиты от трофической язвы.</p>
+                    <h3>Trudnice</h3>
+                    <p>Za gojazne i trudnice</p>
                 </div>
             </div>
         </div>
@@ -121,8 +121,8 @@
                     <img src="{{asset('/')}}flexovalFiles/carapa/components__component3_image.png" alt="" title="">
                 </div>
                 <div class="text_block">
-                    <h3>Спирогира</h3>
-                    <p>Контролирует кровообращение, не позволяя образоваться новым застоям и спровоцировать повторное возникновение варикоза.</p>
+                    <h3>Neudobna obuća</h3>
+                    <p>Često nosite obuću sa štiklom</p>
                 </div>
             </div>
         </div>
@@ -132,8 +132,8 @@
                     <img src="{{asset('/')}}flexovalFiles/carapa/components__component4_image.png" alt="" title="">
                 </div>
                 <div class="text_block">
-                    <h3>Зигнема</h3>
-                    <p>Обладает мощным обезболивающим эффектом. Снимает ноющую боль и усталость, а также способствует уменьшению воспаления и опухоли.</p>
+                    <h3>Izražene vene</h3>
+                    <p>Primećujete da su vene na nogama izraženije i „otekle“</p>
                 </div>
             </div>
         </div>
@@ -145,49 +145,49 @@
             <img src="{{asset('/')}}flexovalFiles/carapa/problems__image.jpg" alt="" title="">
         </div>
         <div class="info">
-            <h3>Вам срочно необходимы <b>гольфы VenuSocks, если вы:</b></h3>
+            <h3>Zašto su <b>aluminijumska vlakna korisna?</b></h3>
             <ul>
-                <li><b>Находитесь на ногах</b> большую часть дня или трудитесь на “стоячей” работе</li>
-                <li><b>Страдаете от избытка лишнего веса,</b> либо беременны</li>
-                <li><b>Слишком часто</b> используете каблуки в своем гардеробе</li>
-                <li><b>Заметили, что вены на ногах</b> явно просматриваются и даже вздулись</li>
+                <li>Sprečavaju urastanje noktiju, pjave žuljeva, kurjih očiju i slično</li>
+                <li>Nemaju nikakvih neželjenih efekata</li>
+                <li>Jednako ih je prijatno nositi kako u obući, tako i po kući bez ičeg drugog na nogama</li>
+                <li>Jako kvalitetne i udobne</li>
             </ul>
         </div>
     </div>
 </section>
 <section class="benefits_section">
     <div class="wrapper">
-        <h3>Почему VenuSocks - единственное средство, <span>гарантирующее результат</span></h3>
+        <h3>Po čemu su <span>kompres čarape jedinstvene na tržištu?</span></h3>
         <div class="table">
             <div class="row">
-                <div class="cell head">Компрессионные гольфы</div>
-                <div class="cell head">VenuSocks</div>
-                <div class="cell head">Крема и мази</div>
+                <div class="cell head">Obične kompresione čarape</div>
+                <div class="cell head">Kompres čarape</div>
+                <div class="cell head">Kreme i ulja</div>
             </div>
             <div class="row">
-                <div class="cell">Не оказывают комплексного воздействия на варикоз. Используются только для компрессионного эффекта.</div>
-                <div class="cell">Оказывают комплексное воздействие на первопричину варикоза. В результате болезнь проходит полностью.</div>
-                <div class="cell">Не оказывают комплексного воздействия на варикоз. В результате они лишь временно облегчают состояние.</div>
+                <div class="cell">Nemaju holistički efekat na proširene vene i cirkulaciju. Imaju samo kompresioni efekat</div>
+                <div class="cell">Imaju široki spektar efekata koji problem satire u korenu. Kao rezultat toga proširene vene nestaju</div>
+                <div class="cell">Nemaju holistički efekat na koren problema. Samo trenutno popravljaju stanje (za vreme korišćenja)</div>
             </div>
             <div class="row">
-                <div class="cell">После нескольких применений существенно снижается усталость и опухоль.</div>
-                <div class="cell">После первого же применения существенно снижается усталость и отечность в ногах. Полное избавление от варикоза наступает через 3-4 недели.</div>
-                <div class="cell">Эффект заметен лишь через неделю после начала использования, либо не заметен вообще.</div>
+                <div class="cell">Posle par dana korišćenja umor i otok su značajno regulisani</div>
+                <div class="cell">Već posle prvog korišćenja umor i otok nestaju. Potrebno je 3-4 nedelje da se celokupan problem reši</div>
+                <div class="cell">Efekat se vidi tek posle nedelju dana, a moguće je i da potpuno izostane</div>
             </div>
             <div class="row">
-                <div class="cell">Имеют ограниченное время воздействия. Носить их целый день невозможно, так как возникает побочный эффект в виде отеков.</div>
-                <div class="cell">Имеют неограниченное время воздействия, так как Venusocks можно носить сутками - они очень легкие, удобные и комфортные.</div>
-                <div class="cell">Имеют ограниченное время воздействия.</div>
+                <div class="cell">Ne mogu da se nose tokom celog dana – postoji ograničeno vreme nošenja. Pojava edema kao nuspojava</div>
+                <div class="cell">Nemaju ograničen rok nošenja. Nosite ih ceo dan. Veoma su lagane i udobne</div>
+                <div class="cell">Ograničeno vreme korišćenja</div>
             </div>
             <div class="row">
-                <div class="cell">Плохо дышат, провоцируют неприятный запах ног.</div>
-                <div class="cell">Вообще не имеют запаха. Отлично дышат и не провоцируют потливость.</div>
-                <div class="cell">Обладают неприятным остаточным запахом.</div>
+                <div class="cell">Ne dopuštaju koži da diše što može dovesti do neprijatnih mirisa</div>
+                <div class="cell">Daju koži da diše - nema znojenja noge i neprijatnih mirisa</div>
+                <div class="cell">Mogu da imaju neprijatan miris</div>
             </div>
             <div class="row">
-                <div class="cell">Отличный компрессионный эффект.</div>
-                <div class="cell">Комбинированный трикотаж сам по себе оказывает компрессионный эффект, поэтому никакие дополнительные процедуры не нужны.</div>
-                <div class="cell">В большинстве случаев обработанные участки тела нужно перевязывать бинтами - для улучшения компрессии.</div>
+                <div class="cell">Odličan kompresioni efekat</div>
+                <div class="cell">Kombinovani materijali pružaju dovoljnu kompresiju, tako da nisu potrebni dodatni preparati</div>
+                <div class="cell">U većini slučajeva tretirana površina mora da se previje da bi se ostvario efekat kompresije</div>
             </div>
         </div>
     </div>
@@ -199,39 +199,40 @@
                 <div class="image_block">
                     <img src="{{asset('/')}}flexovalFiles/carapa/opinion__photo.jpg" alt="" title="">
                 </div>
-                <div class="author_name">Виктория Никифорова</div>
-                <p>флеболог, стаж работы 34 года</p>
+                <div class="author_name"></div>
+                <p></p>
             </div>
             <div class="text_block">
-                <h3>Мнение <span>специалиста</span></h3>
-                <p>В своей практике я встречала тысячи различных венозных патологий, и поверьте, далеко не всегда удается найти единственно правильную методику лечения для пациента. Однако гольфы Venusocks позволили это сделать - их успешно протестировали более сотни больных варикозом людей с совершенно разной клинической спецификой. И абсолютно во всех случаях мы зафиксировали снижение уровня опасности - кровообращение нормализовалось, транспортировка крови наладилась. Я рекомендую гольфы Venusocks каждому, кто обнаружил у себя первые признаки варикоза.  Они настолько легкие и удобные, что большинство пациентов надевают их прямо на работу.</p>
+                <h3>Mišljenje <span>struke</span></h3>
+                <p>Na velikom broju uzoraka različitih problema sa venama i cirkulacijom zaključeno je da je jako teško da za svaki slučaj postoji jedan univerzalni način lečenja. <br>Međutim, Kompres dokolenice to demantuju – više stotina zadovoljnih korisnika potvrdjuje njihove izvanredne rezultate u tretiranju ovog problema. Svi oni prijavljuju da se cirkulacija vratila u normalu i da je protok krvi poboljšan. Preporučuju se za sve koji primete prve tragove proširenih vena. Toliko su lagane i udobne da ih većina korisnika nosi i na posao.</p>
             </div>
         </div>
     </div>
 </section>
 <section class="reviews_section">
     <div class="wrapper">
-        <h2>Отзывы <span>покупателей</span></h2>
+        <h2>Utisci <span>kupaca</span></h2>
         <div class="reviews_list">
             <div class="review_item clearfix">
                 <img src="{{asset('/')}}flexovalFiles/carapa/reviews__review1_photo.jpg" alt="" title="">
                 <div class="text_block">
-                    <div class="author_info">Екатерина Светлакова, <span>г. Нижний Новгород</span></div>
-                    <p>Если честно, я вообще не верила, что эти гольфы смогут мне как-то помочь. Но положительные отзывы и низкая стоимость все-таки убедили меня их попробовать. И в итоге я не разочаровалась: за неполных 20 дней вены на ногах действительно стали такими, как в молодости, я стала меньше страдать от ноющей боли в икрах и голени. Сейчас ношу их каждый день по 3-4 часа для профилактики. Самочувствие - супер!</p>
+                    <div class="author_info">Katarina Životić, <span>Barajevo</span></div>
+                    <p>Iskreno, nisam mnogo nade polagala u ove dokolenice. Ali pristupačna cena (dosta jeftinije nego u apotekama) i pozitivna iskustva prijatelja su me naterala da ih probam – i nisam razočarana. Za manje od mesec dana rešila sam se proširenih vena. Noge su prestale da mi trnu, pogotovo listovi. Sada ih nosim svakodnevno bar 3-4 sata preventivno. Sjajne su i mogu vam reći da se i ja sjajno osećam!</p>
                 </div>
             </div>
             <div class="review_item clearfix">
                 <img src="{{asset('/')}}flexovalFiles/carapa/reviews__review2_photo.jpg" alt="" title="">
                 <div class="text_block">
-                    <div class="author_info">Анастасия Катаева, <span>г. Москва</span></div>
-                    <p>Купила две пары для мамы, ей очень понравились. Говорит, похожи на обычные чулки, только плотнее и мягче. Эффект - просто супер! Еще две недели назад она еле передвигалась по комнате, а теперь уже снова наяривает в парке со своими палками для скандинавской ходьбы. Прямо в этих гольфах, кстати. Выражаем вам огромную благодарность за действительно эффективное средство!</p>
+                    <div class="author_info">Anastasija Katić, <span>Beograd</span></div>
+                    <p>Kupila sam majci dva para, i veoma joj se sviđaju. Kaže da izgledaju kao regularne čarape samo dosta punije i mekše. Efekat je sjajan! Pre par nedelja jedva je mogla da ide po kući, a danas se igra sa unučićima pop parku. Jako smo zahvalni na tim čarapama.</p>
                 </div>
             </div>
             <div class="review_item clearfix">
                 <img src="{{asset('/')}}flexovalFiles/carapa/reviews__review3_photo.jpg" alt="" title="">
                 <div class="text_block">
-                    <div class="author_info">Оля Кузнецова, <span>г. Минск</span></div>
-                    <p>Не думала, что варикоз настигнет меня так рано, но это все же случилось. Начала замечать явное выступание вен, ноги каждый вечер стали неприятно ныть. Заказала Venusocks. Спасибо, что доставили очень быстро - благодаря этому я “вернулась в строй” как можно раньше. Усталость ушла, вены вернулись в нормальное положение. Эти водоросли - просто чудо. Рекомендую всем!</p>
+                    <div class="author_info">Olja Micić, <span>Niš</span></div>
+                    <p>Nisam očekivala proširene vene u ovim godinama, ali eto i to se desilo. Primetila sam da me listovi bole svako veče i da mi trnu. Naručila sam Kompres čarape čim sam videla reklamu na Instagramu. Zahvalila bih se za ekspresnu dostavu – zahvaljujući tome jako brzo sam ponovo bila na nogama.
+                        Umor je nestao, a vene više nisu proširene. Aluminijumska vlakna su čudo – moja topla preporuka!</p>
                 </div>
             </div>
         </div>
@@ -239,15 +240,15 @@
 </section>
 <section class="order_info_section">
     <div class="wrapper">
-        <h2>Доставка и <span>оплата</span></h2>
+        <h2>Dostava i <span>plaćanje</span></h2>
         <div class="info_list">
             <div class="info_item">
                 <div class="image_block">
                     <img src="{{asset('/')}}flexovalFiles/carapa/order_info__info1_image.jpg" alt="" title="">
                 </div>
                 <div class="text_block">
-                    <h3>Как заказать?</h3>
-                    <p>Оставьте заявку на нашем сайте. Наш менеджер свяжется с Вами в ближайшее время для оформления заказа.</p>
+                    <h3>Kako da naručim?</h3>
+                    <p><a style="text-decoration: none; color: #32455d;" href="#order_form">Popunite formu</a> na našem sajtu. Dobićete potvrdu porudžbine i možete je očekivati za 24-48h</p>
                 </div>
             </div>
             <div class="info_item">
@@ -255,8 +256,8 @@
                     <img src="{{asset('/')}}flexovalFiles/carapa/order_info__info2_image.jpg" alt="" title="">
                 </div>
                 <div class="text_block">
-                    <h3>Доставка</h3>
-                    <p>Мы отправляем Ваш заказ почтой. После получения Вы оплачиваете товар наложенным платежом.</p>
+                    <h3>Dostava</h3>
+                    <p>Šaljemo robu brzom poštom. Kuriru plaćate tek po preuzimanju</p>
                 </div>
             </div>
             <div class="info_item">
@@ -264,8 +265,8 @@
                     <img src="{{asset('/')}}flexovalFiles/carapa/order_info__info3_image.jpg" alt="" title="">
                 </div>
                 <div class="text_block">
-                    <h3>Гарантии</h3>
-                    <p>Мы проверяем качество всех товаров перед отправкой заказа. Вы также вправе отказаться от покупки в течение 14 дней.</p>
+                    <h3>Garancija</h3>
+                    <p>Na sve proizvode dajemo garanciju kvaliteta. Ukoliko iz bilo kog razloga niste zadovoljni vraćamo novac</p>
                 </div>
             </div>
         </div>
@@ -274,14 +275,14 @@
 <section class="offer_section offer_bottom">
     <div class="wrapper clearfix">
         <ul>
-            <li><b>Улучшают</b><br>проходимость крови</li>
-            <li><b>Снимают</b><br>воспаление и отечность</li>
-            <li><b>Не имеют</b><br>побочных эффектов</li>
+            <li><b>Poboljšava </b><br>cirkulaciju</li>
+            <li><b>Smanjuje </b><br>upale i otoke</li>
+            <li><b>Bez </b><br>nuspojava</li>
         </ul>
         <div class="info">
             <div class="title_block">
-                <h3 class="main_title">VenuSocks</h3>
-                <p>Компрессионные гольфы <span>от варикоза</span></p>
+                <h1 class="main_title">Kompres</h1>
+                <p>Za poboljšanu cirkulaciju <span>i protiv proširenih vena</span></p>
             </div>
             <div class="discount">Popust <span>-40%</span></div>
             <div class="price_block clearfix">
