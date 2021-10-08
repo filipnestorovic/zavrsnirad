@@ -55,7 +55,7 @@
                     <div style="color: black;margin-top: 5px;font-size: 24px;">nova cena</div>
                 </div>
                 <div class="line4 price_land_s1" style="margin-top:0px;">{{ $prices[1]['amount'] }}</div>
-                <div class="line5 price_land_curr">RSD</div>
+                <div class="line5 price_land_curr">KM</div>
             </div>
             <div class="col-xs-12 col-md-3 hidden-xs hidden-sm">
                 <div class="monk"><img alt="" src="{{ asset('/') }}naturapharmFiles/kneepatch/monk.png"/></div>
@@ -79,7 +79,7 @@
                             <div class="old_price"></div>
                             <span>Cena</span>
                             <span class="displayCurrentPriceNoCyr price_land_s1 new_price"></span>
-                            <span class="displayCurrentCurrency price_land_curr">RSD</span>
+                            <span class="displayCurrentCurrency price_land_curr">KM</span>
                         </div>
                         <form action="{{$orderRoute}}" class="orderFormWrapper orderformcdn" method="post">
                             {{csrf_field()}}
@@ -93,7 +93,7 @@
                                            @if($singlePrice['is_default']) checked @endif
                                            @if(old('quantity') == $singlePrice['quantity']) checked @endif >
                                     <label for="productLabel{{$singlePrice['quantity']}}">
-                                        {{$singlePrice['quantity']}} x {{$product->product_name}} ({{$singlePrice['amount']}} RSD)
+                                        {{$singlePrice['quantity']}} x {{$product->product_name}} ({{$singlePrice['amount']}} KM)
                                         @if($singlePrice['is_free_shipping']) * @endif
                                     </label>
                                     <br>
@@ -315,7 +315,7 @@
                     <div style="color: black;margin-top: 5px;font-size: 24px;"> nova cena</div>
                 </div>
                 <div class="line4 price_land_s1" style="margin-top:0px;">{{ $prices[1]['amount'] }}</div>
-                <div class="line5 price_land_curr">RSD</div>
+                <div class="line5 price_land_curr">KM</div>
             </div>
             <div class="col-xs-12 col-md-8 productSection">
                 <div class="product">
@@ -350,7 +350,7 @@
                             <div class="old_price"></div>
                             <span>Cena</span>
                             <span class="displayCurrentPriceNoCyr price_land_s1 new_price"></span>
-                            <span class="displayCurrentCurrency price_land_curr">RSD</span>
+                            <span class="displayCurrentCurrency price_land_curr">KM</span>
                         </div>
                         <form action="{{$orderRoute}}" class="orderFormWrapper orderformcdn" method="post">
                             {{csrf_field()}}
@@ -363,7 +363,7 @@
                                            @if($singlePrice['is_default']) checked @endif
                                            @if(old('quantity') == $singlePrice['quantity']) checked @endif >
                                     <label for="SecondProductLabel{{$singlePrice['quantity']}}">
-                                        {{$singlePrice['quantity']}} x {{$product->product_name}} ({{$singlePrice['amount']}} RSD)
+                                        {{$singlePrice['quantity']}} x {{$product->product_name}} ({{$singlePrice['amount']}} KM)
                                         @if($singlePrice['is_free_shipping']) * @endif
                                     </label>
                                     <br>
@@ -496,7 +496,7 @@
                     <div style="color: black;margin-top: 5px;font-size: 24px;"> nova cena</div>
                 </div>
                 <div class="line4 price_land_s1" style="margin-top:0px;">{{ $prices[1]['amount'] }}</div>
-                <div class="line5 price_land_curr">RSD</div>
+                <div class="line5 price_land_curr">KM</div>
             </div>
             <div class="col-xs-12 col-md-8 productSection">
                 <div class="product">
@@ -531,7 +531,7 @@
                             <div class="old_price"></div>
                             <span>Cena</span>
                             <span class="displayCurrentPriceNoCyr price_land_s1 new_price"></span>
-                            <span class="displayCurrentCurrency price_land_curr">RSD</span>
+                            <span class="displayCurrentCurrency price_land_curr">KM</span>
                         </div>
                         <form action="{{$orderRoute}}" class="orderFormWrapper orderformcdn" method="post">
                             {{csrf_field()}}
@@ -544,7 +544,7 @@
                                            @if($singlePrice['is_default']) checked @endif
                                            @if(old('quantity') == $singlePrice['quantity']) checked @endif >
                                     <label for="ThirdProductLabel{{$singlePrice['quantity']}}">
-                                        {{$singlePrice['quantity']}} x {{$product->product_name}} ({{$singlePrice['amount']}} RSD)
+                                        {{$singlePrice['quantity']}} x {{$product->product_name}} ({{$singlePrice['amount']}} KM)
                                         @if($singlePrice['is_free_shipping']) * @endif
                                     </label>
                                     <br>

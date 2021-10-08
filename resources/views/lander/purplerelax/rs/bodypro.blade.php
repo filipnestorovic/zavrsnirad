@@ -7,18 +7,74 @@
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <link rel="stylesheet" type="text/css" href="{{ asset('/') }}purplerelaxFiles/celluless/styles.css">
     <link rel="shortcut icon" href="">
+    <style>
+        .offer_section h2 {
+            color: #1b7ac2;
+        }
+        @media only screen and (min-width:424px){
+            .cellulite_types_section .photo_block img {
+                width: 226px !important;
+                margin-left: 200px;
+            }
+            .offer_section {
+                padding: 40px 0 40px 0;
+                height: auto;
+                background: #fececa url({{ asset('/') }}purplerelaxFiles/bodypro/desctop__offer_bg.png) center top no-repeat;
+                background-size: cover;
+                color: #fff;
+            }
+            .offer_section .info {
+                float:right;
+            }
+            .offer_section .info li {
+                float:right;
+                background-color: #025271;
+                padding: 30px 30px 10px 120px;
+                background-position: 10px 10px !important;
+                height: 106px;
+            }
+            .offer_section .discount {
+                top: -20px;
+                right: -40px !important;
+            }
+            .components_section {
+                padding: 41px 0 43px 0;
+                background: url({{ asset('/') }}purplerelaxFiles/bodypro/components__product_image.png) center 130px no-repeat;
+            }
+        }
+        @media only screen and (max-width:424px){
+            .cellulite_types_section .photo_block img {
+                width: 226px !important;
+                margin-left: 36px;
+            }
+            .offer_section {
+                height: auto;
+                background: #fececa url({{ asset('/') }}purplerelaxFiles/bodypro/mobile__offer_bg.png) center 20px no-repeat;
+                padding-bottom: 20px;
+                background-size: 520px auto;
+                background-position-y: 50px;
+            }
+            .offer_section form {
+                margin-top: 50px;
+            }
+            .offer_section .discount {
+                top: 25px;
+                right: 100px;
+            }
+        }
+    </style>
 </head>
 <body>
 <!-- offer -->
 @include('components.display_errors')
 <header class="offer_section">
     <div class="wrapper clearfix">
-        <h1> MASAŽER <span class="accent_color">BODY PRO</span> - ZA SAVRŠENO TELO</h1>
+        <h2> MASAŽER <span style="color: #025271;">BODY PRO</span> - ZA SAVRŠENO TELO</h2>
         <div class="info">
             <ul>
-                <li> <br>Efekat nakon <span class="accent_color">prve upotrebe</span></li>
+                <li> Efekat nakon <span class="accent_color">prve upotrebe</span></li>
                 <li> Izrađen od <span class="accent_color"> kvalitetnih materijala</span></li>
-                <li><span class="accent_color"><br> Uklanja celulit</span> i zeteže kožu</li>
+                <li><span class="accent_color"> Uklanja celulit</span> i zeteže kožu</li>
             </ul>
             <div class="discount"><span> Popust<b> 40%</b></span></div>
         </div>
@@ -90,7 +146,7 @@
 
             <div class="type_item clearfix">
                 <div class="photo_block">
-                    <img src="{{ asset('/') }}purplerelaxFiles/celluless/cellulite_types__type1_image.png" alt="Cellulite Massage"
+                    <img src="{{ asset('/') }}purplerelaxFiles/bodypro/bodyproS1.jpg" alt="Cellulite Massage"
                          title="Cellulite Massage">
                 </div>
                 <div class="text">
@@ -103,7 +159,7 @@
 
             <div class="type_item clearfix">
                 <div class="photo_block">
-                    <img src="{{ asset('/') }}purplerelaxFiles/celluless/cellulite_types__type2_image.png" alt="Cellulite Massage"
+                    <img src="{{ asset('/') }}purplerelaxFiles/bodypro/bodyproS2.png" alt="Cellulite Massage"
                          title="Cellulite Massage">
                 </div>
                 <div class="text">
@@ -116,7 +172,7 @@
 
             <div class="type_item clearfix">
                 <div class="photo_block">
-                    <img src="{{ asset('/') }}purplerelaxFiles/celluless/cellulite_types__type3_image.png" alt="Cellulite Massage"
+                    <img src="{{ asset('/') }}purplerelaxFiles/bodypro/bodyproS3.png" alt="Cellulite Massage"
                          title="Cellulite Massage">
                 </div>
                 <div class="text">
@@ -155,7 +211,7 @@
 <!-- components -->
 <section class="components_section">
     <div class="wrapper">
-        <h2><span>EFEKEAT ANTICELULIT MASAŽE</span></h2>
+        <h2><span>EFEKAT ANTICELULIT MASAŽE</span></h2>
 
         <div class="items_list components_list">
             <div class="item component_item">
@@ -213,7 +269,7 @@
         <h2>Zašto baš BODY PRO?</h2>
         <div class="items_list methods_list">
             <div class="item method_item">
-                <img src="{{ asset('/') }}purplerelaxFiles/celluless/methods__method2_image.png" alt="Cellulite Massage" title="Cellulite Massage">
+                <img src="{{ asset('/') }}purplerelaxFiles/bodypro/bodypro2.jpg" alt="Cellulite Massage" title="Cellulite Massage">
                 <h3>BODY PRO</h3>
                 <ul class="tech_list">
                     <li class="yes">Brzi rezultati</li>
@@ -288,8 +344,7 @@
 <!-- offer -->
 <section class="offer_section">
     <div class="wrapper clearfix">
-        <h2> MASAŽER <span class="accent_color">CELLULESS</span> - ZA SAVRŠENO TELO
-        </h2>
+        <h2> MASAŽER <span style="color: #025271;">BODY PRO</span> - ZA SAVRŠENO TELO</h2>
         <div class="info">
             <ul>
                 <li> <br>Efekat nakon <span class="accent_color">prve upotrebe</span></li>
