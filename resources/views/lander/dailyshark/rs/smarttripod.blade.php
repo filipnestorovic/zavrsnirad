@@ -76,11 +76,11 @@
             </li>
         </ul>
         <a href="#order_form"  class="button">
-            <p>PORUČITE SADA</p>
+            <p>PORUČI SADA</p>
         </a>
     </header>
     <section class="problems_section dark_theme">
-        <h2>Da li voliš da praviš zanimljive i kreativne sadržaje? Onda je tripod prava stvar za tebe! Istakni se svojom jedinstvenošću!</h2>
+        <h2 style="margin: 0 20px 20px 20px;">Da li voliš da praviš zanimljive i kreativne sadržaje? Onda je tripod prava stvar za tebe! Istakni se svojom jedinstvenošću!</h2>
         <div class="benefits_list1 image_rounded">
             <div class="benefit_item">
                 <div class="benefit_item_image"
@@ -137,7 +137,7 @@
         </ul>
 
         <a href="#order_form"  class="button">
-            <p>PORUČITE SADA</p>
+            <p>PORUČI SADA</p>
         </a>
     </section>
     <section class="sect8">
@@ -162,7 +162,7 @@
             </div>
         </div>
         <a href="#order_form"  class="button">
-            <p>PORUČITE SADA</p>
+            <p>PORUČI SADA</p>
         </a>
     </section>
     <section class="order_steps_section">
@@ -236,18 +236,18 @@
             </div>
         </div>
         <form id="order_form" class="order_form"  method="post" action="{{$orderRoute}}">
-            <div><input class="field" type="text" name="name" required placeholder="Introduceți Prenumele" data-orderName></div>
-            <div><input class="field" type="tel" name="phone" required id="phone_client" placeholder="Introduceți numărul de telefon" autocomplete="off" data-orderPhone></div>
-            <input class="button" value="Cumpărați acum" type="submit" data-ordersubmit>
+            {{ csrf_field() }}
+            @include('lander.naturapharm.components.form_hidden_fields')
+            <div><input class="field" type="text" name="name" required placeholder="Ime i prezime"></div>
+            <div><input class="field" type="tel" name="phone" required id="phone_client" placeholder="Telefon" autocomplete="off"></div>
+            <div><input class="field" type="text" name="shipping_address" required placeholder="Adresa"></div>
+            <div><input class="field" type="text" name="shipping_city" required placeholder="Grad"></div>
+            <input class="button" value="ZAVRŠI PORUDŽBINU" type="submit">
         </form>
     </section>
 </div>
 <script src="{{ asset('/') }}shared_files/owl.carousel.min.js"></script>
 <script>
-    // $(document).ready(function() {
-    //
-    // });
-
     $(window).on("load", function(){
         $(".owl-carousel").owlCarousel({
             items: 1,
