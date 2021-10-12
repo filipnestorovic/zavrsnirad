@@ -36,6 +36,10 @@ table {
 
 /* styles */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     min-width: 480px;
     background: #eee;
