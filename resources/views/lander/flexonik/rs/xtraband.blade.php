@@ -10,6 +10,13 @@
     <link type="text/css" rel="stylesheet" href="{{ asset('/') }}flexonikFiles/xtraband/style.css" />
     <script type="text/javascript" src="{{ asset('/') }}flexonikFiles/xtraband/owl.carousel.js"></script>
     <style>
+        .freeShippingDiv {
+            color: #fff;
+            text-align: center;
+            display: none;
+            font-weight: bold;
+            margin-top: 10px;
+        }
         @media (max-width: 480px){
             #firstPrices {
                 margin-top: 20px;
@@ -22,6 +29,10 @@
             #firstPrices .new-price {
                 display: inline-block;
                 margin-left: 10px;
+            }
+            .btn-blue {
+                margin-left: 15px;
+                margin-top: 15px;
             }
         }
     </style>
@@ -373,10 +384,22 @@
                                 <input name="phone" class="only_number input-text" placeholder="Telefon" type="tel">
                                 <input name="shipping_address" class="input-text" placeholder="Adresa">
                                 <input name="shipping_city" class="input-text" placeholder="Grad">
+                                <label for="quantity" style="margin-left: 5px;">Izaberite količinu</label>
+                                <select name="quantity" id="quantity" required style="margin-top: 10px; cursor: pointer;">
+                                    @foreach($prices as $singlePrice)
+                                        <option value="{{$singlePrice['quantity']}}" placeholder="{{ $singlePrice['is_free_shipping'] }}" aria-price="{{$singlePrice['amount']}}" aria-oldPrice="{{$singlePrice['originalPrice']}}"
+                                                @if($singlePrice['is_default']) selected @endif
+                                                @if(old('quantity') == $singlePrice['quantity']) selected @endif
+                                        >
+                                            {{$singlePrice['quantity']}} x {{$product->product_name}} ({{$singlePrice['amount']}} RSD)
+                                        </option>
+                                    @endforeach
+                                </select>
                                 <div class="b-prices d-mobile text-center">
                                     <div class="old-price"><span class="js_old_price_curs"><span class="price_land_s2">{{ $prices[1]['originalPrice'] }}</span> <span class="price_land_curr">RSD</span></span></div>
                                     <div class="new-price"><span class="js_new_price price_land_s1">{{ $prices[1]['amount'] }} </span> <span class="js_curs price_land_curr">RSD</span></div>
                                 </div>
+                                <div class="freeShippingDiv">+ BESPLATNA POŠTARINA</div>
                                 <input type="submit" class="btn-blue js_submit" value="ZAVRŠI PORUDŽBINU!">
                                 <div class="b-prices d-large">
                                     <div class="old-price"><span class="js_old_price_curs"><span class="price_land_s2">{{ $prices[1]['originalPrice'] }}</span> <span class="price_land_curr">RSD</span></span></div>
@@ -407,6 +430,19 @@
                 1170:{
                     items:3
                 }
+            }
+        });
+        $('#quantity').click(function () {
+            let selected = $('option:selected', this);
+            let fsh = selected.attr('placeholder');
+            let oldPrice = selected.attr('aria-oldPrice');
+            let price = selected.attr('aria-price');
+            $('.price_land_s2').html(oldPrice);
+            $('.price_land_s1').html(price);
+            if(fsh == 1) {
+                $(this).next().next().slideDown();
+            } else {
+                $(this).next().next().slideUp();
             }
         });
     });

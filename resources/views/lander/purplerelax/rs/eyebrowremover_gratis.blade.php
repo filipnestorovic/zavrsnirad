@@ -18,6 +18,24 @@
                 line-height: 48px;
                 padding: 0;
             }
+            #order_form0 {
+                margin-top: 30px;
+            }
+            #order_form h3 {
+                margin-left: -80px;
+            }
+        }
+        .block9 {
+            background-color: rgb(230,236,245);
+        }
+        .block9 .lt47 {
+            color: white;
+            text-shadow: 0 0 10px #cc6d92;
+        }
+        .action-img img {
+            border-color: #fff;
+            display: block;
+            z-index: 9999;
         }
     </style>
 </head>
