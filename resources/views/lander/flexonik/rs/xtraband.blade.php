@@ -392,6 +392,7 @@
                                                 @if(old('quantity') == $singlePrice['quantity']) selected @endif
                                         >
                                             {{$singlePrice['quantity']}} x {{$product->product_name}} ({{$singlePrice['amount']}} RSD)
+                                            @if($singlePrice['is_free_shipping']) * @endif
                                         </option>
                                     @endforeach
                                 </select>
