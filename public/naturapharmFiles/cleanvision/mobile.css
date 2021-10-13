@@ -16,10 +16,45 @@
     }
     .header-bottom .hb-left {
         width: 100%;
+        margin-left: 45%;
     }
     .header-bottom .hb-center {
         width: 100%;
         font-size: 20px;
+        margin-top: 30px;
+    }
+    .header-bottom .hb-center ul li {
+        font-size: 34px;
+    }
+    .hb-center ul li:before {
+        left: -60px;
+        top: 30px;
+        width: 50px;
+        height: 50px;
+    }
+    .header-bottom .hb-center .promo {
+        font-size: 40px;
+        padding-left: 120px;
+        margin-top: 40px;
+    }
+    .hb-center .promo:before {
+        left: 0;
+        top: 0;
+        width: 100px;
+        height: 100px;
+    }
+    .header-bottom .hb-center .promo .sale {
+        font-size: 38px;
+    }
+    .header-bottom .hb-center .price {
+        width: 360px;
+        height: auto;
+    }
+    .header-bottom .hb-center .price .price_old {
+        font-size: 38px;
+    }
+    .header-bottom .hb-center .price .price_main {
+        font-size: 84px;
     }
     .header-bottom .hb-right {
         width: 100%;

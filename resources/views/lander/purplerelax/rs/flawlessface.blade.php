@@ -18,7 +18,7 @@
             <p>
                 FLAWLESS
                 <br> FACE
-                <i><img src="{{ asset('/') }}purplerelaxFiles/flawlessface/logo_icon.png" alt="epilator Flawless" title="epilator Flawless" ></i>
+                <i><img src="{{ asset('/') }}purplerelaxFiles/flawlessface/logo_icon.png" alt="depilator Flawless" title="depilator FlawlessFace" ></i>
             </p>
         </a>
         <p class="header__name">BESTSELLER U 2021 GODINI</p>
@@ -30,7 +30,7 @@
         <div class="content">
             <div class="product__info">
                 <div class="product__info_zag">
-                    <h2>PORTABLE EPILATOR</h2>
+                    <h2>PORTABLE DEPILATOR</h2>
                     <p><b>FLAWLESS FACE</b></p>
                 </div>
                 <p class="product__info_text">
@@ -38,7 +38,7 @@
                     <b>Apsolutno bezbolno</b>
                 </p>
                 <div class="product__info_delivery">
-                    <i class="icon"><img src="{{ asset('/') }}purplerelaxFiles/flawlessface/delivery.svg" alt="epilator Flawless" title="epilator Flawless" ></i>
+                    <i class="icon"><img src="{{ asset('/') }}purplerelaxFiles/flawlessface/delivery.svg" alt="depilator Flawless" title="depilator FlawlessFace" ></i>
                     <p>Brza dostava u roku od 1-2 radna dana</p>
                 </div>
                 <a href="#form" class="product__info_button open_modal">PORUČI</a>
@@ -60,7 +60,7 @@
             </div>
             <div class="price__img_block">
                 <span></span>
-                <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/price.png" alt="epilator Flawless" title="epilator Flawless">
+                <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/price.png" alt="depilator Flawless" title="depilator FlawlessFace">
             </div>
         </div>
     </div>
@@ -68,8 +68,8 @@
     <div class="situation">
         <div class="content">
             <h2 class="block__zag">
-                <span><i><img src="{{ asset('/') }}purplerelaxFiles/flawlessface/4.png" alt="epilator Flawless" title="epilator Flawless" > </i>situacije</span>
-                <small>gde je potreban epilator</small>
+                <span><i><img src="{{ asset('/') }}purplerelaxFiles/flawlessface/4.png" alt="depilator Flawless" title="depilator FlawlessFace" > </i>situacije</span>
+                <small>gde je potreban depilator</small>
             </h2>
             <div class="situation__line">
                 <!--Ситуация 1-->
@@ -82,14 +82,14 @@
                     </div>
                     <!--Изображение блока -->
                     <div class="situation__vertical_block_img">
-                        <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/situation1.jpg" alt="epilator Flawless" title="epilator Flawless">
+                        <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/situation1.jpg" alt="depilator Flawless" title="depilator FlawlessFace">
                     </div>
                 </div>
                 <!--Ситуация2 -->
                 <div class="situation__vertical_block">
                     <!--изображение блока -->
                     <div class="situation__vertical_block_img">
-                        <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/situation2.jpg" alt="epilator Flawless" title="epilator Flawless">
+                        <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/situation2.jpg" alt="depilator Flawless" title="depilator FlawlessFace">
                     </div>
                     <div class="situation__vertical_block_text">
                         <!--Заголовок блока -->
@@ -102,33 +102,33 @@
                 <div class="situation__horizontal_block">
                     <!--изображение блока -->
                     <div class="situation__horizontal_block_img">
-                        <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/situation3.jpg" alt="epilator Flawless" title="epilator Flawless">
+                        <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/situation3.jpg" alt="depilator Flawless" title="depilator FlawlessFace">
                     </div>
                     <div class="situation__horizontal_block_text">
                         <!--Заголловок блока -->
-                        <h3>Svesni ste tamnih mrlja nakon epilacije</h3>
+                        <h3>Svesni ste tamnih mrlja nakon depilacije</h3>
                         <!--Текст блока -->
-                        <p>Flawless Face je apsolutno siguran za vreme upotrebe i ne ostavlja tragove na koži nakon epilacije.</p>
+                        <p>Flawless Face je apsolutno siguran za vreme upotrebe i ne ostavlja tragove na koži nakon depilacije.</p>
                     </div>
                     <!--Текст для мобильной версии -->
                     <p class="text_mobile">
-                        Flawless Face je apsolutno siguran za vreme upotrebe i ne ostavlja tragove na koži nakon epilacije.
+                        Flawless Face je apsolutno siguran za vreme upotrebe i ne ostavlja tragove na koži nakon depilacije.
                     </p>
                 </div>
                 <!--Ситуация 4-->
                 <div class="situation__horizontal_block">
                     <!--Иззображение блока-->
                     <div class="situation__horizontal_block_img">
-                        <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/situation4.jpg" alt="epilator Flawless" title="epilator Flawless">
+                        <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/situation4.jpg" alt="depilator Flawless" title="depilator FlawlessFace">
                     </div>
                     <div class="situation__horizontal_block_text">
                         <!--Заголовок блока-->
                         <h3>Uvek želite izgledati mlado</h3>
                         <!--Текст блока-->
-                        <p>i vrlo ste pažljivi prema svom izgledu, ali ne želite trošiti previše vremena na to i ne mislite da lepota zahteva tako bolne tretmane kao što je depilacija.</p>
+                        <p>Vrlo ste pažljivi prema svom izgledu, ali ne želite trošiti previše vremena na to i ne mislite da lepota zahteva tako bolne tretmane kao što je depilacija.</p>
                     </div>
                     <!--Текст для мобильной версии -->
-                    <p class="text_mobile">i vrlo ste pažljivi prema svom izgledu, ali ne želite trošiti previše vremena na to i ne mislite da lepota zahteva tako bolne tretmane kao što je depilacija.</p>
+                    <p class="text_mobile">Vrlo ste pažljivi prema svom izgledu, ali ne želite trošiti previše vremena na to i ne mislite da lepota zahteva tako bolne tretmane kao što je depilacija.</p>
                 </div>
             </div>
         </div>
@@ -151,7 +151,7 @@
                         <!--информация об авторе -->
                         <div class="slide__autor">
                             <!--аватар -->
-                            <i class="avatar"><img src="{{ asset('/') }}purplerelaxFiles/flawlessface/avatar.png" alt="epilator Flawless" title="epilator Flawless" ></i>
+                            <i class="avatar"><img src="{{ asset('/') }}purplerelaxFiles/flawlessface/avatar.png" alt="depilator Flawless" title="depilator FlawlessFace" ></i>
                             <!--Имя и город -->
                             <div class="name">
                                 <p class="autor">JELENA TOMIĆ</p>
@@ -168,7 +168,7 @@
                         <!--информация об авторе -->
                         <div class="slide__autor">
                             <!--аватар -->
-                            <i class="avatar"><img src="{{ asset('/') }}purplerelaxFiles/flawlessface/avatar2-1.png" alt="epilator Flawless" title="epilator Flawless" ></i>
+                            <i class="avatar"><img src="{{ asset('/') }}purplerelaxFiles/flawlessface/avatar2-1.png" alt="depilator Flawless" title="depilator FlawlessFace" ></i>
                             <!--Имя и город -->
                             <div class="name">
                                 <p class="autor">DRAGANA MARKOVIĆ</p>
@@ -187,14 +187,14 @@
     <div class="problems">
         <div class="content">
             <h2 class="block__zag">
-                <span><i><img src="{{ asset('/') }}purplerelaxFiles/flawlessface/3.png" alt="epilator Flawless" title="epilator Flawless" ></i>problema</span>
+                <span><i><img src="{{ asset('/') }}purplerelaxFiles/flawlessface/3.png" alt="depilator Flawless" title="depilator FlawlessFace" ></i>problema</span>
                 <small>koja se lako mogu rešiti uz pomoć epilatora</small>
             </h2>
             <!--проблема1 -->
             <div class="problems_block">
                 <!--Изображение блока-->
                 <div class="problems_block_img">
-                    <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/problem1.jpg" alt="epilator Flawless" title="epilator Flawless">
+                    <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/problem1.jpg" alt="depilator Flawless" title="depilator FlawlessFace">
                 </div>
                 <div class="problems_block_text">
                     <!--название проблемы -->
@@ -210,7 +210,7 @@
             <div class="problems_block">
                 <!--Изображение блока-->
                 <div class="problems_block_img">
-                    <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/problem2.jpg" alt="epilator Flawless" title="epilator Flawless">
+                    <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/problem2.jpg" alt="depilator Flawless" title="depilator FlawlessFace">
                 </div>
                 <div class="problems_block_text">
                     <!--название проблемы -->
@@ -226,7 +226,7 @@
             <div class="problems_block end">
                 <!--Изображение блока-->
                 <div class="problems_block_img">
-                    <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/problem3.jpg" alt="epilator Flawless" title="epilator Flawless">
+                    <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/problem3.jpg" alt="depilator Flawless" title="depilator FlawlessFace">
                 </div>
                 <div class="problems_block_text">
                     <!--название проблемы -->
@@ -282,7 +282,7 @@
                         <!--Автор -->
                         <div class="slide__autor">
                             <!--Аватар -->
-                            <i class="avatar"><img src="{{ asset('/') }}purplerelaxFiles/flawlessface/avatar3-1.png" alt="epilator Flawless" title="epilator Flawless" ></i>
+                            <i class="avatar"><img src="{{ asset('/') }}purplerelaxFiles/flawlessface/avatar3-1.png" alt="depilator Flawless" title="depilator FlawlessFace" ></i>
                             <div class="name">
                                 <!--Имя-->
                                 <p class="autor">MIRJANA</p>
@@ -300,7 +300,7 @@
                         <!--Автор -->
                         <div class="slide__autor">
                             <!--Аватар -->
-                            <i class="avatar"><img src="{{ asset('/') }}purplerelaxFiles/flawlessface/avatar4-1.png" alt="epilator Flawless" title="epilator Flawless" ></i>
+                            <i class="avatar"><img src="{{ asset('/') }}purplerelaxFiles/flawlessface/avatar4-1.png" alt="depilator Flawless" title="depilator FlawlessFace" ></i>
                             <div class="name">
                                 <!--Имя-->
                                 <p class="autor">IRENA</p>
@@ -309,7 +309,7 @@
                             </div>
                         </div>
                         <!--Текст отзыва -->
-                        <p class="slide_text">Jako sam zadovoljna rezultatima ovog epilatora! Nudi besprekoran kvalitet epilacije. U početku sam mislila da će boleti, ali sve sumnje su nestale nakon prve
+                        <p class="slide_text">Jako sam zadovoljna rezultatima ovog epilatora! Nudi besprekoran kvalitet depilacije. U početku sam mislila da će boleti, ali sve sumnje su nestale nakon prve
                             upotrebe. Uopšte ne boli i može se koristiti i za osetljiva područja. Jako mi se sviđa što ima glatku površinu i ne čupa dlačice. Vredi svakog dinara. Ja sam zadovolja
                             obavljenom kupovinom i toplo preporučujem!</p>
                     </div>
@@ -327,30 +327,30 @@
                 <h3>zahvaljujući epilatoru Flawless Face</h3>
             </div>
             <div class="description_view">
-                <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/descript_zag_m.png" alt="epilator Flawless" title="epilator Flawless" class="img_mob">
+                <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/descript_zag_m.png" alt="depilator Flawless" title="depilator FlawlessFace" class="img_mob">
                 <h3>SA STILSKIM DIZAJNOM</h3>
                 <h4>ELEGANTAN</h4>
                 <p>
                     <span>i izgleda kao luksuzni karmin</span>
                 </p>
-                <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/view.jpg" alt="epilator Flawless" title="epilator Flawless" class="img_plan">
+                <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/view.jpg" alt="depilator Flawless" title="depilator FlawlessFace" class="img_plan">
             </div>
 
             <div class="description_block security">
-                <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/view_mob.jpg" alt="epilator Flawless" title="epilator Flawless" class="img_mob">
+                <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/view_mob.jpg" alt="depilator Flawless" title="depilator FlawlessFace" class="img_mob">
                 <h3>SIGURNO</h3>
                 <div class="blade">
                     <h4>HIRURŠKE OŠTRICE</h4>
                     <p>Pažljivo, brzo i jednostavno skinite dlačice</p>
-                    <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/blade.jpg" alt="epilator Flawless" title="epilator Flawless" class="img_plan">
+                    <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/blade.jpg" alt="depilator Flawless" title="depilator FlawlessFace" class="img_plan">
                 </div>
                 <div class="coating">
                     <h4>GORNJA POVRŠINA OD <span>18 KARATNOG ZLATA</span></h4>
-                    <p>pruža sigurnost tokom epilacije i antibakterijski efekat</p>
+                    <p>pruža sigurnost tokom depilacije i antibakterijski efekat</p>
                 </div>
             </div>
             <div class="description_block convenience">
-                <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/energi_mob.jpg" alt="epilator Flawless" title="epilator Flawless" class="img_mob">
+                <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/energi_mob.jpg" alt="depilator Flawless" title="depilator FlawlessFace" class="img_mob">
                 <h3>JEDNOSTAVAN ZA KORIŠĆENJE</h3>
                 <h4>SA UGRAĐENIM SVETLOM</h4>
                 <p class="d_text">lako je videti i ukloniti svaku dlačicu</p>
@@ -358,13 +358,13 @@
 
                     <h4>RADI UZ POMOĆ BATERIJA</h4>
                     <p>možete ga koristiti kod kuće, na odmoru ili gde god vam je potrebno</p>
-                    <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/energi.png" alt="epilator Flawless" title="epilator Flawless" class="img_plan">
+                    <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/energi.png" alt="depilator Flawless" title="depilator FlawlessFace" class="img_plan">
                 </div>
             </div>
 
             <div class="description_bottom">
                 <div class="description_bottom_block size">
-                    <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/size_mob.jpg" alt="epilator Flawless" title="epilator Flawless" class="img_mob">
+                    <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/size_mob.jpg" alt="depilator Flawless" title="depilator FlawlessFace" class="img_mob">
                     <h3></h3>
                     <h4>VELIČINE USNE</h4>
                     <p>možete ga nositi u torbi, torbici ili neseseru</p>
@@ -372,7 +372,7 @@
                 <div class="description_bottom_block hygiene">
                     <h3>NE NADRAŽUJTE KOŽU</h3>
                     <h4>NISU POTREBNI PENA, VODA ILI KREMA</h4>
-                    <p>ne ostavlja tamne mrlje na koži nakon epilacije</p>
+                    <p>ne ostavlja tamne mrlje na koži nakon depilacije</p>
                 </div>
             </div>
         </div>
@@ -385,7 +385,7 @@
                     {{--<div class="slide_autor">--}}
                         {{--<!--Фото автора -->--}}
                         {{--<div class="avatar_line">--}}
-                            {{--<img src="{{ asset('/') }}purplerelaxFiles/flawlessface/avatar5-1.png" alt="epilator Flawless" title="epilator Flawless">--}}
+                            {{--<img src="{{ asset('/') }}purplerelaxFiles/flawlessface/avatar5-1.png" alt="depilator Flawless" title="depilator FlawlessFace">--}}
                         {{--</div>--}}
                         {{--<!--Имя и город автора -->--}}
                         {{--<div class="name_line">--}}
@@ -402,7 +402,7 @@
                     <div class="slide_autor">
                         <!--Фото автора -->
                         <div class="avatar_line">
-                            <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/avatar6-1.png" alt="epilator Flawless" title="epilator Flawless">
+                            <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/avatar6-1.png" alt="depilator Flawless" title="depilator FlawlessFace">
                         </div>
                         <!--Имя и город автора -->
                         <div class="name_line">
@@ -434,34 +434,34 @@
             <div class="steps_line">
                 <div class="block">
                     <div class="block_icon">
-                        <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/1step.svg" alt="epilator Flawless" title="epilator Flawless">
+                        <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/1step.svg" alt="depilator Flawless" title="depilator FlawlessFace">
                     </div>
                     <p class="block_text">
                         OSTAVITE SVOJE PODATKE ZA DOSTAVU
                     </p>
                 </div>
-                <div class="delimiter"><img src="{{ asset('/') }}purplerelaxFiles/flawlessface/devider.svg" alt="epilator Flawless" title="epilator Flawless"></div>
+                <div class="delimiter"><img src="{{ asset('/') }}purplerelaxFiles/flawlessface/devider.svg" alt="depilator Flawless" title="depilator FlawlessFace"></div>
                 <div class="block">
                     <div class="block_icon">
-                        <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/2step.svg" alt="epilator Flawless" title="epilator Flawless">
+                        <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/2step.svg" alt="depilator Flawless" title="depilator FlawlessFace">
                     </div>
                     <p class="block_text">
                         KONTAKTIRAĆEMO VAS DA POTVRDIMO VAŠU PORUDŽBINU
                     </p>
                 </div>
-                <div class="delimiter"><img src="{{ asset('/') }}purplerelaxFiles/flawlessface/devider.svg" alt="epilator Flawless" title="epilator Flawless"></div>
+                <div class="delimiter"><img src="{{ asset('/') }}purplerelaxFiles/flawlessface/devider.svg" alt="depilator Flawless" title="depilator FlawlessFace"></div>
                 <div class="block">
                     <div class="block_icon">
-                        <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/3step.svg" alt="epilator Flawless" title="epilator Flawless">
+                        <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/3step.svg" alt="depilator Flawless" title="depilator FlawlessFace">
                     </div>
                     <p class="block_text">
                         ŠALJEMO PAKET BRZOM POŠTOM U ROKU OD 1-2 RADNA DANA
                     </p>
                 </div>
-                <div class="delimiter"><img src="{{ asset('/') }}purplerelaxFiles/flawlessface/devider.svg" alt="epilator Flawless" title="epilator Flawless"></div>
+                <div class="delimiter"><img src="{{ asset('/') }}purplerelaxFiles/flawlessface/devider.svg" alt="depilator Flawless" title="depilator FlawlessFace"></div>
                 <div class="block">
                     <div class="block_icon">
-                        <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/4step.svg" alt="epilator Flawless" title="epilator Flawless">
+                        <img src="{{ asset('/') }}purplerelaxFiles/flawlessface/4step.svg" alt="depilator Flawless" title="depilator FlawlessFace">
                     </div>
                     <p class="block_text">
                         PLAĆANJE PO PREUZIMANJU PROIZVODA

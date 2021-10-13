@@ -245,6 +245,7 @@ class OrderController extends Controller
         $jsonArray['billing']['phone'] = $orderDetails->phone;
 
         $jsonArray['countryCode'] = strtoupper($orderDetails->country_code);
+        $jsonArray['currency'] = strtoupper($orderDetails->currency_code);
 
         $jsonArray['wb_campaign'] = $orderDetails->wb_campaign;
         $jsonArray['wb_adset'] = $orderDetails->wb_adset;
@@ -255,6 +256,7 @@ class OrderController extends Controller
         $jsonArray['affiliate_id'] = $_COOKIE['affid'] ?? null;
         $jsonArray['network_id'] = $_COOKIE['netid'] ?? null;
         $jsonArray['click_id'] = $_COOKIE['clid'] ?? null;
+        $jsonArray['offer_id'] = $_COOKIE['offid'] ?? null;
 
         if($orderDetails->is_free_shipping===1) {
             $jsonArray['shipping_lines'] = array([

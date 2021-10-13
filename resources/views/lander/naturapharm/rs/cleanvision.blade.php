@@ -49,7 +49,8 @@
                         <li class="lt2">Stellt zu 99% das Sehvermögen 99% nach nur einer<br>Behandlung wieder her</li>
                         <li class="lt3">Verhindert die Entwicklung von Augenerkrankungen<br>und<br>Sehschwächen</li>
                     </ul>
-                    <p class="promo lt4">Bei einer Bestellung jetzt wird ein<br><span class="sale">Rabatt gewährt!</span> </p>
+                    <p class="promo lt4">Bei einer Bestellung jetzt wird ein<br>
+                        <span class="sale">Rabatt gewährt!</span> </p>
                     <div class="price">
                         <p class="price_old">
                             {{ $prices[1]['originalPrice'] }}<span> RSD</span>
