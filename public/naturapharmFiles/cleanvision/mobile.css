@@ -1,0 +1,27 @@
+@media (max-width: 575px) {
+    .header {
+        height: auto;
+    }
+    .header-top {
+        width: 100%;
+    }
+    .header-top h2 {
+
+    }
+    .header-top h2 span {
+
+    }
+    .header-bottom {
+        height: auto;
+    }
+    .header-bottom .hb-left {
+        width: 100%;
+    }
+    .header-bottom .hb-center {
+        width: 100%;
+        font-size: 20px;
+    }
+    .header-bottom .hb-right {
+        width: 100%;
+    }
+}

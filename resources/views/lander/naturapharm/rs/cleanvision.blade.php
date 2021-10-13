@@ -7,7 +7,24 @@
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <link rel="icon" type="image/png" href=""/>
     <link rel="stylesheet" href="{{ asset('/') }}naturapharmFiles/cleanvision/main.css">
+    <link rel="stylesheet" href="{{ asset('/') }}naturapharmFiles/cleanvision/mobile.css">
     <style>@font-face{font-family:OpenSans;font-style:normal;font-weight:700;src:url("{{asset('/')}}fonts/OpenSans-Boldd41d.eot@#iefix") format("embedded-opentype"),url("{{asset('/')}}fonts/OpenSans-Bold.woff") format("woff"),url("{{asset('/')}}fonts/OpenSans-Bold.ttf") format("truetype")}@font-face{font-family:OpenSansExtraBold;font-style:normal;font-weight:400;src:url("{{asset('/')}}fonts/OpenSans-Boldd41d.eot@#iefix") format("embedded-opentype"),url("{{asset('/')}}fonts/OpenSans-Bold.woff") format("woff"),url("{{asset('/')}}fonts/OpenSans-Bold.ttf") format("truetype")}@font-face{font-family:OpenSansLight;font-style:normal;font-weight:400;src:url("{{asset('/')}}fonts/OpenSansd41d.eot@") format("embedded-opentype"),url("{{asset('/')}}fonts/OpenSans.woff") format("woff"),url("{{asset('/')}}fonts/OpenSans.ttf") format("truetype")}@font-face{font-family:Roboto;font-style:normal;font-weight:400;src:url("{{asset('/')}}fonts/roboto-regular.eot@") format("embedded-opentype"),url("{{asset('/')}}fonts/roboto-regular.woff") format("woff"),url("{{asset('/')}}fonts/roboto-regular.ttf") format("truetype")}@font-face{font-family:Roboto;font-style:normal;font-weight:700;src:url("{{asset('/')}}fonts/roboto-bold.eot@") format("embedded-opentype"),url("{{asset('/')}}fonts/robotobold.woff") format("woff"),url("{{asset('/')}}fonts/robotobold.ttf") format("truetype")}</style>
+    <style>
+        .headerProduct {
+            width: 400px;
+        }
+        .block5Product {
+            width: 400px;
+            margin: 60px 0 0 100px;
+        }
+        .block6Product {
+            width: 250px;
+        }
+        .block11Product {
+            width: 220px;
+            margin: 20px 0 0 120px;
+        }
+    </style>
 </head>
 <body>
 <div class="js__countryblock">
@@ -25,7 +42,7 @@
                 <div class="clearfix"></div>
             </div>
             <div class="header-bottom">
-                <div class="hb-left"><img alt="Alt" src="{{ asset('/') }}naturapharmFiles/cleanvision/Cleanvision box.png"></div>
+                <div class="hb-left"><img alt="Alt" src="{{ asset('/') }}naturapharmFiles/cleanvision/oci.png" class="headerProduct"></div>
                 <div class="hb-center">
                     <ul>
                         <li class="lt1">Lindert in nur 5 Minuten <br>Spannungen und Augenschmerzen</li>
@@ -130,7 +147,7 @@
     </div>
     <div class="block-5">
         <div class="wrapper">
-            <div class="b5-left"><img alt="Alt" src="{{ asset('/') }}naturapharmFiles/cleanvision/Cleanvision.png" width="600"></div>
+            <div class="b5-left"><img alt="Alt" src="{{ asset('/') }}naturapharmFiles/cleanvision/oci.png" class="block5Product"></div>
             <div class="b5-right">
                 <h2><span class="str-1 lt28">Cleanvision</span><br>
                     <span class="str-2 lt29">innovative Entwicklung zur</span><br>
@@ -168,7 +185,7 @@
                 <p class="lt42">Die Muskeln <span>werden tonisiert</span> und <span>hören auf, den Augapfel</span> zu
                     deformieren
                 </p>
-                <img alt="Alt" src="{{ asset('/') }}naturapharmFiles/cleanvision/Cleanvision box.png" width="400">
+                <img alt="Alt" src="{{ asset('/') }}naturapharmFiles/cleanvision/oci.png" class="block6Product">
             </div>
             <div class="clearfix"></div>
         </div>
@@ -340,7 +357,7 @@
                 </div>
                 <p class="quality lt75">100% QUALITÄT!</p>
             </div>
-            <div class="b11-right"><img alt="Alt" src="{{ asset('/') }}naturapharmFiles/cleanvision/Cleanvision box.png" width="500"></div>
+            <div class="b11-right"><img alt="Alt" src="{{ asset('/') }}naturapharmFiles/cleanvision/oci.png" class="block11Product"></div>
             <div class="clearfix"></div>
         </div>
     </div>
@@ -379,7 +396,7 @@
                 <div class="clearfix"></div>
             </div>
             <div class="header-bottom">
-                <div class="hb-left"><img alt="Alt" src="{{ asset('/') }}naturapharmFiles/cleanvision/Cleanvision box.png"></div>
+                <div class="hb-left"><img alt="Alt" src="{{ asset('/') }}naturapharmFiles/cleanvision/oci.png" class="headerProduct"></div>
                 <div class="hb-center">
                     <ul>
                         <li class="lt81">Lindert in nur 5 Minuten <br>Verspannungen und Schmerzen in den Augen</li>
