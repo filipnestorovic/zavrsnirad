@@ -1265,10 +1265,12 @@ h2 {
 
     .offer_section.offer_top {
         background-image: url(mobile__offer_bg.jpg);
+        background-position: -190px 0;
     }
 
     .offer_section.offer_bottom {
         background-image: url(mobile__offer_bg.jpg);
+        background-position: -190px 0;
     }
 
     .offer_section .info {

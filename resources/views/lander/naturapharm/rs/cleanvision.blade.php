@@ -88,7 +88,7 @@
                         <input id="shipping_address" name="shipping_address" required="" type="text">
                         <label class="lt10" for="shipping_city">Grad</label>
                         <input id="shipping_city" name="shipping_city" required="" type="text">
-                        <input type="submit" value="PORUČI">
+                        <input type="submit" value="PORUČI ODMAH">
                     </form>
                 </div>
                 <div class="clearfix"></div>
@@ -130,6 +130,7 @@
                 </ul>
             </div>
             <div class="clearfix"></div>
+            <div class="cta-button"><a href="#bottom_form">Poruči sada</a></div>
         </div>
     </div>
     <div class="block-4">
@@ -294,6 +295,7 @@
                 <p class="lt62">Ova vrsta terapije daje <span>pouzdan rezultat u najkraćem mogućem roku</span>.</p>
             </div>
             <div class="clearfix"></div>
+            <div class="cta-button"><a href="#bottom_form">Poruči sada</a></div>
         </div>
     </div>
     <div class="block-10">
@@ -410,7 +412,7 @@
                         <p class="lt85">Unesite podatke za dostavu:</p>
                         <div class="landing__countdown"></div>
                     </div>
-                    <form action="{{$orderRoute}}" method="post" class="order_form cpa__order_form">
+                    <form action="{{$orderRoute}}" method="post" class="order_form cpa__order_form" id="bottom_form">
                         {{csrf_field()}}
                         @include('lander.naturapharm.components.form_hidden_fields')
                         <label class="lt87" for="name">Ime i prezime</label>
@@ -421,7 +423,7 @@
                         <input id="shipping_address" name="shipping_address" required="" type="text">
                         <label class="lt810" for="shipping_city">Grad</label>
                         <input id="shipping_city" name="shipping_city" required="" type="text">
-                        <input type="submit" value="PORUČI">
+                        <input type="submit" value="PORUČI ODMAH">
                     </form>
                 </div>
                 <div class="clearfix"></div>

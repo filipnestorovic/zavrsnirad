@@ -77,7 +77,7 @@
         <h2>Kompres čarape <span>štite zdravlje!</span></h2>
         <img src="{{asset('/')}}flexovalFiles/carapa/about__image1.png" alt="" title="">
         <div class="text_block">
-            <p>Tajna njihove efikasnosti leži u <b>jedinstvenom sastavu </b> - Kombinovana medicinska trikotaža i pamuk. Protkane su specijalnim aluminijumskim vlaknima koja regulišu telesnu temperaturu, a ne samo da pružaju jako prijatan osećaj, već regulišu i nivo vlažnosti kože. Za razliku od ostalih čarapa, <b>Kompres dokolenice rešavaju problem u korenu!</b></p>
+            <p>Tajna njihove efikasnosti leži u <b>jedinstvenom sastavu </b> - Kombinovana medicinska trikotaža i pamuk. Regulišu telesnu temperaturu, a ne samo da pružaju jako prijatan osećaj, već regulišu i nivo vlažnosti kože. Za razliku od ostalih čarapa, <b>Kompres dokolenice rešavaju problem u korenu!</b></p>
         </div>
         <ul>
             <li>Rešavaju noge <b>umora, bola, trnjenja</b> kao i upala i otoka</li>
@@ -145,7 +145,7 @@
             <img src="{{asset('/')}}flexovalFiles/carapa/problems__image.jpg" alt="" title="">
         </div>
         <div class="info">
-            <h3>Zašto su <b>aluminijumska vlakna korisna?</b></h3>
+            <h3>Zašto su <b>Kompres čarape korisne?</b></h3>
             <ul>
                 <li>Sprečavaju urastanje noktiju, pjave žuljeva, kurjih očiju i slično</li>
                 <li>Nemaju nikakvih neželjenih efekata</li>
@@ -232,7 +232,7 @@
                 <div class="text_block">
                     <div class="author_info">Olja Micić, <span>Niš</span></div>
                     <p>Nisam očekivala proširene vene u ovim godinama, ali eto i to se desilo. Primetila sam da me listovi bole svako veče i da mi trnu. Naručila sam Kompres čarape čim sam videla reklamu na Instagramu. Zahvalila bih se za ekspresnu dostavu – zahvaljujući tome jako brzo sam ponovo bila na nogama.
-                        Umor je nestao, a vene više nisu proširene. Aluminijumska vlakna su čudo – moja topla preporuka!</p>
+                        Umor je nestao, a vene više nisu proširene. Ove čarape su čudo – moja topla preporuka!</p>
                 </div>
             </div>
         </div>

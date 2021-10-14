@@ -321,6 +321,7 @@ h2 {
     background-image: -webkit-linear-gradient(bottom, #1d6f4d, #269366);
     background-image: linear-gradient(to top, #1d6f4d, #269366);
     color: #fff;
+    font-family: OpenSans, sans-serif;
     font-size: 28px;
     font-weight: 700;
     cursor: pointer;

@@ -1,3 +1,28 @@
+html {
+    scroll-behavior: smooth;
+}
+.cta-button {
+    width: 40%;
+    height: 70px;
+    margin: 2% 30% 0 30%;
+    border: none;
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#1d6f4d), to(#269366));
+    background-image: -webkit-linear-gradient(bottom, #1d6f4d, #269366);
+    background-image: linear-gradient(to top, #1d6f4d, #269366);
+    cursor: pointer;
+    text-align: center;
+}
+.cta-button:hover{
+    opacity: 0.7;
+}
+.cta-button a {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 1.9;
+}
 @media (max-width: 575px) {
     .header {
         height: auto;
@@ -90,7 +115,8 @@
     .header-bottom .hb-right .order_form input[type="submit"] {
         font-size: 60px;
         font-weight: 700;
-        line-height: 105px;
+        line-height: 90px;
+        height: 120px;
     }
     .block-2 {
         padding: 40px 0;
@@ -300,5 +326,14 @@
         font-size: 36px;
         width: 60%;
         margin-left: 20%;
+    }
+    .cta-button {
+        width: 90%;
+        margin: 20px 5%;
+        height: 120px;
+    }
+    .cta-button a {
+        font-size: 56px;
+        line-height: 2;
     }
 }
