@@ -729,28 +729,30 @@ h2 {
     width: 480px;
     height: 690px;
     float: right;
-    position: relative
+    position: relative;
 }
 
 .b6-right h2 {
     font-family: OpenSansLight, sans-serif;
     font-size: 48px;
     color: #941952;
-    line-height: .9
+    line-height: 1.1em;
 }
 
 .b6-right h2 span {
     font-family: OpenSansExtraBold, sans-serif;
     font-size: 76px;
-    display: block
+    display: block;
+    line-height: 1.1em;
+    margin-top: 0.1em;
 }
 
 .b6-right p {
     font-family: OpenSansLight, sans-serif;
     font-size: 17px;
-    width: 200px;
-    margin: 65px 0 0;
-    float: right
+    width: 260px;
+    margin: 10px 100px 0;
+    float: right;
 }
 
 .b6-right p span {
@@ -761,7 +763,8 @@ h2 {
 .b6-right img {
     position: absolute;
     right: 0;
-    bottom: 0
+    bottom: -15px;
+    margin-right: 100px;
 }
 
 .block-7 {
@@ -981,7 +984,7 @@ h2 {
     box-sizing: border-box
 }
 
-.block-10 .client:nth-child(4) {
+.block-10 .client:nth-child(3) {
     margin-right: 0
 }
 
