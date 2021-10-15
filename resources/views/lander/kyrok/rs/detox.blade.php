@@ -31,6 +31,26 @@
                 top: 240px;
                 left: 350px;
             }
+            .discountCircleDiv {
+                margin-top: 40px;
+                font-size: 33px;
+                padding-left: 10px;
+                padding-right: 10px;
+                font-size:2em;
+                color: #029648;
+                font-weight:bold;
+            }
+            .discountCircleAkcija {
+                color:red;
+            }
+            .discountCircleSubCena {
+                color: black;
+                margin-top: 5px;
+                font-size: 24px;
+            }
+            .discountCircleCena {
+                margin-top:0px;
+            }
         }
         @media only screen and (max-width:424px){
             .discountCircle {
@@ -38,10 +58,33 @@
                 margin-top: -50px;
                 padding-top: 0.1em;
                 background-size: 200px;
+                font-size: 1.5em;
             }
             .product__image {
-               margin-top: -100px;
+                margin-top: -100px;
                 width: 250px;
+            }
+            .discountCircleDiv {
+                margin-top: 40px;
+                font-size: 33px;
+                padding-left: 10px;
+                padding-right: 10px;
+                font-size:2em;
+                color: #029648;
+                font-weight:bold;
+            }
+            .discountCircleAkcija {
+                color:red;
+                font-size: 26px;
+                line-height: 1em;
+            }
+            .discountCircleSubCena {
+                color: black;
+                font-size: 20px;
+            }
+            .discountCircleCena {
+                margin-top:-5px;
+                font-size: 60px;
             }
         }
     </style>
@@ -59,12 +102,12 @@
         </div>
         <div class="row">
             <div class="labelmain firstCircle discountCircle">
-                <div condensed="" roboto="" style="margin-top: 40px;font-size: 33px;padding-left: 10px;padding-right: 10px;font-size:2em;color: #029648;font-weight:bold;">
-                    <div style="color:red">AKCIJA!</div>
-                    <div style="color: black;margin-top: 5px;font-size: 24px;">nova cena</div>
+                <div class="discountCircleDiv" condensed="" roboto="">
+                    <div class="discountCircleAkcija">AKCIJA!</div>
+                    <div class="discountCircleSubCena">nova cena</div>
                 </div>
-                <div class="line4 price_land_s1" style="margin-top:0px;">{{ $prices[1]['amount'] }}</div>
-                <div class="line5 price_land_curr">RSD</div>
+                <div class="line4 price_land_s1 discountCircleCena">{{ $prices[1]['amount'] }}</div>
+                <div class="line5 price_land_curr discountCircleRsd">RSD</div>
             </div>
             <div class="col-xs-12 col-md-3 hidden-xs hidden-sm">
                 <div class="monk"><img alt="" src="{{ asset('/') }}naturapharmFiles/kneepatch/monk.png"/></div>
@@ -319,12 +362,12 @@
         </div>
         <div class="row">
             <div class="labelmain2 discountCircle">
-                <div condensed="" roboto="" style="margin-top: 40px;font-size: 33px;padding-left: 10px;padding-right: 10px;font-size:2em;color: #029648;font-weight:bold;">
-                    <div style="color:red"> AKCIJA!</div>
-                    <div style="color: black;margin-top: 5px;font-size: 24px;"> nova cena</div>
+                <div class="discountCircleDiv" condensed="" roboto="" >
+                    <div class="discountCircleAkcija" >AKCIJA!</div>
+                    <div class="discountCircleSubCena" >nova cena</div>
                 </div>
-                <div class="line4 price_land_s1" style="margin-top:0px;">{{ $prices[1]['amount'] }}</div>
-                <div class="line5 price_land_curr">RSD</div>
+                <div class="line4 price_land_s1 discountCircleCena" >{{ $prices[1]['amount'] }}</div>
+                <div class="line5 price_land_curr discountCircleRsd">RSD</div>
             </div>
             <div class="col-xs-12 col-md-8 productSection">
                 <div class="product">
@@ -500,12 +543,12 @@
         </div>
         <div class="row">
             <div class="labelmain2 ThirdCircle discountCircle">
-                <div condensed="" roboto="" style="margin-top: 40px;font-size: 33px;padding-left: 10px;padding-right: 10px;font-size:2em;color: #029648;font-weight:bold;">
-                    <div style="color:red"> AKCIJA!</div>
-                    <div style="color: black;margin-top: 5px;font-size: 24px;"> nova cena</div>
+                <div class="discountCircleDiv" condensed="" roboto="" >
+                    <div class="discountCircleAkcija" >AKCIJA!</div>
+                    <div class="discountCircleSubCena" >nova cena</div>
                 </div>
-                <div class="line4 price_land_s1" style="margin-top:0px;">{{ $prices[1]['amount'] }}</div>
-                <div class="line5 price_land_curr">RSD</div>
+                <div class="line4 price_land_s1 discountCircleCena" >{{ $prices[1]['amount'] }}</div>
+                <div class="line5 price_land_curr discountCircleRsd">RSD</div>
             </div>
             <div class="col-xs-12 col-md-8 productSection">
                 <div class="product">
