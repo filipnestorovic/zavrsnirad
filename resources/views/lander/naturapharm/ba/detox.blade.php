@@ -11,40 +11,6 @@
     <link href="{{ asset('/') }}naturapharmFiles/kneepatch/style.css" rel="stylesheet" type="text/css"/>
     <link href="{{ asset('/') }}naturapharmFiles/kneepatch/order_me.min.css" rel="stylesheet" media="all" type="text/css">
     <style>img[height="1"],img[width="1"]{display:none!important}input[type="radio"]{width:15px!important;height:15px!important;cursor:pointer;box-shadow:none}label{cursor:pointer;font-size:18px}@media only screen and (max-width:424px){.firstCircle{position:relative;top:30px}.doctorSection img{margin-top:-40px!important}.productSection{margin-top:50px}.scroll__list{position:relative;top:30px}.pair img{margin-top:40px}}@media only screen and (min-width:424px){.scroll__list{position:relative;top:60px}.pair img{margin:50px}}.manual__icon-inner--1 .manual__icon{width:152px;height:185px;background-image:url({{asset('/')}}naturapharmFiles/kneepatch/kinoki3.png)}.manual__icon-inner--2{padding-top:24px}.manual__icon-inner--2 .manual__icon{margin-left:0;width:166px;height:169px;background-image:url({{asset('/')}}naturapharmFiles/kneepatch/kinoki4.png)}.manual__icon-inner--3 .manual__icon{width:143px;height:213px;background-image:url({{asset('/')}}naturapharmFiles/kneepatch/kinoki5.png)}</style>
-    <style>
-        @media only screen and (min-width:424px){
-            .product__image {
-                margin-left: 180px;
-                margin-top: 100px;
-                width: 250px;
-            }
-            #ingredientsFirst {
-                z-index: 99999;
-                margin-top: 330px;
-                margin-left: 330px;
-            }
-            .discountCircle {
-                left: 500px;
-                top: 280px;
-            }
-            .firstCircle {
-                top: 240px;
-                left: 350px;
-            }
-        }
-        @media only screen and (max-width:424px){
-            .discountCircle {
-                margin-left: -10px;
-                margin-top: -50px;
-                padding-top: 0.1em;
-                background-size: 200px;
-            }
-            .product__image {
-                margin-top: -100px;
-                width: 250px;
-            }
-        }
-    </style>
 </head>
 <body>
 @include('components.display_errors')
@@ -58,7 +24,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="labelmain firstCircle discountCircle">
+            <div class="labelmain firstCircle">
                 <div condensed="" roboto="" style="margin-top: 40px;font-size: 33px;padding-left: 10px;padding-right: 10px;font-size:2em;color: #029648;font-weight:bold;">
                     <div style="color:red">AKCIJA!</div>
                     <div style="color: black;margin-top: 5px;font-size: 24px;">nova cena</div>
@@ -68,11 +34,11 @@
             </div>
             <div class="col-xs-12 col-md-3 hidden-xs hidden-sm">
                 <div class="monk"><img alt="" src="{{ asset('/') }}naturapharmFiles/kneepatch/monk.png"/></div>
-                <div class="ingredients" id="ingredientsFirst"><img alt="" src="{{ asset('/') }}naturapharmFiles/kneepatch/ingredients.png"/></div>
+                <div class="ingredients"><img alt="" src="{{ asset('/') }}naturapharmFiles/kneepatch/ingredients.png"/></div>
             </div>
             <div class="col-xs-12 col-md-5 product">
                 <div class="product__picture">
-                    <img alt="" class="product__image" src="{{ asset('/') }}kyrokFiles/detox/detoxPack.png"/>
+                    <img alt="" class="product__image" src="{{ asset('/') }}naturapharmFiles/kneepatch/kinoki1.png"/>
                 </div>
             </div>
             <div class="col-xs-12 col-md-4">
@@ -150,18 +116,18 @@
         </div>
         <div class="row pair">
             <div class="col-md-12 col-lg-7 text-center">
-                <img alt="" src="{{ asset('/') }}kyrokFiles/detox/detox2.png"/>
+                <img alt="" src="{{ asset('/') }}naturapharmFiles/kneepatch/kinoki2.png"/>
             </div>
             <div class="col-md-12 col-lg-5 section__content section__content--pair">
-                <p>Danas svi živimo delimično nezdravim načinom života i vrlo je važno redovno raditi <span>detoksikaciju organizma</span>. Kyrok flasteri za detoksikaciju su napravljeni od biljnih ekstrakata prema <span>tradicionalnom kineskom receptu</span> i namenjeni su izbacivanju viška tečnosti i toksina iz tela kroz <span>akupunkturne tačke.</span></p>
-                <p>Kyrok flasteri <span>ublažavaju napetost i umor, poboljšavaju san, čiste kožu i poboljšavaju opšte zdravstveno stanje</span>. Koristeći ove flastere, toksini koji se skupljaju u telu i krvotoku bivaju brzo eliminisani iz organizma.</p>
+                <p>Danas svi živimo delimično nezdravim načinom života i vrlo je važno redovno raditi <span>detoksikaciju organizma</span>. Kinoki flasteri za detoksikaciju su napravljeni od biljnih ekstrakata prema <span>tradicionalnom kineskom receptu</span> i namenjeni su izbacivanju viška tečnosti i toksina iz tela kroz <span>akupunkturne tačke.</span></p>
+                <p>Kinoki flasteri <span>ublažavaju napetost i umor, poboljšavaju san, čiste kožu i poboljšavaju opšte zdravstveno stanje</span>. Koristeći ove flastere, toksini koji se skupljaju u telu i krvotoku bivaju brzo eliminisani iz organizma.</p>
                 <p></p>
                 <p></p>
             </div>
         </div>
         <div class="row scope">
             <div class="col-xs-12">
-                <h2 class="section__title scope__title">OBLASTI PRIMENE “KYROK” FLASTERA</h2>
+                <h2 class="section__title scope__title">OBLASTI PRIMENE “KINOKI” FLASTERA</h2>
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-4 text-center scope__item">
                 <div class="scope__icon-wrapp">
@@ -194,7 +160,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h2 class="section__title">OČISTITE SVOJ ORGANIZAM OD TOKSINA ZA SAMO 5 DANA UZ POMOĆ “KYROK” FLASTERA</h2>
+                <h2 class="section__title">OČISTITE SVOJ ORGANIZAM OD TOKSINA ZA SAMO 5 DANA UZ POMOĆ “KINOKI” FLASTERA</h2>
             </div>
             <div class="col-xs-12 section__content">
                 <p>Još su prvi taoisti govorili da su <span>toksini</span> glavni uzročnik pada energije u organizmu.</p>
@@ -231,9 +197,9 @@
     <div class="container">
         <div class="row composition">
             <div class="col-xs-12 composition__caption">
-                <h2 class="section__title">SASTAV ”KYROK” FLASTERA ZA DETOKSIKACIJU: </h2>
+                <h2 class="section__title">SASTAV ”KINOKI” FLASTERA ZA DETOKSIKACIJU: </h2>
                 <p>Recept za flastere uključuje preko 9 lekovitih trava i dobijen je kao rezultat vekovnih istraživanja narodnih iscelitelja.</p>
-                <p>Flasteri za detoksikaciju se proizvode prema savremenoj tehnologiji i najvišim međunarodnim normama za kvalitet.  Kyrok flasteri ne sadrži hemijske dodatke, bezopasni su I ne štete organizmu.</p>
+                <p>Flasteri za detoksikaciju se proizvode prema savremenoj tehnologiji i najvišim međunarodnim normama za kvalitet.  Kinoki flasteri ne sadrži hemijske dodatke, bezopasni su I ne štete organizmu.</p>
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-4 text-center composition__item">
                 <div class="composition__icon-wrapp composition__icon-wrapp--rotate-180">
@@ -314,11 +280,11 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 section__caption">
-                <h2 class="section__title">"KYROK" ĆE OČISTITI VAŠ ORGANIZAM OD TOKSINA <br/> U NAJKRAĆEM MOGUĆEM ROKU!</h2>
+                <h2 class="section__title">"KINOKI" ĆE OČISTITI VAŠ ORGANIZAM OD TOKSINA <br/> U NAJKRAĆEM MOGUĆEM ROKU!</h2>
             </div>
         </div>
         <div class="row">
-            <div class="labelmain2 discountCircle">
+            <div class="labelmain2">
                 <div condensed="" roboto="" style="margin-top: 40px;font-size: 33px;padding-left: 10px;padding-right: 10px;font-size:2em;color: #029648;font-weight:bold;">
                     <div style="color:red"> AKCIJA!</div>
                     <div style="color: black;margin-top: 5px;font-size: 24px;"> nova cena</div>
@@ -329,7 +295,7 @@
             <div class="col-xs-12 col-md-8 productSection">
                 <div class="product">
                     <div class="product__picture">
-                        <img alt="" class="product__image" src="{{ asset('/') }}kyrokFiles/detox/detoxPack.png"/>
+                        <img alt="" class="product__image" src="{{ asset('/') }}naturapharmFiles/kneepatch/kinoki1.png"/>
                         <div class="product__ingredients hidden-sm hidden-xs">
                             <img alt="" src="{{ asset('/') }}naturapharmFiles/kneepatch/ingredients.png"/>
                         </div>
@@ -391,7 +357,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 section__caption">
-                <h2 class="section__title">ŠTA O “KYROK” BILJNIM FLASTERIMA ZA DETOKSIKACIJU <br/> GOVORE DOKTORI?
+                <h2 class="section__title">ŠTA O “KINOKI” BILJNIM FLASTERIMA ZA DETOKSIKACIJU <br/> GOVORE DOKTORI?
                 </h2>
             </div>
         </div>
@@ -403,8 +369,8 @@
                 <div class="comment__text">
                     <p>Najvažnije u procesu lečenja bilo kakve bolesti je očistiti organizam od toksina koje organizam sakuplja zbog nezdravog načina života. Ranije je jedino rešenje bilo propisivanje preparata za detoksikaciju koji negativno utiču na jetru i probavni takt.</p>
                     <p>Imao sam pacijene koji su se žalili na glavobolje, hronični umor, bol u vratnom delu kičme, a sve to kao posledicu nakupljanja toksina u organizmu koji su remetili normalne telesne funkcije.</p>
-                    <p>Kada sam svojim pacijentima počeo da preporučujem KYROK, nakon određenog vremena dobar deo njih je imao znatno manje problema, a većini su problemi skroz nestali.
-                        Kyrok flasteri su odlični za priorodno izbacivanje toksina iz organizma i svakome prepoučujem detoksikaciju bar jednom mesečno.</p>
+                    <p>Kada sam svojim pacijentima počeo da preporučujem KINOKI, nakon određenog vremena dobar deo njih je imao znatno manje problema, a većini su problemi skroz nestali.
+                        KINOKI flasteri su odlični za priorodno izbacivanje toksina iz organizma i svakome prepoučujem detoksikaciju bar jednom mesečno.</p>
                 </div>
                 <div class="comment__author">Goran Jeftić</div>
                 <div class="comment__job"> Reumatolog</div>
@@ -423,19 +389,19 @@
             <div class="col-xs-12 col-md-4 comments__item">
                 <div class="comments__title"> Danica, 21 godina</div>
                 <div class="comments__text">
-                    <p>Dobar dan. Radim mnogo u kancelariji, i imala sam problem sa bolom u mišićima, udovi su mi bili teški, nisam imala dovoljno energije i bila sam jako mrzovoljna. Na internetu sam pronašla Kyrok flastere i pokušala sam da detoksikujem svoj organizam. Nakon dve kutije, simptomi koji su me mučili su skroz nestali, a ja se evo već 3 meseca osećam odlično. Sada preventivno svaki mesec potrošim jednu kutiju jer ne želim ni da mi se ponovi onaj teški period.</p>
+                    <p>Dobar dan. Radim mnogo u kancelariji, i imala sam problem sa bolom u mišićima, udovi su mi bili teški, nisam imala dovoljno energije i bila sam jako mrzovoljna. Na internetu sam pronašla KINOKI flastere i pokušala sam da detoksikujem svoj organizam. Nakon dve kutije, simptomi koji su me mučili su skroz nestali, a ja se evo već 3 meseca osećam odlično. Sada preventivno svaki mesec potrošim jednu kutiju jer ne želim ni da mi se ponovi onaj teški period.</p>
                 </div>
             </div>
             <div class="col-xs-12 col-md-4 comments__item">
                 <div class="comments__title"> Ljubica, 65 godina</div>
                 <div class="comments__text">
-                    <p>Godinama sam imala problem sa viškom tečnosti u organizmu i otokom na nogama. Pokušavala sam sve i svašta, ali su mi lekovi često pravili druge probleme. Kćerka mi je kupila KYROK, i to je jedini proizvod koji mi je pomogao. Imam ga u svojoj apoteci u većim zalihama. Hvala vam!</p>
+                    <p>Godinama sam imala problem sa viškom tečnosti u organizmu i otokom na nogama. Pokušavala sam sve i svašta, ali su mi lekovi često pravili druge probleme. Kćerka mi je kupila Kinoki, i to je jedini proizvod koji mi je pomogao. Imam ga u svojoj apoteci u većim zalihama. Hvala vam!</p>
                 </div>
             </div>
             <div class="col-xs-12 col-md-4 comments__item">
                 <div class="comments__title"> Dragan, 32 godine</div>
                 <div class="comments__text">
-                    <p>Često jedem brzu hranu i slatkiše, pijem dosta gaziranih sokova i pušač sam. Vremenom sam počeo da osećam poteškoće poput iscrpljenosti i glavobolje. Majka mi je koristila Kyrok i preporučila ga i meni. U početku nisam verovao da pomaže ali na nagovor majke nisam odustajao, i već u drugoj nedelji korišćenja dosta sam se lepše osećao. Budio sam se odmorniji, imao sam više energije i glavobolja je nestala. Slobodno mogu da kažem da ovaj proizvod preporučujem svima, jer je zaista dobar!</p>
+                    <p>Često jedem brzu hranu i slatkiše, pijem dosta gaziranih sokova i pušač sam. Vremenom sam počeo da osećam poteškoće poput iscrpljenosti i glavobolje. Majka mi je koristila kinoki i preporučila ga i meni. U početku nisam verovao da pomaže ali na nagovor majke nisam odustajao, i već u drugoj nedelji korišćenja dosta sam se lepše osećao. Budio sam se odmorniji, imao sam više energije i glavobolja je nestala. Slobodno mogu da kažem da ovaj proizvod preporučujem svima, jer je zaista dobar!</p>
                 </div>
             </div>
         </div>
@@ -445,7 +411,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 section__caption">
-                <h2 class="section__title">KAKO ISPRAVNO KORISTITI "KYROK" FLASTER</h2>
+                <h2 class="section__title">KAKO ISPRAVNO KORISTITI "KINOKI" FLASTER</h2>
             </div>
         </div>
         <div class="row manual">
@@ -499,7 +465,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="labelmain2 ThirdCircle discountCircle">
+            <div class="labelmain2 ThirdCircle">
                 <div condensed="" roboto="" style="margin-top: 40px;font-size: 33px;padding-left: 10px;padding-right: 10px;font-size:2em;color: #029648;font-weight:bold;">
                     <div style="color:red"> AKCIJA!</div>
                     <div style="color: black;margin-top: 5px;font-size: 24px;"> nova cena</div>
@@ -510,7 +476,7 @@
             <div class="col-xs-12 col-md-8 productSection">
                 <div class="product">
                     <div class="product__picture">
-                        <img alt="" class="product__image" src="{{ asset('/') }}kyrokFiles/detox/detoxPack.png"/>
+                        <img alt="" class="product__image" src="{{ asset('/') }}naturapharmFiles/kneepatch/kinoki1.png"/>
                         <div class="product__ingredients hidden-sm hidden-xs">
                             <img alt="" src="{{ asset('/') }}naturapharmFiles/kneepatch/ingredients.png"/>
                         </div>

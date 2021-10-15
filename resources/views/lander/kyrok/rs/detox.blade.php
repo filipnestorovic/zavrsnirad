@@ -29,6 +29,7 @@
             }
             .firstCircle {
                 top: 240px;
+                left: 350px;
             }
         }
         @media only screen and (max-width:424px){

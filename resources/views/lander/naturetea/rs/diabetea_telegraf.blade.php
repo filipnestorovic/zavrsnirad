@@ -17,7 +17,7 @@
         .post-title {
             text-align: center;
             color: #d51004;
-            font-size: 36px;
+            font-size: 30px;
             font-weight: 700;
             text-transform: uppercase;
         }
@@ -36,7 +36,7 @@
         <section class="sec1">
             <div class="wrapper">
                 <h4 class="main-title title"> DiabeTea - MAGIJA ZA STABILIZOVANJE ŠEĆERA U KRVI </h4>
-                <p class="post-title">Specijalni popust od 40%</p>
+                <p class="post-title">Specijalni popust od 40% za čitaoce Telegrafa</p>
                 <div class="sec1__content">
                     <div class="sec1__list sec1__cell">
                         <ul>
@@ -203,7 +203,7 @@
         </section>
         <section class="sec10">
             <div class="wrapper">
-                <div class="sec10__title title"> DiabeTea - KAKO DOVESTI NIVO ŠEĆERA POD KONTROLU </div>
+                <div class="sec10__title title"> DiabeTea - KAKO DOVESTI NIVO ŠEĆERA POD KONTROLU <br/><span style="color: #d51004; font-size: 16px !important;">* Specijalni popust od 40% za čitaoce Telegrafa</span></div>
                 <button class="btn btn--bigger pre_toform"> NARUČI ODMAH </button>
                 <div class="sec10__price"> SAMO ZA <b> {{ $prices[1]['amount'] }} </b> RSD </div>
             </div>
@@ -322,6 +322,7 @@
                 <div class="sec15__title title">NARUČITE JOŠ DANAS</div>
                 <p class="sec15__price-text"> "OBEZBEDITE ZLATNI PROIZVOD ZA KONTROLU ŠEĆERA U KRVI" </p>
                 <span> SAMO ZA {{ $prices[1]['amount'] }} RSD </span>
+                <p class="post-title">Specijalni popust od 40% za čitaoce Telegrafa</p>
                 <div class="sec15__container">
                     <div class="sec15__prod wow fadeInDown" data-wow-duration="2s">
                         <img alt src="{{ asset('/') }}natureteaFiles/diabetea/prod.png">
