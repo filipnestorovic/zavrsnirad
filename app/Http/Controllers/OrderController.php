@@ -257,6 +257,7 @@ class OrderController extends Controller
         $jsonArray['network_id'] = $_COOKIE['netid'] ?? null;
         $jsonArray['click_id'] = $_COOKIE['clid'] ?? null;
         $jsonArray['offer_id'] = $_COOKIE['offid'] ?? null;
+        $jsonArray['utm_medium'] = $_COOKIE['utm_medium'] ?? null;
 
         if($orderDetails->is_free_shipping===1) {
             $jsonArray['shipping_lines'] = array([

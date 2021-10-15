@@ -14,33 +14,27 @@
     <style>
         @media only screen and (min-width:424px){
             .product__image {
-                margin-left: 180px;
-                margin-top: 100px;
-                width: 250px;
+                margin-left: 50px;
             }
             #ingredientsFirst {
                 z-index: 99999;
-                margin-top: 330px;
-                margin-left: 330px;
+                margin-top: 420px;
+                margin-left: 210px;
             }
             .discountCircle {
-                left: 500px;
-                top: 280px;
+                left: 400px;
+                top: 230px;
             }
             .firstCircle {
-                top: 240px;
+                top: 170px;
             }
         }
         @media only screen and (max-width:424px){
             .discountCircle {
-                margin-left: -10px;
-                margin-top: -50px;
-                padding-top: 0.1em;
-                background-size: 200px;
+                margin-left: 0px;
             }
             .product__image {
-               margin-top: -100px;
-                width: 250px;
+                margin-top: -100px;
             }
         }
     </style>

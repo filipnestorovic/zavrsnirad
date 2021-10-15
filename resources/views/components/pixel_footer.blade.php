@@ -14,7 +14,7 @@
         let brandUrl = "{{$brandUrl}}";
 
         if(cookie_uuid) {
-            wbSendEvent(cookie_uuid, url_medium, cookie_campaign, cookie_adset, cookie_ad, cookie_affid, cookie_netid, cookie_clid, cookie_offid, '{{strtoupper($product->country_code)}}', '{{$fb_event}}', brandUrl);
+            wbSendEvent(cookie_uuid, cookie_medium, cookie_campaign, cookie_adset, cookie_ad, cookie_affid, cookie_netid, cookie_clid, cookie_offid, '{{strtoupper($product->country_code)}}', '{{$fb_event}}', brandUrl);
         }
 
         @if($fb_event === "Purchase" || $fb_event === "Purchase2")
@@ -56,7 +56,7 @@
                 sendEventDB(sessionId,2);
             }
             if(cookie_uuid) {
-                wbSendEvent(cookie_uuid, url_medium, cookie_campaign, cookie_adset, cookie_ad, cookie_affid, cookie_netid, cookie_clid, cookie_offid, '{{strtoupper($product->country_code)}}', 'InitiateCheckout', brandUrl);
+                wbSendEvent(cookie_uuid, cookie_medium, cookie_campaign, cookie_adset, cookie_ad, cookie_affid, cookie_netid, cookie_clid, cookie_offid, '{{strtoupper($product->country_code)}}', 'InitiateCheckout', brandUrl);
             }
         });
 
@@ -69,7 +69,7 @@
             if(landerCheckout === "1" && sentAddToCart === 0) {
                 sendEventDB(sessionId,2);
                 if(cookie_uuid) {
-                    wbSendEvent(cookie_uuid, url_medium, cookie_campaign, cookie_adset, cookie_ad, cookie_affid, cookie_netid, cookie_clid, cookie_offid, '{{strtoupper($product->country_code)}}', 'AddToCart', brandUrl);
+                    wbSendEvent(cookie_uuid, cookie_medium, cookie_campaign, cookie_adset, cookie_ad, cookie_affid, cookie_netid, cookie_clid, cookie_offid, '{{strtoupper($product->country_code)}}', 'AddToCart', brandUrl);
                 }
             }
         });
