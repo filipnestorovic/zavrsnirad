@@ -15,6 +15,7 @@
 
         if(cookie_medium === null && fbclid != null) {
             cookie_medium = "fb";
+            setCookie('utm_medium', 'fb', 30);
         }
 
         if(cookie_uuid) {
