@@ -290,7 +290,7 @@ class OrderController extends Controller
         }
 
         $webhookUrl = "";
-        $webhookBackupUrl = "https://webhook.site/433c4a77-cc04-4130-8ca5-0a6d56dd3ec9";
+//        $webhookBackupUrl = "https://webhook.site/433c4a77-cc04-4130-8ca5-0a6d56dd3ec9";
 
         switch($orderDetails->country_code) {
             case "rs":
@@ -303,11 +303,11 @@ class OrderController extends Controller
                 $webhookUrl = "https://new.serverwombat.com/api/orderWebhook";
         }
 
-        try {
-            $client->post($webhookBackupUrl, ['body' => json_encode($jsonArray)]);
-        } catch(\Exception $exception) {
-            Log::critical("Error: Webhook accepting BACKUP route error \nServer message: " . $exception->getMessage() . "\nJSON: " . json_encode($jsonArray, JSON_PRETTY_PRINT));
-        }
+//        try {
+//            $client->post($webhookBackupUrl, ['body' => json_encode($jsonArray)]);
+//        } catch(\Exception $exception) {
+//            Log::critical("Error: Webhook accepting BACKUP route error \nServer message: " . $exception->getMessage() . "\nJSON: " . json_encode($jsonArray, JSON_PRETTY_PRINT));
+//        }
 
         try {
             $response = $client->post($webhookUrl, ['body' => json_encode($jsonArray)]);
