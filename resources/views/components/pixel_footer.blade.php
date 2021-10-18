@@ -13,6 +13,10 @@
 
         let brandUrl = "{{$brandUrl}}";
 
+        if(cookie_medium === null && fbclid != null) {
+            cookie_medium = "fb";
+        }
+
         if(cookie_uuid) {
             wbSendEvent(cookie_uuid, cookie_medium, cookie_campaign, cookie_adset, cookie_ad, cookie_affid, cookie_netid, cookie_clid, cookie_offid, '{{strtoupper($product->country_code)}}', '{{$fb_event}}', brandUrl);
         }
