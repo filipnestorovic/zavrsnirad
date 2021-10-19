@@ -48,7 +48,7 @@
                     <br/>
                 @endif
                 <h3 class="success-page__text" id="lowerH">
-                    Za sve informacije možete nas kontaktirati putem društvenih mreža i na <b>060/046-0469</b>
+                    Za sve informacije možete nas kontaktirati putem društvenih mreža i na <b>+38160/046-0469</b>
                     {{--Kako bismo ubrzali proces potvrde porudžbine, unesite svoju adresu:--}}<br/><br/>
                     <p style="text-align: center;">Vaš {{ $product->brand_name }}</p>
                 </h3>
