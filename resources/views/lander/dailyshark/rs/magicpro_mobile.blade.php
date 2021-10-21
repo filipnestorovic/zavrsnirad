@@ -38,16 +38,16 @@
         <h1 class="main_title">ШВЕЙНАЯ МАШИНКА ZOLAX</h1>
         <div class="info_block">
             <p class="subtitle">КОМПАКТНОСТЬ И НАДЕЖНОСТЬ</p>
-            <div class="discount"><b>-50% скидка</b></div>
+            <div class="discount"><b>-40% popusta</b></div>
             <img src="{{ asset('/') }}dailysharkFiles/magicpro_mobile/1.jpg" alt="">
         </div>
         <div class="price_block">
             <div class="price_item old">
-                <div class="text">Обычная цена:</div>
+                <div class="text">Stara cena:</div>
                 <div class="value">{{ $prices[1]['originalPrice'] }} RSD</div>
             </div>
             <div class="price_item new">
-                <div class="text">Цена сегодня:</div>
+                <div class="text">Nova cena:</div>
                 <div class="value">{{ $prices[1]['amount'] }} RSD</div>
             </div>
         </div>
@@ -62,13 +62,16 @@
                 <p>Подходит для всех</p>
             </div>
         </div>
-        <form id="order_form" class="order_form" action="#" method="post">
-
-            <input class="field" type="text" name="name" placeholder="Введите Ваше имя" required>
-            <input class="field" type="tel" name="phone" placeholder="Введите Ваш телефон" required>
-            <button class="button">Оформить заказ</button>
+        <form id="order_form" class="order_form" action="{{$orderRoute}}" method="post">
+            {{csrf_field()}}
+            @include('lander.naturapharm.components.form_hidden_fields')
+            <input class="field" type="text" name="name" placeholder="Ime i prezime" required>
+            <input class="field" type="tel" name="phone" placeholder="Telefon" required>
+            <input class="field" type="text" name="shipping_address" placeholder="Adresa" required>
+            <input class="field" type="text" name="shipping_city" placeholder="Grad" required>
+            <button class="button">ZAVRŠI PORUDŽBINU</button>
         </form>
-        <div class="products_count">Осталось <b>18</b> швейных машинок по акции</div>
+        {{--<div class="products_count">Осталось <b>18</b> швейных машинок по акции</div>--}}
     </header>
     <section class="description_section">
         <ul class="characteristics__list">
@@ -88,16 +91,16 @@
                 <h3>ШВЕЙНАЯ МАШИНКА</h3>
                 <div class="catprice clearfix">
                     <div class="cp-left">
-                        <span>--50%</span>
+                        <span>-40%</span>
                         <p>{{ $prices[1]['originalPrice'] }} RSD</p>
                     </div>
                     <div class="cp-right">
-                        <span>Цена сегодня:</span>
+                        <span>Nova cena:</span>
                         <p>{{ $prices[1]['amount'] }} RSD</p>
                     </div>
                 </div>
             </div>
-            <a href="#order_form" class="button">Оформить заказ</a>
+            <a href="#order_form" class="button">PORUČITE SADA</a>
         </div>
         <section class="reviews3_section">
             <h2 class="title">Отзывы <span>покупателей</span></h2>
@@ -198,16 +201,16 @@
         <h1 class="main_title">ШВЕЙНАЯ МАШИНКА ZOLAX</h1>
         <div class="info_block">
             <p class="subtitle">КОМПАКТНОСТЬ И НАДЕЖНОСТЬ</p>
-            <div class="discount"><b>-50% скидка</b></div>
+            <div class="discount"><b>-40% popusta</b></div>
             <img src="{{ asset('/') }}dailysharkFiles/magicpro_mobile/2.jpg" alt="">
         </div>
         <div class="price_block">
             <div class="price_item old">
-                <div class="text">Обычная цена:</div>
+                <div class="text">Stara cena:</div>
                 <div class="value">{{ $prices[1]['originalPrice'] }} RSD</div>
             </div>
             <div class="price_item new">
-                <div class="text">Цена сегодня:</div>
+                <div class="text">Nova cena:</div>
                 <div class="value">{{ $prices[1]['amount'] }} RSD</div>
             </div>
         </div>
@@ -222,44 +225,24 @@
                 <p>Подходит для всех</p>
             </div>
         </div>
-        <a href="#order_form" class="button">Оформить заказ</a>
-        <div class="products_count">Осталось <b>18</b> швейных машинок по акции</div>
+        <a href="#order_form" class="button">PORUČITE SADA</a>
+        {{--<div class="products_count">Осталось <b>18</b> швейных машинок по акции</div>--}}
     </section>
-    <footer class="footer_section">
-        <div style="font-size:13px;">
-            <div class="foot_ru_center" style="text-align: center; margin: 0px auto; padding: 30px 0; font-size:15px">
+    {{--<footer class="footer_section">--}}
+        {{--<div style="font-size:13px;">--}}
+            {{--<div class="foot_ru_center" style="text-align: center; margin: 0px auto; padding: 30px 0; font-size:15px">--}}
 
-            </div>
-        </div>
-    </footer>
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</footer>--}}
 </div>
-<style type="text/css">
-    .form-control{
-        background: #f0f0f0;
-
-        border: 1px solid #dedede;
-
-        display: block;
-        margin: 0 auto 20px;
-        padding: 0 20px 0 62px;
-        width: 370px;
-        height: 72px;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        color: #777;
-
-    }
-</style>
-{{--<script src="http://magicprooriginal.xcartpro.com/m1/js/scripts.js"></script>--}}
 <script src="{{ asset('/') }}shared_files/slick.min.js"></script>
 <script>
     $('.item-slider').slick({
         arrows: false,
-        dots: true
+        dots: false,
+        autoplay: true,
+        autoplaySpeed: 3000,
     });
 </script>
 </body>

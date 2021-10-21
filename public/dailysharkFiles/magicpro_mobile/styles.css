@@ -545,7 +545,7 @@ section .image {
 
 .offer_section.offer3 .price_item .value {
     font-weight: 700;
-    font-size: 26px;
+    font-size: 25px;
     line-height: 26px;
     position: relative;
     z-index: 99;
@@ -795,12 +795,22 @@ select::-ms-expand {
 }
 
 .offer_section .field[name='name'] {
-    background: #ebebeb url(offer__name_icon.png) 22px center no-repeat;
+    background: #ebebeb url(input_name.png) 22px center no-repeat;
 }
 
 .offer_section .field[name='phone'] {
     margin: 0 auto 35px;
-    background: #ebebeb url(offer__phone_icon.png) 20px center no-repeat;
+    background: #ebebeb url(input_phone.png) 20px center no-repeat;
+}
+
+.offer_section .field[name='shipping_address'] {
+    margin: 0 auto 35px;
+    background: #ebebeb url(input_address.png) 20px center no-repeat;
+}
+
+.offer_section .field[name='shipping_city'] {
+    margin: 0 auto 35px;
+    background: #ebebeb url(input_city.png) 20px center no-repeat;
 }
 
 .offer_section.offer3 .field {
@@ -808,12 +818,22 @@ select::-ms-expand {
 }
 
 .offer_section.offer3 .field[name='name'] {
-    background: #f0f0f0 url(offer__name_icon.png) 22px center no-repeat;
+    background: #f0f0f0 url(input_name.png) 22px center no-repeat;
+}
+
+.offer_section.offer3 .field[name='shipping_address'] {
+    margin: 0 auto 35px;
+    background: #f0f0f0 url(input_address.png) 20px center no-repeat;
+}
+
+.offer_section.offer3 .field[name='shipping_city'] {
+    margin: 0 auto 35px;
+    background: #f0f0f0 url(input_city.png) 20px center no-repeat;
 }
 
 .offer_section.offer3 .field[name='phone'] {
     margin: 0 auto 35px;
-    background: #f0f0f0 url(offer__phone_icon.png) 20px center no-repeat;
+    background: #f0f0f0 url(input_phone.png) 20px center no-repeat;
 }
 
 .offer_section .field::-webkit-input-placeholder {
@@ -2371,4 +2391,21 @@ select::-ms-expand {
 
 .footer_section a {
     color: #222;
+}
+
+.form-control{
+    background: #f0f0f0;
+    border: 1px solid #dedede;
+    display: block;
+    margin: 0 auto 20px;
+    padding: 0 20px 0 62px;
+    width: 370px;
+    height: 72px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #777;
 }
