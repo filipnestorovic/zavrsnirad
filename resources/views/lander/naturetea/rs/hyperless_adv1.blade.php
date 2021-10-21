@@ -93,8 +93,8 @@
                                 {{--<center><img class="myImg" src="{{ asset('/') }}natureteaFiles/hyperless_adv1/image6.jpg"></center>--}}
                             {{--</div>--}}
                         {{--</center>--}}
-                        <br>
-                        <p style="max-width: 550px;margin: 0 auto;"><i class="myText1"> Varikozne vene od kojih mnoge žene pate su direktna posledica naslaga u krvnim sudovaima. </i></p>
+                        {{--<br>--}}
+                        {{--<p style="max-width: 550px;margin: 0 auto;"><i class="myText1"> Varikozne vene od kojih mnoge žene pate su direktna posledica naslaga u krvnim sudovaima. </i></p>--}}
                         <p> Ova situacija se širi. Kardiovaskularne bolesti su odgovorne za 4 puta više smrti od ostalih uzroka. Lekari su toga svesni, znaju da je čišćenje krvnih sudova potrebno, ali iz nekih razloga srpska medicina zanemaruje ovaj aspekt.</p>
                         <p> - <b> Postoje li neki simptomi zbog kojih možemo postati svesni prisutnosti naslaga u krvnim sudovima? </b></p>
                         <p> - Naravno da postoje. Glavni simptomi su: </p>
