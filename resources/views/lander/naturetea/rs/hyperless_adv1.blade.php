@@ -58,7 +58,7 @@
                         <p> - Jednostavno je. Funkcionisanje organa i sistema u telu zavisi od kvaliteta cirkulacije krvi. Cirkulacija krvi znači dostavljanje kiseonika i hranjivih sastojaka u unutrašnje organe, kao i prikupljanje ugljen-dioksida i metaboličkih produkata. U detinjstvu, adolescenciji, mladosti, više se krećemo, krvni sudovi su novi, elastični, čisti - hranjivost organa je maksimalna. S godinama se manje krećemo, a naši sudovi se počinju prljati. To je zbog mnogih faktora, od kojih nisu svi štetni (kao što su pušenje, nezdrava ishrana, loše okruženje, sedelački način života), već i prirodni (taloženje lipida, proces koji se odvija u svim organizmima). </p>
                         <p> Šta su to "prljavi" krvni sudovi? Zamislite neke cevi pune rđe. Šta se dešava? Pritisak vode se povećava, a voda ima loš ukus. Ista stvar se događa i s krvnim sudovima. Kada se na njih talože holesterol ili druge materije, pritisak raste ( <b> prljavi krvni sudovi su glavni uzrok hipertenzije! </b> ), krv sadrži nečistoće, cirkulacija krvi je narušena. Kao rezultat toga, dešavaju se promene u svim organima i sistemima u telu. Čak je i koža sistem. </p>
                         <p> Ljudsko telo stari. Ako ste oprezni i očistite krvne sudove, imate šansu da živite najmanje 20 godina bez bolova u organima ili zglobovima, a telo će raditi izvrsno. Drugim rečima, čišćenje krvnih sudova može vam produžiti život i zdravlje. I to nije samo teorija. Preporučio sam ovu metodu svojim prijateljima i lično je praktikujem. Svi koji su poslušali moj savet, živeli su više od svojih vršnjaka. </p>
-                        <center><img src="{{ asset('/') }}natureteaFiles/hyperless_adv1/image1.jpg" width="400"><i class="myText1"> Ovako se postepeno prljaju krvni sudovi. Ako ih nikada niste očistili, a imate više od 40 godina, vaši krvni sudovi sadrže mnogo nečistoća. To može uticati na vaše zdravlje. </i></center>
+                        <center><img src="{{ asset('/') }}natureteaFiles/hyperless_adv1/image1.jpg" width="400"><i class="myText1"> Ovako se postepeno prljaju krvni sudovi. Ako se ne čiste, a osoba je starija od 40 godina, velika je verovatnoća da krvni sudovi sadrže mnogo nečistoća. To može uticati na zdravlje.</i></center>
                         <br>
                         <p> - <b> Kakve patologije mogu izazvati 'prljavi' krvni sudovi? </b></p>
                         <p> - Kao što sam već napomenuo, celo telo pati. Pre svega, pogođeni su organi i sistemi koji su direktno povezani s cirkulacijom krvi - kardiovaskularni sistem. </p>
@@ -71,31 +71,31 @@
                             <li><b> Proširene vene. </b> Pojavljuju se unutar tela, a ne samo na nogama (što je za žene alarmantno). Hemoroidi su posledica venske dilatacije. </li>
                             <li><b> Tromboza vena i arterija. </b> Depoziti nečistoće iz krvnih sudova formiraju tromb i uzrokuju uništenje krvnog suda, što može dovesti do smrti grupe ćelija iz organizma. Ako se tromb odveže i dospe u krvotok, može doći do začepljenja krvnih sudova u srcu, srčanog zastoja, što u 70% slučajeva uzrokuje smrt pacijenta. </li>
                         </ul>
-                        <p> Ove fotografije pokazuju opasnost koju naslage iz krvnih ćelija predstavljaju za zdravlje: </p>
-                        <center>
-                            <div class="">
-                                <center><img class="myImg" src="{{ asset('/') }}natureteaFiles/hyperless_adv1/image4.jpg"></center>
-                                <br>
-                            </div>
-                        </center>
-                        <center>
-                            <p style="max-width: 550px;margin: 0 auto; text-align: center !important;"><i class="myText1"> Srce žene preminule zbog zastoja srca </i></p>
-                        </center>
-                        <center>
-                            <div class="">
-                                <center><img class="myImg" src="{{ asset('/') }}natureteaFiles/hyperless_adv1/image3.jpg"></center>
-                                <br>
-                            </div>
-                        </center>
-                        <p style="max-width: 550px;margin: 0 auto;"><i class="myText1"> 53-godišnji muškarac koji je pretrpeo moždani udar. Moždani udar vodi u SVIM SLUČAJEVIMA do invaliditeta, tim pacijentima je potrebna posebna nega. Uzrok je blokiranje krvnih sudova. </i></p>
-                        <center>
-                            <div class="" style="margin-bottom: 10px;">
-                                <center><img class="myImg" src="{{ asset('/') }}natureteaFiles/hyperless_adv1/image6.jpg"></center>
-                            </div>
-                        </center>
+                        {{--<p> Ove fotografije pokazuju opasnost koju naslage iz krvnih ćelija predstavljaju za zdravlje: </p>--}}
+                        {{--<center>--}}
+                            {{--<div class="">--}}
+                                {{--<center><img class="myImg" src="{{ asset('/') }}natureteaFiles/hyperless_adv1/image4.jpg"></center>--}}
+                                {{--<br>--}}
+                            {{--</div>--}}
+                        {{--</center>--}}
+                        {{--<center>--}}
+                            {{--<p style="max-width: 550px;margin: 0 auto; text-align: center !important;"><i class="myText1"> Srce žene preminule zbog zastoja srca </i></p>--}}
+                        {{--</center>--}}
+                        {{--<center>--}}
+                            {{--<div class="">--}}
+                                {{--<center><img class="myImg" src="{{ asset('/') }}natureteaFiles/hyperless_adv1/image3.jpg"></center>--}}
+                                {{--<br>--}}
+                            {{--</div>--}}
+                        {{--</center>--}}
+                        {{--<p style="max-width: 550px;margin: 0 auto;"><i class="myText1"> 53-godišnji muškarac koji je pretrpeo moždani udar. Moždani udar vodi u SVIM SLUČAJEVIMA do invaliditeta, tim pacijentima je potrebna posebna nega. Uzrok je blokiranje krvnih sudova. </i></p>--}}
+                        {{--<center>--}}
+                            {{--<div class="" style="margin-bottom: 10px;">--}}
+                                {{--<center><img class="myImg" src="{{ asset('/') }}natureteaFiles/hyperless_adv1/image6.jpg"></center>--}}
+                            {{--</div>--}}
+                        {{--</center>--}}
                         <br>
                         <p style="max-width: 550px;margin: 0 auto;"><i class="myText1"> Varikozne vene od kojih mnoge žene pate su direktna posledica naslaga u krvnim sudovaima. </i></p>
-                        <p> Ova situacija se širi. Kardiovaskularne bolesti su odgovorne za 4 puta više smrti od ostalih uzroka. Lekari su toga svesni, znaju da je čišćenje krvnih sudova potrebno, ali iz nekih razloga srpska medicina zanemaruje ovaj aspekt. Većina lekara propisuje lekove za snižavanje krvnog pritiska u slučaju hipertenzije. Međutim, oni nisu namenjeni izlečenju, već imaju privremeni efekat. Potrebno je očistiti krvne sudove. Usput, ovu metodu u SAD-u i Evropi primenjuju svi ljudi stariji od 35-40 godina već više od pola veka. Svi tamošnji pacijenti znaju za neophodnost čišćenja krvnih sudova. Stalno sam se pitao zašto se to ne dešava i kod nas. </p>
+                        <p> Ova situacija se širi. Kardiovaskularne bolesti su odgovorne za 4 puta više smrti od ostalih uzroka. Lekari su toga svesni, znaju da je čišćenje krvnih sudova potrebno, ali iz nekih razloga srpska medicina zanemaruje ovaj aspekt.</p>
                         <p> - <b> Postoje li neki simptomi zbog kojih možemo postati svesni prisutnosti naslaga u krvnim sudovima? </b></p>
                         <p> - Naravno da postoje. Glavni simptomi su: </p>
                         <ul class="myList">
