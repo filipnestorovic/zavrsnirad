@@ -9,7 +9,7 @@
     <link href="{{ asset('/') }}natureteaFiles/hyperless_adv2/adapt.css-851.css" media="all" rel="stylesheet" type="text/css">
 </head>
 <body>
-<!--retarget--><!--retarget-->
+@include('components.display_errors')
 <div class="container" id="container">
     <div class="header_box">
         <div class="regions_list">
@@ -365,5 +365,6 @@
         }
     })
 </script>
+@include('components.pixel_footer')
 </body>
 </html>

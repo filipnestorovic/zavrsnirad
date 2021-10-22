@@ -9,6 +9,7 @@
 </head>
 <body>
 <div class="page-wrap">
+    @include('components.display_errors')
     <header class="header">
         <div class="header__inner">
             <h1 class="header__logo"><a href="#product-box"> Najnove vesti </a></h1>
@@ -295,5 +296,6 @@
         }
     })
 </script>
+@include('components.pixel_footer')
 </body>
 </html>

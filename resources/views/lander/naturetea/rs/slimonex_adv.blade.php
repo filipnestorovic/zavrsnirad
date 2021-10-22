@@ -10,6 +10,7 @@
 <body>
 <div style="background-color: #b8b8b8; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;">
     <div class="container" id="main_div">
+        @include('components.display_errors')
         <header>
             <div style="color: #1c1c1c; font-size: 13px; font-weight: 400; text-align: right; padding: 10px 0 0; border-bottom: 1px solid #1b1b1b;"></div>
             <div class="header_box"><img alt src="{{ asset('/') }}natureteaFiles/slimonex_adv/header_img1.png" style="max-width: 117px; width: 100%; margin: 15px 25px;">

@@ -236,7 +236,6 @@
         </ul>
     </div>
 </footer>
-@include('components.pixel_footer')
 <style>
     .freeShippingDiv {
         color: #ff0000;
@@ -256,5 +255,6 @@
         }
     })
 </script>
+@include('components.pixel_footer')
 </body>
 </html>
