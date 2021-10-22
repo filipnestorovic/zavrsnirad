@@ -44,6 +44,10 @@
 <script>
     let countrySubdomain = "new";
     @if($product->country_code === "ba") countrySubdomain = "ba"; @endif
-    @if($_SERVER['REMOTE_ADDR'] === "127.0.0.1") countrySubdomain = "admin"; @endif
+    @if($_SERVER['REMOTE_ADDR'] === "127.0.0.1")
+    document.write("<script type='text/javascript' src='https://"+ countrySubdomain + ".wombatnew.com/js/trck.js'><\/scr" + "ipt>");
+    @else
     document.write("<script type='text/javascript' src='https://"+ countrySubdomain + ".serverwombat.com/js/trck.js'><\/scr" + "ipt>");
+    @endif
+
 </script>

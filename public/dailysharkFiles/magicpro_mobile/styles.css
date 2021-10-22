@@ -1470,10 +1470,6 @@ select::-ms-expand {
     box-shadow: 0 0 0 2px #f4f4f4 inset;
 }
 
-.characteristics__list li b {
-    float: left;
-}
-
 /* comparison */
 
 .comparison_section {

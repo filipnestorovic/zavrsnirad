@@ -1,0 +1,343 @@
+.jSale, .jSaleFeedback  {
+    width: 100%;
+}
+
+.jSaleWrapper  .jSale  {
+    padding-top: 0;
+}
+
+.jSaleWrapper {
+    margin: 0 auto 20px;
+}
+
+.jSaleOrder {
+    cursor: pointer;
+}
+.jSaleForm input{
+    border: 1px solid #ccc;
+}
+.jSaleCall h2{
+    font-size: 29px;
+    line-height: 1.2;
+    font-weight: 300;
+    color: #000;
+}
+body .jSale .jSaleWrapper .success h2{
+    font-size: 29px;
+    line-height: 1.2;
+    font-weight: 300;
+    color: #000;
+}
+.jSaleForm h6.we_callback{
+    font-size: 20px;
+    margin-bottom: 11px;
+    text-align: center;
+    line-height: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+.jSaleButton {
+    display: inline-block;*
+display: inline;*
+margin-left: .3em;
+    line-height: 18px;*
+line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;*
+border: 0;*zoom:1;*
+background-color: #0055cc;
+    font-family: Arial, sans-serif;
+}
+
+.jSaleButton:hover {/* Buttons in IE7 don't get borders, so darken on hover */
+}
+
+.jSaleButton:focus {
+    outline: thin dotted #333;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+.jSaleButton:active {
+    background-color: #e6e6e6;
+    background-color: #d9d9d9 \9;
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.jSaleButton, .jSaleButton:hover {
+}
+
+.jSaleButton:hover, .jSaleButton:active {*
+background-color: #004ab3;
+    background: #006f7c;
+}
+
+.jSaleButton:active{
+    background-color: #004099 \9;
+}
+
+.jSaleButton:disabled {
+    opacity: 0.3;
+}
+
+.jSaleLarge {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 400 !important;
+    border-radius: 4px !important;
+    color: #ffffff;
+    min-width: 150px;
+    border: none;
+    padding: 16px 25px 16px 25px;
+    -webkit-transition: all ease 0.25s;
+    transition: all ease 0.25s;
+    background: #0196a7;
+    width: 100%;
+    line-height: 1.5;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+}
+
+.jSaleForm {
+    padding: 0 15px 5px 15px;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.jSaleForm h6 {
+    text-align: center;
+    font-size: 110%;margin: 0;}
+
+.jSaleForm p {
+    font-size: 90%;
+}
+
+.jSaleMessage {
+    text-align: center;
+    color: #f00;
+}
+
+.jSaleQty {
+    width: 22px;
+    line-height: 1.8;
+    text-align: center;
+}
+.jSaleQtyMinus, .jSaleQtyPlus {
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1.7;
+}
+
+.jSaleQtyMinus:hover, .jSaleQtyPlus:hover {
+    color: #666;
+}
+
+.jSaleCode {
+    width: 50px;
+}
+
+.jSaleForm .attention, .jSaleForm .error, .jSaleForm .warning {
+    color: #0B9A2B;
+}
+
+.jSaleForm .error {
+    border-color: #f00;
+}
+
+.jSaleForm .warning {
+    display: block;
+    font-size: 10px;
+}
+
+.jSaleForm .t-center {
+    text-align: center;
+}
+
+.jSaleForm .submit {
+    text-align: left;
+}
+
+.simplemodal-container .success {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.simplemodal-container .success h3 {
+    text-align: center;
+    color: #3caa3c;
+}
+
+.simplemodal-container .success h4 {
+    text-align: center;
+}
+
+.jSaleForm p, .jSaleForm div.p {
+    margin: 0px 0 7px;
+    padding: 0 10px;
+    clear: both;
+}
+
+.jSaleForm div.p {
+    font-size: 80%;
+    height: 16px;
+    vertical-align: top;
+    margin: 0 0 20px;
+}
+
+.jSaleForm p.float {
+    clear: none;
+}
+
+.jSaleForm p.float-left {
+    float: left;
+    clear: none;
+    padding: 5px;
+    text-align: center;
+    font-weight: normal;
+    max-width: 150px;
+}
+
+.jSaleForm p.align-right {
+    text-align: right;
+    font-weight: normal;
+    font-size: 80%;
+}
+
+.jSaleForm p.float-left:hover, .jSaleForm p.float-left.hover {
+    background: #ff0;
+}
+
+.jSaleForm p.float-left label, .jSaleForm p.float-left input{
+    cursor: pointer;
+}
+
+.jSaleForm p.float input {
+    display: block;
+    width: 100%;
+    height: 42px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    margin-left: 28px;
+    margin: 0 auto;
+}
+.jSaleForm textarea {
+    width: 95%;
+}
+
+.jSaleForm #payment_info, .jSaleForm #delivery_info{
+    background: #ececec;
+    margin: 0 10px;
+}
+
+.jSaleForm div.add_product_param {
+    clear:both;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #999;
+}
+
+/*************  CLEARFIX  ***************/
+
+/* http://sonspring.com/journal/clearing-floats */
+
+.clear {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+/* http://perishablepress.com/press/2008/02/05/lessons-learned-concerning-the-clearfix-css-hack */
+.disk1 {
+    display: block;
+}
+.jSaleForm .submit{
+    padding: 0;
+    font-weight: 300;
+    font-family: Calibri, sans-serif;
+    padding: 0 10px;
+}
+form.jSaleForm.jSaleCall {
+    padding: 0;
+}
+.jSaleCall p.float {
+    padding: 0;
+}
+.price_final {
+    display: none;
+}
+.jSaleCall label {
+    text-align: left;
+    width: 100%;
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.clearfix:after {
+    clear: both;
+    content: ' ';
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+.jSale label.colvo {
+    width: auto;
+}
+.jSale label{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    text-align: left;
+    width: 100%;
+}
+.jSaleCall .submit{
+    padding: 0;
+}
+body .jSaleCall h6.jSaleMessage{
+    font-size: 20px;
+    margin-bottom: 11px;
+    text-align: center;
+    line-height: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #f00;
+}
+.clearfix {
+    display: inline-block;
+}
+.jSale label .attention,
+.jSaleCall label .attention{
+    color: #FF0000;
+}
+* html .clearfix {
+    height: 1%;
+}
+.jSaleForm .attention{
+    color: #0B9A2B;
+}
+.jSaleForm .error, .jSaleForm .warning{
+    color: #FF0000;
+}
+.clearfix {
+    display: block;
+}

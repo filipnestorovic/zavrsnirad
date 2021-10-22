@@ -713,9 +713,14 @@ class HomeController extends Controller
             $events = array();
             array_push($events, $event);
             $api_request = (new EventRequest($pixel_id))
-                ->setTestEventCode('TEST35501')
+//                ->setTestEventCode('TEST82498')
                 ->setEvents($events);
-            $response = $api_request->execute();
+
+            try {
+                $response = $api_request->execute();
+            } catch (\Exception $exception) {
+                Log::error("Error: CApi Error | Exception: " . $exception->getMessage());
+            }
 
             if(!empty(json_decode($response, true))) {
                 return $response;

@@ -94,7 +94,7 @@
                 },
                 success:function(response){
                     sentAddToCart = 1;
-                    console.log(response);
+                    // console.log(response);
                 },
                 error: function (req, err) {
                     console.log(req);
