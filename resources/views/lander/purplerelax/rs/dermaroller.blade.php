@@ -231,7 +231,9 @@
                 <div class="bottomform-img">
                     <img src="{{ asset('/') }}purplerelaxFiles/dermaroller/girl-main.png" alt="">
                 </div>
-                <form id="offer__form" class="offer__form" action="#" method="post">
+                <form id="offer__form" class="offer__form" action="{{$orderRoute}}" method="post">
+                    {{ csrf_field() }}
+                    @include('lander.naturapharm.components.form_hidden_fields')
                     <h3 class="title-2">Unesite podatke</h3>
                     <input id="name" class="input" type="text" name="name" placeholder="Ime i prezime" required>
                     <input id="phone" class="input" type="tel" name="phone" placeholder="Telefon" required>

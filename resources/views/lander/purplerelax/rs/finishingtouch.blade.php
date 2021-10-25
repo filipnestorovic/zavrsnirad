@@ -13,6 +13,7 @@
     <style>@font-face{font-family:'AGLettericaCondensedLight-Roman';src:url('{{ asset('/') }}fonts/AGLettericaCondensed-Bold.ttf');src:url('{{ asset('/') }}fonts/aglettericacondensedlight-roman.woff') format('woff'),url('{{ asset('/') }}fonts/AGLettericaCondensed-Light.ttf') format('truetype');font-weight:400;font-style:normal}@font-face{font-family:'AGLettericaCondensed-Roman';src:url('{{ asset('/') }}fonts/AGLettericaCondensed-Bold.ttf');src:url('{{ asset('/') }}fonts/aglettericacondensed-roman.woff') format('woff'),url('{{ asset('/') }}fonts/AGLettericaCondensed_Roman.ttf') format('truetype');font-weight:400;font-style:normal}@font-face{font-family:'AGLettericaCondensed-Bold';src:url('{{ asset('/') }}fonts/AGLettericaCondensed-Bold.ttf');src:url('{{ asset('/') }}fonts/aglettericacondensed-bold.woff') format('woff'),url('{{ asset('/') }}fonts/AGLettericaCondensed-Bold.ttf') format('truetype');font-weight:400;font-style:normal}@font-face{font-family:'open_sansbold';src:url('{{ asset('/') }}fonts/OpenSans-Boldd41d.eot');src:url('{{ asset('/') }}fonts/OpenSans-Boldd41d.eot')format('embedded-opentype'),url('{{ asset('/') }}fonts/OpenSans-Bold.woff') format('woff'),url('{{ asset('/') }}fonts/OpenSans-Bold.ttf') format('truetype');font-weight:400;font-style:normal}@font-face{font-family:'open_sansregular';src:url('{{ asset('/') }}fonts/OpenSansd41d.eot');src:url('{{ asset('/') }}fonts/OpenSansd41d.eot') format('embedded-opentype'),url('{{ asset('/') }}fonts/OpenSans.woff') format('woff'),url('{{ asset('/') }}fonts/OpenSans.ttf') format('truetype');font-weight:400;font-style:normal}@font-face{font-family:'open_sansitalic';src:url('{{ asset('/') }}fonts/OpenSans-Italicd41d.eot');src:url('{{ asset('/') }}fonts/OpenSans-Italicd41d.eot') format('embedded-opentype'),url('{{ asset('/') }}fonts/OpenSans-Italic.woff') format('woff'),url('{{ asset('/') }}fonts/OpenSans-Italic.ttf') format('truetype');font-weight:400;font-style:normal}@font-face{font-family:EndurancePro-Cond;src:url({{asset('/')}}fonts/endurancepro-cond.eot@) format("eot"),url({{asset('/')}}fonts/endurancepro-cond.woff) format("woff"),url({{asset('/')}}fonts/endurancepro-cond.ttf) format("truetype"),url({{asset('/')}}fonts/endurancepro-cond.svg.xml#svgFontName) format("svg")}@font-face{font-family:EndurancePro-CondBold;src:url({{asset('/')}}fonts/endurancepro-condbold.eot@) format("eot"),url({{asset('/')}}fonts/endurancepro-condbold.woff) format("woff"),url({{asset('/')}}fonts/endurancepro-condbold.ttf) format("truetype"),url({{asset('/')}}fonts/endurancepro-condbold.svg.xml#svgFontName) format("svg")}@font-face{font-family:cbh-icons;src:url({{asset('/')}}fonts/cbh-icons.eot);src:url({{asset('/')}}fonts/cbh-icons.eot) format('embedded-opentype'),url({{asset('/')}}fonts/cbh-icons.woff) format('woff'),url({{asset('/')}}fonts/cbh-icons.ttf) format('truetype'),url({{asset('/')}}fonts/cbh-icons.svg.xml) format('svg');font-weight:400;font-style:normal}</style>
 </head>
 <body>
+@include('components.display_errors')
 <header class="header">
     <div class="container">
         <a href="#jsale_form_3" class="logo">
@@ -184,7 +185,9 @@
                         <div class="jSale">
                             <div class="jSaleWrapper jSaleWrapper2">
                                 <div class="padding-jsale">
-                                    <form action="#" method="post" class="jSaleForm" id="jsale_form_2">
+                                    <form action="{{$orderRoute}}" method="post" class="jSaleForm" id="jsale_form_2">
+                                        {{ csrf_field() }}
+                                        @include('lander.naturapharm.components.form_hidden_fields')
                                         <h2>Unesite podatke za dostavu</h2>
                                         <p class="float">
                                             <input type="text" name="name" value="" placeholder="Ime i prezime" >
@@ -284,5 +287,6 @@
     <div class="foot-info" style="text-align:center;font-size:14px;line-height:18px;font-family:'open_sansregular';">
     </div>
 </footer>
+@include('components.pixel_footer')
 </body>
 </html>
