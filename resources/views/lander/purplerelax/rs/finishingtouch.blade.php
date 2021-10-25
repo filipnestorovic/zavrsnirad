@@ -284,19 +284,5 @@
     <div class="foot-info" style="text-align:center;font-size:14px;line-height:18px;font-family:'open_sansregular';">
     </div>
 </footer>
-{{--<script src="http://yes.xcartpro.com/r3/skins/3218/js/buyer.js"></script>--}}
-{{--<script src="http://yes.xcartpro.com/r3/skins/3218/js/buyer-script.js"></script>--}}
-{{--<script>--}}
-{{--if( $(window).width() > 1000){--}}
-{{--$(function(){--}}
-{{--setTimeout(function(){$('.fix_message').fadeIn();}, 2000);--}}
-{{--setTimeout(function(){$('.fix_message').fadeOut();}, 15000);--}}
-{{--$('.fix_close').click(function(){--}}
-{{--$('.fix_message').fadeOut();--}}
-{{--});--}}
-{{--});--}}
-{{--}--}}
-{{--
-</script>--}}
 </body>
 </html>

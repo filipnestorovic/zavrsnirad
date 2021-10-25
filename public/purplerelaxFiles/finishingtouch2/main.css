@@ -1,0 +1,697 @@
+/*reset*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
+em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b,
+u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table,
+caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details,
+embed, figure, figcaption, footer, header, menu, nav, output, ruby, section,
+summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; outline: 0;}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, menu, nav, section, main {display: block;}
+
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+img{max-width: 100%; height: auto;}
+a{text-decoration: underline;}
+a:hover{cursor: pointer;}
+
+*::-webkit-input-placeholder {color: #a9a9a9; opacity: 1;}
+*:-moz-placeholder {color: #a9a9a9; opacity: 1;}
+*::-moz-placeholder {color: #a9a9a9; opacity: 1;}
+*:-ms-input-placeholder {color: #a9a9a9; opacity: 1;}
+*{margin: 0; padding: 0;}
+*{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+button,input{outline: none;}
+
+/* Default settings*/
+
+
+.hidden{display: none;}
+.clear{clear: both;height: 0px;}
+.invis{display: none;}
+.left{float: left;}
+.right{float: right;}
+.center{text-align: center;}
+.clearfix:after{content: '';display: block;clear: both;}
+
+/*Site settings*/
+h1,h2,h3,h4,h5,h6{font-weight: 400;}
+b, strong{font-weight: 700;}
+i{font-style: italic;}
+
+.opacity-75{
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+    filter: alpha(opacity=75);
+    -moz-opacity: 0.75;
+    -khtml-opacity: 0.75;
+    opacity: 0.75;
+}
+.shadow-text{
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+}
+.shadow-55{
+    -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.55);
+    -moz-box-shadow:    0px 1px 2px 0px rgba(0, 0, 0, 0.55);
+    box-shadow:         0px 1px 2px 0px rgba(0, 0, 0, 0.55);
+}
+.border-5{
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.animate {
+    -webkit-transition: all 0.3s;
+    -moz-transition:    all 0.3s;
+    -o-transition:      all 0.3s;
+    -ms-transition:     all 0.3s;
+    transition:         all 0.3s;
+}
+.col-1{color: #ffe400;}
+.col-2{color: #c41255;}
+.col-3{color: #3a6662;}
+.col-4{color: #111;}
+
+.f-normal{font-weight: 400;}
+
+.mob-vis{
+    display: none;
+}
+
+/*structure*/
+html{
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+body{
+    position: relative;
+    width: 100%;
+    min-width: 960px;
+    padding: 0px;
+    margin: 0px auto;
+    font-family: 'Roboto Condensed', 'Helvetica', 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 1.5em;
+    color: #3a6662;
+    font-weight: 400;
+
+}
+.section, .wrap, .container{
+    position: relative;
+}
+.section{
+    width: 100%;
+}
+.wrap{
+    width: 960px;
+    padding: 0px 20px;
+    margin: 0 auto;
+}
+.new-cost{
+    color: #c41255;
+}
+.old-cost{
+    text-decoration: line-through;
+}
+form>div{
+    position: relative;
+    padding-bottom: 20px;
+}
+form input{
+    position: relative;
+    display: block;
+    outline: 0;
+    border: 0;
+    width: 90%;
+    height: 52px;
+    line-height: 52px;
+    margin: 0 auto;
+    background: #fff;
+    text-indent: 15px;
+    font-size: 18px;
+    border: 1px solid #d6d6d6;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    font-family: 'Roboto Condensed', 'Helvetica', 'Arial', sans-serif;
+    font-weight: 400;
+}
+form input:focus{
+    border-color: #b6b6b6;
+}
+form button{
+    position: relative;
+    display: block;
+    width: 229px;
+    height: 84px;
+    margin: 0 auto;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    background: url(button-2.png)/*tpa=https://shopresurs.ru/finishingtouch/img/button-2.png*/ 0 0 no-repeat;
+    top: 0;
+}
+form button:hover{
+    top: -2px;
+    -webkit-transition: all 0.2s;
+    -moz-transition:    all 0.2s;
+    -o-transition:      all 0.2s;
+    -ms-transition:     all 0.2s;
+    transition:         all 0.2s;
+}
+.countbox{
+    padding: 0;
+    margin:0 auto;
+    line-height: 1.2;
+    color: #111;
+    font-size: 24px;
+    width: 200px;
+    padding-top: 10px;
+    font-weight: 400;
+    text-align: center;
+}
+.countbox .countbox-num{
+    float: left;
+    width: 60px;
+    height: 39px;
+    line-height: 39px;
+    position: relative;
+}
+.countbox .countbox-space{
+    float: left;
+    width: 10px;
+    height: 39px;
+    color: #fff;
+}
+.countbox .countbox-space:before{content: '\003A'; font-weight: 700; line-height: 39px;}
+.countbox-hours1,.countbox-mins1,.countbox-secs1{
+    float: left;
+    width: 27px;
+    height: 39px;
+    margin: 0 1px;
+    text-align: center;
+    background-image:url('timer-bg.png')/*tpa=https://shopresurs.ru/finishingtouch/img/timer-bg.png*/;
+    background-repeat:no-repeat;
+    z-index:1;
+}
+.countbox-hours2,.countbox-mins2,.countbox-secs2{
+    float: left;
+    width: 27px;
+    height: 39px;
+    margin: 0 1px;
+    text-align: center;
+    background-image:url('timer-bg.png')/*tpa=https://shopresurs.ru/finishingtouch/img/timer-bg.png*/;
+    background-repeat:no-repeat;
+    z-index:1;
+}
+.countbox-hours-text,.countbox-mins-text,.countbox-secs-text{
+    display: none;
+    background-position: center;
+    background-repeat:no-repeat;
+    position: absolute;
+    margin-top: 34px;
+    height: 14px;
+    width: 60px;
+    font-size: 12px;
+}
+
+.timer-2{
+    line-height: 1.2;
+    color: #111;
+    font-size: 34px;
+    width: 280px;
+    padding-top: 20px;
+}
+.timer-2 .countbox-num{
+    float: left;
+    width: 80px;
+    height: 57px;
+    line-height: 57px;
+    position: relative;
+    font-weight: 700;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+.timer-2 .countbox-space{
+    float: left;
+    width: 20px;
+    height: 57px;
+    color: #fff;
+}
+.timer-2 .countbox-space:before{content: '\003A'; font-weight: 700; line-height: 57px;}
+.timer-2 .countbox-hours1, .timer-2 .countbox-mins1, .timer-2 .countbox-secs1{
+    float: left;
+    width: 36px;
+    height: 57px;
+    margin: 0 2px;
+    text-align: center;
+    background-image:url('timer-bg2.png')/*tpa=https://shopresurs.ru/finishingtouch/img/timer-bg2.png*/;
+    background-repeat:no-repeat;
+    z-index:1;
+}
+.timer-2 .countbox-hours2, .timer-2 .countbox-mins2, .timer-2 .countbox-secs2{
+    float: left;
+    width: 36px;
+    height: 57px;
+    margin: 0 2px;
+    text-align: center;
+    background-image:url('timer-bg2.png')/*tpa=https://shopresurs.ru/finishingtouch/img/timer-bg2.png*/;
+    background-repeat:no-repeat;
+    z-index:1;
+}
+.timer-2 .countbox-hours-text, .timer-2 .countbox-mins-text, .timer-2 .countbox-secs-text{
+    display: block;
+    background-position: center;
+    background-repeat:no-repeat;
+    position: absolute;
+    margin-top: 45px;
+    height: 18px;
+    width: 80px;
+    font-size: 16px;
+}
+h1{
+    position: relative;
+    padding: 40px 0 0 324px;
+    font-size: 26px;
+    line-height: 1em;
+    color: #fff;
+}
+h2{
+    position: relative;
+    font-family: 'Lobster';
+    line-height: 1.2em;
+}
+h3{
+    line-height: 1.5em;
+    font-size: 18px;
+}
+h4{
+    line-height: 1.5em;
+}
+.wave-bot:after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 11px;
+    bottom: 0;
+    z-index: 999;
+    background: url(wave.png)/*tpa=https://shopresurs.ru/finishingtouch/img/wave.png*/ top repeat-x;
+}
+.wave-top:after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 11px;
+    top: 0;
+    z-index: 999;
+    background: url(wave.png)/*tpa=https://shopresurs.ru/finishingtouch/img/wave.png*/ bottom repeat-x;
+}
+.block-1{
+    min-height: 1270px;
+    background: url(bg-1.jpg)/*tpa=https://shopresurs.ru/finishingtouch/img/bg-1.jpg*/ center top no-repeat #fff;
+}
+.block-1 .head-cont{
+    position: relative;
+    height: 150px;
+    padding-top: 20px;
+}
+.block-1 .sale{
+    position: relative;
+    padding-right: 10px;
+    font-size: 37px;
+    line-height: 1em;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: right;
+}
+.block-1 .cost{
+    position: relative;
+    float: right;
+    width: 250px;
+    margin-right: 10px;
+}
+.block-1 .cost>span{
+    position: relative;
+    display: inline-block;
+    float: left;
+    width: 50%;
+    padding-top: 28px;
+    text-align: center;
+    font-size: 25px;
+    line-height: 1em;
+    font-weight: 700;
+}
+.block-1 .timer-cont{
+    position: relative;
+    width: 335px;
+    height: 110px;
+    margin-left: 585px;
+}
+.block-1 .timer-cont .left{
+    width: 200px;
+    padding-top: 12px;
+}
+.block-1 .timer-cont .left>p{
+    text-align: center;
+    font-size: 20px;
+    color: #111;
+    text-transform: uppercase;
+}
+.block-1 .timer-cont .button-1{
+    position: relative;
+    display: block;
+    float: right;
+    width: 123px;
+    height: 70px;
+    margin-top: 20px;
+    background: url(button-1.png)/*tpa=https://shopresurs.ru/finishingtouch/img/button-1.png*/ 0 0 no-repeat;
+    outline: none;
+}
+.block-1 .title{
+    position: relative;
+    padding: 10px 0 0 324px;
+    font-size: 34px;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+.block-1 .list-1{
+    position: relative;
+    margin-left: 340px;
+    padding-top: 50px;
+}
+.block-1 .list-1 li{
+    position: relative;
+    padding: 0 0 15px 40px;
+    font-size: 20px;
+    color: #fff;
+}
+.block-1 .list-1 li:before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 26px;
+    height: 27px;
+    background: url(marker-1.png)/*tpa=https://shopresurs.ru/finishingtouch/img/marker-1.png*/ 0 0 no-repeat;
+    left: 0;
+    top: 0;
+}
+.block-1 .text-1{
+    position: relative;
+    padding: 40px 10px 0 300px;
+}
+.block-1 .text-1 h4{
+    padding-left: 110px;
+    padding-bottom: 30px;
+    font-size: 20px;
+}
+.block-1 .text-1 p{
+    text-align: justify;
+    line-height: 1.9em;
+}
+.block-1 .text-1 h2{
+    font-size: 40px;
+    padding-top: 50px;
+    margin-bottom: 30px;
+}
+.block-1 .img-1{
+    position: relative;
+    padding-top: 60px;
+    z-index: 99;
+}
+.block-2{
+    background: url(bg-2.jpg)/*tpa=https://shopresurs.ru/finishingtouch/img/bg-2.jpg*/ center top repeat-y;
+    color: #fff;
+    padding-top: 70px;
+    margin-top: -28px;
+}
+.block-2 h2{
+    font-size: 46px;
+}
+.block-2 ul{
+    padding: 60px 0;
+}
+.block-2 ul li{
+    position: relative;
+    float: left;
+    width: 230px;
+    padding: 140px 20px 0;
+    font-size: 20px;
+    line-height: 1.5em;
+    text-align: center;
+    background: url(marker-2.png)/*tpa=https://shopresurs.ru/finishingtouch/img/marker-2.png*/ center top no-repeat;
+}
+.block-3{
+    padding: 60px 0px;
+    background: url(bg-3.jpg)/*tpa=https://shopresurs.ru/finishingtouch/img/bg-3.jpg*/ center top repeat-y;
+}
+.block-3:before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 11px;
+    background: url(wave-1.png)/*tpa=https://shopresurs.ru/finishingtouch/img/wave-1.png*/ center top no-repeat;
+    top: 0;
+}
+.block-3:after, .block-5:after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 11px;
+    background: url(wave-2.png)/*tpa=https://shopresurs.ru/finishingtouch/img/wave-2.png*/ center top no-repeat;
+    bottom: 0;
+}
+.block-5:before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 11px;
+    background: url(wave-2.png)/*tpa=https://shopresurs.ru/finishingtouch/img/wave-2.png*/ center bottom no-repeat;
+    top: 0;
+}
+.block-3 .wrap{
+    padding: 0px;
+}
+.block-3 h2{
+    font-size: 46px;
+}
+.block-3 .container-rew{
+    padding: 60px 0;
+}
+.block-3 .rew-item{
+    position: relative;
+    float: left;
+    width: 281px;
+    height: 555px;
+    margin: 0 20px 0 19px;
+    padding-top: 10px;
+    background: url(rew-bg.png)/*tpa=https://shopresurs.ru/finishingtouch/img/rew-bg.png*/ 0 0 no-repeat;
+}
+.block-3 .rew-item>img{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+.block-3 .rew-item>p{
+    height: 280px;
+    padding: 0 15px;
+    overflow: hidden;
+    font-size: 16px;
+    line-height: 1.6em;
+    text-align: justify;
+}
+.block-3 .rew-item .rew-name{
+    position: relative;
+    display: block;
+    margin-left: 70px;
+    padding-top: 48px;
+    line-height: 1.3em;
+}
+.block-4{
+    min-height: 870px;
+    padding: 50px 0px;
+    background: url(doc-bg.jpg)/*tpa=https://shopresurs.ru/finishingtouch/img/doc-bg.jpg*/ center top no-repeat;
+    color: #fff;
+}
+.block-4 .wrap{
+    padding: 0 40px;
+}
+.block-4 h2{
+    font-size: 46px;
+}
+.block-4 .container{
+    width: 610px;
+    padding-top: 40px;
+}
+.block-4 .container>p strong{
+    font-size: 24px;
+}
+.block-4 .container ul{
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+.block-4 .container ul li{
+    position: relative;
+    padding: 0 0 15px 40px;
+    font-size: 20px;
+    color: #fff;
+}
+.block-4 .container ul li:before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 26px;
+    height: 27px;
+    background: url(marker-3.png)/*tpa=https://shopresurs.ru/finishingtouch/img/marker-3.png*/ 0 0 no-repeat;
+    left: 0;
+    top: 0;
+}
+.block-5{
+    padding: 60px 0px;
+    background: url(bg-4.jpg)/*tpa=https://shopresurs.ru/finishingtouch/img/bg-4.jpg*/ center top repeat-y;
+    color: #fff;
+}
+.block-5 .wrap{
+    padding: 0;
+    padding-bottom: 60px;
+}
+.block-5 h2{
+    font-size: 46px;
+}
+.block-5 .container-del{
+    position: relative;
+    padding-top: 60px;
+}
+.block-5 .container-del>img{
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+}
+.block-5 .container-del>div{
+    position: relative;
+    float: left;
+    width: 33.3%;
+    text-align: center;
+}
+.block-6{
+    background: url(bg-5.jpg)/*tpa=https://shopresurs.ru/finishingtouch/img/bg-5.jpg*/ center top repeat-y;
+    padding-bottom: 20px;
+}
+.block-6 .wrap{
+    padding: 0;
+}
+.block-6 .container-form{
+    position: relative;
+    width: 960px;
+    height: 500px;
+    top: -40px;
+    padding: 20px 35px;
+    background: url(end-form-bg.png)/*tpa=https://shopresurs.ru/finishingtouch/img/end-form-bg.png*/ 0 0 no-repeat;
+}
+.block-6 .container-form .left{
+    width: 320px;
+    color: #fff;
+}
+.block-6 .container-form .left h3{
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 1.3em;
+}
+.block-6 .container-form .cost{
+    font-size: 38px;
+    line-height: 1em;
+    font-weight: 700;
+}
+.block-6 .container-form .cost>span{
+    position: relative;
+    display: inline-block;
+    float: left;
+    width: 50%;
+    padding-top: 28px;
+    text-align: center;
+}
+.block-6 .container-form .timer-cont{
+    padding-top: 60px;
+    text-align: center;
+}
+.block-6 .container-form .timer-cont>p{
+    font-size: 24px;
+}
+.block-6 .container-form .right{
+    width: 300px;
+}
+.block-6 .container-form .right h3{
+    padding-top: 10px;
+    font-size: 24px;
+    line-height: 1.3em;
+}
+.block-6 .container-form form{
+    padding-top: 30px;
+}
+
+.video-container{
+    position: relative;
+    width: 900px;
+    height: 515px;
+    margin: 0 auto;
+    border:10px solid #e0f4f2;
+    border-radius: 10px;
+    overflow:hidden;
+    background:#000;
+}
+.video-container iframe, .video-container object, .video-container embed{
+    position:absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.youtube {
+    height: 100% !important;
+}
+
+.form-control {
+    position: relative;
+    display: block;
+    outline: 0;
+    border: 0;
+    width: 90%;
+    height: 52px;
+    line-height: 52px;
+    margin: 0 auto;
+    background: #fff;
+    text-indent: 15px;
+    font-size: 18px;
+    border: 1px solid #d6d6d6;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    font-family: 'Roboto Condensed', 'Helvetica', 'Arial', sans-serif;
+    font-weight: 400;
+}
+
+.country_chang { position: relative;
+    display: block;
+    outline: 0;
+    border: 0;
+    width: 90%;
+    height: 52px;
+    line-height: 52px;
+    margin: 0 auto;
+    background: #fff;
+    text-indent: 15px;
+    font-size: 18px;
+    border: 1px solid #d6d6d6;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    font-family: 'Roboto Condensed', 'Helvetica', 'Arial', sans-serif;
+    font-weight: 400;
+}
