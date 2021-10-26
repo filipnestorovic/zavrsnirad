@@ -1,0 +1,557 @@
+/*reset*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
+em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b,
+u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table,
+caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details,
+embed, figure, figcaption, footer, header, menu, nav, output, ruby, section,
+summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; outline: 0;}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, menu, nav, section, main {display: block;}
+
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+img{max-width: 100%; height: auto;}
+a{text-decoration: underline;}
+a:hover{cursor: pointer;}
+
+*::-webkit-input-placeholder {color: #a9a9a9; opacity: 1;}
+*:-moz-placeholder {color: #a9a9a9; opacity: 1;}
+*::-moz-placeholder {color: #a9a9a9; opacity: 1;}
+*:-ms-input-placeholder {color: #a9a9a9; opacity: 1;}
+*{margin: 0; padding: 0;}
+*{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+button,input{outline: none;}
+
+/* Default settings*/
+
+
+.hidden{display: none;}
+.clear{clear: both;height: 0px;}
+.invis{display: none;}
+.left{float: left;}
+.right{float: right;}
+.center{text-align: center;}
+.clearfix:after{content: '';display: block;clear: both;}
+
+/*Site settings*/
+
+
+
+
+h1,h2,h3,h4,h5,h6{font-weight: normal;}
+b, strong{font-weight: 700;}
+i{font-style: italic;}
+
+.opacity-75{
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+    filter: alpha(opacity=75);
+    -moz-opacity: 0.75;
+    -khtml-opacity: 0.75;
+    opacity: 0.75;
+}
+.shadow-text{
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+}
+.shadow-55{
+    -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.55);
+    -moz-box-shadow:    0px 1px 2px 0px rgba(0, 0, 0, 0.55);
+    box-shadow:         0px 1px 2px 0px rgba(0, 0, 0, 0.55);
+}
+.border-5{
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.col-1{color: #fff600;}
+.col-2{color: #c41255;}
+.col-3{color: #fff;}
+.col-4{color: #111;}
+
+.f-normal{font-weight: 400;}
+
+
+/*structure*/
+html{
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+html{
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+body{
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto Condensed', "Arial", "Helvetica", sans-serif;
+    font-size: 18px;
+    line-height: 1.5em;
+    background: #fff;
+    color: #111;
+    font-weight: 400;
+}
+.main-wrap{
+    position: relative;
+    width: 480px;
+    margin: 0px auto;
+}
+.section{
+    position: relative;
+    padding: 20px;
+}
+.sale{
+    position: absolute;
+    display: inline-block;
+    font-family: 'Roundbold', "Arial", "Helvetica", sans-serif;
+    font-size: 42px;
+    line-height: 1em;
+}
+.new-cost{
+    color: #ff2142;
+}
+
+form>div{
+    position: relative;
+    padding-bottom: 20px;
+}
+form input{
+    position: relative;
+    display: block;
+    outline: 0;
+    border: 0;
+    width: 350px;
+    height: 70px;
+    line-height: 52px;
+    margin: 0 auto;
+    background: #fff;
+    text-indent: 15px;
+    font-size: 20px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    font-family: 'Roboto Condensed', 'Helvetica', 'Arial', sans-serif;
+    font-weight: 400;
+}
+form input:focus{
+    border-color: #b6b6b6;
+}
+form button, .button-m{
+    position: relative;
+    display: block;
+    width: 350px;
+    height: 115px;
+    margin: 0 auto;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    background: url(button.png)/*tpa=http://topworldsale.ru/finishingtouch2/img/button.png*/ 0 0 no-repeat;
+    top: 0;
+}
+form button:hover{
+    top: -2px;
+    -webkit-transition: all 0.2s;
+    -moz-transition:    all 0.2s;
+    -o-transition:      all 0.2s;
+    -ms-transition:     all 0.2s;
+    transition:         all 0.2s;
+}
+.countbox{
+    padding: 0;
+    margin:0 auto;
+    line-height: 1.2;
+    color: #fff;
+    font-size: 38px;
+    width: 324px;
+    padding-top: 10px;
+    font-weight: 500;
+    text-align: center;
+}
+.countbox .countbox-num{
+    float: left;
+    width: 98px;
+    height: 71px;
+    line-height: 71px;
+    position: relative;
+}
+.countbox .countbox-space{
+    float: left;
+    width: 15px;
+    height: 71px;
+    color: rgba(255,255,255,0.7);
+}
+.countbox .countbox-space:before{content: '\003A'; font-weight: 500; line-height: 71px;}
+.countbox-hours1,.countbox-mins1,.countbox-secs1{
+    float: left;
+    width: 45px;
+    height: 71px;
+    margin: 0 2px;
+    text-align: center;
+    background-image:url('timer-bg.png')/*tpa=http://topworldsale.ru/finishingtouch2/img/timer-bg.png*/;
+    background-repeat:no-repeat;
+    z-index:1;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+}
+.countbox-hours2,.countbox-mins2,.countbox-secs2{
+    float: left;
+    width: 45px;
+    height: 71px;
+    margin: 0 1px;
+    text-align: center;
+    background-image:url('timer-bg.png')/*tpa=http://topworldsale.ru/finishingtouch2/img/timer-bg.png*/;
+    background-repeat:no-repeat;
+    z-index:1;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+}
+.countbox-hours-text,.countbox-mins-text,.countbox-secs-text{
+    display: none;
+    background-position: center;
+    background-repeat:no-repeat;
+    position: absolute;
+    margin-top: 50px;
+    height: 14px;
+    width: 98px;
+    font-size: 12px;
+}
+h1{
+    position: relative;
+    padding: 40px 0 0 324px;
+    font-size: 26px;
+    line-height: 1em;
+    color: #fff;
+}
+h2{
+    position: relative;
+    font-family: 'Roundbold', "Arial", "Helvetica", sans-serif;
+    font-size: 42px;
+    line-height: 1.2em;
+    text-align: center;
+    text-transform: uppercase;
+}
+h3{
+    font-family: 'Roundbold', "Arial", "Helvetica", sans-serif;
+}
+h4{
+    line-height: 1.5em;
+}
+.wave-1:after, .wave-2:after{
+    content: '';
+    display: block;
+    width: 165px;
+    height: 7px;
+    margin: 0 auto;
+    margin-top: 15px;
+    background: url(wave-1.png)/*tpa=http://topworldsale.ru/finishingtouch2/img/wave-1.png*/ 0 0 no-repeat;
+}
+.wave-2:after{
+    background: url(wave-2.png)/*tpa=http://topworldsale.ru/finishingtouch2/img/wave-2.png*/ 0 0 no-repeat;
+}
+.block-1{
+    height: 614px;
+    padding-top: 534px;
+    padding-left: 160px;
+    background: url(bg-1.jpg)/*tpa=http://topworldsale.ru/finishingtouch2/img/bg-1.jpg*/ center top no-repeat;
+}
+
+.block-1 .sale{
+    top: 189px;
+    left: 188px;
+}
+.block-1 .cost{
+    position: relative;
+    width: 300px;
+    font-family: 'Roundmed', 'Helvetica', 'Arial', sans-serif;
+    font-size: 35px;
+    line-height: 1;
+}
+.block-1 .cost>span{
+    position: relative;
+    display: inline-block;
+    float: left;
+    width: 50%;
+    text-align: center;
+    top: -0.6em;
+}
+.block-2{
+    padding-top: 40px;
+}
+.green-bg{
+    background: url(bg5.jpg)/*tpa=http://topworldsale.ru/finishingtouch2/img/bg5.jpg*/ center top repeat-y;
+}
+.blue-bg{
+    background: url(bg6.jpg)/*tpa=http://topworldsale.ru/finishingtouch2/img/bg6.jpg*/ center top repeat-y;
+}
+.block-2 h2>small{
+    font-size: 34px;
+}
+.block-2 .timer{
+    padding-top: 30px;
+}
+.block-2 .timer>p{
+    padding-bottom: 15px;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 1em;
+}
+.block-2 .form{
+    position: relative;
+    padding-top: 40px;
+    z-index: 99;
+}
+.block-3{
+    margin-top: -120px;
+    padding-top: 110px;
+    padding-bottom: 0px;
+}
+.block-3 h2{
+    line-height: 1em;
+}
+.block-3 h2>small{
+    font-size: 27px;
+}
+.block-3 ul{
+    padding-top: 40px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.block-3 ul li{
+    position: relative;
+    padding-bottom: 20px;
+    padding-left: 60px;
+}
+.block-3 ul li:before{
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    left: 20px;
+    background: url(marker-1.png)/*tpa=http://topworldsale.ru/finishingtouch2/img/marker-1.png*/ 0 0 no-repeat;
+}
+.block-4{
+    padding-top: 120px;
+    background: url(bg-2.jpg)/*tpa=http://topworldsale.ru/finishingtouch2/img/bg-2.jpg*/ center top no-repeat #fff;
+}
+.block-4 .title{
+    position: relative;
+    width: 230px;
+    padding-bottom: 60px;
+    font-family: 'Roundbold', "Arial", "Helvetica", sans-serif;
+    font-size: 26px;
+    line-height: 1.4em;
+}
+.block-4>p{
+    text-align: justify;
+    padding-bottom: 30px;
+}
+.block-4 h3{
+    padding-bottom: 20px;
+    font-size: 32px;
+    line-height: 1.2em;
+}
+.block-5{
+    padding-top: 40px;
+}
+.block-5 .container{
+    margin-top: 40px;
+    padding: 100px 150px 30px 12px;
+    background: url(doc-n.png)/*tpa=http://topworldsale.ru/finishingtouch2/img/doc-n.png*/ center 0 no-repeat;
+}
+.block-5 .doc-pic{
+    position: absolute;
+    display: block;
+    width: 235px;
+    height: 454px;
+    right: 0;
+    top: 340px;
+    z-index: 88;
+}
+.block-5 .container .title{
+    padding: 20px  0 30px;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.5em;
+}
+.block-5 .container ul>li{
+    position: relative;
+    padding-bottom: 10px;
+    padding-left: 30px;
+}
+.block-5 .container ul li:before{
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 17px;
+    height: 18px;
+    left: 0px;
+    top: 4px;
+    background: url(marker-2.png)/*tpa=http://topworldsale.ru/finishingtouch2/img/marker-2.png*/ 0 0 no-repeat;
+}
+.block-5 .result{
+    position: relative;
+    width: 420px;
+    margin: 0  auto;
+    padding: 30px 0 20px;
+    background: #fff;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+.block-5 .result>img{
+    display: block;
+    margin: 0 auto;
+}
+.block-5 .button-m{
+    margin-top: 30px;
+}
+.block-6{
+    padding-top: 40px;
+}
+.block-6 h2{
+    font-size: 38px;
+}
+.block-6 ul{
+    padding-top: 40px;
+}
+.block-6 ul li{
+    position: relative;
+    min-height: 180px;
+    padding: 0px 0 0 160px;
+    font-size: 20px;
+    line-height: 1.5em;
+}
+.block-6 ul li:before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 137px;
+    height: 137px;
+    left: 0;
+    top: 0;
+    background: url(deliv.png)/*tpa=http://topworldsale.ru/finishingtouch2/img/deliv.png*/ no-repeat;
+}
+.block-6 ul li:nth-child(1):before{
+    background-position: 0 0;
+}
+.block-6 ul li:nth-child(2):before{
+    background-position: -137px 0;
+}
+.block-6 ul li:nth-child(3):before{
+    background-position: -274px 0;
+}
+.block-7{
+    padding-top: 40px;
+    padding-bottom: 0px;
+}
+.block-7 h2:before{
+    content: '';
+    position: relative;
+    display: block;
+    width: 45px;
+    height: 44px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    background: url(ss.png)/*tpa=http://topworldsale.ru/finishingtouch2/img/ss.png*/ 0 0 no-repeat;
+}
+.block-7 .container-rew{
+    position: relative;
+    width: 400px;
+    margin: 0 auto;
+    padding: 60px 0;
+    overflow: hidden;
+}
+.block-7 .rew-item{
+    position: relative;
+    float: left;
+    width: 281px;
+    height: 555px;
+    margin: 0 59px 0 60px;
+    padding-top: 10px;
+    background: url(rew-bg.png)/*tpa=http://topworldsale.ru/finishingtouch2/img/rew-bg.png*/ 0 0 no-repeat;
+}
+.block-7 .rew-item>img{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+.block-7 .rew-item>p{
+    height: 280px;
+    padding: 0 15px;
+    overflow: hidden;
+    font-size: 16px;
+    line-height: 1.6em;
+    text-align: justify;
+}
+.block-7 .rew-item .rew-name{
+    position: relative;
+    display: block;
+    margin-left: 70px;
+    padding-top: 48px;
+    line-height: 1.3em;
+}
+
+.block-7 .container-rew .slick-arrow{
+    display: inline-block;
+    position: absolute;
+    width: 42px;
+    height: 44px;
+    cursor: pointer;
+    z-index: 99;
+    top: 35%;
+    background: url(sl-b.png)/*tpa=http://topworldsale.ru/finishingtouch2/img/sl-b.png*/ no-repeat;
+}
+.block-7 .container-rew .slick-prev{
+    left: 0px;
+    background-position: 0 0;
+}
+.block-7 .container-rew .slick-next{
+    background-position: -42px 0;
+    right: 0px;
+}
+.block-8{
+    height: 590px;
+    padding-top: 510px;
+    padding-left: 160px;
+    background: url(bg-4.jpg)/*tpa=http://topworldsale.ru/finishingtouch2/img/bg-4.jpg*/ center top no-repeat;
+}
+.block-8 .sale{
+    top: 165px;
+    left: 188px;
+}
+.block-8 .cost{
+    position: relative;
+    width: 300px;
+    font-family: 'Roundmed', 'Helvetica', 'Arial', sans-serif;
+    font-size: 35px;
+    line-height: 1;
+    top: -0.6em;
+}
+.block-8 .cost>span{
+    position: relative;
+    display: inline-block;
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+
+.form-control { position: relative;
+    display: block;
+    outline: 0;
+    border: 0;
+    width: 350px;
+    height: 70px;
+    line-height: 52px;
+    margin: 0 auto;
+    background: #fff;
+    text-indent: 15px;
+    font-size: 20px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    font-family: 'Roboto Condensed', 'Helvetica', 'Arial', sans-serif;
+    font-weight: 400;
+}

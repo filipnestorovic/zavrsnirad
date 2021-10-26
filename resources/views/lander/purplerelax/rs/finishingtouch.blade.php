@@ -70,7 +70,9 @@
                         <div class="jSale">
                             <div class="jSaleWrapper jSaleWrapper1">
                                 <div class="padding-jsale">
-                                    <form action="#" method="post" onsubmit="" class="jSaleForm" id="jsale_form_1">
+                                    <form action="{{$orderRoute}}" method="post" onsubmit="" class="jSaleForm" id="jsale_form_1">
+                                        {{ csrf_field() }}
+                                        @include('lander.naturapharm.components.form_hidden_fields')
                                         <h2>Unesite podatke za dostavu</h2>
                                         <p class="float">
                                             <input type="text" name="name" value="" placeholder="Ime i prezime" >
@@ -259,7 +261,9 @@
                     <div class="jSale">
                         <div class="jSaleWrapper jSaleWrapper3">
                             <div class="padding-jsale">
-                                <form action="#" method="post" class="jSaleForm" id="jsale_form_3">
+                                <form action="{{$orderRoute}}" method="post" class="jSaleForm" id="jsale_form_3">
+                                    {{ csrf_field() }}
+                                    @include('lander.naturapharm.components.form_hidden_fields')
                                     <h2>Unesite podatke za dostavu</h2>
                                     <p class="float">
                                         <input type="text" name="name" value="" placeholder="Ime i prezime" >
@@ -285,6 +289,7 @@
         </div>
     </div>
     <div class="foot-info" style="text-align:center;font-size:14px;line-height:18px;font-family:'open_sansregular';">
+
     </div>
 </footer>
 @include('components.pixel_footer')
