@@ -46,13 +46,13 @@
                 <div class="header__description">
                     <div class="title-wrapper">
                         <div class="pre-title">
-                            Alchymie 21. století
+                            Receptura 21. Veka
                         </div>
                         <h1 class="main-title">
-                            Moleculica
+                            Innoderm
                         </h1>
                         <div class="subtitle">
-                            <span>  Dokonalá péče na molekulární úrovni  </span>
+                            <span>Savršena koža za <br> 1-2 nedelje</span>
                         </div>
                     </div>
                     <div class="header__product">
@@ -72,7 +72,7 @@
                                         </clippath>
                                     </defs>
                                 </svg>
-                                <span>  Inovativní složení  </span>
+                                <span>Inovativni sastav</span>
                             </div>
                         </div>
                     </div>
@@ -129,16 +129,16 @@
             </div>
             <div class="impact__content">
                 <h2 class="main-title">
-                    Moleculica
+                    Innoderm
                 </h2>
                 <div class="subtitle">
-                    Proti hlavním příčinám stárnutí pleti
+                    Uklanja glavne razloge starenja
                 </div>
                 <ul class="impact__list">
                     <li>
                         <div class="impact__desctiption">
-                            <span>  Čistí,  </span>
-                            <p>  hydratuje a vyživuje  </p>
+                            <span>  Čisti  </span>
+                            <p>hidrira i neguje kozu</p>
                         </div>
                         <div class="impact__mark">
                             <div class="impact__point"></div>
@@ -146,8 +146,8 @@
                     </li>
                     <li>
                         <div class="impact__desctiption">
-                            <span>  Srovnává  </span>
-                            <p>  texturu  </p>
+                            <span>  Uklanja  </span>
+                            <p>  bore  </p>
                         </div>
                         <div class="impact__mark">
                             <div class="impact__point"></div>
@@ -155,8 +155,8 @@
                     </li>
                     <li>
                         <div class="impact__desctiption">
-                            <span>  Vyhlazuje  </span>
-                            <p>  vrásky  </p>
+                            <span>  Poboljšava   </span>
+                            <p>  elastičnost kože  </p>
                         </div>
                         <div class="impact__mark">
                             <div class="impact__point"></div>
@@ -164,8 +164,8 @@
                     </li>
                     <li>
                         <div class="impact__desctiption">
-                            <span>  Rozjasňuje  </span>
-                            <p>  tmavé skvrny  </p>
+                            <span>  Tonizira  </span>
+                            <p>  kožu  </p>
                         </div>
                         <div class="impact__mark">
                             <div class="impact__point"></div>
@@ -173,8 +173,8 @@
                     </li>
                     <li>
                         <div class="impact__desctiption">
-                            <span>  Zvyšuje elasticitu  </span>
-                            <p>  a vypnutí  </p>
+                            <span>  Magičan efekat  </span>
+                            <p>  vitamina C  </p>
                         </div>
                         <div class="impact__mark">
                             <div class="impact__point"></div>
@@ -182,8 +182,8 @@
                     </li>
                     <li>
                         <div class="impact__desctiption">
-                            <span>  Zlepšuje  </span>
-                            <p>  odstín pleti  </p>
+                            <span>  Uklanja  </span>
+                            <p>  tamne mrlje  </p>
                         </div>
                         <div class="impact__mark">
                             <div class="impact__point"></div>
@@ -216,20 +216,20 @@
                 </div>
             </div>
             <div class="molecular-level__content">
-                <h2 class="s-title">  Dokonalá péče na molekulární úrovni  </h2>
+                <h2 class="s-title">Savršena nega, do nivoa ćelije</h2>
                 <ul class="molecular-level__list">
                     <li class="molecular-level__list-item">
-                        <div class="molecular-level__description"><b>  Hlavní výhodou krému Moleculica je patentovaná technologie s obsahem izolovaných rostlinných a minerálních molekul.  </b>   Jde o jedinou metodu, která dodává bioaktivní látky do nejhlubších vrstev pleti, do buněčných jader a zaručuje rychlejší obnovu pleti.  </div>
+                        <div class="molecular-level__description">Ako zaista brinete o nezi kože sigurno znate o mnogobrojnim koristima vitamina C. Toliko je dobar, da je teško poverovati u sve to – ali brojne studije to potvrdjuju. <b>Ne samo da usporava proces starenja, nego ga i zaustavlja i zapravo podmlađuje kožu.</b> Umanjuje crvenilo, proširuje pore i tako smanjuje i popunjava ožiljke i bore, a i povećava nivo kolagena kod grublje kože.</div>
                         <div class="molecular-level__img">
                             <img alt="" src="{{ asset('/') }}innodermFiles/innoderm2/skin-before.png"/>
-                            <div class="sign">  Před použitím   <b>  Moleculica  </b></div>
+                            <div class="sign">  Pre korišćenja <b>  Innoderma </b></div>
                         </div>
                     </li>
                     <li class="molecular-level__list-item">
-                        <div class="molecular-level__description">  Využití systému mikrokapsulace pomáhá aktivním látkám dostat se do pleti, aniž by se rozložily a maximálně se do ní vstřebat.   <b>  Díky tomu Moleculica vytváří zásobu vitamínů a mikroprvků, které účinkují v pleti po mnoho let.  </b></div>
+                        <div class="molecular-level__description">Kao rezultat aktivni sastojci Innoderm kreme prave “zalihe” vitamina i nutrijenata koji rade za vašu kožu i dosta vremena nakon korišćenja kreme. Potpuna hidratacija najdubljih slojeva kože se postiže nakon nekoliko primena.</div>
                         <div class="molecular-level__img">
                             <img alt="" src="{{ asset('/') }}innodermFiles/innoderm2/skin-after.png"/>
-                            <div class="sign">  Po použití   <b>  Moleculica  </b></div>
+                            <div class="sign">  Posle korišćenja   <b>  Innoderm  </b></div>
                         </div>
                     </li>
                 </ul>
@@ -257,10 +257,10 @@
             </div>
             <div class="complex__content">
                 <h2 class="main-title">
-                    Moleculica
+                    Innoderm
                 </h2>
                 <div class="subtitle">
-                    je komplexní řešení pro odstranění projevů stárnutí pleti
+                    je sveobuhvatno rešenje koje briše svaki trag starenja i uklanja problem u korenu
                 </div>
                 <div class="complex__composition">
                     <div class="complex-product">
@@ -269,10 +269,10 @@
                     <ul class="complex__list">
                         <li class="complex__list-item">
                             <div class="list__caption">
-                                <span>  Komplex peptidů  </span>
+                                <span>  Ekstrakt divljeg jama  </span>
                             </div>
                             <div class="list-description">
-                                <b>  Stimuluje syntézu elastinu,  </b>   zlepšuje elasticitu pleti, posiluje a zvýrazňuje kontury obličeje.
+                                <b>Izuzetno štiti kožu od negativnih efekata</b> spoljašnje sredine (sunčevog zračenja, zagađenja), slobodnih radikala i ubrzanog starenja.
                             </div>
                             <div class="list-img">
                                 <img alt="" src="{{ asset('/') }}innodermFiles/innoderm2/complex-img1.png"/>
@@ -280,10 +280,10 @@
                         </li>
                         <li class="complex__list-item">
                             <div class="list__caption">
-                                <span>  Retinol  </span>
+                                <span>  Aktivan vitamin C  </span>
                             </div>
                             <div class="list-description">
-                                <b>  Vyhlazuje vrásky a jemné vrásky,  </b>   zrychluje proces buněčné výměny a regenerace, stimuluje produkci kolagenu a elastinu.
+                                Ne samo da sadrži <b>najviše vitamina C od svih proizvoda na tržištu</b>, već zahvaljujući originalnoj formuli daje i bolje rezultate za manje vremena.
                             </div>
                             <div class="list-img">
                                 <img alt="" src="{{ asset('/') }}innodermFiles/innoderm2/complex-img2.png"/>
@@ -291,13 +291,13 @@
                         </li>
                         <li class="complex__list-item">
                             <div class="list__caption">
-                                <span>  Kyselina  </span>
+                                <span>  Antiokdidansi  </span>
                             </div>
-                            <div class="list__caption">
-                                <span>  hyaluronová a kolagen  </span>
-                            </div>
+                            {{--<div class="list__caption">--}}
+                                {{--<span>  hyaluronová a kolagen  </span>--}}
+                            {{--</div>--}}
                             <div class="list-description">
-                                <b>  Udržují rovnováhu vody,  </b>   zlepšují elasticitu pleti a dodávají pleti zářivost a pevnost.
+                                Zahvaljujući antioksidansima i njihovim svojstvima, pomaže <b>proces regeneracije kože i pomaže oporavljanju oštećenih ćelija.</b>
                             </div>
                             <div class="list-img">
                                 <img alt="" src="{{ asset('/') }}innodermFiles/innoderm2/complex-img3.png"/>
@@ -305,10 +305,10 @@
                         </li>
                         <li class="complex__list-item">
                             <div class="list__caption">
-                                <span>  Bambucké máslo  </span>
+                                <span>Hijaluron</span>
                             </div>
                             <div class="list-description">
-                                <b>  Bojuje proti suché pleti,  </b>   hlobkově vyživuje, pomáhá obnovovat lipidovou bariéru pleti.
+                                Održava vlažnost kože, poboljšava elastičnost i <b>daje koži lep, mladalački ton.</b>
                             </div>
                             <div class="list-img">
                                 <img alt="" src="{{ asset('/') }}innodermFiles/innoderm2/complex-img4.png"/>
@@ -339,7 +339,7 @@
                 </div>
             </div>
             <div class="related__content">
-                <h2 class="s-title">  Pro maximální účinky vyzkoušejte celou produktovou řadu Moleculica*  </h2>
+                <h2 class="s-title">Za maksimalan efekat uz svaku kremu poklanjamo JADE ROLLER</h2>
                 <ul class="related__list">
                     <li>
                         <div class="list-description">
@@ -427,9 +427,9 @@
                         <span></span>
                     </div>
                 </div>
-                <h2 class="s-title">  Miliony žen po celém světě si zvolily dokonalou pleť bez vrásek  </h2>
+                <h2 class="s-title">Hiljade žena širom Srbije bira ovu kremu za savršenu, zategnutu kožu bez bora i znakova starenja. </h2>
                 <button class="btn pre_toform">
-                    <span>  Objednat  </span>
+                    <span>  Poručite sada  </span>
                     <div class="blobs">
                         <div class="blob"></div>
                         <div class="blob"></div>
@@ -463,7 +463,7 @@
                 <h2 class="s-title">
                     Výroba a klinické výzkumy
                 </h2>
-                <p>  Při výrobě celé řady   <b>  Moleculica  </b>  se požadované molekuly izolují od ingrediencí tak, aby byly biologicky aktivní a snadno se vstřebávaly do pleti.  </p>
+                <p>  Při výrobě celé řady   <b>  Innoderm  </b>  se požadované molekuly izolují od ingrediencí tak, aby byly biologicky aktivní a snadno se vstřebávaly do pleti.  </p>
                 <p>  Výzkumy prokázaly, že tato metoda   <b>  zvyšuje obsah kolagenu, který zlepšuje elasticitu pleti až 4x,  </b>   ve srovnání s běžnými produkty pro stárnoucí pleť.  </p>
                 <div class="research__product">
                     <img alt="" class="img-product" src="{{ asset('/') }}innodermFiles/innoderm2/research-product.png"/>
@@ -481,7 +481,7 @@
                                     </clippath>
                                 </defs>
                             </svg>
-                            <span>  Inovativní složení  </span>
+                            <span>Inovativni sastav</span>
                         </div>
                     </div>
                 </div>
@@ -502,18 +502,18 @@
                 </div>
             </div>
             <div class="chart__content">
-                <h2 class="s-title">  Jak se úroveň kolagenu mění s věkem  </h2>
+                <h2 class="s-title">Kako se nivo kolagena menja sa godinama?</h2>
                 <div class="chart__inner">
                     <div class="chart__img">
                         <img alt="" src="{{ asset('/') }}innodermFiles/innoderm2/chart-img.png"/>
-                        <span class="y-sign">  Úroveň kolagenu  </span>
-                        <span class="x-sign">  Věk  </span>
+                        <span class="y-sign">Nivo kolagena</span>
+                        <span class="x-sign">Starost</span>
                     </div>
                     <div class="chart__description">
                         <ul class="chart__list">
-                            <li>  Přirozené stárnutí  </li>
-                            <li>  Používání kosmetiky proti stárnutí  </li>
-                            <li><b>  Používání Moleculica  </b></li>
+                            <li>Prirodno starenje</li>
+                            <li>Upotreba druge kozmetike protiv starenja</li>
+                            <li><b>  Korišćenje Innoderma  </b></li>
                         </ul>
                     </div>
                 </div>
@@ -535,14 +535,14 @@
             </div>
             <div class="progress__content">
                 <div class="progress__caption">
-                    <h2 class="s-title">  Nahrazení každodenní péče produktovou řadou Moleculica </h2>
-                    <p>  Klinické studie provedené pod dohledem dermatologů   <b>  zahrnovaly více než 1000 žen ve věku 35-60 let s různými typy pleti.  </b></p>
+                    <h2 class="s-title">Uvođenje Innoderm kreme u svakodnevnu rutinu</h2>
+                    <p>Promene koje možete očekivati</p>
                 </div>
                 <div class="progress__slider-wrapper">
                     <div class="progress__slider">
                         <div class="progress__item">
                             <div class="item-inner">
-                                <p><b>  85 % méně výrazné  </b>   pigmentace;  </p>
+                                <p><b>85% manje</b> pigmentacije</p>
                                 <div class="progress-img">
                                     <img alt="" src="{{ asset('/') }}innodermFiles/innoderm2/progress-img1.jpg"/>
                                 </div>
@@ -553,33 +553,33 @@
                                 <div class="progress-img">
                                     <img alt="" src="{{ asset('/') }}innodermFiles/innoderm2/progress-img2.jpg"/>
                                 </div>
-                                <p><b>  97%  </b>   hladší pleť;  </p>
+                                <p><b>  97%  </b>   gladja koža  </p>
                             </div>
                         </div>
                         <div class="progress__item">
                             <div class="item-inner">
-                                <p>  Vyhlazení jemných vrásek   <b>  o 92%;  </b></p>
+                                <p><b>92%</b> manje bora </p>
                                 <div class="progress-img">
                                     <img alt="" src="{{ asset('/') }}innodermFiles/innoderm2/progress-img3.jpg"/>
                                 </div>
                             </div>
                         </div>
-                        <div class="progress__item">
+                        <div class="progress__item"> <!--  MOZDA SE BRISE-->
                             <div class="item-inner">
                                 <div class="progress-img">
                                     <img alt="" src="{{ asset('/') }}innodermFiles/innoderm2/progress-img4.jpg"/>
                                 </div>
-                                <p><b>  68%  </b>   elastičtější pleť;  </p>
+                                <p><b>  68%  </b> elastičnija koža </p>
                             </div>
                         </div>
-                        <div class="progress__item">
-                            <div class="item-inner">
-                                <p>  Zmírnění suché pleti   <b>  o 98%;  </b></p>
-                                <div class="progress-img">
-                                    <img alt="" src="{{ asset('/') }}innodermFiles/innoderm2/progress-img5.jpg"/>
-                                </div>
-                            </div>
-                        </div>
+                        {{--<div class="progress__item">--}}
+                            {{--<div class="item-inner">--}}
+                                {{--<p>  Zmírnění suché pleti   <b>  o 98%;  </b></p>--}}
+                                {{--<div class="progress-img">--}}
+                                    {{--<img alt="" src="{{ asset('/') }}innodermFiles/innoderm2/progress-img5.jpg"/>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
                     </div>
                 </div>
             </div>
@@ -612,17 +612,17 @@
             </div>
             <div class="doctor__content">
                 <div class="doctor__caption">
-                    <h2 class="s-title">  Odborníci doporučují produktovou řadu Moleculica  </h2>
+                    <h2 class="s-title">Eksperti preporučuju Innoderm</h2>
                 </div>
                 <div class="doctor__description">
                     <p>  Všichni potřebují péči - kosmetické prodedury, jako je botox, nemohou nahradit správnou péči o pleť.  </p>
-                    <p>  Moleculica funguje jak pro zralou, tak pro mladou pleť.   <b>  Krém funguje jako bariéra proti agresivním vlivům prostředí a zároveň nezpůsobuje závislost.  </b>   Moleculica vytváří zásobu esenciálních prvků a dodává pleti kyslík. Díky tomu dochází k rychlé regeneraci pleti a omezení ztráty hydratace.  </p>
+                    <p>  Innoderm funguje jak pro zralou, tak pro mladou pleť.   <b>  Krém funguje jako bariéra proti agresivním vlivům prostředí a zároveň nezpůsobuje závislost.  </b>   Innoderm vytváří zásobu esenciálních prvků a dodává pleti kyslík. Díky tomu dochází k rychlé regeneraci pleti a omezení ztráty hydratace.  </p>
                     <p><b>  Pro zmírnění projevů stárnutí dodržujte tento snadný postup, dokud nedosáhnete požadovaných výsledků.  </b></p>
                     <div class="doctor__img">
                         <img alt="" src="{{ asset('/') }}innodermFiles/innoderm2/doctor-img.png"/>
-                        <div class="doctor__sign">
-                            <span><b>  Anna Janatová,  </b>   kosmetoložka  </span>
-                        </div>
+                        {{--<div class="doctor__sign">--}}
+                            {{--<span><b>  Anna Janatová,  </b>   kosmetoložka  </span>--}}
+                        {{--</div>--}}
                     </div>
                 </div>
             </div>
@@ -646,29 +646,29 @@
             </div>
             <div class="how-use__content">
                 <h2 class="s-title">
-                    Jak používat Moleculica
+                    Kako se koristi?
                 </h2>
                 <div class="how-use__composition">
                     <ul class="how-use__list">
                         <li>
                             <div class="list-inner">
                                 <div class="number">1</div>
-                                <p><b>  Ráno  </b></p>
-                                <p>  Vyčistěte si pleť, naneste základní péči a nechejte ji vstřebat.  </p>
+                                <p><b></b></p>
+                                <p>Na suvu prethodno očišćenu kožu naneti kremu</p>
                             </div>
                         </li>
                         <li>
                             <div class="list-inner">
                                 <div class="number">2</div>
-                                <p><b>  Přes den  </b></p>
-                                <p><b>  Naneste masku, nechejte ji působit 15-20 minut. Používejte 2-3x týdně na vyčištěnou pleť.  </b>   Pro maximální výsledky po použití masky naneste základní krém.  </p>
+                                <p><b></b></p>
+                                <p>Po potrebi koristiti jade roller koji se dobija u setu</p>
                             </div>
                         </li>
                         <li>
                             <div class="list-inner">
                                 <div class="number">3</div>
-                                <p><b>  Večer  </b></p>
-                                <p>  Po vyčištění pleti naneste speciální noční krém a nechejte ho vstřebat.  </p>
+                                <p><b></b></p>
+                                <p>Ponavljati postupak svakodnevno. Prvi rezultati mogu biti vidljivi već posle nedelju dana. </p>
                             </div>
                         </li>
                     </ul>
@@ -707,7 +707,7 @@
             <div class="reviews__content">
                 <div class="reviews__caption">
                     <h2 class="main-title">
-                        Moleculica
+                        Innoderm
                     </h2>
                     <div class="subtitle">
                         Vraťte čas zpátky!
@@ -729,7 +729,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="reviews__message">  Dvanáct let jsem chodila na ty nejdražší kosmetické procedury, ale nedosáhla jsem žádných výsledků. Zkusila jsem denní krém Moleculica a výsledky se dostavily už za týden. Pleť byla každý den pevnější a elastičtějí. Rozhodla jsem se tedy koupit si i noční krém a masku. Po měsíci používání mi zmizely vrásky na čele. Tyto produkty jsou rozhodně levnější a lepší, než všechny kosmetické procedury. Nyní všechny kosmetičky nabízejí Botox. Je skvělé, že jsem našla lepší alternativu.  </p>
+                            <p class="reviews__message">  Dvanáct let jsem chodila na ty nejdražší kosmetické procedury, ale nedosáhla jsem žádných výsledků. Zkusila jsem denní krém Innoderm a výsledky se dostavily už za týden. Pleť byla každý den pevnější a elastičtějí. Rozhodla jsem se tedy koupit si i noční krém a masku. Po měsíci používání mi zmizely vrásky na čele. Tyto produkty jsou rozhodně levnější a lepší, než všechny kosmetické procedury. Nyní všechny kosmetičky nabízejí Botox. Je skvělé, že jsem našla lepší alternativu.  </p>
                             <img alt="" src="{{ asset('/') }}innodermFiles/innoderm2/comm1.jpg"/>
                         </div>
                     </div>
@@ -752,7 +752,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="reviews__message">  Dvanáct let jsem chodila na ty nejdražší kosmetické procedury, ale nedosáhla jsem žádných výsledků. Zkusila jsem denní krém Moleculica a výsledky se dostavily už za týden. Pleť byla každý den pevnější a elastičtějí. Rozhodla jsem se tedy koupit si i noční krém a masku. Po měsíci používání mi zmizely vrásky na čele. Tyto produkty jsou rozhodně levnější a lepší, než všechny kosmetické procedury. Nyní všechny kosmetičky nabízejí Botox. Je skvělé, že jsem našla lepší alternativu.  </p>
+                            <p class="reviews__message">  Dvanáct let jsem chodila na ty nejdražší kosmetické procedury, ale nedosáhla jsem žádných výsledků. Zkusila jsem denní krém Innoderm a výsledky se dostavily už za týden. Pleť byla každý den pevnější a elastičtějí. Rozhodla jsem se tedy koupit si i noční krém a masku. Po měsíci používání mi zmizely vrásky na čele. Tyto produkty jsou rozhodně levnější a lepší, než všechny kosmetické procedury. Nyní všechny kosmetičky nabízejí Botox. Je skvělé, že jsem našla lepší alternativu.  </p>
                             <img alt="" src="{{ asset('/') }}innodermFiles/innoderm2/comm1.jpg"/>
                         </div>
                     </div>
@@ -794,7 +794,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="reviews__message">  Vždy jsem vypadala mladší, než ve skutečnosti jsem, i když jsem nikdy nepoužívala moc produktů. Jakmile mi ale bylo 45 let, všechno se výrazně změnilo. Bylo pro mě těžké sledovat, jak se ze mě stává stará žena. Začala jsem si kupovat kosmetiku proti stárnutí, ale moc mi to nepomohlo. Moje dcera mi dala Moleculica. Jen tento jeden krém dokázal nemožné. Nejen že zastavil stárnutí mojí pleti, ale také mě zbavil suché pleti a vrásek. Všichni říkají, že vypadám mnohem mladší. Mohu to doporučit každému, bez ohledu na věk.  </p>
+                            <p class="reviews__message">  Vždy jsem vypadala mladší, než ve skutečnosti jsem, i když jsem nikdy nepoužívala moc produktů. Jakmile mi ale bylo 45 let, všechno se výrazně změnilo. Bylo pro mě těžké sledovat, jak se ze mě stává stará žena. Začala jsem si kupovat kosmetiku proti stárnutí, ale moc mi to nepomohlo. Moje dcera mi dala Innoderm. Jen tento jeden krém dokázal nemožné. Nejen že zastavil stárnutí mojí pleti, ale také mě zbavil suché pleti a vrásek. Všichni říkají, že vypadám mnohem mladší. Mohu to doporučit každému, bez ohledu na věk.  </p>
                             <img alt="" src="{{ asset('/') }}innodermFiles/innoderm2/comm3.jpg"/>
                         </div>
                     </div>
@@ -819,11 +819,11 @@
                 </div>
             </div>
             <div class="steps__content">
-                <h2 class="s-title">  Jak objednat Moleculica?  </h2>
+                <h2 class="s-title">Kako naručiti?</h2>
                 <ul class="steps__list">
                     <li>
                         <div class="number"><span>1</span></div>
-                        <p><b>  Vyplňte objednávkový  </b>   formulář  </p>
+                        <p><b>Popuni formu</b>  podaci za dostavu  </p>
                         <div class="steps__img">
                             <img alt="" src="{{ asset('/') }}innodermFiles/innoderm2/steps-img1.png"/>
                         </div>
@@ -833,11 +833,11 @@
                         <div class="steps__img">
                             <img alt="" src="{{ asset('/') }}innodermFiles/innoderm2/steps-img2.png"/>
                         </div>
-                        <p><b>  Počkejte, až vám zavolá  </b>   operátor  </p>
+                        <p><b>Naša korisnička podrška </b>   će vas nazvati da potvrdi porudžbinu  </p>
                     </li>
                     <li>
                         <div class="number"><span>3</span></div>
-                        <p><b>  Nechejte si diskrétně poslat </b>   svůj balíček  </p>
+                        <p><b>U roku od 24 sata </b>   krema je na adresi  </p>
                         <div class="steps__img">
                             <img alt="" src="{{ asset('/') }}innodermFiles/innoderm2/steps-img3.png"/>
                         </div>
@@ -875,10 +875,10 @@
                 <div class="footer__description">
                     <div class="title-wrapper">
                         <h1 class="main-title">
-                            Moleculica
+                            Innoderm
                         </h1>
                         <div class="subtitle">
-                            <span>  nejlepší řešení pro stárnoucí pleť  </span>
+                            <span>Savršena koža za <br> 1-2 nedelje</span>
                         </div>
                     </div>
                     <div class="footer__product">
@@ -897,7 +897,7 @@
                                         </clippath>
                                     </defs>
                                 </svg>
-                                <span>  Inovativní složení  </span>
+                                <span>Inovativni sastav</span>
                             </div>
                         </div>
                     </div>
