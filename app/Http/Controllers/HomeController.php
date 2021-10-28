@@ -30,6 +30,7 @@ use Illuminate\Support\Facades\View;
 use Illuminate\Support\Str;
 use Jenssegers\Agent\Agent;
 use PragmaRX\Countries\Package\Countries;
+use Propaganistas\LaravelPhone\PhoneNumber;
 use function Sodium\add;
 use Stevebauman\Location\Facades\Location;
 
@@ -804,6 +805,33 @@ class HomeController extends Controller
             } catch (\Exception $exception) {
                 Log::error("Error: Gettings Up/Cross Sells | Exception: " . $exception->getMessage());
             }
+        }
+    }
+
+    public function validatePhoneNumber(Request $request){
+
+        $number = $request->get('phone');
+        $countryCode =  $request->get('country');
+
+        $name = $request->get('name');
+        $email = $request->get('email');
+        $address = $request->get('address');
+        $city = $request->get('city');
+        $zip = $request->get('zip');
+        $quantity = $request->get('quantity');
+        $variation_id = $request->get('variation_id');
+
+        try {
+            $result = PhoneNumber::make($number, $countryCode)->isOfCountry($countryCode);
+            if($result){
+                return 1;
+            } else {
+                return 0;
+            }
+        } catch (\Exception $exception){
+            $customer_data = "Name: ".$name."\nEmail: ".$email."\nAddress: ".$address."\nCity: ".$city."\nZip: ".$zip."\nQuantity: ".$quantity."\nVariation: ".$variation_id;
+            Log::warning("Validation - Phone: ".$number." Error: ".$exception->getMessage()."\n".$customer_data);
+            return 0;
         }
     }
 

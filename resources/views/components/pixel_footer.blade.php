@@ -1,4 +1,15 @@
 <input type="hidden" id="currencyHidden" value="{{ $prices[1]['currency']}}"/>
+<style>
+    .phoneErrorInput {
+        border: 2px solid #FF0000;
+        background-color: #FF7F7F !important;
+    }
+    .phoneErrorText {
+        color: #FF0000;
+        text-align: center;
+        margin: 10px 0;
+    }
+</style>
 <script>
     $(document).ready(function () {
 
@@ -43,9 +54,56 @@
             @endforeach
         @endif
 
-        $('form').submit(function(){
-            $(this).find(':submit').attr('disabled','disabled');
+        $('form').submit(function(e){
+            $phone_input = $('input[name=phone]');
+            let phone = $phone_input.val();
+            let country = '{{strtoupper($product->country_code)}}';
+            let validationResult = validatePhoneNumber(phone, country);
+            if(validationResult === "1") {
+                $(this).find(':submit').attr('disabled','disabled');
+                $phone_input.removeClass('phoneErrorInput');
+                $('.phoneErrorText').hide();
+            } else {
+                e.preventDefault();
+                $phone_input.addClass('phoneErrorInput');
+                $phone_input.after("<div class='phoneErrorText'>Pogrešan format telefona</div>");
+            }
         });
+
+        function validatePhoneNumber(phone, country) {
+            let returnResponse = 0;
+            let name = $('input[name=name]').val();
+            let email = $('input[name=email]').val();
+            let address = $('input[name=shipping_address]').val();
+            let city = $('input[name=shipping_city]').val();
+            let zip = $('input[name=shipping_zip]').val();
+            let quantity = $('input[name=quantity]').val();
+            let variation_id = $('input[name=variation_id]').val();
+            $.ajax({
+                url: baseURL + "validatePhoneNumber",
+                type:"POST",
+                async: false,
+                data:{
+                    phone:phone,
+                    country:country,
+                    name:name,
+                    email:email,
+                    address:address,
+                    city:city,
+                    zip:zip,
+                    quantity:quantity,
+                    variation_id:variation_id,
+                    _token: csrf_token
+                },
+                success:function(response){
+                    returnResponse = response;
+                },
+                error: function (req, err) {
+                    console.log(req);
+                }
+            });
+            return returnResponse;
+        }
 
         $("#shipping_zip").keyup(function() {
             $("#shipping_zip").val(this.value.match(/[0-9]*/));

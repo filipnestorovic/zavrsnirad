@@ -154,6 +154,7 @@ Route::group(['middleware' => ['guest']], function () {
 
     Route::get('/ajax/sendConversionApiFB', [App\Http\Controllers\HomeController::class, 'sendConversionApiFB'])->name('sendConversionApiFB');
     Route::post('/insertSessionAjax', [App\Http\Controllers\HomeController::class, 'insertEventDbAjax'])->name('insertEventDbAjax');
+    Route::post('/validatePhoneNumber', [App\Http\Controllers\HomeController::class, 'validatePhoneNumber'])->name('validatePhoneNumber');
 
     Route::post('/selectCountry', [App\Http\Controllers\HomeController::class, 'selectCountry'])->name('selectCountry');
 

@@ -20,6 +20,7 @@
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.0",
         "pragmarx/countries": "^0.7.2",
+        "propaganistas/laravel-phone": "^4.3",
         "rollbar/rollbar-laravel": "^7.0",
         "spatie/laravel-cookie-consent": "^2.12",
         "stevebauman/location": "^5.2"
