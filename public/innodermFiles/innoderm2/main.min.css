@@ -1695,7 +1695,7 @@ select {
       right: 30px;
       width: 292px;
       height: 384px;
-      background: url(header-flower2.png) no-repeat center;
+      /*background: url(header-flower2.png) no-repeat center;*/
       -webkit-background-size: contain;
       background-size: contain;
       -webkit-transform: rotate(25deg);
@@ -1721,7 +1721,7 @@ select {
       width: 50%;
       font-size: 14px;
       color: #fff;
-      padding-right: 110px; }
+      padding-right: 150px; }
       .how-use .how-use__list li:first-child .list-inner {
         z-index: 4; }
       .how-use .how-use__list li:nth-child(3) {
@@ -1730,7 +1730,7 @@ select {
           right: 15px; }
       .how-use .how-use__list li:nth-child(2) {
         padding-right: 0;
-        padding-left: 30px;
+        padding-left: 150px;
         margin-top: 90px; }
         .how-use .how-use__list li:nth-child(2) .list-inner {
           padding-right: 10px;

@@ -13,6 +13,54 @@
     <link href="{{ asset('/') }}innodermFiles/innoderm2/main.min.css" rel="stylesheet"/>
     <script src="{{ asset('/') }}shared_files/jquery-1.12.4.min.js" type="text/javascript"></script>
     {{--<script type="text/javascript" src="content/_presets/10_11_12.min.js"></script>--}}
+    <style>
+        @media only screen and (max-width: 600px) {
+            .complex-product img {
+                width: 210px;
+                top: -150px;
+                left: -100px;
+            }
+            .related__list li {
+                padding-right: 120px;
+            }
+            .related__list li .list-img {
+                right: -100px;
+            }
+            .how-use .how-use__img img {
+                left: 30px;
+            }
+            .footer .footer__product .img-product {
+                bottom: -40px;
+                left: 20px;
+            }
+            .footer .footer__product .circle {
+                top: 40px;
+                left: 90px;
+            }
+        }
+        @media only screen and (min-width: 601px) {
+            .complex-product img {
+                top: -180px;
+                left: -130px;
+            }
+            .related__list li .list-img {
+                right: -160px;
+                top: -50px;
+            }
+            .how-use .how-use__img img {
+                left: 50px;
+                top: 20px;
+            }
+            .footer .footer__product .img-product {
+                bottom: 10px;
+                left: -140px;
+                z-index: 9;
+            }
+            .footer .footer__product .circle {
+                left: -110px;
+            }
+        }
+    </style>
 </head>
 <body>
 <div class="container">
@@ -56,8 +104,8 @@
                         </div>
                     </div>
                     <div class="header__product">
-                        <img alt="" class="img-product only-desktop" src="{{ asset('/') }}innodermFiles/innoderm2/product.png"/>
-                        <img alt="" class="img-product only-mobile" src="{{ asset('/') }}innodermFiles/innoderm2/product-mobile.png"/>
+                        {{--<img alt="" class="img-product only-desktop" src="{{ asset('/') }}innodermFiles/innoderm2/product.png"/>--}}
+                        {{--<img alt="" class="img-product only-mobile" src="{{ asset('/') }}innodermFiles/innoderm2/product-mobile.png"/>--}}
                         <div class="circle">
                             <div class="circle__inner">
                                 <svg class="circle__img" fill="none" height="26" viewbox="0 0 26 26" width="26" xmlns="http://www.w3.org/2000/svg">
@@ -286,7 +334,7 @@
                                 Ne samo da sadrži <b>najviše vitamina C od svih proizvoda na tržištu</b>, već zahvaljujući originalnoj formuli daje i bolje rezultate za manje vremena.
                             </div>
                             <div class="list-img">
-                                <img alt="" src="{{ asset('/') }}innodermFiles/innoderm2/complex-img2.png"/>
+                                <img alt="" src="{{ asset('/') }}innodermFiles/innoderm2/complex-img2.png" style="top: 0px;"/>
                             </div>
                         </li>
                         <li class="complex__list-item">
@@ -300,7 +348,7 @@
                                 Zahvaljujući antioksidansima i njihovim svojstvima, pomaže <b>proces regeneracije kože i pomaže oporavljanju oštećenih ćelija.</b>
                             </div>
                             <div class="list-img">
-                                <img alt="" src="{{ asset('/') }}innodermFiles/innoderm2/complex-img3.png"/>
+                                <img alt="" src="{{ asset('/') }}innodermFiles/innoderm2/complex-img3.png" style="top: 5px;"/>
                             </div>
                         </li>
                         <li class="complex__list-item">
@@ -311,7 +359,7 @@
                                 Održava vlažnost kože, poboljšava elastičnost i <b>daje koži lep, mladalački ton.</b>
                             </div>
                             <div class="list-img">
-                                <img alt="" src="{{ asset('/') }}innodermFiles/innoderm2/complex-img4.png"/>
+                                <img alt="" src="{{ asset('/') }}innodermFiles/innoderm2/complex-img4.png" style="top: 0px;"/>
                             </div>
                         </li>
                     </ul>
@@ -344,30 +392,30 @@
                     <li>
                         <div class="list-description">
                             <div class="list__caption">
-                                <span>  Noční krém s  </span>
+                                <span>Potpuno</span>
                             </div>
                             <div class="list__caption">
-                                <span>  elastinem  </span>
+                                <span>  besplatno  </span>
                             </div>
-                            <p>  Reguluje elasticitu pleti, zpevňuje tkáně a má antioxidační účinky. Hloubkově vyživuje a zjemňuje hrubou pleť a zlepšuje její bariérovou funkci.  </p>
+                            <p>Jade Roller je najnoviji hit na svetskom tržištu, namenjen damama koje žele da zategnu, podmlade I isčiste kožu lica. Napravljen od žada – poludragog kamena,  ne oštećuje vašu kožu, nema neželjena dejstva.</p>
                         </div>
                         <img alt="" class="list-img" src="{{ asset('/') }}innodermFiles/innoderm2/related-product1.png"/>
                     </li>
                     <li>
                         <div class="list-description">
                             <div class="list__caption">
-                                <span>  Pleťová maska s  </span>
+                                <span>Najnoviji hit</span>
                             </div>
                             <div class="list__caption">
-                                <span>  extraktem z plodu Yuja  </span>
+                                <span>na svetskom tržištu</span>
                             </div>
-                            <p>  Hloubkově hydratuje, zlepšuje hustotu pleti, zmírňuje vrásky a podporuje regeneraci epidermu.  </p>
+                            <p>Sastoji se od drške na koju su pričvršćena dva kamena u obliku valjka različite veličine, od kojih se jedan koristi za čelo i obraze, a drugi, manji za predeo oko očiju.</p>
                         </div>
-                        <img alt="" class="list-img" src="{{ asset('/') }}innodermFiles/innoderm2/related-product2.png"/>
+                        {{--<img alt="" class="list-img" src="{{ asset('/') }}innodermFiles/innoderm2/related-product2.png"/>--}}
                     </li>
                 </ul>
                 <p class="related__footnote">
-                    *Každý produkt lze používat zvlášť, nebo dohromady
+                    *Proizvodi se mogu koristiti zajedno ili odvojeno
                 </p>
             </div>
         </div>
@@ -461,29 +509,29 @@
             </div>
             <div class="research__content">
                 <h2 class="s-title">
-                    Výroba a klinické výzkumy
+                    Efekat KOMPLEKSA
                 </h2>
-                <p>  Při výrobě celé řady   <b>  Innoderm  </b>  se požadované molekuly izolují od ingrediencí tak, aby byly biologicky aktivní a snadno se vstřebávaly do pleti.  </p>
-                <p>  Výzkumy prokázaly, že tato metoda   <b>  zvyšuje obsah kolagenu, který zlepšuje elasticitu pleti až 4x,  </b>   ve srovnání s běžnými produkty pro stárnoucí pleť.  </p>
+                <p>Inno Derm vašu kožu čini zdravom i čvrstom, uklanja bore i nesavršenosti. Hidratacija i nega Vitamini i minerali koži vraćaju njen prirodni sjaj. Blistav, zdrav ten zahvaljujući redovnoj hidrataciji. </p>
+                <p></p>
                 <div class="research__product">
-                    <img alt="" class="img-product" src="{{ asset('/') }}innodermFiles/innoderm2/research-product.png"/>
-                    <div class="circle">
-                        <div class="circle__inner">
-                            <svg class="circle__img" fill="none" height="26" viewbox="0 0 26 26" width="26" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0)">
-                                    <path d="M25.9011 14.8274C25.9003 14.8119 25.8988 14.7963 25.8966 14.7808L24.5934 5.71288C24.5712 5.55855 24.4794 5.42297 24.3443 5.34512C24.2094 5.26727 24.046 5.25569 23.9012 5.31389L17.9038 7.72508C17.6435 7.82969 17.5175 8.12549 17.622 8.3857C17.7267 8.646 18.0225 8.77209 18.2827 8.66748L23.6799 6.49755L24.8825 14.8651C24.8831 14.8886 24.8855 14.9123 24.8895 14.936C25.1524 16.4839 24.8645 18.0857 24.079 19.4463C23.1743 21.0132 21.7119 22.1331 19.9611 22.5996C18.2097 23.0663 16.3795 22.8235 14.8074 21.9159C14.7965 21.9097 14.7854 21.9044 14.7743 21.899C15.1113 21.6428 15.4283 21.3655 15.724 21.0689L21.6694 19.4758C21.9404 19.4032 22.1011 19.1247 22.0285 18.8538C21.9559 18.5829 21.6773 18.422 21.4065 18.4947L16.8319 19.7204C17.3345 18.9726 17.7278 18.1479 17.9965 17.2656L22.0779 16.172C22.3489 16.0995 22.5097 15.8209 22.437 15.55C22.3645 15.2791 22.0858 15.1183 21.8151 15.1909L18.812 15.9956L19.9412 14.0395L22.3277 13.4001C22.5987 13.3275 22.7595 13.049 22.6868 12.7781C22.6142 12.5072 22.3356 12.3463 22.0649 12.4189L20.6595 12.7955L21.7401 10.9238C21.8804 10.6809 21.7971 10.3703 21.5543 10.2301C21.3113 10.0898 21.0007 10.173 20.8605 10.4159L19.7799 12.2876L19.4033 10.8823C19.3307 10.6113 19.0522 10.4505 18.7814 10.5231C18.5104 10.5957 18.3496 10.8742 18.4222 11.1451L19.0617 13.5316L18.4009 14.6761C18.4204 13.0505 18.0044 11.4439 17.1708 10C16.121 8.18176 14.4642 6.76963 12.5037 6.02153C12.5005 6.02015 12.4972 6.01878 12.4939 6.01741L10.196 5.08476C9.93587 4.97929 9.63992 5.10452 9.53445 5.36437C9.42897 5.62432 9.55415 5.92047 9.81405 6.02594L12.0911 6.95006C12.1014 6.95478 12.1119 6.95915 12.1226 6.96321C13.874 7.62647 15.3544 8.88528 16.2911 10.5078C17.3815 12.3964 17.6691 14.5979 17.101 16.7067C16.5769 18.6519 15.3822 20.303 13.7135 21.4062L12.8612 19.93L14.709 13.0341C14.7816 12.7631 14.6208 12.4847 14.3499 12.4121C14.0788 12.3395 13.8005 12.5003 13.7279 12.7712L12.1431 18.6861L10.2629 15.4295L11.5448 10.6455C11.6174 10.3745 11.4566 10.0961 11.1856 10.0234C10.9146 9.95082 10.6363 10.1116 10.5637 10.3826L9.5447 14.1855L8.06255 11.6183L8.83458 8.73725C8.9072 8.46629 8.74642 8.18785 8.47545 8.11524C8.20438 8.04267 7.9261 8.20344 7.85349 8.47436L7.3443 10.3743L5.9402 7.94233C5.79999 7.69944 5.48937 7.61616 5.24648 7.75647C5.00354 7.89667 4.92031 8.2073 5.06062 8.45019L6.46472 10.8822L4.56479 10.3731C4.29377 10.3005 4.01544 10.4613 3.94282 10.7322C3.87021 11.0032 4.03098 11.2816 4.30195 11.3542L7.18297 12.1262L8.66512 14.6934L4.86232 13.6745C4.5913 13.6018 4.31297 13.7627 4.24035 14.0336C4.16773 14.3046 4.32851 14.583 4.59947 14.6556L9.38337 15.9375L11.2636 19.1941L5.34885 17.6093C5.07778 17.5367 4.7995 17.6975 4.72689 17.9684C4.65427 18.2394 4.81504 18.5178 5.08601 18.5904L11.9818 20.4382L12.8341 21.9142C8.99632 23.8269 4.27331 22.4494 2.10713 18.6975C1.16027 17.0575 0.813328 15.1268 1.13025 13.261C1.13457 13.2358 1.13686 13.2107 1.13726 13.1856L2.58742 3.09312L5.95173 4.45858C6.21188 4.5641 6.50778 4.43888 6.61326 4.17898C6.71873 3.91903 6.59355 3.62287 6.33365 3.5174L2.36805 1.90784C2.22337 1.84919 2.05955 1.86026 1.92417 1.938C1.78873 2.01575 1.69662 2.15154 1.67437 2.30622L0.122297 13.1061C0.119809 13.1232 0.118285 13.1403 0.117574 13.1574C-0.219512 15.2352 0.173637 17.3802 1.2273 19.2051C2.92405 22.1441 6.01566 23.7879 9.19375 23.7879C10.5974 23.7879 12.0176 23.466 13.3422 22.7946L13.9664 23.8756C14.0605 24.0386 14.2312 24.1297 14.4067 24.1297C14.4928 24.1297 14.5802 24.1077 14.6601 24.0616C14.9031 23.9214 14.9863 23.6107 14.846 23.3678L14.6146 22.967C15.7368 23.5495 16.9607 23.8476 18.1993 23.8476C18.8742 23.8476 19.5535 23.7594 20.2226 23.5811C22.2361 23.0445 23.9181 21.7564 24.9587 19.9541C25.8519 18.4071 26.1856 16.5889 25.9011 14.8274Z" fill="white"></path>
-                                    <path d="M8.39203 4.39586C8.29763 4.30141 8.16662 4.24707 8.03301 4.24707C7.8994 4.24707 7.76839 4.30141 7.67394 4.39586C7.57948 4.49082 7.52515 4.62133 7.52515 4.75493C7.52515 4.889 7.57943 5.01955 7.67394 5.11452C7.76839 5.20902 7.8994 5.2633 8.03301 5.2633C8.16657 5.2633 8.29763 5.20897 8.39203 5.11452C8.48699 5.01955 8.54087 4.88849 8.54087 4.75493C8.54087 4.62138 8.48699 4.49082 8.39203 4.39586Z" fill="white"></path>
-                                    <path d="M22.541 8.85474L22.5379 8.85057C22.3731 8.62363 22.0555 8.57326 21.8286 8.73809C21.6016 8.90288 21.5512 9.22052 21.716 9.44741L21.7191 9.45152C21.8185 9.58833 21.9734 9.661 22.1305 9.661C22.2339 9.661 22.3384 9.62946 22.4285 9.56405C22.6554 9.39927 22.7058 9.08168 22.541 8.85474Z" fill="white"></path>
-                                </g>
-                                <defs>
-                                    <clippath id="clip0">
-                                        <rect fill="white" height="26" width="26"></rect>
-                                    </clippath>
-                                </defs>
-                            </svg>
-                            <span>Inovativni sastav</span>
-                        </div>
-                    </div>
+                    {{--<img alt="" class="img-product" src="{{ asset('/') }}innodermFiles/innoderm2/research-product.png"/>--}}
+                    {{--<div class="circle">--}}
+                        {{--<div class="circle__inner">--}}
+                            {{--<svg class="circle__img" fill="none" height="26" viewbox="0 0 26 26" width="26" xmlns="http://www.w3.org/2000/svg">--}}
+                                {{--<g clip-path="url(#clip0)">--}}
+                                    {{--<path d="M25.9011 14.8274C25.9003 14.8119 25.8988 14.7963 25.8966 14.7808L24.5934 5.71288C24.5712 5.55855 24.4794 5.42297 24.3443 5.34512C24.2094 5.26727 24.046 5.25569 23.9012 5.31389L17.9038 7.72508C17.6435 7.82969 17.5175 8.12549 17.622 8.3857C17.7267 8.646 18.0225 8.77209 18.2827 8.66748L23.6799 6.49755L24.8825 14.8651C24.8831 14.8886 24.8855 14.9123 24.8895 14.936C25.1524 16.4839 24.8645 18.0857 24.079 19.4463C23.1743 21.0132 21.7119 22.1331 19.9611 22.5996C18.2097 23.0663 16.3795 22.8235 14.8074 21.9159C14.7965 21.9097 14.7854 21.9044 14.7743 21.899C15.1113 21.6428 15.4283 21.3655 15.724 21.0689L21.6694 19.4758C21.9404 19.4032 22.1011 19.1247 22.0285 18.8538C21.9559 18.5829 21.6773 18.422 21.4065 18.4947L16.8319 19.7204C17.3345 18.9726 17.7278 18.1479 17.9965 17.2656L22.0779 16.172C22.3489 16.0995 22.5097 15.8209 22.437 15.55C22.3645 15.2791 22.0858 15.1183 21.8151 15.1909L18.812 15.9956L19.9412 14.0395L22.3277 13.4001C22.5987 13.3275 22.7595 13.049 22.6868 12.7781C22.6142 12.5072 22.3356 12.3463 22.0649 12.4189L20.6595 12.7955L21.7401 10.9238C21.8804 10.6809 21.7971 10.3703 21.5543 10.2301C21.3113 10.0898 21.0007 10.173 20.8605 10.4159L19.7799 12.2876L19.4033 10.8823C19.3307 10.6113 19.0522 10.4505 18.7814 10.5231C18.5104 10.5957 18.3496 10.8742 18.4222 11.1451L19.0617 13.5316L18.4009 14.6761C18.4204 13.0505 18.0044 11.4439 17.1708 10C16.121 8.18176 14.4642 6.76963 12.5037 6.02153C12.5005 6.02015 12.4972 6.01878 12.4939 6.01741L10.196 5.08476C9.93587 4.97929 9.63992 5.10452 9.53445 5.36437C9.42897 5.62432 9.55415 5.92047 9.81405 6.02594L12.0911 6.95006C12.1014 6.95478 12.1119 6.95915 12.1226 6.96321C13.874 7.62647 15.3544 8.88528 16.2911 10.5078C17.3815 12.3964 17.6691 14.5979 17.101 16.7067C16.5769 18.6519 15.3822 20.303 13.7135 21.4062L12.8612 19.93L14.709 13.0341C14.7816 12.7631 14.6208 12.4847 14.3499 12.4121C14.0788 12.3395 13.8005 12.5003 13.7279 12.7712L12.1431 18.6861L10.2629 15.4295L11.5448 10.6455C11.6174 10.3745 11.4566 10.0961 11.1856 10.0234C10.9146 9.95082 10.6363 10.1116 10.5637 10.3826L9.5447 14.1855L8.06255 11.6183L8.83458 8.73725C8.9072 8.46629 8.74642 8.18785 8.47545 8.11524C8.20438 8.04267 7.9261 8.20344 7.85349 8.47436L7.3443 10.3743L5.9402 7.94233C5.79999 7.69944 5.48937 7.61616 5.24648 7.75647C5.00354 7.89667 4.92031 8.2073 5.06062 8.45019L6.46472 10.8822L4.56479 10.3731C4.29377 10.3005 4.01544 10.4613 3.94282 10.7322C3.87021 11.0032 4.03098 11.2816 4.30195 11.3542L7.18297 12.1262L8.66512 14.6934L4.86232 13.6745C4.5913 13.6018 4.31297 13.7627 4.24035 14.0336C4.16773 14.3046 4.32851 14.583 4.59947 14.6556L9.38337 15.9375L11.2636 19.1941L5.34885 17.6093C5.07778 17.5367 4.7995 17.6975 4.72689 17.9684C4.65427 18.2394 4.81504 18.5178 5.08601 18.5904L11.9818 20.4382L12.8341 21.9142C8.99632 23.8269 4.27331 22.4494 2.10713 18.6975C1.16027 17.0575 0.813328 15.1268 1.13025 13.261C1.13457 13.2358 1.13686 13.2107 1.13726 13.1856L2.58742 3.09312L5.95173 4.45858C6.21188 4.5641 6.50778 4.43888 6.61326 4.17898C6.71873 3.91903 6.59355 3.62287 6.33365 3.5174L2.36805 1.90784C2.22337 1.84919 2.05955 1.86026 1.92417 1.938C1.78873 2.01575 1.69662 2.15154 1.67437 2.30622L0.122297 13.1061C0.119809 13.1232 0.118285 13.1403 0.117574 13.1574C-0.219512 15.2352 0.173637 17.3802 1.2273 19.2051C2.92405 22.1441 6.01566 23.7879 9.19375 23.7879C10.5974 23.7879 12.0176 23.466 13.3422 22.7946L13.9664 23.8756C14.0605 24.0386 14.2312 24.1297 14.4067 24.1297C14.4928 24.1297 14.5802 24.1077 14.6601 24.0616C14.9031 23.9214 14.9863 23.6107 14.846 23.3678L14.6146 22.967C15.7368 23.5495 16.9607 23.8476 18.1993 23.8476C18.8742 23.8476 19.5535 23.7594 20.2226 23.5811C22.2361 23.0445 23.9181 21.7564 24.9587 19.9541C25.8519 18.4071 26.1856 16.5889 25.9011 14.8274Z" fill="white"></path>--}}
+                                    {{--<path d="M8.39203 4.39586C8.29763 4.30141 8.16662 4.24707 8.03301 4.24707C7.8994 4.24707 7.76839 4.30141 7.67394 4.39586C7.57948 4.49082 7.52515 4.62133 7.52515 4.75493C7.52515 4.889 7.57943 5.01955 7.67394 5.11452C7.76839 5.20902 7.8994 5.2633 8.03301 5.2633C8.16657 5.2633 8.29763 5.20897 8.39203 5.11452C8.48699 5.01955 8.54087 4.88849 8.54087 4.75493C8.54087 4.62138 8.48699 4.49082 8.39203 4.39586Z" fill="white"></path>--}}
+                                    {{--<path d="M22.541 8.85474L22.5379 8.85057C22.3731 8.62363 22.0555 8.57326 21.8286 8.73809C21.6016 8.90288 21.5512 9.22052 21.716 9.44741L21.7191 9.45152C21.8185 9.58833 21.9734 9.661 22.1305 9.661C22.2339 9.661 22.3384 9.62946 22.4285 9.56405C22.6554 9.39927 22.7058 9.08168 22.541 8.85474Z" fill="white"></path>--}}
+                                {{--</g>--}}
+                                {{--<defs>--}}
+                                    {{--<clippath id="clip0">--}}
+                                        {{--<rect fill="white" height="26" width="26"></rect>--}}
+                                    {{--</clippath>--}}
+                                {{--</defs>--}}
+                            {{--</svg>--}}
+                            {{--<span>Inovativni sastav</span>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
                 </div>
             </div>
         </div>
@@ -615,9 +663,9 @@
                     <h2 class="s-title">Eksperti preporučuju Innoderm</h2>
                 </div>
                 <div class="doctor__description">
-                    <p>  Všichni potřebují péči - kosmetické prodedury, jako je botox, nemohou nahradit správnou péči o pleť.  </p>
-                    <p>  Innoderm funguje jak pro zralou, tak pro mladou pleť.   <b>  Krém funguje jako bariéra proti agresivním vlivům prostředí a zároveň nezpůsobuje závislost.  </b>   Innoderm vytváří zásobu esenciálních prvků a dodává pleti kyslík. Díky tomu dochází k rychlé regeneraci pleti a omezení ztráty hydratace.  </p>
-                    <p><b>  Pro zmírnění projevů stárnutí dodržujte tento snadný postup, dokud nedosáhnete požadovaných výsledků.  </b></p>
+                    <p>InnoDerm je dokazao svoju efikasnost. <b>Njegova glavna prednost je složena nega.</b> Krema može da se koristi i za kompleksan, potpun program podmlađivanja kože lica i za preventivne mere. </p>
+                    <p>Bore su savršeno zaglađene, ten postaje ujednačen. <b>Preporučujem ovu krema svima onima koji žele da poboljšaju kvalitet kože i onima koji treba da zaštite kožu od bilo kakvih nedostataka.</b> </p>
+                    <p>Ipak, suva koža koja se peruta može da se pobora za samo nekoliko dana i veoma je teško izravnati ove fine linije kasnije.</p>
                     <div class="doctor__img">
                         <img alt="" src="{{ asset('/') }}innodermFiles/innoderm2/doctor-img.png"/>
                         {{--<div class="doctor__sign">--}}
@@ -661,7 +709,7 @@
                             <div class="list-inner">
                                 <div class="number">2</div>
                                 <p><b></b></p>
-                                <p>Po potrebi koristiti jade roller koji se dobija u setu</p>
+                                <p>Po potrebi koristiti Jade roller koji se dobija u setu</p>
                             </div>
                         </li>
                         <li>
@@ -710,7 +758,7 @@
                         Innoderm
                     </h2>
                     <div class="subtitle">
-                        Vraťte čas zpátky!
+                        Utisci kupaca
                     </div>
                     <div class="reviews__item only-desktop">
                         <div class="item-inner">
@@ -719,7 +767,7 @@
                                     <img alt="" src="{{ asset('/') }}innodermFiles/innoderm2/ava1.jpg"/>
                                 </div>
                                 <div class="reviews__author">
-                                    <p>  Jana Horáková, 42 let  </p>
+                                    <p> Ana, 37 godina</p>
                                     <div class="rate">
                                         <span class="star"></span>
                                         <span class="star"></span>
@@ -729,7 +777,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="reviews__message">  Dvanáct let jsem chodila na ty nejdražší kosmetické procedury, ale nedosáhla jsem žádných výsledků. Zkusila jsem denní krém Innoderm a výsledky se dostavily už za týden. Pleť byla každý den pevnější a elastičtějí. Rozhodla jsem se tedy koupit si i noční krém a masku. Po měsíci používání mi zmizely vrásky na čele. Tyto produkty jsou rozhodně levnější a lepší, než všechny kosmetické procedury. Nyní všechny kosmetičky nabízejí Botox. Je skvělé, že jsem našla lepší alternativu.  </p>
+                            <p class="reviews__message"> Nisam imala dubinske bore, nego male mimičke bore, a i boju kože je trebalo poboljšati. Uz krema InnoDerm, bore su nestale a koža lica je postala tako sveža da izgledam mlađe od 30.</p>
                             <img alt="" src="{{ asset('/') }}innodermFiles/innoderm2/comm1.jpg"/>
                         </div>
                     </div>
@@ -742,7 +790,7 @@
                                     <img alt="" src="{{ asset('/') }}innodermFiles/innoderm2/ava1.jpg"/>
                                 </div>
                                 <div class="reviews__author">
-                                    <p>  Jana Horáková, 42 let  </p>
+                                    <p> Snežana, 39 godina</p>
                                     <div class="rate">
                                         <span class="star"></span>
                                         <span class="star"></span>
@@ -752,7 +800,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="reviews__message">  Dvanáct let jsem chodila na ty nejdražší kosmetické procedury, ale nedosáhla jsem žádných výsledků. Zkusila jsem denní krém Innoderm a výsledky se dostavily už za týden. Pleť byla každý den pevnější a elastičtějí. Rozhodla jsem se tedy koupit si i noční krém a masku. Po měsíci používání mi zmizely vrásky na čele. Tyto produkty jsou rozhodně levnější a lepší, než všechny kosmetické procedury. Nyní všechny kosmetičky nabízejí Botox. Je skvělé, že jsem našla lepší alternativu.  </p>
+                            <p class="reviews__message"> Kupila sam InnoDerm krema pre nekog vremena i već sam zadovoljna rezultatima - lice se zateglo, bore su se smanjile. Pored toga, pore su se suzile. Sada se uvek sebi divim ispred ogledala. A najvažnija stvar je da rezultati postaju vidljivi za dva dana. </p>
                             <img alt="" src="{{ asset('/') }}innodermFiles/innoderm2/comm1.jpg"/>
                         </div>
                     </div>
@@ -763,7 +811,7 @@
                                     <img alt="" src="{{ asset('/') }}innodermFiles/innoderm2/ava2.jpg"/>
                                 </div>
                                 <div class="reviews__author">
-                                    <p>  Petra Blatná, 34 let  </p>
+                                    <p> Marija, 44 godina</p>
                                     <div class="rate">
                                         <span class="star"></span>
                                         <span class="star"></span>
@@ -773,7 +821,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="reviews__message">  Molekulární kosmetika pro mě byla novým objevem. Mám smíšenou pleť náchylnou k vysušení v chladném počasí a mastnou v létě. Celá produktová řada je pro mě perfektní, mám z toho velkou radost. Bylo pro mě vždy těžké najít vhodné kosmetické produkty. Po šesti měsících používání mám viditelně omlazenou pleť a začala jsem vypadat skvěle, jako hollywoodská hvězda))  </p>
+                            <p class="reviews__message"> Posle 40. godine, koža nije ista, a nisam verovala da će ovaj krema da pomogne. Ali InnoDerm je stvarno efikasan - lice izgleda svežije, boja nije tako tamna, bore nestaju. Veoma mi je drago. </p>
                             <img alt="" src="{{ asset('/') }}innodermFiles/innoderm2/comm2.jpg"/>
                         </div>
                     </div>
@@ -784,7 +832,7 @@
                                     <img alt="" src="{{ asset('/') }}innodermFiles/innoderm2/ava3.jpg"/>
                                 </div>
                                 <div class="reviews__author">
-                                    <p>  Hana Peterková, 57 let  </p>
+                                    <p> Snežana, 39 godina</p>
                                     <div class="rate">
                                         <span class="star"></span>
                                         <span class="star"></span>
@@ -794,7 +842,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="reviews__message">  Vždy jsem vypadala mladší, než ve skutečnosti jsem, i když jsem nikdy nepoužívala moc produktů. Jakmile mi ale bylo 45 let, všechno se výrazně změnilo. Bylo pro mě těžké sledovat, jak se ze mě stává stará žena. Začala jsem si kupovat kosmetiku proti stárnutí, ale moc mi to nepomohlo. Moje dcera mi dala Innoderm. Jen tento jeden krém dokázal nemožné. Nejen že zastavil stárnutí mojí pleti, ale také mě zbavil suché pleti a vrásek. Všichni říkají, že vypadám mnohem mladší. Mohu to doporučit každému, bez ohledu na věk.  </p>
+                            <p class="reviews__message"> Kupila sam InnoDerm krema pre nekog vremena i već sam zadovoljna rezultatima - lice se zateglo, bore su se smanjile. Pored toga, pore su se suzile. Sada se uvek sebi divim ispred ogledala. A najvažnija stvar je da rezultati postaju vidljivi za dva dana. </p>
                             <img alt="" src="{{ asset('/') }}innodermFiles/innoderm2/comm3.jpg"/>
                         </div>
                     </div>
