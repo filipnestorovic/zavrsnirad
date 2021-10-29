@@ -822,11 +822,15 @@ class HomeController extends Controller
         $variation_id = $request->get('variation_id');
 
         try {
-            $result = PhoneNumber::make($number, $countryCode)->isOfCountry($countryCode);
-            if($result){
-                return 1;
+            if($number != null) {
+                $result = PhoneNumber::make($number, $countryCode)->isOfCountry($countryCode);
+                if($result){
+                    return 1;
+                } else {
+                    return 0;
+                }
             } else {
-                return 0;
+                Log::warning("Validation - Phone is null - Request: ".$request);
             }
         } catch (\Exception $exception){
             $customer_data = "Name: ".$name."\nEmail: ".$email."\nAddress: ".$address."\nCity: ".$city."\nZip: ".$zip."\nQuantity: ".$quantity."\nVariation: ".$variation_id;
