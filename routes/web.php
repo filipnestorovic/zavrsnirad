@@ -137,7 +137,7 @@ Route::group([ 'middleware' => ['admin']], function() {
         Route::post('/editEvent', [App\Http\Controllers\EventController::class, 'editEvent'])->name('editEvent');
         Route::get('/deleteEvent/{id}', [App\Http\Controllers\EventController::class, 'deleteEvent'])->name('deleteEvent');
 
-        Route::get('/api/getProductPrices/{country}/{sku}', [App\Http\Controllers\ApiController::class, 'getProductPrices'])->name('getProductPrices');
+        Route::get('/api/getProductPrices/{country}/{sku}', [App\Http\Controllers\ApiController::class, 'getProductPrices'])->name('getProductPrices')->withoutMiddleware(['admin', 'auth']);
 
         require __DIR__.'/auth.php';
 
