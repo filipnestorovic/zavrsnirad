@@ -300,4 +300,18 @@ class Variation extends Model
         return $result->first();
     }
 
+    public function getVariationsByProductId($product_id) {
+        $result = DB::table('variation')
+            ->leftJoin('variations_prices', function($query) {
+                $query->on('variation.id_variation','=','variations_prices.variation_id')
+                    ->whereRaw('variations_prices.id_variations_prices IN (select vp.id_variations_prices from variations_prices as vp join `variation` v on v.id_variation = vp.variation_id)');
+            })
+            ->leftJoin('price', 'variations_prices.price_id', '=', 'price.id_price')
+            ->leftJoin('currency', 'price.currency_id', '=', 'currency.id_currency')
+            ->select('*','variations_prices.deleted_at as deleted_price')
+            ->where('variation.product_id','=',$product_id);
+
+        return $result->get();
+    }
+
 }

@@ -74,4 +74,11 @@ class Domain extends Model
             ]);
         return $result;
     }
+
+    public function getDomainByBrand($brand_id) {
+        $result = DB::table('domain')
+            ->whereNull('deleted_at')
+            ->where('brand_id','=',$brand_id);
+        return $result->first();
+    }
 }

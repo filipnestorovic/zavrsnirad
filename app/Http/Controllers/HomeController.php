@@ -834,7 +834,7 @@ class HomeController extends Controller
             }
         } catch (\Exception $exception){
             $customer_data = "Name: ".$name."\nEmail: ".$email."\nAddress: ".$address."\nCity: ".$city."\nZip: ".$zip."\nQuantity: ".$quantity."\nVariation: ".$variation_id;
-            Log::warning("Validation - Phone: ".$number." Error: ".$exception->getMessage()."\n".$customer_data);
+            Log::warning("Validation - Phone: ".$number." Country: ".$countryCode."\nError: ".$exception->getMessage()."\n".$customer_data);
             return 0;
         }
     }

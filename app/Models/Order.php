@@ -152,4 +152,15 @@ class Order
 
         return $result->get();
     }
+
+    public function getLastOrderForVariation($variation_id) {
+        $result = DB::table('order')
+            ->where([
+                ['variation_id','=',$variation_id],
+                ['order.name','NOT LIKE','%TEST%']
+            ])
+            ->orderByDesc('order.created_at');
+
+        return $result->first();
+    }
 }
