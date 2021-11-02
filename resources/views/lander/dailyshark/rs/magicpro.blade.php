@@ -12,6 +12,7 @@
 </head>
 <body>
 <div class="wrap">
+    @include('components.display_errors')
     <div class="block header" id="header" style="background: #72a8cc url({{ asset('/') }}dailysharkFiles/magicpro/header2m.jpg) center 0 no-repeat;">
         <div class="attach">
             <div class="header_left">
@@ -236,5 +237,6 @@
         </div>
     </div>
 </div>
+@include('components.pixel_footer')
 </body>
 </html>

@@ -36,7 +36,7 @@
 </head>
 <body>
 <div class="main_wrapper">
-    <!-- header 3 -->
+    @include('components.display_errors')
     <header class="offer_section offer3">
         <h1 class="main_title">MAGIC PRO</h1>
         <div class="info_block">
@@ -233,5 +233,6 @@
         autoplaySpeed: 3000,
     });
 </script>
+@include('components.pixel_footer')
 </body>
 </html>
