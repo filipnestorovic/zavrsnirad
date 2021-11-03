@@ -56,4 +56,14 @@ $(document).ready(function () {
         var new_position = $(jump).offset();
         $('html, body').stop().animate({ scrollTop: new_position.top }, 500);
     });
+
+    $('.quantitySelect').click(function () {
+        let fsh = $('option:selected', this).attr('placeholder');
+        if(fsh === '1') {
+            $('#freeShippingDiv').slideDown();
+        } else {
+            $('#freeShippingDiv').slideUp();
+        }
+    })
+
 });

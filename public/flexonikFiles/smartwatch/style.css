@@ -3486,7 +3486,7 @@ form .button {
     max-width: 720px;
     height: 530px;
     position: relative;
-    background: url(prize-big.png) center center no-repeat;
+    background: url(prize-big1.png) center center no-repeat;
     background-size: contain;
 }
 .secret-prize__price {
@@ -3515,7 +3515,7 @@ form .button {
         max-width: 440px;
         height: 385px;
         width: 90%;
-        background: url(prize-small.png) center center no-repeat;
+        background: url(prize-small1.png) center center no-repeat;
         background-size: contain;
     }
     .secret-prize__price {

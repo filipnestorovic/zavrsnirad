@@ -96,12 +96,6 @@
                         <li>Funkcija protiv gubljenja</li>
                     </ul>
                 </div>
-                {{--<div class="form__countdown countdown" style="margin-top: 30px;">--}}
-                    {{--<div class="countdown-descr">Fino alla fine dell’offerta rimane:</div>--}}
-                    {{--<div class="cd">--}}
-                        {{--<div id="cd__tiles" class="cd__tiles"></div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
                 <div class="info__price price">
                     <div class="price__list">
                         <div class="price__wrong">
@@ -343,43 +337,12 @@
         </div>
     </section>
     <div class="clear"></div>
-    {{--<section class="steps warning container">--}}
-        {{--<h1 class="heading heading--secondary">--}}
-            {{--<span>Attenzione!</span> Truffe!</h1>--}}
-        {{--<div class="container">--}}
-            {{--<div class="row">--}}
-                {{--<div class="col-6">--}}
-                    {{--<h3>Cari clienti. Fate attenzione!</h3>--}}
-                    {{--<p>Su internet sono comparsi molti truffatori che creano dei siti falsi per vendere prodotti non--}}
-                        {{--originali.--}}
-                        {{--Solitamente su questi siti il PREZZO è molto basso.</p>--}}
-                {{--</div>--}}
-                {{--<div class="col-6">--}}
-                    {{--<h2>METODI PER EVITARE I FALSI</h2>--}}
-                    {{--<ul>--}}
-                        {{--<li>--}}
-                            {{--<i class="fa fa-times"></i>Assenza del TELEFONO sul sito--}}
-                        {{--</li>--}}
-                        {{--<li>--}}
-                            {{--<i class="fa fa-times"></i>Vogliono il pagamento anticipato--}}
-                        {{--</li>--}}
-                    {{--</ul>--}}
-                {{--</div>--}}
-                {{--<div class="text-center text3">--}}
-                    {{--<p>Noi invece inviamo gli orologi senza pagamento anticipato! All'inizio ricevere il pacco, e--}}
-                        {{--solo--}}
-                        {{--dopo pagate.</p>--}}
-                    {{--<h3>VI AUGURIAMO ACQUISTI FORTUNATI!</h3>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-        {{--<div class="clear"></div>--}}
-    {{--</section>--}}
     <section class="secret-prize">
-        <p>Samo danas, ako poručite Smart Watch, dobićete tajni poklon iznenađenja </p>
+        <p>Samo danas, ako poručite Smart Watch, dobićete bežične slušalice GRATIS</p>
         <div class="secret-prize__img">
             <div class="secret-prize__price">{{ $prices[1]['amount'] }}  RSD </div>
         </div>
+        <p>InPods 12 - POTPUNO BESPLATNO </p>
         <div class="benefits__button" style="padding-bottom: 0px;">
             <a href="#scroll-buy" class="button" style="margin-left: 0;">ISKORISTITE PONUDU</a>
         </div>
@@ -401,43 +364,6 @@
             <div class="clear"></div>
         </div>
     </section>
-    <div class="clear"></div>
-    {{--<section id="scroll-reasons" class="reasons-wrapper">--}}
-        {{--<div class="6reasons container">--}}
-            {{--<h1 class="heading heading--primary heading--white">6 motivi per ordinare da noi </h1>--}}
-            {{--<div class="container clearfix rew-box" style="text-align: center;">--}}
-                {{--<div class="rew-item">--}}
-                    {{--<h3>OFFERTA UNICA</h3>--}}
-                    {{--<p>--}}
-                        {{--La quantità di prodotti in offerta sono limitati.--}}
-                    {{--</p>--}}
-                {{--</div>--}}
-                {{--<!-- <div class="rew-item">--}}
-                {{--<h3>POWER BANK in regalo</h3>--}}
-                {{--<p>In caso di ordine del modello in offerta riceverete un Power Bank gratis.</p>--}}
-            {{--</div> -->--}}
-                {{--<div class="rew-item">--}}
-                    {{--<h3>NESSUN RISCHIO</h3>--}}
-                    {{--<p>Nessun pagamento anticipato. Pagate il prodotto solo al momento della ricezione.</p>--}}
-                {{--</div>--}}
-                {{--<div class="rew-item">--}}
-                    {{--<h3>PACCCO SICURO</h3>--}}
-                    {{--<p>Pacco di cartone con rivestimenti interni adatti all’elettronica.</p>--}}
-                {{--</div>--}}
-                {{--<div class="rew-item">--}}
-                    {{--<h3>CONSEGNA RAPIDA</h3>--}}
-                    {{--<p>Da 1 a 3 giorni (dipende dalle regioni).</p>--}}
-                {{--</div>--}}
-                {{--<!-- <div class="rew-item">--}}
-                {{--<h3>OFFERTA</h3>--}}
-                {{--<p>Garanzia 1 anno. Avete diritto di reso entro due settimane dal giorno dell’ordine.</p>--}}
-            {{--</div> -->--}}
-            {{--</div>--}}
-            {{--<div class="benefits__button">--}}
-                {{--<a href="#scroll-buy" class="button" style="margin-left: 0;">Ordinare con lo sconto</a>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--</section>--}}
     <div class="clear"></div>
     <section class="steps container">
         <h1 class="heading heading--secondary">KAKO RADIMO</h1>
@@ -466,34 +392,6 @@
             <div class="steps__item steps__item--r steps__item--four">Platite kuriru po preuzimanju paketa</div>
         </div>
     </section>
-    <div class="clear"></div>
-    {{--<section id="scroll-delivery" class="delivery-wrapper">--}}
-        {{--<div class="6reasons container">--}}
-            {{--<h1 class="heading heading--primary">Consegna</h1>--}}
-            {{--<div class="delivery-content">--}}
-                {{--<ul>--}}
-                    {{--<li>--}}
-                        {{--<div class="col-1 icon">--}}
-                            {{--<i class="fa fa-male" aria-hidden="true"></i>--}}
-                        {{--</div>--}}
-                        {{--<div class="col-9">--}}
-                            {{--<h3>La consegna in Italia avviene via corriere</h3>--}}
-                            {{--<p>--}}
-                            {{--</p>--}}
-                            {{--<p>Pagamento alla consegna del pacco.</p>--}}
-                            {{--<p>Tempistica consegna: 1-3 giorni.</p>--}}
-                            {{--<p></p>--}}
-                        {{--</div>--}}
-                    {{--</li>--}}
-                    {{--<li>--}}
-                        {{--<div class="col-9">--}}
-                            {{--<p></p>--}}
-                        {{--</div>--}}
-                    {{--</li>--}}
-                {{--</ul>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--</section>--}}
     <div class="clear"></div>
     <section id="scroll-reviews" class="reviews-wrapper">
         <div class="reviews container">
@@ -537,7 +435,6 @@
     </section>
     <div class="clear"></div>
     <section id="scroll-buy" class="buy container">
-        <!-- <h2 class="heading__headline">xPower Smart Watch</h2> -->
         <h1 class="heading heading--secondary heading--has-headline heading--extra">Smart Watch</h1>
         <div class="buy__photo col-6">
             <img alt="xPower Smart Watch" title="xPower Smart Watch" src="{{ asset('/') }}flexonikFiles/smartwatch/big_watch.png">
@@ -554,12 +451,6 @@
                     <span class="price_land_curr"> RSD</span>
                 </div>
             </div>
-            {{--<div class="form__countdown countdown">--}}
-                {{--<div class="countdown-descr" style="padding: 20px 0 10px;">Fino alla fine dell’offerta rimane:</div>--}}
-                {{--<div class="cd">--}}
-                    {{--<div id="cd__tiles1" class="cd__tiles"></div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
             <form id="order_form" class="order_form" action="{{$orderRoute}}" method="post">
                 {{csrf_field()}}
                 @include('lander.naturapharm.components.form_hidden_fields')
@@ -580,20 +471,6 @@
         </div>
     </section>
     <div class="clear"></div>
-    <section class="footer-wrapper">
-        <div class="footer container">
-            {{--<div class="col-4 pull-left" style="padding: 10px">--}}
-                {{--<a href="#">--}}
-                    {{--<img src="{{ asset('/') }}flexonikFiles/smartwatch/logo_new.png" class="logo">--}}
-                {{--</a>--}}
-                {{--<br>--}}
-            {{--</div>--}}
-            {{--<div class="col-8 pull-right">--}}
-                {{--<div class="copyright">--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        </div>
-    </section>
 </div>
 <script type="text/javascript" src="{{ asset('/') }}shared_files/bootstrap.min.js"></script>
 <script src="{{ asset('/') }}flexonikFiles/smartwatch/slicknav.js"></script>
