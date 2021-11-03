@@ -55,24 +55,23 @@
         @endif
 
         $('form').submit(function(e){
-                if($(this).attr('action')==='/order'){
-                    $phone_input = $('input[name=phone]');
-                    let phone = $phone_input.val();
-                    let country = '{{strtoupper($product->country_code)}}';
-                    let validationResult = validatePhoneNumber(phone, country);
-                    if(validationResult === "1") {
-                        $(this).find(':submit').attr('disabled','disabled');
-                        $phone_input.removeClass('phoneErrorInput');
-                        $('.phoneErrorText').hide();
-                    } else {
-                        e.preventDefault();
-                        $phone_input.addClass('phoneErrorInput');
-                        $phone_input.after("<div class='phoneErrorText'>Pogrešan format telefona</div>");
-                    }
+            if($(this).attr('action')==='/order'){
+                $phone_input = $(this).closest('form').find('input[name=phone]');
+                let phone = $phone_input.val();
+                let country = '{{strtoupper($product->country_code)}}';
+                let validationResult = validatePhoneNumber(phone, country);
+                if(validationResult === "1") {
+                    $phone_input.removeClass('phoneErrorInput');
+                    $('.phoneErrorText').hide();
+                    $(this).closest('form').find(':submit').attr('disabled','disabled');
+                } else {
+                    e.preventDefault();
+                    $phone_input.addClass('phoneErrorInput');
+                    $phone_input.after("<div class='phoneErrorText'>Pogrešan format telefona</div>");
                 }
-                else{
-                    $(this).find(':submit').attr('disabled','disabled');
-                }
+            } else {
+                $(this).find(':submit').attr('disabled','disabled');
+            }
         });
 
 
