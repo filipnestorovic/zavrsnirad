@@ -229,7 +229,7 @@
                     </div>
                     <div class="de elBTN elMargin0 ui-droppable elAlign_left de-editable" style="margin-top: 20px; outline: none; cursor: pointer; font-family: 'Open Sans', Helvetica, sans-serif !important;">
                         <a href="{{$checkoutView}}" class="elButton elButtonSize1 elButtonColor1 elButtonSquare elButtonPadding3 elButtonFull elButtonCorner5 elButtonShadow2 elBtnVP_15" style="color: rgb(255, 255, 255); background-color: rgb(26, 184, 0); font-size: 24px;">
-                            <span class="elButtonMain">Pogledajte kako da poručite</span>
+                            <span class="elButtonMain">Poručite sada</span>
                             <span class="elButtonSub"></span>
                         </a>
                     </div>
@@ -284,7 +284,7 @@
                     </div>
                     <div class="de elBTN elMargin0 ui-droppable elAlign_left de-editable" style="margin-top: 20px; outline: none; cursor: pointer; font-family: 'Open Sans', Helvetica, sans-serif !important;" >
                         <a href="{{$checkoutView}}" class="elButton elButtonSize1 elButtonColor1 elButtonSquare elButtonPadding3 elButtonFull elButtonCorner5 elButtonShadow2 elBtnVP_15" style="color: rgb(255, 255, 255); background-color: rgb(26, 184, 0); font-size: 22px;">
-                            <span class="elButtonMain">Pogledajte kako da poručite</span>
+                            <span class="elButtonMain">Poručite sada</span>
                             <span class="elButtonSub"></span>
                         </a>
                     </div>
@@ -431,7 +431,7 @@
 
                     <div class="de elBTN elMargin0 ui-droppable elAlign_left de-editable" style="margin-top: 40px; outline: none; cursor: pointer; font-family: 'Open Sans', Helvetica, sans-serif !important;">
                         <a href="{{$checkoutView}}" class="elButton elButtonSize1 elButtonColor1 elButtonSquare elButtonPadding3 elButtonFull elButtonCorner5 elButtonShadow2 elBtnVP_15" style="color: rgb(255, 255, 255); background-color: rgb(26, 184, 0); font-size: 24px;">
-                            <span class="elButtonMain">Pogledajte kako da poručite</span>
+                            <span class="elButtonMain">Poručite sada</span>
                             <span class="elButtonSub"></span>
                         </a>
                     </div>
@@ -500,7 +500,7 @@
 
                     <div class="de elBTN elMargin0 ui-droppable elAlign_left de-editable" style="margin-top: 40px; outline: none; cursor: pointer; font-family: 'Open Sans', Helvetica, sans-serif !important;">
                         <a href="{{$checkoutView}}" class="elButton elButtonSize1 elButtonColor1 elButtonSquare elButtonPadding3 elButtonFull elButtonCorner5 elButtonShadow2 elBtnVP_15" style="color: rgb(255, 255, 255); background-color: rgb(26, 184, 0); font-size: 22px;">
-                            <span class="elButtonMain">Pogledajte kako da poručite</span>
+                            <span class="elButtonMain">Poručite sada</span>
                             <span class="elButtonSub"></span>
                         </a>
                     </div>

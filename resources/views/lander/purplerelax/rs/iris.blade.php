@@ -52,29 +52,28 @@
     {{--</style>--}}
     <style>
         .quantity {
-            display: none;
+            visibility: hidden;
         }
     </style>
     <script data-polyfil="webp">!function(e,n,A){function o(e,n){return typeof e===n}function t(){var e,n,A,t,a,i,l;for(var f in r)if(r.hasOwnProperty(f)){if(e=[],n=r[f],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(A=0;A<n.options.aliases.length;A++)e.push(n.options.aliases[A].toLowerCase());for(t=o(n.fn,"function")?n.fn():n.fn,a=0;a<e.length;a++)i=e[a],l=i.split("."),1===l.length?Modernizr[l[0]]=t:(!Modernizr[l[0]]||Modernizr[l[0]]instanceof Boolean||(Modernizr[l[0]]=new Boolean(Modernizr[l[0]])),Modernizr[l[0]][l[1]]=t),s.push((t?"":"no-")+l.join("-"))}}function a(e){var n=u.className,A=Modernizr._config.classPrefix||"";if(c&&(n=n.baseVal),Modernizr._config.enableJSClass){var o=new RegExp("(^|\s)"+A+"no-js(\s|$)");n=n.replace(o,"$1"+A+"js$2")}Modernizr._config.enableClasses&&(n+=" "+A+e.join(" "+A),c?u.className.baseVal=n:u.className=n)}function i(e,n){if("object"==typeof e)for(var A in e)f(e,A)&&i(A,e[A]);else{e=e.toLowerCase();var o=e.split("."),t=Modernizr[o[0]];if(2==o.length&&(t=t[o[1]]),"undefined"!=typeof t)return Modernizr;n="function"==typeof n?n():n,1==o.length?Modernizr[o[0]]=n:(!Modernizr[o[0]]||Modernizr[o[0]]instanceof Boolean||(Modernizr[o[0]]=new Boolean(Modernizr[o[0]])),Modernizr[o[0]][o[1]]=n),a([(n&&0!=n?"":"no-")+o.join("-")]),Modernizr._trigger(e,n)}return Modernizr}var s=[],r=[],l={_version:"3.6.0",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var A=this;setTimeout(function(){n(A[e])},0)},addTest:function(e,n,A){r.push({name:e,fn:n,options:A})},addAsyncTest:function(e){r.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=l,Modernizr=new Modernizr;var f,u=n.documentElement,c="svg"===u.nodeName.toLowerCase();!function(){var e={}.hasOwnProperty;f=o(e,"undefined")||o(e.call,"undefined")?function(e,n){return n in e&&o(e.constructor.prototype[n],"undefined")}:function(n,A){return e.call(n,A)}}(),l._l={},l.on=function(e,n){this._l[e]||(this._l[e]=[]),this._l[e].push(n),Modernizr.hasOwnProperty(e)&&setTimeout(function(){Modernizr._trigger(e,Modernizr[e])},0)},l._trigger=function(e,n){if(this._l[e]){var A=this._l[e];setTimeout(function(){var e,o;for(e=0;e<A.length;e++)(o=A[e])(n)},0),delete this._l[e]}},Modernizr._q.push(function(){l.addTest=i}),Modernizr.addAsyncTest(function(){function e(e,n,A){function o(n){var o=n&&"load"===n.type?1==t.width:!1,a="webp"===e;i(e,a&&o?new Boolean(o):o),A&&A(n)}var t=new Image;t.onerror=o,t.onload=o,t.src=n}var n=[{uri:"data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=",name:"webp"},{uri:"data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==",name:"webp.alpha"},{uri:"data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA",name:"webp.animation"},{uri:"data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=",name:"webp.lossless"}],A=n.shift();e(A.name,A.uri,function(A){if(A&&"load"===A.type)for(var o=0;o<n.length;o++)e(n[o].name,n[o].uri)})}),t(),a(s),delete l.addTest,delete l.addAsyncTest;for(var p=0;p<Modernizr._q.length;p++)Modernizr._q[p]();e.Modernizr=Modernizr}(window,document)</script> </head>
 </head>
 <body class="ev-date">
+@include('components.display_errors')
 <header class="header block first-header">
     <div class="wrapper">
-        <h1 class="header-title">UNA SPAZZOLA RIVOLUZIONARIA PER LA PULIZIA E LE CURE ANTI-INVECCHIAMENTO DELLA
-            PELLE
-        </h1>
+        <h1 class="header-title">REVOLUCIONARNA ČETKA ZA ČIŠĆENJE I NEGU KOŽE PROTIV STARENJA</h1>
         <div class="row">
             <div class="left-text">
-                <p class="left-text-title">UNA SPAZZOLA PER LA PULIZIA DEL VISO CREATA PER IL TUO TIPO DI PELLE</p>
+                <p class="left-text-title">ČETKA ZA ČIŠĆENJE LICA KREIRANA ZA SVE TIPOVE KOŽE</p>
                 <ul class="left-text-list">
-                    <li class="left-text-item">Viso pulito</li>
-                    <li class="left-text-item">Pelle liscia</li>
-                    <li class="left-text-item">Addio ai cosmetologi</li>
-                    <li class="left-text-item">Vero trattamento SPA a casa tua</li>
+                    <li class="left-text-item">Za čisto lice</li>
+                    <li class="left-text-item">Za glatku kožu</li>
+                    <li class="left-text-item">Bez odlaska kozmetičaru</li>
+                    <li class="left-text-item">SPA tretman u vašem domu</li>
                 </ul>
             </div>
             <div class="header__luna">
-                <span>LINA</span><sup>TM</sup> <span>2</span>
+                <span>IRIS </span><sup>TM</sup>
             </div>
             <div class="prod">
                 <img src="{{ asset('/') }}purplerelaxFiles/brush/products-top.png" alt="img">
@@ -119,56 +118,40 @@
                                 RSD
                             </i>
                         </div>
-                        Popust<br><span>70%</span>
+                        Popust<br><span>40%</span>
                     </div>
-                    {{--<div class="main-timer">--}}
-                        {{--<div class="left">L'offerta speciale scade tra:</div>--}}
-                        {{--<div class="time">--}}
-                            {{--<span class="days">00</span>--}}
-                            {{--<span class="dots">:</span>--}}
-                            {{--<span class="hours">00</span>--}}
-                            {{--<span class="dots">:</span>--}}
-                            {{--<span class="minutes">00</span>--}}
-                            {{--<span class="dots">:</span>--}}
-                            {{--<span class="seconds">00</span>--}}
-                        {{--</div>--}}
-                        {{--<div class="time-name">--}}
-                            {{--<span>giorni</span>--}}
-                            {{--<span>ore</span>--}}
-                            {{--<span>minuti</span>--}}
-                            {{--<span>secondi</span>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
                 </div>
                 <div class="sale-form-wrap">
                     <span class="qua-title">Izaberite količinu:</span>
-                    <div class="qua">
-                        <div class="one active" onclick="one();">1 komad</div>
-                        <div class="two" onclick="two();">2 komada</div>
-                    </div>
-                    <div class="prices">
-                        <span class="one-price">
-                           <b class="x_price_current">
-                              {{ $prices[1]['amount'] }}
-                           </b>
-                           <span class="x_currency">
-                              RSD
-                           </span>
-                        </span>
-                        <span class="two-price">
-                           <b class="">{{ $prices[2]['amount'] }}</b>
-                           <span class="x_currency">
-                              RSD
-                           </span>
-                           <br><span></span>
-                        </span>
-                    </div>
                     <form class="x_order_form" action="{{$orderRoute}}" method="post">
+                        <div class="qua">
+                            <label for="fq-1"><div class="one active" id="fone" onclick="fone();">1 komad</div></label>
+                            <label for="fq-2"><div class="two" id="ftwo" onclick="ftwo();">2 komada</div></label>
+                        </div>
+                        <div class="prices">
+                            <span class="one-price">
+                               <b class="x_price_current">
+                                  {{ $prices[1]['amount'] }}
+                               </b>
+                               <span class="x_currency">
+                                  RSD
+                               </span>
+                            </span>
+                            <span class="two-price">
+                               <b class="">{{ $prices[2]['amount'] }}</b>
+                               <span class="x_currency">
+                                  RSD
+                               </span>
+                               <br><span></span>
+                            </span>
+                        </div>
                         {{ csrf_field() }}
                         @include('lander.naturapharm.components.form_hidden_fields')
                         @foreach($prices as $singlePrice)
-                        <input type="radio" name="quantity" class="quantity" value="{{ $singlePrice['quantity'] }}"
-                               @if(old('quantity') == $singlePrice['quantity']) checked @endif>
+                        <input type="radio" name="quantity" class="quantity" value="{{ $singlePrice['quantity'] }}" id="fq-{{ $singlePrice['quantity'] }}"
+                        @if(old('quantity') == $singlePrice['quantity']) checked @endif
+                        @if($singlePrice['quantity'] === 1) checked @endif
+                        >
                         @endforeach
                         <input class="name" name="name" placeholder="Ime i prezime" type="text" required>
                         <input class="phone" name="phone" placeholder="Telefon" type="tel" required>
@@ -187,31 +170,19 @@
         <img src="{{ asset('/') }}purplerelaxFiles/brush/1.gif">
         <img src="{{ asset('/') }}purplerelaxFiles/brush/2.gif">
         <img src="{{ asset('/') }}purplerelaxFiles/brush/3.gif">
-        {{--<video loop autoplay muted>--}}
-            {{--<source src="{{ asset('/') }}purplerelaxFiles/brush/1.mp4" type="video/mp4">--}}
-        {{--</video>--}}
-        {{--<video loop autoplay muted>--}}
-            {{--<source src="{{ asset('/') }}purplerelaxFiles/brush/2.mp4" type="video/mp4">--}}
-        {{--</video>--}}
-        {{--<video loop autoplay muted>--}}
-            {{--<source src="{{ asset('/') }}purplerelaxFiles/brush/3.mp4" type="video/mp4">--}}
-        {{--</video>--}}
     </div>
 </section>
 <section class="description block">
     <div class="wrapper">
-        <h2>LASCIA CHE <span>LA TUA PELLE IRRADIA LA GIOVINEZZA E LA FRESCHEZZA</span></h2>
-        <p class="descr-p center">LINA 2 — non è una semplice spazzola per la pulizia della pelle del viso, è
-            qualcosa di più. Il risultato del suo uso potrà essere apprezzato non solo da te, ma anche da tutte le
-            persone attorno. Viziati con un trattamento quotidiano di 2 minuti che renderà la tua pelle più pulita,
-            fresca e setosa.
-        </p>
+        <h2>ZA KOŽU KOJA ZRAČI <span>MLADOŠĆU I SVEŽINOM</span></h2>
+        <p class="descr-p center">IRIS - nije obična četka za čišćenje kože lica, to je nešto više. Rezultat njene upotrebe ne samo da ćete primetiti vi, nego i ljudi oko vas.
+            Prepustite se 2-minutnom dnevnom tretmanu koji će vašu kožu učiniti čisto, svežom i svilenkastom.</p>
         <div class="row">
             <div class="descr-left">
-                <h3 class="descr-h3">LE DONNE<span> L'HANNO PROVATO</span></h3>
-                <p>LINA 2 delicatamente esfolia le cellule morte, libera i pori ostruiti e rimuove fino a</p>
+                <h3 class="descr-h3"><span>DOKAZANO</span> JE DA</h3>
+                <p>IRIS nežno odstranjuje mrtve ćelije, čisti začepljene pore i uklanja do</p>
                 <div class="percent">99.5%</div>
-                <div class="descr-text">DI IMPURITÀ E SEBO</div>
+                <div class="descr-text">NEČISTOĆA I SEBUMA</div>
             </div>
             <div class="descr-right">
                 <img src="{{ asset('/') }}purplerelaxFiles/brush/descr.jpg" alt="img" loading="lazy">
@@ -224,15 +195,15 @@
         <ul class="block4-list">
             <li class="block4-item">
                 <div class="block4-percent">100%</div>
-                <div class="block4-content">PELLE PIÙ SANA</div>
+                <div class="block4-content">zdrava koža</div>
             </li>
             <li class="block4-item">
                 <div class="block4-percent">98%</div>
-                <div class="block4-content">PELLE PIÙ LISCIA</div>
+                <div class="block4-content">glatka koža</div>
             </li>
             <li class="block4-item">
                 <div class="block4-percent">90%</div>
-                <div class="block4-content">PELLE PIÙ ELASTICA E TONICA</div>
+                <div class="block4-content">elastičnija koža</div>
             </li>
         </ul>
     </div>
@@ -241,33 +212,21 @@
     <div class="wrapper">
         <img src="{{ asset('/') }}purplerelaxFiles/brush/product.png" alt="img" class="block5__img" loading="lazy">
         <div class="block5-left">
-            <h2>UN SISTEMA AVANZATO DELLA PULIZIA DELLA PELLE DEL VISO <span class="inL_18823">
+            <h2>NAPREDNI SISTEM ZA ČIŠĆENJE KOŽE LICA <span class="inL_18823">
                   <span class="ts">T-SONIC</span><sub>™</sub></span>
             </h2>
-            <p>Grazie alla tecnologia intensiva T-Sonic™, le nuove spazzole per la pulizia della pelle LINA 2
-                rimuovono le cellule morte e i residui del trucco in modo due volte più efficace e delicato, nonché
-                eliminano il 99,5% delle impurità e del sebo, accelerando l'assorbimento dei prodotti per la cura
-                della pelle.
-            </p>
+            <p>Zahaljujući intenzivnoj T-Sonic™ tehnologiji, nove IRIS četke za čišćenje kože uklanjaju mrtve ćelije i ostatke šminke dvostruko efikasnije
+                i nežnije. Eliminišu 99,5% nečistoća i sebuma ubrzavajući apsorpciju proizvoda za negu kože.</p>
         </div>
         <div class="block5-right">
-            <h2>TECNOLOGIA AVANZATA <span>CHE PREVIENE L'INVECCHIAMENTO</span> DELLA PELLE</h2>
-            <p>L'uso degli impulsi a bassa frequenza per la prevenzione dell'invecchiamento consente di ridurre
-                visivamente la quantità delle rughe di espressione e quelle di età. La pelle diventa più elastica e
-                tonica.
-            </p>
+            <h2>NAPREDNA TEHNOLOGIJA KOJA SPREČAVA <span>STARENJE KOŽE</span> </h2>
+            <p>Upotreba niskofrekventnih impulsa za prevenciju starenja pospešuje zatezanje lica i uklanjanje bora. Koža postaje elastičnija i lepša.</p>
         </div>
     </div>
 </section>
 <section class="block6 block">
     <div class="wrapper center">
-        <h2><span>APPROCCIO INDIVIDUALE</span> A SECONDA DEL <span>TUO TIPO DI PELLE</span></h2>
-        <p class="descr-p center">Sono disponibili 4 modelli di LINA 2, le spazzole dei quali sono stati
-            progettati tenendo condo delle caratteristiche individuali della tua pelle. Clicca qui sotto per
-            scoprire quale è più adatto per te.
-        </p>
-        <p><span class="button ever-popup-btn">Fatti richiamare</span></p>
-        <img src="{{ asset('/') }}purplerelaxFiles/brush/products.jpg" alt="img" loading="lazy">
+        <h2><span>INDIVIDUALNI PRISTUP</span> ZAVISNO OD <span>VAŠEG TIPA KOŽE </span></h2>
     </div>
 </section>
 <section class="block7 block">
@@ -278,14 +237,12 @@
                     <div class="img">
                         <img src="{{ asset('/') }}purplerelaxFiles/brush/1.png" alt="img" loading="lazy">
                     </div>
-                    <p class="block7-p">DOPPIA PULIZIA T-SONIC™</p>
+                    <p class="block7-p">T-SONIC™ DVOSTRUKO ČIŠĆENJE</p>
                 </div>
                 <div class="v2 v21">
-                    <h4>EFFICACIA INSUPERABILE</h4>
-                    <p>Ci sono 2 azionamenti che garantiscono la potenza due volte più forte, ognuno di loro crea
-                        8.000 impulsi T-Sonic™ (transdermico sonico) al minuto e assicura la pulizia della pelle più
-                        potente e profondo, ma anche più delicato.
-                    </p>
+                    <h4>T-SONIC™ DVOSTRUKO ČIŠĆENJE</h4>
+                    <p>Postoje 2 motorića koji garantuju duplo veću snagu. Svaki od njih stvara 8.000 T-Sonic™ (transdermalnih zvučnih) impulsa u minuti i obezbeđuje
+                        najsnažnije i najnežnije dubinsko čišćenje kože.</p>
                 </div>
             </div>
             <div class="col"></div>
@@ -294,14 +251,12 @@
                     <div class="img">
                         <img src="{{ asset('/') }}purplerelaxFiles/brush/6.png" alt="img" loading="lazy">
                     </div>
-                    <p class="block7-p">SUPERFICIE DELLA SECONDA GENERAZIONE</p>
+                    <p class="block7-p">TEHNOLOGIJA TREĆE GENERACIJE</p>
                 </div>
                 <div class="v2 v22">
-                    <h4>DESIGN COMPLETAMENTE OTTIMIZZATO</h4>
-                    <p>La superficie è 50% più grande, ciò garantisce la pulizia più efficace. Le setole in silicone
-                        più lunghe offrono una pulizia migliore e più delicata. L'involucro in silicone vellutato
-                        per un maggiore comfort e una migliore efficienza.
-                    </p>
+                    <h4>TEHNOLOGIJA TREĆE GENERACIJE</h4>
+                    <p>Površina je 50% veća što garantuje najefikasniji tretman. Duže silikonske četke pružaju bolje i nežnije čišćenje.
+                        Baršunasto silikonsko kućište za veću udobnost i bolju efikasnost.</p>
                 </div>
             </div>
         </div>
@@ -311,14 +266,12 @@
                     <div class="img">
                         <img src="{{ asset('/') }}purplerelaxFiles/brush/2.png" alt="img" loading="lazy">
                     </div>
-                    <p class="block7-p">DESIGN UNICO CON PARTI IN SILICONE</p>
+                    <p class="block7-p">JEDINSTVENI DIZAJN SA SILIKONSKIM DELOVIMA</p>
                 </div>
                 <div class="v2 v23">
-                    <h4>CURA INCREDIBILMENTE DELICATA E IGIENICA</h4>
-                    <p>Le setole morbide hanno un effetto delicato sulla pelle. La superficie igienica in silicone
-                        non ha i pori che consente di prevenire la proliferazione dei batteri. L'igiene è 35 volte
-                        superiore rispetto alle normali spazzole per la pulizia.
-                    </p>
+                    <h4>JEDINSTVENI DIZAJN SA SILIKONSKIM DELOVIMA</h4>
+                    <p>Meke četke nežno deluju na kožu. Higijenska silikonska površina nema pore što pomaže u sprečavanju proliferacije bakterija. Higijena je 35 puta
+                        veća od normalnih četkica za čišćenje.</p>
                 </div>
             </div>
             <div class="col"></div>
@@ -327,13 +280,11 @@
                     <div class="img">
                         <img src="{{ asset('/') }}purplerelaxFiles/brush/5.png" alt="img" loading="lazy">
                     </div>
-                    <p class="block7-p">MODALITÀ DI PREVENZIONE DELL'INVECCHIAMENTO</p>
+                    <p class="block7-p">METODA PREVENCIJE STARENJA</p>
                 </div>
                 <div class="v2 v24">
-                    <h4>TORNA IL TEMPO ADDIETRO</h4>
-                    <p>Indirizza gli impulsi a bassa frequenza sulle parti dove spesso compaiono le rughe. La pelle
-                        diventerà più liscia ed elastica.
-                    </p>
+                    <h4>METODA PREVENCIJE STARENJA</h4>
+                    <p>Usmerava impulse niske frekvencije na delove lica na kojima se najpre pojavljuju bore. Koža postaje lepša i elastičnija.</p>
                 </div>
             </div>
         </div>
@@ -343,13 +294,11 @@
                     <div class="img">
                         <img src="{{ asset('/') }}purplerelaxFiles/brush/3.png" alt="img" loading="lazy">
                     </div>
-                    <p class="block7-p">OTTIMO INVESTIMENTO</p>
+                    <p class="block7-p">ODLIČNA INVESTICIJA</p>
                 </div>
                 <div class="v2 v25">
-                    <h4>NELLA CURA DELLA PELLE</h4>
-                    <p>Le testine sostituibili per la spazzola non sono necessarie. Garanzia limitata di 2 anni.
-                        Garanzia di qualità per un periodo di 10 anni.
-                    </p>
+                    <h4>ODLIČNA INVESTICIJA</h4>
+                    <p>Zamenske glave i četkice nisu potrebne. Dajemo garanciju od 2 godine na proizvod.</p>
                 </div>
             </div>
             <div class="col"></div>
@@ -358,14 +307,12 @@
                     <div class="img">
                         <img src="{{ asset('/') }}purplerelaxFiles/brush/4.png" alt="img" loading="lazy">
                     </div>
-                    <p class="block7-p">DESIGN RAFFINATO PROGETTATO IN SVEZIA</p>
+                    <p class="block7-p">KVALITETNA I VODOOTPORNA</p>
                 </div>
                 <div class="v2 v26">
-                    <h4>CREATO CON CURA PER TE</h4>
-                    <p>La spazzola è completamente impermeabile, quindi può essere utilizzata in bagno o in doccia.
-                        Le 12 modalità di intensità configurabili per la cura delicata della pelle. Una batteria
-                        completamente caricata è sufficiente per 450 usi.
-                    </p>
+                    <h4>KVALITETNA I VODOOTPORNA</h4>
+                    <p>Četka je potpuno vodootporna, tako da se može koristiti za vreme kupanja ili tuširanja. 12 režima različitih intenziteta za negu kože.
+                        Potpuno napunjena baterija dovoljna je za 45 upotreba.</p>
                 </div>
             </div>
         </div>
@@ -374,52 +321,42 @@
 </section>
 <section class="block8 block">
     <div class="wrapper">
-        <h3 class="descr-h3 center">SEMPLICE TRATTAMENTO QUOTIDIANO PER LA CURA DELLA PELLE</h3>
+        <h3 class="descr-h3 center">JEDNOSTAVAN TRETMAN ZA NEGU KOŽE</h3>
         <ul>
             <li>
                 <img src="{{ asset('/') }}purplerelaxFiles/brush/w1.jpg" alt="img" loading="lazy">
-                <h4><span>01.</span> Applicazione di un prodotto per la pulizia della pelle</h4>
-                <p>Applicare un prodotto per la pulizia della pelle che è adatta per te. Bagnare la spazzola LINA™ 2
-                    e attivare la modalità di pulizia.
-                </p>
+                <h4><span>01.</span> Primena prizvoda za čišćenje kože</h4>
+                <p>Nanesite proizvod za čišćenje kože koji vam odgovara. Navlažite IRIS četku i aktivirajte režim čišćenja.</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}purplerelaxFiles/brush/w2.jpg" alt="img" loading="lazy">
-                <h4><span>02.</span> Pulizia</h4>
-                <p>Per un minuto muovere la spazzola LINA 2 sulla superficie della pelle in modo delicato e
-                    circolare.
-                </p>
+                <h4><span>02.</span> Čišćenje</h4>
+                <p>Jedan minut pomerajte četkicu IRIS po površini kože nežno i kružno.</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}purplerelaxFiles/brush/w3.jpg" alt="img" loading="lazy">
-                <h4><span>03.</span> Risciacquo</h4>
-                <p>Risciacquare il viso con acqua e asciugarlo con un asciugamano. Se necessario, applicare i
-                    prodotti per la cura della pelle.
-                </p>
+                <h4><span>03.</span> Ispiranje</h4>
+                <p>Isperite lice vodom i osušite ga peškirom. Ako je potrebno, nanesite proizvode za negu kože.</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}purplerelaxFiles/brush/w4.jpg" alt="img" loading="lazy">
-                <h4><span>04.</span> Prevenzione dell'invecchiamento</h4>
-                <p>Attivare la modalità di prevenzione dell'invecchiamento LINA 2. Per un minuto mettere la spazzola
-                    sulle parti in cui la pelle è soggetta alle rughe.
-                </p>
+                <h4><span>04.</span> Prevencija starenja</h4>
+                <p>Aktivirajte režim prevencije starenja. Na jedan minut stavite četku na područje lica koje je sklono boranju.</p>
             </li>
         </ul>
     </div>
 </section>
 <section class="block9 block">
     <div class="wrapper">
-        <h3 class="descr-h3 center">BEAUTY BLOGGER CHE AMANO LINA 2?</h3>
+        <h3 class="descr-h3 center">BEAUTY BLOGERKE KOJE VOLE IRIS?</h3>
         <div class="bloger">
             <div class="bloger-left">
                 <img src="{{ asset('/') }}purplerelaxFiles/brush/bloger.jpg" alt="img" loading="lazy">
             </div>
             <div class="bloger-right">
                 <div class="bloger-right-wrap">
-                    <p>"Mi piace molto come si presenta la mia pelle dopo l'uso di spazzole da LINA 2, perché è
-                        pulita, ma non secca!”
-                    </p>
-                    <div>Osia</div>
+                    <p>"Zaista mi se sviđa kako moja koža izgleda nakon upotrebe LINA četke za lice, čista je i nije suva!"</p>
+                    <div>Marija</div>
                 </div>
             </div>
         </div>
@@ -427,7 +364,7 @@
 </section>
 <section class="block10 block">
     <div class="wrapper">
-        <h3 class="descr-h3 center">OSSESSIONE CON LINA 2</h3>
+        <h3 class="descr-h3 center">KO JE JEDNOM PROBA NE RAZDVAJA SE OD NJE</h3>
         <ul>
             <li><
                 <img src="{{ asset('/') }}purplerelaxFiles/brush/r1.jpg" alt="img" loading="lazy">
@@ -452,24 +389,21 @@
 </section>
 <section class="block11 block">
     <div class="wrapper">
-        <h3 class="descr-h3 center"> LINA 2 VALUTAZIONI E RECENSIONI</h3>
-        <p class="descr-p center">Tutte le recensioni sono compilate dai clienti senza alcun incentivo o
-            incoraggiamento.
-        </p>
+        <h3 class="descr-h3 center">IRIS OCENE I UTISCI</h3>
+        <p class="descr-p center">Evo šta su kupci rekli o našem proizvodu</p>
         <div class="row">
             <div class="left">
                 <div>
                     <img src="{{ asset('/') }}purplerelaxFiles/brush/star.png" alt="img" loading="lazy">
                 </div>
-                <div>Laura</div>
-                <p class="date-20 rew__date" data-format="monthMin dd, yyyy">feb 20, 2021</p>
+                <div>Lara</div>
+                <p class="date-20 rew__date" data-format="monthMin dd, yyyy">Jun 20, 2021</p>
             </div>
             <div class="right">
-                <div>Finalmente mi sono liberata dei punti neri sul naso :)</div>
-                <p>Finalmente mi sono liberata dei punti neri sul naso. Grazie a LINA 2. Sono così felice di
-                    non aver risparmiato i soldi e di averla comprata. Tutti i miei amici hanno già notato i
-                    miglioramenti e sono molto felice di ricevere i complimenti infiniti :)
-                </p>
+                <div>Konačno sam se rešila mitesera na nosu!</div>
+                <p>Konačno sam se rešila mitesera na nosu.
+                    Hvala IRIS. Tako mi je drago što sam kupila ovaj proizvod i nisam bacila novac. Svi moji prijatelji su već primetili poboljšanje i veoma sam
+                    srećna što dobijam beskrajne komplimente. :)</p>
             </div>
         </div>
         <div class="row">
@@ -477,16 +411,14 @@
                 <div>
                     <img src="{{ asset('/') }}purplerelaxFiles/brush/star.png" alt="img" loading="lazy">
                 </div>
-                <div>Francesca</div>
-                <p class="date-15 rew__date" data-format="monthMin dd, yyyy">feb 25, 2021</p>
+                <div>Jovana</div>
+                <p class="date-15 rew__date" data-format="monthMin dd, yyyy">Avgust 25, 2021</p>
             </div>
             <div class="right">
-                <div>Tutti hanno notato che la mia pelle è diventata molto più pulita.</div>
-                <p>Tutti hanno notato che la mia pelle è diventata molto più pulita. I punti neri sono svaniti, i
-                    pori si sono ristretti e la pelle è diventata più liscia e uniforme. Uso LINA 2 due volte
-                    al giorno come è raccomandato nell’istruzione e dopo l’applicazione dei cosmetici giorno o notte
-                    per la pulizia del viso. Il processo di pulizia è semplice e piacevole. Consigliatissimo!
-                </p>
+                <div>Svi su primetili da je moja koža postala mnogo čistija!</div>
+                <p>Svi su primetili da je moja koža postala mnogo čistija. Miteseri su nestali, pore su se smanjile, a koža je postala glatkija i ujednačenija.
+                    LINA2 četku koristim dva puta dnevno prema uputstvu, pre nanošenja dnevne ili noćne kozmetike za čišćenje lica. Proces čišćenja je jednostavan i prijatan.
+                    Toplo preporučujem!</p>
             </div>
         </div>
         <div class="row">
@@ -494,17 +426,13 @@
                 <div>
                     <img src="{{ asset('/') }}purplerelaxFiles/brush/star.png" alt="img" loading="lazy">
                 </div>
-                <div>Alessia</div>
-                <p class="date-10 rew__date" data-format="monthMin dd, yyyy">mar 02, 2021</p>
+                <div>Aleksandra</div>
+                <p class="date-10 rew__date" data-format="monthMin dd, yyyy">Maj 02, 2021</p>
             </div>
             <div class="right">
-                <div>LINA 2 è ideale per la pelle sensibile</div>
-                <p>Ho tanti problemi con la pelle, spesso soffro di eczema. Per mesi ho letto le recensioni online e
-                    ho studiato le offerte sul mercato, alla fine ho optato per LINA 2. LINA 2 bordo è
-                    stata creata appositamente per la pelle sensibile e le sue setole in silicone sono
-                    straordinariamente morbidi, ciò distingue LINA 2 da altre spazzole più rigide che solo graffiano
-                    la mia pelle sensibile.
-                </p>
+                <div>Kreirana je posebno za osetljivu kožu i izuzetno je mekana, što je izdvaja od ostalih četkica!</div>
+                <p>Imala sam toliko problema sa kožom, često su mi se pojavljivali ekcemi. Mesecima sam čitala recenzije na internetu, proučavala razne proizvode i na kraju sam se
+                    odlučila za IRIS četkicu. Kreirana je posebno za osetljivu kožu i izuzetno je mekana, što je izdvaja od ostalih četkica koje mi za razliku od nje nisu odgovarale.</p>
             </div>
         </div>
     </div>
@@ -513,25 +441,25 @@
     <div class="mw">
         <div class="r">
             <div class="g3 fac">
-                <h2>Come ordinarla?</h2>
+                <h2>KAKO PORUČITI?</h2>
             </div>
             <div class="g9">
                 <ul class="r">
                     <li class="g3">
                         <img src="{{ asset('/') }}purplerelaxFiles/brush/how__img-1.png" alt="img" loading="lazy">
-                        <p><strong>Lascia una richiesta </strong> sul nostro sito</p>
+                        <p><strong>Popunite formu</strong> podacima za dostavu</p>
                     </li>
                     <li class="g3">
                         <img src="{{ asset('/') }}purplerelaxFiles/brush/how__img-2.png" alt="img" loading="lazy">
-                        <p><strong>Ti richiameremo </strong>e specifichiamo l'indirizzo di spedizione</p>
+                        <p><strong>Potvrdićemo porudžbinu</strong> ubrzo</p>
                     </li>
                     <li class="g3">
                         <img src="{{ asset('/') }}purplerelaxFiles/brush/how__img-3.png" alt="img" loading="lazy">
-                        <p><strong>Consegneremo la spazzola у</strong> in qualsiasi angolo del paese</p>
+                        <p><strong>Proizvod šaljemo</strong> u roku od 1-2 radna dana</p>
                     </li>
                     <li class="g3">
                         <img src="{{ asset('/') }}purplerelaxFiles/brush/how__img-4.png" alt="img" loading="lazy">
-                        <p><strong>Paghi l'ordine </strong> al ricevimento nell'ufficio postale</p>
+                        <p><strong>Plaćate </strong> po prijemu pošiljke</p>
                     </li>
                 </ul>
             </div>
@@ -540,21 +468,19 @@
 </article>
 <section class="header block">
     <div class="wrapper">
-        <h1 class="header-title">UNA SPAZZOLA RIVOLUZIONARIA PER LA PULIZIA E LE CURE ANTI-INVECCHIAMENTO DELLA
-            PELLE
-        </h1>
+        <h1 class="header-title">REVOLUCIONARNA ČETKA ZA ČIŠĆENJE I NEGU KOŽE PROTIV STARENJA</h1>
         <div class="row">
             <div class="left-text">
-                <p class="left-text-title">UNA SPAZZOLA PER LA PULIZIA DEL VISO CREATA PER IL TUO TIPO DI PELLE</p>
+                <p class="left-text-title">ČETKA ZA ČIŠĆENJE LICA KREIRANA ZA SVE TIPOVE KOŽE</p>
                 <ul class="left-text-list">
-                    <li class="left-text-item">Viso pulito</li>
-                    <li class="left-text-item">Pelle liscia</li>
-                    <li class="left-text-item">Addio ai cosmetologi</li>
-                    <li class="left-text-item">Vero trattamento SPA a casa tua</li>
+                    <li class="left-text-item">Za čisto lice</li>
+                    <li class="left-text-item">Za glatku kožu</li>
+                    <li class="left-text-item">Bez odlaska kozmetičaru</li>
+                    <li class="left-text-item">SPA tretman u vašem domu</li>
                 </ul>
             </div>
             <div class="header__LINA">
-                <span>LINA</span><sup>TM</sup> <span>2</span>
+                <span>IRIS</span><sup>TM</sup>
             </div>
             <div class="prod">
                 <img src="{{ asset('/') }}purplerelaxFiles/brush/products-top.png" alt="img" loading="lazy">
@@ -598,53 +524,41 @@
                                 RSD
                             </i>
                         </div>
-                        Popust<br><span>70%</span>
+                        Popust<br><span>40%</span>
                     </div>
-                    {{--<div class="main-timer">--}}
-                        {{--<div class="left">L'offerta speciale scade tra:</div>--}}
-                        {{--<div class="time">--}}
-                            {{--<span class="days">00</span>--}}
-                            {{--<span class="dots">:</span>--}}
-                            {{--<span class="hours">00</span>--}}
-                            {{--<span class="dots">:</span>--}}
-                            {{--<span class="minutes">00</span>--}}
-                            {{--<span class="dots">:</span>--}}
-                            {{--<span class="seconds">00</span>--}}
-                        {{--</div>--}}
-                        {{--<div class="time-name">--}}
-                            {{--<span>giorni</span>--}}
-                            {{--<span>ore</span>--}}
-                            {{--<span>minuti</span>--}}
-                            {{--<span>secondi</span>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
                 </div>
                 <div class="sale-form-wrap">
                     <span class="qua-title">Izaberite količinu:</span>
-                    <div class="qua">
-                        <div class="one active">1 komad</div>
-                        <div class="two">2 komada</div>
-                    </div>
-                    <div class="prices ">
-                        <span class="one-price">
-                           <b class="x_price_current">
-                              {{ $prices[1]['amount'] }}
-                           </b>
-                           <span class="x_currency">
-                              RSD
-                           </span>
-                        </span>
-                        <span class="two-price">
-                           <b class="">{{ $prices[2]['amount'] }}</b>
-                           <span class="x_currency">
-                              RSD
-                           </span>
-                           <br><span></span>
-                        </span>
-                    </div>
                     <form class="x_order_form" action="{{$orderRoute}}" method="post">
+                        <div class="qua">
+                            <label for="sq-1"><div class="one active" id="sone" onclick="sone();">1 komad</div></label>
+                            <label for="sq-2"><div class="two" id="stwo" onclick="stwo();">2 komada</div></label>
+                        </div>
+                        <div class="prices ">
+                            <span class="one-price">
+                               <b class="x_price_current">
+                                  {{ $prices[1]['amount'] }}
+                               </b>
+                               <span class="x_currency">
+                                  RSD
+                               </span>
+                            </span>
+                            <span class="two-price">
+                               <b class="">{{ $prices[2]['amount'] }}</b>
+                               <span class="x_currency">
+                                  RSD
+                               </span>
+                               <br><span></span>
+                            </span>
+                        </div>
                         {{ csrf_field() }}
                         @include('lander.naturapharm.components.form_hidden_fields')
+                        @foreach($prices as $singlePrice)
+                        <input type="radio" name="quantity" class="quantity" value="{{ $singlePrice['quantity'] }}" id="sq-{{ $singlePrice['quantity'] }}"
+                        @if(old('quantity') == $singlePrice['quantity']) checked @endif
+                        @if($singlePrice['quantity'] === 1) checked @endif
+                        >
+                        @endforeach
                         <input class="name" name="name" placeholder="Ime i prezime" type="text" required>
                         <input class="phone" name="phone" placeholder="Telefon" type="tel" required>
                         <input class="name" name="shipping_address" placeholder="Adresa" type="text" required>

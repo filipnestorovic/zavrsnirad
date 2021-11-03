@@ -15,27 +15,27 @@
 @include('components.display_errors')
 <section class="header-one">
     <div class="wrap">
-        <h1>Sweet Sweat</h1>
-        <h2>Термопояс для похудения</h2>
-        <div class="tovar-sale">скидка <span>-53%</span></div>
+        <h1>SWEET SWEAT</h1>
+        <h2>TERMO POJAS ZA GUBITAK TEŽINE</h2>
+        <div class="tovar-sale">popust <span>-40%</span></div>
         <ul class="header-one_plus">
             <li>
-                <p>Ускоряет процесс жиросжигания</p>
+                <p>Ubrzava proces sagorevanja masti</p>
             </li>
             <li>
-                <p>Выводит лишнюю воду и токсины</p>
+                <p>Uklanja višak vode i toksina</p>
             </li>
             <li>
-                <p>Улучшает кровообращение</p>
+                <p>Poboljšava cirkulaciju krvi</p>
             </li>
             <li>
-                <p>Снижает нагрузку на спину</p>
+                <p>Smanjuje napetost u leđima</p>
             </li>
         </ul>
         <div class="offer_left">
             <div class="price clearfix">
                 <div class="old-cost">
-                    <span>Обычная цена:</span>
+                    <span>Stara cena:</span>
                     <p>
                         <span>
                            {{ $prices[1]['originalPrice'] }}
@@ -46,7 +46,7 @@
                     </p>
                 </div>
                 <div class="new-cost">
-                    <span>Цена сегодня:</span>
+                    <span>Nova cena:</span>
                     <p>
                         {{ $prices[1]['amount'] }}
                         <small>
@@ -61,48 +61,49 @@
 </section>
 <section class="sect2">
     <div class="wrap">
-        <h2 class="title"><span>Роскошная фигура</span> с уникальным поясом для похудения</h2>
+        <h2 class="title"><span>SAVRŠENA FIGURA</span> SA JEDINSTVENIM POJASOM ZA MRŠAVLJENJE</h2>
         <div class="benef_block">
             <img src="{{ asset('/') }}flexonikFiles/sweetbelt/s2_img.jpg" alt="">
-            <p><span><span>в 3 раза</span> эффективнее</span> вывод воды и&nbsp;токсинов</p>
+            <p><span><span>3 PUTA</span> EFIKASNIJE</span> IZBACIVANJE VODE I TOKSINA</p>
         </div>
         <div class="description">
-            <p>Sweet Sweat существенно повышает эффективность любой физической нагрузки. Усиливая кровоснабжение тканей и термогенез, значительно <span>увеличивает количество потраченных калорий во время тренировки и усиливает потоотделение</span> больше, чем вы могли бы подумать.</p>
+            <p>Sweet Sweat značajno povećava efikasnost bilo koje fizičke aktivnosti. <span>Pospešujući protok krvi u tkivu i termogenezu,
+                značajno povećava sagorevanje kalorija tokom vežbanja i pojačava znojenje</span> i više nego što očekujete.</p>
             <img src="{{ asset('/') }}flexonikFiles/sweetbelt/1.gif" alt="">
-            <p>За счет усиленного кровообращения в мышцах и тканях, <span>ускоряет разогрев и восстановление, помогает избежать травм</span> и выводит гораздо больше лишней воды и токсинов, помогая вам достичь своей цели гораздо быстрее.</p>
+            <p>Povećavajući cirkulaciju krvi u mišićima i tkivima, ubrzava zagrevanje i oporavak, <span>pomaže izbegavanju povreda i uklanja višak vode i toksina,</span> pomažući vam da postignete cilj mnogo brže.</p>
         </div>
     </div>
 </section>
 <section class="sect5">
     <div class="wrap">
-        <h2 class="title"><span>Основные преимущества</span></h2>
+        <h2 class="title"><span>GLAVNE PREDNOSTI</span></h2>
         <div class="benef_container clearfix">
             <ul class="benef_list2 list_left">
                 <li>
                     <span>01</span>
-                    <p>Ускоряет процесс жиросжигания</p>
+                    <p>Ubrzava proces sagorevanja masti</p>
                 </li>
                 <li>
                     <span>02</span>
-                    <p>Выводит лишнюю воду и токсины</p>
+                    <p>Uklanja višak vode i toksina</p>
                 </li>
                 <li>
                     <span>03</span>
-                    <p>Усиливает мышечную активность</p>
+                    <p>Povećava aktivnost mišića</p>
                 </li>
             </ul>
             <ul class="benef_list2 list_right">
                 <li>
                     <span>04</span>
-                    <p>Ускоряет восстановление сил</p>
+                    <p>Ubrzava vraćanje energije</p>
                 </li>
                 <li>
                     <span>05</span>
-                    <p>Улучшает кровообращение</p>
+                    <p>Poboljšava cirkulaciju krvi</p>
                 </li>
                 <li>
                     <span>06</span>
-                    <p>Разогревает мышцы и&nbsp;ткани</p>
+                    <p>Zagreva mišiće i tkiva</p>
                 </li>
             </ul>
         </div>
@@ -114,23 +115,23 @@
 </section>
 <section class="sect4">
     <div class="wrap">
-        <h2 class="title"><span>Для чего нужен пояс Sweet Sweat</span></h2>
+        <h2 class="title"><span>ČEMU SLUŽI POJAS SWEET SWEAT?</span></h2>
         <ul class="benef1">
             <li>
                 <img src="{{ asset('/') }}flexonikFiles/sweetbelt/benef1_img1.jpg" alt="">
-                <p>Эффективная борьба с лишними килограммами</p>
+                <p>Efikasna borba protiv viška kilograma</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}flexonikFiles/sweetbelt/benef1_img2.jpg" alt="">
-                <p>Повышение продуктивности при занятии спортом</p>
+                <p>Poboljšanje performansi u sportu</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}flexonikFiles/sweetbelt/benef1_img3.jpg" alt="">
-                <p>Устранение вреда от сидячего образа жизни</p>
+                <p>Uklanjanje posledica od dugotrajnog sedenja</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}flexonikFiles/sweetbelt/benef1_img4.jpg" alt="">
-                <p>Быстрое восстановление фигуры после родов</p>
+                <p>Brz oporavak nakon porođaja</p>
             </li>
         </ul>
         <a href="#order_form" class="button-m">Poruči sada</a>
@@ -138,45 +139,50 @@
 </section>
 <section class="sect3">
     <div class="wrap">
-        <h2 class="title"><span>Характеристики</span> и советы по использованию</h2>
+        <h2 class="title"><span>SPECIFIKACIJE</span> I SAVETI ZA UPOTREBU</h2>
         <img src="{{ asset('/') }}flexonikFiles/sweetbelt/s3_img.jpg" alt="">
         <ul class="char_list">
-            <li><b>Размер:</b> универсальный</li>
-            <li><b>Материал:</b> 100% безлатексный неопрен</li>
-            <li><b>Цвет:</b> черный, желтый</li>
-            <li><b>Уход:</b> не стирать, промыть под струей воды</li>
+            <li><b>Veličina:</b> univerzalna</li>
+            <li><b>Materijal:</b> 100% neopren bez lateksa</li>
+            <li><b>Boja:</b> crna, žuta</li>
+            <li><b>Održavanje:</b> samo ispiranje pod tekućom vodom</li>
         </ul>
     </div>
 </section>
 <section class="sect6">
     <div class="wrap nopad">
-        <h2 class="title"><span>Отзывы покупателей</span></h2>
+        <h2 class="title"><span>RECENZIJE KUPACA</span></h2>
         <div class="reviews">
             <div>
                 <div class="rev_item">
                     <img src="{{ asset('/') }}flexonikFiles/sweetbelt/rev1.jpg" alt="">
                     <div class="info">
-                        <p>Анатолий С. <br>26 лет</p>
+                        <p>ANDRIJA K. <br>26 godina</p>
                     </div>
-                    <p>Мне кажется, что каждый мужчина хочет иметь хорошую форму, потому что женщины в первую очередь обращают на это внимание. Купил себе Sweet Sweat и теперь выгляжу отлично, даже лучше. При этом занимаюсь спортом всего 20-30 минут в день и не думаю о питании, потому что лишний вес тоже сжигается легко.</p>
+                    <p>Čini mi se da svaki muškarac želi da bude u dobroj formi, jer žene na to pre svega obraćaju pažnju.
+                        Kupio sam sebi Sweet Sweat i sada izgledam sjajno. Sportom se bavim 30-40 minuta dnevno i ne razmišljam o ishrani,
+                        jer višak kilograma vrlo lako sagorim.</p>
                 </div>
             </div>
             <div>
                 <div class="rev_item">
                     <img src="{{ asset('/') }}flexonikFiles/sweetbelt/rev2.jpg" alt="">
                     <div class="info">
-                        <p>Светлана Х. <br>32 года</p>
+                        <p>SVETLANA S. <br>32 GODINE</p>
                     </div>
-                    <p>Пояс просто находка. Надеваешь и фигура моментально преображается. Ношу 2 недели и уже заметен результат. Талия стала уже и животик уменьшился. Посоветовала всем моим подругам, они тоже оценили пояс. Sweet Sweat верный путь к идеальной талии!</p>
+                    <p>Ovaj pojas je nešto najbolje što sam kupila. Nosim ga dok vežbam, šetam ili radim kućne poslove.
+                        Nakon 2 nedelje, efekat je prilično vidljiv. Struk je postao uži, a stomak se smanjio. Posavetovala sam svoje drugarice da kupe ovaj pojas,
+                        jer je to najsigurniji put do savršenog struka.</p>
                 </div>
             </div>
             <div>
                 <div class="rev_item">
                     <img src="{{ asset('/') }}flexonikFiles/sweetbelt/rev3.jpg" alt="">
                     <div class="info">
-                        <p>Евгений Г. <br>34 года</p>
+                        <p>VUKSAN K. <br>34 GODINE</p>
                     </div>
-                    <p>Мне пояс Sweet Sweat помог избавиться от живота, который стал появляться после 30. И вес я тоже начал набирать стремительно. Я решил попробовать, чтобы привести себя в форму. Пояс отлично помогает: живот практически пропал и мышцы появились! Почему я раньше о нём не узнал.</p>
+                    <p>Pojas Sweet Sweat mi je pomogao da se oslobodim stomaka koji je počeo da se pojavljuje nakon 30. godine. Takođe, počeo sam brzo da dobijam na težini.
+                        Odlučio sam da pokušam da se dovedem u formu. Pojas mi mnogo pomaže, stomak je praktično nestao a mišići su se pojavili. Sve preporuke za ovaj proizvod!</p>
                 </div>
             </div>
         </div>
@@ -185,52 +191,52 @@
 </section>
 <section class="sect7">
     <div class="wrap nopad">
-        <h2 class="title"><span>Доставка и гарантия</span></h2>
+        <h2 class="title"><span>DOSTAVA I PLAĆANJE</span></h2>
         <ul class="order_list clearfix">
             <li>
                 <span>01</span>
                 <div class="text">
-                    <p>Оставляете <br>заявку <br>на сайте</p>
+                    <p>UNESITE <br> PODATKE <br>ZA DOSTAVU</p>
                 </div>
             </li>
             <li>
                 <span>02</span>
                 <div class="text">
-                    <p>Наш менеджер <br>уточняет детали <br>заказа</p>
+                    <p>POTVRDIĆEMO <br> PORUDŽBINU <br> UBRZO</p>
                 </div>
             </li>
             <li>
                 <span>03</span>
                 <div class="text">
-                    <p>Доставляем <br>ваш товар в течение <br>3-10 дней</p>
+                    <p>PAKET ŠALJEMO <br> ZA 1-2 <br> RADNA DANA</p>
                 </div>
             </li>
             <li>
                 <span>04</span>
                 <div class="text">
-                    <p>Оплачиваете <br>посылку при <br>получении</p>
+                    <p>POŠILJKU <br> PLAĆATE <br> PO PREUZIMANJU</p>
                 </div>
             </li>
         </ul>
-        <div class="alert">Мы всегда проверяем товар перед отправкой и гарантируем 100% качество</div>
+        <div class="alert">UVEK PROVERAVAMO ROBU PRE ISPORUKE I GARANTUJEMO 100% KVALITET</div>
     </div>
 </section>
 <section class="header-one bott_sect">
     <div class="wrap">
         <h2>
-            Оставьте заявку и получите пояс Sweet Sweat
+            PORUČITE ODMAH PO SNIŽENOJ CENI OD
             <span>
-                  c выгодой
+                    SAMO
                   {{ $prices[1]['amount'] }}
                   RSD
                </span>
         </h2>
-        <div class="tovar-sale">скидка <span>-53%</span></div>
+        <div class="tovar-sale">popust <span>-40%</span></div>
         <div class="formbox">
             <div class="offer_left">
                 <div class="price clearfix">
                     <div class="old-cost">
-                        <span>Обычная цена:</span>
+                        <span>Stara cena:</span>
                         <p>
                            <span>
                               {{ $prices[1]['originalPrice'] }}
@@ -241,7 +247,7 @@
                         </p>
                     </div>
                     <div class="new-cost">
-                        <span>Цена сегодня:</span>
+                        <span>Nova cena:</span>
                         <p>
                             {{ $prices[1]['amount'] }}
                             <small>
