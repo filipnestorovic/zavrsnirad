@@ -32,25 +32,25 @@
 <div class="main-wrap">
 @include('components.display_errors')
     <section class="title-block">
-        <div class="sub-main-title">Эффективное избавление от волос</div>
-        <h1 class="main-title">Yes Finishing Touch</h1>
+        <div class="sub-main-title">EFIKASNO UKLANJANJE DLAČICA</div>
+        <h1 class="main-title">FINISHING TOUCH</h1>
     </section>
     <section class="top-block-v1">
         <div class="sale-cont">
-            Акция!
-            <strong>53%</strong>
-            Скидка
+            Akcija!
+            <strong>40%</strong>
+            Popust
         </div>
         <div class="cost-cont clearfix">
             <div class="cost old-cost">
-                Обычная цена:
+                Stara cena:
                 <strong>
                     {{ $prices[1]['originalPrice'] }}
                     RSD
                 </strong>
             </div>
             <div class="cost new-cost">
-                Цена по акции:
+                Nova cena:
                 <strong>
                     {{ $prices[1]['amount'] }}
                     RSD
@@ -59,19 +59,15 @@
         </div>
         <div class="describe-cont">
             <ul class="list-1">
-                <li>Действует на волосы любой жесткости</li>
-                <li>Подходит для любых областей тела</li>
-                <li>Работает от прикосновения к телу</li>
+                <li>Pogodno za bikini zonu, pazuhe, noge, ruke i druga područja</li>
+                <li>Efikasno smanjuje brzinu rasta dlačica</li>
+                <li>Deluje na dlačicama bilo koje tvrdoće i strukture</li>
             </ul>
-            <div class="timer-cont">
-                <h3>До конца акции осталось:</h3>
-                <div class="timer-action"></div>
-            </div>
             <a class="button-m" href="#zakaz">Poručite sada</a>
         </div>
     </section>
     <section class="detail-block">
-        <h2 class="lvl-title">Нежен с кожей, беспощаден к волоскам</h2>
+        <h2 class="lvl-title">Finishing Touch uklanja dlačice gde god poželite!</h2>
         <div class="slider-block">
             <div class="slider-cont clearfix">
                 <div>
@@ -95,9 +91,11 @@
             </div>
         </div>
         <div class="text-cont">
-            <p>Эпилятор Finishing Touch избавляет от волос на 82% эффективнее, чем другие средства. В один прекрасный день, не удивляйтесь, когда Вы не сможете пользоваться другими средствами!</p>
-            <p>Регулярное применение бритвы способствует тому, что волоски становятся тонкими и слабыми, а их количество постепенно уменьшается. Специальные лезвия не оказывают агрессивное воздействие на кожу, так что средство подходит для любого типа кожи и волос и его можно использовать на любом участке тела.</p>
-            <p>С ним Вы можете носить самую открытую одежду, не опасаясь быстро отрастающих волосков, неловких красных точек после бритья или прилипшего воска после эпиляции.</p>
+            <p>Finishing Touch uklanja dlake 82% efikasnije od ostalih proizvoda. Redovna upotreba depilatora pomaže da
+                dlačice budu tanke i slabe, a njihov broj se postepeno smanjuje.</p>
+            <p>Specijalne oštrice ne oštećuju kožu, tako
+                da je proizvod pogodan za sve tipove kože i može se koristiti na bilo kom delu tela.</p>
+            <p>Može se nositi najotkrivenija odeća bez straha od brzo rastućih dlačica, neprijatnih crvenih tačaka nakon brijanja ili iritirane kože od vrućeg voska.</p>
         </div>
         <img src="{{ asset('/') }}purplerelaxFiles/finishingtouch_mobile/result1_image.jpg" alt="Yes Finishing Touch" title="Yes Finishing Touch">
         <div class="list">
@@ -105,127 +103,129 @@
                 <div class="icon_block">
                     <div class="icon"></div>
                 </div>
-                <p>Структура волос становится тоньше</p>
+                <p>Struktura dlačica postaje tanja</p>
             </div>
             <div class="list_item">
                 <div class="icon_block">
                     <div class="icon"></div>
                 </div>
-                <p>Эффективно снижает скорость роста волос</p>
+                <p>Dužina dlačica se smanjuje</p>
             </div>
             <div class="list_item">
                 <div class="icon_block">
                     <div class="icon"></div>
                 </div>
-                <p>Можно использовать абсолютно везде</p>
+                <p>Rast dlačica se usporava</p>
             </div>
             <div class="list_item">
                 <div class="icon_block">
                     <div class="icon"></div>
                 </div>
-                <p>Видимый результат за 5 минут</p>
+                <p>Vidljiv rezultat nakon jedne depilacije</p>
             </div>
         </div>
     </section>
     <section class="compound-block-v2">
-        <h2 class="lvl-title">Подойдет для любого участка тела!</h2>
+        <h2 class="lvl-title">POGODNO ZA BILO KOJI DEO TELA</h2>
         <ul class="compound-cont clearfix">
             <li>
                 <img src="{{ asset('/') }}purplerelaxFiles/finishingtouch_mobile/benefits__benefit1_image.jpg" alt="Yes Finishing Touch" title="Yes Finishing Touch">
-                <strong>Для лица</strong>
+                <strong>ZA LICE</strong>
             </li>
             <li>
                 <img src="{{ asset('/') }}purplerelaxFiles/finishingtouch_mobile/benefits__benefit2_image.jpg" alt="Yes Finishing Touch" title="Yes Finishing Touch">
-                <strong>Для рук</strong>
+                <strong>ZA RUKE</strong>
             </li>
             <li>
                 <img src="{{ asset('/') }}purplerelaxFiles/finishingtouch_mobile/benefits__benefit3_image.jpg" alt="Yes Finishing Touch" title="Yes Finishing Touch">
-                <strong>Для зоны бикини</strong>
+                <strong>ZA BIKINI ZONU</strong>
             </li>
             <li>
                 <img src="{{ asset('/') }}purplerelaxFiles/finishingtouch_mobile/benefits__benefit4_image.jpg" alt="Yes Finishing Touch" title="Yes Finishing Touch">
-                <strong>Для ног</strong>
+                <strong>ZA NOGE</strong>
             </li>
         </ul>
     </section>
-    <section class="expert-block-v2">
-        <h2 class="lvl-title">Мнение специалиста</h2>
-        <div class="expert-cont">
-            <div class="expert-title clearfix">
-                <img src="{{ asset('/') }}purplerelaxFiles/finishingtouch_mobile/opinion__photo.jpg" alt="Yes Finishing Touch" title="Yes Finishing Touch">
-                <h3>Ефремова Диана Степановна</h3>
-                <span>мастер депиляции, стаж работы 17 лет</span>
-            </div>
-            <p>Клиническим исследованием, проведённым европейскими учеными установлено:</p>
-            <ul>
-                <li>- Снижение частоты депиляции в области подмышек на 50%, в области бикини на 70%, области ног на 82%</li>
-                <li>- Структура волос становится тоньше</li>
-                <li>- Длина волос уменьшается</li>
-                <li>- Рост волос замедляется</li>
-            </ul>
-        </div>
-    </section>
+    {{--<section class="expert-block-v2">--}}
+        {{--<h2 class="lvl-title">Мнение специалиста</h2>--}}
+        {{--<div class="expert-cont">--}}
+            {{--<div class="expert-title clearfix">--}}
+                {{--<img src="{{ asset('/') }}purplerelaxFiles/finishingtouch_mobile/opinion__photo.jpg" alt="Yes Finishing Touch" title="Yes Finishing Touch">--}}
+                {{--<h3>Ефремова Диана Степановна</h3>--}}
+                {{--<span>мастер депиляции, стаж работы 17 лет</span>--}}
+            {{--</div>--}}
+            {{--<p>Клиническим исследованием, проведённым европейскими учеными установлено:</p>--}}
+            {{--<ul>--}}
+                {{--<li>- Снижение частоты депиляции в области подмышек на 50%, в области бикини на 70%, области ног на 82%</li>--}}
+                {{--<li>- Структура волос становится тоньше</li>--}}
+                {{--<li>- Длина волос уменьшается</li>--}}
+                {{--<li>- Рост волос замедляется</li>--}}
+            {{--</ul>--}}
+        {{--</div>--}}
+    {{--</section>--}}
     <section class="rev-block-v4 color_bg">
-        <h2 class="lvl-title">Отзывы покупателей</h2>
+        <h2 class="lvl-title">Utisci kupaca</h2>
         <div class="rev-cont clearfix">
             <div class="rev-item">
                 <img src="{{ asset('/') }}purplerelaxFiles/finishingtouch_mobile/reviews__review1_photo.jpg" alt="Yes Finishing Touch" title="Yes Finishing Touch">
-                <h4>Берлунова Ирина, 27 лет</h4>
-                <p>Пользуюсь уже второй месяц, это просто нечто! Кожа гладенькая, никакого раздражения, волосы со временем редеют и становятся мягче! До этого перепробовала множество средств, но это самое эффективное) Рекомендую всем! По соотношению качества удаления волос и безболезненности – это лучшее, что может быть!</p>
+                <h4>Svetlana, Beograd</h4>
+                <p>Nikada ne bih verovala da mi Finishing Touch može pomoći. Moja prijateljica koja je bila oduševljena njime ubedila me je da ga poručim.
+                    Kada je kurir doneo porudžbinu, platio sam, raspakovala pošiljku i odmah sam se izdepilirala.
+                    Nakon prve primene koža mi je bila mekana i razlika je bila vidljiva. Posle mesec dana moje lice se potpuno promenilo.</p>
             </div>
             <div class="rev-item">
                 <img src="{{ asset('/') }}purplerelaxFiles/finishingtouch_mobile/reviews__review2_photo.jpg" alt="Yes Finishing Touch" title="Yes Finishing Touch">
-                <h4>Кошелева Инна, 20 лет</h4>
-                <p>Никогда бы не поверила, что Finishing Touch способен мне помочь! Но моя подруга, прибывавшая в восторге от него убедила и меня заказать. Ну что же, курьер принес заказ, я оплатила и стала пробовать. После первого применения результат заметен сразу. После месяца, моё лицо полностью изменилось.</p>
+                <h4>Marina, Valjevo</h4>
+                <p>Kupila sam prijateljici za poklon jer ona ima veoma osetljivu kožu, ali nisam mogla da odolimo da isprobam na sebi.
+                    Bila sam oduševljena i morala sam da poručim i sebi. Dopada mi se činjenica da za njega nema nepristupačnih delova tela.
+                    Takođe sam primetila da mi dlačice sporije rastu i da su manje guste.</p>
             </div>
             <div class="rev-item">
                 <img src="{{ asset('/') }}purplerelaxFiles/finishingtouch_mobile/reviews__review3_photo.jpg" alt="Yes Finishing Touch" title="Yes Finishing Touch">
-                <h4>Цветкова Татьяна, 25 лет</h4>
-                <p>Купила подруге на подарок, но не удержалась и опробовать на себе) От такой работы я была в восторге, пришлось срочно заказывать второй)) Очень нравится то, что для него нет недоступных мест, а качество работы вообще на высоте! Также заметила, что волосы стали расти медленнее и теперь менее густые)</p>
+                <h4>Julija, Smederevo</h4>
+                <p>Koristim ga već drugi mesec i prilično sam zadovoljna. Koža je glatka, nema iritacija i dlaka vremenom postaje mekša.
+                    Pre toga sam probala mnoga sredstva, ali ovo je najefikasnije i najnežnije. Preporučujem svima! Što se tiče odnosa kvaliteta i cene,
+                    ovo je nešto najbolje što može biti!</p>
             </div>
         </div>
     </section>
     <section class="delivery-block-v3">
-        <h2 class="lvl-title">Доставка и оплата</h2>
+        <h2 class="lvl-title">DOSTAVA I PLAĆANJE</h2>
         <ul class="delivery-cont">
             <li>
-                <h3>Доставка почтой</h3>
-                <p>Товар отправляется бандеролью, доставка в течение 1-10 рабочих дней.</p>
+                <h3>ISPORUKA</h3>
+                <p>Dostava brzom poštom u roku od 1-2 radna dana.</p>
             </li>
             <li>
-                <h3>Отсутствие предоплаты</h3>
-                <p>Вы оплачиваете товар только по факту его получения в почтовом отделении.</p>
+                <h3>NEMA PLAĆANJA UNAPRED</h3>
+                <p>Plaćate kuriru po prijemu pošiljke.</p>
             </li>
             <li>
-                <h3>Гарантия качества</h3>
-                <p>Вся продукция прошла контроль качества и полностью сертифицирована!</p>
-            </li>
-            <li>
-                <h3>Анонимность доставки</h3>
-                <p>Товар скрывается от любопытных глаз с помощью плотной упаковки, а его описание при отправлении не указывается.</p>
+                <h3>GARANCIJA KVALITETA</h3>
+                <p>Ukoliko vam se proizvod ne dopadne vratićemo vam novac.</p>
             </li>
         </ul>
     </section>
     <section class="title-block">
-        <div class="sub-main-title">Эффективное избавление от волос</div>
-        <h1 class="main-title">Yes Finishing Touch</h1>
+        <div class="sub-main-title">EFIKASNO UKLANJANJE DLAČICA</div>
+        <h1 class="main-title">FINISHING TOUCH</h1>
     </section>
     <section class="top-block-v1 offer_bottom">
         <div class="sale-cont">
-            Акция!
-            <strong>53%</strong>
-            Скидка
+            Akcija!
+            <strong>40%</strong>
+            Popust
         </div>
         <div class="cost-cont clearfix" id="zakaz">
             <div class="cost old-cost">
-                Обычная цена:
+                Stara cena:
                 <strong>
                     {{ $prices[1]['originalPrice'] }}
                     RSD
                 </strong>
             </div>
             <div class="cost new-cost">
-                Цена по акции:
+                Nova cena:
                 <strong>
                     {{ $prices[1]['amount'] }}
                     RSD
@@ -233,10 +233,6 @@
             </div>
         </div>
         <div class="describe-cont">
-            <div class="timer-cont">
-                <h3>До конца акции осталось:</h3>
-                <div class="timer-action"></div>
-            </div>
             <form class="m1-form" action="{{$orderRoute}}" method="post">
                 {{ csrf_field() }}
                 @include('lander.naturapharm.components.form_hidden_fields')

@@ -36,17 +36,17 @@
 <div class="main-wrap">
     @include('components.display_errors')
     <div class="section block-1">
-        <span class="sale col-3">-50%</span>
+        <span class="sale col-3">-40%</span>
         <div class="cost clearfix">
                <span class="old-cost">
-                  <span style="font-size: 14px;">звичайна ціна<br></span>
+                  <span style="font-size: 14px;">stara cena<br></span>
                   <del>
                      {{ $prices[1]['originalPrice'] }}
                      RSD
                   </del>
                </span>
             <span class="new-cost">
-                  <span  style="font-size: 14px;">акційна ціна<br></span>
+                  <span  style="font-size: 14px;">nova cena<br></span>
                   {{ $prices[1]['amount'] }}
                   RSD
                </span>
@@ -54,7 +54,7 @@
     </div>
     <div class="section block-2 green-bg">
         <h2 class="col-3">
-            Замовте Finishing Touch прямо зараз!
+            Iskoristite ovu neverovatnu akciju i poručite odmah <br> AKCIJA SAMO DANAS!
         </h2>
         <div class="timer">
             <p style="text-align: center;width: 100%;line-height: 1.3;"></p>
@@ -65,67 +65,69 @@
     </div>
     <div class="section block-3 blue-bg">
         <h2 class="col-3 wave-1">
-            ЕФЕКТИВНЕ
+            EFIKASNO
             <br/>
-            <small class="col-1">видалення волосся
-            </small>
+            <small class="col-1">UKLANJANJE DLAČICA</small>
         </h2>
         <ul class="col-3">
-            <li>Можна використовувати будь-де
-            </li>
-            <li>Ефективно знижує швидкість росту волосся</li>
-            <li>Підходить для будь-яких зон тіла
-            </li>
-            <li>Працює від дотику до тіла
-            </li>
-            <li>Діє на волосся будь-якої жорсткості</li>
+            <li>Može se koristiti apsolutno svuda</li>
+            <li>Efikasno smanjuje brzinu rasta dlačica</li>
+            <li>Pogodno za bikini zonu, pazuhe, noge, ruke i druga područja</li>
+            <li>Deluje pri jednom dodiru</li>
+            <li>Deluje na dlačicama bilo koje tvrdoće i strukture</li>
         </ul>
     </div>
     <div class="section block-4">
         <div class="title">
-            <span class="col-2">Finishing Touch</span><br/>- це усунення небажаного волосся там, де цього захочете Ви!
+            <span class="col-2">Finishing Touch</span><br/>- uklanja dlačice gde god poželite!
         </div>
-        <p>Finishing Touch позбавляє від волосся ефективніше, ніж інші засоби. В один прекрасний день, не дивуйтеся, коли Ви не зможете користуватися іншими засобами! Регулярне застосування Finishing Touch сприяє тому, що волосинки стають тонкими і слабкими, а їх кількість поступово зменшується. Спеціальні леза не діють на шкіру агресивно, тому прилад підходить для будь-якого типу шкіри і волосся і його можна використовувати на будь-якій ділянці тіла. З ним Ви зможете носити відкритий одяг, не побоюючись швидко відростаючого волосся, незручних червоних цяток після гоління або прилиплого воску після епіляції.</p>
-        <h3 class="center"><span class="col-2">Finishing Touch</span> підійде до будь-якої ділянки тіла!</h3>
+        <p>Finishing Touch uklanja dlake 82% efikasnije od ostalih proizvoda. Redovna upotreba depilatora pomaže da
+            dlačice budu tanke i slabe, a njihov broj se postepeno smanjuje.Specijalne oštrice ne oštećuju kožu, tako
+            da je proizvod pogodan za sve tipove kože i može se koristiti na bilo kom delu tela. Može se nositi najotkrivenija
+            odeća bez straha od brzo rastućih dlačica, neprijatnih crvenih tačaka nakon brijanja ili iritirane kože od vrućeg voska.</p>
+        <h3 class="center"><span class="col-2">Finishing Touch</span> je pogodan za bio koji deo tela!</h3>
         <div class="center"><img src="{{ asset('/') }}purplerelaxFiles/finishingtouch_mobile2/bg-3.jpg" alt="Finishing Touch"></div>
     </div>
     <div class="section block-6 green-bg">
         <h2 class="col-1 wave-1">
-            Доставка і оплата
+            DOSTAVA I PLAĆANJE
         </h2>
         <ul class="col-3">
-            <li>Доставка поштою, протягом 1-10 робочих днів.
-            </li>
-            <li>Ніяких передплат! Оплата замовлень здійснюється безпосередньо за фактом отримання замовлення.
-            </li>
-            <li>Ви маєте право відмовитися від покупки протягом 14 днів з моменту отримання замовлення, незалежно від причини повернення.</li>
+            <li>Dostava brzom poštom u roku od 1-2 radna dana.</li>
+            <li>Nema plaćanja unapred. Plaća se kuriru po prijemu pošiljke.</li>
+            <li>Ukoliko vam se proizvod ne dopadne vratićemo vam novac.</li>
         </ul>
     </div>
     <div class="section block-7 blue-bg">
         <h2 class="col-3 wave-2">
-            Відгуки наших клієнтів
+            Utisci naših zadovoljnih kupaca
         </h2>
         <div class="container-rew clearfix">
             <div class="rew-item">
                 <img src="{{ asset('/') }}purplerelaxFiles/finishingtouch_mobile2/rew-1.jpg" alt="Finishing Touch">
-                <p>Ніколи б не повірила, що Finishing Touch здатний мені допомогти! Але моя подруга в захваті від нього і переконала мене замовити. Ну що ж, кур'єр приніс замовлення, я оплатила і стала пробувати. Після першого застосування результат помітний одразу. Після місяця моє обличчя повністю змінилося.</p>
+                <p>Nikada ne bih verovala da mi Finishing Touch može pomoći. Moja prijateljica koja je bila oduševljena njime ubedila me je da ga poručim.
+                    Kada je kurir doneo porudžbinu, platio sam, raspakovala pošiljku i odmah sam se izdepilirala.
+                    Nakon prve primene koža mi je bila mekana i razlika je bila vidljiva. Posle mesec dana moje lice se potpuno promenilo.</p>
                 <span class="rew-name col-3">
-                     <b class="col-1">Светлана</b><br/>
-                    <!-- Санкт-Петербург -->
+                     <b class="col-1">Svetlana, Beograd</b><br/>
                   </span>
             </div>
             <div class="rew-item">
                 <img src="{{ asset('/') }}purplerelaxFiles/finishingtouch_mobile2/rew-2.jpg" alt="Finishing Touch">
-                <p>Купила подрузі на подарунок, у неї дуже чутлива шкіра, але не втрималася випробувати на собі) Від результату я була в захваті, довелося терміново замовляти другий)) Дуже подобається те, що для нього немає недоступних місць, а якість роботи взагалі на висоті! Також помітила, що волосся стало рости повільніше і тепер менш густе)</p>
+                <p>Kupila sam prijateljici za poklon jer ona ima veoma osetljivu kožu, ali nisam mogla da odolimo da isprobam na sebi.
+                    Bila sam oduševljena i morala sam da poručim i sebi. Dopada mi se činjenica da za njega nema nepristupačnih delova tela.
+                    Takođe sam primetila da mi dlačice sporije rastu i da su manje guste.</p>
                 <span class="rew-name col-3">
-                  <b class="col-1">Марина</b><br/>
+                  <b class="col-1">Marina, Valjevo</b><br/>
                   </span>
             </div>
             <div class="rew-item">
                 <img src="{{ asset('/') }}purplerelaxFiles/finishingtouch_mobile2/rew-3.jpg" alt="Finishing Touch">
-                <p>Користуюся вже другий місяць, це просто щось! Шкіра гладенька, ніякого подразнення, волосся з часом рідшає і стає м'якше! До цього перепробувала безліч засобів, але цей найефективніший і найніжніший) Рекомендую всім! За співвідношенням якості видалення волосся і безболісності - це найкраще, що може бути!</p>
+                <p>Koristim ga već drugi mesec i prilično sam zadovoljna. Koža je glatka, nema iritacija i dlaka vremenom postaje mekša.
+                    Pre toga sam probala mnoga sredstva, ali ovo je najefikasnije i najnežnije. Preporučujem svima! Što se tiče odnosa kvaliteta i cene,
+                    ovo je nešto najbolje što može biti!</p>
                 <span class="rew-name col-3">
-                  <b class="col-1">Юлия</b><br/>
+                  <b class="col-1">Julija, Smederevo</b><br/>
                   </span>
             </div>
         </div>
@@ -135,14 +137,14 @@
         <span class="sale col-3">-50%</span>
         <div class="cost clearfix">
                <span class="old-cost">
-                  <span style="font-size: 14px;">звичайна ціна<br></span>
+                  <span style="font-size: 14px;">stara cena<br></span>
                   <del>
                      {{ $prices[1]['originalPrice'] }}
                      RSD
                   </del>
                </span>
             <span class="new-cost">
-                  <span  style="font-size: 14px;">акційна ціна<br></span>
+                  <span  style="font-size: 14px;">nova cena<br></span>
                   {{ $prices[1]['amount'] }}
                   RSD
                </span>
@@ -150,10 +152,10 @@
     </div>
     <div class="section block-2 green-bg">
         <h2 class="col-3">
-            Замовте Finishing Touch прямо зараз!
+            PORUČITE ODMAH SA 40% POPUSTA
         </h2>
         <div class="timer">
-            <p style="text-align: center;width: 100%;line-height: 1.3;"></p>
+            <p style="text-align: center;width: 100%;line-height: 1.3;">Unesite podatke za dostavu</p>
         </div>
         <form action="{{$orderRoute}}" method="post" >
             {{ csrf_field() }}
