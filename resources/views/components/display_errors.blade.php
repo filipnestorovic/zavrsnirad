@@ -27,6 +27,9 @@
     <div class="alert alert-danger" role="alert" >
         <b>{{$errors->first()}}</b>
     </div>
+    <script>
+        window.scrollTo(0, 0);
+    </script>
 @endif
 
 @php

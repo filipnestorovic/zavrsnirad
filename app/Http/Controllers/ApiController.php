@@ -35,7 +35,7 @@ class ApiController extends Controller
                         foreach($singleVariation as $singlePrice) {
                             if($singlePrice['deleted_price'] === null) {
                                 $lastOrder = $this->modelOrder->getLastOrderForVariation($singlePrice['id_variation']);
-                                if($lastOrder) $returnData[$singlePrice['variation_name']][0]['last_order'] = $lastOrder->created_at;
+                                if($lastOrder) $returnData[$singlePrice['id_variation']][0]['last_order'] = $lastOrder->created_at;
                                 $returnData[$singlePrice['id_variation']][0]['variation_name'] = $singlePrice['variation_name'];
                                 $returnData[$singlePrice['id_variation']][0]['is_variation_default'] = $singlePrice['is_variation_default'];
                                 $returnData[$singlePrice['id_variation']][0]['product_url'] = $product_lander;
@@ -49,7 +49,7 @@ class ApiController extends Controller
             }
         }
         if(isset($returnData)) {
-            return $returnData;
+            return json_encode($returnData, JSON_PRETTY_PRINT);
         } else {
             return 0;
         }
