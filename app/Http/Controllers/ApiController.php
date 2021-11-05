@@ -7,6 +7,7 @@ use App\Models\Order;
 use App\Models\Product;
 use App\Models\Variation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Response;
 
 class ApiController extends Controller
 {
@@ -49,7 +50,7 @@ class ApiController extends Controller
             }
         }
         if(isset($returnData)) {
-            return json_encode($returnData, JSON_PRETTY_PRINT);
+            return Response::make(json_encode($returnData, JSON_PRETTY_PRINT))->header('Content-Type', "application/json");
         } else {
             return 0;
         }
