@@ -35,6 +35,10 @@ class ApiController extends Controller
                     foreach($groupedVariations as $singleVariation) {
                         foreach($singleVariation as $singlePrice) {
                             if($singlePrice['deleted_price'] === null) {
+                                $activeTest = $this->modelVariation->checkIfVariationIsInActiveTest($singlePrice['id_variation']);
+                                if(count($activeTest)>0) {
+                                    $returnData[$singlePrice['id_variation']][0]['active_test'] = 1;
+                                }
                                 $lastOrder = $this->modelOrder->getLastOrderForVariation($singlePrice['id_variation']);
                                 if($lastOrder) $returnData[$singlePrice['id_variation']][0]['last_order'] = $lastOrder->created_at;
                                 $returnData[$singlePrice['id_variation']][0]['variation_name'] = $singlePrice['variation_name'];
