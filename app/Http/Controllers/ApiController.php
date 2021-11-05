@@ -52,7 +52,7 @@ class ApiController extends Controller
         if(isset($returnData)) {
             return Response::make(json_encode($returnData, JSON_PRETTY_PRINT))->header('Content-Type', "application/json");
         } else {
-            return 0;
+            return Response::make(json_encode(null, JSON_PRETTY_PRINT))->header('Content-Type', "application/json");
         }
     }
 }
