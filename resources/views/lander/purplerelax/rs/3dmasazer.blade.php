@@ -37,10 +37,10 @@
             <form action="{{$orderRoute}}" method="post">
                 {{ csrf_field() }}
                 @include('lander.naturapharm.components.form_hidden_fields')
-                <input type="text" name="name" class="block1inputname" placeholder="Ime i prezime" >
-                <input type="text" name="phone" class="block1inputphone input-phone" placeholder="Broj telefona" >
-                <input type="text" name="shipping_address" class="block1inputname" placeholder="Adresa" >
-                <input type="text" name="shipping_city" class="block1inputname" placeholder="Grad" >
+                <input type="text" name="name" class="block1inputname" placeholder="Ime i prezime" required>
+                <input type="text" name="phone" class="block1inputphone input-phone" placeholder="Broj telefona" required>
+                <input type="text" name="shipping_address" class="block1inputname" placeholder="Adresa" required>
+                <input type="text" name="shipping_city" class="block1inputname" placeholder="Grad" required>
                 <p style="color: #FB1B14;font-size: 14px;line-height: 16px;padding: 10px;"></p>
                 <button class="knopka1" type="submit">PORUČITE ODMAH</button>
             </form>
@@ -273,10 +273,10 @@
             <form action="{{$orderRoute}}" method="post">
                 {{ csrf_field() }}
                 @include('lander.naturapharm.components.form_hidden_fields')
-                <input type="text" name="name" class="block1inputname" placeholder="Ime i prezime" >
-                <input type="text" name="phone" class="block1inputphone input-phone" placeholder="Broj telefona" >
-                <input type="text" name="shipping_address" class="block1inputname" placeholder="Adresa" >
-                <input type="text" name="shipping_city" class="block1inputname" placeholder="Grad" >
+                <input type="text" name="name" class="block1inputname" placeholder="Ime i prezime" required>
+                <input type="text" name="phone" class="block1inputphone input-phone" placeholder="Broj telefona" required>
+                <input type="text" name="shipping_address" class="block1inputname" placeholder="Adresa" required>
+                <input type="text" name="shipping_city" class="block1inputname" placeholder="Grad" required>
                 <p style="color: #FB1B14;font-size: 14px;line-height: 16px;padding: 10px;"></p>
                 <button class="knopka1" type="submit">PORUČITE ODMAH</button>
             </form>

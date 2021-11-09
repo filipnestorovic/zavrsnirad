@@ -75,16 +75,16 @@
                                         @include('lander.naturapharm.components.form_hidden_fields')
                                         <h2>Unesite podatke za dostavu</h2>
                                         <p class="float">
-                                            <input type="text" name="name" value="" placeholder="Ime i prezime" >
+                                            <input type="text" name="name" value="" placeholder="Ime i prezime" required>
                                         </p>
                                         <p class="float">
-                                            <input type="text" name="phone" id="phone" value="" class="jSalePhone" placeholder="Telefon" >
+                                            <input type="text" name="phone" id="phone" value="" class="jSalePhone" placeholder="Telefon" required>
                                         </p>
                                         <p class="float">
-                                            <input type="text" name="shipping_address" value="" placeholder="Adresa" >
+                                            <input type="text" name="shipping_address" value="" placeholder="Adresa" required>
                                         </p>
                                         <p class="float">
-                                            <input type="text" name="shipping_city" value="" placeholder="Grad" >
+                                            <input type="text" name="shipping_city" value="" placeholder="Grad" required>
                                         </p>
                                         <p class="submit">
                                             <input type="submit" name="order_submit" value="Porucite" class="jSaleSubmit jSaleButton jSaleLarge">
@@ -192,16 +192,16 @@
                                         @include('lander.naturapharm.components.form_hidden_fields')
                                         <h2>Unesite podatke za dostavu</h2>
                                         <p class="float">
-                                            <input type="text" name="name" value="" placeholder="Ime i prezime" >
+                                            <input type="text" name="name" value="" placeholder="Ime i prezime" required>
                                         </p>
                                         <p class="float">
-                                            <input type="text" name="phone" id="phone" value="" class="jSalePhone" placeholder="Telefon" >
+                                            <input type="text" name="phone" id="phone" value="" class="jSalePhone" placeholder="Telefon" required>
                                         </p>
                                         <p class="float">
-                                            <input type="text" name="shipping_address" value="" placeholder="Adresa" >
+                                            <input type="text" name="shipping_address" value="" placeholder="Adresa" required>
                                         </p>
                                         <p class="float">
-                                            <input type="text" name="shipping_city" value="" placeholder="Grad" >
+                                            <input type="text" name="shipping_city" value="" placeholder="Grad" required>
                                         </p>
                                         <p class="submit">
                                             <input type="submit" name="order_submit" value="Porucite" class="jSaleSubmit jSaleButton jSaleLarge">
@@ -266,16 +266,16 @@
                                     @include('lander.naturapharm.components.form_hidden_fields')
                                     <h2>Unesite podatke za dostavu</h2>
                                     <p class="float">
-                                        <input type="text" name="name" value="" placeholder="Ime i prezime" >
+                                        <input type="text" name="name" value="" placeholder="Ime i prezime" required>
                                     </p>
                                     <p class="float">
-                                        <input type="text" name="phone" id="phone" value="" class="jSalePhone" placeholder="Telefon" >
+                                        <input type="text" name="phone" id="phone" value="" class="jSalePhone" placeholder="Telefon" required>
                                     </p>
                                     <p class="float">
-                                        <input type="text" name="shipping_address" value="" placeholder="Adresa" >
+                                        <input type="text" name="shipping_address" value="" placeholder="Adresa" required>
                                     </p>
                                     <p class="float">
-                                        <input type="text" name="shipping_city" value="" placeholder="Grad" >
+                                        <input type="text" name="shipping_city" value="" placeholder="Grad" required>
                                     </p>
                                     <p class="submit">
                                         <input type="submit" name="order_submit" value="Porucite" class="jSaleSubmit jSaleButton jSaleLarge">
