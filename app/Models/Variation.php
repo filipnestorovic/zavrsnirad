@@ -308,7 +308,7 @@ class Variation extends Model
             })
             ->leftJoin('price', 'variations_prices.price_id', '=', 'price.id_price')
             ->leftJoin('currency', 'price.currency_id', '=', 'currency.id_currency')
-            ->select('*','variations_prices.deleted_at as deleted_price')
+            ->select('*','variations_prices.deleted_at as deleted_price','variation.deleted_at as deleted_variation')
             ->where('variation.product_id','=',$product_id);
 
         return $result->get();
