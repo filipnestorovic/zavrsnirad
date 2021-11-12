@@ -34,7 +34,7 @@ class ApiController extends Controller
                     $groupedVariations = $this->getMultipleItemsFromQuery(json_decode($allVariations, true),'id_variation');
                     foreach($groupedVariations as $singleVariation) {
                         foreach($singleVariation as $singlePrice) {
-                            if($singlePrice['deleted_price'] === null) {
+                            if($singlePrice['deleted_price'] === null && $singlePrice['deleted_at'] === null) {
                                 $activeTest = $this->modelVariation->checkIfVariationIsInActiveTest($singlePrice['id_variation']);
                                 if(count($activeTest)>0) {
                                     $returnData[$singlePrice['id_variation']][0]['active_test'] = 1;

@@ -218,7 +218,7 @@
                         <div id="ikjkxg" class="ikjkxg_global">
                             <div id="ifht3f">SA LAKOĆOM STERILIZUJTE VAZDUH KOJI DIŠETE!</div>
                             <div id="ic8jea" class="ic8jea_global">
-                                <div id="izqg8b">Samo jedno dugmE</div>
+                                <div id="izqg8b">Samo jedno dugme</div>
                                 <div id="i8lybo" class="i8lybo_global"></div>
                                 <div id="ilga4a">Vrhunska jednostavnost i lakoća upotrebe - prenosni prečišćivač vazduha može se aktivirati pritiskom na dugme i nema komplikovanog podešavanja.</div>
                             </div>
@@ -267,7 +267,7 @@
                         <picture class="ctr-generated">
                             <source srcset="{{ asset('/') }}purplerelaxFiles/aircleaner/air-filter.png.webp" type="image/webp">
                             <source srcset="{{ asset('/') }}purplerelaxFiles/aircleaner/air-filter.png" type="image/png">
-                            <img data-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/air-filter.png?t=20210708T065047141" data-lazy-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/air-filter.png?t=20210708T065047141" id="i1kd9o" src="{{ asset('/') }}purplerelaxFiles/aircleaner/air-filter.png?t=20210708T065047141" width="136" height="26">
+                            <img data-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/air-filter.png?t=20210708T065047141" data-lazy-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/air-filter.png?t=20210708T065047141" id="i1kd9o" src="{{ asset('/') }}purplerelaxFiles/aircleaner/air-filter.png?t=20210708T065047141" width="210" height="41">
                         </picture>
                         <picture class="ctr-generated">
                             <source srcset="{{ asset('/') }}purplerelaxFiles/aircleaner/7-2x.jpg.webp" type="image/webp">
