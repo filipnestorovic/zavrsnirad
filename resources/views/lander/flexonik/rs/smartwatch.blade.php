@@ -135,8 +135,8 @@
                 <div class="trigger__icon">
                     <i class="fa fa-file-o" aria-hidden="true"></i>
                 </div>
-                <div class="trigger__title">Slot za sim karticu</div>
-                <div class="trigger__descr">Ovaj sat ima poseban sim slot. Sat postaje pametni telefon.</div>
+                <div class="trigger__title">Kontrola telefona</div>
+                <div class="trigger__descr">Možete da upravljate svojim telefonom putem sata.</div>
             </div>
             <div class="trigger">
                 <div class="trigger__icon">
@@ -237,10 +237,6 @@
                         <div class="param-list__value">GSM 850/900/ 1800/1900 MGhz</div>
                     </div>
                     <div class="param-list__item">
-                        <div class="param-list__name">Broj sim slotova:</div>
-                        <div class="param-list__value">1</div>
-                    </div>
-                    <div class="param-list__item">
                         <div class="param-list__name">Jezik:</div>
                         <div class="param-list__value">Engleski</div>
                     </div>
@@ -251,6 +247,10 @@
                     <div class="param-list__item">
                         <div class="param-list__name">Memorija:</div>
                         <div class="param-list__value">128MB ROM + 64MB RAM</div>
+                    </div>
+                    <div class="param-list__item">
+                        <div class="param-list__name">Težina (g):</div>
+                        <div class="param-list__value">62</div>
                     </div>
                 </div>
                 <div class="param-list__row col-3">
@@ -273,10 +273,6 @@
                     <div class="param-list__item">
                         <div class="param-list__name">Kamera:</div>
                         <div class="param-list__value">foto 640х480, video 320х240</div>
-                    </div>
-                    <div class="param-list__item">
-                        <div class="param-list__name">Težina (g):</div>
-                        <div class="param-list__value">62</div>
                     </div>
                 </div>
             </div>
@@ -405,7 +401,7 @@
                         </div>
                         <div class="review__name">Andrija Popović</div>
                         <div class="review__text">Želeo sam ovaj sat i kupio sam ga sebi. Nemam apsolutno na šta da se žalim.
-                            Savršen je kao telefon, može se zvati i razgovarati koristeći Bluetooth i sim karticu.</div>
+                            Savršen je kao telefon, može se zvati i razgovarati koristeći Bluetooth.</div>
                     </div>
                     <div class="review">
                         <div class="review__photo">
@@ -422,7 +418,7 @@
                         </div>
                         <div class="review__name">Lidija Jović</div>
                         <div class="review__text">Za ovu cenu, kupila sam savršen sat. Praktično ga ne skidam sa ruke. Ima mnogo dobrih opcija koje su vrlo funkcionalne.
-                            Mogu da se ubace memorijska i sim kartica. Preporučujem kupovinu ovog sata, nećete se pokajati.</div>
+                            Može da se ubaci memorijska kartica. Preporučujem kupovinu ovog sata, nećete se pokajati.</div>
                     </div>
                 </div>
             </div>
