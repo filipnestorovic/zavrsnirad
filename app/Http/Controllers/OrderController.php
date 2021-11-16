@@ -296,7 +296,7 @@ class OrderController extends Controller
 
         switch($orderDetails->country_code) {
             case "rs":
-                $webhookUrl = "https://new.wombatnew.com/api/orderWebhook";
+                $webhookUrl = "https://new.serverwombat.com/api/orderWebhook";
                 break;
             case "ba":
                 $webhookUrl = "https://ba.serverwombat.com/api/orderWebhook";
