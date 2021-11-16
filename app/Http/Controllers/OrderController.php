@@ -253,6 +253,8 @@ class OrderController extends Controller
 
         $jsonArray['session_id'] = $_COOKIE['wbSessionId'] ?? null;
 
+        $jsonArray['variation_id'] = $orderDetails->variation_id ?? null;
+
         $jsonArray['affiliate_id'] = $_COOKIE['affid'] ?? null;
         $jsonArray['network_id'] = $_COOKIE['netid'] ?? null;
         $jsonArray['click_id'] = $_COOKIE['clid'] ?? null;
@@ -294,7 +296,7 @@ class OrderController extends Controller
 
         switch($orderDetails->country_code) {
             case "rs":
-                $webhookUrl = "https://new.serverwombat.com/api/orderWebhook";
+                $webhookUrl = "https://new.wombatnew.com/api/orderWebhook";
                 break;
             case "ba":
                 $webhookUrl = "https://ba.serverwombat.com/api/orderWebhook";
