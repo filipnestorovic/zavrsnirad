@@ -146,6 +146,9 @@ class OrderController extends Controller
 
                 $this->modelOrder->price = $price;
 
+                $size = $request->get('size');
+                $customerNote = $size;
+
                 try {
                     $orderId = $this->modelOrder->insertOrder();
                 } catch (\Exception $exception) {
@@ -183,7 +186,7 @@ class OrderController extends Controller
                         //webhooks
                         if($orderDetails->woocommerce_product_id === null) {
                             try {
-                                $webhookResult = $this->sendWebhook($orderDetails, $brandUrl, $gratisProduct);
+                                $webhookResult = $this->sendWebhook($orderDetails, $brandUrl, $gratisProduct, $customerNote);
                             } catch(\Exception $exception){
                                 Log::error("Error: ServerWombat Webhook \nMessage: " . $exception->getMessage() . "\nDetails: ". json_encode($orderDetails, JSON_PRETTY_PRINT));
                                 return redirect()->back()->withErrors([$this->customerErrorMessage]);
@@ -222,7 +225,7 @@ class OrderController extends Controller
         }
     }
 
-    public function sendWebhook($orderDetails, $brandUrl, $gratisProduct = null){
+    public function sendWebhook($orderDetails, $brandUrl, $gratisProduct = null, $customerNote = null){
 
         $client = new GuzzleHttp\Client([
             'headers' => [ 'Content-Type' => 'application/json' ]
@@ -271,7 +274,7 @@ class OrderController extends Controller
             ]);
         }
 
-        $jsonArray['customer_note'] = "";
+        $jsonArray['customer_note'] = $customerNote;
 
         $jsonArray['line_items'] = array([
             'sku' => $orderDetails->sku,
