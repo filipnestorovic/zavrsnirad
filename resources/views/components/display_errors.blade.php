@@ -56,6 +56,10 @@
     }
 @endphp
 
+@if(isset($couponCode) && $couponCode === "blackfriday")
+    @php $discountText = "PRIMENJEN SPECIJALNI BLACK FRIDAY POPUST OD"; @endphp
+@endif
+
 @if($discount)
     <div class="alert alert-success" role="alert" style="">
         <h3 class="alert-heading">{{ $discountText }} {{$discount}}%!</h3>

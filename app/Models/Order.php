@@ -16,6 +16,7 @@ class Order
     public $quantity;
     public $price;
     public $is_order_with_free_shipping;
+    public $coupon_used;
     public $variation_id;
     public $test_variation_id;
     public $country_id;
@@ -36,6 +37,7 @@ class Order
                 'quantity' => $this->quantity,
                 'price' => $this->price,
                 'is_free_shipping' => $this->is_order_with_free_shipping,
+                'coupon_used' => $this->coupon_used,
                 'variation_id' => $this->variation_id,
                 'test_variation_id' => $this->test_variation_id,
                 'country_id' => $this->country_id,

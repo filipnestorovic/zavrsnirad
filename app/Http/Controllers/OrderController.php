@@ -135,7 +135,16 @@ class OrderController extends Controller
                 $multiplyDiscount = (100 - $discount) / 100;
 
                 if($discount) {
-                    $price =  $variation->amount * $multiplyDiscount;
+                    $couponCode = $request->get('couponCode');
+                    $this->modelOrder->coupon_used = $couponCode;
+                    if($couponCode === "blackfriday") {
+                        $originalPriceMultiply = 0.6;
+                        $totalPrice = round(($variation->amount/$originalPriceMultiply), 0);
+                        $originalPrice = (ceil($totalPrice/100))*100-10;
+                        $price = $originalPrice * $multiplyDiscount;
+                    } else {
+                        $price =  $variation->amount * $multiplyDiscount;
+                    }
                 } else {
                     $price =  $variation->amount;
                 }
@@ -274,6 +283,9 @@ class OrderController extends Controller
             ]);
         }
 
+        if($orderDetails->coupon_used != null) {
+            $customerNote = $customerNote.'Kupon: '.$orderDetails->coupon_used;
+        }
         $jsonArray['customer_note'] = $customerNote;
 
         $jsonArray['line_items'] = array([

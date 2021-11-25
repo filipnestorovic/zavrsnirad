@@ -218,7 +218,6 @@ class HomeController extends Controller
             $countryCode = $request->get('countryShortcode');
             $host = $request->getHost();
 
-            $this->data['discount'] = $this->checkCouponForVariation($request, $this->returnedData['variationId'], $coupon);
             $this->data['pixels'] = $this->getPixelsForView($product->id_product, $product->id_brand, $domain_id);
             $this->data['prices'] = $this->returnedData['prices'];
             $this->data['productReviews'] = $this->getProductReviews($product_id);
@@ -248,23 +247,15 @@ class HomeController extends Controller
                 Log::error("Error: Insert customer in session | Exception: " . $exception->getMessage());
             }
 
+            $this->data['discount'] = $this->checkCouponForVariation($request, $this->returnedData['variationId'], $coupon);
+            if($this->data['discount'] != 0) {
+                $this->data['couponCode'] = $coupon;
+            }
+
             $this->data['session_id'] = $this->customerData['session_id'];
 
             $singleSession = $this->modelSession->getSingleSession($this->data['session_id']);
             $this->data['test_variation_id'] = $singleSession->test_variation_id;
-
-//            $gratisProducts = [
-//                0 => [
-//                    'product_id' => 65,
-//                    'quantity' => 3,
-//                    'gratis_product_id' => 8,
-//                ],
-//                1 => [
-//                    'product_id' => 65,
-//                    'quantity' => 2,
-//                    'gratis_product_id' => 18,
-//                ],
-//            ];
 
             if(isset($gratisProducts)) {
                 $gratisProductsArray = [];
@@ -547,10 +538,17 @@ class HomeController extends Controller
                    $discountMultiply = (100 - $singleCoupon->discount) / 100;
                    if($this->returnedData['prices'] != null) {
                        foreach($this->returnedData['prices'] as $price) {
-                           $i = $price['quantity'];
-                           $this->returnedData['prices'][$i]['amount'] = $price['amount'] * $discountMultiply;
-                           $this->returnedData['prices'][$i]['amountBeforeDiscount'] = $price['amount'];
-                           $discountPercent = $singleCoupon->discount;
+                           if($coupon === "blackfriday") {
+                               $i = $price['quantity'];
+                               $this->returnedData['prices'][$i]['amount'] = $price['originalPrice'] * $discountMultiply;
+                               $this->returnedData['prices'][$i]['amountBeforeDiscount'] = $price['originalPrice'];
+                               $discountPercent = $singleCoupon->discount;
+                           } else {
+                               $i = $price['quantity'];
+                               $this->returnedData['prices'][$i]['amount'] = $price['amount'] * $discountMultiply;
+                               $this->returnedData['prices'][$i]['amountBeforeDiscount'] = $price['amount'];
+                               $discountPercent = $singleCoupon->discount;
+                           }
                        }
                    }
                    $request->session()->push('coupon', $coupon);
@@ -564,6 +562,7 @@ class HomeController extends Controller
                }
             }
         }
+
         return $discountPercent;
     }
 
