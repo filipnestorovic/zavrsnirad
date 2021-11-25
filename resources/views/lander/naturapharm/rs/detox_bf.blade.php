@@ -14,6 +14,9 @@
 </head>
 <body>
 @include('components.display_errors')
+<div class="alert alert-success" role="alert" style="">
+    <h3 class="alert-heading">SPECIJALNA BLACK FRIDAY PONUDA!</h3>
+</div>
 <header class="header">
     <div class="container">
         <div class="row">

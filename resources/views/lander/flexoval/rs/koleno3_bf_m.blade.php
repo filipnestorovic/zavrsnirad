@@ -14,6 +14,9 @@
         <div>
             <div class="Box-sc-1063fjo-0 Mobile___StyledBox-sc-1a7nboa-0 iFPEmP">
                 @include('components.display_errors')
+                <div class="alert alert-success" role="alert" style="">
+                    <h3 class="alert-heading">SPECIJALNA BLACK FRIDAY PONUDA!</h3>
+                </div>
                 <section height="auto" class="Box-sc-1063fjo-0 Card-sc-16nnnkc-0 Section-tj5oh1-0 eGHXZI">
                     <div width="320" class="Box-sc-1063fjo-0 OrderScreen___StyledContainer-sc-3z9c1a-0 bIPlcn Container__BoxMax-sc-1d5v2pc-0 dMAeUO">
                         <div class="Box-sc-1063fjo-0 drByVp">
@@ -47,7 +50,7 @@
                                             <div class="Box-sc-1063fjo-0 drByVp">
                                                 <div class="Box-sc-1063fjo-0 drByVp">
                                                     <div font-size="50" font-family="gilroy" color="#d31f07" font-weight="bold" class="Box-sc-1063fjo-0 Text-oy5r1a-0 TextBold-sc-10ffoo0-0 cLlWrm">
-                                                        <span class="price_land_s1">{{ $prices[1]['amount'] }}</span>
+                                                        <span class="price_land_s1">{{ $prices[2]['amount'] }}</span>
                                                         <span size="20" class="Currency__CurrencyWrapper-d7ax3o-0 jkThTP"> RSD</span>
                                                     </div>
                                                 </div>
@@ -58,7 +61,7 @@
                                                 Stara cena:
                                             </div>
                                             <div font-size="14" font-family="roboto" font-weight="700" color="#000000" class="Box-sc-1063fjo-0 Text-oy5r1a-0 dsGBDi" style="text-decoration: line-through;">
-                                                <span class="price_land_s2">{{ $prices[1]['originalPrice'] }}</span>
+                                                <span class="price_land_s2">{{ $prices[2]['originalPrice'] }}</span>
                                                 <span size="10" class="Currency__CurrencyWrapper-d7ax3o-0 fuUtFg"> RSD</span>
                                             </div>
                                         </div>
@@ -746,7 +749,7 @@
                                             <div class="Box-sc-1063fjo-0 drByVp">
                                                 <div class="Box-sc-1063fjo-0 drByVp">
                                                     <div font-size="50" font-family="gilroy" color="#d31f07" font-weight="bold" class="Box-sc-1063fjo-0 Text-oy5r1a-0 TextBold-sc-10ffoo0-0 cLlWrm">
-                                                        <span class="price_land_s1">{{ $prices[1]['amount'] }}</span>
+                                                        <span class="price_land_s1">{{ $prices[2]['amount'] }}</span>
                                                         <span size="20" class="Currency__CurrencyWrapper-d7ax3o-0 jkThTP"> RSD </span>
                                                     </div>
                                                 </div>
@@ -757,7 +760,7 @@
                                                 Stara cena:
                                             </div>
                                             <div font-size="14" font-family="roboto" font-weight="700" color="#000000" class="Box-sc-1063fjo-0 Text-oy5r1a-0 dsGBDi" style="text-decoration: line-through;">
-                                                <span class="price_land_s2">{{ $prices[1]['originalPrice'] }} </span>
+                                                <span class="price_land_s2">{{ $prices[2]['originalPrice'] }} </span>
                                                 <span size="10" class="Currency__CurrencyWrapper-d7ax3o-0 fuUtFg"> RSD </span>
                                             </div>
                                         </div>
