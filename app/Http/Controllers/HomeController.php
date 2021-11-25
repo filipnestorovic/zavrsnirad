@@ -218,6 +218,7 @@ class HomeController extends Controller
             $countryCode = $request->get('countryShortcode');
             $host = $request->getHost();
 
+            $this->data['discount'] = $this->checkCouponForVariation($request, $this->returnedData['variationId'], $coupon);
             $this->data['pixels'] = $this->getPixelsForView($product->id_product, $product->id_brand, $domain_id);
             $this->data['prices'] = $this->returnedData['prices'];
             $this->data['productReviews'] = $this->getProductReviews($product_id);
@@ -247,9 +248,16 @@ class HomeController extends Controller
                 Log::error("Error: Insert customer in session | Exception: " . $exception->getMessage());
             }
 
-            $this->data['discount'] = $this->checkCouponForVariation($request, $this->returnedData['variationId'], $coupon);
             if($this->data['discount'] != 0) {
                 $this->data['couponCode'] = $coupon;
+            }
+
+            if(isset($this->customerData['session_id']) && isset($this->data['couponCode'])) {
+                try {
+                    $this->modelEvent->insertSessionEvent($this->customerData['session_id'], 8);
+                } catch (\Exception $exception) {
+                    Log::error("Error: Session - Coupon entered - DB | Exception: " . $exception->getMessage());
+                }
             }
 
             $this->data['session_id'] = $this->customerData['session_id'];
@@ -552,13 +560,6 @@ class HomeController extends Controller
                        }
                    }
                    $request->session()->push('coupon', $coupon);
-                   if(isset($this->customerData['session_id'])) {
-                       try {
-                           $this->modelEvent->insertSessionEvent($this->customerData['session_id'], 8);
-                       } catch (\Exception $exception) {
-                           Log::error("Error: Session - Coupon entered - DB | Exception: " . $exception->getMessage());
-                       }
-                   }
                }
             }
         }
