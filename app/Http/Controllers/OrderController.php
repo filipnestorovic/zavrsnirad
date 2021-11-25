@@ -158,6 +158,10 @@ class OrderController extends Controller
                 $size = $request->get('size');
                 $customerNote = $size;
 
+                if($request->get('bfgratis') != null) {
+                    $customerNote = $customerNote . 'BF Gratis';
+                }
+
                 try {
                     $orderId = $this->modelOrder->insertOrder();
                 } catch (\Exception $exception) {
