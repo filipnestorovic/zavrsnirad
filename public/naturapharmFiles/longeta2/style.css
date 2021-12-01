@@ -1728,6 +1728,10 @@ body {
 }
 .why__img {
     text-align: center;
+    padding-left: 20px;
+}
+.why__img img {
+    width: 180px;
 }
 .why__desc {
     margin: -75px 0 0;
@@ -2038,7 +2042,7 @@ footer a {
         width: 247px;
     }
     .why__img img {
-        height: 182px;
+        width: 150px;
     }
     .use {
         width: 780px;
