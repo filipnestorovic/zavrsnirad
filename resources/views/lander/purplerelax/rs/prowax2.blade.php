@@ -35,23 +35,23 @@
             <div class="menu__list-wrapper col-9">
                 <div class="menu__mobile hide-l"></div>
                 <ul id="menu" class="menu__list hide-m hide-s">
-                    <li><a href="#scroll-descr" class="menu__item">ОПИСАНИЕ</a></li>
+                    <li><a href="#scroll-descr" class="menu__item">OPIS</a></li>
                     <li class="hide-s hide-m">
                         <div class="menu__item--dot"></div>
                     </li>
-                    <li><a href="#scroll-specs" class="menu__item">ХАРАКТЕРИСТИКИ</a></li>
+                    <li><a href="#scroll-specs" class="menu__item">SPECIFIKACIJA</a></li>
                     <li class="hide-s hide-m">
                         <div class="menu__item--dot"></div>
                     </li>
-                    <li><a href="#scroll-benefits" class="menu__item">ПРЕИМУЩЕСТВА</a></li>
+                    <li><a href="#scroll-benefits" class="menu__item">PREDNOSTI</a></li>
                     <li class="hide-s hide-m">
                         <div class="menu__item--dot"></div>
                     </li>
-                    <li><a href="#scroll-reviews" class="menu__item">ДОСТАВКА</a></li>
+                    <li><a href="#scroll-reviews" class="menu__item">DOSTAVKA</a></li>
                     <li class="hide-s hide-m">
                         <div class="menu__item--dot"></div>
                     </li>
-                    <li><a href="#scroll-buy" class="menu__item">ОТЗЫВЫ</a></li>
+                    <li><a href="#scroll-buy" class="menu__item">RECENZIJE</a></li>
                 </ul>
             </div>
         </div>
@@ -60,9 +60,9 @@
     <div class="header__preview preview container">
         <div class="preview__photo col-6"><img alt="ProWax" title="ProWax" src="{{ asset('/') }}purplerelaxFiles/prowax2/sd.jpeg"></div>
         <div class="preview__info info col-6">
-            <div class="info__headline">Воскоплав баночный</div>
+            <div class="info__headline">Grejač za vosak</div>
             <h1 class="info__title">Pro-Wax 100</h1>
-            <div class="info__subline">для тех, кто ценит практичные вещи</div>
+            <div class="info__subline">za one koji cene praktične stvari</div>
             <div class="info__price price">
                 <div class="price__list">
                     <div class="price__wrong">
@@ -83,19 +83,19 @@
     <div class="triggers container">
         <div class="trigger col-6">
             <div class="trigger__icon"><img alt="ProWax" title="ProWax" src="{{ asset('/') }}purplerelaxFiles/prowax2/icon1.png"></div>
-            <div class="trigger__descr">МЫ ЗАБОТИМСЯ О ВАС И ПРЕДЛАГАЕМ ТОЛЬКО КАЧЕСТВЕННЫЙ ТОВАР</div>
+            <div class="trigger__descr">MI BRINEMO O VAMA I NUDIMO SAMO KVALITETNE PROIZVODE</div>
         </div>
         <div class="trigger col-5">
             <div class="trigger__icon"><img alt="ProWax" title="ProWax" src="{{ asset('/') }}purplerelaxFiles/prowax2/icon2.png"></div>
-            <div class="trigger__descr">НЕ БЫЛО НИ ОДНОГО ВОЗВРАТА ТОВАРА</div>
+            <div class="trigger__descr">CENE ISPOD TRŽIŠNIH ZBOG DIREKTNE NABAVKE OD PROIZVOĐAČA</div>
         </div>
         <div class="trigger col-6">
             <div class="trigger__icon"><img alt="ProWax" title="ProWax" src="{{ asset('/') }}purplerelaxFiles/prowax2/icon3.png"></div>
-            <div class="trigger__descr">ЦЕНЫ НИЖЕ РЫНОЧНЫХ ЗА СЧЕТ ПРЯМЫХ ПОСТАВОК ОТ ПРОИЗВОДИТЕЛЯ</div>
+            <div class="trigger__descr">DO SADA NIJE BILO POVRATA ROBE I REKLAMACIJA</div>
         </div>
         <div class="trigger col-6">
             <div class="trigger__icon"><img alt="ProWax" title="ProWax" src="{{ asset('/') }}purplerelaxFiles/prowax2/icon4.png"></div>
-            <div class="trigger__descr">ДОСТАВКА В ЛЮБУЮ ТОЧКУ СНГ ОТ 7 РАБОЧИХ ДНЕЙ</div>
+            <div class="trigger__descr">ISPORUKA BILO GDE U SRBIJI U ROKU OD 1-2 RADNA DANA</div>
         </div>
     </div>
 </section>
@@ -103,8 +103,10 @@
 <section id="scroll-specs" class="specs container">
     <h1 class="heading">Pro-Wax 100</h1>
     <div class="param-list__item">
-        <div class="param-list__name">Воскоплав баночный Pro-Wax 100</div>
-        <div class="param-list__value">Воскоплав баночный Pro-Wax 100 white - нагреватель для воска в банках или в стаканчике. Небольшой объем банки (450 мл) позволяет успешно использовать его не только профессионалами в салоне, но и применять в домашних условиях. Баночный воскоплав Pro Wax 100 оснащен удобной ручкой терморегулятором для выбора температуры плавления воска от 45 до 105 градусов. При этом аппарат работает как термопот, поддерживая комфортную температуру парафина или воска в течение всей процедуры.</div>
+        <div class="param-list__name">Grejač za vosak Pro - Wax 100</div>
+        <div class="param-list__value">Grejač za vosak Pro - Wax 100 topi vosak u limenkama ili u čaši. Mala zapremina limenke (450ml) omogućava da se uspešno koristi ne samo u salonima
+            nego i kod kuće jer može da se radi sa malo voska u opticaju. Pro - Wax 100 grejač voska poseduje termostat za izbor temperature topljenja od 45 do 105 stepeni.
+            Uređaj može da radi konstantno, održavajući ugodnu temperaturu parafina ili voska tokom čitave procedure.</div>
     </div>
     <div class="specs__gallery col-6">
         <div class="product-gallery owl-carousel">
@@ -124,34 +126,34 @@
         <div class="container">
             <div class="param-list__row col-3">
                 <div class="param-list__item">
-                    <div class="param-list__name">Мощность:</div>
-                    <div class="param-list__value">100 Вт;</div>
+                    <div class="param-list__name">SNAGA:</div>
+                    <div class="param-list__value">100W</div>
                 </div>
                 <div class="param-list__item">
-                    <div class="param-list__name">Объем емкости:</div>
-                    <div class="param-list__value">450 мл;</div>
+                    <div class="param-list__name">ZAPREMINA REZERVOARA:</div>
+                    <div class="param-list__value">450ml</div>
                 </div>
                 <div class="param-list__item">
-                    <div class="param-list__name">Напряжение:</div>
-                    <div class="param-list__value">110/220/240В;</div>
+                    <div class="param-list__name">NAPON:</div>
+                    <div class="param-list__value">110V/220V/240V</div>
                 </div>
                 <div class="param-list__item">
-                    <div class="param-list__name">Цвет:</div>
-                    <div class="param-list__value">белый;</div>
+                    <div class="param-list__name">BOJA:</div>
+                    <div class="param-list__value">bela</div>
                 </div>
             </div>
             <div class="param-list__row col-3">
                 <div class="param-list__item">
-                    <div class="param-list__name">Количество температурных режимов:</div>
-                    <div class="param-list__value">3;</div>
+                    <div class="param-list__name">BROJ TEMPERATURNIH REŽIMA:</div>
+                    <div class="param-list__value">3</div>
                 </div>
                 <div class="param-list__item">
-                    <div class="param-list__name">Длина сетевого шнура:</div>
-                    <div class="param-list__value">1.5 м</div>
+                    <div class="param-list__name">DUŽINA KABLA ZA NAPAJANJE:</div>
+                    <div class="param-list__value">1.5 M</div>
                 </div>
                 <div class="param-list__item">
-                    <div class="param-list__name">Вес:</div>
-                    <div class="param-list__value">0,39 кг;</div>
+                    <div class="param-list__name">TEŽINA:</div>
+                    <div class="param-list__value">0,39 KG</div>
                 </div>
             </div>
         </div>
@@ -160,48 +162,48 @@
 <div class="clear"></div>
 <section id="scroll-benefits" class="benefits-wrapper">
     <div class="benefits container">
-        <h1 class="heading heading--primary heading--white">Преимущества</h1>
+        <h1 class="heading heading--primary heading--white">PREDNOSTI</h1>
         <div class="benefits__item col-6">
             <div class="benefits__icon"><img alt="ProWax" title="ProWax" src="{{ asset('/') }}purplerelaxFiles/prowax2/icon-guarantee.png"></div>
-            <div class="benefits__descr">100% гарантия качества товара</div>
+            <div class="benefits__descr">100% garancija kvaliteta proizvoda</div>
         </div>
         <div class="benefits__item col-6">
             <div class="benefits__icon"><img alt="ProWax" title="ProWax" src="{{ asset('/') }}purplerelaxFiles/prowax2/icon-postpay.png"></div>
-            <div class="benefits__descr">Работаем без предоплаты, оплата производится при получении товара на почте</div>
+            <div class="benefits__descr">Radimo bez avansa, plaćanje se vrši po prijemu robe poštom</div>
         </div>
         <div class="benefits__item col-6">
             <div class="benefits__icon"><img alt="ProWax" title="ProWax" src="{{ asset('/') }}purplerelaxFiles/prowax2/icon-shipping.png"></div>
-            <div class="benefits__descr">Доставка в любую точку СНГ</div>
+            <div class="benefits__descr">Dostava bilo gde u Srbiji</div>
         </div>
         <div class="benefits__item col-6">
             <div class="benefits__icon"><img alt="ProWax" title="ProWax" src="{{ asset('/') }}purplerelaxFiles/prowax2/icon-delivery.png"></div>
-            <div class="benefits__descr">Быстрая доставка заказа (в зависимости от Вашего региона) от 7 рабочих дней</div>
+            <div class="benefits__descr">Brza ispoiruka poružbine (1-2 radna dana)</div>
         </div>
         <div class="benefits__item col-6">
             <div class="benefits__icon"><img alt="ProWax" title="ProWax" src="{{ asset('/') }}purplerelaxFiles/prowax2/icon-discounts.png"></div>
-            <div class="benefits__descr">Проведение конкурсов и акций</div>
+            <div class="benefits__descr">Najniža cena je kod nas</div>
         </div>
         <div class="benefits__item col-6">
             <div class="benefits__icon"><img alt="ProWax" title="ProWax" src="{{ asset('/') }}purplerelaxFiles/prowax2/icon-moneyback.png"></div>
-            <div class="benefits__descr">Вы вправе отказаться от товара в течение 14 дней</div>
+            <div class="benefits__descr">Imate pravo na povrat novca ukoliko vam se proizvod ne svidi</div>
         </div>
         <div class="benefits__button"><a href="#scroll-buyer" class="button">Poručite sada</a></div>
     </div>
 </section>
 <div class="clear"></div>
 <section id="scroll-reviews" class="steps container">
-    <h1 class="heading heading--secondary">КАК МЫ РАБОТАЕМ</h1>
+    <h1 class="heading heading--secondary">KAKO RADIMO</h1>
     <div class="steps-img__wrapper container hide-l">
-        <div class="steps__item steps__item--one col-3"><img alt="ProWax" title="ProWax" src="{{ asset('/') }}purplerelaxFiles/prowax2/icon-howto1.png"><br>Вы оставляете заявку через форму заказа на сайте</div>
-        <div class="steps__item steps__item--two col-3"><img alt="ProWax" title="ProWax" src="{{ asset('/') }}purplerelaxFiles/prowax2/icon-howto2.png"><br>Мы перезваниваем вам для уточнения деталей</div>
-        <div class="steps__item steps__item--three col-3"><img alt="ProWax" title="ProWax" src="{{ asset('/') }}purplerelaxFiles/prowax2/icon-howto3.png"><br>Отправляем ваш заказ в пункт назначения</div>
-        <div class="steps__item steps__item--four col-3"><img alt="ProWax" title="ProWax" src="{{ asset('/') }}purplerelaxFiles/prowax2/icon-howto4.png"><br>Вы оплачиваете при получении на почте</div>
+        <div class="steps__item steps__item--one col-3"><img alt="ProWax" title="ProWax" src="{{ asset('/') }}purplerelaxFiles/prowax2/icon-howto1.png"><br>Ostavite svoje podatke na našem sajtu</div>
+        <div class="steps__item steps__item--two col-3"><img alt="ProWax" title="ProWax" src="{{ asset('/') }}purplerelaxFiles/prowax2/icon-howto2.png"><br>Kontaktiraćemo vas da potvrdimo vašu porudžbinu</div>
+        <div class="steps__item steps__item--three col-3"><img alt="ProWax" title="ProWax" src="{{ asset('/') }}purplerelaxFiles/prowax2/icon-howto3.png"><br>Paket šaljemo u roku od 1-2 radna dana</div>
+        <div class="steps__item steps__item--four col-3"><img alt="ProWax" title="ProWax" src="{{ asset('/') }}purplerelaxFiles/prowax2/icon-howto4.png"><br>Robu plaćate kuriru po prijemu pošiljke</div>
     </div>
     <div class="steps-img__wrapper steps-img__wrapper--l hide-s hide-m">
-        <div class="steps__item steps__item--r steps__item--one">Вы оставляете заявку через форму заказа на сайте</div>
-        <div class="steps__item steps__item--r steps__item--two">Мы перезваниваем вам для уточнения деталей</div>
-        <div class="steps__item steps__item--r steps__item--three">Отправляем ваш заказ в пункт назначения</div>
-        <div class="steps__item steps__item--r steps__item--four">Вы оплачиваете при получении на почте</div>
+        <div class="steps__item steps__item--r steps__item--one">Ostavite svoje podatke na našem sajtu</div>
+        <div class="steps__item steps__item--r steps__item--two">Kontaktiraćemo vas da potvrdimo vašu porudžbinu</div>
+        <div class="steps__item steps__item--r steps__item--three">Paket šaljemo u roku od 1-2 radna dana</div>
+        <div class="steps__item steps__item--r steps__item--four">Robu plaćate kuriru po prijemu pošiljke</div>
     </div>
 </section>
 <div class="clear"></div>
@@ -209,22 +211,23 @@
     <div class="reviews container">
         <div class="reviews__slider col-6">
             <div class="heading__icon heading__icon--reviews"></div>
-            <h1 class="heading heading--white heading--primary heading--sm">ОТЗЫВЫ ПОКУПАТЕЛЕЙ</h1>
+            <h1 class="heading heading--white heading--primary heading--sm">RECENZIJE KUPACA</h1>
             <div class="slider-reviews owl-carousel">
                 <div class="review">
                     <div class="review__photo"><img alt="ProWax" title="ProWax" src="{{ asset('/') }}purplerelaxFiles/prowax2/user.jpeg"></div>
-                    <div class="review__name">Евгения Молчанова</div>
-                    <div class="review__text">Купила домой, очень интересная модель воскоплава. Работает на ура, очень красивый и удобный. Довольна покупкой!!!</div>
+                    <div class="review__name">Ivana Krunić</div>
+                    <div class="review__text">San svake devojke je da može da se depilira kod kuće. Videla sam ovaj proizvod, nisam mogla da mu odolim i kupila sam ga.
+                        Isporučeno mi je vrlo brzo i odmah sam ga probala. Devojke poručite, nećete se pokajati! :)</div>
                 </div>
                 <div class="review">
                     <div class="review__photo"><img alt="ProWax" title="ProWax" src="{{ asset('/') }}purplerelaxFiles/prowax2/user1.png"></div>
-                    <div class="review__name">Галина Журавлёва</div>
-                    <div class="review__text">Отличная модель воскоплава для дома. Муж подарил этот воскоплав на день рождения. Быстро разогревает воск и пасту, хорошо держит температуру. Легкий и компактный. Подарком довольна!</div>
+                    <div class="review__name">Elena Maksimović</div>
+                    <div class="review__text">Izbegavala sam kozmetičke salone jer su veoma skupi. Poručila sam ovo čudo i sada se depiliram bez problema. Nije ništa lošije nego u salonima! Toplo preporučujem.</div>
                 </div>
                 <div class="review">
                     <div class="review__photo"><img alt="ProWax" title="ProWax" src="{{ asset('/') }}purplerelaxFiles/prowax2/user2.png"></div>
-                    <div class="review__name">Алина Щербакова</div>
-                    <div class="review__text">Воскоплав этот приобрела на этом сайте по акции и нисколько не жалею о покупке. Очень много прочитала о этой модели и решила остановиться именно на нем. Цену дешевле чем на этом сайте не нашла, что и послужило совершить покупку.</div>
+                    <div class="review__name">Lidija Vučković</div>
+                    <div class="review__text">Ova topilica voska je cool! :) Veoma je kvalitetna, odlično radi, a ja sam bez i jedne dlačice na telu! Za taj novac, može se reći da sam džaba prošla. </div>
                 </div>
             </div>
         </div>
@@ -233,7 +236,7 @@
 </section>
 <div class="clear"></div>
 <section class="buy container">
-    <h2 class="heading__headline">Воскоплав баночный</h2>
+    <h2 class="heading__headline">Grejač za vosak</h2>
     <h1 class="heading heading--secondary heading--has-headline heading--extra">Pro-Wax 100</h1>
     <div class="buy__photo col-6"><img alt="ProWax" title="ProWax" src="{{ asset('/') }}purplerelaxFiles/prowax2/sd.jpeg"></div>
     <div class="buy__form form col-6">
@@ -256,7 +259,9 @@
             {{ csrf_field() }}
             @include('lander.naturapharm.components.form_hidden_fields')
             <input type="text" placeholder="Ime i prezime" title="Ime i prezime" required="" class="form-control" name="name"><br>
-            <input id="tel" type="tel" placeholder="Telefon" title="Telefon" required="" class="form-control" name="phone">
+            <input id="tel" type="tel" placeholder="Telefon" title="Telefon" required="" class="form-control" name="phone"><br>
+            <input type="text" placeholder="Adresa" title="Adresa" required="" class="form-control" name="shipping_address"><br>
+            <input type="text" placeholder="Grad" title="Grad" required="" class="form-control" name="shipping_city">
             <div class="form__submit-wrapper">
                 <input type="submit" value="Poručite sada" class="button form__submit">
             </div>

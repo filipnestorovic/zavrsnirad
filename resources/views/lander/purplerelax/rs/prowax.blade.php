@@ -13,18 +13,18 @@
 <section class="topline">
     <div class="wrap">
         <ul>
-            <li><a href="#1">Преимущества</a></li>
-            <li><a href="#2">Характеристики</a></li>
-            <li><a href="#3">Описание</a></li>
-            <li><a href="#4">Отзывы</a></li>
-            <li><a href="#5">Доставка</a></li>
+            <li><a href="#1">Prednosti</a></li>
+            <li><a href="#2">Specifikacija</a></li>
+            <li><a href="#3">Opis</a></li>
+            <li><a href="#4">Recenzije</a></li>
+            <li><a href="#5">Dostava</a></li>
         </ul>
     </div>
 </section>
 <section class="block1">
     <div class="wrap">
-        <h1><span>Воскоплав баночный Pro-Wax 100</span></h1>
-        <span class="sale">со скидкой 50%</span>
+        <h1><span>Grejač za vosak Pro - Wax 100</span></h1>
+        <span class="sale">SA POPUSTOM OD 40%</span>
         <div class="produkt"></div>
         <div class="conversion" style="text-align: center;">
             <div class="prices">
@@ -35,7 +35,7 @@
                      {{ $prices[1]['amount'] }} RSD
                   </span>
             </div>
-            <a href="#buy" class="button">Заказать со скидкой</a>
+            <a href="#buy" class="button">Poručite sada</a>
         </div>
     </div>
 </section>
@@ -44,30 +44,30 @@
         <ul class="clrfx">
             <li>
                 <i class="fas fa-star"></i>
-                <h3>100% оригинал</h3>
-                Мы ориентируемся на широкий оборот, поэтому можем позволить себе доступные цены.
+                <h3>100% ORIGINAL</h3>
+                MI BRINEMO O VAMA I NUDIMO SAMO KVALITETNE PROIZVODE
             </li>
             <li>
                 <i class="fas fa-truck"></i>
-                <h3>Быстрая доставка</h3>
-                Доставка до 3 дней в любую точку Узбекистана.
+                <h3>NISKE CENE</h3>
+                CENE ISPOD TRŽIŠNIH ZBOG DIREKTNE NABAVKE OD PROIZVOĐAČA
             </li>
             <li>
                 <i class="far fa-credit-card"></i>
-                <h3>Оплата при получении</h3>
-                Вам не нужно оплачивать сразу, вы сможете оплатить товар при получении.
+                <h3>KONTROLA KVALITETA</h3>
+                DO SADA NIJE BILO POVRATA ROBE I REKLAMACIJA
             </li>
             <li>
                 <i class="fas fa-shield-alt"></i>
-                <h3>Гарантированное качество</h3>
-                Мы проверяем все товары, прежде чем их отправить. Вы можете быть уверены в качестве и сохранности вашего товара.
+                <h3>BRZA ISPORUKA</h3>
+                ISPORUKA BILO GDE U SRBIJI U ROKU OD 1-2 RADNA DANA
             </li>
         </ul>
     </div>
 </section>
 <section class="block3" id="2">
     <div class="wrap">
-        <h2 class="btitle">Характеристики</h2>
+        <h2 class="btitle">Karakteristike</h2>
         <div class="gallery">
             <div class="my-gallery">
                 <div><img src="{{ asset('/') }}purplerelaxFiles/prowax/main-1.jpeg" alt="ProVax" title="ProVax"></div>
@@ -78,34 +78,34 @@
         <div class="char clrfx">
             <ul class="left-char">
                 <li>
-                    <h3>Мощность:</h3>
-                    100 Вт;
+                    <h3>SNAGA:</h3>
+                    100W
                 </li>
                 <li>
-                    <h3>Объем емкости:</h3>
-                    450 мл;
+                    <h3>ZAPREMINA REZERVOARA:</h3>
+                    450ml
                 </li>
                 <li>
-                    <h3>Напряжение:</h3>
-                    110/220/240В;
+                    <h3>NAPON:</h3>
+                    110V/220V/240V
                 </li>
                 <li>
-                    <h3>Цвет:</h3>
-                    черный;
+                    <h3>BOJA:</h3>
+                    bela
                 </li>
             </ul>
             <ul class="right-char">
                 <li>
-                    <h3>Количество температурных режимов:</h3>
-                    3;
+                    <h3>BROJ TEMPERATURNIH REŽIMA:</h3>
+                    3
                 </li>
                 <li>
-                    <h3>Длина сетевого шнура:</h3>
-                    1.5 м
+                    <h3>DUŽINA KABLA ZA NAPAJANJE:</h3>
+                    1.5 M
                 </li>
                 <li>
-                    <h3>Вес:</h3>
-                    0,39 кг;
+                    <h3>TEŽINA:</h3>
+                    0,39 KG
                 </li>
             </ul>
         </div>
@@ -114,79 +114,82 @@
 <section class="block4" id="3">
     <div class="wrap">
         <div class="leftside">
-            <h2 class="btitle"><span>Описание</span></h2>
+            <h2 class="btitle"><span>OPIS</span></h2>
             <article>
-                <b><span>Воскоплав баночный Pro-Wax 100 white - нагреватель для воска в банках или в стаканчике. Небольшой объем банки (450 мл) позволяет успешно использовать его не только профессионалами в салоне, но и применять в домашних условиях. Баночный воскоплав Pro Wax 100 оснащен удобной ручкой терморегулятором для выбора температуры плавления воска от 45 до 105 градусов. При этом аппарат работает как термопот, поддерживая комфортную температуру парафина или воска в течение всей процедуры.</span></b>
+                <b><span>Grejač za vosak Pro - Wax 100 topi vosak u limenkama ili u čaši. Mala zapremina limenke (450ml) omogućava da se uspešno koristi ne samo u salonima
+nego i kod kuće jer može da se radi sa malo voska u opticaju. Pro - Wax 100 grejač voska poseduje termostat za izbor temperature topljenja od 45 do 105 stepeni.
+Uređaj može da radi konstantno, održavajući ugodnu temperaturu parafina ili voska tokom čitave procedure.</span></b>
             </article>
         </div>
         <div class="rightside">
             <div class="produkt"></div>
-            <a href="#buy" class="button">Заказать со скидкой</a>
+            <a href="#buy" class="button">Poručite sada</a>
         </div>
     </div>
 </section>
 <section class="block5" id="4">
     <div class="wrap">
-        <h2 class="btitle">Отзывы <span>покупателей</span></h2>
+        <h2 class="btitle">UTISCI <span>KUPACA</span></h2>
         <ul class="reviews">
             <li class="r1">
-                <h3>София Анисимова</h3>
-                <p>Здравствуйте! Впервые делаю заказ в этой компании. Очень здорово! Я очень довольна! Оператор связался со мной в считанные минуты, было очень приятно. Буду советовать всем своим друзьям! Желаю удачи и процветания!</p>
+                <h3>Ivana Krunić</h3>
+                <p>San svake devojke je da može da se depilira kod kuće. Videla sam ovaj proizvod, nisam mogla da mu odolim i kupila sam ga.
+                    Isporučeno mi je vrlo brzo i odmah sam ga probala. Devojke poručite, nećete se pokajati! :)</p>
             </li>
             <li class="r2">
-                <h3>Любовь Пономарёва</h3>
-                <p>Не представляю, как я раньше жила без этого воскоплава. Выбирала долго и мучительно, просматривала много предложений других магазинов и нашла самый качественный и выгодный именно у вас. Он очень полезный и эффективный! Очень довольна. Буду заказывать еще!</p>
+                <h3>Elena Maksimović</h3>
+                <p>Izbegavala sam kozmetičke salone jer su veoma skupi. Poručila sam ovo čudo i sada se depiliram bez problema. Nije ništa lošije nego u salonima! Toplo preporučujem.</p>
             </li>
             <li class="r3">
-                <h3>Татьяна Борисова</h3>
-                <p>Воскоплав купили в косметологический кабинет и очень довольны покупкой. Быстро греется, легко регулируется, работает бесшумно. Подходит под все виды воска и пасты для шугаринга. Помещаются все банки, благо у всех диаметр одинаков. Работает и работает, повторю очень довольны!</p>
+                <h3>Lidija Vučković</h3>
+                <p>Ova topilica voska je cool! :) Veoma je kvalitetna, odlično radi, a ja sam bez i jedne dlačice na telu! Za taj novac, može se reći da sam džaba prošla. </p>
             </li>
         </ul>
     </div>
 </section>
 <section class="block6" id="5">
     <div class="wrap">
-        <h2 class="btitle">Как получить <span>товар</span></h2>
+        <h2 class="btitle">KAKO <span>RADIMO</span></h2>
         <ul class="as clrfx">
             <li>
                 <i class="fas fa-clipboard-list"></i>
-                <h3>Оставьте заявку</h3>
-                <p>Заполните форму ниже, указав свое имя, фамилию и номер телефона</p>
+                <h3>PORUČIVANJE</h3>
+                <p>Ostavite svoje podatke na našem sajtu</p>
             </li>
             <li>
                 <i class="fas fa-clipboard-check"></i>
-                <h3>Получите консультацию</h3>
-                <p>Наши сотрудники свяжутся с вами для уточнения деталей заказа</p>
+                <h3>POTVRDA PORUDŽBINE</h3>
+                <p>Kontaktiraćemo vas da potvrdimo vašu porudžbinu</p>
             </li>
             <li>
                 <i class="fas fa-truck"></i>
-                <h3>Заберите свой заказ</h3>
-                <p>Мы отправим ваш заказ курьером</p>
+                <h3>SLANJE</h3>
+                <p>Paket šaljemo u roku od 1-2 radna dana</p>
             </li>
             <li>
                 <i class="fas fa-credit-card"></i>
-                <h3>Оплатите при получении</h3>
-                <p>Никаких предоплат! Оплата осуществляется при получении заказа</p>
+                <h3>PLAĆANJE</h3>
+                <p>Robu plaćate kuriru po prijemu pošiljke</p>
             </li>
         </ul>
-        <p class="note">Доставка почтой <b>от 7 рабочих дней в зависимости от региона,</b><br> Вы вправе отказаться от покупки <b>в течение 14 дней</b> с момента получения заказа</p>
+        {{--<p class="note">Dostava почтой <b>от 7 рабочих дней в зависимости от региона,</b><br> Вы вправе отказаться от покупки <b>в течение 14 дней</b> с момента получения заказа</p>--}}
     </div>
 </section>
 <section class="topline">
     <div class="wrap">
         <ul>
-            <li><a href="#1">Преимущества</a></li>
-            <li><a href="#2">Характеристики</a></li>
-            <li><a href="#3">Описание</a></li>
-            <li><a href="#4">Отзывы</a></li>
-            <li><a href="#5">Доставка</a></li>
+            <li><a href="#1">Prednosti</a></li>
+            <li><a href="#2">Specifikacija</a></li>
+            <li><a href="#3">Opis</a></li>
+            <li><a href="#4">Recenzije</a></li>
+            <li><a href="#5">Dostava</a></li>
         </ul>
     </div>
 </section>
 <section class="block7">
     <div class="wrap">
-        <h2 class="show-medium">Воскоплав баночный Pro-Wax 100</h2>
-        <span class="fsale"><span class="show-large">скидка</span><span class="show-medium">Со скидкой</span> 50%</span>
+        <h2 class="show-medium">Grejač za vosak Pro - Wax 100</h2>
+        <span class="fsale"><span class="show-large">POPUST</span><span class="show-medium">SA POPUSTOM</span> 40%</span>
         <div class="produkt"></div>
         <div class="formbox">
             <div class="prices">
@@ -204,6 +207,8 @@
                 @include('lander.naturapharm.components.form_hidden_fields')
                 <input type="text" name="name" placeholder="Ime i prezime" required="">
                 <input type="tel" name="phone" placeholder="Telefon" required="" >
+                <input type="text" name="shipping_address" placeholder="Adresa" required="">
+                <input type="text" name="shipping_city" placeholder="Grad" required="">
                 <button class="button" type="submit">Poručite sada</button>
             </form>
         </div>

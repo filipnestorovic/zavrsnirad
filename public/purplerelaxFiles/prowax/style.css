@@ -32,8 +32,8 @@ h2, h3, h4, h5, h6{color:#291504;}
 b{font-weight:700;}
 body{font-family:'Open Sans', sans-serif;font-weight:400;font-size:16px;line-height:30px;color:#222222;width:100%;background:#fff;}
 .old-cost:before, .new-cost:before{display:block;position:absolute;font-size:14px;font-weight:700;color:#fff;text-transform:uppercase;top:-48px;left:42px;}
-.old-cost:before{content:'Старая цена';}
-.new-cost:before{content:'Новая цена';}
+.old-cost:before{content:'Stara cena';}
+.new-cost:before{content:'Nova cena';}
 .old-cost, .new-cost{display:block;width:50%;line-height:60px;position:relative;}
 .old-cost{float:left;color:#fff;font-size:30px;text-decoration:line-through;}
 .new-cost{float:right;font-size:30px;color:#42413d;}
