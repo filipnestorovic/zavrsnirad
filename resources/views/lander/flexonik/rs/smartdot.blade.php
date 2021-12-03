@@ -62,29 +62,29 @@
                                     <img src="#" alt="">
                                 </div>
                                 <ul id="guGallery-1-thumbnails" class="gallery-thumbnails">
-                                    <li><img width="150" height="150" src="{{ asset('/') }}flexovalFiles/agatus/aculief-s1-02-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt=""
+                                    <li><img width="150" height="150" src="{{ asset('/') }}flexonikFiles/smartdot/smartdots-s1-02b-180x180.jpg" class="attachment-thumbnail size-thumbnail" alt=""
                                              id="guGallery-1-thumbnail-2"
-                                             srcset="{{ asset('/') }}flexovalFiles/agatus/aculief-s1-02-150x150.jpg 150w, {{ asset('/') }}flexovalFiles/agatus/aculief-s1-02-85x85.jpg 85w, {{ asset('/') }}flexovalFiles/agatus/aculief-s1-02-75x75.jpg 75w, {{ asset('/') }}flexovalFiles/agatus/aculief-s1-02-180x180.jpg 180w"
                                              sizes="(max-width: 150px) 100vw, 150px" /></li>
-                                    <li><img width="150" height="150" src="{{ asset('/') }}flexovalFiles/agatus/aculief-s1-03-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt=""
+                                    <li><img width="150" height="150" src="{{ asset('/') }}flexonikFiles/smartdot/smartdots-s1-04b-180x180.jpg" class="attachment-thumbnail size-thumbnail" alt=""
                                              id="guGallery-1-thumbnail-3"
-                                             srcset="{{ asset('/') }}flexovalFiles/agatus/aculief-s1-03-150x150.jpg 150w, {{ asset('/') }}flexovalFiles/agatus/aculief-s1-03-85x85.jpg 85w, {{ asset('/') }}flexovalFiles/agatus/aculief-s1-03-75x75.jpg 75w, {{ asset('/') }}flexovalFiles/agatus/aculief-s1-03-180x180.jpg 180w"
                                              sizes="(max-width: 150px) 100vw, 150px" /></li>
-                                    <li><img width="150" height="150" src="{{ asset('/') }}flexovalFiles/agatus/aculief-s1-05-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt=""
+                                    <li><img width="150" height="150" src="{{ asset('/') }}flexonikFiles/smartdot/smartdots-s1-05b-180x180.jpg" class="attachment-thumbnail size-thumbnail" alt=""
                                              id="guGallery-1-thumbnail-4"
-                                             srcset="{{ asset('/') }}flexovalFiles/agatus/aculief-s1-05-150x150.jpg 150w, {{ asset('/') }}flexovalFiles/agatus/aculief-s1-05-85x85.jpg 85w, {{ asset('/') }}flexovalFiles/agatus/aculief-s1-05-75x75.jpg 75w, {{ asset('/') }}flexovalFiles/agatus/aculief-s1-05-180x180.jpg 180w"
                                              sizes="(max-width: 150px) 100vw, 150px" /></li>
-                                    <li><img width="150" height="150" src="{{ asset('/') }}flexovalFiles/agatus/aculief-s1-06-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt=""
+                                    <li><img width="150" height="150" src="{{ asset('/') }}flexonikFiles/smartdot/smartdots-s1-06-180x180.jpg" class="attachment-thumbnail size-thumbnail" alt=""
                                              id="guGallery-1-thumbnail-6"
-                                             srcset="{{ asset('/') }}flexovalFiles/agatus/aculief-s1-06-150x150.jpg 150w, {{ asset('/') }}flexovalFiles/agatus/aculief-s1-06-85x85.jpg 85w, {{ asset('/') }}flexovalFiles/agatus/aculief-s1-06-75x75.jpg 75w, {{ asset('/') }}flexovalFiles/agatus/aculief-s1-06-180x180.jpg 180w"
                                              sizes="(max-width: 150px) 100vw, 150px" /></li>
-                                    <li><img width="150" height="150" src="{{ asset('/') }}flexovalFiles/agatus/aculief-s1-07-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt=""
+                                    <li><img width="150" height="150" src="{{ asset('/') }}flexonikFiles/smartdot/smartdots-s1-07-180x180.jpg" class="attachment-thumbnail size-thumbnail" alt=""
                                              id="guGallery-1-thumbnail-7"
-                                             srcset="{{ asset('/') }}flexovalFiles/agatus/aculief-s1-07-150x150.jpg 150w, {{ asset('/') }}flexovalFiles/agatus/aculief-s1-07-85x85.jpg 85w, {{ asset('/') }}flexovalFiles/agatus/aculief-s1-07-75x75.jpg 75w, {{ asset('/') }}flexovalFiles/agatus/aculief-s1-07-180x180.jpg 180w"
                                              sizes="(max-width: 150px) 100vw, 150px" /></li>
-                                    <li><img width="150" height="150" src="{{ asset('/') }}flexovalFiles/agatus/aculief-s1-08-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt=""
+                                    <li><img width="150" height="150" src="{{ asset('/') }}flexonikFiles/smartdot/smartdots-s1-08b-180x180.jpg" class="attachment-thumbnail size-thumbnail" alt=""
                                              id="guGallery-1-thumbnail-8"
-                                             srcset="{{ asset('/') }}flexovalFiles/agatus/aculief-s1-08-150x150.jpg 150w, {{ asset('/') }}flexovalFiles/agatus/aculief-s1-08-85x85.jpg 85w, {{ asset('/') }}flexovalFiles/agatus/aculief-s1-08-75x75.jpg 75w, {{ asset('/') }}flexovalFiles/agatus/aculief-s1-08-180x180.jpg 180w"
+                                             sizes="(max-width: 150px) 100vw, 150px" /></li>
+                                    <li><img width="150" height="150" src="{{ asset('/') }}flexonikFiles/smartdot/smartdots-s1-09-180x180.jpg" class="attachment-thumbnail size-thumbnail" alt=""
+                                             id="guGallery-1-thumbnail-8"
+                                             sizes="(max-width: 150px) 100vw, 150px" /></li>
+                                    <li><img width="150" height="150" src="{{ asset('/') }}flexonikFiles/smartdot/smartdots-s1-10-180x180.jpg" class="attachment-thumbnail size-thumbnail" alt=""
+                                             id="guGallery-1-thumbnail-8"
                                              sizes="(max-width: 150px) 100vw, 150px" /></li>
                                 </ul>
                             </div>
@@ -93,33 +93,33 @@
                             <div class="product-info-container">
                                 <div class="d-md-none rtl-text-centered">
                                     <div class="button" style="background: #25ae4e">
-                                        <a href="#offer">Poruči Agatus sada!</a>
+                                        <a href="#orderForm">Poruči SMARTDOT sada!</a>
                                     </div>
                                 </div>
                                 <div class="info">
                                     <div class="info-padding">
-                                        <p>Da li ste znali:  Zbog raznoraznih uređaja koje svakako koristimo, kao telefoni, laptopovi, wifi ruteri i slično danas smo izolovani 100 miliona puta većoj elektromagnetnoj radijaciji nego pre 50 godina.</p>
-                                        <p>Zato je napravljen smartDOT, uređaj koji štiti od EMF zračenja. On menja postavku elektromagnetih frekvencija u njihovom izvoru, tako da su uređaji pogodniji za upotrebu.</p>
-                                        <p>Sve u svemu, zaključeno je da je smartdot jako efikasan u neutralisanju negativnih efekata radijacije mobilnih telefona na ljudsko telo - slažu se stručnjaci</p>
+                                        <p>Da li ste znali:  Zbog raznoraznih uređaja koje svakako koristimo, kao telefoni, laptopovi, wifi ruteri i slično danas smo izloženi <strong>100 miliona puta većoj elektromagnetnoj radijaciji nego pre 50 godina.</strong></p>
+                                        <p>Zato je napravljen smartDOT, uređaj koji štiti od EMF zračenja. <strong>On menja postavku elektromagnetih frekvencija u njihovom izvoru, tako da su uređaji pogodniji za upotrebu.</strong></p>
+                                        <p>Sve u svemu, zaključeno je da je smartdot jako efikasan u <strong>neutralisanju negativnih efekata radijacije</strong> mobilnih telefona na ljudsko telo - slažu se stručnjaci</p>
                                     </div>
                                 </div>
                                 <div class="info d-none d-lg-block">
                                 </div>
                                 <div class="product-description-list">
                                     <ul>
-                                        <li>Testiran, istražen i dokazan - Zaštitu vaše porodice ne treba poveriti baš bilo kome. smartDot je baziran na tehnologiji koja se već duži period testira i unapređuje u nezavisnim laboratorijama. Hiljade ljudi širom sveta uživa u benefitima ovog proizvoda, a sada za to imate priliku i vi.</li>
-                                        <li>Štiti Vas od svih uređaja koji emituju EMF - Najčešći su pametni telefoni, tableti, laptopovi, wifi ruteri, gaming konzole i slično. Preporučuje se da smartdot bude postavljen na svaki pojedinačan uređaj.</li>
-                                        <li>Lako se lepi na bilo koji uređaj - Ne treba da bude na nekoj posebnoj poziciji. Samo se nalepi i štiti od EMF zračenja od tog trenutka. U slučaju da želite da skinete sa uređaja, to se vrlo lako radi, a smartDot ne ošećuje uređaj i ne ostavlja tragove.</li>
-                                        <li>Otklanja nuspojave zračenja - Da li imate glavobolje kada koristite telefon ili računar duže vreme? Umor, anksioznost i slično? SmarDot eleminiše problem u korenu i donosi harmoniju vašem organizmu eleminišući neželjene efekte EMF-a.</li>
-                                        <li>Nalepite jednom i to je to - smartdot je toliko lagan i sitan da ćete zaboraviti da je tu. Takođe koristi najkvalitetnije lepivo koje može da se nađe na tržišzu tako da ne morate da brinete da će da spadne i da ćete ga izgubiti.</li>
-                                        <li>Štiti Vas zauvek - Svaki proizvod traje zauvek, tako da nema potrebe za zamenom ili kupovinom novog.</li>
+                                        <li><b>Testiran, istražen i dokazan</b> - Zaštitu vaše porodice ne treba poveriti baš bilo kome. smartDot je baziran na tehnologiji koja se već duži period testira i unapređuje u nezavisnim laboratorijama. Hiljade ljudi širom sveta uživa u benefitima ovog proizvoda, a sada za to imate priliku i vi.</li>
+                                        <li><b>Štiti Vas od svih uređaja koji emituju EMF</b> - Najčešći su pametni telefoni, tableti, laptopovi, wifi ruteri, gaming konzole i slično. Preporučuje se da smartdot bude postavljen na svaki pojedinačan uređaj.</li>
+                                        <li><b>Lako se lepi na bilo koji uređaj</b> - Ne treba da bude na nekoj posebnoj poziciji. Samo se nalepi i štiti od EMF zračenja od tog trenutka. U slučaju da želite da skinete sa uređaja, to se vrlo lako radi, a smartDot ne ošećuje uređaj i ne ostavlja tragove.</li>
+                                        <li><b>Otklanja nuspojave zračenja</b> - Da li imate glavobolje kada koristite telefon ili računar duže vreme? Umor, anksioznost i slično? SmarDot eleminiše problem u korenu i donosi harmoniju vašem organizmu eleminišući neželjene efekte EMF-a.</li>
+                                        <li><b>Nalepite jednom i to je to</b> - smartdot je toliko lagan i sitan da ćete zaboraviti da je tu. Takođe koristi najkvalitetnije lepivo koje može da se nađe na tržišzu tako da ne morate da brinete da će da spadne i da ćete ga izgubiti.</li>
+                                        <li><b>Štiti Vas zauvek</b> - Svaki proizvod traje zauvek, tako da nema potrebe za zamenom ili kupovinom novog.</li>
                                     </ul>
                                 </div>
                                 <div class="product-description-list d-none d-md-block d-lg-block">
                                 </div>
                                 <div class="rtl-text-centered">
                                     <div class="button" style="background: #25ae4e;">
-                                        <a href="#offer">Poruči smartDOT sada!</a>
+                                        <a href="#orderForm">Poruči SMARTDOT sada!</a>
                                     </div>
                                 </div>
                             </div>
@@ -267,7 +267,7 @@
             </section>
         </div>
         <div class="clearfix"></div>
-        <div>
+        <div id="orderForm">
             <form action="{{$orderRoute}}" method="POST">
                 {{ csrf_field() }}
                 @include('lander.naturapharm.components.form_hidden_fields')
@@ -292,8 +292,7 @@
                                     @endif
                                     <div class="img-holder">
                                         {{--<img src="{{asset('/').$product->product_image}}">--}}
-                                        <img src="{{asset('/')}}flexovalFiles/agatus/aculiefProduct.png">
-
+                                        <img src="{{ asset('/') }}flexonikFiles/smartdot/smartdotProduct.jpg">
                                         <span class="quantity-badge">{{ $singlePrice['quantity'] }}x</span>
                                     </div>
                                     <div class="productDetails">
@@ -356,6 +355,9 @@
         </div>
     </div>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         .orderst-form {
             display: none;
         }

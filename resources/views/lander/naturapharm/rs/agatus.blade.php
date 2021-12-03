@@ -93,7 +93,7 @@
                             <div class="product-info-container">
                                 <div class="d-md-none rtl-text-centered">
                                     <div class="button" style="background: #25ae4e">
-                                        <a href="#offer">Poruči Agatus sada!</a>
+                                        <a href="#orderForm">Poruči Agatus sada!</a>
                                     </div>
                                 </div>
                                 <div class="info">
@@ -119,7 +119,7 @@
                                 </div>
                                 <div class="rtl-text-centered">
                                     <div class="button" style="background: #25ae4e;">
-                                        <a href="#offer">Poruči Agatus sada!</a>
+                                        <a href="#orderForm">Poruči Agatus sada!</a>
                                     </div>
                                 </div>
                             </div>
@@ -267,7 +267,7 @@
             </section>
         </div>
         <div class="clearfix"></div>
-        <div>
+        <div id="orderForm">
             <form action="{{$orderRoute}}" method="POST">
                 {{ csrf_field() }}
                 @include('lander.naturapharm.components.form_hidden_fields')
@@ -355,6 +355,9 @@
         </div>
     </div>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         .orderst-form {
             display: none;
         }
