@@ -16,6 +16,14 @@
     {{--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">--}}
     {{--<link rel="stylesheet" media="screen" href="{{ asset('/') }}flexovalFiles/shared_files/lander.css">--}}
     <link rel="stylesheet" href="{{ asset('/') }}checkoutFiles/shared_files/order-cvr.min.css">
+    <style>
+        body{
+            font-size: 16px;
+            color: #000;
+            font-family: Open Sans,Helvetica,Arial,sans-serif;
+            line-height: 1.14;
+        }
+    </style>
 </head>
 <body class="single-offer lang-en layout-default">
 <div id="main-wrapper">
@@ -27,7 +35,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="site-logo">
-                            <img src="{{ asset('/') }}flexovalFiles/shared_files/Flexoval_logo.png" alt="" style="height: 45px;">
+                            <img src="https://naturapharm.rs/naturapharmFiles/shared_files/NaturaPharm_logo.png" alt="" style="height: 70px;">
                         </div>
                     </div>
                 </div>
@@ -66,10 +74,10 @@
                                              id="guGallery-1-thumbnail-2"
                                              srcset="{{ asset('/') }}flexovalFiles/agatus/aculief-s1-02-150x150.jpg 150w, {{ asset('/') }}flexovalFiles/agatus/aculief-s1-02-85x85.jpg 85w, {{ asset('/') }}flexovalFiles/agatus/aculief-s1-02-75x75.jpg 75w, {{ asset('/') }}flexovalFiles/agatus/aculief-s1-02-180x180.jpg 180w"
                                              sizes="(max-width: 150px) 100vw, 150px" /></li>
-                                    <li><img width="150" height="150" src="{{ asset('/') }}flexovalFiles/agatus/aculief-s1-03-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt=""
-                                             id="guGallery-1-thumbnail-3"
-                                             srcset="{{ asset('/') }}flexovalFiles/agatus/aculief-s1-03-150x150.jpg 150w, {{ asset('/') }}flexovalFiles/agatus/aculief-s1-03-85x85.jpg 85w, {{ asset('/') }}flexovalFiles/agatus/aculief-s1-03-75x75.jpg 75w, {{ asset('/') }}flexovalFiles/agatus/aculief-s1-03-180x180.jpg 180w"
-                                             sizes="(max-width: 150px) 100vw, 150px" /></li>
+                                    <!--<li><img width="150" height="150" src="{{ asset('/') }}flexovalFiles/agatus/aculief-s1-03-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt=""-->
+                                    <!--         id="guGallery-1-thumbnail-3"-->
+                                    <!--         srcset="{{ asset('/') }}flexovalFiles/agatus/aculief-s1-03-150x150.jpg 150w, {{ asset('/') }}flexovalFiles/agatus/aculief-s1-03-85x85.jpg 85w, {{ asset('/') }}flexovalFiles/agatus/aculief-s1-03-75x75.jpg 75w, {{ asset('/') }}flexovalFiles/agatus/aculief-s1-03-180x180.jpg 180w"-->
+                                    <!--         sizes="(max-width: 150px) 100vw, 150px" /></li>-->
                                     <li><img width="150" height="150" src="{{ asset('/') }}flexovalFiles/agatus/aculief-s1-05-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt=""
                                              id="guGallery-1-thumbnail-4"
                                              srcset="{{ asset('/') }}flexovalFiles/agatus/aculief-s1-05-150x150.jpg 150w, {{ asset('/') }}flexovalFiles/agatus/aculief-s1-05-85x85.jpg 85w, {{ asset('/') }}flexovalFiles/agatus/aculief-s1-05-75x75.jpg 75w, {{ asset('/') }}flexovalFiles/agatus/aculief-s1-05-180x180.jpg 180w"
@@ -267,7 +275,7 @@
             </section>
         </div>
         <div class="clearfix"></div>
-        <div id="orderForm">
+        <div class="col-md-12" id="orderForm">
             <form action="{{$orderRoute}}" method="POST">
                 {{ csrf_field() }}
                 @include('lander.naturapharm.components.form_hidden_fields')
@@ -313,7 +321,7 @@
                     @endforeach
                     </div>
                 </div>
-                <div class="col-md-12" id="scroll-form">
+                <div class="col-md-12 mb-5 pb-5" id="scroll-form">
                     <div class="orderst-form">
                         <div class="step-title js-customer-title" style="text-align: center;">
                             <h2 class="title">
@@ -352,7 +360,7 @@
                     </div>
                 </div>
             </form>
-        </div>
+            </div>
     </div>
     <style>
         html {

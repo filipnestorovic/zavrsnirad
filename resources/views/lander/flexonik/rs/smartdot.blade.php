@@ -16,6 +16,14 @@
     {{--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">--}}
     {{--<link rel="stylesheet" media="screen" href="{{ asset('/') }}flexovalFiles/shared_files/lander.css">--}}
     <link rel="stylesheet" href="{{ asset('/') }}checkoutFiles/shared_files/order-cvr.min.css">
+        <style>
+        body{
+            font-size: 16px;
+            color: #000;
+            font-family: Open Sans,Helvetica,Arial,sans-serif;
+            line-height: 1.14;
+        }
+    </style>
 </head>
 <body class="single-offer lang-en layout-default">
 <div id="main-wrapper">
@@ -27,7 +35,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="site-logo">
-                            <img src="{{ asset('/') }}flexovalFiles/shared_files/Flexoval_logo.png" alt="" style="height: 45px;">
+                            <img src="https://flexonik.com/flexonikFiles/shared_files/flexonik_logo.png" alt="" style="height: 45px;">
                         </div>
                     </div>
                 </div>
@@ -292,7 +300,7 @@
                                     @endif
                                     <div class="img-holder">
                                         {{--<img src="{{asset('/').$product->product_image}}">--}}
-                                        <img src="{{ asset('/') }}flexonikFiles/smartdot/smartdotProduct.jpg">
+                                        <img src="{{ asset('/') }}flexonikFiles/smartdot/smartdot-productwebp.webp">
                                         <span class="quantity-badge">{{ $singlePrice['quantity'] }}x</span>
                                     </div>
                                     <div class="productDetails">
@@ -313,7 +321,7 @@
                         @endforeach
                     </div>
                 </div>
-                <div class="col-md-12" id="scroll-form">
+                <div class="col-md-12 mb-5 pb-5" id="scroll-form">
                     <div class="orderst-form">
                         <div class="step-title js-customer-title" style="text-align: center;">
                             <h2 class="title">
