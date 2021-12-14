@@ -16,7 +16,7 @@
 <section class="header-one">
     <div class="wrap">
         <h1>SWEET SWEAT</h1>
-        <h2>TERMO POJAS ZA GUBITAK TEŽINE</h2>
+        <h2>TERMO STEZNICI ZA GUBITAK TEŽINE</h2>
         <div class="tovar-sale">popust <span>-40%</span></div>
         <ul class="header-one_plus">
             <li>
@@ -61,15 +61,15 @@
 </section>
 <section class="sect2">
     <div class="wrap">
-        <h2 class="title"><span>SAVRŠENA FIGURA</span> SA JEDINSTVENIM POJASOM ZA MRŠAVLJENJE</h2>
+        <h2 class="title"><span>SAVRŠENA FIGURA</span> SA JEDINSTVENIM STEZNICIMA ZA MRŠAVLJENJE</h2>
         <div class="benef_block">
-            <img src="{{ asset('/') }}flexonikFiles/sweatthigh/s2_img.jpg" alt="">
+            <img src="{{ asset('/') }}flexonikFiles/sweatthigh/s2_img.png" alt="">
             <p><span><span>3 PUTA</span> EFIKASNIJE</span> IZBACIVANJE VODE I TOKSINA</p>
         </div>
         <div class="description">
             <p>Sweet Sweat značajno povećava efikasnost bilo koje fizičke aktivnosti. <span>Pospešujući protok krvi u tkivu i termogenezu,
                 značajno povećava sagorevanje kalorija tokom vežbanja i pojačava znojenje</span> i više nego što očekujete.</p>
-            <img src="{{ asset('/') }}flexonikFiles/sweetbelt/1.gif" alt="">
+            <img src="{{ asset('/') }}flexonikFiles/sweatthigh/sweetthigh.jpg" alt="">
             <p>Povećavajući cirkulaciju krvi u mišićima i tkivima, ubrzava zagrevanje i oporavak, <span>pomaže izbegavanju povreda i uklanja višak vode i toksina,</span> pomažući vam da postignete cilj mnogo brže.</p>
         </div>
     </div>
@@ -115,7 +115,7 @@
 </section>
 <section class="sect4">
     <div class="wrap">
-        <h2 class="title"><span>ČEMU SLUŽI POJAS SWEET SWEAT?</span></h2>
+        <h2 class="title"><span>ČEMU SLUŽE STEZNICI SWEET SWEAT?</span></h2>
         <ul class="benef1">
             <li>
                 <img src="{{ asset('/') }}flexonikFiles/sweetbelt/benef1_img1.jpg" alt="">
@@ -140,7 +140,7 @@
 <section class="sect3">
     <div class="wrap">
         <h2 class="title"><span>SPECIFIKACIJE</span> I SAVETI ZA UPOTREBU</h2>
-        <img src="{{ asset('/') }}flexonikFiles/sweatthigh/s3_img.jpg" alt="">
+        <img src="{{ asset('/') }}flexonikFiles/sweatthigh/s3_img.png" alt="">
         <ul class="char_list">
             <li><b>Veličina:</b> univerzalna</li>
             <li><b>Materijal:</b> 100% neopren bez lateksa</li>
@@ -155,7 +155,7 @@
         <div class="reviews">
             <div>
                 <div class="rev_item">
-                    <img src="{{ asset('/') }}flexonikFiles/sweetbelt/rev1.jpg" alt="">
+                    {{--<img src="{{ asset('/') }}flexonikFiles/sweetbelt/rev1.jpg" alt="">--}}
                     <div class="info">
                         <p>ANDRIJA K. <br>26 godina</p>
                     </div>
@@ -166,23 +166,23 @@
             </div>
             <div>
                 <div class="rev_item">
-                    <img src="{{ asset('/') }}flexonikFiles/sweetbelt/rev2.jpg" alt="">
+                    {{--<img src="{{ asset('/') }}flexonikFiles/sweetbelt/rev2.jpg" alt="">--}}
                     <div class="info">
                         <p>SVETLANA S. <br>32 GODINE</p>
                     </div>
-                    <p>Ovaj pojas je nešto najbolje što sam kupila. Nosim ga dok vežbam, šetam ili radim kućne poslove.
-                        Nakon 2 nedelje, efekat je prilično vidljiv. Struk je postao uži, a stomak se smanjio. Posavetovala sam svoje drugarice da kupe ovaj pojas,
-                        jer je to najsigurniji put do savršenog struka.</p>
+                    <p>Ovi steznici su nešto najbolje što sam kupila. Nosim ih dok vežbam, šetam ili radim kućne poslove.
+                        Nakon 2 nedelje, efekat je prilično vidljiv. Kukovi su postali uži, a butine su se smanjile. Posavetovala sam svoje drugarice da kupe ove steznike,
+                        jer je to najsigurniji put do savršenog tela.</p>
                 </div>
             </div>
             <div>
                 <div class="rev_item">
-                    <img src="{{ asset('/') }}flexonikFiles/sweetbelt/rev3.jpg" alt="">
+                    {{--<img src="{{ asset('/') }}flexonikFiles/sweetbelt/rev3.jpg" alt="">--}}
                     <div class="info">
-                        <p>VUKSAN K. <br>34 GODINE</p>
+                        <p>VALERIJA K. <br>34 GODINE</p>
                     </div>
-                    <p>Pojas Sweet Sweat mi je pomogao da se oslobodim stomaka koji je počeo da se pojavljuje nakon 30. godine. Takođe, počeo sam brzo da dobijam na težini.
-                        Odlučio sam da pokušam da se dovedem u formu. Pojas mi mnogo pomaže, stomak je praktično nestao a mišići su se pojavili. Sve preporuke za ovaj proizvod!</p>
+                    <p>Steznici Sweet Sweat su mi pomogli da se oslobodim sala koje je počelo da se pojavljuje nakon 30. godine. Takođe, počela sam brzo da dobijam na težini.
+                        Odlučila sam da pokušam da se dovedem u formu. Steznici mi mnogo pomažu, salo je praktično nestalo a mišići su se pojavili. Sve preporuke za ovaj proizvod!</p>
                 </div>
             </div>
         </div>
@@ -297,6 +297,15 @@
         ]
     });
 </script>
+<style>
+    .slick-prev, .slick-next {
+        top: 200px;
+    }
+    .rev_item>p {
+        padding: 10px 50px;
+        text-align: center;
+    }
+</style>
 @include('components.pixel_footer')
 </body>
 </html>

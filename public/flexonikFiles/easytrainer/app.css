@@ -495,7 +495,6 @@ h2 {
 }
 
 .section-main {
-    min-height: 100vh;
     padding: 0;
     background: url("bg-header.jpg") center no-repeat;
     background-size: cover;
