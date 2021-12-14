@@ -10,14 +10,12 @@
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <link rel="icon" type="image/x-icon" href="">
     <link rel="stylesheet" media="all" href="{{ asset('/') }}purplerelaxFiles/soloblade/app.css">
-    {{--<script type="text/javascript" src="https://microtouch.xcartpro.com/r1/js/jquery.countdown.js"></script>--}}
-    {{--<script type="text/javascript" src="https://microtouch.xcartpro.com/r1/js/functions.js"></script>--}}
-    {{--<script src="../../cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.2.7/jquery.inputmask.bundle.min.js"></script>--}}
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 </head>
 <body>
 <!-- BEGIN content -->
 <div class="out">
+    @include('components.display_errors')
     <div class="b1">
         <div class="in">
             <div class="left">
@@ -26,16 +24,14 @@
                     <p>
                         MicroTouch SOLO
                     </p>
-                    <span>Rechargeable Shaver, Trimmer and Edger</span>
+                    <span>Punjivi aparat za brijanje</span>
                 </div>
             </div>
             <div class="form_wrap">
                 <div id="form1" class="form_block">
-                    <span class="sp white">Hurry up to order with discount <span class="adfh-discount" style="color: #f5e51b;">50</span>%!</span>
-                    <span class="sp white">Quantity is limited!</span>
-                    <span class="sp white free_del" style="color: #f5e51b;">Free Delivery!</span>
+                    <span class="sp white">Požurite i poručite sa popustom od <span class="adfh-discount" style="color: #f5e51b;">40</span>%!</span>
                     <span class="sp white old-price">
-                        Old price:
+                        Stara cena:
                         <span class="adfh-old-price">
                            {{ $prices[1]['originalPrice'] }}
                         </span>
@@ -44,7 +40,7 @@
                         </span>
                      </span>
                     <span class="sp new-price">
-                        New Price:
+                        Nova cena:
                         <span class="adfh-new-price" style="color: #f5e51b;">
                            {{ $prices[1]['amount'] }}
                         </span>
@@ -52,15 +48,15 @@
                            RSD
                         </span>
                      </span>
-                    <span class="sp white">Time left to buy:</span>
-                    <div class="timer">
-                        <div id="countdown"></div>
-                    </div>
                     <div id="form-wrapper2" class="form form-wrapper">
-                        <form class="form orderformcdn" action="#" method="post">
-                            <input class="form-name name fio" name="name" placeholder="Your name" required="">
-                            <input class="form-phone phone tel" name="phone" placeholder="Your mobile" required="" type="tel">
-                            <button name="button" class="form-btn" type="submit">ORDER NOW</button>
+                        <form class="form orderformcdn" action="{{$orderRoute}}" method="post">
+                            {{ csrf_field() }}
+                            @include('lander.naturapharm.components.form_hidden_fields')
+                            <input class="form-name name fio" name="name" placeholder="Ime i prezime" required="" type="text">
+                            <input class="form-phone phone tel" name="phone" placeholder="Telefon" required="" type="tel">
+                            <input class="" name="shipping_address" placeholder="Adresa" required="" type="text">
+                            <input class="" name="shipping_city" placeholder="Grad" required="" type="text">
+                            <button name="button" class="form-btn" type="submit">PORUČITE</button>
                         </form>
                     </div>
                 </div>
@@ -71,45 +67,44 @@
         <div class="in">
             <img src="{{ asset('/') }}purplerelaxFiles/soloblade/2.png" alt="">
             <div>
-                <p>Shave, trim and edge with MicroTouch Solo – the precise all-in-one razor with a replaceable stainless steel blade and built-in LED light.</p>
-                <p>
-                    Convenient and easy to travel with - does not require water or shaving cream, hair gel, styling foam and hair lotion – so there's no mess. <br>
-                    The built-in battery lasts for 45 minutes and can be conveniently recharged with an included USB cable. <br>
-                    MicroTouch Solo all-in-one razor cuts through the thickest beards and leaves no nicks, no bumps, no razor burn, no irritation and no ingrown hairs. <br>
-                    Provides ideal styling for beard and mustache. MicroTouch Solo shaver will help you to look better! You will be rewarded and your efforts will not go unnoticed.
-                    This device will take rightful place among your shaving accessories.
+                <p>Brijte, podrežite i napravite savršene ivice svoje brate sa Micro Touch Solo - preciznim brijačem sa zamenjivim sečivom od nerđajućeg čelika i ugrađenim led svetlom.</p>
+                <p>Pogodan i lak za putovanje - ne zahteva vodu ili penu za brijanje, tako da nema nereda.<br>
+                    Ugrađena baterija traje 45 minuta i puni se uz pomoć priloženog USB kabla. Micro Touch Solo (sve u jednom) brijač seče najdeblje brade i ne pravi posekotine, neravnine, iritacije i urasle dlake.<br>
+                    Pruža mogućnost idealnog stilizovanja brade i brkova i pomoći će vam da izgledate fenomenalno i budete zapeženi. Ovaj uređaj će zasluženo zauzeti prvo mesto među vašim priborom za brijanje.<br>
                 </p>
             </div>
         </div>
     </div>
     <div class="b3">
         <div class="in">
-            {{--<iframe width="854" height="480" src="https://www.youtube.com/embed/c9YUxPOjOzE?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>--}}
             <img src="{{ asset('/') }}purplerelaxFiles/soloblade/3.png" alt="" class="active">
             <img src="{{ asset('/') }}purplerelaxFiles/soloblade/4.png" alt="" class="hidden">
             <div class="text">
-                <p>All-in-one trimmer, shaver and edger with a built-in LED light and pivoting head for maximum precision</p>
-                <p>Includes three trimming combs (1mm, 3mm, 5mm), cleaning brush and USB charging cable</p>
-                <p>Rechargeable lithium-ion battery lasts up to 45 minutes. Electric beard trimmer edges your beard for clean and precise lines</p>
-                <p>Replaceable stainless steel dual-sided blade cuts through beards with ease; contoured head pivots to move along curves of face</p>
+                <p>Micro Touch SOLO - trimer i aparat za brijanje i podrezivanje sa pokretljivom glavom i ugrađenim led svetlom pružiće milimetarsku preciznost u sređivanju brade.</p>
+                <p>Uz njega se dobijaju 3 češlja za podrezivanje (1mm, 3mm, 5mm), četka za čišćenje i USB kabal za punjenje.</p>
+                <p>Punjiva litijum jonska baterija traje do 45 minuta. Micro Touch Solo će vrlo lako i brzo srediti vašu bradu i biće kao na TV reklamama.</p>
+                <p>Zamenjivo dvostrano sečivo od nerđajućeg čelika sa lakoćom seče bradu, a fleksibilna glava prati konture lica.</p>
             </div>
-            <a href="#form2" class="btn">ORDER NOW</a>
+            <a href="#form2" class="btn">PORUČITE SADA</a>
         </div>
     </div>
     <div class="b4">
         <div class="in">
             <div class="text">
                 <div>
-                    <span>SIMPLE AND EASY TO USE</span>
-                    <p>Micro Touch SOLO shaver has very ergonomic design. You can easily take it with you wherever you go. Smooth handle can be held firmly in the hand, ensuring absolute precision of movements, and thanks to the bright highlighting of the shaving area you will not miss a single hair.</p>
+                    <span>JEDNOSTAVNO I LAKO ZA KORIŠĆENJE</span>
+                    <p>Micro Touch Solo brijač ima ergonomski dizajn. Možete ga lako poneti sa sobom gde god pođete. Glatka drška se može čvrsto držati u ruci, obezbeđuje apsolutnu preciznost pokreta, a zahvaljujući
+                        kvalitetnoj oštrici nećete propustiti nijednu dlaku.</p>
                 </div>
                 <div>
-                    <span>SAFE AND DELICATE</span>
-                    <p>Micro Touch SOLO shaver - is a safe alternative to the usual scissors and razor. Hair removal using familiar shaving accessories is very uncomfortable and can cause the cuts and even more serious injuries. Micro Touch SOLO shaver easily and gently removes hair of any length and stiffness.</p>
+                    <span>BEZBEDNO I POUZDANO</span>
+                    <p>Micro Touch Solo brijač je sigurna alternativa makazama i običnim brijačima. Uklanjanje dlačica običnim brijačima, pa čak i brijačima poznatih proizvođača, može biti veoma neprijatno i može izazvati
+                        posekotine. Micro Touch Solo brijač nežno uklanja dlačice bilo koje dužine ili gustine.</p>
                 </div>
                 <div>
-                    <span>MULTIFUNCTIONALITY</span>
-                    <p>With the help of this shaver you can not only remove hair from the face, but also to keep in perfect condition your hair style. To trim sideburns, hairline around the ears or to shave excess hair on the neck – with Micro Touch SOLO shaver it’s easy as never before. </p>
+                    <span>MULTIFUNKCIONALNOST</span>
+                    <p>Uz pomoć ovog aparata za brijanje ne samo da možete ukloniti dlačice sa lica već i održati svoju frizuru u savršenom stanju. Podrezivanje zalizaka, dlaka oko ušiju ili brijanje viška dlačica na vratu - sa Micro
+                        Touch Solo brijačem lako je kao nikada pre.</p>
                 </div>
             </div>
             <img src="{{ asset('/') }}purplerelaxFiles/soloblade/10.png" alt="">
@@ -121,31 +116,34 @@
     </div>
     <div class="b6">
         <div class="in">
-            <a href="#form2" class="btn">ORDER NOW</a>
+            <a href="#form2" class="btn">PORUČITE SADA</a>
         </div>
     </div>
     <div class="reviews">
         <div class="in">
-            <div class="reviews__caption">Reviews of our customers:</div>
+            <div class="reviews__caption">Utisci naših kupaca:</div>
             <div class="reviews__item">
                 <div class="reviews__img"><img src="{{ asset('/') }}purplerelaxFiles/soloblade/rev1.png" alt=""></div>
                 <div class="reviews__text">
-                    <p>If you take care of yourself so this shaver is very useful for you. <br>To remove hair from neck with the usual razor is very uncomfortable, all the time I am afraid to cut myself, but with Micro Touch SOLO it’s simple as ABC and 100% safe. </p>
-                    <div class="reviews__name">Maxim</div>
+                    <p>Ako vodite računa o sebi, ovaj aparat za brijanje je veoma korisna stvar. <br>Uklanjanje dlačica sa vrata običnim brijačem je veoma neprijatno i sve vreme se plašim da se ne posečem, ali sa Micro Touch
+                        Solo brijačem je potpuno jednostavno i 100% bezbedno.</p>
+                    <div class="reviews__name">Maksim</div>
                 </div>
             </div>
             <div class="reviews__item">
                 <div class="reviews__img"><img src="{{ asset('/') }}purplerelaxFiles/soloblade/rev3.png" alt=""></div>
                 <div class="reviews__text">
-                    <p>My wife bought this shaver for me as a gift. I even didn’t know that such thing exists – all of my life I was using ordinary electric shaver. MicroTouch SOLO is unique and universal shaver that can do everything: improve styling for beard, mustache, hair style, sideburns or simply to shave. Useful thing, I recommend.</p>
-                    <div class="reviews__name">Adam </div>
+                    <p>Vrlo kvalitetan proizvod i zaista odlična izrada. Probao sam mnogo brendova, koristim mašine za brijanje dugo, ali ovaj trimer je najbolji do sada.
+                        Brije fenomenalno i sa lakoćom, precizan je u milimetar. Kupio sam i svom bratu jedan.</p>
+                    <div class="reviews__name">Edin </div>
                 </div>
             </div>
             <div class="reviews__item">
                 <div class="reviews__img"><img src="{{ asset('/') }}purplerelaxFiles/soloblade/rev2.png" alt=""></div>
                 <div class="reviews__text">
-                    <p>I have the problem of extra hairiness. Even in the morning once I wake up I see in the mirror in front of myself bearded man. <br>Before it was a real torture to shave every morning but after I bought this shaver I enjoy the process so much. <br>Easy to hold and use, quick and safe. All you need from shaving in one device. Thumb up! </p>
-                    <div class="reviews__name">Alex</div>
+                    <p>Odlično radi svoj posao, jutarnje brijanje mi traje manje od minut. Ranije sam znao da se zadržim i već ujutru iznerviram. Baterija zaista dugo traje.<br>
+                        Podjednako lako brije i dugu i kratku bradu. Za ovaj novac nikada nisam kupio bolji proizvod. Toplo preporučujem!</p>
+                    <div class="reviews__name">Mišo</div>
                 </div>
             </div>
         </div>
@@ -167,11 +165,9 @@
             <div class="footer__form">
                 <div class="form_wrap">
                     <div id="form2" class="form_block">
-                        <span class="sp white">Hurry up to order with discount <span class="adfh-discount" style="color: #f5e51b;">50</span>%!</span>
-                        <span class="sp white">Quantity is limited!</span>
-                        <span class="sp white free_del" style="color: #f5e51b;">Free Delivery!</span>
+                        <span class="sp white">Požurite i poručite sa popustom od <span class="adfh-discount" style="color: #f5e51b;">40</span>%!</span>
                         <span class="sp white old-price">
-                           Old price:
+                           Stara cena:
                            <span class="adfh-old-price">
                               {{ $prices[1]['originalPrice'] }}
                            </span>
@@ -180,7 +176,7 @@
                            </span>
                         </span>
                         <span class="sp new-price">
-                           New Price:
+                           Nova cena:
                            <span class="adfh-new-price" style="color: #f5e51b;">
                               {{ $prices[1]['amount'] }}
                            </span>
@@ -188,15 +184,15 @@
                               RSD
                            </span>
                         </span>
-                        <span class="sp white">Time left to buy:</span>
-                        <div class="timer">
-                            <div id="countdown1"></div>
-                        </div>
                         <div id="form-wrapper2" class="form form-wrapper">
-                            <form class="form orderformcdn" action="#" method="post">
-                                <input class="form-name name fio" name="name" placeholder="Your name" required="">
-                                <input class="form-phone phone tel" name="phone" placeholder="Your mobile" required="" type="tel">
-                                <button name="button" class="form-btn" type="submit">ORDER NOW</button>
+                            <form class="form orderformcdn" action="{{$orderRoute}}" method="post">
+                                {{ csrf_field() }}
+                                @include('lander.naturapharm.components.form_hidden_fields')
+                                <input class="form-name name fio" name="name" placeholder="Ime i prezime" required="" type="text">
+                                <input class="form-phone phone tel" name="phone" placeholder="Telefon" required="" type="tel">
+                                <input class="" name="shipping_address" placeholder="Adresa" required="" type="text">
+                                <input class="" name="shipping_city" placeholder="Grad" required="" type="text">
+                                <button name="button" class="form-btn" type="submit">PORUČITE</button>
                             </form>
                         </div>
                     </div>
@@ -208,11 +204,12 @@
                     <p>
                         MicroTouch SOLO
                     </p>
-                    <span>Rechargeable Shaver, Trimmer and Edger</span>
+                    <span>Punjivi aparat za brijanje</span>
                 </div>
             </div>
         </div>
     </div>
 </div>
+@include('components.pixel_footer')
 </body>
 </html>
