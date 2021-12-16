@@ -1792,9 +1792,9 @@ tr td:nth-child(2n-1) {
     }
 }
 
-/*body {*/
-    /*margin-top: 73px*/
-/*}*/
+body {
+    margin-top: 73px
+}
 
 .fixedtop * {
     margin: 0;

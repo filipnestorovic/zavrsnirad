@@ -45,23 +45,23 @@
 @include('components.display_errors')
 <section class="block1">
     <div class="wrap">
-        <h1>Расческа фурминатор для котов и кошек</h1>
-        <h2>Незаменимый гаджет для груминга и домашнего ухода</h2>
+        <h1>FURMINATOR ČEŠALJ ZA MAČKE</h1>
+        <h2>Neizostavan u svakoj kući u kojoj živi maca</h2>
         <ul class="plus">
-            <li>Для шерсти длиной до 5см</li>
-            <li>Снижает линьку до 90%</li>
-            <li>Для кошек весом от 5кг</li>
+            <li>Za dlaku do 5 cm dužine</li>
+            <li>Smanjuje linjanje do 90%</li>
+            <li>Za mačke težine do 5 KG</li>
         </ul>
         <div class="sale">
-            Акция! <p>-53%</p> Скидка
+            Akcija! <p>-40%</p> Popusta
         </div>
         <div class="formbox">
             <div class="price clearfix">
                 <div class="old-cost">
-                    <span>Обычная цена:</span><p>{{ $prices[1]['originalPrice'] }} RSD </p>
+                    <span>Stara cena:</span><p>{{ $prices[1]['originalPrice'] }} RSD </p>
                 </div>
                 <div class="new-cost">
-                    <span>Цена по акции:</span><p>{{ $prices[1]['amount'] }} RSD </p>
+                    <span>Nova cena:</span><p>{{ $prices[1]['amount'] }} RSD </p>
                 </div>
             </div>
             <form class="main-order-form m1-form" method="post" action="{{$orderRoute}}">
@@ -78,89 +78,90 @@
 </section>
 <section class="block2">
     <div class="wrap">
-        <h2 class="title">Преимущества <span>фурминатора</span></h2>
+        <h2 class="title">PREDNOSTI <span>FURMINATORA</span></h2>
         <ul class="preim">
-            <li>Эффективно снижает количество <br>колтунов, сохраняя здоровье <br>кожного покрова</li>
-            <li>Рекомендуют ветеринары,<br> чтобы помочь предотвратить<br> опасные колтуны</li>
-            <li>Кнопка FURejector легко удаляет <br>шерсть, делая процесс избавления от<br> линьки еще проще</li>
-            <li>Безопасно и легко удаляет выпавшую<br> шерсть и подшерсток, не повреждая<br> кожу и шерсть</li>
-            <li>Разработано профессиональными<br> грумерами</li>
-            <li>Снижает линьку<br> до 90%</li>
+            <li>Efikasno <br>smanjuje linjanje</li>
+            <li>Preporučeno od strane <br>veterinara</li>
+            <li>Dugme za lako <br>odstranjivanje dlaka <br>sa četke</li>
+            <li>Bezbedno i lako <br>uklanja višak dlake<br> bez grebanja</li>
+            <li>Razvili su ga <br>profesionalni groomeri</li>
+            <li>Smanjuje linjanje <br>do 90%</li>
         </ul>
     </div>
 </section>
 <section class="block3">
     <div class="wrap">
-        <h2>Что такое <span>фурминатор?</span></h2>
-        <p>Фурминатор для кошек – это расческа со специальным лезвием из крепкой стали, благодаря специальной конструкции которой, в процессе использования, вычесывается весь отмерший, выпадающий подшерсток, но не повреждаются остевые волоски.</p>
+        <h2>ŠTA JE <span>FURMINATOR?</span></h2>
+        <p>Furminator za mačke je češalj sa specijalnom oštricom od čvrstog čelika, zahvaljujući čijem posebnom dizajnu se tokom upotrebe isčešljava sva mrtva dlaka, bez čupanja zdravih dlaka.</p>
         <ul class="wat">
-            <li>Не травмирует живые волоски в шерсти животного, мягко удаляя отмершие</li>
-            <li>Уменьшает количество выпадающей шерсти питомца до 94%</li>
-            <li>Обеспечивает салонный уход за кошкой в домашних условиях</li>
-            <li>Улучшает внешний вид шерсти</li>
+            <li>Ne povređuje žive dlake u krznu</li>
+            <li>Smanjuje gubitak dlake do 94%</li>
+            <li>Pruža salonsku negu mačaka kod kuće</li>
+            <li>Poboljšava izgled krzna</li>
         </ul>
     </div>
 </section>
 <section class="block4">
     <div class="wrap">
-        <p>Ветеринары всего мира настоятельно рекомендуют использовать именно такой вид чесалки для чистки шерсти животных. Так как использование данного приспособления помогает следить за здоровьем кошек и собак, а также обеспечивает профессиональный уход за животным прямо на дому</p>
+        <p>Veterinari širom sveta preporučuju korišćenje ove vrste češlja za čišćenje životinjske dlake. Upotreba ovog uređaja pomaže u praćenju zdravlja kućnih ljubimaca, a takođe pruža i profesionalnu negu životinja kod kuće.</p>
     </div>
 </section>
 <section class="block5">
     <div class="wrap">
-        <p>Материал, из которого изготовлено лезвие фурминатора, не счесывается со временем. Однократное приобретение такого гаджета <b>заменяет использование с тем же результатом 20 обычных чесалок.</b> Сопоставив цену одного фурминатора и 20 чесалок, несложно увидеть существенную разницу в пользу ноу-хау. Эффективность во время применения одинакова, как для длинношерстных кошек, так и для короткошерстных, а также применение такого вида чесалки способствует равномерному распределению жировой смазки, что позволяет шерсти кошек оставаться блестящей и гладкой.</p>
+        <p>Materijal od kojeg je napravljen češalj furminatora se vremenom ne troši. Jedna kupovina takvog gedžeta zamenjuje upotrebu 20 običnih češljeva. Upoređujući cenu jednog furminatora i 20 češalja,
+            lako je uočiti značajnu razliku. <b>Efikasnost tokom primene ista je za kratkodlake i dugodlake mačke, a upotreba ove vrste češlja čini da krzno mačke bude gusto, raskošno i lepo.</b></p>
         <div class="clear"></div>
         <a href="#buy" class="button-m">Poručite sada</a>
     </div>
 </section>
 <section class="block6">
     <div class="wrap">
-        <h2 class="title">Как правильно <span>пользоваться?</span></h2>
+        <h2 class="title">KAKO GA <span>PRAVILNO KORISTITI?</span></h2>
         <img src="{{ asset('/') }}naturapharmFiles/furminator/cat.jpg" alt="Расческа фурминатор для котов и кошек" title="Расческа фурминатор для котов и кошек">
         <ul class="use">
-            <li><p>Нужно тщательно проверить тело кошки на наличие ран или различных сыпей, их быть не должно</p></li>
-            <li><p>Прощупать и удалить все колтуны на шерсти питомца, это можно сделать специальным колтунорезом</p></li>
-            <li><p>Вымыть и высушить шерсть животного, использование такой расчески на мокрую шерсть категорически запрещено</p></li>
-            <li><p>Вычесывание шерсти проводите только по ее росту, не следует спешить и надавливать на инструмент</p></li>
-            <li><p>Аккуратно удалять шерсть с живота, лапок и около гениталий животного, спешка и невнимательность могут причинить вред</p></li>
+            <li><p>Morate pažljivo proveriti telo mačke da li ima neke kvržice ili izrasline</p></li>
+            <li><p>Uklonite sve zaplete na krznu kućnog ljubimca</p></li>
+            <li><p>Upotreba ovog češlja na mokroj dlaci je strogo zabranjena</p></li>
+            <li><p>Češljajte niz dlaku i nemojte mnogo pritiskati</p></li>
+            <li><p>Pažljivo uklonite dlake sa stomaka, nogu i oko genitalija životinje</p></li>
         </ul>
         <div class="note">
-            Ветеринары и грумеры рекомендуют применять инструменты для стрижки и вычесывания два-три раза в месяц, в осенний и весенний период. Летом рекомендуют использование чесалок не более одного раза в полтора месяца. Зимой это может быть одноразовое профилактическое действие.
+            Veterinari i frizeri preporučuju korišćenje alata za šišanje i četkanje dva do tri puta mesečno. Leti se preporučuje da se češalj koristi ne više od jednom mesečno. Zimi ovo može da bude češće.
         </div>
     </div>
 </section>
 <section class="block7">
     <div class="wrap">
         <ul class="ship">
-            <li><p>Доставка почтой в течение 1-10 рабочих дней. Стоимость доставки товара от 350р.</p></li>
-            <li><p>Оплата заказов <br>осуществляется по факту <br>получения товара</p></li>
-            <li><p>Вы вправе отказаться от <br>покупки в течение <br>14 дней</p></li>
+            <li><p>Dostava brzom poštom <br>u roku od 1-2 <br>radna dana</p></li>
+            <li><p>Plaćanje se vrši <br>po prijemu <br>robe</p></li>
+            <li><p>Ukoliko niste zadovoljni <br>vratićemo vam <br>novac</p></li>
         </ul>
     </div>
 </section>
 <section class="block8">
     <div class="wrap">
-        <h2 class="title">Отзывы <span>покупателей</span></h2>
+        <h2 class="title">RECENZIJE <span>KUPACA</span></h2>
         <div class="reviews">
             <div>
                 <div class="rev">
                     <img src="{{ asset('/') }}naturapharmFiles/furminator/r1.jpg" alt="Расческа фурминатор для котов и кошек">
-                    <h3>Жалковская Анна, 24 года</h3>
-                    <p>Я, если честно, даже подумать не могла, что какой-то прибор поможет удалить СТОЛЬКО шерсти. Самое интересное то, что от короткошерстной кошечки получается больше шерсти, чем от длинношерстной. Наверное потому, что старшей уже два года, а полноценного вычёсывания никогда не было и весь подшерсток выходит только сейчас. </p>
+                    <h3>Žaklina, 24 godine</h3>
+                    <p>Da budem iskrena, nisam mogla ni da pomislim da će nešto ovako dobro pomoći da se ukloni toliko krzna. Najinteresantnije je da kratkodlaka mačka proizvodi više dlake od dugodlake. Valjda zato što je starija i što je nikada nisam češljala. Tek sada izlazi cela suvišna poddlaka.</p>
                 </div>
             </div>
             <div>
                 <div class="rev r2">
                     <img src="{{ asset('/') }}naturapharmFiles/furminator/r2.jpg" alt="Расческа фурминатор для котов и кошек">
-                    <h3>Николаева Ольга, 37 лет</h3>
-                    <p>Фурминатор замечательная вещь, сделан на совесть, тяжёленький, удобная прорезиненная ручка, приятно лежит в руке, ничего не выскальзывает, металлические зубцы не царапают кожу питомца, всё происходит очень плавно и гладко, но надёжно. Еще понравилась специальная кнопка для того, чтобы удобнее было убирать шерсть.</p>
+                    <h3>Olga, 37 godina</h3>
+                    <p>Furminator je divna stvar, ima udobnu gumiranu dršku, prijatno leži u ruci i ni jedna dlaka joj ne promiče. Metalni zubi ne grebu kožu kućnog ljubimca, sve se odvija vrlo glatko i lako. Takođe mi se dopalo posebno dugme za lakše skidanje vune.</p>
                 </div>
             </div>
             <div>
                 <div class="rev r3">
                     <img src="{{ asset('/') }}naturapharmFiles/furminator/r3.jpg" alt="Расческа фурминатор для котов и кошек">
-                    <h3>Тодорова Виктория, 29 лет</h3>
-                    <p>В общем, фурминатором я очень довольна и нисколько не жалею и своём приобретении. И почему только раньше не купила?! Сплошные плюсы: лишняя шерсть и пух не летают по квартире, не скапливаются по углам, и кошка, наведя марафет, не заглатывает её в таких огромных количествах. И сама выглядит более красиво и ухоженно.</p>
+                    <h3>Viktorija, 29 godina</h3>
+                    <p>Generalno, veoma sam zadovoljna furminatorom i uopšte ne žalim što sam ga kupila. Višak dlake više ne leti na sve strane, ne skuplja se u uglovima prostorije, a ni mačka ih ne proguta u velikim količinama. I ona sama izgleda lepše i negovanije. Sve preporuke za ovaj proizvod.</p>
                 </div>
             </div>
         </div>
@@ -168,23 +169,23 @@
 </section>
 <section class="block1 end">
     <div class="wrap">
-        <h1>Расческа фурминатор для котов и кошек</h1>
-        <h2>Закажите фурминатор сегодня и получите скидку 53%</h2>
+        <h1>FURMINATOR ČEŠALJ ZA MAČKE</h1>
+        <h2>Iskoristite specijalni popust od 40% već danas</h2>
         <ul class="plus">
-            <li>Для шерсти длиной до 5см</li>
-            <li>Снижает линьку до 90%</li>
-            <li>Для кошек весом от 5кг</li>
+            <li>Za dlaku do 5 cm dužine</li>
+            <li>Smanjuje linjanje do 90%</li>
+            <li>Za mačke težine do 5 KG</li>
         </ul>
         <div class="sale">
-            Акция! <p>-53%</p> Скидка
+            Akcija! <p>-40%</p> Popusta
         </div>
         <div class="formbox">
             <div class="price clearfix">
                 <div class="old-cost">
-                    <span>Обычная цена:</span><p>{{ $prices[1]['originalPrice'] }} RSD</p>
+                    <span>Stara cena:</span><p>{{ $prices[1]['originalPrice'] }} RSD</p>
                 </div>
                 <div class="new-cost">
-                    <span>Цена по акции:</span><p>{{ $prices[1]['amount'] }} RSD</p>
+                    <span>Nova cena:</span><p>{{ $prices[1]['amount'] }} RSD</p>
                 </div>
             </div>
             <form id="buy" class="main-order-form m1-form" action="{{$orderRoute}}" method="post">

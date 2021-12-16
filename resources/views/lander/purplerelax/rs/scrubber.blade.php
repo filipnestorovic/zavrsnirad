@@ -38,11 +38,10 @@
         <div class="wrp">
             <div class="header-menu">
                 <ul>
-                    <li><a href="#video_section">Видео обзор</a></li>
-                    <li><a href="#instr">Преимущества</a></li>
-                    <li><a href="#pochemu">Особенности</a></li>
-                    <li><a href="#otzv">Отзывы</a></li>
-                    <li><a href="#order-form">Заказать</a></li>
+                    <li><a href="#instr">Prednosti</a></li>
+                    <li><a href="#pochemu">Karakteristike</a></li>
+                    <li><a href="#otzv">Utisci kupaca</a></li>
+                    <li><a href="#order-form">Poručite sada</a></li>
                 </ul>
             </div>
         </div>
@@ -54,15 +53,15 @@
     <div class="content_block" id="content_block">
         <div class="wrapper">
             <div class="title_block">
-                <h3 class="main_title">Ультразвуковой<br>  скрабер для лица</h3>
-                <p class="subtitle">Качественное устройство для профессионального ухода за кожей дома</p>
+                <h3 class="main_title">ULTRAZVUČNI <br>PILING LICA</h3>
+                <p class="subtitle">KVALITETAN UREĐAJ ZA NEGU KOŽE KOD KUĆE</p>
             </div>
             <div class="discount"></div>
             <ul>
-                <li>Удаляет мертвые клетки</li>
-                <li>Сглаживание тонкие линии и морщин </li>
-                <li>Восстанавливает упругость и эластичность кожи</li>
-                <li>Устраняет черные точки</li>
+                <li>Uklanja mrtve ćelije</li>
+                <li>Zateže lice i eliminiše bore</li>
+                <li>Vraća čvrstinu i elastičnost kože</li>
+                <li>Eliminiše mitesere i sprečava nastanak akni</li>
             </ul>
             <div class="price_block clearfix">
                 <div class="price_item old">
@@ -89,7 +88,7 @@
 <!-- results -->
 <section class="results_section" >
     <div class="wrapper">
-        <h2 style="color:#9F2C99">Ультразвуковой скрабер расширит ваши возможности домашнего ухода</h2>
+        <h2 style="color:#9F2C99">ULTRAZVUČNI ČISTAČ PROŠIRUJE VAŠE MOGUĆNOSTI KUĆNE NEGE</h2>
         <div class="box-osob" id="os">
             <div class="img-toptop">
                 <!--left-img-->
@@ -98,8 +97,8 @@
             <div class="img-toptop">
                 <div class="main-text" style="margin: 10px 20px 20px 20px;">
                     <h3 class="box__body-title"> </h3>
-                    <div class="box__body-text" style="font-size: 18px; margin-top: 45px;">Ультразвуковой скабер представляет собой портативное устройство, которое предназначено для очищения и омоложения кожи. За счет компактных размеров эту модель скрабера чаще выбирают для дома или берут с собой в поездки. Поскольку устройство позволяет выполнять процедуры в любом удобном для вас месте, не занимая много места в чемодане.
-                    </div>
+                    <div class="box__body-text" style="font-size: 18px; margin-top: 45px;">Ultrazvučni čistač je prenosivi uređaj koji je dizajniran za čišćenje i podmlađivanje kože. Zbog svoje kompaktne veličine, ovaj model se često bira za kućnu upotrebu i nosi na putovanja.
+                        Može se koristiti bilo gde, ne zauzima mnogo prosora u ženskoj torbi ili koferu.</div>
                 </div>
             </div>
         </div>
@@ -107,22 +106,22 @@
 </section>
 <section class="use_section" id="use_section">
     <div class="wrapper">
-        <h2 style="color: #9F2C99;"> 3 режима работы</h2>
+        <h2 style="color: #9F2C99;">3 REŽIMA RADA</h2>
         <div class="use_list">
             <div class="use_item">
                 <img src="{{ asset('/') }}purplerelaxFiles/scrubber/5.png" alt="Kelvin Safety Tool">
-                <h4>Пилинг</h4>
-                <p>С помощью аппарата осуществляется  ультразвуковая чистка лица (пилинг), удаляются «черные точки», выравнивается цвет кожи, стимуляция и регенерация, повышение эластичности кожи.   </p>
+                <h4>PILING</h4>
+                <p>Uz pomoć aparata vrši se ultrazvučno čišćenje lica (piling), uklanjaju se "crne tačkice", ujednačava se boja kože i povećava elastičnost.</p>
             </div>
             <div class="use_item">
                 <img src="{{ asset('/') }}purplerelaxFiles/scrubber/6.png" alt="Kelvin Safety Tool">
-                <h4>Микромассаж</h4>
-                <p>Ультразвуковой микромассаж с помощью аппарата стимулирует процессы восстановления тканей, ускоряет обменные процессы в клетках кожи, стимулирует процессы синтеза коллагена и эластина.</p>
+                <h4>MIKROMASAŽA</h4>
+                <p>Ultrazvučna mikromasaža uz pomoć aparata stimuliše procese obnavljanja tkiva, ubrzava metaboličke procese u ćelijama kože, stimuliše procesne sinteze kolagena i elastina.</p>
             </div>
             <div class="use_item">
                 <img src="{{ asset('/') }}purplerelaxFiles/scrubber/7.png" alt="Kelvin Safety Tool">
-                <h4>Фонофорез</h4>
-                <p>Ультразвуковой микромассаж с помощью аппарата в сочетании с активными концентратами обеспечивает эффект лифтинга, уменьшает отечность. </p>
+                <h4>FONOFOREZA</h4>
+                <p>Ultrazvučna mikromasaža pomoću uređaja u kombinaciji sa kozmetičkim sredstvima pruža efekat liftinga i smanjuje natečenost.</p>
             </div>
             <a href="#order_form" class="button">Poručite sada</a>
         </div>
@@ -140,13 +139,12 @@
     {{--</div>--}}
 {{--</section>--}}
 <section style="padding: 20px" id="instr">
-    <h2 style="color: #9F2C99">Преимущества</h2>
+    <h2 style="color: #9F2C99">PREDNOSTI</h2>
     <div class="box-osob-2">
         <div class="img-toptop">
             <div class="main-text">
-                <h3 class="box__body-title" style="color:#9F2C99">Бережное воздействие</h3>
-                <div class="box__body-text"  style="font-size: 19px">Мягкое вибрационное воздействие ультразвуковых волн проникает внутрь кожи, разрушая соединительные частицы между ороговевшими клетками. Таким образом удаляется мертвый слой клеток кожи и очищаются забитые поры.
-                </div>
+                <h3 class="box__body-title" style="color:#9F2C99">Nežan i pouzdan</h3>
+                <div class="box__body-text"  style="font-size: 19px">Blagi efekat vibracije ultrazvučnih talasa prodire u kožu i uništava vezivne čestice između keratinizovanih ćelija. Ovo uklanja mrtvi sloj ćelija kože i otpušava začepljene pore.</div>
             </div>
         </div>
         <div class="img-toptop flex-left">
@@ -166,18 +164,17 @@
         </div>
         <div class="img-toptop">
             <div class="main-text">
-                <h3 class="box__body-title" style="color:#9F2C99">Всегда под рукой</h3>
-                <div class="box__body-text" style="font-size: 18px">Благодаря компактным размерам, вы сможете взять с собой ультразвуковой скрабер в отпуск или командировку, чтобы в любых ситуациях быть на высоте!
-                </div>
+                <h3 class="box__body-title" style="color:#9F2C99">Uvek pri ruci</h3>
+                <div class="box__body-text" style="font-size: 18px">Zahvaljujući svojoj kompaktnoj veličini, ultrazvučni čistač možete poneti sa sobom na odmor ili poslovno putovanje, tako da vam može biti pri ruci u svakoj situaciji.</div>
             </div>
         </div>
     </div>
     <div class="box-osob-2">
         <div class="img-toptop">
             <div class="main-text">
-                <h3 class="box__body-title" style="color:#9F2C99">Ультразвуковая очистка кожи </h3>
-                <div class="box__body-text"  style="font-size: 19px">Благодаря сочетанию активного воздействия очищающего средства и ультразвуковых колебаний отшелушивается верхний ороговевший слой кожи, осветляются пигментные пятна, выравнивается цвет лица. Очищенная кожа имеет лучший доступ кислорода, более глубоко воспринимает питательные, увлажняющие и омолаживающие средства.
-                </div>
+                <h3 class="box__body-title" style="color:#9F2C99">Ultrazvučno čišćenje kože</h3>
+                <div class="box__body-text"  style="font-size: 19px">Zahvaljujući komobinaciji aktivnog delovanja sredstva za čišćenje lica i ultrazvučnih vibracija, gornji sloj kože se eksfolira, pigmentne mrlje se posvetljuju a ten ujednačava.
+                    Očišćena koža prima više kiseonika i dublje apsorbuje hranjive i hidratantne agense.</div>
             </div>
         </div>
         <div class="img-toptop flex-left">
@@ -197,17 +194,18 @@
         </div>
         <div class="img-toptop">
             <div class="main-text" >
-                <h3 class="box__body-title" style="color:#9F2C99">Микромассаж на клеточном уровне </h3>
-                <div class="box__body-text" style="font-size: 18px">Глубоко и мягко воздействуя на кожу и подкожные ткани, ультразвук усиливает обменные процессы, стимулирует регенерацию кожи и запускает процессы естественного омоложения. Работа на клеточном уровне очень деликатна и не травмирует кожу, что очень важно, когда кожа уже имеет признаки увядания.</div>
+                <h3 class="box__body-title" style="color:#9F2C99">Mikro-masaža na ćelijskom nivou</h3>
+                <div class="box__body-text" style="font-size: 18px">Duboko i nežno delujući na kožu i potkožno tkivo, ultrazvuk pospešuje metaboličke procese, podstiče regeneraciju kože i pokreće procese prirodnog podmlađivanja.
+                    Tretman na ćelijskom nivou je veoma nežan i ne povređuje kožu, što je veoma važno kada koža već pokazuje znake starenja.</div>
             </div>
         </div>
     </div>
     <div class="box-osob-2">
         <div class="img-toptop">
             <div class="main-text">
-                <h3 class="box__body-title" style="color:#9F2C99">Поможет очистить кожу</h3>
-                <div class="box__body-text"  style="font-size: 19px">Усиливает проникновение активных косметических средств в глубокие слои кожи, что существенно повышает эффективность от использования привычной косметики. Способствует уменьшению отеков и выравниванию цвета лица, повышает тургор кожи и ее плотность.  Сочетание процедур ультразвукового пилинга и массажа безусловно является отличным вариантом комплексного ухода за кожей лица.
-                </div>
+                <h3 class="box__body-title" style="color:#9F2C99">Pomaže u čišćenju kože</h3>
+                <div class="box__body-text"  style="font-size: 19px">Pospešuje prodiranje aktivne kozmetike u duboke slojeve kože što značajno povećava evikasnost korišćenja kozmetike. Pomaže u ujednačavanju tena i povećava volumen kože.
+                    Kombinacije ultrazvučnog pilinga i masaže daje ubedljivo najbolji efekat.</div>
             </div>
         </div>
         <div class="img-toptop flex-left">
@@ -218,14 +216,14 @@
 <!-- use -->
 <section class="benefits_section" id="pochemu">
     <div class="wrapper">
-        <h2 style="color: #9F2C99;">Особенности ультразвукового скрабера</h2>
+        <h2 style="color: #9F2C99;">KARAKTERISTIKE ULTRAZVUČNOG ČISTAČA</h2>
         <div class="benefits_list">
             <div class="benefit_item">
                 <div class="icon_block">
                     <img src="{{ asset('/') }}purplerelaxFiles/scrubber/1.jpg" class="block-img" alt="">
                 </div>
                 <div  class="top-info">
-                    <p class="right-2">Устраняет<br> комедоны</p>
+                    <p class="right-2">Eliminiše <br>komedone</p>
                 </div>
             </div>
             <div class="benefit_item">
@@ -233,7 +231,7 @@
                     <img src="{{ asset('/') }}purplerelaxFiles/scrubber/2.jpg" class="block-img" alt="">
                 </div>
                 <div  class="top-info">
-                    <p class="right-2">Уменьшает<br> прыщи</p>
+                    <p class="right-2">Smanjuje <br>akne</p>
                 </div>
             </div>
             <div class="benefit_item">
@@ -241,7 +239,7 @@
                     <img src="{{ asset('/') }}purplerelaxFiles/scrubber/3.jpg" class="block-img" alt="">
                 </div>
                 <div  class="top-info">
-                    <p class="right-2">Осветляет<br> пигментные пятна</p>
+                    <p class="right-2">Posvetljuje <br>pege</p>
                 </div>
             </div>
             <div class="benefit_item">
@@ -249,7 +247,7 @@
                     <img src="{{ asset('/') }}purplerelaxFiles/scrubber/4.jpg" class="block-img" alt="">
                 </div>
                 <div  class="top-info">
-                    <p class="right-2">Улучшает цвет<br> и текстуру лица</p>
+                    <p class="right-2">Poboljšava ten <br>i teksturu kože</p>
                 </div>
             </div>
         </div>
@@ -259,24 +257,24 @@
 </section>
 <section class="reviews_section" id="otzv">
     <div class="wrapper">
-        <h2 style="color:#9F2C99">Отзывы покупателей</h2>
+        <h2 style="color:#9F2C99">UTISCI NAŠIH KUPACA</h2>
         <div class="reviews_list owl-carousel">
             <div class="review_item">
                 <img src="{{ asset('/') }}purplerelaxFiles/scrubber/reviews__review1_photo.jpg" alt="спиннер">
-                <div class="author_name">Екатерина, 26 лет</div>
-                <p>В течение месяца пользовалась этим приборчиком и могу сказать, что он действительно здорово работает, улучшает цвет и состояние кожи, при это пользоваться им удобно и просто. Скрабер компактный, рабочий "язычок" спрятан за защитным колпачком.
-                </p>
+                <div class="author_name">Katarina, 26 godina</div>
+                <p>Koristim ovaj uređaj mesec dana i mogu reći da zaista odlično radi, poboljšava ten i stanje kože, a korišćenje je zgodno i jednostavno. Čistač je kompaktan i veoma praktičan. Sve preporuke za ovaj proizvod.</p>
             </div>
             <div class="review_item">
                 <img src="{{ asset('/') }}purplerelaxFiles/scrubber/reviews__review2_photo.jpg" alt="спиннер">
-                <div class="author_name">Инесса, 34 года</div>
-                <p>Ранее я не встречала ничего подобного, но вот когда увидела рекламу в инстаграм, то решила определённо заполучить его себе. Первый результат я начала замечать уже через неделю, во-первых, кожа выглядит здоровой и чистой. Во-вторых, красивой и ухоженной как после салона. В целом результат определённо стоит своих денег!
-                </p>
+                <div class="author_name">Ines, 30 godina</div>
+                <p>Nikada ranije nisam videla ništa slično, ali kada sam videla reklamu na Instagramu, odlučila sam se da ga nabavim za sebe. Prvi rezultat sam primetila nakon nedelju dana, koža mi je izgledala
+                    čisto i zdravo. Izgledala je lepa i negovana kao posle kozmetičkog salona. Sve u svemu, rezultat je definitivno vredan novca koji sam dala za ovu spravicu.</p>
             </div>
             <div class="review_item">
                 <img src="{{ asset('/') }}purplerelaxFiles/scrubber/reviews__review3_photo.jpg" alt="спиннер">
-                <div class="author_name">Наталия, 24 года</div>
-                <p>Не имею возможности регулярно посещать косметолога. Этот скрабер для меня находка, и избавляет меня от проблем с кожей лица.  При использовании не имею дискомфорта, ультразвуковой скрабер проходит по коже мягко, не оставляя после ни каких следов и прочее механических повреждений. Советую всем!</p>
+                <div class="author_name">Natalija, 24 godine</div>
+                <p>Nemam priliku da redovno posećujem kozmetičara. Ovaj piling mi je dar od Boga i oslobađa me problema sa kožom lica. Prilikom upoitrebe nemam neprijatnosti, ultrazvučni piling nežno prolazi kroz
+                    kožu, ne ostavljajući tragove i ogrebotine. Savetujem svima kupovinu!</p>
             </div>
         </div>
     </div>
@@ -285,35 +283,35 @@
 <!-- order steps -->
 <section class="order_steps_section">
     <div class="wrapper">
-        <h2 style="color:#9F2C99">Как сделать заказ?</h2>
+        <h2 style="color:#9F2C99">KAKO NAPRAVITI PORUDŽBINU?</h2>
         <div class="steps_list">
             <div class="step_item">
                 <div class="image_block">
                     <img src="{{ asset('/') }}purplerelaxFiles/scrubber/order_steps__step1_image.jpg" alt="Гамак для отдыха">
                     <div class="number">1</div>
                 </div>
-                <p>Вы оставляете заявку на&nbsp;нашем сайте</p>
+                <p>Ostavite podatke za dostavu na našem sajtu</p>
             </div>
             <div class="step_item">
                 <div class="image_block">
                     <img src="{{ asset('/') }}purplerelaxFiles/scrubber/order_steps__step2_image.jpg" alt="Гамак для отдыха">
                     <div class="number">2</div>
                 </div>
-                <p>Оператор свяжется с Вами для уточнения заказа</p>
+                <p>Kontaktiraćemo vas da potvrdimo porudžbinu</p>
             </div>
             <div class="step_item">
                 <div class="image_block">
                     <img src="{{ asset('/') }}purplerelaxFiles/scrubber/order_steps__step3_image.jpg" alt="Гамак для отдыха">
                     <div class="number">3</div>
                 </div>
-                <p>Быстрая доставка в течение 2-5 дней</p>
+                <p>Paket šaljemo brzom poštom u roku od 1-2 radna dana</p>
             </div>
             <div class="step_item">
                 <div class="image_block">
                     <img src="{{ asset('/') }}purplerelaxFiles/scrubber/order_steps__step4_image.jpg" alt="Гамак для отдыха">
                     <div class="number">4</div>
                 </div>
-                <p>Вы оплачиваете заказ при&nbsp;получении</p>
+                <p>Plaćate kuriru po prijemu pošiljke</p>
             </div>
         </div>
     </div>
@@ -323,14 +321,14 @@
 <section class="order_section" id="order-form">
     <div class="top_title_block">
         <div class="wrapper">
-            <h3>Закажите сейчас <span>со скидкой 50%</span></h3>
+            <h3>PORUČITE SADA SA  <span>40% POPUSTA</span></h3>
         </div>
     </div>
     <div class="content_block">
         <div class="wrapper">
             <div class="title_block">
-                <h3 class="main_title">Ультразвуковой<br>  скрабер для лица</h3>
-                <p class="subtitle">Качественное устройство для профессионального ухода за кожей дома</p>
+                <h3 class="main_title">ULTRAZVUČNI <br>PILING LICA</h3>
+                <p class="subtitle">KVALITETAN UREĐAJ ZA NEGU KOŽE KOD KUĆE</p>
             </div>
             <div class="discount"> </div>
             <div class="form_block">

@@ -620,7 +620,7 @@ h2.title>span{
     color:#fff;
     font-family:'OfficinaSansBoldC';
     text-align: center;
-    padding:2px 81px 0;
+    padding:12px 81px 0;
 }
 .block4 {
     background: url(cb.png) no-repeat center top;
@@ -633,7 +633,7 @@ h2.title>span{
 .block5 {
     background: url(b3.jpg) no-repeat center top;
     height: 513px;
-    padding: 105px 0 0;
+    padding: 200px 0 0;
 }
 .block5 p {
     color:#fff;
