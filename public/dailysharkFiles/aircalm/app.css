@@ -1818,3 +1818,7 @@ div[data-answer] {
         top: 11%;
     }
 }
+
+.how-its-work .item-wrapper .item img {
+    width: 100%;
+}
