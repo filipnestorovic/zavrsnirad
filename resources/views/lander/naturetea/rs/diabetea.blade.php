@@ -13,6 +13,7 @@
     <link href="{{ asset('/') }}natureteaFiles/diabetea/style.css" rel="stylesheet">
     <link href="{{ asset('/') }}natureteaFiles/diabetea/media.css" rel="stylesheet">
     <link href="{{ asset('/') }}natureteaFiles/shared_files/logo.png" rel="icon" type="image/png">
+    <meta name="facebook-domain-verification" content="zi8dvsusf6hubh93a2079jq2giehw1" />
 </head>
 <body>
 @include('components.display_errors')
