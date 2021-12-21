@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-
     <link rel="shortcut icon" href="">
     <link rel="stylesheet" href="{{ asset('/') }}flexonikFiles/xtremeshape/owl.carousel.min.css">
     <link rel="stylesheet" href="{{ asset('/') }}flexonikFiles/xtremeshape/style.css">
@@ -37,42 +36,39 @@
     </style>
 </head>
 <body>
+@include('components.display_errors')
 <section class="fix_menu">
     <div class="wrapper">
         <div class="container">
             <img class="logo" src="{{ asset('/') }}flexonikFiles/xtremeshape/logo.png" alt="">
             <ul class="benef1">
-                <li><b>До <span>-7 см</span> в талии</b> за 1 месяц<br> без вреда для здоровья</li>
-                <li><b>Более <span>50 тысяч</span> довольных</b><br> фигурой после пояса</li>
-                <li><b>Доставка <span>от 3 рабочих</span> <br>дней</b> в любой регион</li>
+                <li><b>Skida santimetre već za mesec dana</b></li>
+                <li><b>Više hiljada zadovoljnih korisnika</b></li>
+                <li><b>Dostava za 24-48h</b></li>
             </ul>
-            <a href="#order_form" class="button1">Быстрый заказ</a>
+            <a href="#order_form" class="button1">Naruči odmah</a>
         </div>
     </div>
 </section>
 <section class="offer">
     <div class="wrapper">
         <div class="content">
-            <p class="main_title">Xtreme Power Belt <span></span></p>
-            <h2 class="main_subtitle"><span>Мгновенное корректирование</span> фигуры за пару движений</h2>
+            <p class="main_title">Hot Belt <span></span></p>
+            <h2 class="main_subtitle"><span>Brzo i lako</span> do željene figure</h2>
             <div class="main_product">
-                <div class="product_name"><b>Пояс для похудения</b> и тонкой талии</div>
+                <div class="product_name"><b>Pojas za</b>mršav i uzak struk</div>
                 <img class="prod" src="{{ asset('/') }}flexonikFiles/xtremeshape/product.png" alt="">
                 <img class="bef_after" src="{{ asset('/') }}flexonikFiles/xtremeshape/bef_after.png" alt="">
             </div>
             <div class="action_box">
-                <p>Специальная цена <span>только 1 день</span></p>
+                <p>Samo danas <span>40% popusta</span></p>
                 <div class="price">
                     <div class="old"><span>{{ $prices[1]['originalPrice'] }}</span><small>RSD</small></div>
                     <div class="new"><span>{{ $prices[1]['amount'] }}</span><small>RSD</small></div>
                 </div>
-                <a href="#order_form" class="button">Заказать со скидкой</a>
-                {{--<div class="timer">--}}
-                    {{--Повышение цены через: <span class="hours"></span> : <span class="minutes"></span> : <span class="seconds"></span>--}}
-                {{--</div>--}}
+                <a href="#order_form" class="button">Naruči sa popustom</a>
             </div>
         </div>
-        <a href="#video" class="video_btn">Смотреть<br> отзыв</a>
         <img class="figure" src="{{ asset('/') }}flexonikFiles/xtremeshape/figure_product.png" alt="">
         <a href="#id2" class="sect_btn"></a>
     </div>
@@ -81,27 +77,27 @@
     <div class="wrapper">
         <ul class="benef2">
             <li>
-                <div class="top">Эффект тонкой осиной талии</div>
-                <div class="bottom">Пояс подарит талию мечты <br>всего за пару движений без боли и дискомфорта</div>
+                <div class="top">Pogađa struk</div>
+                <div class="bottom">Uz samo par dana nošenja imaćete struk kakav ste <br> oduvek sanjali.</div>
                 <img src="{{ asset('/') }}flexonikFiles/xtremeshape/benef2_img1.png" alt="">
             </li>
             <li>
-                <div class="top">Безопасное похудение в области живота</div>
-                <div class="bottom">При регулярном <br>использовании убирает <br>лишний жир с живота и боков</div>
+                <div class="top">Bezbedno skidanje stomaka</div>
+                <div class="bottom">Uz normalnu upotrebu topi <br>masti sa stomaka i bokova</div>
                 <img src="{{ asset('/') }}flexonikFiles/xtremeshape/benef2_img2.png" alt="">
             </li>
             <li>
-                <div class="top">Послеродовое восстановление</div>
-                <div class="bottom">Идеален для <br>восстановления <br>фигуры после родов</div>
+                <div class="top">Oporavak posle <br>porođaja</div>
+                <div class="bottom">Idealan za vraćanje <br>u prvobitnu liniju</div>
                 <img src="{{ asset('/') }}flexonikFiles/xtremeshape/benef2_img3.png" alt="">
             </li>
         </ul>
     </div>
-    <div class="bg_text">Xtreme Power Belt</div>
+    <div class="bg_text">Hot Belt</div>
 </section>
 <section class="sect3">
     <div class="wrapper">
-        <h2 class="title"><b>Посмотрите, как просто достичь <br> эффекта осиной талии</b> за пару движений</h2>
+        <h2 class="title">Uverite se u <b>efikasnost ovog pojasa i kako <br> lako možete doći do</b> željenih rezultata</h2>
         <div class="column">
             <div class="left">
                 <video loop preload autoplay controls=""><source src="{{ asset('/') }}flexonikFiles/xtremeshape/gif_video.mp4" type="video/mp4">
@@ -109,12 +105,12 @@
             </div>
             <div class="right">
                 <div class="text">
-                    <p><span>С поясом вам не нужно постоянно втягивать живот или носить мешковатую одежду. Вы мгновенно обретете сексуальные изгибы, о которых только мечтали. А приятным бонусом станет не только подтянутая талия, но и грациозная осанка с приподнятой грудью!</span></p>
-                    <p>При этом поддержка поясом спины <b>снизит нагрузку на позвоночник и избавит от боли в спинном и поясничном отделах.</b> Это особенно актуально после рождения ребенка, которого вы постоянно носите на руках.</p>
-                    <p>А еще в нем просто невозможно переедать! Утянутая талия контролирует количество поступающей еды, благодаря чему <b>вы не сможете съесть больше положенного, а значит не наберете лишних килограммов.</b></p>
+                    <p><span>Dosta uvlačenja stomaka i nošenja velike odeće!</span> Za veoma kratko vreme postignite želejnu liniju! I ne samo to, dok vam pojas pomaže da smršate, takođe i popravlja držanje</p>
+                    <p>Podrška za ledja koja je ušivena u pojas će <span>smanjiti opterećenje na vašu kičmu i rešiti vas svakog bola u lumbalno delu.</span> Ovo posebno pogoduje trudnicama koji veći deo dana nose dete u rukama.</p>
+                    <p><span>Pojas vam pomaže i da regulišete ishranu.</span> Dok ga nosite, gotovo je nemoguće da preterate sa unosom hrane, tako da ćete biti sigurni da nećete uneti više hrane nego što je potrebno.</p>
                 </div>
                 <img src="{{ asset('/') }}flexonikFiles/xtremeshape/s3_img.jpg" alt="">
-                <a href="#order_form" class="button">Хочу тонкую талию</a>
+                <a href="#order_form" class="button">NARUČI SADA</a>
             </div>
         </div>
     </div>
@@ -124,37 +120,37 @@
         <img src="{{ asset('/') }}flexonikFiles/xtremeshape/s4_woman.png" alt="">
         <div class="content">
             <div class="text">
-                <h4><b>«Подарите себе эффектную тонкую талию,</b> и ваша фигура не останется незамеченной!»</h4>
-                <p>Когда я впервые надела пояс Xtreme Power Belt я и не думала, что получу СТОЛЬКО комплиментов в адрес моей фигуры. Я очень люблю на разных мероприятиях производить яркое впечатление, и такого ПОТРЯСАЮЩЕГО эффекта, как с поясом, ни от одного утягивающего платья не получить!</p>
+                <h4><b>Koristite ovaj pojas i dostignite željenu figuru.</b> Nećete proči neprimećeno</h4>
+                <p>Prvi put kada sam obukla Hot Belt nisam ni očekivala da ću dobiti toliko komplimenata na račun mog izgleda. Posećujem dosta eventova, i volim da ostavim utisak gde god se pojavim, i verujte da mi nijedna haljina nije pomogla da to i ostvarim kao Hot Belt.</p>
                 <div class="author">
-                    <p>Анна Седокова</p>
-                    <small>Певица, дизайнер одежды, актриса, теле- и радиоведущая</small>
+                    <p>Marija Kirilenko</p>
+                    <small>modni dizajner, bloger, model</small>
                 </div>
-                <a href="#order_form" class="button width">Заказать пояс со&nbsp;скидкой</a>
+                <a href="#order_form" class="button width">NARUČI SADA SA POPUSTOM</a>
             </div>
         </div>
     </div>
-    <div class="bg_text">Xtreme Power Belt</div>
+    <div class="bg_text">Hot Belt</div>
 </section>
 <section class="sect5">
     <div class="wrapper">
-        <h2 class="title"><b>Как пояс эффективно сжигает лишние см <br>в талии и на боках? </b></h2>
+        <h2 class="title"><b>Kako pojas topi santimetre, i skida masti sa stomaka i bokova? </b></h2>
         <div class="column">
             <div class="left">
-                <p>Пояс выполнен по <span>специальной двойной технологии воздействия,</span> секрет которой в сочетании внутреннего пояса для создания парникового эффекта и внешнего пояса для регулируемого компрессионного эффекта.</p>
-                <p>«Эффект сауны» создается внутренним поясом, выполненным из специальной полимерной ткани Neotex. Она ускоряет естественное потоотделение в 4 раза, создавая эффект сауны и, таким образом, <span>вместе с потом из организма выводятся токсины и интенсивно сжигается лишний жир.</span> Чем больше физические нагрузки, тем сильнее активируется эффект жиросжигания.</p>
-                <p>Особенностью пояса является то, что <span>расщепление жировой прослойки в области живота и на боках происходит и без повышенных физических нагрузок,</span> а только при регулярном использовании пояса во время любых повседневных занятий — прогулке, домашних делах, на работе, катании на велосипеде и многих других.</p>
+                <p>Tajna Hot Belt pojasa je u double impact tehnologiji. Kombinacijom unutrasnjeg pojasa koji izaziva pojačano topljenje masti, i spoljasnjeg pojasa preko koga se podešava nivo kompresije, <span>naši korisnici efkisano skidaju kilažu.</span></p>
+                <p><span>Unutrašnji pojas je izrađen od specijalnog Neotex-a i izaziva “efekat saune”.</span> Ubrzava znojenje i do 4 puta, i tako osim što topi višak masti, eliminiše i toksine iz tela. Uz pojačanu fizičku aktivnost masti se brže tope, te se zbog toga preporučuje fizička aktivnost uz korišćenje ovog pojasa.</p>
+                <p><span>Specificnost ovog pojasa</span> je sto može uklanjati masti sa <span>bez fizičke aktivnosti</span>, ali je u tom slučaju potrebno da se pojas nosi svakodnevno prilikom obavljanja dnevnih aktivnosti - šetnje, kućnih poslova, na poslu i slično.</p>
             </div>
             <img src="{{ asset('/') }}flexonikFiles/xtremeshape/prod_size.jpg" alt="">
         </div>
-        <a href="#order_form" class="button">Заказать сейчас</a>
+        <a href="#order_form" class="button">Naručite odmah</a>
     </div>
-    <div class="bg_text">Xtreme Power Belt</div>
+    <div class="bg_text">Hot belt</div>
 </section>
 <section class="sect6">
     <div class="wrapper">
-        <h2 class="title"><b>Реальные результаты похудения <br>покупателей пояса</b></h2>
-        <p class="subtitle">Чтобы достичь впечатляющих результатов, необходимо регулярно носить пояс по несколько часов в день в течение месяца. Убедитесь сами, каких результатов можно достичь просто используя пояс Xtreme Power Belt ↓↓↓</p>
+        <h2 class="title"><b>Rezultati praviih kupaca</b></h2>
+        <p class="subtitle">Za najbolje rezultate, pojas nositi više sati dnevno oko mesec dana.</p>
         <div class="result_carousel owl-carousel">
             <img src="{{ asset('/') }}flexonikFiles/xtremeshape/result1.jpg" alt="">
             <img src="{{ asset('/') }}flexonikFiles/xtremeshape/result2.jpg" alt="">
@@ -163,137 +159,113 @@
             <img src="{{ asset('/') }}flexonikFiles/xtremeshape/result5.jpg" alt="">
             <img src="{{ asset('/') }}flexonikFiles/xtremeshape/result6.jpg" alt="">
         </div>
-        <p>*Обратите внимание — из-за индивидуальных особенностей организма скорость похудения в области талии, живота и боков может варьироваться</p>
     </div>
 </section>
 <section class="sect7">
-    <div class="bg_text top">Xtreme Power Belt</div>
+    <div class="bg_text top">Hot Belt</div>
     <div class="wrapper">
-        <h2 class="title"><b>Преимущества пояса</b></h2>
+        <h2 class="title"><b>Zašto baš Hot Belt?</b></h2>
         <ul class="benef3">
             <li>
                 <img src="{{ asset('/') }}flexonikFiles/xtremeshape/benef3_img1.jpg" alt="">
-                <p><b>Материал Neotex — полностью гипоаллергенен.</b> Благодаря наличию сетчатых вставок на спине, происходит циркуляция воздуха для исключения перепотевания и появления раздражений на коже</p>
+                <p><b>Neotex ne izaziva iritacije i alergijske reakcije.</b> Zbog rupičaste tkanine na leđima vazduh neometano cirkuliše i onemogućava bilo kakve iritacije.</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}flexonikFiles/xtremeshape/benef3_img2.jpg" alt="">
-                <p><b>Регулирование степени сжатия</b> с помощью удобных «липучек» можно подбирать комфортную степень утяжки по мере похудения, без передавливания</p>
+                <p><b>Podesiv nivo kompresije.</b> Uz pomoć trakica moežete da podesite nivo kompresije na onaj koji vama odgovara.</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}flexonikFiles/xtremeshape/benef3_img3.jpg" alt="">
-                <p><b>Эластичный материал не растягивается и не сползает в течение дня,</b> а также при занятиях спортом и во время любых активностей</p>
+                <p><b>Elastičan materijal se ne rasteže i ne spada tokom dana,</b> kao i prilikom bavljenja sportom ili obavljanja drugih aktivnosti.</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}flexonikFiles/xtremeshape/benef3_img4.jpg" alt="">
-                <p><b>Незаметен под одеждой и не стесняет движений</b> благодаря тонким швам и комфортному облеганию. Он приятен на ощупь и подходит для долговременного использования</p>
+                <p><b>Nevidljiv ispod odeće i ne ograničava pokrete.</b> Jako je udoban, prijatan na dodir i dugovečan.</b></p>
             </li>
             <li class="order_li">
                 <img src="{{ asset('/') }}flexonikFiles/xtremeshape/product1.png" alt="">
-                <a href="#order_form" class="button">Заказать со скидкой</a>
+                <a href="#order_form" class="button">Naručite odmah</a>
             </li>
             <li>
                 <img src="{{ asset('/') }}flexonikFiles/xtremeshape/benef3_img5.jpg" alt="">
-                <p><b>Не требует особенного ухода,</b> легко стирается, не теряет форму и свойства на протяжении длительного времени</p>
+                <p><b>Ne zahteva specijalnu negu i lak je za pranje.</b> Prilikom pranja ne gubi oblik i svoja svojstva.</p>
             </li>
         </ul>
     </div>
 </section>
 <section class="sect8">
-    <div class="bg_text top">Xtreme Power Belt</div>
+    <div class="bg_text top">Hot Belt</div>
     <div class="wrapper">
-        <h2 class="title"><b>Почему пояс незаменим в послеродовой период?</b></h2>
+        <h2 class="title"><b>Zašto je vrhunski izbor za posle porodjaja?</b></h2>
         <div class="column">
             <div class="left">
                 <img src="{{ asset('/') }}flexonikFiles/xtremeshape/mom.jpg" alt="">
             </div>
             <div class="right">
                 <ul class="list1">
-                    <li>Возвращает тонус мышцам живота, укрепляет и сужает талию, помогая ей быстро прийти в дородовое состояние</li>
-                    <li>Надежно фиксирует и защищает послеродовые швы</li>
-                    <li>Помогает поддерживать мышцы передней брюшной стенки</li>
-                    <li>Предотвращает появление «послеродового фартука» из обвисшей кожи живота</li>
-                    <li>Снимает нагрузку с позвоночника, позволяя носить малыша на руках с большим комфортом для спины</li>
+                    <li>Vraća tonus abdominalnim mišićima, jača i stanjuje struk, i ubrzava povratak u stanje pre porođaja</li>
+                    <li>Pruža podršku mišićima trbušnog zida</li>
+                    <li>Sprečava nastanak opuštene kože koju je posle teško vratiti u prvobitno stanje</li>
+                    <li>Oslobađa kičmu pritiska tako da možete lakše i duže da nosite bebu u naručju</li>
                 </ul>
             </div>
         </div>
         <div class="alert">
-            Пока все свое внимание и любовь вы отдаете малышу, пояс Xtreme Power Belt позаботится о вашей талии!
+            Dok Vi posvećujete pažnju Vašem mališanu, Hot Belt će posvećivati pažnju Vama i brinuće se o Vašem izgledu.
         </div>
     </div>
 </section>
 <section class="sect9">
     <div class="bg_text top">Xtreme Power Belt</div>
     <div class="wrapper">
-        <h2 class="title"><b>Рекомендуют профессионалы</b></h2>
+        <h2 class="title"><b>Preporuka profesionalaca</b></h2>
         <div class="expert_block">
             <div class="left">
                 <div class="author">
                     <img src="{{ asset('/') }}flexonikFiles/xtremeshape/expert_ava.png" alt="">
-                    <p><b>Natali Kostova</b> фитнес-эксперт, тренер</p>
+                    <p><b>Natalija Kostic</b> fitnes instruktor</p>
                 </div>
-                <p>«Отвечаю на один из самых популярных вопросов, который мне постоянно присылают в директ! Какой корсет или пояс более эффективен для коррекции фигуры и тренировок?</p>
-                <p>• Я предпочитаю пояса, а именно Xtreme Power Belt, потому что он лучше держит талию и спину.</p>
-                <p>• Ношу на тренировке и днем около 3-5 часов.</p>
-                <p>• Помогает не переедать, чувствовать насыщение едой в меньших количествах, снимает нагрузку с косых мышц пресса, позволяет предотвратить естественное расширение в талии от тяжелых нагрузок.»</p>
+                <p>Jedno od najčešćih pitanja koje mi stiže u DM je da li su pojasevi i korseti efikasni i koji je najbolji?</p>
+                <p>• Da, efikasni su i čak ih i ja koristim, ali samo ako koristite prave i originalne proizvode. Ja koristim Hot Belt zato sto pruža mojim leđima potporu, i linija mi je nikad bolja.</p>
+                <p>• Nosim ga dok treniram, i oko 3 sata u toku dana.</p>
+                <p>• Dosta mi pomaže u kontroli unosa hrane, oblikuje mišiće i generalno ga preporučujem svima.</p>
             </div>
             <div class="right">
                 <img src="{{ asset('/') }}flexonikFiles/xtremeshape/expert.jpg" alt="">
             </div>
         </div>
-        <a href="#order_form" class="button">Заказать в 1 клик</a>
+        <a href="#order_form" class="button">Naručite odmah</a>
     </div>
 </section>
-<section class="sect10">
-    <div class="wrapper">
-        <h2 class="title"><b>Отзывы покупателей пояса</b></h2>
-        <p>Ежедневно мы получаем десятки отзывов о поясе и эффекте от его использования. Хотим поблагодарить наших покупателей за такую активную обратную связь! Она позволяет нам учитывать каждое мнение. Спасибо! Предлагаем подборку свежих отзывов.</p>
-        <div class="reviews owl-carousel">
-            <img src="{{ asset('/') }}flexonikFiles/xtremeshape/rev2.jpg" alt="">
-            <img src="{{ asset('/') }}flexonikFiles/xtremeshape/rev1.jpg" alt="">
-            <img src="{{ asset('/') }}flexonikFiles/xtremeshape/rev3.jpg" alt="">
-            <img src="{{ asset('/') }}flexonikFiles/xtremeshape/rev4.jpg" alt="">
-            <img src="{{ asset('/') }}flexonikFiles/xtremeshape/rev5.jpg" alt="">
-            <img src="{{ asset('/') }}flexonikFiles/xtremeshape/rev6.jpg" alt="">
-        </div>
-    </div>
-</section>
-{{--<section class="sect11" id="video">--}}
-    {{--<div class="wrapper">--}}
-        {{--<h2 class="title"><b>Видеоотзыв</b></h2>--}}
-        {{--<div class="video_block">--}}
-            {{--<div class="youtube" id="S281qt0PgUI"></div>--}}
-        {{--</div>--}}
-    {{--</div>--}}
-{{--</section>--}}
 <section class="sect12">
-    <div class="bg_text top">Xtreme Power Belt</div>
+    <div class="bg_text top">Hot Belt</div>
     <div class="wrapper">
-        <h2 class="title"><b>Как мы работаем?</b></h2>
+        <h2 class="title"><b>Kako naručiti?</b></h2>
         <ul class="order_list">
             <li>
-                <span>Заявка</span>
-                <p>Оставьте заявку на нашем сайте</p>
-                <a href="#order_form" class="button cursor">Заказать</a>
+                <span>Forma</span>
+                <p>Popunite formu i kliknite</p>
+                <a href="#order_form" class="button cursor">NARUČI</a>
             </li>
             <li>
-                <span>Звонок</span>
-                <p>Вам перезвонит наш менеджер, ответит на все вопросы и поможет оформить заказ</p>
+                <span>Potvrda</span>
+                <p>Ubrzo ćete SMS porukom dobiti potvrdu porudžbine</p>
                 <img src="{{ asset('/') }}flexonikFiles/xtremeshape/order_phone.png" alt="">
             </li>
             <li>
-                <span>Доставка и оплата</span>
-                <p>Доставим через 3-10 дней без предоплаты. Оплачиваете заказ при получении на почте</p>
+                <span>Dostava & Plaćanje</span>
+                <p>U roku od 24-48h proizvod će biti kod Vas, a kuriru plaćate po preuzimanju robe</p>
                 <img src="{{ asset('/') }}flexonikFiles/xtremeshape/product2.png" alt="">
             </li>
         </ul>
         <div class="warn_block">
-            <h4><span>Внимание!</span> Остерегайтесь подделок!</h4>
+            <h4><span>Pažnja!</span> Kupujte od proverenih prodavaca!</h4>
             <img class="img" src="{{ asset('/') }}flexonikFiles/xtremeshape/fake_orig.png" alt="">
-            <p>Из-за растущей популярности утягивающего пояса, участились случаи его подделок. Мы являемся официальными дилерами Xtreme Power Belt и поставляем только оригинальные пояса от производителя.</p>
-            <p>Поэтому берегите свое здоровье, деньги и нервы — <b>заказывайте у нас и можете быть уверены в качестве купленного пояса!</b></p>
+            <p>Sve je više prodavaca na crno koji prodaju kopiju robe po nerealno niskim cenama. </p>
+            <p>Mi smo registrovano preduzeće za online trgovinu i kupovinom kod nas ostvarujete sva zakonska prava - garanciju, pravo na zamenu, pravo na povrat novca. Kupovinom kod neregistrovanih subjekata nemate nijedno zakonom zagarantovano pravo.</b></p>
             <div class="label">
                 <img src="{{ asset('/') }}flexonikFiles/xtremeshape/orig_label.png" alt="">
-                <p>100% гарантия качества от производителя</p>
+                <p>100% garancija kvaliteta</p>
             </div>
         </div>
     </div>
@@ -301,11 +273,11 @@
 <section class="offer offer_bottom">
     <div class="wrapper">
         <div class="content">
-            <p class="main_title">Xtreme Power Belt <span></span></p>
-            <h2 class="main_subtitle"><span>Пояс для похудения</span> и тонкой талии</h2>
+            <p class="main_title">Hot Belt <span></span></p>
+            <h2 class="main_subtitle"><span>BRZO I LAKO</span> do željene figure</h2>
             <div class="column">
                 <div class="action_box">
-                    <p>Специальная цена <span>только 1 день</span></p>
+                    <p>Samo danas <span>40% popusta</span></p>
                     <div class="price">
                         <div class="old"><span>{{ $prices[1]['originalPrice'] }}</span><small>RSD</small></div>
                         <div class="new"><span>{{ $prices[1]['amount'] }}</span><small>RSD</small></div>
@@ -317,39 +289,24 @@
                 </div>
                 <div class="formbox">
                     <div class="action_text">
-                        <span>Оставьте заявку</span>
-                        <p>наш менеджер перезвонит вам в течение 10 минут и поможет оформить заказ</p>
-                        <small>Звонок абсолютно бесплатный!</small>
+                        <span>Podaci za dostavu</span>
                     </div>
-                    <form id="order_form" class="main-order-form main_form" action="#" method="post">
-
-                        <input type="text" name="name" placeholder="Введите ваше имя" required="">
-                        <input type="tel" name="phone" placeholder="Введите ваш телефон" required="">
-                        <button class="button">Заказать со скидкой</button>
-
+                    <form id="order_form" class="main-order-form main_form" action="{{$orderRoute}}" method="post">
+                        {{csrf_field()}}
+                        @include('lander.naturapharm.components.form_hidden_fields')
+                        <input id="customer_firstname" value="" name="name" class="shipping-firstname" type="text" maxlength="30" placeholder="Ime i prezime" required="">
+                        <input id="customer_phone" value="" name="phone" class="customer-phone" type="tel" maxlength="20" placeholder="Broj telefona" required="">
+                        <input id="shipping_address" value="" name="shipping_address" class="shipping-address" type="text" maxlength="80" placeholder="Adresa" required="">
+                        <input id="shipping_city" value="" name="shipping_city" class="shipping-city" type="text" maxlength="30" placeholder="Grad" required="">
+                        <button class="button">Naručite odmah</button>
                     </form>
-                    <div class="timer">Повышение цены через: <span class="hours"></span> : <span class="minutes"></span> : <span class="seconds"></span></div>
                 </div>
             </div>
         </div>
-        <a href="#video" class="video_btn">Смотреть<br> отзыв</a>
         <img class="figure" src="{{ asset('/') }}flexonikFiles/xtremeshape/figure_product.png" alt="">
     </div>
 </section>
-<!-- copyright -->
-{{--<footer class="cpu">--}}
-    {{--<div class="wrap">--}}
-        {{--<div class="foot_ru_center" style="text-align: center; margin: 0px auto; padding: 30px 0; font-size:15px">--}}
-
-        {{--</div>--}}
-    {{--</div>--}}
-{{--</footer>--}}
-<!-- /copyright -->
-
-
-{{--<script src="https://xtremepowerbel.xcartpro.com/r1/assets_pages/land/js/youtube/previewYouTube.js"></script>--}}
 <script src="{{ asset('/') }}flexonikFiles/xtremeshape/owl.carousel.min.js"></script>
-{{--<script src="https://xtremepowerbel.xcartpro.com/r1/js/main.js"></script>--}}
 <script>
     $(document).ready(function() {
 
@@ -400,6 +357,6 @@
         });
     });
 </script>
-
+@include('components.pixel_footer')
 </body>
 </html>

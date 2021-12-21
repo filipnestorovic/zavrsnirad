@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-
     <link rel="shortcut icon" href="">
     <link rel="stylesheet" href="{{ asset('/') }}flexonikFiles/xtremeshape/owl.carousel.min.css">
     <link rel="stylesheet" href="{{ asset('/') }}flexonikFiles/xtremeshape/style.css">
@@ -37,6 +36,7 @@
     </style>
 </head>
 <body>
+@include('components.display_errors')
 <section class="fix_menu">
     <div class="wrapper">
         <div class="container">
@@ -67,12 +67,8 @@
                     <div class="new"><span>{{ $prices[1]['amount'] }}</span><small>RSD</small></div>
                 </div>
                 <a href="#order_form" class="button">Naruči sa popustom</a>
-                {{--<div class="timer">--}}
-                    {{--Повышение цены через: <span class="hours"></span> : <span class="minutes"></span> : <span class="seconds"></span>--}}
-                {{--</div>--}}
             </div>
         </div>
-        <!--<a href="#video" class="video_btn">Смотреть<br> отзыв</a>-->
         <img class="figure" src="{{ asset('/') }}flexonikFiles/xtremeshape/figure_product.png" alt="">
         <a href="#id2" class="sect_btn"></a>
     </div>
@@ -82,17 +78,17 @@
         <ul class="benef2">
             <li>
                 <div class="top">Pogađa struk</div>
-                <div class="bottom">Uz samo par dana nošenja imaćete struk kakav ste oduvek sanjali.</div>
+                <div class="bottom">Uz samo par dana nošenja imaćete struk kakav ste <br> oduvek sanjali.</div>
                 <img src="{{ asset('/') }}flexonikFiles/xtremeshape/benef2_img1.png" alt="">
             </li>
             <li>
                 <div class="top">Bezbedno skidanje stomaka</div>
-                <div class="bottom">Uz normalnu upotrebu topi masti sa stomaka i bokova</div>
+                <div class="bottom">Uz normalnu upotrebu topi <br>masti sa stomaka i bokova</div>
                 <img src="{{ asset('/') }}flexonikFiles/xtremeshape/benef2_img2.png" alt="">
             </li>
             <li>
-                <div class="top">Oporavak posle porođaja</div>
-                <div class="bottom">Idealan za vraćanje u prvobitnu liniju</div>
+                <div class="top">Oporavak posle <br>porođaja</div>
+                <div class="bottom">Idealan za vraćanje <br>u prvobitnu liniju</div>
                 <img src="{{ asset('/') }}flexonikFiles/xtremeshape/benef2_img3.png" alt="">
             </li>
         </ul>
@@ -125,7 +121,7 @@
         <div class="content">
             <div class="text">
                 <h4><b>Koristite ovaj pojas i dostignite željenu figuru.</b> Nećete proči neprimećeno</h4>
-                <p>Prvi put kada sam obukla Hot Belt nisam ni očekivala da ću dobiti toliko komplimenata na račun mog izgleda. Posečujem dosta eventova, i volim da ostavim utisak gde god se pojavim, i verujte da mi nijedna haljina nije pomogla da to i ostvarim kao Hot Belt.</p>
+                <p>Prvi put kada sam obukla Hot Belt nisam ni očekivala da ću dobiti toliko komplimenata na račun mog izgleda. Posećujem dosta eventova, i volim da ostavim utisak gde god se pojavim, i verujte da mi nijedna haljina nije pomogla da to i ostvarim kao Hot Belt.</p>
                 <div class="author">
                     <p>Marija Kirilenko</p>
                     <small>modni dizajner, bloger, model</small>
@@ -163,7 +159,6 @@
             <img src="{{ asset('/') }}flexonikFiles/xtremeshape/result5.jpg" alt="">
             <img src="{{ asset('/') }}flexonikFiles/xtremeshape/result6.jpg" alt="">
         </div>
-        <!--<p>*Обратите внимание — из-за индивидуальных особенностей организма скорость похудения в области талии, живота и боков может варьироваться</p>-->
     </div>
 </section>
 <section class="sect7">
@@ -242,28 +237,6 @@
         <a href="#order_form" class="button">Naručite odmah</a>
     </div>
 </section>
-<!--<section class="sect10">-->
-<!--    <div class="wrapper">-->
-<!--        <h2 class="title"><b>Отзывы покупателей пояса</b></h2>-->
-<!--        <p>Ежедневно мы получаем десятки отзывов о поясе и эффекте от его использования. Хотим поблагодарить наших покупателей за такую активную обратную связь! Она позволяет нам учитывать каждое мнение. Спасибо! Предлагаем подборку свежих отзывов.</p>-->
-<!--        <div class="reviews owl-carousel">-->
-<!--            <img src="{{ asset('/') }}flexonikFiles/xtremeshape/rev2.jpg" alt="">-->
-<!--            <img src="{{ asset('/') }}flexonikFiles/xtremeshape/rev1.jpg" alt="">-->
-<!--            <img src="{{ asset('/') }}flexonikFiles/xtremeshape/rev3.jpg" alt="">-->
-<!--            <img src="{{ asset('/') }}flexonikFiles/xtremeshape/rev4.jpg" alt="">-->
-<!--            <img src="{{ asset('/') }}flexonikFiles/xtremeshape/rev5.jpg" alt="">-->
-<!--            <img src="{{ asset('/') }}flexonikFiles/xtremeshape/rev6.jpg" alt="">-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
-{{--<section class="sect11" id="video">--}}
-    {{--<div class="wrapper">--}}
-        {{--<h2 class="title"><b>Видеоотзыв</b></h2>--}}
-        {{--<div class="video_block">--}}
-            {{--<div class="youtube" id="S281qt0PgUI"></div>--}}
-        {{--</div>--}}
-    {{--</div>--}}
-{{--</section>--}}
 <section class="sect12">
     <div class="bg_text top">Hot Belt</div>
     <div class="wrapper">
@@ -316,39 +289,24 @@
                 </div>
                 <div class="formbox">
                     <div class="action_text">
-                        <span>Vaši podaci</span>
+                        <span>Podaci za dostavu</span>
                     </div>
-                    <form id="order_form" class="main-order-form main_form" action="#" method="post">
-                        
+                    <form id="order_form" class="main-order-form main_form" action="{{$orderRoute}}" method="post">
+                        {{csrf_field()}}
+                        @include('lander.naturapharm.components.form_hidden_fields')
                         <input id="customer_firstname" value="" name="name" class="shipping-firstname" type="text" maxlength="30" placeholder="Ime i prezime" required="">
                         <input id="customer_phone" value="" name="phone" class="customer-phone" type="tel" maxlength="20" placeholder="Broj telefona" required="">
+                        <input id="shipping_address" value="" name="shipping_address" class="shipping-address" type="text" maxlength="80" placeholder="Adresa" required="">
                         <input id="shipping_city" value="" name="shipping_city" class="shipping-city" type="text" maxlength="30" placeholder="Grad" required="">
-                        <input id="shipping_address" value="" name="shipping_address" class="shipping-address" type="text" maxlength="80" placeholder="Ulica i broj" required="">
                         <button class="button">Naručite odmah</button>
-
                     </form>
-                    <!--<div class="timer">Повышение цены через: <span class="hours"></span> : <span class="minutes"></span> : <span class="seconds"></span></div>-->
                 </div>
             </div>
         </div>
-        <!--<a href="#video" class="video_btn">Смотреть<br> отзыв</a>-->
         <img class="figure" src="{{ asset('/') }}flexonikFiles/xtremeshape/figure_product.png" alt="">
     </div>
 </section>
-<!-- copyright -->
-{{--<footer class="cpu">--}}
-    {{--<div class="wrap">--}}
-        {{--<div class="foot_ru_center" style="text-align: center; margin: 0px auto; padding: 30px 0; font-size:15px">--}}
-
-        {{--</div>--}}
-    {{--</div>--}}
-{{--</footer>--}}
-<!-- /copyright -->
-
-
-{{--<script src="https://xtremepowerbel.xcartpro.com/r1/assets_pages/land/js/youtube/previewYouTube.js"></script>--}}
 <script src="{{ asset('/') }}flexonikFiles/xtremeshape/owl.carousel.min.js"></script>
-{{--<script src="https://xtremepowerbel.xcartpro.com/r1/js/main.js"></script>--}}
 <script>
     $(document).ready(function() {
 
@@ -399,6 +357,6 @@
         });
     });
 </script>
-
+@include('components.pixel_footer')
 </body>
 </html>

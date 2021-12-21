@@ -21,20 +21,20 @@
 <header class="offer_section offer_top">
     <div class="wrapper clearfix">
         <div class="title_block">
-            <h1 class="main_title">Вибромассажный пояс Vibroaction</h1>
-            <p class="subtitle">Вибромассажный пояс для коррекции фигуры</p>
+            <h1 class="main_title">VIBRACIONI POJAS<br> Vibroaction</h1>
+            <p class="subtitle">VIBRACIONI MASAŽNI POJAS <br>ZA OBLIKOVANJE TELA</p>
         </div>
         <img class="mobile_product" src="{{ asset('/') }}flexonikFiles/vibroaction/mobile__offer_product.png" alt="Vibroaction">
         <ul class="benefits_list">
-            <li>Уменьшает <span>объем талии</span></li>
-            <li>Избавляет <span>от лишнего веса</span></li>
-            <li>Избавляет <span>от боли в спине</span></li>
+            <li>SMANJUJE <span> STRUK</span></li>
+            <li>OSLOBAĐA <span> VIŠKA TEŽINE</span></li>
+            <li>UBLAŽAVA <span> BOLOVE U LEĐIMA</span></li>
         </ul>
         <div class="form_block">
             <div class="action_block clearfix">
                 <div class="discount_block">
-                    <div class="text">Акция</div>
-                    <div class="value">-50%</div>
+                    <div class="text">Akcija</div>
+                    <div class="value">-40%</div>
                 </div>
                 <div class="price_block">
                     <div class="price_wrapper">
@@ -43,12 +43,9 @@
                     </div>
                 </div>
             </div>
-            <form class="order_form al-form" action="#" method="post">
-
-                <input class="input" type="text" name="name" placeholder="Введите Ваше имя" required>
-                <input class="input" type="tel" name="phone" id="phone" placeholder="Введите Ваш телефон" required>
-                <button class="button">Заказать сейчас</button>
-            </form>
+            <div>
+                <a href="#order_form" class="button">Poručite sada</a>
+            </div>
         </div>
     </div>
 </header>
@@ -56,92 +53,84 @@
     <div class="wrapper clearfix">
         <img src="{{ asset('/') }}flexonikFiles/vibroaction/about__image.jpg" alt="Vibroaction">
         <div class="content_block">
-            <h2>Уникальный вибромассажный пояс <span>Vibroaction</span></h2>
-            <p><b>Вибромассажный пояс Vibroaction является незаменимым аксессуаром, который способствует уменьшению вашей талии.</b></p>
-            <p>Используя его, вы сможете сжигать жир даже без интенсивных тренировок. Пояс заставит ваши мышцы сокращаться больше, чем любой тренажёр в спортзале.</p>
-            <p>Производители снабдили его двумя типами вибраций, автоматической и ручной:</p>
+            <h2>JEDINSTVENI VIBRACIONI POJAS <span>Vibroaction</span></h2>
+            <p><b>Vibroaction pojas je neizostavan dodatak koji pomaže u smanjenju struka.</b></p>
+            <p>Koristeći ga, mogu se sagoreti masti čak i bez intenzivnog treninga.
+                Pojas će učiniti da se mišići zategnu bolje nego na bilo kojoj spravi u teretani.</p>
+            <p>Proizvođači su obezbedili dve vrste vibracija, automatske i manuelne:</p>
             <ul>
-                <li>1-й режим автоматической режим оказывает эффект расслабляющего массажа, <b>устраняет целлюлит</b></li>
-                <li>2-й режим имеет пять <b>5 режимов интенсивности</b>. С их помощью корректировать <b>сокращение мышц</b>.</li>
+                <li>1. Automatski režim ima opuštajući efekat masaže i <b>eliminiše celulit</b></li>
+                <li>2. Manuelni režim ima <b>5 različitih intenziteta</b>, i može se podešavati jačina kontrakcije mišića.</li>
             </ul>
-            <p>Благодаря такой двойной структуре пояса его легко надевать и удобно носить. Надевается он в считанные секунды и готов к использованию, в любом месте:</p>
+            <p>Specijalno dizajnirani kaiševi olakšavaju nošenje i učvršćivanje na telo.
+                Može se staviti za nekoliko sekundi i spreman je za upotrebu bilo gde:</p>
             <ul>
-                <li>На работе</li>
-                <li>На прогулке</li>
-                <li>Дома</li>
-                <li>В тренажерном зале и т. д.</li>
+                <li>Na poslu</li>
+                <li>Kod kuće</li>
+                <li>U šetnji</li>
+                <li>U teretani itd.</li>
             </ul>
         </div>
     </div>
 </section>
 <!-- /about -->
-<!-- video -->
-{{--<section class="video_section">--}}
-    {{--<div class="wrapper">--}}
-        {{--<h2>ПОЛУЧИТЕ ИДЕАЛЬНУЮ ФИГУРУ ВМЕСТЕ С Vibroaction</h2>--}}
-        {{--<div class="video_block" id="video1">--}}
-            {{--<iframe width="560" height="315" src="https://www.youtube.com/embed/KNOxZN54Q8k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>--}}
-        {{--</div>--}}
-    {{--</div>--}}
-{{--</section>--}}
-<!-- /video -->
 <!-- benefits -->
 <section class="benefits_section">
     <div class="wrapper">
-        <h2><span>В чем секрет</span> эффективности пояса?</h2>
+        <h2><span>KOJA JE TAJNA</span> EFIKASNOSTI POJASA?</h2>
         <div class="benefits_block">
             <img src="{{ asset('/') }}flexonikFiles/vibroaction/benefits__image.jpg" alt="Vibroaction">
             <ul>
-                <li>Технология двойного сжатия – плотно охватывает спину, пояс и живот</li>
-                <li>Не сдавливает мышцы благодаря высокотехнологичному материалу</li>
-                <li>Можно использовать лежа, сидя, за компьютером, можно использовать на различных частях тела</li>
-                <li>Сетчатый материал обеспечивает хорошую вентиляцию</li>
-                <li>Степень сжатия регулируется, и Вы сами выбираете нужный эффект</li>
-                <li>Бережно поддерживает мышцы спины, обеспечивая отличную осанку</li>
+                <li>Tehnologija dvostruke kompresije - čvrsto obavija leđa, struk i stomak</li>
+                <li>Ne steže mišiće zahvaljujući visokotejnološkom materijalu</li>
+                <li>Može se koristiti na različitim delovima tela, ležeći, sedeći za računarom ili bilo kom drugom položaju</li>
+                <li>Mrežasti materijal obezbeđuje dobru ventilaciju</li>
+                <li>Odnos kompresije je podesiv, a vi sami birate željeni efekat</li>
+                <li>Nežno podržava mišiće leđa za odlično držanje</li>
             </ul>
         </div>
-        <a href="#order_form" class="button">Заказать сейчас</a>
+        <a href="#order_form" class="button">Poručite sada</a>
     </div>
 </section>
 <!-- /benefits -->
 <!-- use -->
 <section class="use_section">
     <div class="wrapper">
-        <h2>Для чего люди по всему миру используют <span>пояс Vibroaction?</span></h2>
+        <h2>ZAŠTO LJUDI ŠIROM SVETA KORISTE <span> VIBRACIONI POJAS?</span></h2>
         <div class="use_list clearfix">
             <div class="use_item">
                 <div class="image_block">
                     <img src="{{ asset('/') }}flexonikFiles/vibroaction/use__use1_image.jpg" alt="Vibroaction">
-                    <p>После беременности</p>
+                    <p>POSLE TRUDNOĆE</p>
                 </div>
                 <div class="text_block">
                     <ul>
-                        <li>Восстанавливает тонус ослабших мышц живота и спины</li>
-                        <li>Предотвращает грыжу при ежедневном ношении ребенка</li>
+                        <li>Vraća tonus oslabljenih trbušnih i leđnih mišiča</li>
+                        <li>Sprečava kilu prilikom nošenja bebe svaki dan</li>
                     </ul>
                 </div>
             </div>
             <div class="use_item">
                 <div class="image_block">
                     <img src="{{ asset('/') }}flexonikFiles/vibroaction/use__use2_image.jpg" alt="Vibroaction">
-                    <p>При сидячей работе</p>
+                    <p>RAD U SEDEĆEM POLOŽAJU</p>
                 </div>
                 <div class="text_block">
                     <ul>
-                        <li>Устраняет напряжение и усталость спины — причины головной боли!</li>
-                        <li>Безопасное и комфортное использование целый день</li>
+                        <li>Eliminiše napetost u leđima i umor - uzroke glabolje</li>
+                        <li>Sigurna i udobna upotreba tokom celog dana</li>
                     </ul>
                 </div>
             </div>
             <div class="use_item">
                 <div class="image_block">
                     <img src="{{ asset('/') }}flexonikFiles/vibroaction/use__use3_image.jpg" alt="Vibroaction">
-                    <p>При лишнем весе</p>
+                    <p>PREKOMERNA TEŽINA</p>
                 </div>
                 <div class="text_block">
                     <ul>
-                        <li>Уменьшение талии на несколько размеров</li>
-                        <li>Естественное формирование стройной талии.</li>
+                        <li>Smanjenje struka za nekoliko veličina</li>
+                        <li>Prirodno oblikovanje struka</li>
                     </ul>
                 </div>
             </div>
@@ -152,25 +141,25 @@
 <!-- order steps -->
 <section class="order_steps_section">
     <div class="wrapper">
-        <h2>Доставка и оплата</h2>
+        <h2>DOSTAVA I PLAĆANJE</h2>
         <div class="steps_list clearfix">
             <div class="step_item">
                 <div class="number">1</div>
                 <img src="{{ asset('/') }}flexonikFiles/vibroaction/order_steps__step1_image.jpg" alt="Vibroaction">
-                <h4>Заявка</h4>
-                <p>Оставьте заявку на нашем сайте, заполнив форму заказа</p>
+                <h4>PORUČITE</h4>
+                <p>Ostavite vaše podatke na našem sajtu i smatrajte da ste poručili proizvod.</p>
             </div>
             <div class="step_item">
                 <div class="number">2</div>
                 <img src="{{ asset('/') }}flexonikFiles/vibroaction/order_steps__step2_image.jpg" alt="Vibroaction">
-                <h4>Отправка</h4>
-                <p>Оператор уточнит у вас детали и мы отправим ваш заказ</p>
+                <h4>KONTATIRAĆEMO VAS</h4>
+                <p>Naš tim za komunikaciju sa kupcima će vas kontaktirati da potvri porudžbinu.</p>
             </div>
             <div class="step_item">
                 <div class="number">3</div>
                 <img src="{{ asset('/') }}flexonikFiles/vibroaction/order_steps__step3_image.jpg" alt="Vibroaction">
-                <h4>Получение</h4>
-                <p>Доставим заказ в любую точку Узбекистана в течении 4 дней. Оплата после получения товара.</p>
+                <h4>ISPORUKA</h4>
+                <p>Šaljemo brzom poštom u roku od 1-2 radna dana. Pošiljku plaćate kuriru po preuzimanju.</p>
             </div>
         </div>
     </div>
@@ -179,15 +168,18 @@
 <!-- reviews -->
 <section class="reviews_section">
     <div class="wrapper">
-        <h2>Они стали <span>стройными и привлекательными</span></h2>
+        <h2>POSTALI SU <span>VITKI I PRIVLAČNI</span></h2>
         <div class="reviews_list">
             <div class="review_item clearfix">
                 <div class="image_block">
                     <img src="{{ asset('/') }}flexonikFiles/vibroaction/reviews__review1_photo.jpg" alt="Vibroaction">
                 </div>
                 <div class="text_block">
-                    <h4>Татьяна Шевчук, 31 год</h4>
-                    <p>Когда в 29 лет я родила второго ребенка, то уже не надеялась вернуть свою прежнюю фигуру. Пару месяцев назад подруга из США приехала и рассказала, что там все девушки ходят в таком поясе. Я решила посмотреть и зашла на этот сайт. Тогда была огромная скидка и я заказала такой пояс. Спустя всего пару дней пояс был у меня и, что удобно, оплата была при получении. Меньше чем за месяц моя фигура стала прежней! Всем рекомендую!</p>
+                    <h4>TATJANA NIKOLIĆ, 29 GODINA</h4>
+                    <p>Kada sam sa 27 godina rodila drugo dete, nisam se više nadala da ću vratiti nekadašnju figuru. Pre par meseci došao je prijatelj
+                        iz Nemačke i rekao da većina devojaka tamo nosi vibracioni pojas. Otišla sam na vaš sajt i pročitala sve o proizvodu. Nažalost, tada nije bio
+                        nikakav popust ali sam ga kupila po punoj ceni i nisam se pokajala. Već sutradan mi je stigao pojas i odmah sam počela da ga koristim. Za manje od mesec dana
+                        bila sam prezadovoljna mojom figurom. Koristila sam i na zadnjici koja se zategla i podigla. <br/>PREPORUČUJEM SVIMA KUPOVINU OVOG PROIZVODA!</p>
                 </div>
             </div>
             <div class="review_item clearfix">
@@ -195,8 +187,10 @@
                     <img src="{{ asset('/') }}flexonikFiles/vibroaction/reviews__review2_photo.jpg" alt="Vibroaction">
                 </div>
                 <div class="text_block">
-                    <h4>Валерия Фотина, 19 лет</h4>
-                    <p>Я давно мечтала о тонкой талии, как у девочек в Инстаграм. Думала откуда у них такие фигуры? Сама не ела неделями, а теперь поняла что к чему)) Увидела у одной из блогерш обзор на такой пояс и сразу решила заказать себе тоже. Купила пояс Вибромассажный пояс Vibroaction и теперь любимое занятие делать селфи в платьях перед зеркалом и выкладывать в соцсети.</p>
+                    <h4>VALERIJA TOMIĆ, 19 GODINA</h4>
+                    <p>Dugo sam sanjala o tankom struku koji će poželeti da zagrli svaki muškarac. Pokušavala sam sa raznim dijetama i izgladnjivanjima ali efekat je bio loš.
+                        Iskočila mi je reklama za vibracioni masažni pojas i rekoh da pokušam. Moj struk nakon 20 dana korišćenja je bio WOW. Savršeno zategnut stomak, konačno
+                        mi se vide i pločice na stomaku. Moj dečko obožava moj novi struk. :)</p>
                 </div>
             </div>
             <div class="review_item clearfix">
@@ -204,8 +198,9 @@
                     <img src="{{ asset('/') }}flexonikFiles/vibroaction/reviews__review3_photo.jpg" alt="Vibroaction">
                 </div>
                 <div class="text_block">
-                    <h4>Дарья Большакова, 27 лет</h4>
-                    <p>Пояс просто находка. Надеваешь и фигура моментально преображается. Ношу второй месяц и уже заметен результат. Талия стала уже и животик уменьшился. Посоветовала всем моим подругам, они тоже оценили пояс. Утягивающий пояс Вибромассажный пояс Vibroaction верный путь к идеальной талии!</p>
+                    <h4>DARIJA BOGDANOVIĆ, 41 GODINA</h4>
+                    <p>PO PRVI PUT MOGU DA BIRAM MUŠKARCA ZAHVALJUJUĆI SAVRŠENOM STRUKU. <br/>Ovaj pojas je Božji dar. Stavite ga i figura se trenutno transformiše. Nosim ga već drugi mesec i rezultat je neverovatan. Struk mi je postao uzak,
+                        stomak se smanjio a grudi došle do izražaja. Objavila sam sliku na drušvene mreže i zatrpavaju me poruke od udvarača, koje su mi moram priznati ranije mnogo nedostajale.</p>
                 </div>
             </div>
         </div>
@@ -215,16 +210,16 @@
 <!-- offer -->
 <section class="offer_section offer_bottom">
     <div class="wrapper clearfix">
-        <div class="title_block">
-            <h3 class="main_title">Вибромассажный пояс Vibroaction</h3>
-            <p class="subtitle">Вибромассажный пояс для коррекции фигуры</p>
-        </div>
+        {{--<div class="title_block">--}}
+        {{--<h3 class="main_title">VIBRACIONI POJAS <br>Vibroaction</h3>--}}
+        {{--<p class="subtitle">VIBRACIONI MASAŽNI POJAS <br>ZA OBLIKOVANJE TELA</p>--}}
+        {{--</div>--}}
         <img class="mobile_product" src="{{ asset('/') }}flexonikFiles/vibroaction/mobile__offer_product.png" alt="Vibroaction">
         <div class="form_block">
             <div class="action_block clearfix">
                 <div class="discount_block">
-                    <div class="text">Акция</div>
-                    <div class="value">-50%</div>
+                    <div class="text">Akcija</div>
+                    <div class="value">-40%</div>
                 </div>
                 <div class="price_block">
                     <div class="price_wrapper">
@@ -233,21 +228,18 @@
                     </div>
                 </div>
             </div>
-            <form class="order_form al-form" action="#" method="post" id="order_form">
-
-                <input class="input" type="text" name="name" placeholder="Введите Ваше имя" required>
-                <input class="input" type="tel" name="phone" id="phone" placeholder="Введите Ваш телефон" required>
-
-                <button class="button">Заказать сейчас</button>
+            <form class="order_form al-form" action="{{$orderRoute}}" method="post" id="order_form">
+                {{csrf_field()}}
+                @include('lander.naturapharm.components.form_hidden_fields')
+                <input class="input" type="text" name="name" placeholder="Ime i prezime" required>
+                <input class="input" type="tel" name="phone" id="phone" placeholder="Telefon" required>
+                <input class="input" type="text" name="shipping_address" placeholder="Adresa" required>
+                <input class="input" type="text" name="shipping_city" placeholder="Grad" required>
+                <button class="button">Poručite sada</button>
             </form>
         </div>
     </div>
 </section>
-
-<div style="text-align: center; padding: 20px; font-size: 18px;">
-
-</div>
-
 <script type="text/javascript">
     $(document).ready(function(){
         $('a[href^="#"]').click(function () {
