@@ -54,7 +54,7 @@
                     <br>
                 @else
                     @if(isset($order))
-                    @isset($upCrossSells)
+                        @if(isset($upCrossSells) && count($upCrossSells)>1)
                         <h3 class="success-page__text specialOfferHeading">KAO ZNAK ZAHVALNOSTI NUDIMO VAM OVU <span class="specialOfferHeadingBold">NEVEROVATNU PONUDU</span> KOJA SE NE PROPUŠTA!</h3>
                         {{--<h3 class="success-page__text specialOfferSubheading">SAMO SADA</h3>--}}
                         <form action="/upCrossSellOrder" method="POST" id="upCrossSellOrderForm">
@@ -66,7 +66,6 @@
                             @isset($test_variation_id)
                             <input type="hidden" name="testVariationIdUpCrossSell" value="{{ $test_variation_id }}"/>
                             @endisset
-                            @isset($upCrossSells)
                             <div class="upcrosssell d-inline-flex p-2 justify-content-center">
                                 @foreach($upCrossSells as $key => $upSell)
                                     @if($key != 0)
@@ -101,9 +100,8 @@
                             </div>
                             <div class="success-page__form__button"><button type="submit">DODAJ U PORUDŽBINU</button></div>
                             <div class="success-page__form__button cancelUpCrossSell"><button id="cancelUpCrossSell" type="button">NE, HVALA</button></div>
-                            @endisset
                         </form>
-                    @endisset
+                        @endif
                     @endif
                 @endif
                 <h3 class="success-page__text" id="lowerH">
