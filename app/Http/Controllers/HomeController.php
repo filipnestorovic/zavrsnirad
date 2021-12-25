@@ -748,7 +748,7 @@ class HomeController extends Controller
                     if(isset($productUpCrossResponse->up) || isset($productUpCrossResponse->cross)) {
                         $productUpSells = $productUpCrossResponse->up;
                         $productCrossSells = $productUpCrossResponse->cross;
-                        $i = 0;
+                        $i = 1;
                         $upSellCount = 0;
                         $crossSellCount = 0;
                         if (count($productUpSells) > 0) {
