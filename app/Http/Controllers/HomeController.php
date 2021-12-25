@@ -655,13 +655,13 @@ class HomeController extends Controller
         $fb_event = $request->get('fb_event');
 
         $domain = $request->getHost();
-        if($domain === "dailysharkpena.com") {
-            $token = 'EAAHLY93Tf3kBAKElZBZAZBq3BInc0KyZBxOqNZB6ODcCDyJVeZCMnmEPTIhfBnL8He2lYCeaZBglRmOL4CGxXNFHUBZCKrmOnzoQf1ZBJVBLOSvisvO6pdfRdzdP5BIaYJxNXYSzeZBr47rXfPWTofPTTW3bLISMgc1mj6cnYGZCvVFvnBZBy4dJge3JRDe0FSMRZA6mc5AOtLBURxQZDZD';
+        if($domain === "dailysharkpena.com"||$domain === "myairlab.com") {
+            $token = 'EAACkTAiEwt0BAJ5scyudCeixFDDP7KSvmnjoBlZAnfeQdY2LPTviCEMbU1csadl9MZBv6LfzVmtIiXQpaPJBh8zRfUOK75QqKwEwfUMkWdzIo1oLew3BIGqjE9PIQZCGmwLQCO5cBjvmvx9uTLyZByCBgqseoz5w4WnPxNeIbjQbFe6rDrgQ';
         } else {
-            $token = 'EAAOuqmKBZBMMBAAZBBopQnXkpPuBp1LrwpUP3OkABZBldfawF4QJL6TVvNcAh80rQ8G9UCZC2JOfLxuvYeJaBL9RiftSMdKZBFHoDffT61U4Mc3TJgHuaErCWanEAmNu6gktYuLFGYmy9jsjGTiFmtTyiaPUlDK49IWh7G0Svac7RyTcqBjhv';
+            $token = 'EAAOuqmKBZBMMBAPy36r8D32y8HMXZABIn2FhA1IzaKoX2ymPZB0aWErizXpR1TQCnxHdWiKDh27UdFYy0jiAODOW067vxiynm3mFge4bj9lo4BT9Tl53vMnmgAHRYLWP6R1tVtZAqrqEBL5rBFWW99J9YPbl4imbM9CEuQWb2mCFuolj6ulQ';
         }
 
-        $excludeCApi = ["937389627038619", "324231612589924","171186311596788","228655165563052","486215135791311"];
+        $excludeCApi = ["937389627038619", "324231612589924","171186311596788","228655165563052","486215135791311", "587201949053897"];
         if(!in_array($pixel_id, $excludeCApi)) {
             $current_timestamp = Carbon::now()->unix();
             $random_number = $this->generateUuid(1);
