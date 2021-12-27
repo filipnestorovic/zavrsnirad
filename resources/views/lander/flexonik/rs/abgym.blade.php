@@ -206,13 +206,13 @@
                         {{csrf_field()}}
                         @include('lander.naturapharm.components.form_hidden_fields')
                         <div class="name-inp">Ime i prezime</div>
-                        <input name="name" class="text" value="" placeholder="Ime i prezime">
+                        <input name="name" class="text" value="" placeholder="Ime i prezime" required>
                         <div class="name-inp">Telefon</div>
-                        <input name="phone" class="text" value="" type="tel" placeholder="Telefon">
+                        <input name="phone" class="text" value="" type="tel" placeholder="Telefon" required>
                         <div class="name-inp">Adresa</div>
-                        <input name="shipping_address" class="text" value="" placeholder="Adresa">
+                        <input name="shipping_address" class="text" value="" placeholder="Adresa" required>
                         <div class="name-inp">Grad</div>
-                        <input name="shipping_city" class="text" value="" placeholder="Grad">
+                        <input name="shipping_city" class="text" value="" placeholder="Grad" required>
                         <div class="with_delivery" style="font-size:20px;line-height:20px;">
                             Nova cena proizvoda:
                             <span class="price_with_delivery">

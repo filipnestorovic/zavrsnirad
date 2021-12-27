@@ -58,9 +58,9 @@
                     <label for>Telefon</label>
                     <input type="tel" name="phone" placeholder="Telefon" required>
                     <label for>Adresa</label>
-                    <input type="text" name="name" placeholder="Adresa" required>
+                    <input type="text" name="shipping_address" placeholder="Adresa" required>
                     <label for>Grad</label>
-                    <input type="text" name="name" placeholder="Grad" required>
+                    <input type="text" name="shipping_city" placeholder="Grad" required>
                     <button class="mk-button form__button">PORUČITE SA POPUSTOM</button>
                 </form>
             </div>
@@ -315,9 +315,9 @@
                     <label for>Telefon</label>
                     <input type="tel" name="phone" placeholder="Telefon" required>
                     <label for>Adresa</label>
-                    <input type="text" name="name" placeholder="Adresa" required>
+                    <input type="text" name="shipping_address" placeholder="Adresa" required>
                     <label for>Grad</label>
-                    <input type="text" name="name" placeholder="Grad" required>
+                    <input type="text" name="shipping_city" placeholder="Grad" required>
                     <button class="mk-button form__button">PORUČITE SA POPUSTOM</button>
                 </form>
             </div>
