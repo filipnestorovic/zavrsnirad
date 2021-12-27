@@ -50,7 +50,7 @@
                 </div>
             </div>
             <div class="header__form">
-                <form action class="main-order-form form" method="POST" action="{{$orderRoute}}">
+                <form class="main-order-form form" method="POST" action="{{$orderRoute}}">
                     {{csrf_field()}}
                     @include('lander.naturapharm.components.form_hidden_fields')
                     <label for>Ime i prezime</label>
@@ -307,7 +307,7 @@
                 </div>
             </div>
             <div class="header__form" id="order-form">
-                <form action class="main-order-form form" method="POST" action="{{$orderRoute}}">
+                <form class="main-order-form form" method="POST" action="{{$orderRoute}}">
                     {{csrf_field()}}
                     @include('lander.naturapharm.components.form_hidden_fields')
                     <label for>Ime i prezime</label>
