@@ -238,7 +238,7 @@
                     <div class="reviews__content">
                         <p>Zdravo momci! Naručio sam Body Helper pre tri nedelje i veoma sam zadovoljan. Moje stanje se znatno poboljšalo, glava je prestala da me boli. Drago mi je što
                             imam ovaj opuštajući masažer! Sve dobro radi, hvala!</p>
-                        <img src="{{ asset('/') }}flexonikFiles/bodyhelper/review1.jpg" alt class="reviews__image">
+                        <img src="{{ asset('/') }}flexonikFiles/bodyhelper/review1.png" alt class="reviews__image">
                     </div>
                 </div>
             </li>
@@ -251,7 +251,7 @@
                     <div class="reviews__content">
                         <p>Želim da vam kažem hvala za ovaj proizvod, to je sjajna stvar! Radim na kompjuteru, leđa su mi kriva kao gudalo. Nedavno su počeli bolovi u mišićima i donjem delu leđa.
                             Koistim Body Helper već 3 nedelje i osećam se sasvim dobro, sada ponovo mogu da ispravim ramena, hvala!</p>
-                        <img src="{{ asset('/') }}flexonikFiles/bodyhelper/review2.jpg" alt class="reviews__image">
+                        <img src="{{ asset('/') }}flexonikFiles/bodyhelper/review2.png" alt class="reviews__image">
                     </div>
                 </div>
             </li>
@@ -264,7 +264,7 @@
                     <div class="reviews__content">
                         <p>Zdravo! Kada sam bila na ferijama u Srbiji, poručila sam ovaj proizvod i odnela ga sa sobom u Nemačku. Body Helper vredi svakog evra. Leđa su mi kao nova, i ne bole
                             me dok radim u fabrici papuča na traci. Masažer je potpuno ublažio bolove i oslobodio me napetosti. Nije mi žao ni jednog evra krvavo zarađenog.</p>
-                        <img src="{{ asset('/') }}flexonikFiles/bodyhelper/review3.jpg" alt class="reviews__image">
+                        <img src="{{ asset('/') }}flexonikFiles/bodyhelper/review3.png" alt class="reviews__image">
                     </div>
                 </div>
             </li>

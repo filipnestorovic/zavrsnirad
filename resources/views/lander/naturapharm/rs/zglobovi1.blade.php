@@ -10,35 +10,42 @@
     <style>
         @font-face {
             font-family: "Glyphicons Halflings";
-            src: url({{ asset('/') }}fonts/glyphicons-halflings-regular.html);
-            src: url({{ asset('/') }}fonts/glyphicons-halflings-regulard41d.html?#iefix) format("embedded-opentype"),
-            url({{ asset('/') }}fonts/glyphicons-halflings-regular-2.html) format("woff2"),
-            url({{ asset('/') }}fonts/glyphicons-halflings-regular-3.html) format("woff"),
-            url({{ asset('/') }}fonts/glyphicons-halflings-regular-4.html) format("truetype"),
-            url({{ asset('/') }}fonts/glyphicons-halflings-regular-5.html#glyphicons_halflingsregular) format("svg");
+            src: url({{ asset('/') }}fonts/glyphicons-halflings-regular.eot);
+            src: url({{ asset('/') }}fonts/glyphicons-halflings-regular.eot?#iefix) format("embedded-opentype"),
+            url({{ asset('/') }}fonts/glyphicons-halflings-regular.woff2) format("woff2"),
+            url({{ asset('/') }}fonts/glyphicons-halflings-regular.woff) format("woff"),
+            url({{ asset('/') }}fonts/glyphicons-halflings-regular.ttf) format("truetype"),
+            url({{ asset('/') }}fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format("svg");
         }
         @font-face {
             font-family: Roboto-Regular;
-            src: url({{ asset('/') }}fonts/Roboto-Regular.ttf);
+            src: url({{ asset('/') }}fonts/roboto-regular.ttf);
             font-weight: normal
         }
-
         @font-face {
             font-family: Roboto-Light;
-            src: url({{ asset('/') }}fonts/Roboto-Light.ttf);
+            src: url({{ asset('/') }}fonts/robotolight.ttf);
             font-weight: normal
         }
-
+        @font-face {
+            font-family: Roboto-Medium;
+            src: url({{ asset('/') }}fonts/robotomedium.ttf);
+            font-weight: normal
+        }
         @font-face {
             font-family: Oswald;
             src: url({{ asset('/') }}fonts/Oswald-Medium.ttf);
             font-weight: normal
         }
-
         @font-face {
-            font-family: Roboto-Medium;
-            src: url({{ asset('/') }}fonts/Roboto-Medium.ttf);
-            font-weight: normal
+            font-family: "slick";
+            font-weight: normal;
+            font-style: normal;
+            src: url({{ asset('/') }}fonts/slick.eot);
+            src: url({{ asset('/') }}fonts/slickd41d.eot?#iefix) format("embedded-opentype"),
+            url({{ asset('/') }}fonts/slick.woff) format("woff"),
+            url({{ asset('/') }}fonts/slick.ttf) format("truetype"),
+            url({{ asset('/') }}fonts/slick.svg#slick) format("svg");
         }
     </style>
     <link href="{{ asset('/') }}naturapharmFiles/zglobovi1/bootstrap.css" rel=stylesheet>
@@ -517,8 +524,6 @@
         </div>
     </div>
 </section>
-<footer>
-</footer>
 <script src="{{ asset('/') }}naturapharmFiles/zglobovi1/scripts.js"></script>
 <script>eval(mod_pagespeed_feQp$dkoGl);</script>
 <script>eval(mod_pagespeed_QljS_Y6_8n);</script>
