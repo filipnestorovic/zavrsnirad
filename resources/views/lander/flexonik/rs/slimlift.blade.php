@@ -251,23 +251,23 @@
                 <li>Не вызывает дискомфорта </li>
                 <li>Незаметное под одеждой</li>
             </ul>
-            <div class="timer_block">
-                <p style="    color: #fff;">До конца акции осталось:</p>
-                <div class="timer clearfix">
-                    <div class="timer_item">
-                        <div class="count hours">00</div>
-                        <div class="text">часов</div>
-                    </div>
-                    <div class="timer_item">
-                        <div class="count minutes">00</div>
-                        <div class="text">минут</div>
-                    </div>
-                    <div class="timer_item">
-                        <div class="count seconds">00</div>
-                        <div class="text">секунд</div>
-                    </div>
-                </div>
-            </div>
+            {{--<div class="timer_block">--}}
+                {{--<p style="    color: #fff;">До конца акции осталось:</p>--}}
+                {{--<div class="timer clearfix">--}}
+                    {{--<div class="timer_item">--}}
+                        {{--<div class="count hours">00</div>--}}
+                        {{--<div class="text">часов</div>--}}
+                    {{--</div>--}}
+                    {{--<div class="timer_item">--}}
+                        {{--<div class="count minutes">00</div>--}}
+                        {{--<div class="text">минут</div>--}}
+                    {{--</div>--}}
+                    {{--<div class="timer_item">--}}
+                        {{--<div class="count seconds">00</div>--}}
+                        {{--<div class="text">секунд</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
         </div>
         <div class="form_block">
             <p>Закажите прямо сейчас и получите скидку 50%</p>
@@ -292,13 +292,13 @@
 </section>
 <!-- /order -->
 <!-- footer -->
-<footer class="footer_section">
-    <div class="footer_text" style="text-align: center; color: #000 !important;display: block;font-weight: bold;">
-        <div class="foot_ru_center" style="text-align: center; margin: 0px auto; padding: 30px;">
+{{--<footer class="footer_section">--}}
+    {{--<div class="footer_text" style="text-align: center; color: #000 !important;display: block;font-weight: bold;">--}}
+        {{--<div class="foot_ru_center" style="text-align: center; margin: 0px auto; padding: 30px;">--}}
 
-        </div>
-    </div>
-</footer>
+        {{--</div>--}}
+    {{--</div>--}}
+{{--</footer>--}}
 <!-- /footer -->
 <!-- scripts -->
 <script src="{{ asset('/') }}flexonikFiles/slimlift/owl.carousel.min.js"></script>
