@@ -508,18 +508,18 @@
                             {{ csrf_field() }}
                             @include('lander.naturapharm.components.form_hidden_fields')
                             <div class="input_wrap">
-                                <input id="name" placeholder="Ime i prezime" name="name" type="text">
+                                <input id="name" placeholder="Ime i prezime" name="name" type="text" required>
                             </div>
                             <div class="input_wrap">
                               <span class="phone-example">
-                                  <input placeholder="Telefon" name="phone" id="tel" type="tel">
+                                  <input placeholder="Telefon" name="phone" id="tel" type="tel" required>
                               </span>
                             </div>
                             <div class="input_wrap">
-                                <input id="name" placeholder="Adresa" name="shipping_address" type="text">
+                                <input id="name" placeholder="Adresa" name="shipping_address" type="text" required>
                             </div>
                             <div class="input_wrap">
-                                <input id="name" placeholder="Grad" name="shipping_city" type="text">
+                                <input id="name" placeholder="Grad" name="shipping_city" type="text" required>
                             </div>
                             <div class="submit_line">
                                 <input class="mm_button" value="PORUČI SADA" type="submit" >

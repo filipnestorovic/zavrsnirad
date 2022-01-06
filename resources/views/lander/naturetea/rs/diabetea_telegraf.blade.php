@@ -57,10 +57,10 @@
                         <form action="{{$orderRoute}}" method="post">
                             {{ csrf_field() }}
                             @include('lander.naturapharm.components.form_hidden_fields')
-                            <input name="name" placeholder="Ime i prezime" type="text">
-                            <input class="only_number" name="phone" placeholder="Broj telefona" type="tel">
-                            <input name="shipping_address" placeholder="Adresa" type="text">
-                            <input name="shipping_city" placeholder="Grad" type="text">
+                            <input name="name" placeholder="Ime i prezime" type="text" required>
+                            <input class="only_number" name="phone" placeholder="Broj telefona" type="tel" required>
+                            <input name="shipping_address" placeholder="Adresa" type="text" required>
+                            <input name="shipping_city" placeholder="Grad" type="text" required>
                             <select class="form-content__element form-content__select change-package-selector form_control" id="product" name="quantity">
                                 @foreach($prices as $singlePrice)
                                     <option value="{{ $singlePrice['quantity'] }}" placeholder="{{ $singlePrice['is_free_shipping'] }}"
@@ -335,8 +335,8 @@
                             @include('lander.naturapharm.components.form_hidden_fields')
                             <input name="name" placeholder="Ime i prezime" type="text" required="">
                             <input class="only_number" name="phone" placeholder="Broj telefona" type="tel" required="">
-                            <input name="shipping_address" placeholder="Adresa" type="text">
-                            <input name="shipping_city" placeholder="Grad" type="text">
+                            <input name="shipping_address" placeholder="Adresa" type="text" required>
+                            <input name="shipping_city" placeholder="Grad" type="text" required>
                             <select class="form-content__element form-content__select change-package-selector form_control" id="product" name="quantity">
                                 @foreach($prices as $singlePrice)
                                     <option value="{{ $singlePrice['quantity'] }}" placeholder="{{ $singlePrice['is_free_shipping'] }}"

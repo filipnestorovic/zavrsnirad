@@ -90,10 +90,10 @@
                                     <form action="{{$orderRoute}}" id="order_form" method="post">
                                         {{ csrf_field() }}
                                         @include('lander.naturapharm.components.form_hidden_fields')
-                                        <div class="input-field"><input id="name" name="name" placeholder="Ime i prezime" type="text"><label for="name"></label></div>
-                                        <div class="input-field"><input class="only_number" id="phone" name="phone" placeholder="Broj telefona" type="text"><label for="phone"></label></div>
-                                        <div class="input-field"><input id="shipping_address" name="shipping_address" placeholder="Adresa" type="text"><label for="shipping_address"></label></div>
-                                        <div class="input-field"><input id="shipping_city" name="shipping_city" placeholder="Grad" type="text"><label for="shipping_city"></label></div>
+                                        <div class="input-field"><input id="name" name="name" placeholder="Ime i prezime" type="text" required><label for="name"></label></div>
+                                        <div class="input-field"><input class="only_number" id="phone" name="phone" placeholder="Broj telefona" type="text" required><label for="phone"></label></div>
+                                        <div class="input-field"><input id="shipping_address" name="shipping_address" placeholder="Adresa" type="text" required><label for="shipping_address"></label></div>
+                                        <div class="input-field"><input id="shipping_city" name="shipping_city" placeholder="Grad" type="text" required><label for="shipping_city"></label></div>
                                         <select class="browser-default customSelect change-package-selector" name="quantity">
                                             @foreach($prices as $singlePrice)
                                                 <option value="{{ $singlePrice['quantity'] }}" placeholder="{{ $singlePrice['is_free_shipping'] }}"
@@ -264,10 +264,10 @@
                                 <form action="{{$orderRoute}}" id="order_form" method="post">
                                     {{ csrf_field() }}
                                     @include('lander.naturapharm.components.form_hidden_fields')
-                                    <div class="input-field"><input id="name" name="name" placeholder="Ime i prezime" type="text"><label for="name"></label></div>
-                                    <div class="input-field"><input class="only_number" id="phone" name="phone" placeholder="Broj telefona" type="text"><label for="phone"></label></div>
-                                    <div class="input-field"><input id="shipping_address" name="shipping_address" placeholder="Adresa" type="text"><label for="shipping_address"></label></div>
-                                    <div class="input-field"><input id="shipping_city" name="shipping_city" placeholder="Grad" type="text"><label for="shipping_city"></label></div>
+                                    <div class="input-field"><input id="name" name="name" placeholder="Ime i prezime" type="text" required><label for="name"></label></div>
+                                    <div class="input-field"><input class="only_number" id="phone" name="phone" placeholder="Broj telefona" type="text" required><label for="phone"></label></div>
+                                    <div class="input-field"><input id="shipping_address" name="shipping_address" placeholder="Adresa" type="text" required><label for="shipping_address"></label></div>
+                                    <div class="input-field"><input id="shipping_city" name="shipping_city" placeholder="Grad" type="text" required><label for="shipping_city"></label></div>
                                     <select class="browser-default customSelect change-package-selector" name="quantity">
                                         @foreach($prices as $singlePrice)
                                             <option value="{{ $singlePrice['quantity'] }}" placeholder="{{ $singlePrice['is_free_shipping'] }}"

@@ -14,18 +14,18 @@
 </head>
 <body>
 @include('components.display_errors')
-<section class="main">
+<section class="main" id="header_main">
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
                 <div class="logo"><img src="{{ asset('/') }}flexovalFiles/copper/logo.png"></div>
-                <div class="section-title">Работа в саду и на даче без боли и растяжений!</div>
+                <div class="section-title">Rad i sportske aktivnosti bez bolova i uganuća!</div>
                 <div class="main__items">
                     <ul class="main__list">
-                        <li class="main__list_white"><img src="{{ asset('/') }}flexovalFiles/copper/list.png"><span>Поддерживает суставы</span></li>
-                        <li><img src="{{ asset('/') }}flexovalFiles/copper/list.png"><span>Снижает риск возникновения боли</span></li>
-                        <li class="main__list_white"><img src="{{ asset('/') }}flexovalFiles/copper/list.png"><span>Сохраняет тепло</span></li>
-                        <li><img src="{{ asset('/') }}flexovalFiles/copper/list.png"><span>Предотвращает вывихи</span></li>
+                        <li class="main__list_white"><img src="{{ asset('/') }}flexovalFiles/copper/list.png"><span>Pruža podršku zglobovima</span></li>
+                        <li><img src="{{ asset('/') }}flexovalFiles/copper/list.png"><span>Smanjuje bolove</span></li>
+                        <li class="main__list_white"><img src="{{ asset('/') }}flexovalFiles/copper/list.png"><span>Sprečava povrede</span></li>
+                        <li><img src="{{ asset('/') }}flexovalFiles/copper/list.png"><span>Pospešuje cirkulaciju</span></li>
                     </ul>
                 </div>
             </div>
@@ -33,9 +33,9 @@
             <div class="col-sm-6 col-md-5 col-lg-4">
                 <div class="forma">
                     <div class="forma__top">
-                        <div class="price__text">только сегодня!</div>
+                        <div class="price__text">SAMO DANAS!</div>
                         <div class="prices">
-                            Copper Joint Protection по акции <br> ВСЕГО ЗА
+                            Copper Joint Protection<br> ZA SAMO
                             <div class="price__new">
                               <span class="new_price_val">
                                  {{ $prices[1]['amount'] }}
@@ -46,10 +46,10 @@
                             </div>
                         </div>
                     </div>
-                    {{--<div class="timer">--}}
-                        {{--<div class="timer__text">Успей до конца акции</div>--}}
-                        {{--<div class="countdown"></div>--}}
-                    {{--</div>--}}
+                    <div class="timer">
+                        <div class="timer__text">UNESITE PODATKE ZA DOSTAVU</div>
+                    </div>
+                    <br>
                     <form class="form" action="{{$orderRoute}}" method="POST">
                         {{csrf_field()}}
                         @include('lander.naturapharm.components.form_hidden_fields')
@@ -59,15 +59,15 @@
                             <input placeholder="Adresa" type="text" name="shipping_address" required>
                             <input placeholder="Grad" type="text" name="shipping_city" required>
                             <button class="zak__btn" type="submit">
-                                Poručite za
-                                <span class="price__new">
-                                 <span class="new_price_val">
-                                    {{ $prices[1]['amount'] }}
-                                 </span>
-                                 <span class="new_price_cur">
-                                    RSD
-                                 </span>
-                              </span>
+                                Poručite sada
+                                {{--<span class="price__new">--}}
+                                 {{--<span class="new_price_val">--}}
+                                    {{--{{ $prices[1]['amount'] }}--}}
+                                 {{--</span>--}}
+                                 {{--<span class="new_price_cur">--}}
+                                    {{--RSD--}}
+                                 {{--</span>--}}
+                              {{--</span>--}}
                             </button>
                         </div>
                         {{--<div class="pri">* при заказе курса</div>--}}
@@ -79,30 +79,30 @@
 </section>
 <section class="znakomo">
     <div class="container">
-        <div class="section-title">Вам это знакомо?</div>
+        <div class="section-title">Ovo nam je svima poznato</div>
         <div class="row">
             <div class="col-sm-3">
                 <div class="znakomo__item">
                     <img src="{{ asset('/') }}flexovalFiles/copper/znakomo1.jpg">
-                    <p>Боль в коленях и локтях, после работы в саду</p>
+                    <p>Bol u kolenima i laktovima</p>
                 </div>
             </div>
             <div class="col-sm-3">
                 <div class="znakomo__item">
                     <img src="{{ asset('/') }}flexovalFiles/copper/znakomo2.jpg">
-                    <p>Постоянно напряженные мышцы</p>
+                    <p>Stalno napeti mišići</p>
                 </div>
             </div>
             <div class="col-sm-3">
                 <div class="znakomo__item">
                     <img src="{{ asset('/') }}flexovalFiles/copper/znakomo3.jpg">
-                    <p>Судороги кистей и стоп</p>
+                    <p>Grčevi ruku i stopala</p>
                 </div>
             </div>
             <div class="col-sm-3">
                 <div class="znakomo__item">
                     <img src="{{ asset('/') }}flexovalFiles/copper/znakomo4.jpg">
-                    <p>Суставы хрустят и щёлкают</p>
+                    <p>Zglobovi krckaju ili škljocaju</p>
                 </div>
             </div>
         </div>
@@ -117,12 +117,9 @@
                 <div class="rabota__wrapper">
                     <div class="row">
                         <div class="col-sm-6 col-lg-7">
-                            <div class="section-title">Работа в саду: последствия</div>
-                            <p>Лето наступило и впереди вас ждут садовые работы: прополка, посадка, полив, сбор урожая. Все это
-                                тяжелый труд! И конечно, у вас ноют суставы - постоянное стояние на коленях или на корточках, активная
-                                работа руками, а из-за перенапряжения вы вынуждены дополнительно напрягать шею и спину. <span>COPPER
-                              joint protection</span> готов помочь вам справиться с тяжелой работой в саду!
-                            </p>
+                            <div class="section-title">Fizički poslovi od sada bez povreda</div>
+                            <p>Svakodnevno smo izloženi potrebi za raznim fizičkim poslovima. Mi koji imamo osetljivije zglobove vrlo često smo trpimo bol i povrede,
+                                a kada nema toga strepimo da se ne desi. Sada će sa ovim <span>steznikom</span> sve biti mnogo lakše.</p>
                         </div>
                         <div class="col-sm-6 col-lg-5"><img class="hidden-xs rabota__img" src="{{ asset('/') }}flexovalFiles/copper/rabota__img.png"></div>
                     </div>
@@ -135,24 +132,24 @@
 </section>
 <section class="sad">
     <div class="container">
-        <div class="section-title">Работа в саду без COPPER joint protection</div>
+        <div class="section-title">Koje probleme mogu da uzrokuju zglobovi?</div>
         <div class="row">
             <div class="col-lg-11">
                 <div class="sad__item">
                     <img class="sad1" src="{{ asset('/') }}flexovalFiles/copper/sad1.png">
-                    <p>Напряжение шеи из-за напряжения локтей и коленей</p>
+                    <p>Naprezanje vrata usled naprezanja lakta i kolena</p>
                 </div>
                 <div class="sad__item">
                     <img class="sad2" src="{{ asset('/') }}flexovalFiles/copper/sad2.png">
-                    <p>Дополнительная нагрузка на поясницу</p>
+                    <p>Dodatno opterećenje na donjem delu leđa</p>
                 </div>
                 <div class="sad__item">
                     <img class="sad3" src="{{ asset('/') }}flexovalFiles/copper/sad3.png">
-                    <p>Огромное количество ручного труда провоцирует боль в суставах, судороги и защемления нервов</p>
+                    <p>Usled bolova u laktovima smanjuje se mogućnost kvalitetnog rada i vežbanja</p>
                 </div>
                 <div class="sad__item">
                     <img class="sad4" src="{{ asset('/') }}flexovalFiles/copper/sad4.png">
-                    <p>Постоянное напряжение коленных суставов и связок из-за тяжелой работы в саду</p>
+                    <p>Stalno opterećenje zglobova kolena može da dovede do komplikacija</p>
                 </div>
             </div>
             <div class="col-lg-1"></div>
@@ -164,21 +161,17 @@
         <div class="row">
             <div class="col-lg-1"></div>
             <div class="col-sm-6">
-                <div class="section-title">Как работает<span> COPPER joint protection?</span></div>
+                <div class="section-title">Kako funkcioniše zaštita zglobova <span>Cooper Joint Protection</span> steznikom?</div>
                 <div class="how__item">
-                    <p>COPPER joint protection не передавливает руку или ногу, благодаря эластичным краям</p>
-                    <img class="how1"
-                         src="{{ asset('/') }}flexovalFiles/copper/how1.png">
+                    <p>Steznik ne pritiska zglobove ruku ili nogu zahvaljujući elastičnim ivicama</p>
+                    <img class="how1" src="{{ asset('/') }}flexovalFiles/copper/how1.png">
                 </div>
                 <div class="how__item">
-                    <p>Усиленная фиксация сустава за счет особой структуры ткани позволяет уменьшить нагрузку на суставы</p>
-                    <img
-                            class="how2" src="{{ asset('/') }}flexovalFiles/copper/how2.png">
+                    <p>Pojačana fiksacija zgloba zahvaljujući ergonomskom dizajnu smanjuje pritisak na mišiće</p>
+                    <img class="how2" src="{{ asset('/') }}flexovalFiles/copper/how2.png">
                 </div>
                 <div class="how__item">
-                    <p>Уникальная технология производства ткани с вплетением медных нитей, позволяет плотно прилегать к ноге или
-                        руке, прогревая и поддерживая суставы
-                    </p>
+                    <p>Jedinstvena tehnlogija proizvodnje tkanine sa isprepletanim bakarnim nitima omogućava čvrsto prijanjanje na nogu ili ruku, zagrevajući zglobove</p>
                     <img class="how3" src="{{ asset('/') }}flexovalFiles/copper/how3.png">
                 </div>
             </div>
@@ -188,11 +181,8 @@
             <div class="col-lg-1"></div>
             <div class="col-lg-10">
                 <div class="how__wrapper">
-                    <p><span>COPPER joint protection</span> - это уникальная разработка в области поддержки суставов и здоровья
-                        опорно-двигательного аппарата. За счет армирования ткани медными нитями достигается поддержка суставов и
-                        мышц, помимо этого материал COPPER joint protection обладает легким согревающим эффектом, который снижает
-                        боль и воспаление.
-                    </p>
+                    <p><span>Cooper Joint Protection</span> je jedinstveno dostignuće u oblasti steznika za zglobove. Tkanina je ojačana bakarnim nitima za podršku zglobova i mišića i ima efekat zagrebanja
+                        koji smanjuje bol i upalu.</p>
                 </div>
             </div>
             <div class="col-lg01"></div>
@@ -201,20 +191,24 @@
 </section>
 <section class="job">
     <div class="container">
-        <div class="section-title">Работа в саду с COPPER joint protection</div>
+        <div class="section-title">
+            Fizička aktivnost sa zaštitom zglobova
+        </div>
         <div class="job__wrapper">
             <div class="row">
-                <div class="col-sm-8"><img class="ded visible-xs" src="{{ asset('/') }}flexovalFiles/copper/ded_mob.jpg"><img class="ded hidden-xs"
-                                                                                                                           src="{{ asset('/') }}flexovalFiles/copper/ded.jpg"></div>
+                <div class="col-sm-8">
+                    <img class="ded visible-xs" src="{{ asset('/') }}flexovalFiles/copper/ded_mob.jpg">
+                    <img class="ded hidden-xs" src="{{ asset('/') }}flexovalFiles/copper/ded.jpg">
+                </div>
                 <div class="col-sm-4">
                     <div class="job__items">
                         <div class="job__item job__item1">
                             <img class="hidden-xs" src="{{ asset('/') }}flexovalFiles/copper/job1.png">
-                            <p>Легкость в коленях без боли и судорог. Поддержка сустава снижает риск вывиха</p>
+                            <p>Lakoća u kolenima bez bolova i grčeva. Podrška zgloba smanjuje rizik od dislokacije</p>
                         </div>
                         <div class="job__item job__item2">
                             <img class="hidden-xs" src="{{ asset('/') }}flexovalFiles/copper/job2.png">
-                            <p>Правильный кровоток обеспечивает снижения риска возникновения болевого синдрома</p>
+                            <p>Pravilan protok krvi smanjuje rizik od bolesti zglobova</p>
                         </div>
                         <a class="hidden-xs zak__btn my_btn" href="#form">
                             Poručite za
@@ -238,18 +232,13 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-7 col-md-6">
-                <div class="section-title">Мнение специалиста</div>
+                <div class="section-title">Mišljenje struke</div>
                 <div class="expert__wrapper">
                     <div class="expert__text">
                         <img class="visible-xs" src="{{ asset('/') }}flexovalFiles/copper/expert_mob.jpg">
-                        <p><span>COPPER joint protection</span> созданы специально правильного положения суставов при каких-либо
-                            физических нагрузках.
-                        </p>
-                        <p>Проблема большинства людей, особенно пожилого возраста, заключается в том, что мышцы не справляются со
-                            своей работой и позволяют суставам смещаться.
-                        </p>
-                        <p>Накладки же берут на себя роль фиксатора, надежно удерживая суставы в правильном положении.</p>
-                        <p><span>Панкратов С. Р.</span><i>Специалист по оздоровительной гимнастике</i></p>
+                        <p>Zaštita sa <span>Cooper Joint Protection</span> steznikom specijalno je kreirana za pravilan položaj zglobova tokom bilo koje fizičke aktivnosti.</p>
+                        <p>Problem većine ljudi, posebno starijih, je to što ne ne mogu da rade svoj posao i samim tim ne dozvoljavaju zglobovima da se kreću.</p>
+                        <p><span>Cooper Joint Protection</span> steznik preuzima glavnu ulogu bezbedno držeći zglobove u ispravnom položaju, a fizički poslovi mogu da se obavljaju nesmetano.</p>
                     </div>
                 </div>
             </div>
@@ -258,65 +247,51 @@
 </section>
 <section class="reviews">
     <div class="container">
-        <div class="section-title">Отзывы наших покупателей</div>
+        <div class="section-title">Utisci naših kupaca</div>
         <div class="row hidden-xs">
             <div class="col-sm-4">
                 <div class="reviews__item">
-                    <img src="{{ asset('/') }}flexovalFiles/copper/rev1.png"><span>Наталья Кириленко 63 года</span>
-                    <p>Пока высаживала рассаду, думала что останусь без рук и без ног - боли были такие, боялась и не встану уже
-                        больше. Хорошо, что дочка привезла мне в подарок COPPER joint protection, да не один, а сразу два. Сначала
-                        надела на колени и сразу так тепло стало, да и поддержка почувствовалась сильная, словно у молодой ноги.
-                        После того как полегче стало, стала носить на руках. Теперь в огород только в COPPER joint protection
-                        выхожу, иначе никак!
-                    </p>
+                    <img src="{{ asset('/') }}flexovalFiles/copper/rev1.png"><span>Mirjana Petrović, 52 godine</span>
+                    <p>Dok sam sadila sadnice, mislila sam da ću ostati bez ruku i nogu. Imala sam jake bolove i plašila sam se da više neću moći ustati.
+                        Kćerka mi je na poklon donela nekoliko ovih steznika i odmah sam ih stavila. Prvo mi je postalo toplo u zglobovima, a kada sam par puta čučnula osetila sam
+                        da imam znatno manji pritisak u kolenima. Počela sam da ga nosim i na rukama. Sada u baštu idem sa punom opremom steznika, a zglobovi me ne bole.</p>
                 </div>
             </div>
             <div class="col-sm-4">
                 <div class="reviews__item">
-                    <img src="{{ asset('/') }}flexovalFiles/copper/rev2.png"><span>Игорь Дубровский 47 лет</span>
-                    <p>Давно мечтал об огороде, чтобы всей семьей потом зимой есть натуральные овощи и фрукты. Но прежде чем все
-                        это кушать, надо все посадить. Тут то я и столкнулся с ужасной болью в суставах после посадки. Решил
-                        поискать в интернете, что с этим делать и наткнулся на COPPER joint protection. Заказал сразу две пары,
-                        чтобы и на локти, и на коленки. Теперь работа в саду только в радость, будто второе дыхание открылось!
-                    </p>
+                    <img src="{{ asset('/') }}flexovalFiles/copper/rev2.png"><span>Igor Đurović, 55 godina</span>
+                    <p>Obožavam mali fudbal ali u poslednjih par godina mi je jako teško išlo. Često sam imao povrede zglobova, išao sam kod kiropraktičara, pokušavao sa raznim kremama,
+                        ali nove povrede su se nizale i nizale. Sin mi je kupio ovaj steznik, ja u početku nisam verovato da to ima efekta ali sam odlučio da probam.
+                        Konačno sam uspeo da igram mali fudbal 60 minuta bez povrede. Odličan je proizvod i toplo ga preporučujem svakome.</p>
                 </div>
             </div>
             <div class="col-sm-4">
                 <div class="reviews__item">
-                    <img src="{{ asset('/') }}flexovalFiles/copper/rev3.png"><span>Ольга Шаевская 35 лет</span>
-                    <p>Приехала маме помочь в огороде и защемило нерв в локте, боли были просто ужасные. Решила срочно спасаться
-                        и пошла к хирургу - он-то и посоветовал мне купить COPPER joint protection. Как только надела его, считай
-                        через час боль и прошла! Не верится, теперь взяла еще маме COPPER joint protection, чтобы и ей легче
-                        работалось!
-                    </p>
+                    <img src="{{ asset('/') }}flexovalFiles/copper/rev3.png"><span>Olga Tmušić, 35 godina</span>
+                    <p>Rekreativno trčim skoro svako jutro i to me zaista ispunjava. Moram da budem veoma oprezna jer moje koleno ima sklonost da "iskoči" iz ležišta i onda oporavak traje
+                        mesecima. Bilo mi je žao da se odreknem trčanja i počela sam da tražim adekvatno rešenje. Nakon nekoliko steznika koji nisu imali nikakvog efekta, preko
+                        interneta sam poručila COOPER JOINT PROTECTION steznik. Gle čuda, trčim kao antilopa bez ikakvih provreda i straha da će nešto poći po zlu.</p>
                 </div>
             </div>
         </div>
         <div class="owl-carousel visible-xs">
             <div class="reviews__item">
-                <img src="{{ asset('/') }}flexovalFiles/copper/rev1.png"><span>Наталья Кириленко 63 года</span>
-                <p>Пока высаживала рассаду, думала что останусь без рук и без ног - боли были такие, боялась и не встану уже
-                    больше. Хорошо, что дочка привезла мне в подарок COPPER joint protection, да не один, а сразу два. Сначала
-                    надела на колени и сразу так тепло стало, да и поддержка почувствовалась сильная, словно у молодой ноги.
-                    После того как полегче стало, стала носить на руках. Теперь в огород только в COPPER joint protection
-                    выхожу, иначе никак!
-                </p>
+                <img src="{{ asset('/') }}flexovalFiles/copper/rev1.png"><span>Mirjana Petrović, 52 godine</span>
+                <p>Dok sam sadila sadnice, mislila sam da ću ostati bez ruku i nogu. Imala sam jake bolove i plašila sam se da više neću moći ustati.
+                    Kćerka mi je na poklon donela nekoliko ovih steznika i odmah sam ih stavila. Prvo mi je postalo toplo u zglobovima, a kada sam par puta čučnula osetila sam
+                    da imam znatno manji pritisak u kolenima. Počela sam da ga nosim i na rukama. Sada u baštu idem sa punom opremom steznika, a zglobovi me ne bole.</p>
             </div>
             <div class="reviews__item">
-                <img src="{{ asset('/') }}flexovalFiles/copper/rev2.png"><span>Игорь Дубровский 47 лет</span>
-                <p>Давно мечтал об огороде, чтобы всей семьей потом зимой есть натуральные овощи и фрукты. Но прежде чем все
-                    это кушать, надо все посадить. Тут то я и столкнулся с ужасной болью в суставах после посадки. Решил
-                    поискать в интернете, что с этим делать и наткнулся на COPPER joint protection. Заказал сразу две пары,
-                    чтобы и на локти, и на коленки. Теперь работа в саду только в радость, будто второе дыхание открылось!
-                </p>
+                <img src="{{ asset('/') }}flexovalFiles/copper/rev2.png"><span>Igor Đurović, 55 godina</span>
+                <p>Obožavam mali fudbal ali u poslednjih par godina mi je jako teško išlo. Često sam imao povrede zglobova, išao sam kod kiropraktičara, pokušavao sa raznim kremama,
+                    ali nove povrede su se nizale i nizale. Sin mi je kupio ovaj steznik, ja u početku nisam verovato da to ima efekta ali sam odlučio da probam.
+                    Konačno sam uspeo da igram mali fudbal 60 minuta bez povrede. Odličan je proizvod i toplo ga preporučujem svakome.</p>
             </div>
             <div class="reviews__item">
-                <img src="{{ asset('/') }}flexovalFiles/copper/rev3.png"><span>Ольга Шаевская 35 лет</span>
-                <p>Приехала маме помочь в огороде и защемило нерв в локте, боли были просто ужасные. Решила срочно спасаться и
-                    пошла к хирургу - он-то и посоветовал мне купить COPPER joint protection. Как только надела его, считай
-                    через час боль и прошла! Не верится, теперь взяла еще маме COPPER joint protection, чтобы и ей легче
-                    работалось!
-                </p>
+                <img src="{{ asset('/') }}flexovalFiles/copper/rev3.png"><span>Olga Tmušić, 35 godina</span>
+                <p>Rekreativno trčim skoro svako jutro i to me zaista ispunjava. Moram da budem veoma oprezna jer moje koleno ima sklonost da "iskoči" iz ležišta i onda oporavak traje
+                    mesecima. Bilo mi je žao da se odreknem trčanja i počela sam da tražim adekvatno rešenje. Nakon nekoliko steznika koji nisu imali nikakvog efekta, preko
+                    interneta sam poručila COOPER JOINT PROTECTION steznik. Gle čuda, trčim kao antilopa bez ikakvih provreda i straha da će nešto poći po zlu.</p>
             </div>
         </div>
     </div>
@@ -327,13 +302,13 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="logo"><img src="{{ asset('/') }}flexovalFiles/copper/logo.png"></div>
-                    <div class="section-title">Работа в саду и на даче без боли и растяжений!</div>
+                    <div class="section-title">Rad i sportske aktivnosti bez bolova i uganuća!</div>
                     <div class="main__items">
                         <ul class="main__list">
-                            <li class="main__list_white"><img src="{{ asset('/') }}flexovalFiles/copper/list.png"><span>Поддерживает суставы</span></li>
-                            <li><img src="{{ asset('/') }}flexovalFiles/copper/list.png"><span>Снижает риск возникновения боли</span></li>
-                            <li class="main__list_white"><img src="{{ asset('/') }}flexovalFiles/copper/list.png"><span>Сохраняет тепло</span></li>
-                            <li><img src="{{ asset('/') }}flexovalFiles/copper/list.png"><span>Предотвращает вывихи</span></li>
+                            <li class="main__list_white"><img src="{{ asset('/') }}flexovalFiles/copper/list.png"><span>Pruža podršku zglobovima</span></li>
+                            <li><img src="{{ asset('/') }}flexovalFiles/copper/list.png"><span>Smanjuje bolove</span></li>
+                            <li class="main__list_white"><img src="{{ asset('/') }}flexovalFiles/copper/list.png"><span>Sprečava povrede</span></li>
+                            <li><img src="{{ asset('/') }}flexovalFiles/copper/list.png"><span>Pospešuje cirkulaciju</span></li>
                         </ul>
                     </div>
                 </div>
@@ -341,23 +316,23 @@
                 <div class="col-sm-6 col-md-5 col-lg-4">
                     <div class="forma">
                         <div class="forma__top">
-                            <div class="price__text">только сегодня!</div>
+                            <div class="price__text">SAMO DANAS!</div>
                             <div class="prices">
-                                Copper Joint Protection по акции <br> ВСЕГО ЗА
+                                Copper Joint Protection<br> ZA SAMO
                                 <div class="price__new">
-                                 <span class="new_price_val">
-                                    {{ $prices[1]['amount'] }}
-                                 </span>
+                              <span class="new_price_val">
+                                 {{ $prices[1]['amount'] }}
+                              </span>
                                     <span class="new_price_cur">
-                                    RSD
-                                 </span>
+                                 RSD
+                              </span>
                                 </div>
                             </div>
                         </div>
-                        {{--<div class="timer">--}}
-                            {{--<div class="timer__text">Успей до конца акции</div>--}}
-                            {{--<div class="countdown"></div>--}}
-                        {{--</div>--}}
+                        <div class="timer">
+                            <div class="timer__text">UNESITE PODATKE ZA DOSTAVU</div>
+                        </div>
+                        <br>
                         <form class="form" id="form" action="{{$orderRoute}}" method="POST">
                             {{csrf_field()}}
                             @include('lander.naturapharm.components.form_hidden_fields')
@@ -367,15 +342,15 @@
                                 <input placeholder="Adresa" type="text" name="shipping_address" required>
                                 <input placeholder="Grad" type="text" name="shipping_city" required>
                                 <button class="zak__btn" type="submit">
-                                    Poručite za
-                                    <span class="price__new">
-                                     <span class="new_price_val">
-                                        {{ $prices[1]['amount'] }}
-                                     </span>
-                                     <span class="new_price_cur">
-                                        RSD
-                                     </span>
-                                    </span>
+                                    Poručite sada
+                                    {{--<span class="price__new">--}}
+                                     {{--<span class="new_price_val">--}}
+                                        {{--{{ $prices[1]['amount'] }}--}}
+                                     {{--</span>--}}
+                                     {{--<span class="new_price_cur">--}}
+                                        {{--RSD--}}
+                                     {{--</span>--}}
+                                    {{--</span>--}}
                                 </button>
                             </div>
                             {{--<div class="pri">* при заказе курса</div>--}}
@@ -411,8 +386,15 @@
             background-position: 56%;
         }
         .main {
-            height: 1380px;
+            height: 1260px;
             background-image: url({{ asset('/') }}flexovalFiles/copper/bg-m2.jpg);
+        }
+        #header_main {
+            background-color: #484445;
+        }
+        #footer .main {
+            height: 1260px;
+            background-color: none;
         }
     }
 </style>
