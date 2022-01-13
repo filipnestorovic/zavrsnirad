@@ -34,7 +34,7 @@ class Product extends Model
         $result = DB::table('product')
             ->leftJoin('country', 'product.country_id', '=', 'country.id_country')
             ->leftJoin('brand', 'product.brand_id', '=', 'brand.id_brand')
-            ->select('*','product.deleted_at as product_deleted');
+            ->select('*','product.deleted_at as product_deleted','product.updated_at as product_updated');
 
         if(!empty($searchFilter)){
             $result->where(function ($query) use($searchFilter) {
@@ -74,6 +74,7 @@ class Product extends Model
                 'is_default_product' => $this->default,
                 'country_id' => $this->country_id,
                 'woocommerce_product_id' => $this->woocommerce_id,
+                'updated_at' => Carbon::now(),
             ]);
         return $result;
     }

@@ -839,4 +839,37 @@ class HomeController extends Controller
         }
     }
 
+    public function siteMap(Request $request, $site = null, $domain = null) {
+        $brandUrl = 'https://'.$site.'.'.$domain;
+        $country_id = $request->get('countryId');
+        $products = [];
+
+        $brand = $this->modelBrand->getBrandByUrl($brandUrl);
+        if($brand != null) {
+            $allProducts = $this->modelProduct->getAllProductsAjax(null,$brand->brand_id,$country_id);
+            if(count($allProducts)>0) {
+                foreach($allProducts as $singleProduct) {
+                    if(!array_key_exists($singleProduct->sku, $products)) {
+                        if($country_id === 1) {
+                            $productSlug = $site.'.'.$domain.'/'.$singleProduct->slug;
+                        } else {
+                            $productSlug = $singleProduct->country_code.'.'.$site.'.'.$domain.'/'.$singleProduct->slug;
+                        }
+                        if($singleProduct->product_updated === null) {
+                            $productUpdated = Carbon::now()->subMonths(rand(1, 12))->subDays(rand(1, 30));
+                        } else {
+                            $productUpdated = $singleProduct->product_updated;
+                        }
+                        $products[$singleProduct->sku]['slug'] = $productSlug;
+                        $products[$singleProduct->sku]['date'] = date('Y-m-d',strtotime($productUpdated));
+                    }
+                }
+            }
+        }
+
+        return response()->view('sitemap', [
+            'products' => $products
+        ])->header('Content-Type', 'text/xml');
+    }
+
 }

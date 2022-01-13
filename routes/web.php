@@ -146,6 +146,7 @@ Route::group([ 'middleware' => ['admin']], function() {
 
 Route::group(['middleware' => ['guest']], function () {
     $webRoutes = function() {
+        Route::get('/sitemap.xml', [App\Http\Controllers\HomeController::class, 'siteMap'])->name('siteMap');
         Route::get('/{slug}/thankyou', [App\Http\Controllers\HomeController::class, 'thankyou'])->name('thankyou');
         Route::get('/{slug}/checkout/{coupon?}', [App\Http\Controllers\HomeController::class, 'checkout'])->name('checkout');
         Route::get('/{slug?}/{coupon?}', [App\Http\Controllers\HomeController::class, 'lander'])->name('lander');
