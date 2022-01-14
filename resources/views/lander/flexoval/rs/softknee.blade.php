@@ -88,7 +88,7 @@
                     </p>
                 </div>
                 <h4 class="title__h4">STOP invazivnim lekovima, injekcijama i neefikasnim pomagalima!</h4>
-                <div class="img-box--product"><img src="{{ asset('/') }}flexovalFiles/softknee/product-image.png" alt="Produkt"/></div>
+                <div class="img-box--product"><img src="{{ asset('/') }}flexovalFiles/softknee/product-image1.png" alt="Produkt"/></div>
             </div>
         </div>
         <div class="benefits__wrap">
@@ -227,7 +227,7 @@
         </div>
         <div class="flex-wrap flex-wrap--bottom">
             <div class="img-box">
-                <img src="{{ asset('/') }}flexovalFiles/softknee/product-image.png" alt="Produkt"/>
+                <img src="{{ asset('/') }}flexovalFiles/softknee/product-image1.png" alt="Produkt"/>
             </div>
         </div>
     </div>
@@ -479,7 +479,7 @@
                         <li class="item"><span class="span-bold">Vraća energiju 100% </span> i održava je stabilnom dugi niz godina</li>
                     </ul>
                 </div>
-                <div class="img-box--product img-box--product13"><img src="{{ asset('/') }}flexovalFiles/softknee/product-image.png" alt="Produkt"/></div>
+                <div class="img-box--product img-box--product13"><img src="{{ asset('/') }}flexovalFiles/softknee/product-image1.png" alt="Produkt"/></div>
             </div>
         </div>
     </div>
