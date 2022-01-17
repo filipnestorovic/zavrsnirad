@@ -59,19 +59,19 @@
                             <input placeholder="Telefon" type="tel" name="phone" required>
                             <input placeholder="Adresa" type="text" name="shipping_address" required>
                             <input placeholder="Grad" type="text" name="shipping_city" required>
-                            <button class="zak__btn" type="submit">
-                                Poručite sada
-                                {{--<span class="price__new">--}}
-                                 {{--<span class="new_price_val">--}}
-                                    {{--{{ $prices[1]['amount'] }}--}}
-                                 {{--</span>--}}
-                                 {{--<span class="new_price_cur">--}}
-                                    {{--RSD--}}
-                                 {{--</span>--}}
-                              {{--</span>--}}
-                            </button>
+                            @foreach($prices as $singlePrice)
+                                <div style="margin-top: 10px; margin-left: 10px;">
+                                    <input type="radio" name="quantity" class="quantity" value="{{ $singlePrice['quantity'] }}" id="productLabel{{ $singlePrice['quantity'] }}" placeholder="{{ $singlePrice['is_free_shipping'] }}"
+                                           @if($singlePrice['is_default']) checked @endif
+                                           @if(old('quantity') == $singlePrice['quantity']) checked @endif >
+                                    <label for="productLabel{{$singlePrice['quantity']}}">
+                                        {{$singlePrice['quantity']}} x {{$product->product_name}} ({{$singlePrice['amount']}} RSD)
+                                    </label>
+                                </div>
+                            @endforeach
+                            <div class="freeShippingDiv">* BESPLATNA DOSTAVA</div>
+                            <button class="zak__btn" type="submit">Poručite sada</button>
                         </div>
-                        {{--<div class="pri">* при заказе курса</div>--}}
                     </form>
                 </div>
             </div>
@@ -343,19 +343,19 @@
                                 <input placeholder="Telefon" type="tel" name="phone" required>
                                 <input placeholder="Adresa" type="text" name="shipping_address" required>
                                 <input placeholder="Grad" type="text" name="shipping_city" required>
-                                <button class="zak__btn" type="submit">
-                                    Poručite sada
-                                    {{--<span class="price__new">--}}
-                                     {{--<span class="new_price_val">--}}
-                                        {{--{{ $prices[1]['amount'] }}--}}
-                                     {{--</span>--}}
-                                     {{--<span class="new_price_cur">--}}
-                                        {{--RSD--}}
-                                     {{--</span>--}}
-                                    {{--</span>--}}
-                                </button>
+                                @foreach($prices as $singlePrice)
+                                    <div style="margin-top: 10px; margin-left: 10px;">
+                                        <input type="radio" name="quantity" class="quantity" value="{{ $singlePrice['quantity'] }}" id="product1Label{{ $singlePrice['quantity'] }}" placeholder="{{ $singlePrice['is_free_shipping'] }}"
+                                               @if($singlePrice['is_default']) checked @endif
+                                               @if(old('quantity') == $singlePrice['quantity']) checked @endif >
+                                        <label for="product1Label{{$singlePrice['quantity']}}">
+                                            {{$singlePrice['quantity']}} x {{$product->product_name}} ({{$singlePrice['amount']}} RSD)
+                                        </label>
+                                    </div>
+                                @endforeach
+                                <div class="freeShippingDiv">* BESPLATNA DOSTAVA</div>
+                                <button class="zak__btn" type="submit">Poručite sada</button>
                             </div>
-                            {{--<div class="pri">* при заказе курса</div>--}}
                         </form>
                     </div>
                 </div>
@@ -382,7 +382,7 @@
             background-position: 56%;
         }
         .main {
-            height: 1260px;
+            /*height: 1260px;*/
             background-image: url({{ asset('/') }}flexovalFiles/copper/bg-m2.jpg);
         }
         #header_main {
@@ -393,7 +393,39 @@
             background-color: none;
         }
     }
+    .freeShippingDiv {
+        color: #d31f07;
+        text-align: center;
+        margin-bottom: 0;
+        display: none;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+    input[type="radio"] {
+        width: 15px !important;
+        height: 15px !important;
+        cursor: pointer;
+        display: inline;
+    }
+    label {
+        height: 15px !important;
+        cursor: pointer;
+        font-size: 16px;
+        margin-left: 3px;
+        font-weight: 600;
+        font-family: Gilroy, Arial, system-ui, sans-serif;
+        display: inline;
+    }
 </style>
+<script>
+    $('.quantity').click(function () {
+        let fsh = $(this).attr('placeholder');
+        if(parseInt(fsh) === 1) {
+            $(this).closest('.form').find('.freeShippingDiv').slideDown();
+        } else {
+            $(this).closest('.form').find('.freeShippingDiv').slideUp();        }
+    })
+</script>
 @include('components.pixel_footer')
 </body>
 </html>

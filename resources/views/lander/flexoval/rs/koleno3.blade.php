@@ -490,6 +490,7 @@
         display: none;
         font-weight: bold;
         margin-top: 20px;
+        margin-bottom: 20px;
     }
 </style>
 <script>
