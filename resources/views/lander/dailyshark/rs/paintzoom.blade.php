@@ -15,14 +15,14 @@
     @include('components.display_errors')
     <div class="header">
         <h1 class="uppercase center black b green_bg">Paint Zoom</h1>
-        <h2 class="uppercase center white">универсальный распылитель краски</h2>
+        <h2 class="uppercase center white">UNIVERZALNI RASPRŠIVAČ BOJE</h2>
         <img src="{{ asset('/') }}dailysharkFiles/paintzoom/header_imgc1551.jpg">
         <div class="reyt">
-            <div class="stars"><b>4.9</b> (голосов: 673)</div>
-            заказов: 21058
+            <div class="stars"><b>4.9</b> (glasova: 673)</div>
+            porudžbina: 2058
         </div>
         <div class="timer_price">
-            <div class="products_count prod1"><b>12 шт.</b> осталось по акции</div>
+            <div class="products_count prod1"><b>18 kom.</b> otišlo na promociji</div>
             <div class="price" style="float: right;">
                 <div class="old">
                     {{ $prices[1]['originalPrice'] }} RSD
@@ -41,75 +41,53 @@
         </div>
     </div>
     <section class="opisanie">
-        <h2 class="venzel"><span class="green">Что такое</span> <b>Paint Zoom</b></h2>
+        <h2 class="venzel"><span class="green">Šta je</span> <b>Paint Zoom</b></h2>
         <img class="center" src="{{ asset('/') }}dailysharkFiles/paintzoom/tov-1502e0.jpg">
-        <p class="justify">Краскораспылитель Paint Zoom ― отличный помощник, который быстро покрасит любую
-            поверхность!
-        </p>
-        <p class="justify">Paint Zoom заменит целый ряд инструментов для покраски <strong>любой поверхности</strong>
-            из бетона, кирпича, дерева и многих других. Малярные щетки, кисти и валики больше не потребуются!
-        </p>
-        <p class="justify"><strong>Посмотрите видео:</strong></p>
+        <p class="justify">Pištolj za prskanje Paint Zoom je odličan pomoćnik koji će brzo ofarbati svaku površinu!</p>
+        <p class="justify">Paint Zoom zamenjuje niz alata za farbanje <strong>bilo koje površine</strong> (beton, cigla, drvo i još mnogo toga).</p>
+        <p class="justify"><strong>Nema više četki i valjaka!</strong></p>
     </section>
     <section>
         <ul class="spisok ul_black black_ul">
-            <li>Помогает с легкостью добиться профессионального результата покраски</li>
-            <li>Подходит для окрашивания любой поверхности</li>
-            <li>Простой в использовании</li>
-            <li>Экономит краску, силы и время</li>
-            <li>Равномерное, легкое, быстрое, качественное окрашивание</li>
-            <li>Подходит для красок, а также лаков, масел, дезинфекторов и прочих жидкостей любого типа</li>
+            <li>Pomaže da sa lakoćom postignete profesionalne rezultate farbanja</li>
+            <li>Pogodno za farbanje bilo koje površine</li>
+            <li>Jednostavan za korišćenje</li>
+            <li>Štedi boju, trud i vreme</li>
+            <li>Ujednačeno, lagano, brzo i kvalitetno bojenje</li>
+            <li>Pogodno za boje, lakove, ulja, dezinfekciona sredstva i druge tečnosti bilo koje vrste</li>
         </ul>
         <p><a href="#order_form" class="button-m">Poručite sada</a></p>
     </section>
     <section class="opisanie">
-        <h2 class="venzel"><span class="green">Преимущества</span> <b>Paint Zoom</b></h2>
+        <h2 class="venzel"><span class="green">Prednosti </span> <b>Paint Zoom-a</b></h2>
         <img class="center" src="{{ asset('/') }}dailysharkFiles/paintzoom/feature2.jpg">
-        <p class="justify">Это мощный прибор с <strong>аэрозольной технологией покрытия</strong> для
-            профессиональной окраски при выполнении внутренних и наружных работ при ремонте, а также в быту и на
-            даче.
-        </p>
-        <p class="justify">За <strong>10 минут</strong> вы легко покрасите поверхность площадью 15 квардратных
-            метров так же качественно, как и опытный профессионал.
-        </p>
+        <p class="justify">Ovo je moćan uređaj sa <strong>tehnologijom aerosolnog premaza</strong> za profesionalno farbanje pri izvođenju unutrašnjih i spoljašnih radova.</p>
+        <p class="justify">Za <strong>10 minuta</strong> možete lako da ofarbate površinu od 15 kvadratnih metara sa istim kvalitetom kao iskusni profesionalac.</p>
         <img class="center" src="{{ asset('/') }}dailysharkFiles/paintzoom/feature3.jpg">
-        <p class="justify">Вам не придется напрягаться, Paint Zoom выполнит всю сложную работу вместо вас. Если до
-            этого покраска с помощью валика или кистей занимала много времени, то с помощью данного продукта вы
-            сможете выполнить работу <strong>всего лишь за несколько минут.</strong>
-        </p>
+        <p class="justify">Ne morate da se naprežete, Paint Zoom radi sav težak posao umesto vas. Ako je pre farbanje valjkom ili četkama trajalo dugo, sada sa ovim proizvodom posao možete obaviti za <strong>samo nekoliko minuta.</strong></p>
         <img class="center" src="{{ asset('/') }}dailysharkFiles/paintzoom/sec-3-imgde24d.jpg">
         <p><a href="#order_form" class="button-m">Poručite sada</a></p>
     </section>
     <section class="b10 b10-avas">
-        <h2 class="venzel"><span class="green">Что говорят клиенты</span> о <b>Paint Zoom</b></h2>
+        <h2 class="venzel"><span class="green">Šta kažu kupci </span> о <b>Paint Zoom-u</b></h2>
         <div class="reviews">
             <div class="rev">
                 <img src="{{ asset('/') }}dailysharkFiles/paintzoom/b10-avacce58.jpg">
-                <p>
-                    Впервые пользовался этим устройством. Очень доволен, вещь незаменимая для ремонта. Мощный,
-                    работает без перебоев. Легко очищается после использования. Рекомендую всем: разобраться сможет
-                    даже ребёнок, а времени экономит много.
-                </p>
-                <p class="name"><b>Сыченко Геннадий</b> </p>
+                <p>Prvi put koristim ovaj uređaj. Veoma sam zadovoljan, nezamenljiva stvar za farbanje. Snažan je, radi besprekorno i lako se čisti nakon upotrebe.
+                    Štedi vreme, jenostavan je i preporučujem ga svima!</p>
+                <p class="name"><b>Vaso Samardžija</b> </p>
             </div>
             <div class="rev">
                 <img src="{{ asset('/') }}dailysharkFiles/paintzoom/b11-avaa04d3.jpg">
-                <p>В первый раз использовал его для подкраски отремонтированных элементов кузова на машине своего
-                    отца. И всё прошло как в рекламе. Сам по себе краскораспылитель Paint Zoom достаточно легкий и
-                    удобно располагается на ремне через плечо. Покраска прошла успешно. Рекомендую! Взял еще один
-                    куму на подарок.
-                </p>
-                <p class="name"><b>Колтаков Петр</b></p>
+                <p>Koristio sam ga da ofarbam drvenu klupu ispred moje kuće. Po prvi put u mom životu, farbanje mi je bilo zabavno. Kaiš koji služi da se spravica okači na rame je odličan.
+                    Uzeo sam jedan kumu za poklon!</p>
+                <p class="name"><b>Zoran Škembo</b></p>
             </div>
             <div class="rev">
                 <img src="{{ asset('/') }}dailysharkFiles/paintzoom/b12-avaa20be.jpg">
-                <p>
-                    Брал этот девайс для дома и для дачи. Скажу вам так: вещь просто незаменимая. Время и силы
-                    экономит колоссально! Раньше мне на то, чтоб собраться покрасить забор могло уйти больше месяца)
-                    Чтоб собраться с силами)) А сейчас - встал и пошел покрасил. 10-15 минут и всё готово. Через
-                    пару часов уже и высохло. К тому же экономит краску. 5 баллов!
-                </p>
-                <p class="name"><b>Крохмаль Вадим</b></p>
+                <p>Kupio sam ovaj uređaj za kuću i vikendicu. Reći ću vam samo ovo: stvar je jednostavno nezamenljiva. Štedi vreme i živce! Ranije mi je trebalo više od mesec dana
+                    da skupim snagu za farbanje ograde, a sa ovim sam sve završio u roku od pola sata. Ofarbana površina se brzo suši, i duplo manje boje sam potrošio. Čista desetka!</p>
+                <p class="name"><b>Rade Simić</b></p>
             </div>
         </div>
     </section>
@@ -117,18 +95,18 @@
         <ul class="deliv deliv1">
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/paintzoom/deliv1-139bf7.png">
-                <h3>Доставка</h3>
-                <p>В течение 1-3 рабочих дней.</p>
+                <h3>Isporuka</h3>
+                <p>U roku od 1-2 radna dana</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/paintzoom/deliv1-2ddd71.png">
-                <h3>Оплата</h3>
-                <p>Оплата заказов осуществляется по факту получения товара</p>
+                <h3>Plaćanje</h3>
+                <p>Plaćanje se vrši po prijemu porudžbine</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/paintzoom/deliv1-3e7528.png">
-                <h3>Гарантии</h3>
-                <p>Мы всегда проверяем товар перед отправкой и гарантируем 100% качество</p>
+                <h3>Garancije</h3>
+                <p>Uvek proveravamo robu pre isporuke i vraćamo novac ukoliko niste zadovoljni</p>
             </li>
         </ul>
     </section>
@@ -136,46 +114,38 @@
         <ul class="deliv_v2 deliv_v2_1 border_bottom">
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/paintzoom/deliv_v2-1a5e20.png">
-                <h3>Заявка</h3>
-                <p>Оставляете заявку
-                    на сайте
-                </p>
+                <h3>Poručivanje</h3>
+                <p>Ostavite podatke na našem sajtu</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/paintzoom/deliv_v2-213f9f.png">
-                <h3>Звонок</h3>
-                <p>Наш менеджер
-                    уточняет детали заказа
-                </p>
+                <h3>Potvrda porudžbine</h3>
+                <p>Kontaktiraćemo vas da potvrdimo vašu porudžbinu</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/paintzoom/deliv_v2-34aba0.png">
-                <h3>Отправка</h3>
-                <p>Доставляем ваш товар
-                    в течение 1-3 дней
-                </p>
+                <h3>Slanje pošiljke</h3>
+                <p>Pošilju šaljemo brzom poštom</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/paintzoom/deliv_v2-4efafe.png">
-                <h3>Получение</h3>
-                <p>Оплачиваете при
-                    получении
-                </p>
+                <h3>Plaćanje</h3>
+                <p>Plaćate kuriru po prijemu pošiljke</p>
             </li>
         </ul>
     </section>
     <div class="header footer">
         <h1 class="uppercase center black b green_bg">Paint Zoom</h1>
-        <h2 class="uppercase center white">универсальный распылитель краски</h2>
+        <h2 class="uppercase center white">UNIVERZALNI RASPRŠIVAČ BOJE</h2>
         <img src="{{ asset('/') }}dailysharkFiles/paintzoom/header_imgc1551.jpg">
         <div class="reyt">
-            <div class="stars"><b>4.9</b> (голосов: 673)</div>
-            заказов: 21058
+            <div class="stars"><b>4.9</b> (glasova: 673)</div>
+            porudžbina: 2058
         </div>
-        <h3>Оставьте <b>заявку</b></h3>
-        <div class="posttile">Наши менеджеры свяжутся с вами для консультации и помогут сделать заказ</div>
+        <h3>Podaci <b>za dostavu</b></h3>
+        {{--<div class="posttile">Наши менеджеры свяжутся с вами для консультации и помогут сделать заказ</div>--}}
         <div class="timer_price">
-            <div class="products_count prod1"><b>12 шт.</b> осталось по акции</div>
+            <div class="products_count prod1"><b>18 kom.</b> otišlo na promociji</div>
             <div class="price" style="float: right;">
                 <div class="old">
                     {{ $prices[1]['originalPrice'] }} RSD

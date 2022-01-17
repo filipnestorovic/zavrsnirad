@@ -19,23 +19,22 @@
     @include('components.display_errors')
     <section class="b1">
         <h1>BEAUTY BOX 360</h1>
-        <h2>Вращающийся органайзер для косметики </h2>
+        <h2>ROTIRAJUĆI STALAK ZA ŠMINKU</h2>
         <h3></h3>
         <ul class="clearfix">
-            <li>больше места<br>для косметики</li>
-            <li>компактный и<br>вместительный</li>
-            <li>вращение на<br>360 градусов
-            </li>
+            <li>VIŠE PROSTORA <br> ZA KOZMETIKU</li>
+            <li>KOMPAKTAN I <br> PROSTRAN</li>
+            <li>ROTACIJA ZA <br> 360 STEPENI</li>
         </ul>
     </section>
     <section class="b2">
         <div class="sale-price clearfix">
             <div class="sale">
-                <p>АКЦИЯ</p>
-                <span>-50%</span>
+                <p>AKCIJA</p>
+                <span>-40%</span>
             </div>
             <div class="price">
-                <span style="font-size: 22px;color: white;">Обычная цена:</span><br>
+                <span style="font-size: 22px;color: white;">Stara cena:</span><br>
                 <p>
                     <price class="price_land_s2 js_old_price">
                         {{ $prices[1]['originalPrice'] }}
@@ -44,7 +43,7 @@
                         RSD
                     </price>
                 </p>
-                <span style="font-size: 22px;color: #ffe100;">Цена по акции:</span><br>
+                <span style="font-size: 22px;color: #ffe100;">Nova cena:</span><br>
                 <span>
                      <price class="price_land_s1 js_new_price">
                         {{ $prices[1]['amount'] }}
@@ -55,91 +54,88 @@
                   </span>
             </div>
         </div>
-        <a href="#zakaz" class="button-m">Заказать со скидкой</a><br>
+        <a href="#zakaz" class="button-m">PORUČITE ODMAH</a><br>
     </section>
     <section class="b3">
-        <h2><span>BEAUTY BOX 360</span> незаменимая вещь каждой девушки</h2>
+        <h2><span>BEAUTY BOX 360</span> NEZAMENLJIVA STVAR ZA SVAKU DEVOJKU</h2>
         <img src="{{ asset('/') }}purplerelaxFiles/beautybox/ba.jpeg" alt="" title="">
-        <p><b>BEAUTY BOX 360</b> – идеальный вариант для хранения косметики, аксессуаров и прочих мелочей. Компактный, но при этом вместительный, органайзер не займет много места.
-            Стильный лаконичный дизайн позволит разместить его на открытом месте – туалетном столике или полочке в ванной.
+        <p><b>BEAUTY BOX 360</b> je idealan za odlaganje kozmetike, četkica i drugih sitnica. Kompaktan, prostran i ne zauzima mnogo prostora. Pošto ima moderan dizajn,
+            možete ga držati na vidnom mestu.
         </p>
     </section>
     <section class="b5">
-        <h2>Характеристики</h2>
+        <h2>SPECIFIKACIJE</h2>
         <center><img src="{{ asset('/') }}purplerelaxFiles/beautybox/1.gif" alt="" title=""></center>
         <ul class="use">
             <li>
-                <p>Стильный органайзер с возможностью вращения на 360 градусов, позволяет легко вместить ваши косметические, парфюмерные и различные средства для удобства хранения и доступа к ним.</p>
-                <p>Полочки органайзера можно легко расположить на необходимой высоте.</p>
+                <p>Moderni stalak sa rotacijom od 360 stepeni omogućava vam da lako skladištite kozmetiku, parfeme i razne druge proizvode koje koristite.</p>
+                <p>Police imaju podesivu visinu, tako da ga možete sklopiti u skladu sa svojim potrebama.</p>
             </li>
             <li>
-                <p>Материал: ABS пластик</p>
+                <p>Materijal: ABS plastika</p>
             </li>
             <li>
-                <p>Цвет: черный</p>
+                <p>Boja: Crna</p>
             </li>
             <li>
-                <p>Размер: 31 см x 23 см</p>
+                <p>Dimenzije: 31cm x 23cm</p>
             </li>
         </ul>
     </section>
     <section class="b4">
-        <h2>у косметики<br> должно быть свое место</h2>
+        <h2>KOZMETIKA TREBA DA IMA <br> SVOJE MESTO</h2>
         <div class="makeup"></div>
-        <p>У тебя бывает, что по утрам ты не можешь найти тени, подводку или блеск для губ? Перерыла всю косметичку, а подводку так и не нашла ...</p>
-        <p><b>BEAUTY BOX 360</b> - решает проблему с поиском косметики!  Он не громоздкий, но и не маленький.
-            У него идеальный размер - вся твоя косметика будет находится в одном месте!
-        </p>
+        <p>Da li vam se nekada desi da ujutru ne možete da pronaćete ajlajner, ruž za usne ili olovku za obrve?</p>
+        <p><b>BEAUTY BOX 360</b> - rešava problem sa potragom za kozmetikom. Nije glomazan, ali nije ni mali. Ima savršenu veličinu - sva vaša šminka će biti na jednom mestu!</p>
     </section>
     <section class="b7">
-        <h2>Отзывы покупателей</h2>
+        <h2>UTISCI KUPACA</h2>
         <div class="reviews">
             <div class="rev">
-                <h3>Елена Аксенова</h3>
-                <p>Заказала органайзер для себя.Посылка прибыла быстро и делать мaкияж с этим органайзером одно удовольствие. Рекомендую!</p>
+                <h3>MARINA PETROVIĆ</h3>
+                <p>Sviđa mi se ovaj Beauty Box zbog svoje praktičnosti i mogućnosti skladištenja ne samo kozmetike, nego i nakita.</p>
             </div>
             <div class="rev r2">
-                <h3>Наталья Салтыкова</h3>
-                <p>Я заказала BEAUTY BOX 360, чтобы не искать часами нужную косметику! И виглядит круто! Отличный товар!</p>
+                <h3>ELENA MAKSIMOVIĆ</h3>
+                <p>Naručila sam sebi Beauty Box 360. Paket je stigao brzo i zadovoljstvo je šminkati se kada je sva šminka na jednom mestu i pri ruci. Preporučujem!</p>
             </div>
             <div class="rev r3">
-                <h3>Марина Петрова</h3>
-                <p>Мне нравится этот органайзер, за его практичность и возможность хранить косметику, и не только косметику но и украшения. </p>
+                <h3>NATALIJA BOROVČANIN</h3>
+                <p>Poručila sam ovaj proizvod da ne bih satima tražila kozmetiku. Izgleda cool i veoma je praktičan. Odlična stvar!</p>
             </div>
         </div>
     </section>
     <section class="b8">
         <ul class="ship clearfix">
             <li>
-                <p style="margin-top:31px"><b>Доставка по России</b> от 1 до 10 рабочих дней, в зависимости от региона.</p>
+                <p style="margin-top:31px"><b>Dostava brzom poštom</b> u roku od 1-2 radna dana.</p>
             </li>
             <li>
-                <p><b>Никаких предоплат!</b> Оплата осуществляется непосредственно по факту получения заказа на руки</p>
+                <p><b>Bez plaćanja unapred!</b> Plaćanje se vrši po prijemu pošiljke direktno kuriru brze pošte.</p>
             </li>
             <li>
-                <p><b>Гарантия результата!</b> Мы вернем деньги, если не понравится BEAUTY BOX 360</p>
+                <p><b>Garancija!</b> Vratićemo vam novac ukoliko vam se ne sviđa BEAUTY BOX 360</p>
             </li>
         </ul>
     </section>
     <section class="b1">
         <h1>BEAUTY BOX 360</h1>
-        <h2>Вращающийся органайзер для косметики </h2>
+        <h2>ROTIRAJUĆI STALAK ZA ŠMINKU</h2>
         <h3></h3>
         <ul class="clearfix">
-            <li>больше места<br>для косметики</li>
-            <li>компактный и<br>вместительный</li>
-            <li>вращение на<br>360 градусов
-            </li>
+            <li>VIŠE PROSTORA <br> ZA KOZMETIKU</li>
+            <li>KOMPAKTAN I <br> PROSTRAN</li>
+            <li>ROTACIJA ZA <br> 360 STEPENI</li>
         </ul>
     </section>
     <section class="b10">
         <div class="sale-price clearfix">
             <div class="sale">
-                <p>АКЦИЯ</p>
-                <span>-50%</span>
+                <p>AKCIJA</p>
+                <span>-40%</span>
             </div>
             <div class="price">
-                <span style="font-size: 22px;color: white;">Обычная цена:</span><br>
+                <span style="font-size: 22px;color: white;">Stara cena:</span><br>
                 <p>
                     <price class="price_land_s2 js_old_price">
                         {{ $prices[1]['originalPrice'] }}
@@ -148,7 +144,7 @@
                         RSD
                     </price>
                 </p>
-                <span style="font-size: 22px;color: #ffe100;">Цена по акции:</span><br>
+                <span style="font-size: 22px;color: #ffe100;">Nova cena:</span><br>
                 <span>
                      <price class="price_land_s1 js_new_price">
                         {{ $prices[1]['amount'] }}

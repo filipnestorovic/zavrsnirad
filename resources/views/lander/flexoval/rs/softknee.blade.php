@@ -15,7 +15,8 @@
         <div class="flex-wrap">
             <div class="flex-wrap__column">
                 <div class="img-box--logo">
-                    <img src="{{ asset('/') }}flexovalFiles/softknee/main-arthrostrap-logo.svg" alt="Logo"/>
+                    {{--<img src="{{ asset('/') }}flexovalFiles/softknee/main-arthrostrap-logo.svg" alt="Logo"/>--}}
+                    <img src="{{ asset('/') }}flexovalFiles/shared_files/Flexoval_logo.png" alt="Logo"/>
                 </div>
                 <div class="text-box">
                     <p>UNESITE PODATKE ZA DOSTAVU</p>

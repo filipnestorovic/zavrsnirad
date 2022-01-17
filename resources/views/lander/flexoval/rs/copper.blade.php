@@ -18,7 +18,8 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
-                <div class="logo"><img src="{{ asset('/') }}flexovalFiles/copper/logo.png"></div>
+                {{--<div class="logo"><img src="{{ asset('/') }}flexovalFiles/copper/logo.png"></div>--}}
+                <div class="logo"><img src="{{ asset('/') }}flexovalFiles/shared_files/flexoval_logo.png"></div>
                 <div class="section-title">Rad i sportske aktivnosti bez bolova i uganuća!</div>
                 <div class="main__items">
                     <ul class="main__list">
@@ -35,7 +36,7 @@
                     <div class="forma__top">
                         <div class="price__text">SAMO DANAS!</div>
                         <div class="prices">
-                            Copper Joint Protection<br> ZA SAMO
+                            Flexoval 2.0<br> ZA SAMO
                             <div class="price__new">
                               <span class="new_price_val">
                                  {{ $prices[1]['amount'] }}
@@ -161,7 +162,7 @@
         <div class="row">
             <div class="col-lg-1"></div>
             <div class="col-sm-6">
-                <div class="section-title">Kako funkcioniše zaštita zglobova <span>Cooper Joint Protection</span> steznikom?</div>
+                <div class="section-title">Kako funkcioniše zaštita zglobova <span>Flexoval 2.0</span> steznikom?</div>
                 <div class="how__item">
                     <p>Steznik ne pritiska zglobove ruku ili nogu zahvaljujući elastičnim ivicama</p>
                     <img class="how1" src="{{ asset('/') }}flexovalFiles/copper/how1.png">
@@ -181,7 +182,7 @@
             <div class="col-lg-1"></div>
             <div class="col-lg-10">
                 <div class="how__wrapper">
-                    <p><span>Cooper Joint Protection</span> je jedinstveno dostignuće u oblasti steznika za zglobove. Tkanina je ojačana bakarnim nitima za podršku zglobova i mišića i ima efekat zagrebanja
+                    <p><span>Flexoval 2.0</span> je jedinstveno dostignuće u oblasti steznika za zglobove. Tkanina je ojačana bakarnim nitima za podršku zglobova i mišića i ima efekat zagrebanja
                         koji smanjuje bol i upalu.</p>
                 </div>
             </div>
@@ -236,9 +237,9 @@
                 <div class="expert__wrapper">
                     <div class="expert__text">
                         <img class="visible-xs" src="{{ asset('/') }}flexovalFiles/copper/expert_mob.jpg">
-                        <p>Zaštita sa <span>Cooper Joint Protection</span> steznikom specijalno je kreirana za pravilan položaj zglobova tokom bilo koje fizičke aktivnosti.</p>
+                        <p>Zaštita sa <span>Flexoval 2.0</span> steznikom specijalno je kreirana za pravilan položaj zglobova tokom bilo koje fizičke aktivnosti.</p>
                         <p>Problem većine ljudi, posebno starijih, je to što ne ne mogu da rade svoj posao i samim tim ne dozvoljavaju zglobovima da se kreću.</p>
-                        <p><span>Cooper Joint Protection</span> steznik preuzima glavnu ulogu bezbedno držeći zglobove u ispravnom položaju, a fizički poslovi mogu da se obavljaju nesmetano.</p>
+                        <p><span>Flexoval 2.0</span> steznik preuzima glavnu ulogu bezbedno držeći zglobove u ispravnom položaju, a fizički poslovi mogu da se obavljaju nesmetano.</p>
                     </div>
                 </div>
             </div>
@@ -270,7 +271,7 @@
                     <img src="{{ asset('/') }}flexovalFiles/copper/rev3.png"><span>Olga Tmušić, 35 godina</span>
                     <p>Rekreativno trčim skoro svako jutro i to me zaista ispunjava. Moram da budem veoma oprezna jer moje koleno ima sklonost da "iskoči" iz ležišta i onda oporavak traje
                         mesecima. Bilo mi je žao da se odreknem trčanja i počela sam da tražim adekvatno rešenje. Nakon nekoliko steznika koji nisu imali nikakvog efekta, preko
-                        interneta sam poručila COOPER JOINT PROTECTION steznik. Gle čuda, trčim kao antilopa bez ikakvih provreda i straha da će nešto poći po zlu.</p>
+                        interneta sam poručila Flexoval 2.0 steznik. Gle čuda, trčim kao antilopa bez ikakvih provreda i straha da će nešto poći po zlu.</p>
                 </div>
             </div>
         </div>
@@ -291,7 +292,7 @@
                 <img src="{{ asset('/') }}flexovalFiles/copper/rev3.png"><span>Olga Tmušić, 35 godina</span>
                 <p>Rekreativno trčim skoro svako jutro i to me zaista ispunjava. Moram da budem veoma oprezna jer moje koleno ima sklonost da "iskoči" iz ležišta i onda oporavak traje
                     mesecima. Bilo mi je žao da se odreknem trčanja i počela sam da tražim adekvatno rešenje. Nakon nekoliko steznika koji nisu imali nikakvog efekta, preko
-                    interneta sam poručila COOPER JOINT PROTECTION steznik. Gle čuda, trčim kao antilopa bez ikakvih provreda i straha da će nešto poći po zlu.</p>
+                    interneta sam poručila Flexoval 2.0 steznik. Gle čuda, trčim kao antilopa bez ikakvih provreda i straha da će nešto poći po zlu.</p>
             </div>
         </div>
     </div>
@@ -301,7 +302,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    <div class="logo"><img src="{{ asset('/') }}flexovalFiles/copper/logo.png"></div>
+                    {{--<div class="logo"><img src="{{ asset('/') }}flexovalFiles/copper/logo.png"></div>--}}
+                    <div class="logo"><img src="{{ asset('/') }}flexovalFiles/shared_files/flexoval_logo.png"></div>
                     <div class="section-title">Rad i sportske aktivnosti bez bolova i uganuća!</div>
                     <div class="main__items">
                         <ul class="main__list">
@@ -318,7 +320,7 @@
                         <div class="forma__top">
                             <div class="price__text">SAMO DANAS!</div>
                             <div class="prices">
-                                Copper Joint Protection<br> ZA SAMO
+                                Flexoval 2.0<br> ZA SAMO
                                 <div class="price__new">
                               <span class="new_price_val">
                                  {{ $prices[1]['amount'] }}
@@ -363,12 +365,6 @@
 </div>
 
 <script src="{{ asset('/') }}flexovalFiles/copper/owl.carousel.min.js"></script>
-{{--<script src="../../cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>--}}
-{{--<script src="http://copper.xcartpro.com/r1/main.js"></script>--}}
-{{--<script src="../../cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>--}}
-{{--<script src="../../cdnjs.cloudflare.com/ajax/libs/jquery-url-parser/2.3.1/purl.min.js"></script>--}}
-{{--<script src="../../click.lucky.online/js/leadprofit.js"></script>--}}
-{{--<script src="../../cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>--}}
 <script>
     $(document).ready(function () {
         $('.my_btn').click(function () {

@@ -428,6 +428,9 @@
     .form__list select {
         margin-bottom: 10px
     }
+    .logo {
+        padding-left: 36px;
+    }
 }
 
 .timer {
