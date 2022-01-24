@@ -76,7 +76,7 @@ b {
 .m1-form{
     padding: 0 25px;
 }
-.m1-form input{
+.m1-form input, select {
     border: none;
     background: #fafafa;
     width: 100%;
@@ -219,7 +219,7 @@ section{
     background: url(top_bull2.png) 50% 50% no-repeat;
 }
 .top_line ul>li:nth-child(3):before{
-    background: url(top_bull3.png) 50% 50% no-repeat;
+    background: url(top_bull1.png) 50% 50% no-repeat;
 }
 
 
@@ -432,7 +432,7 @@ section{
 }
 .benef1>li{
     width: 182px;
-    min-height: 242px;
+    min-height: 182px;
     display: inline-block;
     vertical-align: top;
     background: #f7fbfc;
