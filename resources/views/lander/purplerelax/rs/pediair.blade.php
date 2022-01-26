@@ -23,12 +23,20 @@
             .offer_section {
                 padding: 10px 0 25px;
                 background-image: url({{ asset('/') }}purplerelaxFiles/pediair/mobile__offer_bg.png);
+                background-position-x: -210px;
             }
             .order_section .content_block {
                 padding: 10px 0 25px;
                 background-image: url({{ asset('/') }}purplerelaxFiles/pediair/mobile__offer_bg.png);
                 background-position-y: -110px;
+                background-position-x: -210px;
             }
+        }
+        .problems_section .problem_item img {
+            width: 120px;
+        }
+        .problems_section .problem_item {
+            font-size: 20px;
         }
     </style>
 </head>
@@ -78,19 +86,19 @@
         <h2>POMAŽE U REŠAVANJU SLEDEĆIH PROBLEMA:</h2>
         <div class=problems_list>
             <div class=problem_item>
-                <img alt="PediAir" src="{{ asset('/') }}purplerelaxFiles/pedispin/problems__problem1_image.jpg">
+                <img alt="PediAir" src="{{ asset('/') }}purplerelaxFiles/pediair/1.jpg">
                 <h4>Pukotine</h4>
             </div>
             <div class=problem_item>
-                <img alt="PediAir" src="{{ asset('/') }}purplerelaxFiles/pedispin/problems__problem2_image.jpg">
+                <img alt="PediAir" src="{{ asset('/') }}purplerelaxFiles/pediair/2.jpg">
                 <h4>Kraste</h4>
             </div>
             <div class=problem_item>
-                <img alt="PediAir" src="{{ asset('/') }}purplerelaxFiles/pedispin/problems__problem3_image.jpg">
+                <img alt="PediAir" src="{{ asset('/') }}purplerelaxFiles/pediair/3.jpg">
                 <h4>Žuljevi</h4>
             </div>
             <div class=problem_item>
-                <img alt="PediAir" src="{{ asset('/') }}purplerelaxFiles/pedispin/problems__problem4_image.jpg">
+                <img alt="PediAir" src="{{ asset('/') }}purplerelaxFiles/pediair/4.jpg">
                 <h4>Gruba koža</h4>
             </div>
         </div>
