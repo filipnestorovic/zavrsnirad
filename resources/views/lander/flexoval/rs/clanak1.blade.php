@@ -25,36 +25,36 @@
     <div class="header">
         <div class="header_item">
             <img src="{{ asset('/') }}flexovalFiles/clanak1/h1.png">
-            <span>Европейское <br>качество</span>
+            <span>EVROPSKI <br>KVALITET</span>
         </div>
         <div class="header_item">
             <img src="{{ asset('/') }}flexovalFiles/clanak1/h2.png">
-            <span>Более 2730 <br>положительных <br>отзывов</span>
+            <span>PREKO 13000 <br>ZADOVOLJNIH <br>KUPACA</span>
         </div>
         <div class="header_item">
             <img src="{{ asset('/') }}flexovalFiles/clanak1/h3.png">
-            <span>100% доказанная <br>эффективность</span>
+            <span>100% DOKAZANA <br>EFIKASNOST</span>
         </div>
     </div>
 </header>
 <section class="base banner">
     <div class="container main_title">
-        <h1 class="h1">Регулируемый эластичный манжет на лодыжку<br><span>Safe <span>Brace</span></span></h1>
+        <h1 class="h1">PODESIVI STEZNIK ZA ČLANAK<br><span><span>FLEXOVAL</span></span></h1>
     </div>
     <div class="container smart">
         <ul class="list">
-            <li>Стабилизирует голеностопный сустав</li>
-            <li>Ускоряет процесс восстановления</li>
-            <li>Защищает сустав от перегрузок, травм и растяжений связок</li>
+            <li>Stabilizuje članak</li>
+            <li>Ubrzava proces oporavka</li>
+            <li>Štiti zglob od preopterećenja, povreda i uganuća</li>
         </ul>
         <div class=smart_inner>
             <div class="stock">
-                <p>В наличии<br>осталось</p>
-                <p>9<small>шт</small></p>
+                <p>ZDRAV ČLANAK BEZ <br> POVREDA</p>
+                <p>&nbsp;</p>
             </div>
             <div class="sale">
-                <p>скидка</p>
-                <p>-53<small>%</small></p>
+                <p>popust</p>
+                <p>-40<small>%</small></p>
             </div>
         </div>
         <div class="sale_block_wrap">
@@ -104,106 +104,106 @@
     </div>
 </section>
 <section class="base show">
-    <h2 class="titles"><span class="orange">Safe Brace</span> - регулируемый манжет на лодыжку</h2>
-    <p class="container">Используйте его для облегчения ходьбы, профилактики заболеваний и восстановления после травм. Наслаждайтесь любимым делом без боли и с легкостью!</p>
+    <h2 class="titles"><span class="orange">FLEXOVAL </span> - PODESIVI STEZNIK ZA SKOČNI ZGLOB</h2>
+    <p class="container">Koristi se za lakše kretanje, stabilizaciju stopala i prevenciju od povreda.</p>
     <div class="container show_slider">
         <div class="slide"><img src="{{ asset('/') }}flexovalFiles/clanak1/s1.jpg"></div>
         <div class="slide"><img src="{{ asset('/') }}flexovalFiles/clanak1/s2.jpg"></div>
         <div class="slide"><img src="{{ asset('/') }}flexovalFiles/clanak1/s3.jpg"></div>
         <div class="slide"><img src="{{ asset('/') }}flexovalFiles/clanak1/s4.jpg"></div>
         <div class="slide"><img src="{{ asset('/') }}flexovalFiles/clanak1/s5.jpg"></div>
-        <div class="slide"><img src="{{ asset('/') }}flexovalFiles/clanak1/s6.jpg"></div>
+        {{--<div class="slide"><img src="{{ asset('/') }}flexovalFiles/clanak1/s6.jpg"></div>--}}
     </div>
 </section>
 <section class="base problems">
-    <h2 class="titles white"><span class="orange">Проблемы с голеностопом</span> - прямой путь к инвалидности! </h2>
-    <p>С ними вы навсегда забудете о радостях активной жизни. Проверьте, нет ли у вас подобных симптомов: </p>
+    <h2 class="titles white"><span class="orange">PROBLEMI SKOČNOG ZGLOBA</span> - KOJE NE TREBA ZANEMARITI! </h2>
+    <p>Svako od nas je nekada imao neki od ovih simptoma:</p>
     <div class="container problems_inner">
         <div class="problems_item">
             <div><img src="{{ asset('/') }}flexovalFiles/clanak1/p1.jpg"></div>
-            <p>Мучает ноющая боль в голеностопе во время движения или в состоянии покоя</p>
+            <p>Bol u zglobu tokom kretanja i mirovanja</p>
         </div>
         <div class="problems_item">
             <div><img src="{{ asset('/') }}flexovalFiles/clanak1/p2.jpg"></div>
-            <p>Частые ушибы, травмы и вывихи голеностопа</p>
+            <p>Česte modrice, povrede i dislokacije članka</p>
         </div>
         <div class="problems_item">
             <div><img src="{{ asset('/') }}flexovalFiles/clanak1/p3.jpg"></div>
-            <p>Припухлости и покраснения в области голеностопа</p>
+            <p>Otok i crvenilo</p>
         </div>
         <div class="problems_item">
             <div><img src="{{ asset('/') }}flexovalFiles/clanak1/p4.jpg"></div>
-            <p>Больно опираться на стопу</p>
+            <p>Bolno oslanjanje na stopalo</p>
         </div>
         <div class="problems_item">
             <div><img src="{{ asset('/') }}flexovalFiles/clanak1/p5.jpg"></div>
-            <p>Тяжесть и сильная усталость в ногах</p>
+            <p>Težina i jak zamor u nogama</p>
         </div>
     </div>
 </section>
 <section class="base emergency">
     <div class="container">
-        <h2 class="titles"><span class="orange">БЫСТРАЯ ПОМОЩЬ</span> ВАШЕМУ ГОЛЕНОСТОПУ</h2>
-        <p>Манжет Safe Brace плотно фиксирует голеностопный сустав, равномерно распределяет нагрузку и стимулирует зону стопы.</p>
+        <h2 class="titles"><span class="orange">BRZA POMOĆ</span> ZA BOL U ZGLOBU</h2>
+        <p>Flexoval steznik čvrsto fiksira članak, ravnomerno raspoređuje opterećenje i pospešuje cirkulaciju u stopalu.</p>
         <div class="emergency_inner">
             <div class="emergency_item">
                 <div><img src="{{ asset('/') }}flexovalFiles/clanak1/check_for_circle.png"></div>
-                <p>Ускоряет заживление после растяжений связок и вывихов</p>
+                <p>Ubrzava zarastanje nakon uganuća</p>
             </div>
             <div class="emergency_item">
                 <div><img src="{{ asset('/') }}flexovalFiles/clanak1/check_for_circle.png"></div>
-                <p>Уменьшает <br>боли при артрозе <br>и артрите</p>
+                <p>Smanjuje bol kod artroze i artritisa</p>
             </div>
             <div class="emergency_item">
                 <div><img src="{{ asset('/') }}flexovalFiles/clanak1/check_for_circle.png"></div>
-                <p>Предотвращает <br>отек и воспаление после травм и ушибов</p>
+                <p>Sprečava oticanje i upale nakon povreda</p>
             </div>
         </div>
-        <a href="#footer" class="extra btn">ЗАКАЗАТЬ СЕЙЧАС</a>
+        <a href="#footer" class="extra btn">PORUČITE ODMAH</a>
     </div>
 </section>
 <section class="base unique">
-    <h2 class="titles">Уникальная конструкция <br><span class="blue">для максимальной пользы</span></h2>
+    <h2 class="titles">JEDINSTVEN DIZAJN <br><span class="blue">ZA MAKSIMALNI EFEKAT</span></h2>
     <div class="container unique_gif">
-        <p>Манжет оказывает микромассажное действие, ускоряет разогрев связок и улучшает мышечную координацию стопы.</p>
-        <p>Встроенный стабилизатор сустава и связок предохраняет от самых распространенных повреждений, распределяет нагрузку и снижает риск развития артрита и артроза.</p>
+        <p>Steznik ima i efekat mikromasaže, ubrzava zagrevanje ligamenata i poboljšava mišićnu koordinaciju stopala.</p>
+        <p>Ugrađeni stabilizator zglobova i ligamenata štiti od najčešćih povreda, raspoređuje opterećenje i smanjuje rizik od razvoja artritisa.</p>
         <div class="gif_wrap">
             <img src="{{ asset('/') }}flexovalFiles/clanak1/giphy.gif">
         </div>
     </div>
     <div class="container unique_inner">
-        <p>Легкий и дышащий материал из неопрена обеспечивает комфорт и сухость ноге, сохраняя при этом терапевтическое тепло</p>
-        <p>Компрессионный материал надежно фиксирует вашу лодыжку, снимая боль и напряжение с суставов</p>
-        <p>Регулируемые «липучки» позволяют выбрать оптимальную степень сжатия</p>
-        <p>Отсутствие грубых швов исключает натирание и сдавливание стопы</p>
+        <p>Lagani i prozračni neoprenski materijal održava stopala suvim, a u isto vreme zadržava toplinu</p>
+        <p>Kompresioni materijal bezbedno fiksira zglob, ublažavajući bol i napetost</p>
+        <p>Podesive čičak trake omogućavaju da se odabere optimalni odnos kompresije</p>
+        <p>Odsustvo grubih šavova eliminiše pritiskanje i žuljanje stopala</p>
     </div>
 </section>
 <section class="base necessary">
-    <h2 class="titles white"><span class="orange">кому необходим</span> манжет для голеностопа</h2>
+    <h2 class="titles white"><span class="orange">KOME TREBA</span> STEZNIK ZA ČLANAK</h2>
     <div class="container necessary_inner">
         <div class="necessary_item">
             <img src="{{ asset('/') }}flexovalFiles/clanak1/n1.png">
-            <p>Всем, кто занимается спортом с нагрузкой на ноги (бегунам, футболистам и др. спортсменам)</p>
+            <p>Svima koji se bave sportom</p>
         </div>
         <div class="necessary_item">
             <img src="{{ asset('/') }}flexovalFiles/clanak1/n2.png">
-            <p>Людям, испытывающим «тяжесть» и усталость в ногах</p>
+            <p>Ljudima koji imaju "težinu" i umor u nogama</p>
         </div>
         <div class="necessary_item">
             <img src="{{ asset('/') }}flexovalFiles/clanak1/n3.png">
-            <p>Работникам физического труда и тем, кто много «работает на ногах»</p>
+            <p>Onima koji mnogo vremena provode na nogama</p>
         </div>
         <div class="necessary_item">
             <img src="{{ asset('/') }}flexovalFiles/clanak1/n4.png">
-            <p>Восстанавливаю- щимся после травм, а также страдающим артритом и артрозом</p>
+            <p>Osobama koje se oporavljaju od povrede zgloba</p>
         </div>
     </div>
 </section>
 <section class="base how">
     <div class="container">
-        <h2 class="titles"><span class="orange">как надевать</span> манжет</h2>
-        <p>Обхватите манжетом стопу как показано на фото и подберите необходимую степень утяжки с помощью регулируемых «липучек».</p>
-        <a href="#footer" class="extra btn">Заказать сейчас</a>
+        <h2 class="titles"><span class="orange">KAKO STAVITI</span> STEZNIK</h2>
+        <p>Stavite steznik na nogu onako kako je prikazano na slici i odaberite stepen zategnutosti uz pomoć podesive čičak trake.</p>
+        <a href="#footer" class="extra btn">PORUČITE ODMAH</a>
         <div class="how_inner">
             <img src="{{ asset('/') }}flexovalFiles/clanak1/m1.jpg">
             <img src="{{ asset('/') }}flexovalFiles/clanak1/m2.jpg">
@@ -213,7 +213,7 @@
     </div>
 </section>
 <section class="base why">
-    <h2 class="titles">Почему <span class="blue">Safe Brace</span> - лучший </h2>
+    <h2 class="titles">ZAŠTO JE <span class="blue">FLEXOVAL STEZNIK</span> NAJBOLJI</h2>
     <div class="container why_inner">
         <table>
             <thead>
@@ -222,55 +222,55 @@
                     <p></p>
                 </th>
                 <th>
-                    <p>Safe Brace</p>
+                    <p>Flexoval</p>
                 </th>
                 <th>
-                    <p>Эластичный <br>бинт</p>
+                    <p>Elastični <br/> zavoj</p>
                 </th>
                 <th>
-                    <p>Профессио- <br>нальный ортез</p>
+                    <p>Profesionalna <br/> ortoza</p>
                 </th>
             </tr>
             </thead>
             <tbody>
             <tr>
-                <td>Удобство <br>использования</td>
+                <td>Jednostavnost upotrebe</td>
                 <td><img src="{{ asset('/') }}flexovalFiles/clanak1/check_w.png"/></td>
                 <td><img src="{{ asset('/') }}flexovalFiles/clanak1/cross.png"></td>
                 <td><img src="{{ asset('/') }}flexovalFiles/clanak1/check_g.png"></td>
             </tr>
             <tr>
-                <td>Экономия <br>времени</td>
+                <td>Ušteda vremena</td>
                 <td><img src="{{ asset('/') }}flexovalFiles/clanak1/check_w.png"/></td>
                 <td><img src="{{ asset('/') }}flexovalFiles/clanak1/cross.png"></td>
                 <td><img src="{{ asset('/') }}flexovalFiles/clanak1/cross.png"></td>
             </tr>
             <tr>
-                <td>Быстрый <br>результат</td>
-                <td><img src="{{ asset('/') }}flexovalFiles/clanak1/check_w.png"/></td>
-                <td><img src="{{ asset('/') }}flexovalFiles/clanak1/cross.png"></td>
-                <td><img src="{{ asset('/') }}flexovalFiles/clanak1/check_g.png"></td>
-            </tr>
-            <tr>
-                <td>Безопасно для <br>кожи</td>
+                <td>Brzi rezultat</td>
                 <td><img src="{{ asset('/') }}flexovalFiles/clanak1/check_w.png"/></td>
                 <td><img src="{{ asset('/') }}flexovalFiles/clanak1/cross.png"></td>
                 <td><img src="{{ asset('/') }}flexovalFiles/clanak1/check_g.png"></td>
             </tr>
             <tr>
-                <td>Надежная фиксация<br>голеностопа</td>
+                <td>Bezbedan za kožu</td>
                 <td><img src="{{ asset('/') }}flexovalFiles/clanak1/check_w.png"/></td>
                 <td><img src="{{ asset('/') }}flexovalFiles/clanak1/cross.png"></td>
                 <td><img src="{{ asset('/') }}flexovalFiles/clanak1/check_g.png"></td>
             </tr>
             <tr>
-                <td>Незаметен под <br>одеждой</td>
+                <td>Sigurna podrška za skočni zglob</td>
+                <td><img src="{{ asset('/') }}flexovalFiles/clanak1/check_w.png"/></td>
+                <td><img src="{{ asset('/') }}flexovalFiles/clanak1/cross.png"></td>
+                <td><img src="{{ asset('/') }}flexovalFiles/clanak1/check_g.png"></td>
+            </tr>
+            <tr>
+                <td>Nevidljiv ispod odeće</td>
                 <td><img src="{{ asset('/') }}flexovalFiles/clanak1/check_w.png"/></td>
                 <td><img src="{{ asset('/') }}flexovalFiles/clanak1/cross.png"></td>
                 <td><img src="{{ asset('/') }}flexovalFiles/clanak1/cross.png"></td>
             </tr>
             <tr>
-                <td>Доступная цена</td>
+                <td>Prihvatljiva cena</td>
                 <td><img src="{{ asset('/') }}flexovalFiles/clanak1/check_w.png"/></td>
                 <td><img src="{{ asset('/') }}flexovalFiles/clanak1/check_g.png"></td>
                 <td><img src="{{ asset('/') }}flexovalFiles/clanak1/cross.png"></td>
@@ -281,97 +281,101 @@
 </section>
 <section class="base expert">
     <div class="container expert_inner">
-        <h2 class="titles white">Мнение <span class="orange">специалиста</span></h2>
-        <div class="caption">
-            <p>Александр Воронов</p>
-            <p>персональный тренер</p>
-        </div>
+        <h2 class="titles white">MIŠLJENJE <span class="orange">STRUKE</span></h2>
+        {{--<div class="caption">--}}
+            {{--<p>Александр Воронов</p>--}}
+            {{--<p>персональный тренер</p>--}}
+        {{--</div>--}}
         <div class="expert_text">
-            <p>В спортзал люди приходят с разными целями: набрать идеальную форму, сбросить избыточный вес, для общего оздоровления организма. Как правило всех этих людей объединяет желание получить результат за максимально короткий отрезок времени.</p>
-            <p>Результатом этого могут стать микротравмы, полученные из-за избыточных нагрузок. Для эффективных и безопасных тренировок, подразумевающих нагрузки на голеностоп рекомендую всем своим подопечным манжет <b>Safe Brace</b>.</p>
-            <p>Он способен не только предотвратить возможные травмы, но и снижает общую нагрузку на голеностоп, что позволяет проводить более эффективные тренировки. Со слов наших посетителей <b>Safe Brace</b> также замечательно подходит для пеших походов на природу, физической работы с большим количеством ходьбы или при возрастной “тяжести” в ногах.</p>
+            <p>Ljudi dolaze u teretanu sa različitim ciljevima: Da dođu u savršenu formu, da izgube višak kilograma, za opšte poboljšanje tela. Po pravilu, sve ove ljude ujedinjuje želja da se rezultati postignu u što kraćem roku.</p>
+            <p>Rezultat ovoga može biti mikrotrauma nastala usled prekomernih opterećenja. Za efikasne i bezbedne vežbe koje uključuju opterećenje članka, svima preporučujem Flexoval steznik.</p>
+            <p>U stanju je ne samo da spreči moguće povrede, već i da smanji ukupno opterećenje na članak, što omogućava efikasnije vežbanje. Prema rečima naših posetilaca, Flexoval steznik je odličan i za pešačenje u prirodi i fizički rad sa puno hodanja.</p>
         </div>
     </div>
 </section>
 <section class="base feedback">
-    <h2 class="titles"><span class="orange">Отзывы от тех</span>, кто уже попробовал <span class="orange">safe brace</span></h2>
+    <h2 class="titles"><span class="orange">UTISCI </span>ONIH KOJI SU VEĆ ISPROBALI <span class="orange">FLEXOVAL</span> STEZNIK ZA ČLANAK</h2>
     <div class="feedback_slider">
         <div class="feedback_slide">
             <div class="img_wrapper"><img src="{{ asset('/') }}flexovalFiles/clanak1/f1.jpg"></div>
             <div class="comment">
-                <h4>Андрей, 34 года</h4>
-                <p>Играю по выходным в мини-футбол в зале. У нас тут целый «чемпионат» сложился. И как назло сильное растяжение связок голеностопа. Команда на меня рассчитывает, а тут такая фигня… Начал искать в инете надежный фиксатор. Остановил свой выбор на <b>Safe Brace</b>. Покупкой очень доволен – как влитой манжет на ногу сел, не натирает, липучка позволяет быстро поменять силу фиксации, боль в ноге с ним почти не чувствуется – достойная вещь!</p>
+                <h4>Andrej, 34 godine</h4>
+                <p>Kolena su me bolela kada bih išao niz i uz stepenice. Sada sam kupio ovaj steznik za kolena i osećam se mnogo bolje.
+                    Izgleda da moja kolena imaju snage da izdrže moje svakodnevne aktivnosti. Odličan proizvod!</p>
             </div>
         </div>
         <div class="feedback_slide">
             <div class="img_wrapper"><img src="{{ asset('/') }}flexovalFiles/clanak1/f2.jpg"></div>
             <div class="comment">
-                <h4>Елена, 54 года</h4>
-                <p>Мало того, что на работе не один километр в день наматываю, так ещё после нее надо продуктов себе с супругом закупить, так еще и старшенькой с внучками надо завести, чтоб всякую дрянь не ели. Под конец дня ощущаю просто дикую тяжесть в ногах. <b>Сайф брейс</b> стали для меня настоящим спасением. Носить их весь день нельзя, но под вечер, когда ноги сильно отекают нормально ходить только с этими манжетами, могу – не знаю, как я бы без них вообще передвигалась сейчас.</p>
+                <h4>Helena, 51 godina</h4>
+                <p>Moji roditelji pate od jakih bolova u kolenima. Prema njihovim rečima, ovaj steznik za kolena im pruža podršku i udobnost koji su potrebni kako bi se kretali bez poteškoća.
+                    Drago mi je što sam pronašla ovaj steznik i toplo ga preporučujem svima koji imaju slične probleme.</p>
             </div>
         </div>
         <div class="feedback_slide">
             <div class="img_wrapper"><img src="{{ asset('/') }}flexovalFiles/clanak1/f3.jpg"></div>
             <div class="comment">
-                <h4>Виталий, 43 года</h4>
-                <p>Из-за короновируса лишился работы, подрабатываю курьером. После работы в офисе целый день быть на ногах очень тяжко. <b class="blue">Safe Brace</b> мне один спортсмен знакомый посоветовал. Надеваю его, когда ноги особенно сильно устают. Особенно он спасает, когда на 9-10 этаж доставка, а лифт сломан. Всем рекомендую – манжет стоит своих денег.</p>
+                <h4>Dragan, 43 godine</h4>
+                <p>Isprobao sam toliko različitih vrsta steznika otkad sam istrošio hrskavicu pre 10 godina.
+                    Ovi steznici za kolena su vrlo udobni i pružaju odličnu potporu. Ranije sam kupovao jeftine steznike koji su bili beskorisni.
+                    Na kraju sam zaključio da su ovo najbolji steznici za kolena koje sam ikad kupio.</p>
             </div>
         </div>
     </div>
 </section>
 <section class="base simple_steps">
-    <h2 class="titles white">3 простых шага для заказа <br><span class="black">safe brace</span></h2>
+    <h2 class="titles white">3 JEDNOSTAVNA KORAKA ZA PORUČIVANJE <br><span class="black">STEZNIKA ZA ČLANAK</span></h2>
     <div class="container steps">
         <div class="step">
             <img src="{{ asset('/') }}flexovalFiles/clanak1/step1.png" alt="картинка">
-            <p>Заполните форму обратной связи</p>
+            <p>Unesite svoje podatke na našem sajtu</p>
         </div>
         <div class="step">
             <img src="{{ asset('/') }}flexovalFiles/clanak1/step2.png" alt="картинка">
-            <p>Дождитесь звонка оператора</p>
+            <p>Kontaktiraćemo vas da potvrdimo porudžbinu</p>
         </div>
         <div class="step">
             <img src="{{ asset('/') }}flexovalFiles/clanak1/step3.png" alt="картинка">
-            <p>Оплатите товар после успешного получения</p>
+            <p>Bez plaćanja unapred</p>
         </div>
     </div>
 </section>
 <div class="base action">
     <div class="action_item">
         <p>
-            <span>товар отправляется<br class="br1"></span>
-            <span class="color1">в любую точку страны<br></span>
-            <span>в течение 5-10 рабочих дней</span>
+            <span>ROBA SE ŠALJE <br class="br1"></span>
+            <span class="color1">BILO GDE U SRBIJI<br></span>
+            <span>U ROKU OD 1-2 RADNA DANA</span>
         </p>
         <p>
-            <span>без предоплаты<br class="br2"></span>
-            <span class="color1">вы <br class="br3">оплачиваете товар <br class="br4"></span>
-            <span>только </span><span class="color2"><br class="br6">по факту его получения</span>
+            <span>PAKET PLAĆATE<br class="br2"></span>
+            <span class="color1"><br class="br3">KURIRU <br class="br4"></span>
+            <span class="color2"><br class="br6">PO PRIJEMU POŠILJKE</span>
         </p>
         <p>
-            <span>возможность отказаться <br>от покупки </span>
-            <span class="color1"><br class="br5">в течение <br class="br2">14 рабочих дней</span>
+            <span>UKOLIKO NE BUDETE <br/>ZADOVOLJNI </span>
+            <span class="color1"><br class="br2">VRATIĆEMO VAM NOVAC</span>
         </p>
     </div>
 </div>
 <section class="base banner bottom_block">
     <div class="container main_title">
-        <h3 class="h1">Регулируемый эластичный манжет на лодыжку<br><span>Safe <span>Brace</span></span></h3>
+        <h3 class="h1">PODESIVI STEZNIK ZA ČLANAK<br><span><span>FLEXOVAL</span></span></h3>
     </div>
     <div class="container smart">
         <ul class="list">
-            <li>Стабилизирует голеностопный сустав</li>
-            <li>Ускоряет процесс восстановления</li>
-            <li>Защищает сустав от перегрузок, травм и растяжений связок</li>
+            <li>Stabilizuje članak</li>
+            <li>Ubrzava proces oporavka</li>
+            <li>Štiti zglob od preopterećenja, povreda i uganuća</li>
         </ul>
         <div class=smart_inner>
             <div class="stock">
-                <p>В наличии<br>осталось</p>
-                <p>9<small>шт</small></p>
+                <p>ZDRAV ČLANAK BEZ <br> POVREDA</p>
+                <p>&nbsp;</p>
             </div>
             <div class="sale">
-                <p>скидка</p>
-                <p>-53<small>%</small></p>
+                <p>popust</p>
+                <p>-40<small>%</small></p>
             </div>
         </div>
         <div class="sale_block_wrap">
