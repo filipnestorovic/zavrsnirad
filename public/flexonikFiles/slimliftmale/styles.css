@@ -263,7 +263,7 @@ h2 span {
 
 .header_section {
     padding: 0 0 43px;
-    background: #e4ebf3 url(main_bg2.jpg)/*tpa=http://mega-hit.org/slim-body/images/main_bg2.jpg*/
+    background: #234cc0 url(main_bg2.jpg)/*tpa=http://mega-hit.org/slim-body/images/main_bg2.jpg*/
     center top no-repeat;
     height: 640px;
 }
@@ -868,8 +868,8 @@ h2 span {
 
 .order_section {
     padding: 25px 0 10px;
-    background: #e4ebf3 url(last-bg.jpg)/*tpa=http://mega-hit.org/slim-body/images/last-bg.jpg*/
-    center top no-repeat;
+    background: #234cc0 url(last-bg.jpg)/*tpa=http://mega-hit.org/slim-body/images/last-bg.jpg*/
+    center bottom no-repeat;
 }
 
 .order_section .info {
@@ -1160,7 +1160,7 @@ h2 span {
     }
     /* header */
     .header_section {
-        background: #e4ebf3 url(tablet-main-bg.jpg)/*tpa=http://mega-hit.org/slim-body/images/tablet-main-bg.jpg*/
+        background: #234cc0 url(tablet-main-bg.jpg)/*tpa=http://mega-hit.org/slim-body/images/tablet-main-bg.jpg*/
         center top no-repeat;
     }
     .header_section .top_block ul {
@@ -1338,7 +1338,7 @@ h2 span {
     /* order */
     .order_section {
         padding: 15px 0 30px;
-        background: #e4ebf3 url(tablet-last-bg.jpg)/*tpa=http://mega-hit.org/slim-body/images/tablet-last-bg.jpg*/
+        background: #234cc0 url(tablet-last-bg.jpg)/*tpa=http://mega-hit.org/slim-body/images/tablet-last-bg.jpg*/
         center top no-repeat;
     }
     .order_section .info {
@@ -1382,7 +1382,7 @@ h2 span {
     .header_section {
         padding: 20px 0 33px;
         height: 892px;
-        background: #e4ebf3 url(mobile-main-bg.jpg)/*tpa=http://mega-hit.org/slim-body/images/mobile-main-bg.jpg*/
+        background: #234cc0 url(mobile-main-bg.jpg)/*tpa=http://mega-hit.org/slim-body/images/mobile-main-bg.jpg*/
         center -15px no-repeat;
     }
     .header_section .top_block {
