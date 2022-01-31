@@ -283,8 +283,8 @@
     <div class="container expert_inner">
         <h2 class="titles white">MIŠLJENJE <span class="orange">STRUKE</span></h2>
         {{--<div class="caption">--}}
-            {{--<p>Александр Воронов</p>--}}
-            {{--<p>персональный тренер</p>--}}
+            {{--<p>&nbsp;</p>--}}
+            {{--<p>&nbsp;</p>--}}
         {{--</div>--}}
         <div class="expert_text">
             <p>Ljudi dolaze u teretanu sa različitim ciljevima: Da dođu u savršenu formu, da izgube višak kilograma, za opšte poboljšanje tela. Po pravilu, sve ove ljude ujedinjuje želja da se rezultati postignu u što kraćem roku.</p>
@@ -407,7 +407,7 @@
                         </div>
                     </div>
                 </div>
-                <form class="main-order-form sale_form" action="{{$orderRoute}}" method="POST">
+                <form class="main-order-form sale_form" action="{{$orderRoute}}" method="POST" id="footer">
                     {{ csrf_field() }}
                     @include('lander.naturapharm.components.form_hidden_fields')
                     <input class="input name" name="name" placeholder="Ime i prezime" required type="text">
