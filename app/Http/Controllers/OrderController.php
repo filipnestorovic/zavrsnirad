@@ -161,6 +161,8 @@ class OrderController extends Controller
                         $size = "Nije izabrano";
                     }
                     $customerNote = "Veličina: " . $size;
+                } else {
+                    $customerNote = null;
                 }
 
                 if($request->get('bfgratis') != null) {
