@@ -122,7 +122,8 @@ class Order
     public function getupCrossSellOrder($upcrosssell_id) {
         $result = DB::table('up_cross_sell')
             ->leftJoin('order', 'up_cross_sell.order_id', '=', 'order.id_order')
-            ->selectRaw('*, up_cross_sell.price as UpCrossSellPrice, up_cross_sell.quantity as UpCrossSellQuantity')
+            ->join('product','up_cross_sell.upcrosssell_product_id','=','product.id_product')
+            ->selectRaw('*, up_cross_sell.price as UpCrossSellPrice, up_cross_sell.quantity as UpCrossSellQuantity, product.product_name as uc_product_name')
             ->where('id_up_cross_sell','=',$upcrosssell_id)
             ->first();
 

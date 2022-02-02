@@ -524,6 +524,7 @@ class OrderController extends Controller
                     $upCrossSellDetails['country_code'] = $originalOrder->country_code;
                     $upCrossSellDetails['currency_code'] = $originalOrder->currency_code;
                     $upCrossSellDetails['currency_symbol'] = $originalOrder->currency_symbol;
+                    $upCrossSellDetails['shipping_cost'] = $originalOrder->shipping_cost;
                     $upCrossSellDetails['amount'] = $upCrossSellDetails['UpCrossSellPrice'];
                     $upCrossSellDetails = (object)$upCrossSellDetails;
 

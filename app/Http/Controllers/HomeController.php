@@ -329,7 +329,7 @@ class HomeController extends Controller
 
         if(isset($this->data['order']->id_up_cross_sell)) {
             $this->data['fb_event'] = "Purchase2";
-            $this->data['successUpCrossSell'] = 1;
+            $this->data['successUpCrossSell'] = $this->data['order'];
         } else {
             $this->data['fb_event'] = "Purchase";
         }
