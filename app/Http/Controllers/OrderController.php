@@ -156,10 +156,12 @@ class OrderController extends Controller
                 $this->modelOrder->price = $price;
 
                 $size = $request->get('size');
-                if($size === "0") {
-                    $size = "Nije izabrano";
+                if($size != null) {
+                    if($size === "0") {
+                        $size = "Nije izabrano";
+                    }
+                    $customerNote = "Veličina: " . $size;
                 }
-                $customerNote = "Veličina: " . $size;
 
                 if($request->get('bfgratis') != null) {
                     $customerNote = $customerNote . 'BF Gratis';
