@@ -124,8 +124,8 @@
                             @include('lander.naturapharm.components.form_hidden_fields')
                             <input type="text" name="name" class="form-input" placeholder="Ime i prezime" required/>
                             <input type="text" name="phone" class="form-input" placeholder="Broj telefona" required/>
-                            {{--<input type="text" name="shipping_address" class="form-input" placeholder="Adresa" required/>--}}
-                            {{--<input type="text" name="shipping_city" class="form-input" placeholder="Grad" required/>--}}
+                            <input type="text" name="shipping_address" class="form-input" placeholder="Adresa" required/>
+                            <input type="text" name="shipping_city" class="form-input" placeholder="Grad" required/>
                             <select class="form-input change-package-selector" id="product" name="quantity" required>
                                 @foreach($prices as $singlePrice)
                                     <option value="{{ $singlePrice['quantity'] }}" placeholder="{{ $singlePrice['is_free_shipping'] }}"
