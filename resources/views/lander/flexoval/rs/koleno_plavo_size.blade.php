@@ -264,10 +264,12 @@
                     <input type="text" name="shipping_address" placeholder="Adresa" required="">
                     <input type="text" name="shipping_city" placeholder="Grad" required="">
                     <label>Veličina *</label>
-                    <select name="size" class="size">
-                        <option value="S">S</option>
-                        <option value="M">M</option>
-                        <option value="L">L</option>
+                    <select name="size" class="size" required>
+                        <option value="0">Izaberite veličinu</option>
+                        <option value="S">S (Ženski model)</option>
+                        <option value="M">M (Muškarci do 90kg)</option>
+                        <option value="L">L (Muškarci od 90kg do 115kg)</option>
+                        <option value="XL">XL (Muškarci od 115kg)</option>
                     </select>
                     <label>Količina</label>
                     <select name="quantity" class="quantity" required>
@@ -298,7 +300,7 @@
         margin-top: 20px;
         margin-bottom: 20px;
     }
-    .quantity option {
+    .quantity option, .size option {
         font-size: 1em;
     }
     select {

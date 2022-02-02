@@ -156,7 +156,10 @@ class OrderController extends Controller
                 $this->modelOrder->price = $price;
 
                 $size = $request->get('size');
-                $customerNote = $size;
+                if($size === "0") {
+                    $size = "Nije izabrano";
+                }
+                $customerNote = "Veličina: " . $size;
 
                 if($request->get('bfgratis') != null) {
                     $customerNote = $customerNote . 'BF Gratis';
@@ -209,7 +212,7 @@ class OrderController extends Controller
                                 $webhookResult = $this->createNewOrderWoocommerce($orderDetails);
                             } catch(\Exception $exception){
                                 Log::error("Error: Woocommerce Webhook \nMessage: " . $exception->getMessage() . "\nDetails: ". json_encode($orderDetails, JSON_PRETTY_PRINT));
-                                return redirect()->back()->withErrors([$this->customerErrorMessage]);
+                            return redirect()->back()->withErrors([$this->customerErrorMessage]);
                             }
                         }
 
