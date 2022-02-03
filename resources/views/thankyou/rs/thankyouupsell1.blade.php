@@ -299,52 +299,48 @@
         <div class="success-page__body">
             <div class="success-page__body-wrapper">
                 @if(isset($successUpCrossSell))
-                    <div class="alert alert-success">
-                        Hvala! Proizvod je uspešeno dodat Vašoj porudžbini!
-                    </div>
-                    <br>
+                <div class="alert alert-success">
+                    Hvala! Proizvod je uspešeno dodat Vašoj porudžbini!
+                </div>
+                <br>
                 @endif
+                <div id="beforeForm"></div>
                 @if(isset($order))
                 <div id="currentOrder">
                     <h3 class="success-page__text specialOfferHeading">
                         PREGLED VAŠE PORUDŽBINE
                     </h3>
                     <table class="table borderless">
-                        <tr>
+                        <tr id="basicOrderItems">
                             <td>{{ $order->quantity }} x {{ $order->product_name }}</td>
-                            <td>{{ $order->price }} {{ $order->currency_symbol }}</td>
+                            <td><span class="sumItem">{{ $order->price }}</span> {{ $order->currency_symbol }}</td>
                         </tr>
                         @if(isset($successUpCrossSell))
-                            @php $upCrossSellSum = $successUpCrossSell->UpCrossSellPrice; @endphp
-                            <tr style="color: #3cd654;font-weight: bold;">
-                                <td>{{ $successUpCrossSell->UpCrossSellQuantity }} x {{ $successUpCrossSell->uc_product_name }}</td>
-                                <td>{{ $successUpCrossSell->UpCrossSellPrice }} {{ $order->currency_symbol }}</td>
-                            </tr>
-                        @else
-                            @php $upCrossSellSum = 0; @endphp
+                        <tr style="color: #3cd654;font-weight: bold;">
+                            <td>{{ $successUpCrossSell->UpCrossSellQuantity }} x {{ $successUpCrossSell->uc_product_name }}</td>
+                            <td><span class="sumItem">{{ $successUpCrossSell->UpCrossSellPrice }}</span> {{ $order->currency_symbol }}</td>
+                        </tr>
                         @endif
                         <tr>
                             <td>Dostava</td>
                             <td>
                                 @if($order->is_free_shipping)
-                                    @php $shippingCost = 0; @endphp
                                     <b>BESPLATNA</b>
                                 @else
-                                    @php $shippingCost = $order->shipping_cost; @endphp
-                                    {{ $shippingCost }} {{ $order->currency_symbol }}
+                                    <span class="sumItem">{{ $order->shipping_cost }}</span> {{ $order->currency_symbol }}
                                 @endif
                             </td>
                         </tr>
                         <tr>
                             <th>UKUPNO</th>
-                            <th style="font-size: 19px;">{{ round($order->price + $shippingCost + $upCrossSellSum, 0) }} {{ $order->currency_symbol }}</th>
+                            <th style="font-size: 19px;"><span id="orderSum"></span> {{ $order->currency_symbol }}</th>
                         </tr>
                     </table>
                 </div>
                 @endif
                 @if(isset($order) && !isset($successUpCrossSell))
                     @if(isset($upCrossSells) && count($upCrossSells)>1)
-                    <form action="/upCrossSellOrder" method="POST" id="upCrossSellOrderForm">
+                    <form method="POST" id="upCrossSellOrderForm">
                         {{ csrf_field() }}
                         <input type="hidden" name="orderIdUpCrossSell" value="{{ $order->id_order }}"/>
                         <input type="hidden" name="variationIdUpCrossSell" value="{{ $order->variation_id }}"/>
@@ -409,8 +405,11 @@
     </div>
 </div>
 <script>
+    const token = '{{ csrf_token() }}';
+    const baseURL = "{{ asset('/') }}";
+
     $(document).ready(function() {
-        $('.alert-success').slideDown("slow", function() {});
+        $('#successUpCrossSell').slideDown("slow", function() {});
         function scrollToForm() {
             $('html, body').animate({
                 scrollTop: $("#upCrossSellOrderForm").offset().top+100
@@ -421,6 +420,45 @@
         }
         $('#cancelUpCrossSell').click(function() {
             $('#upCrossSellOrderForm').slideUp("slow", function() {});
+        });
+
+        function orderTotal() {
+            let orderSum = 0;
+            $('.sumItem').each(function() {
+                let singleItem = Number($(this).html());
+                orderSum += singleItem;
+            });
+            $('#orderSum').html(orderSum.toFixed(0));
+        }
+        orderTotal();
+
+        $(document).on('submit','#upCrossSellOrderForm',function(e) {
+            e.preventDefault();
+            let formData = $(this).serialize();
+
+            $.ajax({
+                type: "POST",
+                url: baseURL + "upCrossSellOrder",
+                data: formData,
+                success: function (data) {
+                    console.log(data);
+                    $('#upCrossSellOrderForm').slideUp("slow", function() {
+                        $('#beforeForm').html(`<div class="alert alert-success">Hvala! Proizvod je uspešeno dodat Vašoj porudžbini!</div>`).slideDown("slow", function() {});
+                    });
+                    let trSales = `<tr style="color: #3cd654;font-weight: bold;">`;
+                    trSales += `<td>` + data.UpCrossSellQuantity + ` x ` + data.uc_product_name + `</td>`;
+                    trSales += `<td><span class="sumItem">` + data.UpCrossSellPrice + `</span> ` + data.currency_symbol + `</td>`;
+                    trSales += `</tr>`;
+                    $('#basicOrderItems').after(trSales);
+                    orderTotal();
+                },
+                error: function (data) {
+                    console.log(data);
+                    $('#upCrossSellOrderForm').slideUp("slow", function() {
+                        $('#beforeForm').html(`<div class="alert alert-danger">Greška prilikom dodavanja dodatnog proizvoda, kontaktirajte nas!</div>`).slideDown("slow", function() {});
+                    });
+                }
+            });
         });
     });
 </script>

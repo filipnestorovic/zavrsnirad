@@ -15,6 +15,7 @@ use App\Models\Product;
 use GuzzleHttp;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Session;
 use Automattic\WooCommerce\Client as WooClient;
 use Illuminate\Support\Facades\Validator;
@@ -295,8 +296,9 @@ class OrderController extends Controller
         }
 
         if($orderDetails->coupon_used != null) {
-            $customerNote = $customerNote.'Kupon: '.$orderDetails->coupon_used;
+            $jsonArray['coupon_used'] = 'Kupon: '.$orderDetails->coupon_used;
         }
+
         $jsonArray['customer_note'] = $customerNote;
 
         $jsonArray['line_items'] = array([
@@ -538,7 +540,13 @@ class OrderController extends Controller
                                     Log::error("Error: Session -  UpCrossSellPurchase - DB | Exception: " . $exception->getMessage());
                                 }
                             }
-                            return redirect()->to('/'.$originalOrder->slug.'/thankyou')->with('data', $upCrossSellDetails);
+
+                            if($request->ajax()) {
+                                return Response::json($upCrossSellDetails);
+                            } else {
+                                return redirect()->to('/'.$originalOrder->slug.'/thankyou')->with('data', $upCrossSellDetails);
+                            }
+
 //                            return redirect()->back()->with('data', $upCrossSellDetails);
                         } else {
                             return redirect()->back()->withErrors([$this->customerErrorMessage]);
