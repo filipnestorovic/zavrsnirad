@@ -142,6 +142,7 @@
                 url: baseURL + "selectProductSize",
                 data: formData,
                 success: function (data) {
+                    console.log(data);
                     $('#pickProductSizeForm').hide("down");
                     $('#beforeForm').html(`<div class="alert alert-success">Uspešno ste izabrali veličinu, hvala!</div>`).slideDown("slow", function() {});
                 },

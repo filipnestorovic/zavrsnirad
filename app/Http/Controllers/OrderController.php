@@ -671,7 +671,7 @@ class OrderController extends Controller
 
         try {
             if($response->getStatusCode() === 200) {
-                return 1;
+                return $response->getBody();
             } else {
                 return 0;
             }
