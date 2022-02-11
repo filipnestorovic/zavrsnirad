@@ -296,6 +296,7 @@ class OrderController extends Controller
 
         $jsonArray['customer_note'] = $customerNote;
 
+        $meta_size = [];
         if($size != null) {
             $meta_size = [
                 [
