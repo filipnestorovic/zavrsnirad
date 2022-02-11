@@ -57,6 +57,10 @@ Route::group([ 'middleware' => ['admin']], function() {
         Route::post('/editReview', [App\Http\Controllers\ProductController::class, 'editReview'])->name('editReview');
         Route::get('/deleteReview/{id}', [App\Http\Controllers\ProductController::class, 'deleteReview'])->name('deleteReview');
 
+        Route::get('/productSizes/{id}', [App\Http\Controllers\ProductController::class, 'getAllProductSizes'])->name('getAllProductSizes');
+        Route::post('/addProductSize', [App\Http\Controllers\ProductController::class, 'addProductSize'])->name('addProductSize');
+        Route::get('/deleteProductSize/{id}', [App\Http\Controllers\ProductController::class, 'deleteProductSize'])->name('deleteProductSize');
+
         Route::get('/getPixels', [App\Http\Controllers\PixelController::class, 'getPixels'])->name('getPixels');
         Route::get('/getPixel/{id}', [App\Http\Controllers\PixelController::class, 'getPixel'])->name('getPixel');
         Route::post('/addPixel', [App\Http\Controllers\PixelController::class, 'addPixel'])->name('addPixel');
@@ -153,6 +157,7 @@ Route::group(['middleware' => ['guest']], function () {
 
         Route::post('/order', [App\Http\Controllers\OrderController::class, 'order'])->name('order');
         Route::post('/upCrossSellOrder', [App\Http\Controllers\OrderController::class, 'upCrossSellOrder'])->name('upCrossSellOrder');
+        Route::post('/selectProductSize', [App\Http\Controllers\OrderController::class, 'selectProductSize'])->name('selectProductSize');
     };
 
     Route::get('/ajax/sendConversionApiFB', [App\Http\Controllers\HomeController::class, 'sendConversionApiFB'])->name('sendConversionApiFB');

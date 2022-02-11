@@ -68,14 +68,15 @@
             <td>{{ $singleProduct[0]["brand_name"] }}</td>
             <td>{{ $singleProduct[0]["country_name"] }}</td>
             <td>{{ $singleProduct[0]["woocommerce_product_id"] != null ? $singleProduct[0]["woocommerce_product_id"] : 'x' }}</td>
-            <td>
+            <td class="productButtons">
                 @if($singleProduct[0]["product_deleted"])
                     <span class="table-review"><a href="{{ route('restoreProduct',['id' => $singleProduct[0]["id_product"]]) }}"><button type="button" class="btn btn-success btn-rounded btn-sm my-0 restoreProductBtn">RESTORE</button></a></span>
                 @else
-                    <span class="table-edit"><button type="button" class="btn btn-primary btn-rounded btn-sm my-0 editProductBtn" data-toggle="modal" data-target="#editProduct" value="{{$singleProduct[0]["id_product"]}}">EDIT</button></span>
-                    <span class="table-remove"><a href="{{ route('deleteProduct',['id' => $singleProduct[0]["id_product"]]) }}"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0 deleteProductBtn">DELETE</button></a></span>
-                    <span class="table-review"><a href="{{ route('productReviews',['id' => $singleProduct[0]["id_product"]]) }}"><button type="button" class="btn btn-success btn-rounded btn-sm my-0 reviewsBtn">REVIEWS</button></a></span>
-                    <span class="table-pixel"><button type="button" class="btn btn-dark btn-rounded btn-sm my-0 showProductPixel" data-toggle="modal" data-target="#productPixel" value="{{$singleProduct[0]["id_product"]}}">PIXEL</button></span>
+                    <span class="table-edit"><button type="button" class="btn btn-primary btn-rounded btn-sm editProductBtn" data-toggle="modal" data-target="#editProduct" value="{{$singleProduct[0]["id_product"]}}">EDIT</button></span>
+                    <span class="table-remove"><a href="{{ route('deleteProduct',['id' => $singleProduct[0]["id_product"]]) }}"><button type="button" class="btn btn-danger btn-rounded btn-sm deleteProductBtn">DELETE</button></a></span>
+                    <span class="table-review"><a href="{{ route('productReviews',['id' => $singleProduct[0]["id_product"]]) }}"><button type="button" class="btn btn-success btn-rounded btn-sm reviewsBtn">REVIEWS</button></a></span>
+                    <span class="table-pixel"><button type="button" class="btn btn-dark btn-rounded btn-sm showProductPixel" data-toggle="modal" data-target="#productPixel" value="{{$singleProduct[0]["id_product"]}}">PIXEL</button></span>
+                    <span class="table-sizes"><a href="{{ route('getAllProductSizes',['id' => $singleProduct[0]["id_product"]]) }}"><button type="button" class="btn btn-warning btn-rounded btn-sm sizesBtn">SIZES</button></a></span>
                 @endif
              </td>
         </tr>
@@ -93,4 +94,3 @@
     </tr>
     </tbody>
 @endif
-

@@ -6,12 +6,14 @@ use App\Models\Brand;
 use App\Models\Country;
 use App\Models\Pixel;
 use App\Models\Product;
+use App\Models\ProductSizes;
 use App\Models\Review;
 use App\Models\Variation;
 use App\Traits\UploadTrait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
+use Response;
 
 class ProductController extends Controller
 {
@@ -483,6 +485,61 @@ class ProductController extends Controller
         } catch (\Exception $exception) {
             Log::error("Error: Deleting review | Exception: " . $exception->getMessage());
             return redirect()->back()->with('error','Error on deleting review!');
+        }
+    }
+
+    public function getAllProductSizes($id) {
+        $allSizes = Response::json(ProductSizes::where('product_id','=',$id)->with('product')->orderBy('priority')->get())->getData();
+        $this->data['product_id'] = $id;
+        if(count($allSizes)>0) {
+            $this->data['product'] = $allSizes[0]->product;
+            $this->data['allSizes'] = $allSizes;
+        }
+        return view('admin.productSizes',$this->data);
+    }
+
+    public function addProductSize(Request $request) {
+        $product_id = $request->get('productId');
+        $size = $request->get('size');
+        $size_description = $request->get('size_description');
+        $priority = $request->get('priority');
+
+        $sizeId = $request->get('sizeId');
+
+        $productSizeModel = new ProductSizes();
+        if($sizeId === null) {
+            $productSizeModel->product_size = $size;
+            $productSizeModel->description = $size_description;
+            $productSizeModel->priority = $priority;
+            $productSizeModel->product_id = $product_id;
+
+            if($productSizeModel->save()) {
+                return redirect()->back()->with('success','The size has been added successfully!');
+            } else {
+                return redirect()->back()->with('error','Error with adding the size!');
+            }
+        } else {
+            $singleSize = ProductSizes::find($sizeId);
+            $singleSize->product_size = $size;
+            $singleSize->description = $size_description;
+            $singleSize->priority = $priority;
+
+            if($singleSize->save()) {
+                return redirect()->back()->with('success','The size has been edited successfully!');
+            } else {
+                return redirect()->back()->with('error','Error with editing the size!');
+            }
+        }
+    }
+
+    public function deleteProductSize($id) {
+        if($id != null) {
+            $singleSize = ProductSizes::find($id);
+            if($singleSize->delete()) {
+                return redirect()->back()->with('success','Tha size has been deleted successfully!');
+            } else {
+                return redirect()->back()->with('error','Error with deleting the size!');
+            }
         }
     }
 

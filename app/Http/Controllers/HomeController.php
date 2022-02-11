@@ -11,6 +11,7 @@ use App\Models\Event;
 use App\Models\Order;
 use App\Models\Country;
 use App\Models\Pixel;
+use App\Models\ProductSizes;
 use App\Models\Review;
 use App\Models\Test;
 use App\Models\Variation;
@@ -228,6 +229,9 @@ class HomeController extends Controller
 //                $this->data['orderRoute'] = route('order',['site' => $site, 'domain' => $domain]);
             $this->data['orderRoute'] = '/order';
             $this->customerData['variation_id'] = $this->returnedData['variationId'];
+
+            $productSizes = response()->json(ProductSizes::where('product_id','=',$product_id)->with('product')->orderBy('priority')->get())->getData();
+            if(count($productSizes)>0) $this->data['productSizes'] = $productSizes;
 
             $this->data['upCrossSells'] = $this->getProductUpAndCrossSells($product->sku, $country_id);
 

@@ -12,6 +12,9 @@ class Product extends Model
 {
     use HasFactory;
 
+    protected $table = 'product';
+    protected $primaryKey = 'id_product';
+
     public $product_name;
     public $product_sku;
     public $product_slug;

@@ -16,6 +16,7 @@ class Order
     public $quantity;
     public $price;
     public $is_order_with_free_shipping;
+    public $order_note;
     public $coupon_used;
     public $variation_id;
     public $test_variation_id;
@@ -165,5 +166,14 @@ class Order
             ->orderByDesc('order.created_at');
 
         return $result->first();
+    }
+
+    public function updateOrderNote($id) {
+        $result = DB::table('order')
+            ->where('id_order', '=',$id)
+            ->update([
+                'note' => $this->order_note,
+            ]);
+        return $result;
     }
 }

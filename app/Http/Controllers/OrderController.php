@@ -156,18 +156,13 @@ class OrderController extends Controller
 
                 $this->modelOrder->price = $price;
 
+                $customerNote = null;
+
                 $size = $request->get('size');
                 if($size != null) {
                     if($size === "0") {
                         $size = "Nije izabrano";
                     }
-                    $customerNote = "Veličina: " . $size;
-                } else {
-                    $customerNote = null;
-                }
-
-                if($request->get('bfgratis') != null) {
-                    $customerNote = $customerNote . 'BF Gratis';
                 }
 
                 try {
@@ -207,7 +202,7 @@ class OrderController extends Controller
                         //webhooks
                         if($orderDetails->woocommerce_product_id === null) {
                             try {
-                                $webhookResult = $this->sendWebhook($orderDetails, $brandUrl, $gratisProduct, $customerNote);
+                                $webhookResult = $this->sendWebhook($orderDetails, $brandUrl, $gratisProduct, $customerNote, $size);
                             } catch(\Exception $exception){
                                 Log::error("Error: ServerWombat Webhook \nMessage: " . $exception->getMessage() . "\nDetails: ". json_encode($orderDetails, JSON_PRETTY_PRINT));
                                 return redirect()->back()->withErrors([$this->customerErrorMessage]);
@@ -246,7 +241,7 @@ class OrderController extends Controller
         }
     }
 
-    public function sendWebhook($orderDetails, $brandUrl, $gratisProduct = null, $customerNote = null){
+    public function sendWebhook($orderDetails, $brandUrl, $gratisProduct = null, $customerNote = null, $size = null){
 
         $client = new GuzzleHttp\Client([
             'headers' => [ 'Content-Type' => 'application/json' ]
@@ -301,12 +296,21 @@ class OrderController extends Controller
 
         $jsonArray['customer_note'] = $customerNote;
 
+        if($size != null) {
+            $meta_size = [
+                [
+                    "key" => "wb_velicina",
+                    "value" => $size,
+                ],
+            ];
+        }
+
         $jsonArray['line_items'] = array([
             'sku' => $orderDetails->sku,
             'quantity' => $orderDetails->quantity,
             'subtotal' => $orderDetails->price,
             'total' =>  $orderDetails->price,
-            'meta_data' => []
+            'meta_data' => $meta_size,
         ]);
 
         if($gratisProduct != null) {
@@ -595,6 +599,83 @@ class OrderController extends Controller
             }
         } catch(\Exception $exception) {
             Log::critical("Error: UpCrossSell Webhook error \nServer message: " . $exception->getMessage() . "\nDETAILS: " .$upCrossSellDetails);
+        }
+    }
+
+    public function selectProductSize(Request $request) {
+
+        $rules = [
+            'orderId' => ['required'],
+            'productQuantity' => ['required'],
+            'productSku' => ['required'],
+            'size' => ['required'],
+        ];
+
+        $messages = [
+//            'required' => 'Polje :attribute je obavezno!',
+        ];
+
+        $validator = Validator::make($request->all(), $rules, $messages);
+
+        if ($validator->fails()) {
+            return redirect()
+                ->back()
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+        try {
+            $orderId = $request->get('orderId');
+            $quantity = $request->get('productQuantity');
+            $sku = $request->get('productSku');
+            $size = $request->get('size');
+
+            if($size != null) {
+                $this->modelOrder->order_note = "Veličina: ".$size;
+                $updateResult = $this->modelOrder->updateOrderNote($orderId); //prvo upisivanje lokalno
+                if($updateResult) {
+                    $webhookResult = $this->webhookSelectProductSize($orderId,$quantity,$sku,$size);
+                    if($webhookResult) {
+                        return $webhookResult;
+                    } else {
+                        Log::error("InsertProductSize Webhook Error - " . $webhookResult);
+                        return 0;
+                    }
+                } else {
+                    Log::error("InsertProductSize Error - " . $updateResult);
+                    return 0;
+                }
+            }
+        } catch (\Exception $exception) {
+            Log::error("InsertProductSize Error - " . $exception->getMessage());
+            return 0;
+        }
+    }
+
+    public function webhookSelectProductSize($orderId,$quantity,$sku,$size) {
+        $client = new \GuzzleHttp\Client();
+        $url = "https://new.serverwombat.com/api/selectProductSize";
+
+        $data = [
+            'wToken' => 'AlI5hHY4Y4FaUgIDoMMSubRBCvlLCNQyJVfmHfMG',
+            'orderId' => $orderId,
+            'quantity' => $quantity,
+            'sku' => $sku,
+            'size' => $size,
+        ];
+
+        $response = $client->post($url, [
+            'form_params' => $data,
+        ]);
+
+        try {
+            if($response->getStatusCode() === 200) {
+                return 1;
+            } else {
+                return 0;
+            }
+        } catch(\Exception $exception) {
+            Log::critical("Error: Product size Webhook error \nServer message: " . $exception->getMessage() . "\nDETAILS: " .$data);
         }
     }
 
