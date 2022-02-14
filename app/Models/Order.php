@@ -38,6 +38,7 @@ class Order
                 'quantity' => $this->quantity,
                 'price' => $this->price,
                 'is_free_shipping' => $this->is_order_with_free_shipping,
+                'note' => $this->order_note,
                 'coupon_used' => $this->coupon_used,
                 'variation_id' => $this->variation_id,
                 'test_variation_id' => $this->test_variation_id,

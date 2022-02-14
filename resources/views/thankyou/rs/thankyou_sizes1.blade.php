@@ -143,8 +143,13 @@
                 data: formData,
                 success: function (data) {
                     console.log(data);
-                    $('#pickProductSizeForm').hide("down");
-                    $('#beforeForm').html(`<div class="alert alert-success">Uspešno ste izabrali veličinu, hvala!</div>`).slideDown("slow", function() {});
+                    if(data === "1") {
+                        $('#pickProductSizeForm').hide("down");
+                        $('#beforeForm').html(`<div class="alert alert-success">Uspešno ste izabrali veličinu, hvala!</div>`).show();
+                    } else {
+                        $('#pickProductSizeForm').hide("down");
+                        $('#beforeForm').html(`<div class="alert alert-danger">Greška prilikom izbora veličine, molimo da nas kontaktirate!</div>`).show();
+                    }
                 },
                 error: function (data) {
                     console.log(data);

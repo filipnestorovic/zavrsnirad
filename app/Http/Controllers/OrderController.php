@@ -165,6 +165,8 @@ class OrderController extends Controller
                     }
                 }
 
+                $this->modelOrder->order_note = "Veličina: ".$size;
+
                 try {
                     $orderId = $this->modelOrder->insertOrder();
                 } catch (\Exception $exception) {
@@ -634,12 +636,15 @@ class OrderController extends Controller
             if($size != null) {
                 $this->modelOrder->order_note = "Veličina: ".$size;
                 $updateResult = $this->modelOrder->updateOrderNote($orderId); //prvo upisivanje lokalno
+
                 if($updateResult) {
-                    $webhookResult = $this->webhookSelectProductSize($orderId,$quantity,$sku,$size);
-                    if($webhookResult) {
-                        return $webhookResult;
-                    } else {
-                        Log::error("InsertProductSize Webhook Error - " . $webhookResult);
+                    try {
+                        $webhookResult = $this->webhookSelectProductSize($orderId,$quantity,$sku,$size);
+                        if($webhookResult) {
+                            return $webhookResult;
+                        }
+                    } catch (\Exception $exception) {
+                        Log::error("InsertProductSize Webhook Error - " . $exception->getMessage());
                         return 0;
                     }
                 } else {
@@ -665,11 +670,11 @@ class OrderController extends Controller
             'size' => $size,
         ];
 
-        $response = $client->post($url, [
-            'form_params' => $data,
-        ]);
-
         try {
+            $response = $client->post($url, [
+                'form_params' => $data,
+            ]);
+
             if($response->getStatusCode() === 200) {
                 return $response->getBody();
             } else {
