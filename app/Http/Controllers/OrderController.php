@@ -681,7 +681,7 @@ class OrderController extends Controller
                 return 0;
             }
         } catch(\Exception $exception) {
-            Log::critical("Error: Product size Webhook error \nServer message: " . $exception->getMessage() . "\nDETAILS: " .$data);
+            Log::critical("Error: Product size Webhook error \nServer message: " . $exception->getMessage() . "\nDETAILS: " .json_encode($data, true));
         }
     }
 
