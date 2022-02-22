@@ -296,17 +296,19 @@ class OrderController extends Controller
             $jsonArray['coupon_used'] = 'Kupon: '.$orderDetails->coupon_used;
         }
 
-        $jsonArray['customer_note'] = $customerNote;
-
         $meta_size = [];
         if($size != null) {
             $meta_size = [
                 [
                     "key" => "wb_velicina",
-                    "value" => $size,
+                    "value" => $size.':',
                 ],
             ];
+
+            $customerNote = $customerNote.' '.$size;
         }
+
+        $jsonArray['customer_note'] = $customerNote;
 
         $jsonArray['line_items'] = array([
             'sku' => $orderDetails->sku,
