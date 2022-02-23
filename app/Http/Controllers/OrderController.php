@@ -163,9 +163,8 @@ class OrderController extends Controller
                     if($size === "0") {
                         $size = "Nije izabrano";
                     }
+                    $this->modelOrder->order_note = "Veličina: ".$size;
                 }
-
-                $this->modelOrder->order_note = "Veličina: ".$size;
 
                 try {
                     $orderId = $this->modelOrder->insertOrder();
