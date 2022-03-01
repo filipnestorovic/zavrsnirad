@@ -299,12 +299,11 @@ class OrderController extends Controller
         if($size != null) {
             $meta_size = [
                 [
-                    "key" => "wb_velicina",
-                    "value" => $size.':',
+                    "key" => "velicina",
+                    "value" => $size,
                 ],
             ];
-
-            $customerNote = $customerNote.' '.$size;
+//            $customerNote = $customerNote.' '.$size;
         }
 
         $jsonArray['customer_note'] = $customerNote;
@@ -668,6 +667,7 @@ class OrderController extends Controller
             'orderId' => $orderId,
             'quantity' => $quantity,
             'sku' => $sku,
+            'key' => 'velicina',
             'size' => $size,
         ];
 
