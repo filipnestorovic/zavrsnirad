@@ -105,7 +105,7 @@ b {
 
 
 /*form*/
-.main_form input{
+.main_form input, select {
     border: none;
     background: #fff;
     width: 100%;

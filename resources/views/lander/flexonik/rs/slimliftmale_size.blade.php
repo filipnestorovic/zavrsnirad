@@ -234,28 +234,18 @@
                 <input class="input-phone input" type="tel" name="phone" placeholder="Telefon" required="" id="phone">
                 <input class="input" type="text" name="shipping_address" placeholder="Adresa" required="">
                 <input class="input" type="text" name="shipping_city" placeholder="Grad" required="">
+                @isset($productSizes)
                 <div class="sizeDiv">
                     <span>Izaberite veličinu</span>
-                    <input type="radio" name="size" class="size" value="M" id="size-m" checked/>
-                    <label for="size-m">
-                        M (do 75kg)
-                    </label>
-                    <br>
-                    <input type="radio" name="size" class="size" value="L" id="size-l"/>
-                    <label for="size-l">
-                        L (od 75 kg do 100kg)
-                    </label>
-                    <br>
-                    <input type="radio" name="size" class="size" value="XL" id="size-xl"/>
-                    <label for="size-xl">
-                        XL (od 100kg do 120kg)
-                    </label>
-                    <br>
-                    <input type="radio" name="size" class="size" value="XXL" id="size-xxl"/>
-                    <label for="size-xxl">
-                        XXL (od 120kg)
-                    </label>
+                    @foreach($productSizes as $singleSize)
+                        <input type="radio" name="size" class="size" value="{{$singleSize->product_size}}" id="size-{{strtolower($singleSize->product_size)}}" checked/>
+                        <label for="size-{{strtolower($singleSize->product_size)}}">
+                             {{$singleSize->product_size}} ({{$singleSize->description}})
+                        </label>
+                        <br>
+                    @endforeach
                 </div>
+                @endisset
                 <button type="submit" class="button">Poručite sada</button>
             </form>
         </div>
