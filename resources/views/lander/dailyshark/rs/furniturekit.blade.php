@@ -15,12 +15,12 @@
 <header class="intro">
     <div class="intro__top">
         <h2 class="intro__title"> Furniture Kit Pro</h2>
-        <p class="intro__subtitle"> DALE A TUS MUEBLES <br>UNA NUEVA VIDA</p>
+        <p class="intro__subtitle">PODARITE SVOM NAMEŠTAJU <br>NOV ŽIVOT</p>
     </div>
     <div class="price">
         <img src="{{ asset('/') }}dailysharkFiles/furniturekit/1__1.png" alt class="price__img">
         <div class="price__box">
-            <p><b> Precio con descuento</b></p>
+            <p><b>Cena sa popustom</b></p>
             <div class="price__item">
                 <b>
                     {{ $prices[1]['amount'] }} RSD
@@ -36,41 +36,40 @@
     </div>
     <div class="builets">
         <div class="builets__list">
-            <div class="builets__item"><img src="{{ asset('/') }}dailysharkFiles/furniturekit/builets_1.png" alt class="builets__img"> Le da a la madera un aspecto original</div>
-            <div class="builets__item"><img src="{{ asset('/') }}dailysharkFiles/furniturekit/builets_2.png" alt class="builets__img"> Elimina arañazos y oculta astillado</div>
-            <div class="builets__item"><img src="{{ asset('/') }}dailysharkFiles/furniturekit/builets_3.png" alt class="builets__img"> Limpia la suciedad, la grasa y el agua</div>
+            <div class="builets__item"><img src="{{ asset('/') }}dailysharkFiles/furniturekit/builets_1.png" alt class="builets__img"> Daje drvetu originalan izgled</div>
+            <div class="builets__item"><img src="{{ asset('/') }}dailysharkFiles/furniturekit/builets_2.png" alt class="builets__img"> Uklanja ogrebotine i sakriva oštećenja</div>
+            <div class="builets__item"><img src="{{ asset('/') }}dailysharkFiles/furniturekit/builets_3.png" alt class="builets__img"> Čisti prljavštinu i masnoću sa poda</div>
         </div>
     </div>
     <br>
     <a href="#offer" class="btn">PORUČITE SADA</a>
-    {{--<p class="intro__bottom"><span> En stock queda:</span><b> 13 piezas</b></p>--}}
     <br>
 </header>
 <main class="main">
     <section class="sect1">
         <div class="content">
             <h2 class="sect1__title"> Furniture Kit Pro</h2>
-            <p class="sect1__subtitle"> Es una herramienta universal capaz de restaurar cualquier superficie de madera y limpiarla incluso de la suciedad más profunda.</p>
+            <p class="sect1__subtitle">To je univerzalni alat koji može da obnovi bilo koju drvenu površinu i očisti je čak i od najtvrđe prljavštine.</p>
             <div class="sect1__list">
                 <div class="sect1__item">
                     <img src="{{ asset('/') }}dailysharkFiles/furniturekit/sect1_1.png" alt class="sect1__img">
-                    <p> Le da a la madera un aspecto original</p>
+                    <p>Daje drvetu originalan izgled</p>
                 </div>
                 <div class="sect1__item">
                     <img src="{{ asset('/') }}dailysharkFiles/furniturekit/sect1_2.png" alt class="sect1__img">
-                    <p> Mantiene el efecto aterciopelado en los muebles</p>
+                    <p>Održava baršunasti efekat na nameštaju</p>
                 </div>
                 <div class="sect1__item">
                     <img src="{{ asset('/') }}dailysharkFiles/furniturekit/sect1_3.png" alt class="sect1__img">
-                    <p> Limpia de la suciedad más profunda</p>
+                    <p>Čisti od najupornije prljavštine</p>
                 </div>
                 <div class="sect1__item">
                     <img src="{{ asset('/') }}dailysharkFiles/furniturekit/sect1_4.png" alt class="sect1__img">
-                    <p> Elimina arañazos y oculta astillado</p>
+                    <p>Uklanja ogrebotine i sakriva strugotine</p>
                 </div>
                 <div class="sect1__item">
                     <img src="{{ asset('/') }}dailysharkFiles/furniturekit/sect1_5.png" alt class="sect1__img">
-                    <p> Mejora aspecto natural de cualquier producto de madera.</p>
+                    <p>Poboljšava prirodan izgled bilo kod proizvoda od drveta</p>
                 </div>
             </div>
         </div>
@@ -80,9 +79,11 @@
         <div class="content">
             <h2 class="sect2__title"> Furniture Kit Pro</h2>
             <div class="sect2__inner">
-                <p> Natural y al mismo tiempo poderoso producto restaurador. Este producto fue creado sobre la base de la fórmula de los pulimentos franceses antiguos para los muebles y fue perfeccionado con la ayuda de las tecnologías modernas.</p>
+                <p>Prirodan i istovremeno moćan restorativni proizvod. Ovaj proizvod je kreiran na bazi formule starih francuskih lakova za
+                    nameštaj i usavršen je uz pomoć savremenih tehnologija.</p>
                 <img src="{{ asset('/') }}dailysharkFiles/furniturekit/sect2.png" alt class="sect2__img">
-                <p> Fácil de usar y adecuado para todas las superficies de madera, Furniture Kit Pro restaura los artículos de madera y les devuelve aspecto original sin la necesidad de solventes, abrasivos o siliconas.</p>
+                <p>Jednostavan za upotebu i pogodan za sve drvene površine, Furniture Kit Pro vraća drvenim predmetima njihov prvobitni izgled bez potrebe
+                    za rastvaračima, abrazivima ili silikonima.</p>
             </div>
             <a href="#offer" class="btn">PORUČITE SADA</a>
         </div>
@@ -94,29 +95,32 @@
                 <div class="sect3__item">
                     <img src="{{ asset('/') }}dailysharkFiles/furniturekit/sect3_1.png" alt class="sect3__img">
                     <div class="sect3__box">
-                        <h3> Para la cocina</h3>
-                        <p> Ideal para alacenas de madera, eliminará toda la grasa y la suciedad de los armarios de la cocina y con los aceites orgánicos que lo componen volverá el brillo de las superficies de madera.</p>
+                        <h3>Za kuhinju</h3>
+                        <p>Idealan je za drvene kuhinjske elemente, ukloniće svu masnoću i prljavštinu sa ormarića i vratiće stari sjaj uz pomoć organskih ulja od kojih je načinjen.</p>
                     </div>
                 </div>
                 <div class="sect3__item">
                     <img src="{{ asset('/') }}dailysharkFiles/furniturekit/sect3_2.png" alt class="sect3__img">
                     <div class="sect3__box">
-                        <h3> Para antigüedades<br> y muebles viejos</h3>
-                        <p> Furniture Kit Pro es ideal para usar en antigüedades. Contiene una mezcla de ceras y aceites naturales, y es ideal para restaurar muebles viejos. Con el Kit de muebles Pro, puede eliminar capas de suciedad y recubrimiento viejo que hacen que la superficie del producto sea antiestética y pegajosa.</p>
+                        <h3>Za antikvitete <br>i stari nameštaj</h3>
+                        <p>Furniture Kit PRo je idealan za upotrebu na antikvitetima. Sadrži mešavinu prirodnih voskova i ulja i idealan je za
+                            restauraciju starog nameštaja. Sa Furniture Kit Pro možete ukloniti slojeve prljavštine i stare premaze koji čine površinu ružnom i lepljivom.</p>
                     </div>
                 </div>
                 <div class="sect3__item">
                     <img src="{{ asset('/') }}dailysharkFiles/furniturekit/sect3_3.png" alt class="sect3__img">
                     <div class="sect3__box">
-                        <h3> Para pisos</h3>
-                        <p> Furniture Kit Pro es ideal para restaurar pisos viejos y parquet. Debido a su composición única, limpiará el piso de manchas viejas y rebeldes, eliminará los rasguños y le dará al piso de madera su aspecto original.</p>
+                        <h3>Za podove</h3>
+                        <p>Furniture Kit Pro je idealan za restauraciju starih podova i parketa. Zbog svog jedinstvenog sastava, očistiće pod od starih i
+                            tvrdokornih mrlja, ukloniti ogrebotine i dati drvenom podu originalan izgled.</p>
                     </div>
                 </div>
                 <div class="sect3__item">
                     <img src="{{ asset('/') }}dailysharkFiles/furniturekit/sect3_4.png" alt class="sect3__img">
                     <div class="sect3__box">
-                        <h3> Para PVC y otras superficies de plástico.</h3>
-                        <p> También es adecuado para su uso en PVC y otras superficies plásticas. Furniture Kit Pro no contiene partículas abrasivas. Por lo tanto, también se puede usar como pulidor de plástico, sin temor a rayar la superficie.</p>
+                        <h3>Za PVC i druge plastične površine</h3>
+                        <p>Takođe je pogodan za upotrebu na PVC i drugim plastičnim površinama. Furniture Kit Pro ne sadrži abrazivne čestice.
+                            Zbog toga se može koristiti i kao sredstvo za poliranje plastike, bez straha od grebanja površine.</p>
                     </div>
                 </div>
             </div>
@@ -125,26 +129,26 @@
     <section class="sect4">
         <img src="{{ asset('/') }}dailysharkFiles/furniturekit/sect4__top.png" alt class="sect4__top">
         <div class="content">
-            <h2 class="sect4__title"> Una solución eficaz para cualquier ocasión</h2>
+            <h2 class="sect4__title">EFIKASNO REŠENJE ZA SVAKU PRILIKU</h2>
             <div class="sect4__main">
                 <div class="sect4__inner">
                     <div class="sect4__item">
                         <img src="{{ asset('/') }}dailysharkFiles/furniturekit/sect4_1.png" alt class="sect4__img">
-                        <p> Mesas<br> y sillas</p>
+                        <p>Stolovi i stolice</p>
                     </div>
                     <div class="sect4__item">
                         <img src="{{ asset('/') }}dailysharkFiles/furniturekit/sect4_2.png" alt class="sect4__img">
-                        <p> Muebles de cocina</p>
+                        <p>Kuhinjski nameštaj</p>
                     </div>
                 </div>
                 <div class="sect4__inner">
                     <div class="sect4__item">
                         <img src="{{ asset('/') }}dailysharkFiles/furniturekit/sect4_3.png" alt class="sect4__img">
-                        <p> Muebles antiguos</p>
+                        <p>Stilski nameštaj</p>
                     </div>
                     <div class="sect4__item">
                         <img src="{{ asset('/') }}dailysharkFiles/furniturekit/sect4_4.png" alt class="sect4__img">
-                        <p> Pisos de madera</p>
+                        <p>Parket</p>
                     </div>
                 </div>
             </div>
@@ -154,7 +158,7 @@
     </section>
     <section class="sect5">
         <div class="content">
-            <h2 class="sect5__title"> Le da a la madera un aspecto original</h2>
+            <h2 class="sect5__title">DAJE DRVETU ORIGINALAN IZGLED</h2>
             <video class="video" style="display: block;" autoplay="" loop="" muted="" playsinline="">
                 <source src="{{ asset('/') }}dailysharkFiles/furniturekit/gif.mp4">
             </video>
@@ -163,26 +167,26 @@
     </section>
     <section class="sect6">
         <div class="content">
-            <h2 class="sect6__title"> Cómo utilizar<br> Furniture Kit Pro</h2>
+            <h2 class="sect6__title">KAKO KORISTITI <br>FURNITURE KIT PRO</h2>
             <div class="sect6__main">
                 <div class="sect6__item">
                     <img src="{{ asset('/') }}dailysharkFiles/furniturekit/sect6_1.png" alt class="sect6__img">
-                    <h3 class="sect6__step"> Paso 1</h3>
-                    <p> Calentar el producto hasta que esté suave y frotar la superficie con un paño</p>
+                    <h3 class="sect6__step">Korak 1</h3>
+                    <p>Zagrejte proizvod dok ne omekša i protrljajte površinu krpom</p>
                 </div>
                 <div class="sect6__item">
                     <img src="{{ asset('/') }}dailysharkFiles/furniturekit/sect6_2.png" alt class="sect6__img">
-                    <h3 class="sect6__step"> Paso 2</h3>
-                    <p> Dejar que actua durante 6 horas</p>
+                    <h3 class="sect6__step">Korak 2</h3>
+                    <p>Ostavite da deluje 6 sati</p>
                 </div>
                 <div class="sect6__item">
                     <img src="{{ asset('/') }}dailysharkFiles/furniturekit/sect6_3.png" alt class="sect6__img">
-                    <h3 class="sect6__step"> Paso 3</h3>
-                    <p> Elimine sobrante del producto con un paño limpio.</p>
+                    <h3 class="sect6__step">Korak 3</h3>
+                    <p>Uklonite višak proizvoda čistom krpom</p>
                 </div>
                 <div class="sect6__inner">
                     <img src="{{ asset('/') }}dailysharkFiles/furniturekit/sect6_4.png" alt>
-                    <p> ¡Para mejorar el efecto<br> puede repetir el proceso<b> varias veces!</b></p>
+                    <p>Da biste poboljšali efekat, <br> možete ponoviti postupak <br> u više navrata!</p>
                 </div>
             </div>
         </div>
@@ -190,30 +194,37 @@
     </section>
     <section class="sect7">
         <div class="content">
-            <h2 class="sect7__title"> Comentarios<br> de clientes</h2>
+            <h2 class="sect7__title">UTISCI <br> NAŠIH KUPACA</h2>
             <div class="reviews owl-carousel">
                 <div class="reviews__item">
                     <div class="reviews__header">
                         <img class="ava" src="{{ asset('/') }}dailysharkFiles/furniturekit/ava_1.png" alt>
-                        <p class="reviews__name"><b> Sergio</b> Madrid</p>
+                        <p class="reviews__name"><b> Srđan</b> Aleksinac</p>
                     </div>
-                    <p class="reviews__comment"> Furniture kit Pro me impresionó con su efectividad! Quedaron impecables una mesa y dos sillas viejas. También me gustaría notar un agradable olor ligero de todas las superficies tratadas. Resultó incluso eliminar una mancha vieja en la mesa.</p>
+                    <p class="reviews__comment">Komplet za nameštaj Kit Pro me je impresionirao svojom efikasnošću! Sto i dve stare stolice
+                        učinio sam da budu kao novi. Lagan i prijatan miris proizvoda ispunio je moju dnevnu sobu.
+                        Čak se ispostavilo da sam uklonio staru mrlju sa stola.</p>
                     <img src="{{ asset('/') }}dailysharkFiles/furniturekit/reviews_img_1.png" alt class="reviews__img">
                 </div>
                 <div class="reviews__item">
                     <div class="reviews__header">
                         <img class="ava" src="{{ asset('/') }}dailysharkFiles/furniturekit/ava_3.png" alt>
-                        <p class="reviews__name"><b> Alejandra</b> Toledo</p>
+                        <p class="reviews__name"><b> Aleksandra</b> Bečej</p>
                     </div>
-                    <p class="reviews__comment"> ¡Estoy absolutamente encantada! ¡Tengo un parquet viejo y su mantenimiento requiere mucho tiempo y esfuerzo, pero con esta herramienta es tan fácil! Furniture Kit Pro hizo un gran trabajo con rasguños y manchas viejas que no se podían quitar con nada, ahora parece como nuevo. Estoy muy satisfecha con Furniture Kit Pro. La casa incluso cambió de alguna manera, y lo más importante, me tomó un mínimo de esfuerzo.</p>
+                    <p class="reviews__comment">Apsolutno sam oduševljena! Imam stari parket i njegovo održavanje zahtevalo je mnogo truda.
+                        Sa ovim proizvodom to je postalo neverovatno lako!
+                        Furniture Pro Kit je odlično uradio svoj posao i uklonio stare ogrebotine i mrlje koje ništa nije moglo da ukloni.
+                        Veoma sam zadovoljna, čak se i kuća na neki načim promenila, a najvažnije je što mi je trebalo minimalno truda.</p>
                     <img src="{{ asset('/') }}dailysharkFiles/furniturekit/reviews_img_3.png" alt class="reviews__img">
                 </div>
                 <div class="reviews__item">
                     <div class="reviews__header">
                         <img class="ava" src="{{ asset('/') }}dailysharkFiles/furniturekit/ava_2.png" alt>
-                        <p class="reviews__name"><b> Damian</b> Santander</p>
+                        <p class="reviews__name"><b> Damjan</b> Beograd</p>
                     </div>
-                    <p class="reviews__comment"> He ordenado bajo mi propio riesgo, sin poner grandes esperanzas. Resultado fue fantastico! Furniture Kit Pro ha restaurado brillantemente una vieja encimera! Luego decidí hacer otra capa sobre la encimera una vez más y simplemente me quedé boquiabierto por el doble resultado. Recomiendo a todos, este producto es indispensable!</p>
+                    <p class="reviews__comment">Kada sam poručiio Furniture Pro nisam očekivao mnogo, čak sam i pomislio posle da je neka glupost sa interneta.
+                        Ali, naprotiv - OVAJ PROIZVOD ME JE ODUŠEVIO! Kuda god sam prošao krpom ostajao je sjajan trag, prosto neverovatno.
+                        Preporučujem svima!</p>
                     <img src="{{ asset('/') }}dailysharkFiles/furniturekit/reviews_img_2.png" alt class="reviews__img">
                 </div>
             </div>
@@ -222,23 +233,23 @@
     </section>
     <section class="sect8">
         <div class="content">
-            <h2 class="sect8__title"> ¿CÓMO ORDENAR?</h2>
+            <h2 class="sect8__title">KAKO PORUČITI?</h2>
             <div class="sect8__grid">
                 <div class="sect8__item">
                     <img src="{{ asset('/') }}dailysharkFiles/furniturekit/sect8_1.png" alt>
-                    <p><b> Solicitud</b> Deje una solicitud en nuestro sitio web</p>
+                    <p><b> Unesi podatke</b> Ostavite svoje podatke na našoj web stranici</p>
                 </div>
                 <div class="sect8__item">
                     <img src="{{ asset('/') }}dailysharkFiles/furniturekit/sect8_2.png" alt>
-                    <p><b> Llamada</b> Nuestro encargado aclara los detalles del pedido</p>
+                    <p><b> Potvdićemo porudžbinu</b> U najkraćem roku ćemo potvrditi vašu porudžbinu</p>
                 </div>
                 <div class="sect8__item">
                     <img src="{{ asset('/') }}dailysharkFiles/furniturekit/sect8_3.png" alt>
-                    <p><b> Envío</b> Entregamos sus artículos dentro de 3-7 días.</p>
+                    <p><b> Isporuka</b> Pošiljku šaljemo brzom poštom u roku od 1-2 radna dana</p>
                 </div>
                 <div class="sect8__item">
                     <img src="{{ asset('/') }}dailysharkFiles/furniturekit/sect8_4.png" alt style="width: 1.05rem;">
-                    <p><b> Entrega</b> Pagar al recibir</p>
+                    <p><b> Plaćanje</b> Plaćate kuriru tek po prijemu pošiljke</p>
                 </div>
             </div>
         </div>
@@ -247,12 +258,12 @@
 <footer class="intro">
     <div class="intro__top">
         <h2 class="intro__title"> Furniture Kit Pro</h2>
-        <p class="intro__subtitle"> DALE A TUS MUEBLES <br>UNA NUEVA VIDA</p>
+        <p class="intro__subtitle">PODARITE SVOM NAMEŠTAJU <br>NOV ŽIVOT</p>
     </div>
     <div class="price">
         <img src="{{ asset('/') }}dailysharkFiles/furniturekit/1__1.png" alt class="price__img">
         <div class="price__box">
-            <p><b> Precio con descuento</b></p>
+            <p><b>Cena sa popustom</b></p>
             <div class="price__item">
                 <b>
                     {{ $prices[1]['amount'] }} RSD
