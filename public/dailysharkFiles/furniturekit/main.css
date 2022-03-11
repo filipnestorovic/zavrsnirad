@@ -1125,8 +1125,8 @@ input::placeholder {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -1138,13 +1138,13 @@ input::placeholder {
     margin-top: -0.2rem;
 }
 .price__item b {
-    font-size: 0.48rem;
+    font-size: 0.42rem;
     color: #19cb39;
 }
 .price__item s {
     color: #aeaeae;
     font-weight: bold;
-    font-size: 0.22rem;
+    font-size: 0.20rem;
     margin-bottom: 0.1rem;
 }
 .price__box {

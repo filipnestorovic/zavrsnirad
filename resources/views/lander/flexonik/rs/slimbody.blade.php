@@ -69,7 +69,7 @@
                             <img src="{{ asset('/') }}flexonikFiles/slimbody/1.jpg">
                             <div class="text">
                                 <span>OSEĆAJ SAMOPOUZDANJA</span>
-                                Pogled u ogledalo više neće biti problem nakon
+                                Pogled u ogledalo više neće biti problem nakon korišćenja ovog proizvoda
                             </div>
                         </div>
                     </div>
@@ -114,7 +114,7 @@
     <section id="only-text-banner" class>
         <div class="container row col-xs-12 center-xs middle-xs">
             <div class="row1">
-                Slim Body je ima novi sistem tehnologije koji omogućava gubljenje dve do tri konfekcijske velićine!
+                Slim Body ima novi sistem tehnologije koji omogućava gubljenje dve do tri konfekcijske velićine!
             </div>
             <div class="lower row col-xs-12 center-xs middle-xs">
                 <div class="countdown_button row col-xs-12 center-xs middle-xs">

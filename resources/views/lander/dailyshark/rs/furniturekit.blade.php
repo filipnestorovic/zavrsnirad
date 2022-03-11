@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="{{ asset('/') }}dailysharkFiles/furniturekit/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('/') }}dailysharkFiles/furniturekit/apple-touch-icon-180x180.png">
-    {{--<link rel="stylesheet" href="https://furniturekitpro.xcartpro.com/m2/libs/carousel/owl.carousel.min.css">--}}
     <link rel="stylesheet" href="{{ asset('/') }}dailysharkFiles/furniturekit/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&amp;display=swap" rel="stylesheet">
 </head>
@@ -24,10 +23,10 @@
             <p><b> Precio con descuento</b></p>
             <div class="price__item">
                 <b>
-                    {{ $prices[1]['originalPrice'] }} RSD
+                    {{ $prices[1]['amount'] }} RSD
                 </b>
                 <s>
-                    {{ $prices[1]['amount'] }} RSD
+                    {{ $prices[1]['originalPrice'] }} RSD
                 </s>
             </div>
         </div>
@@ -42,27 +41,9 @@
             <div class="builets__item"><img src="{{ asset('/') }}dailysharkFiles/furniturekit/builets_3.png" alt class="builets__img"> Limpia la suciedad, la grasa y el agua</div>
         </div>
     </div>
-    {{--
-    <div class="timer">
-       --}}
-    {{--
-    <h3 class="timer__title"> LA PROMOCIÓN ES VÁLIDA HASTA EL </h3>
-    --}}
-    {{--<!-- <h3 class="timer__title"> Hasta fin de la promoción queda:</h3>--}}
-    {{--<div class="timer__wrapper">--}}
-    {{--<div class="t-hour"></div>: <div class="t-min"></div>: <div class="t-sec"></div>--}}
-    {{--</div>--}}
-    {{--<div class="timer__desc">--}}
-    {{--<span> horas</span>--}}
-    {{--<span> minutos</span>--}}
-    {{--<span> segundos</span>--}}
-    {{--</div> -->--}}
-    {{--
- </div>
- --}}
     <br>
-    <a href="#offer" class="btn">  ORDENAR CON DESCUENTO</a>
-    <p class="intro__bottom"><span> En stock queda:</span><b> 13 piezas</b></p>
+    <a href="#offer" class="btn">PORUČITE SADA</a>
+    {{--<p class="intro__bottom"><span> En stock queda:</span><b> 13 piezas</b></p>--}}
     <br>
 </header>
 <main class="main">
@@ -103,7 +84,7 @@
                 <img src="{{ asset('/') }}dailysharkFiles/furniturekit/sect2.png" alt class="sect2__img">
                 <p> Fácil de usar y adecuado para todas las superficies de madera, Furniture Kit Pro restaura los artículos de madera y les devuelve aspecto original sin la necesidad de solventes, abrasivos o siliconas.</p>
             </div>
-            <a href="#offer" class="btn">  ORDENAR CON DESCUENTO</a>
+            <a href="#offer" class="btn">PORUČITE SADA</a>
         </div>
         <img src="{{ asset('/') }}dailysharkFiles/furniturekit/sect2__bottom.png" alt class="sect2__bottom">
     </section>
@@ -167,7 +148,7 @@
                     </div>
                 </div>
             </div>
-            <a href="#offer" class="btn">  ORDENAR CON DESCUENTO</a>
+            <a href="#offer" class="btn">PORUČITE SADA</a>
         </div>
         <img src="{{ asset('/') }}dailysharkFiles/furniturekit/sect5__top.png" alt class="sect4__bottom">
     </section>
@@ -274,24 +255,25 @@
             <p><b> Precio con descuento</b></p>
             <div class="price__item">
                 <b>
-                    {{ $prices[1]['originalPrice'] }} RSD
+                    {{ $prices[1]['amount'] }} RSD
                 </b>
                 <s>
-                    {{ $prices[1]['amount'] }} RSD
+                    {{ $prices[1]['originalPrice'] }} RSD
                 </s>
             </div>
         </div>
     </div>
-    <form id="offer" method="POST" class="main-order-form form" action="#">
-        <input type="text" name="name" required placeholder="Introduzca su nombre">
-        <input type="tel" name="phone" required placeholder="Introduzca su teléfono">
-        <button class="btn btn--footer" type="submit"> Ordenar</button>
-        <p class="intro__bottom"><span> En stock queda:</span><b> 13 piezas</b></p>
+    <form id="offer" method="POST" class="main-order-form form" action="{{$orderRoute}}">
+        {{csrf_field()}}
+        @include('lander.naturapharm.components.form_hidden_fields')
+        <input type="text" name="name" required placeholder="Ime i prezime">
+        <input type="tel" name="phone" required placeholder="Telefon">
+        <input type="text" name="shipping_address" placeholder="Adresa">
+        <input type="text" name="shipping_city" placeholder="Grad">
+        <button class="btn btn--footer" type="submit">Poručite</button>
     </form>
 </footer>
 <script src="{{ asset('/') }}shared_files/owl.carousel.min.js"></script>
-{{--<script src="https://furniturekitpro.xcartpro.com/m2/js/timer.js"></script>--}}
-{{--<script src="https://furniturekitpro.xcartpro.com/m2/js/common.js"></script>--}}
 <script>
     $("body").on('click', '[href*="#"]', function (e) {
         var fixed_offset = 100;
@@ -305,7 +287,8 @@
             items: 1,
             dots: true,
             nav: false,
-            autoHeight: true
+            autoHeight: true,
+            loop: true,
         });
     });
 </script>
