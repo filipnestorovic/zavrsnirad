@@ -9,6 +9,50 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('/') }}flexonikFiles/sweatshapermale/owl.carousel.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('/') }}flexonikFiles/sweatshapermale/styles.css">
     <link href="{{ asset('/') }}flexonikFiles/sweatshapermale/custom-styless.min.css" type="text/css" rel="stylesheet">
+    <style>
+        @media screen and (min-width: 640px) {
+            .button {
+                margin: 210px 0px 0px 20px;
+            }
+            .order_section .form_block {
+                margin: -55px 2px 0;
+            }
+            .order_section .wrapper {
+                width: 1220px;
+            }
+        }
+        @media screen and (max-width: 639px){
+            .header_section {
+                background-position-y: 50px;
+                padding-top: 0;
+                height: 920px;
+            }
+            .header_section .discount {
+                top: 200px;
+                left: 180px;
+            }
+            .header_section .title_block .subtitle {
+                font-size: 16px;
+                line-height: 20px;
+                letter-spacing: 0;
+            }
+            .header_section .title_block {
+                margin-bottom: 570px;
+            }
+            .header_section .button {
+                margin: 20px 0px 0px 0px;
+            }
+            .order_section .subtitle {
+                display: none;
+            }
+            .order_section .info ul {
+                visibility: hidden;
+            }
+            .order_section .form_block {
+                padding-top: 120px;
+            }
+        }
+    </style>
 </head>
 <body>
 @include('components.display_errors')
@@ -97,7 +141,7 @@
 </section>
 <section class="benefits_section">
     <div class="wrapper">
-        <h2>PREDNOSTI SWEAT SHAPER MAJICE</h2>
+        <h2>PREDNOSTI SWEAT SHAPER <br> MAJICE</h2>
         <div class="benefits_list">
             <div class="benefit_item clearfix">
                 <div class="icon"></div>
@@ -183,7 +227,7 @@
     <div class="wrapper clearfix">
         <div class="info">
             <div class="title_block">
-                <p class="subtitle">MAJICA ZA SAGOREVANJE MASTI I SAVRŠEN STRUK I TORZO</p>
+                <p class="subtitle">MAJICA ZA SAGOREVANJE <br>MASTI I SAVRŠEN STRUK I TORZO</p>
                 <h1 class="main_title">SWEAT SHAPER</h1>
             </div>
             <ul>

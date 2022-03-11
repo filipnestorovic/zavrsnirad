@@ -9,6 +9,57 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('/') }}naturapharmFiles/saunavest/owl.carousel.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('/') }}naturapharmFiles/saunavest/styles.css">
     <link href="{{ asset('/') }}naturapharmFiles/saunavest/custom-styless.min.css" type="text/css" rel="stylesheet">
+    <style>
+        @media screen and (min-width: 640px) {
+            .button {
+                margin: 210px 0px 0px 20px;
+            }
+            .order_section .form_block {
+                margin: -55px 2px 0;
+            }
+            .order_section .wrapper {
+                width: 1220px;
+            }
+            .header_section .discount {
+                left: 310px;
+            }
+            .benefits_section {
+                background-position-x: 50px;
+                background-color: #011173;
+            }
+        }
+        @media screen and (max-width: 639px){
+            .header_section {
+                background-position-y: 50px;
+                padding-top: 0;
+                height: 920px;
+            }
+            .header_section .discount {
+                top: 200px;
+                left: 180px;
+            }
+            .header_section .title_block .subtitle {
+                font-size: 16px;
+                line-height: 20px;
+                letter-spacing: 0;
+            }
+            .header_section .title_block {
+                margin-bottom: 570px;
+            }
+            .header_section .button {
+                margin: 20px 0px 0px 0px;
+            }
+            .order_section .subtitle {
+                display: none;
+            }
+            .order_section .info ul {
+                visibility: hidden;
+            }
+            .order_section .form_block {
+                padding-top: 120px;
+            }
+        }
+    </style>
 </head>
 <body>
 @include('components.display_errors')
