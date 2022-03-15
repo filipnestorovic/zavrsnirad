@@ -7,167 +7,93 @@
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <meta name="description" content="IN REGALO UN SET JAR ZIPPER BAGS">
     <link rel="shortcut icon" href="{{ asset('/') }}dailysharkFiles/trakazakupatilo/favicon.png" type="image/x-icon">
-    <style>
-        @font-face {
-            font-family: 'Gotham Pro';
-            src: url('{{ asset('/') }}fonts/GothamPro-Light.woff2') format('woff2'),
-            url('{{ asset('/') }}fonts/GothamPro-Light.woff') format('woff'),
-            url('{{ asset('/') }}fonts/GothamPro-Light.ttf') format('truetype');
-            font-weight: 300;
-            font-style: normal;
-        }
-        @font-face {
-            font-family: 'Gotham Pro';
-            src: url('{{ asset('/') }}fonts/GothamPro.woff2') format('woff2'),
-            url('{{ asset('/') }}fonts/GothamPro.woff') format('woff'),
-            url('{{ asset('/') }}fonts/GothamPro.ttf') format('truetype');
-            font-weight: 400;
-            font-style: normal;
-        }
-        @font-face {
-            font-family: 'Gotham Pro';
-            src: url('{{ asset('/') }}fonts/GothamProMedium.woff2') format('woff2'),
-            url('{{ asset('/') }}fonts/GothamProMedium.woff') format('woff'),
-            url('{{ asset('/') }}fonts/GothamProMedium.ttf') format('truetype');
-            font-weight: 500;
-            font-style: normal;
-        }
-        @font-face {
-            font-family: 'Gotham Pro';
-            src: url('{{ asset('/') }}fonts/GothamPro-Bold.woff2') format('woff2'),
-            url('{{ asset('/') }}fonts/GothamPro-Bold.woff') format('woff'),
-            url('{{ asset('/') }}fonts/GothamPro-Bold.ttf') format('truetype');
-            font-weight: 700;
-            font-style: normal;
-        }
-    </style>
+    <style> @font-face {font-family: 'Gotham Pro';src: url('{{asset('/') }}fonts/GothamPro-Light.woff2') format('woff2'), url('{{asset('/') }}fonts/GothamPro-Light.woff') format('woff'), url('{{asset('/') }}fonts/GothamPro-Light.ttf') format('truetype');font-weight: 300;font-style: normal;}@font-face {font-family: 'Gotham Pro';src: url('{{asset('/') }}fonts/GothamPro.woff2') format('woff2'), url('{{asset('/') }}fonts/GothamPro.woff') format('woff'), url('{{asset('/') }}fonts/GothamPro.ttf') format('truetype');font-weight: 400;font-style: normal;}@font-face {font-family: 'Gotham Pro';src: url('{{asset('/') }}fonts/GothamProMedium.woff2') format('woff2'), url('{{asset('/') }}fonts/GothamProMedium.woff') format('woff'), url('{{asset('/') }}fonts/GothamProMedium.ttf') format('truetype');font-weight: 500;font-style: normal;}@font-face {font-family: 'Gotham Pro';src: url('{{asset('/') }}fonts/GothamPro-Bold.woff2') format('woff2'), url('{{asset('/') }}fonts/GothamPro-Bold.woff') format('woff'), url('{{asset('/') }}fonts/GothamPro-Bold.ttf') format('truetype');font-weight: 700;font-style: normal;}</style>
     <link rel="stylesheet" href="{{ asset('/') }}dailysharkFiles/trakazakupatilo/lightbox.min.css">
     <link rel="stylesheet" href="{{ asset('/') }}dailysharkFiles/trakazakupatilo/style.css">
 </head>
 <body>
 <div class="wrap">
     <div class="header">
-        <h1 class="uppercase center white b green_bg"> NASTRO ISOLANTE</h1>
-        <h2 class="uppercase center white"> IN REGALO UN SET JAR ZIPPER BAGS </h2>
+        <h1 class="uppercase center white b green_bg">IZOLACIONA TRAKA</h1>
+        <h2 class="uppercase center white">NAJBOLJA NA TRŽIŠTU</h2>
         <img alt="" src="{{ asset('/') }}dailysharkFiles/trakazakupatilo/header_img.jpg">
-        <div class="reyt">
-            <div class="stars"><b> 4.9</b> (voti: 673)</div>
-            ordini: 21058
-        </div>
         <div class="timer_price">
-            {{--<div class="timer_block clearfix">--}}
-                {{--<p> Fine promozione in:</p>--}}
-                {{--<div class="timer b clearfix">--}}
-                    {{--<div class="timer_item hours"> 00</div>--}}
-                    {{--<div class="timer_item minutes"> 00</div>--}}
-                    {{--<div class="timer_item seconds"> 00</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
             <div class="price">
                 <div class="old">
                     {{ $prices[1]['originalPrice'] }} RSD
                 </div>
-                <div class="sale"> -50%</div>
+                <div class="sale"> -40%</div>
                 <div class="new b">
                     {{ $prices[1]['amount'] }} RSD
                 </div>
             </div>
         </div>
-        <a href="#order_form" class="button-m"> Ordina </a>
+        <a href="#order_form" class="button-m"> Poručite sada </a>
         <div class="guard_all">
-            <div class="guard"> Tutela dell'acquirente</div>
-            <div class="products_count prod1"><b> 13 pz.</b> in promozione</div>
+            <div class="guard"> Sigurna kupovina</div>
         </div>
     </div>
-    {{--<div class="video-container">--}}
-        {{--<div class="youtube" id="SdoVnrTg-Ug"></div>--}}
-    {{--</div>--}}
     <section class="opisanie">
         <h2 class="venzel">
-            <b> Nastro adesivo idrorepellente</b>
+            <b>Vodootporna lepljiva traka</b>
         </h2>
         <img alt="" class="center" src="{{ asset('/') }}dailysharkFiles/trakazakupatilo/2.jpg">
-        <p class="justify"> Il nastro isolante è un nastro autoadesivo destinato a sigillare, isolare dall'umidità e mascherare esteticamente i giunti. </p>
-        <p class="justify"> Tale novità è ampiamente utilizzata per gli impianti sanitari. La protezione dei giunti è resistente ai detergenti e alle soluzioni disinfettanti. Il nastro si attacca istantaneamente alla superficie, e la forza di adesione si mantiene per tutto il periodo di utilizzo. Il bordo protegge in modo affidabile da sporco, acqua e muffa, ed elimina la formazione di placca. </p>
+        <p class="justify">Izolaciona traka je namenjena za zatvaranje, <b>izolaciju od vlage</b> i maskiranje estetski manje lepih spojeva.</p>
+        <p class="justify">Ova novina na tržištu postala je apsolutni hit i na zapadu je <b>široko rasprostranjena u svetu sanitarija.</b>
+            Traka se odmah lepi za površinu, a čvrstoća prijanjanja se održava tokom čitavog perioda upotrebe.
+            <b>Pouzdano štiti</b> od prljavštine, vode, buđi i eliminiše <b>nakupljanje kamenca.</b></p>
     </section>
     <section>
         <img alt="" src="{{ asset('/') }}dailysharkFiles/trakazakupatilo/6.gif">
         <ul class="spisok ul_black black_ul">
-            <li> Adesione istantanea </li>
-            <li> Semplicità d'uso</li>
-            <li> Impermeabilità</li>
-            <li> Protezione contro la muffa</li>
-            <li> Capacità decorativa</li>
-            <li> Igiene costante</li>
-            <li> Resistente ai detersivi</li>
+            <li>Trenutno prijanjanje</li>
+            <li>Lakoća korišćenja</li>
+            <li>Hidroizolacija</li>
+            <li>Zaštita od buđi</li>
+            <li>Dekorativni efekat</li>
+            <li>Konstantna higijena</li>
+            <li>Otporna na deterdžente</li>
         </ul>
-        <p><a href="#order_form" class="button-m"> Ordina </a></p>
+        <p><a href="#order_form" class="button-m"> Poručite sada </a></p>
     </section>
     <section>
-        <h2 class="venzel"> Caratteristiche:</h2>
+        <h2 class="venzel"> Karakteristike:</h2>
         <ul class="ul_str">
-            <li><span> Materiale: </span> PVC </li>
-            <li><span> Colore: </span> Bianco</li>
-            <li><span> Larghezza: </span> 3,8 cm</li>
-            <li><span> Spessore: </span> 2mm</li>
-            <li><span> Lunghezza: </span> 3 м</li>
-            <li><span> Idoneo per le seguenti superfici: </span> Legno, carta da parati, vetro, metallo e molti altri </li>
+            <li><span> Materijal: </span> PVC </li>
+            <li><span> Boja: </span> Bela</li>
+            <li><span> Širina: </span> 3.8cm</li>
+            <li><span> Debljina: </span> 2mm</li>
+            <li><span> Dužina: </span> 3 metra</li>
+            <li><span> Pogodno za sledeće površine: </span> Drvo, tapete, staklo, metal i još mnogo toga </li>
         </ul>
     </section>
     <img alt="" class="center" src="{{ asset('/') }}dailysharkFiles/trakazakupatilo/tov-2.jpg">
-    <p><a href="#order_form" class="button-m"> Ordina ora</a></p>
-    <!-- i7s -->
-    <section class="opisanie">
-        <h2 class="venzel"> Regalo <br> Set Jar zipper bags </h2>
-        <p class="justify"> Original Jar Zipper Bags a forma di barattoli vintage Mason Ball non sono solo indispensabili in cucina ma anche il compagno perfetto per i viaggi e le escursioni, sono ideali per proteggere la freschezza di vari snack, frutta, verdura, cracker, biscotti e panini, ecc.</p>
-        <img src="{{ asset('/') }}dailysharkFiles/trakazakupatilo/prod-1.jpg" alt>
-    </section>
-    <section class="opisanie">
-        <ul class="ul_item ">
-            <li> Per conservare il cibo secco</li>
-            <li> Per conservare gli alimenti in frigorifero</li>
-            <li> Per conservare biscotti e dolci</li>
-            <li> Per portare all'aperto</li>
-            <li> Per colazione e pranzo</li>
-            <li> Per conservare i cosmetici</li>
-        </ul>
-    </section>
-    <section class="opisanie" style="background-color: #000; background-image: url({{ asset('/') }}dailysharkFiles/trakazakupatilo/prod.jpg); height: 700px;background-size: contain;background-position: center; background-repeat: no-repeat;">
-        <h2 class="venzel" style="color: #fff;"> Il set Jar zipper bags comprende 10 barattoli</h2>
-        <div style="margin-top:460px;">
-            <ul class="ul_item-2">
-                <li><b>3</b> 3 barattoli da 1000 ml</li>
-                <li><b>4</b> 4 barattoli da 500 ml</li>
-                <li><b>3</b> 3 barattoli da 150 ml</li>
-            </ul>
-        </div>
-    </section>
-    <!-- i7s ends -->
+    <p><a href="#order_form" class="button-m"> Poručite sada </a></p>
     <section class="b10 b10-avas">
-        <h2 class="venzel"> Recensioni </h2>
+        <h2 class="venzel"> Utisci kupaca </h2>
         <div class="hit clearfix">
             <div class="hit-left">
-                <p> Top Sale</p>
+                <p>Najprodavaniji proizvod</p>
             </div>
             <div class="hit-right">
-                <p> Voto medio:<span> 4.9/5</span></p>
+                <p> Ocena:<span> 4.9/5</span></p>
             </div>
         </div>
         <div class="reviews">
             <div class="rev">
                 <img alt="" src="{{ asset('/') }}dailysharkFiles/trakazakupatilo/ava-1.png">
-                <p> Ottimo nastro! Si installa rapidamente, non perde acqua e non si scurisce. Quando si applica, bisogna lasciarlo asciugare e tenere l'acqua lontana dal nastro per un'ora o due. Nei barattoli mia moglie mette il pranzo a me e mio figlio. </p>
-                <p class="name"><b> Salvatore Messina</b> 42 anni.</p>
+                <p>Odlična traka! Brzo se postavlja, ne propušta vodu i ne potamni. Sredio sam kuhinju i kupatilo, sve je cakum pakum i voda ne prolazi na nepoželjna mesta! Topla preporuka za ovaj proizvod!</p>
+                <p class="name"><b> Stevan Obrenović</b> 42 godine</p>
             </div>
             <div class="rev">
                 <img alt="" src="{{ asset('/') }}dailysharkFiles/trakazakupatilo/ava-2.png">
-                <p> Ho usato del nastro adesivo per coprire il giunto tra la vasca e il muro. Il nastro è flessibile e aderisce bene. Mi è piaciuto molto, ne ordinerò altri e li installerò nella doccia e nella cucina dei miei genitori. Mi è stato molto utile. Grazie, lo raccomanderò a tutti i miei amici. </p>
-                <p class="name"><b> Salvatore Pedone</b> 34 anni</p>
+                <p>Ovom trakom sam svojoj supruzi zapušio sve rupe u kuhinji! Zalepio sam je između sudopere i šporeta, više nema nakupljene vode i ostale prljavštine. Preporučujem svima da na ovaj način reše slične probleme!</p>
+                <p class="name"><b> Slaviša Gajić</b> 34 godine</p>
             </div>
             <div class="rev">
                 <img alt="" src="{{ asset('/') }}dailysharkFiles/trakazakupatilo/ava-3.png">
-                <p> È fantastico!!! Sistemazione facile e veloce, anche io sono riuscita a farlo! Veloce e pulito! Un ringraziamento speciale per i barattoli, sono super! Finalmente ho messo in ordine la mia cucina! Tutti molto felici! </p>
-                <p class="name"><b> Giovanna Buccheri</b> 29 anni.</p>
+                <p>Ove trake su jako jednostavne za korišćenje. Od agenta koji me je zvao da potvrdi porudžbinu sam zatražila više komada, verujte mi da sam sve polepila odmah! Cišćenje kupatila mi oduzima dosta manje vremena jer se ove trake jako lako brišu i nema skrivene prljavštine.</p>
+                <p class="name"><b> Dragana Lazić</b> 29 godina</p>
             </div>
         </div>
     </section>
@@ -175,18 +101,18 @@
         <ul class="deliv deliv1">
             <li>
                 <img alt="" src="{{ asset('/') }}dailysharkFiles/trakazakupatilo/deliv1-1.png">
-                <h3> Consegna</h3>
-                <p> Da 1 a 3 giorni lavorativi. </p>
+                <h3> Isporuka</h3>
+                <p> 1 do 2 radna dana</p>
             </li>
             <li>
                 <img alt="" src="{{ asset('/') }}dailysharkFiles/trakazakupatilo/deliv1-2.png">
-                <h3> Pagamento</h3>
-                <p> Il pagamento viene effettuato al ricevimento della merce</p>
+                <h3> Plaćanje</h3>
+                <p> Ne plaćate unapred, nego po prijemu</p>
             </li>
             <li>
                 <img alt="" src="{{ asset('/') }}dailysharkFiles/trakazakupatilo/deliv1-3.png">
-                <h3> Garanzia</h3>
-                <p> Controlliamo sempre la merce prima della spedizione e garantiamo il 100% di qualità</p>
+                <h3> Garancija</h3>
+                <p> Uvek proveravamo proizvod pre isporuke i garantujemo 100% kvalitet</p>
             </li>
         </ul>
     </section>
@@ -194,66 +120,56 @@
         <ul class="deliv_v2 deliv_v2_1 border_bottom">
             <li>
                 <img alt="" src="{{ asset('/') }}dailysharkFiles/trakazakupatilo/deliv_v2-1.png">
-                <h3> Richiesta</h3>
-                <p> Lasciate una richiesta sul sito web</p>
+                <h3> Poručivanje</h3>
+                <p> Unesite svoje podatke na našoj web stranici</p>
             </li>
             <li>
                 <img alt="" src="{{ asset('/') }}dailysharkFiles/trakazakupatilo/deliv_v2-2.png">
-                <h3> Telefonata </h3>
-                <p> Il nostro operatore chiamera per i dettagli dell'ordine</p>
+                <h3> Potvrda </h3>
+                <p> Kontaktiraćemo vas kako bismo potvrdili porudžbinu</p>
             </li>
             <li>
                 <img alt="" src="{{ asset('/') }}dailysharkFiles/trakazakupatilo/deliv_v2-3.png">
-                <h3> Consegna</h3>
-                <p> Consegniamo la merce entro 1-3 giorni</p>
+                <h3> Isporuka</h3>
+                <p> Robu šaljemo brzom poštom</p>
             </li>
             <li>
                 <img alt="" src="{{ asset('/') }}dailysharkFiles/trakazakupatilo/deliv_v2-4.png">
-                <h3> Pagamento</h3>
-                <p> Il pagamento viene effettuato al ricevimento della merce</p>
+                <h3> Plaćanje</h3>
+                <p> Plaćanje se vrši po pouzeću kuriru brze pošte</p>
             </li>
         </ul>
     </section>
     <div class="header footer">
-        <h1 class="uppercase center white b green_bg"> NASTRO ISOLANTE</h1>
-        <h2 class="uppercase center white"> IN REGALO UN SET JAR ZIPPER BAGS </h2>
+        <h1 class="uppercase center white b green_bg">IZOLACIONA TRAKA</h1>
+        <h2 class="uppercase center white">NAJBOLJA NA TRŽIŠTU</h2>
         <img alt="" src="{{ asset('/') }}dailysharkFiles/trakazakupatilo/header_img.jpg">
-        <div class="reyt">
-            <div class="stars"><b> 4.9</b> (voti: 673)</div>
-            ordini: 21058
-        </div>
-        <h3> Lasciate <b> una richiesta</b></h3>
-        <div class="posttile"> I nostri operatori vi contatteranno per consigliarvi e aiutarvi a piazzare il ordine</div>
+        <h3>Unesite kontakt podatke</h3>
+        <div class="posttile">U najkraćem roku ćemo potvrditi Vašu porudžbinu pozivom na broj telefona koji unesete</div>
         <div class="timer_price">
-            {{--<div class="timer_block clearfix">--}}
-                {{--<p> Fine promozione in:</p>--}}
-                {{--<div class="timer b clearfix">--}}
-                    {{--<div class="timer_item hours"> 00</div>--}}
-                    {{--<div class="timer_item minutes"> 00</div>--}}
-                    {{--<div class="timer_item seconds"> 00</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
             <div class="price">
                 <div class="old">
                     {{ $prices[1]['originalPrice'] }} RSD
                 </div>
-                <div class="sale"> -50%</div>
+                <div class="sale"> -40%</div>
                 <div class="new b">
                     {{ $prices[1]['amount'] }} RSD
                 </div>
             </div>
         </div>
-        <form id="order_form" method="POST" action="#" class="main-order-form m1-form lv2-form lv2-form1">
+        <form id="order_form" method="POST" action="{{$orderRoute}}" class="main-order-form m1-form lv2-form lv2-form1">
+            {{ csrf_field() }}
+            @include('lander.naturapharm.components.form_hidden_fields')
             <div class="input-wrap">
-                <input type="text" class="field" name="name" required placeholder="Nome">
+                <input type="text" class="field" name="name" required placeholder="Ime i prezime">
             </div>
             <div class="input-wrap">
-                <input type="tel" class="field" name="phone" required placeholder="Telefono">
+                <input type="tel" class="field" name="phone" required placeholder="Telefon">
             </div>
-            <button class="button-m"> Ordina</button>
+            <button class="button-m"> Završite porudžbinu</button>
         </form>
         <div class="guard_all">
-            <div class="guard"> Tutela dell'acquirente</div>
+            <div class="guard">Sigurna kupovina</div>
         </div>
     </div>
 </div>

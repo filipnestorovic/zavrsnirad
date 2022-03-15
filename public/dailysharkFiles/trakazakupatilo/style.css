@@ -260,7 +260,7 @@ img.center {
 
 .timer_price {
     display: flex;
-    width: 400px;
+    width: 380px;
     margin: 0 auto;
     padding: 20px 0;
     overflow: hidden;
@@ -269,7 +269,7 @@ img.center {
     float: left;
 }
 .header .price .old {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 28px;
     text-decoration: line-through;
     display: inline-block;
@@ -282,7 +282,7 @@ img.center {
     display: inline-block;
     padding: 1px 4px;
     border-radius: 2px;
-    margin-left: 4px;
+    margin-left: 10px;
     position: relative;
     top: -2px;
 }
@@ -290,6 +290,8 @@ img.center {
     color: #ff4e00;
     font-size: 40px;
     line-height: 32px;
+    float: right;
+    margin-left: 10px;
 }
 
 .button-m {
@@ -312,7 +314,7 @@ img.center {
 
 .guard_all {
     width: 370px;
-    margin: 0 auto;
+    margin-left: 160px;
     display: flex;
     flex-direction: row;
     padding: 20px 0;
@@ -322,11 +324,11 @@ img.center {
 .guard {
     background: url(guard.png) left 4px no-repeat;
     padding: 0 0 0 40px;
-    width: 150px;
-    float: left;
+    width: 240px;
+    /*float: left;*/
     border-right: 1px solid #e5e5e5;
     margin-right: 20px;
-    line-height: 20px;
+    line-height: 40px;
     height: 40px;
 }
 .prod1 {
