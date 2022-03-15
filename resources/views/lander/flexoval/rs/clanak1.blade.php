@@ -167,9 +167,9 @@
     <div class="container unique_gif">
         <p>Steznik ima i efekat mikromasaže, ubrzava zagrevanje ligamenata i poboljšava mišićnu koordinaciju stopala.</p>
         <p>Ugrađeni stabilizator zglobova i ligamenata štiti od najčešćih povreda, raspoređuje opterećenje i smanjuje rizik od razvoja artritisa.</p>
-        <div class="gif_wrap">
-            <img src="{{ asset('/') }}flexovalFiles/clanak1/giphy.gif">
-        </div>
+        {{--<div class="gif_wrap">--}}
+            {{--<img src="{{ asset('/') }}flexovalFiles/clanak1/giphy.gif">--}}
+        {{--</div>--}}
     </div>
     <div class="container unique_inner">
         <p>Lagani i prozračni neoprenski materijal održava stopala suvim, a u isto vreme zadržava toplinu</p>

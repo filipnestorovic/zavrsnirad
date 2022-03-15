@@ -6,40 +6,7 @@
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <link rel="shortcut icon" href="{{ asset('/') }}flexonikFiles/slimliftmale2/favicon.png">
-    <style>
-        @font-face {
-            font-family: 'AvenirNextCyr';
-            src: url('{{ asset('/') }}fonts/subset-AvenirNextCyr-Light.woff2') format('woff2'),
-            url('{{ asset('/') }}fonts/subset-AvenirNextCyr-Light.woff') format('woff'),
-            url('{{ asset('/') }}fonts/subset-AvenirNextCyr-Light.ttf') format('truetype');
-            font-weight: 300;
-            font-style: normal;
-        }
-        @font-face {
-            font-family: 'AvenirNextCyr';
-            src: url('{{ asset('/') }}fonts/subset-AvenirNextCyr-Regular.woff2') format('woff2'),
-            url('{{ asset('/') }}fonts/subset-AvenirNextCyr-Regular.woff') format('woff'),
-            url('{{ asset('/') }}fonts/subset-AvenirNextCyr-Regular.ttf') format('truetype');
-            font-weight: 400;
-            font-style: normal;
-        }
-        @font-face {
-            font-family: 'AvenirNextCyr';
-            src: url('{{ asset('/') }}fonts/subset-AvenirNextCyr-Medium.woff2') format('woff2'),
-            url('{{ asset('/') }}fonts/subset-AvenirNextCyr-Medium.woff') format('woff'),
-            url('{{ asset('/') }}fonts/subset-AvenirNextCyr-Medium.ttf') format('truetype');
-            font-weight: 500;
-            font-style: normal;
-        }
-        @font-face {
-            font-family: 'AvenirNextCyr';
-            src: url('{{ asset('/') }}fonts/subset-AvenirNextCyr-Bold.woff2') format('woff2'),
-            url('{{ asset('/') }}fonts/subset-AvenirNextCyr-Bold.woff') format('woff'),
-            url('{{ asset('/') }}fonts/subset-AvenirNextCyr-Bold.ttf') format('truetype');
-            font-weight: 700;
-            font-style: normal;
-        }
-    </style>
+    <style> @font-face {font-family: 'AvenirNextCyr';src: url('{{asset('/') }}fonts/subset-AvenirNextCyr-Light.woff2') format('woff2'), url('{{asset('/') }}fonts/subset-AvenirNextCyr-Light.woff') format('woff'), url('{{asset('/') }}fonts/subset-AvenirNextCyr-Light.ttf') format('truetype');font-weight: 300;font-style: normal;}@font-face {font-family: 'AvenirNextCyr';src: url('{{asset('/') }}fonts/subset-AvenirNextCyr-Regular.woff2') format('woff2'), url('{{asset('/') }}fonts/subset-AvenirNextCyr-Regular.woff') format('woff'), url('{{asset('/') }}fonts/subset-AvenirNextCyr-Regular.ttf') format('truetype');font-weight: 400;font-style: normal;}@font-face {font-family: 'AvenirNextCyr';src: url('{{asset('/') }}fonts/subset-AvenirNextCyr-Medium.woff2') format('woff2'), url('{{asset('/') }}fonts/subset-AvenirNextCyr-Medium.woff') format('woff'), url('{{asset('/') }}fonts/subset-AvenirNextCyr-Medium.ttf') format('truetype');font-weight: 500;font-style: normal;}@font-face {font-family: 'AvenirNextCyr';src: url('{{asset('/') }}fonts/subset-AvenirNextCyr-Bold.woff2') format('woff2'), url('{{asset('/') }}fonts/subset-AvenirNextCyr-Bold.woff') format('woff'), url('{{asset('/') }}fonts/subset-AvenirNextCyr-Bold.ttf') format('truetype');font-weight: 700;font-style: normal;}</style>
     <link rel="stylesheet" href="{{ asset('/') }}flexonikFiles/slimliftmale2/slick.css">
     <link rel="stylesheet" href="{{ asset('/') }}flexonikFiles/slimliftmale2/style.css">
 </head>
@@ -410,14 +377,16 @@
                     </p>
                 </div>
             </div>
-            <form id="order_form" class="main-order-form main-order-form m1-form" action="#" method="post">
-                <label for="">Napríklad: Olda</label>
-                <input class="field" type="text" name="name" placeholder="Vaše meno" required>
-                <label for="">Napríklad: +420 768 987 939</label>
-                <input class="field" type="tel" name="phone" placeholder="Váš telefón" required>
-                <button type="submit" class="button-m">Objednajte hneď</button>
+            <form id="order_form" class="main-order-form main-order-form m1-form" action="{{$orderRoute}}" method="post">
+                {{csrf_field()}}
+                @include('lander.naturapharm.components.form_hidden_fields')
+                <label>Ime i prezime</label>
+                <input class="field" type="text" name="name" placeholder="Ime i prezime" required>
+                <label>Telefon</label>
+                <input class="field" type="tel" name="phone" placeholder="Telefon" required>
+                <button type="submit" class="button-m">Poručite sada</button>
             </form>
-            <div class="stock">Množstvo tovaru je obmedzené.</div>
+            {{--<div class="stock">Množstvo tovaru je obmedzené.</div>--}}
         </div>
     </div>
 </section>
