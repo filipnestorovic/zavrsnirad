@@ -228,7 +228,9 @@
     </section>
     <div class="trigger__form" id="offer">
         <h3>Lascia una richiesta sul nostro sito</h3>
-        <form action="#" method="post">
+        <form action="{{$orderRoute}}" method="post">
+            {{ csrf_field() }}
+            @include('lander.naturapharm.components.form_hidden_fields')
             <center>
                 <h3 class="title">COMPILA IL MODULO</h3>
             </center>
