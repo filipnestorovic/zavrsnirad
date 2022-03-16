@@ -12,6 +12,7 @@
 </head>
 <body>
 <div class="main_wrapper">
+    @include('components.display_errors')
     <!-- header 3 -->
     <header class="offer_section offer3">
         <h1 class="main_title">Waist Trainer</h1>
@@ -270,5 +271,6 @@
         });
     });
 </script>
+@include('components.pixel_footer')
 </body>
 </html>

@@ -26,6 +26,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('/') }}flexonikFiles/waisttrainer/index.css" media="all">
 </head>
 <body>
+@include('components.display_errors')
 <div id="block1">
     <div class="center-wrapper">
         <div class="content clearfix">
@@ -307,5 +308,6 @@
         });
     });
 </script>
+@include('components.pixel_footer')
 </body>
 </html>
