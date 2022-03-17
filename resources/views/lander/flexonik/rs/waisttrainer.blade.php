@@ -61,8 +61,8 @@
                 <form method="post" class="right" action="{{$orderRoute}}">
                     {{csrf_field()}}
                     @include('lander.naturapharm.components.form_hidden_fields')
-                    <input value="" class="inp" placeholder="Ime i prezime" name="name" type="text">
-                    <input value="" class="inp only_number" placeholder="Telefon" name="phone" type="text">
+                    <input class="inp" placeholder="Ime i prezime" name="name" type="text" required>
+                    <input class="inp only_number" placeholder="Telefon" name="phone" type="text" required>
                     <input class="inp js_submit" value="Poručite sada" type="submit">
                 </form>
             </div>
@@ -138,8 +138,8 @@
                 <form method="post" class="right" action="{{$orderRoute}}">
                     {{csrf_field()}}
                     @include('lander.naturapharm.components.form_hidden_fields')
-                    <input value="" class="inp" placeholder="Ime i prezime" name="name" type="text">
-                    <input value="" class="inp only_number" placeholder="Telefon" name="phone" type="text">
+                    <input class="inp" placeholder="Ime i prezime" name="name" type="text" required>
+                    <input class="inp only_number" placeholder="Telefon" name="phone" type="text" required>
                     <input class="inp js_submit" value="Poručite sada" type="submit">
                 </form>
             </div>
@@ -215,8 +215,8 @@
                 <form method="post" class="right" action="{{$orderRoute}}">
                     {{csrf_field()}}
                     @include('lander.naturapharm.components.form_hidden_fields')
-                    <input value="" class="inp" placeholder="Ime i prezime" name="name" type="text">
-                    <input value="" class="inp only_number" placeholder="Telefon" name="phone" type="text">
+                    <input class="inp" placeholder="Ime i prezime" name="name" type="text" required>
+                    <input class="inp only_number" placeholder="Telefon" name="phone" type="text" required>
                     <input class="inp js_submit" value="Poručite sada" type="submit">
                 </form>
             </div>
@@ -286,8 +286,8 @@
                 <form method="post" class="right" action="{{$orderRoute}}">
                     {{csrf_field()}}
                     @include('lander.naturapharm.components.form_hidden_fields')
-                    <input value="" class="inp" placeholder="Ime i prezime" name="name" type="text">
-                    <input value="" class="inp only_number" placeholder="Telefon" name="phone" type="text">
+                    <input class="inp" placeholder="Ime i prezime" name="name" type="text" required>
+                    <input class="inp only_number" placeholder="Telefon" name="phone" type="text" required>
                     <input class="inp js_submit" value="Poručite sada" type="submit">
                 </form>
             </div>
