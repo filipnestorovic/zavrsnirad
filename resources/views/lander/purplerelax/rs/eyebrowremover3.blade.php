@@ -6,12 +6,30 @@
     <meta name="viewport" content="width=480" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-
-    <link rel="stylesheet" href="http://flawlessbrows169.xcartpro.com/m7/styles/slick.css" />
-    <link rel="stylesheet" type="text/css" href="http://flawlessbrows169.xcartpro.com/m7/styles/fontawesome.min.css">
-    <link rel="stylesheet" href="http://flawlessbrows169.xcartpro.com/m7/styles/slick-theme.css" />
-    <link rel="stylesheet" href="http://flawlessbrows169.xcartpro.com/m7/styles/main.css" />
-    <script src="http://flawlessbrows169.xcartpro.com/m7/scripts/libs.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ asset('/') }}shared_files/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ asset('/') }}purplerelaxFiles/eyebrowremover3/main.css" />
+    <style>
+        @font-face {
+            font-family: 'Rubik';
+            font-weight: 400;
+            src: url("{{ asset('/') }}fonts/Rubik-Regular.woff2") format("woff2"), url("{{ asset('/') }}fonts/Rubik-Regular.woff") format("woff"), url("{{ asset('/') }}fonts/Rubik-Regular.ttf") format("truetype");
+        }
+        @font-face {
+            font-family: 'Rubik';
+            font-weight: 500;
+            src: url("{{ asset('/') }}fonts/Rubik-Medium.woff2") format("woff2"), url("{{ asset('/') }}fonts/Rubik-Medium.woff") format("woff"), url("{{ asset('/') }}fonts/Rubik-Medium.ttf") format("truetype");
+        }
+        @font-face {
+            font-family: 'Rubik';
+            font-weight: 700;
+            src: url("{{ asset('/') }}fonts/Rubik-Bold.woff2") format("woff2"), url("{{ asset('/') }}fonts/Rubik-Bold.woff") format("woff"), url("{{ asset('/') }}fonts/Rubik-Bold.ttf") format("truetype");
+        }
+        @font-face {
+            font-family: 'Billabong';
+            src: url("{{ asset('/') }}fonts/billabong.woff2") format("woff2"), url("{{ asset('/') }}fonts/billabong.woff") format("woff"), url("{{ asset('/') }}fonts/billabong.ttf") format("truetype");
+        }
+    </style>
+    {{--<script src="http://flawlessbrows169.xcartpro.com/m7/scripts/libs.js"></script>--}}
 </head>
 <body>
 <div class="container">
@@ -36,33 +54,58 @@
         <div class="offer__price">
             <div class="offer__old old-price">
                 <p class="old-price__text">preço antigo</p>
-                <p class="old-price__num"><x-currency>€</x-currency> <x-oldprice>98</x-oldprice></p>
+                <p class="old-price__num">
+                    {{ $prices[1]['originalPrice'] }} RSD
+                </p>
             </div>
             <div class="offer__new new-price">
                 <p class="new-price__text">preço novo</p>
-                <p class="new-price__num"><x-currency>€</x-currency> <x-newprice>49</x-newprice></p>
+                <p class="new-price__num">
+                    {{ $prices[1]['amount'] }} RSD
+                </p>
             </div>
         </div>
         <a class="order-button" href="#main-form">encomendar com desconto</a>
-        {{--<h2 class="offer__timer-title">Até a promoção terminar</h2>--}}
-        {{--<div class="timer"><div class="countbox clearfix"></div></div>--}}
+        {{--
+        <h2 class="offer__timer-title">Até a promoção terminar</h2>
+        --}}
+        {{--
+        <div class="timer">
+           <div class="countbox clearfix"></div>
+        </div>
+        --}}
         <p class="offer__balance">
             Restam apenas
             <span class="balance-count">&nbsp;9&nbsp;</span>&nbsp;peças com
             desconto
         </p>
     </section>
+    {{--
     <section class="video">
-        <div class="heading">
-            <h2 class="basic-title video__title">
-                VEJA COMO FUNCIONA O FLAWLESS
-            </h2>
-        </div>
-        <div class="video__frame-wrapper">
-            <!--          <div class="youtube" style="height: 100%;" id="GigqT29s6GE"></div>-->
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/GigqT29s6GE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    </section>
+       --}}
+    {{--
+    <div class="heading">
+       --}}
+    {{--
+    <h2 class="basic-title video__title">--}}
+    {{--VEJA COMO FUNCIONA O FLAWLESS--}}
+    {{--
+ </h2>
+ --}}
+    {{--
+ </div>
+ --}}
+    {{--
+    <div class="video__frame-wrapper">
+       --}}
+    {{--<!--          <div class="youtube" style="height: 100%;" id="GigqT29s6GE"></div>-->--}}
+    {{--<iframe width="560" height="315" src="https://www.youtube.com/embed/GigqT29s6GE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>--}}
+    {{--
+ </div>
+ --}}
+    {{--
+ </section>
+ --}}
     <section class="about">
         <div class="heading">
             <h2 class="basic-title about__title">
@@ -82,13 +125,13 @@
         </div>
         <div class="slider">
             <div class="choice__slide">
-                <img class="choice__img" src="http://flawlessbrows169.xcartpro.com/m7/images/choice-1.jpg" alt="" />
+                <img class="choice__img" src="{{ asset('/') }}purplerelaxFiles/eyebrowremover3/choice-1.jpg" alt="" />
             </div>
             <div class="choice__slide">
-                <img class="choice__img" src="http://flawlessbrows169.xcartpro.com/m7/images/choice-2.jpg" alt="" />
+                <img class="choice__img" src="{{ asset('/') }}purplerelaxFiles/eyebrowremover3/choice-2.jpg" alt="" />
             </div>
             <div class="choice__slide">
-                <img class="choice__img" src="http://flawlessbrows169.xcartpro.com/m7/images/choice-3.jpg" alt="" />
+                <img class="choice__img" src="{{ asset('/') }}purplerelaxFiles/eyebrowremover3/choice-3.jpg" alt="" />
             </div>
         </div>
         <p class="choice__text">
@@ -112,35 +155,35 @@
         </div>
         <div class="description__grid">
             <div class="description__block">
-                <img class="description__img" src="http://flawlessbrows169.xcartpro.com/m7/images/1.jpg" />
+                <img class="description__img" src="{{ asset('/') }}purplerelaxFiles/eyebrowremover3/1.jpg" />
                 <div class="description__text">
                     Compacto e não ocupa muito espaço no saco de cosmética
                 </div>
             </div>
             <div class="description__block">
-                <img class="description__img" src="http://flawlessbrows169.xcartpro.com/m7/images/2.jpg" />
+                <img class="description__img" src="{{ asset('/') }}purplerelaxFiles/eyebrowremover3/2.jpg" />
                 <div class="description__text">
                     LED retroiluminado para correção precisa
                 </div>
             </div>
             <div class="description__block">
-                <img class="description__img" src="http://flawlessbrows169.xcartpro.com/m7/images/3.jpg" />
+                <img class="description__img" src="{{ asset('/') }}purplerelaxFiles/eyebrowremover3/3.jpg" />
                 <div class="description__text">
                     Portátil e alimentado por bateria
                 </div>
             </div>
             <div class="description__block">
-                <img class="description__img" src="http://flawlessbrows169.xcartpro.com/m7/images/4.jpg" />
+                <img class="description__img" src="{{ asset('/') }}purplerelaxFiles/eyebrowremover3/4.jpg" />
                 <div class="description__text">
                     Estojo em forma de rímel elegante
                 </div>
             </div>
             <div class="description__block">
-                <img class="description__img" src="http://flawlessbrows169.xcartpro.com/m7/images/5.jpg" />
+                <img class="description__img" src="{{ asset('/') }}purplerelaxFiles/eyebrowremover3/5.jpg" />
                 <div class="description__text">Seguro e hipoalergênico</div>
             </div>
             <div class="description__block">
-                <img class="description__img" src="http://flawlessbrows169.xcartpro.com/m7/images/6.jpg" />
+                <img class="description__img" src="{{ asset('/') }}purplerelaxFiles/eyebrowremover3/6.jpg" />
                 <div class="description__text">Adequado para cada menina!</div>
             </div>
         </div>
@@ -196,7 +239,7 @@
         </div>
         <div class="slider">
             <div class="reviews__slide">
-                <img class="reviews__img" src="http://flawlessbrows169.xcartpro.com/m7/images/review-1.jpg" alt="" />
+                <img class="reviews__img" src="{{ asset('/') }}purplerelaxFiles/eyebrowremover3/review-1.jpg" alt="" />
                 <h3 class="reviews__name">Sofia, 29 anos</h3>
                 <p class="reviews__text">
                     Todos os estilistas dizem que as sobrancelhas são a base do rosto,
@@ -210,7 +253,7 @@
                 </p>
             </div>
             <div class="reviews__slide">
-                <img class="reviews__img" src="http://flawlessbrows169.xcartpro.com/m7/images/review-2.jpg" alt="" />
+                <img class="reviews__img" src="{{ asset('/') }}purplerelaxFiles/eyebrowremover3/review-2.jpg" alt="" />
                 <h3 class="reviews__name">Bianca, 31 anos</h3>
                 <p class="reviews__text">
                     Minhas lindas sobrancelhas estavam estragadas no salão de beleza:
@@ -223,7 +266,7 @@
                 </p>
             </div>
             <div class="reviews__slide">
-                <img class="reviews__img" src="http://flawlessbrows169.xcartpro.com/m7/images/review-3.jpg" alt="" />
+                <img class="reviews__img" src="{{ asset('/') }}purplerelaxFiles/eyebrowremover3/review-3.jpg" alt="" />
                 <h3 class="reviews__name">Clara, 27 anos</h3>
                 <p class="reviews__text">
                     Por natureza eu tenho sobrancelhas grossas, que exigem cuidados
@@ -276,24 +319,34 @@
         <div class="offer__price">
             <div class="offer__old old-price">
                 <p class="old-price__text">preço antigo</p>
-                <p class="old-price__num"><x-currency>€</x-currency> <x-oldprice>98</x-oldprice></p>
+                <p class="old-price__num">
+                    {{ $prices[1]['originalPrice'] }} RSD
+                </p>
             </div>
             <div class="offer__new new-price">
                 <p class="new-price__text">preço novo</p>
-                <p class="new-price__num"><x-currency>€</x-currency> <x-newprice>49</x-newprice></p>
+                <p class="new-price__num">
+                    {{ $prices[1]['amount'] }} RSD
+                </p>
             </div>
         </div>
-        {{--<h2 class="offer__timer-title offer__timer-title--bottom">--}}
-            {{--Até a promoção terminar--}}
-        {{--</h2>--}}
-        {{--<div class="timer"><div class="countbox clearfix"></div></div>--}}
+        {{--
+        <h2 class="offer__timer-title offer__timer-title--bottom">--}}
+        {{--Até a promoção terminar--}}
+        {{--
+     </h2>
+     --}}
+        {{--
+        <div class="timer">
+           <div class="countbox clearfix"></div>
+        </div>
+        --}}
         <p class="offer__balance">
             Restam apenas
             <span class="balance-count">&nbsp;9&nbsp;</span>&nbsp;peças com
             desconto
         </p>
         <form class="main-form" id="main-form" method="POST" action="#">
-
             <label for="name">Por exemplo: Pedro Carlos Costa</label>
             <input
                     id="name"
@@ -314,11 +367,22 @@
         </form>
     </section>
 </div>
+<script src="{{ asset('/') }}shared_files/slick.min.js"></script>
+<script>
+    $(function() {
+        $('a[href^="#"]').click(function() {
+            var elementClick = $(this).attr("href");
+            var destination = $(elementClick).offset().top;
+            jQuery("html:not(:animated), body:not(:animated)").animate({scrollTop: destination}, 800);
+            return false;
+        });
 
-
-<script src="http://flawlessbrows169.xcartpro.com/m7/scripts/slick.min.js"></script>
-<script src="http://flawlessbrows169.xcartpro.com/m7/scripts/main.js"></script>
+        $('.slider').slick({
+            infinite: true,
+            dots: true
+        });
+    });
+</script>
 {{--<script src="http://flawlessbrows169.xcartpro.com/m7/scripts/timer.min.js"></script>--}}
-
 </body>
 </html>

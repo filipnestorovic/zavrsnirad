@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900&amp;subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap&amp;subset=cyrillic-ext" rel="stylesheet">
-
     <link rel="icon" href="{{ asset('/') }}purplerelaxFiles/womanshave/favicon.ico">
     <link rel="stylesheet" href="{{ asset('/') }}purplerelaxFiles/womanshave/bootstrap-grid.min.css">
     <link rel="stylesheet" href="{{ asset('/') }}purplerelaxFiles/womanshave/swiper.min.css">
@@ -31,14 +30,11 @@
                 <a href="#review" class="header__link">Recenzije</a>
                 <a href="#offer" class="header__link">Poručite sada</a>
             </menu>
-            {{--<div class="header__basket">--}}
-                {{--<img src="{{ asset('/') }}purplerelaxFiles/womanshave/basket.svg" alt>--}}
-                {{--<span>1</span>--}}
-            {{--</div>--}}
         </div>
     </div>
 </header>
 <main class="main">
+    @include('components.display_errors')
     <section class="block1 container">
         <div class="row">
             <div class="col-md-6 col-12">
@@ -64,7 +60,7 @@
             </div>
             <div class="col-md-6 col-12">
                 <div class="heading">
-                    <h1>WOMAN SHAVE <br><span>Depilatore compatto </span></h1>
+                    <h1>WOMAN SHAVE <br><span>ŽENSKI BRIJAČ </span></h1>
                 </div>
                 <div class="price">
                      <span class="price__new">
@@ -78,48 +74,31 @@
                      </span>
                 </div>
                 <div class="block1__list">
-                    <p>100% garanzia di qualità</p>
-                    <p>Consegna entro 3 giorni</p>
-                    <p>Si paga al ricevimento</p>
+                    <p>100% garancija kvaliteta</p>
+                    <p>Isporuka u roku od 1-2 dana</p>
+                    <p>Plaća se po prijemu pošiljke</p>
                 </div>
-                {{--<div class="price__control">--}}
-                    {{--<div class="minus">-</div>--}}
-                    {{--<span class="number">1</span>--}}
-                    {{--<div class="plus">+</div>--}}
-                {{--</div>--}}
                 <div class="btn-wrap">
-                    <a href="#offer" class="btn left">Ordinare</a>
+                    <a href="#offer" class="btn left">PORUČI ODMAH</a>
                 </div>
-                {{--<div class="progress">--}}
-                    {{--<img src="{{ asset('/') }}purplerelaxFiles/womanshave/progress.svg" alt>--}}
-                    {{--<span>Rimangono: <b>4271</b> unità del prodotto <b>15346</b></span>--}}
-                {{--</div>--}}
             </div>
         </div>
     </section>
-    {{--<div class="trigger">--}}
-        {{--<p>L'offerta finisce entro</p>--}}
-        {{--<span class="t-hour num"></span>--}}
-        {{--<span class="dots">:</span>--}}
-        {{--<span class="t-min num"></span>--}}
-        {{--<span class="dots">:</span>--}}
-        {{--<span class="t-sec num"></span>--}}
-    {{--</div>--}}
     <section class="block2">
         <div class="container">
             <div class="blick2-prod"><img src="{{ asset('/') }}purplerelaxFiles/womanshave/product.jpg" alt></div>
             <div class="row block2__grid">
-                <div class="col-md-6 col-12 block2__item"><img src="{{ asset('/') }}purplerelaxFiles/womanshave/icon1.svg" alt><span>Ha un effetto massaggiante sulla
-                     pelle</span>
+                <div class="col-md-6 col-12 block2__item"><img src="{{ asset('/') }}purplerelaxFiles/womanshave/icon1.svg" alt>
+                    <span>Ima masažni efekat</span>
                 </div>
-                <div class="col-md-6 col-12 block2__item"><img src="{{ asset('/') }}purplerelaxFiles/womanshave/icon2.svg" alt><span>Rimuove tutti i peli senza dolori
-                     e irritazioni</span>
+                <div class="col-md-6 col-12 block2__item"><img src="{{ asset('/') }}purplerelaxFiles/womanshave/icon2.svg" alt>
+                    <span>Prilagođava se svima područjima i tipovima kože</span>
                 </div>
-                <div class="col-md-6 col-12 block2__item"><img src="{{ asset('/') }}purplerelaxFiles/womanshave/icon3.svg" alt><span>Si adatta a tutte le zone e tutti
-                     i tipi della pelle</span>
+                <div class="col-md-6 col-12 block2__item"><img src="{{ asset('/') }}purplerelaxFiles/womanshave/icon3.svg" alt>
+                    <span>Uklanja sve dlačice bez bola i iritacija</span>
                 </div>
-                <div class="col-md-6 col-12 block2__item"><img src="{{ asset('/') }}purplerelaxFiles/womanshave/icon4.svg" alt><span>Si carica rapidamente e funziona
-                     a lungo</span>
+                <div class="col-md-6 col-12 block2__item"><img src="{{ asset('/') }}purplerelaxFiles/womanshave/icon4.svg" alt>
+                    <span>Brzo se puni i ima dugovečnu bateriju</span>
                 </div>
             </div>
         </div>
@@ -127,7 +106,7 @@
     <section class="block3">
         <div class="container">
             <div class="title">
-                <h2><span class="accent">WOMAN SHAVE —</span><br> LA DEPILAZIONE <br> INDOLORE</h2>
+                <h2><span class="accent">WOMAN SHAVE —</span> <br>BEZBOLNO <br> UKLANJANJE DLAČICA</h2>
             </div>
             <div class="row block3-content">
                 <div class="col-lg-6 col-12">
@@ -145,159 +124,103 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-12">
-                    <p><b>Il design unico delle lame rende la depilazione con <span class="accent">WOMAN SHAVE</span> facile ,
-                            piacevole e indolore.</b>
-                    </p>
-                    <p>Le fibre speciali massaggiano delicatamente la pelle e le lame angolate rimuovono tutti i peli, anche i
-                        più piccoli.
-                    </p>
+                    <p><b>Jedinstveni dizajn sečiva čini uklanjanje dlačica sa <span class="accent">Woman Shave</span> brijačem prijatnim i bezbolnim.</b></p>
+                    <p>Posebna vlakna nežno masiraju kožu i uklanjaju sve dlačice, čak i one najmanje.</p>
                 </div>
             </div>
         </div>
     </section>
-    {{--<section class="block4">--}}
-        {{--<div class="container">--}}
-            {{--<div class="title">--}}
-                {{--<h2>ORA SARAI SEMPRE <br> IRRESISTIBILE</h2>--}}
-            {{--</div>--}}
-            {{--<div class="row">--}}
-                {{--<div class="col-md-6 col-12">--}}
-                    {{--<iframe style="width: 100%; height: 100%; min-height: 2.5rem;"--}}
-                            {{--src="https://www.youtube.com/embed/NW5fywbZV34" frameborder="0"--}}
-                            {{--allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>--}}
-                {{--</div>--}}
-                {{--<div class="col-md-6 col-12">--}}
-                    {{--<p>--}}
-                        {{--<b><span class="accent">WOMAN SHAVE</span> è il tuo piccolo aiutante per eliminare i peli superflui.</b>--}}
-                    {{--</p>--}}
-                    {{--<p>Il dispositivo professionale viene utilizzato sia nei saloni di bellezza che a casa. Milioni di donne--}}
-                        {{--l'amano <b>perché rimuove i peli di tutte le zone</b>--}}
-                    {{--</p>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--</section>--}}
+    <section class="block4">
+        <div class="container">
+            <div class="title">
+                <h2>UVEK ĆEŠ BITI <br> NEODOLJIVA</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <img src="{{ asset('/') }}purplerelaxFiles/womanshave/sl3.jpg" width="100%">
+                </div>
+                <div class="col-md-6 col-12">
+                    <p>
+                        <b><span class="accent">Woman Shave</span> je vaš mali pomoćnik za uklanjanje neželjenih dlačica.</b>
+                    </p>
+                    <p>Profesionalni uređaj se koristi u kozmetičkim salonima i kod kuće. Milioni žena ga vole jer <b>uklanja dlake sa svih područja.</b></p>
+                </div>
+            </div>
+        </div>
+    </section>
     <div class="blue-line">
         <div class="container">
-            <p>Aggiornamento: a causa della forte domanda, i prodotti potrebbero essere esauriti.
-                <b>Per tua comodità, ti preghiamo di lasciare la richiesta il più presto possibile</b>
+            <p>Zbog velike potražnje, zalihe su ograničene.<br>
+                <b>Poručite dok traje specijalni popust od 40%!</b>
             </p>
         </div>
     </div>
     <section class="block5">
         <div class="container">
             <div class="title">
-                <h2>LA DEPILAZIONE<br> DELICATA </h2>
+                <h2>NEŽNA DEPILACIJA</h2>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6 block5__item">
                     <div class="img-wrap"><img src="{{ asset('/') }}purplerelaxFiles/womanshave/photo1.jpg" alt></div>
-                    <p><span>Senza dolore</span>Il design speciale delle lame consente di rimuovere i peli senza causare le
-                        sensazioni sgradevoli anche nelle zone più delicate del tuo corpo
-                    </p>
+                    <p><span>BEZ BOLA</span>Poseban dizajn sečiva vam omogućava da uklonite dlake bez izazivanja neprijatnog osećaja čak i na najdelikatnijim delovima tela.</p>
                 </div>
                 <div class="col-lg-4 col-md-6 block5__item">
                     <div class="img-wrap"><img src="{{ asset('/') }}purplerelaxFiles/womanshave/photo2.jpg" alt></div>
-                    <p><span>Per tutte le zone</span>Diversi ugelli consentono di rimuovere i peli da tutte le zone: gambe,
-                        ascelle, bikini e braccia
-                    </p>
+                    <p><span>ZA SVE OBLASTI</span>Savremeni sistem noževa vam omogućava da uklonite dlačice sa svih područja (noge, pazuh, bikini zona, ruke, itd).</p>
                 </div>
                 <div class="col-lg-4 col-md-6 block5__item">
                     <div class="img-wrap"><img src="{{ asset('/') }}purplerelaxFiles/womanshave/photo3.jpg" alt></div>
-                    <p><span>Efficace</span>Grazie alla retroilluminazione incorporata, nemmeno un pelo appena visibile rimarrà
-                        sul tuo corpo
-                    </p>
+                    <p><span>EFEKTNO</span>Zahvaljujući ugrađenom pozadinskom osvetljenju, čak ni jedva vidljiva dlaka neće ostati na vašem telu.</p>
                 </div>
                 <div class="col-lg-4 col-md-6 block5__item">
                     <div class="img-wrap"><img src="{{ asset('/') }}purplerelaxFiles/womanshave/photo4.jpg" alt></div>
-                    <p><span>Compatto</span>A casa, in vacanze o in viaggio d'affari — questo dispositivo sarà sempre con te</p>
+                    <p><span>KOMPAKTAN</span>Bilo kod kuće, na odmoru ili na putu, ovaj uređaj će uvek biti sa vama.</p>
                 </div>
                 <div class="col-lg-4 col-md-6 block5__item">
                     <div class="img-wrap"><img src="{{ asset('/') }}purplerelaxFiles/womanshave/photo5.jpg" alt></div>
-                    <p><span>Elegante</span>Il design elegante, i colori femminili, la forma ergonomica: tutto questo rende
-                        l'accessorio di bellezza perfetto per te
-                    </p>
+                    <p><span>ELEGANTAN</span>Elegantan dizajn, ženstvene boje, ergonomski oblik - sve ovo čini savršenim Woman Shave uređaj.</p>
                 </div>
                 <div class="col-lg-4 col-md-6 block5__item">
                     <div class="img-wrap"><img src="{{ asset('/') }}purplerelaxFiles/womanshave/photo6.jpg" alt></div>
-                    <p><span>Comodo</span>La carica rapida, la lunga durata e la batteria affidabile per più di 1000 ricariche
-                    </p>
+                    <p><span>DUGOTRAJAN</span>Brzo punjenje, dug životni vek i pouzdana baterija za više od 1000 punjenja.</p>
                 </div>
             </div>
         </div>
     </section>
     <div class="trigger__form" id="offer">
-        <h3>Lascia una richiesta sul nostro sito</h3>
+        <h3>Unesite podatke za dostavu</h3>
         <form action="{{$orderRoute}}" method="post">
             {{ csrf_field() }}
             @include('lander.naturapharm.components.form_hidden_fields')
             <center>
-                <h3 class="title">COMPILA IL MODULO</h3>
+                <h3 class="title">&nbsp;</h3>
             </center>
             <div class="form-group">
-                <label>Nome e Cognome</label>
-                <input type="text" name="name" class="form-control" placeholder="Inserisci Nome e Cognome"
-                       required="required">
+                <label>Ime i prezime</label>
+                <input type="text" name="name" class="form-control" placeholder="Ime i prezime" required="required">
             </div>
             <div class="form-group">
-                <label>Telefono (Meglio Cellulare)</label>
-                <input type="tel" name="phone" class="form-control" placeholder="Inserisci il tuo numero di telefono"
-                       required="required">
+                <label>Telefon</label>
+                <input type="tel" name="phone" class="form-control" placeholder="Telefon" required="required">
             </div>
             <div class="form-group">
-                <label>Indirizzo e n. civico</label>
-                <input type="text" name="other[address]" class="form-control" placeholder="ES. Via Aldo moro, 130"
-                       required="required">
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-8">
-                    <label>Città</label>
-                    <input type="text" name="other[city]" class="form-control" placeholder="ES. Milano" required="required">
-                </div>
-                <div class="form-group col-md-4">
-                    <label>CAP</label>
-                    <input type="text" name="other[zipcode]" class="form-control" placeholder="ES. 94112" required="required">
-                </div>
-            </div>
-            <div class="form-row offer-selection" data-images="[]"
-                 data-default-img="{{ asset('/') }}purplerelaxFiles/womanshave/2891_e897fff2a993388486042f7751d0760a_1569348809.png">
-                <div class="form-group col text-center">
-                    <label>Scegli un'offerta</label>
-                    <select name="other[quantity]" class="form-control price__select" required="required">
-                        <option value="1" selected>1 Woman Shave</option>
-                        <option value="2">2 Woman Shave</option>
-                        <option value="3">3 Woman Shave </option>
-                    </select>
-                </div>
+                <label>Adresa</label>
+                <input type="text" name="shipping_address" class="form-control" placeholder="Ulica i broj">
             </div>
             <div class="form-group">
-                <div class="text-center">
-                     <span style="
-                        color: black;
-                        padding: 4px;
-                        background: #ffc205;
-                        font-weight: bold;
-                        border-radius: 5px;
-                        " class="sped">&nbsp;<i class="fa fa-truck"></i> La spedizione è gratis! </span>
-                </div>
+                <label>Grad</label>
+                <input type="text" name="shipping_city" class="form-control" placeholder="Grad">
             </div>
-            <div class="form-group">
-                <label>Note per il corriere</label>
-                <input type="text" name="other[notes]" class="form-control" rows="2"
-                       placeholder="ES. Citofonare al Sig. Rossi">
-            </div>
-            <div class="preloader loader-1"></div>
             <center>
-                <button id="submit-button" class="btn btn-lg btn-warning new-sbm-btn" type="submit">Completa
-                    l'acquisto</button>
-                <!--img src="/manager/img/form-secure.jpg" style="max-width:250px;margin:10px"-->
+                <button id="submit-button" class="btn btn-lg btn-warning new-sbm-btn" type="submit">Poručite sada</button>
             </center>
         </form>
     </div>
     <section class="block6" id="prof">
         <div class="container">
             <div class="title">
-                <h2>I PROFESSIONISTI <br> SCELGONO WOMAN SHAVE</h2>
+                <h2>PROFESIONALCI BIRAJU <br> WOMAN SHAVE</h2>
             </div>
             <div class="row">
                 <div class="col-md-6 col-12 block6__doc">
@@ -307,20 +230,10 @@
                 </div>
                 <div class="col-md-6 col-12 block6__content">
                     <div class="block6__sub-head">
-                        <b><span class="accent">WOMAN SHAVE</span> è un ottimo mezzo sia per il lavoro nel salone che per l'uso
-                            domestico.</b>
+                        <b><span class="accent">WOMAN SHAVE</span> je odličan za rad u salonu i kućnu upotrebu.</b>
                     </div>
-                    <p>Lo amo perché rimuove delicatamente anche i peli più sottili nelle aree difficili da raggiungere. E ce la
-                        fa senza dolore. Grazie al design speciale delle lame, non danneggia la pelle durante la rasatura e non la
-                        irrita. La pelle è sempre liscia e morbida.
-                    </p>
-                    <div class="block6__signature">
-                        <span><b>Anna Maria Dury,<br>
-                        cosmetologo<br> della categoria superiore</b></span>
-                        <div class="img-wrap">
-                            <img src="{{ asset('/') }}purplerelaxFiles/womanshave/sign.svg" alt>
-                        </div>
-                    </div>
+                    <p>Volim ga jer nežno uklanja i najtanje dlake na teško dostupnim mestima, i to radi bezbolno. Zahvaljujući posebnom dizajnu sečiva, ne oštećuje kožu prilikom brijanja i ne iritira je.
+                        Koža je uvek glatka i meka.</p>
                 </div>
             </div>
         </div>
@@ -332,23 +245,23 @@
                     <img src="{{ asset('/') }}purplerelaxFiles/womanshave/bg_mob.jpg" alt>
                 </div>
                 <div class="logo"><img src="{{ asset('/') }}purplerelaxFiles/womanshave/logo2.svg" alt></div>
-                <h2 class="block7__title">LA DEPILAZIONE DELICATA</h2>
+                <h2 class="block7__title">NEŽNA DEPILACIJA</h2>
                 <div class="block7__list">
                     <div class="block7__item">
                         <span>1</span>
-                        <p>Ascelle</p>
+                        <p>Pazuha</p>
                     </div>
                     <div class="block7__item">
                         <span>2</span>
-                        <p>Bikini</p>
+                        <p>Bikini zone</p>
                     </div>
                     <div class="block7__item">
                         <span>3</span>
-                        <p>Gambe</p>
+                        <p>Nogu</p>
                     </div>
                     <div class="block7__item">
                         <span>4</span>
-                        <p>Braccia</p>
+                        <p>Ruku</p>
                     </div>
                 </div>
             </div>
@@ -357,7 +270,7 @@
     <section class="block8" id="review">
         <div class="container">
             <div class="title">
-                <h2>commenti dei clienti</h2>
+                <h2>UTISCI NAŠIH KUPACA</h2>
             </div>
             <div class="row block8-reviews">
                 <div class="col-md-8">
@@ -390,7 +303,7 @@
                 <div class="col-md-4">
                     <div class="block8-reviews__heading">
                         <span>4.7</span>
-                        <p>Valutazione media del prodotto</p>
+                        <p>Prosečna ocena proizvoda</p>
                     </div>
                 </div>
             </div>
@@ -400,161 +313,66 @@
                         <div class="swiper-slide block8__slide">
                             <div class="block8-slide__wrapper">
                                 <div class="block8__slide-header">
-                                    <div class="img-wrap">
-                                        <img src="{{ asset('/') }}purplerelaxFiles/womanshave/ava1.png" alt>
-                                    </div>
                                     <div class="name">
-                                        <h3>Kat Morgan</h3>
-                                        <span>23 hrs</span>
+                                        <h3>Katarina Mitrović</h3>
                                     </div>
                                 </div>
-                                <p>Bella cosa, la adoro. Ce la fa perfettamente. Come ho vissuto senza questa piccolina?))</p>
+                                <p>Lepa stvar, sviđa mi se. Radi savršeno, ne znam kako sam do sada živela bez ovoga. :)</p>
                                 <div class="img-wrap">
                                     <img src="{{ asset('/') }}purplerelaxFiles/womanshave/rev1.jpg" alt class="block8__slide-main">
                                 </div>
-                                <hr class="block8__slide-hr">
-                                <div class="block8__slide-footer">
-                                    <img src="{{ asset('/') }}purplerelaxFiles/womanshave/ref__footer.svg" alt>
-                                </div>
                             </div>
                         </div>
                         <div class="swiper-slide block8__slide">
                             <div class="block8-slide__wrapper">
                                 <div class="block8__slide-header">
-                                    <div class="img-wrap">
-                                        <img src="{{ asset('/') }}purplerelaxFiles/womanshave/ava2.png" alt>
-                                    </div>
                                     <div class="name">
-                                        <h3>Miriam Romano</h3>
-                                        <span>18 hrs</span>
+                                        <h3>Mirjana Ristić</h3>
                                     </div>
                                 </div>
-                                <p>Il depilatore è eccellente, l'uso già da 3 mesi e le lame sono ancora ben affilate! Con la batteria
-                                    potente il dispositivo dura a lungo!)
-                                </p>
+                                <p>Ovaj brijač je odličan, koristim ga već 3 meseca i oštrice u i dalje izuzetno oštre. Ima snažnu bateriju koja dugo traje!</p>
                                 <div class="img-wrap">
                                     <img src="{{ asset('/') }}purplerelaxFiles/womanshave/rev2.jpg" alt class="block8__slide-main">
                                 </div>
-                                <hr class="block8__slide-hr">
-                                <div class="block8__slide-footer">
-                                    <img src="{{ asset('/') }}purplerelaxFiles/womanshave/ref__footer.svg" alt>
-                                </div>
                             </div>
                         </div>
                         <div class="swiper-slide block8__slide">
                             <div class="block8-slide__wrapper">
                                 <div class="block8__slide-header">
-                                    <div class="img-wrap">
-                                        <img src="{{ asset('/') }}purplerelaxFiles/womanshave/ava3.png" alt>
-                                    </div>
                                     <div class="name">
-                                        <h3>Lally Gomes</h3>
-                                        <span>3 hrs</span>
+                                        <h3>Lara Mišić</h3>
                                     </div>
                                 </div>
-                                <p>Il dispositivo è ottimo. Sono fotografa e sempre vado in viaggi. Non mi piace portare con me un
-                                    grande depilatore, i fili sono scomodi, e i rasoi standard strappano la pelle. Woman Shave è la mia
-                                    salvatrice, non so cosa farei senza di lei!
-                                </p>
+                                <p>Super je ovaj brijač. Ja sam fotograf i često idem na putovanja. Toliko je praktičan i mali da stane u neseser i ne zauzima mi prostor.
+                                    Ranije sam koristila neke brijače koji su me dosta čupali i izazivali neprijatan osećaj. Woman Shave je odličan!</p>
                                 <div class="img-wrap">
                                     <img src="{{ asset('/') }}purplerelaxFiles/womanshave/rev3.jpg" alt class="block8__slide-main">
                                 </div>
-                                <hr class="block8__slide-hr">
-                                <div class="block8__slide-footer">
-                                    <img src="{{ asset('/') }}purplerelaxFiles/womanshave/ref__footer.svg" alt>
-                                </div>
                             </div>
                         </div>
                         <div class="swiper-slide block8__slide">
                             <div class="block8-slide__wrapper">
                                 <div class="block8__slide-header">
-                                    <div class="img-wrap">
-                                        <img src="{{ asset('/') }}purplerelaxFiles/womanshave/ava4.png" alt>
-                                    </div>
                                     <div class="name">
-                                        <h3>Anna Pulido</h3>
-                                        <span>2 hrs</span>
+                                        <h3>Ana Poletan</h3>
                                     </div>
                                 </div>
-                                <p>Il rasoio meraviglioso, aiuta sempre (soprattutto se la data non è prevista))). Sempre ne ho nella
-                                    mia borsa!
-                                </p>
+                                <p>Divan brijač, uvek je pri ruci, naročito kada mi iznenada zatreba. :)))</p>
                                 <div class="img-wrap">
                                     <img src="{{ asset('/') }}purplerelaxFiles/womanshave/rev4.jpg" alt class="block8__slide-main">
                                 </div>
-                                <hr class="block8__slide-hr">
-                                <div class="block8__slide-footer">
-                                    <img src="{{ asset('/') }}purplerelaxFiles/womanshave/ref__footer.svg" alt>
-                                </div>
                             </div>
                         </div>
                         <div class="swiper-slide block8__slide">
                             <div class="block8-slide__wrapper">
                                 <div class="block8__slide-header">
-                                    <div class="img-wrap">
-                                        <img src="{{ asset('/') }}purplerelaxFiles/womanshave/ava5.png" alt>
-                                    </div>
                                     <div class="name">
-                                        <h3>Elizabhet Cuper</h3>
-                                        <span>11 hrs</span>
+                                        <h3>Daliborka Simenunović</h3>
                                     </div>
                                 </div>
-                                <p>Questo rasoio è un miracolo! Lo porto sempre con me: in vacanza, e fuori città. Nessuna irritazione
-                                    dopo la rasatura, la pelle rimane liscia. LA AMO!
-                                </p>
+                                <p>Woman Shave je čudo! Uvek ga nosim sa sobom, na odmoru i na poslu. Nema iritacija nakon brijanja, koža ostane glatka.</p>
                                 <div class="img-wrap">
                                     <img src="{{ asset('/') }}purplerelaxFiles/womanshave/rev5.jpg" alt class="block8__slide-main">
-                                </div>
-                                <hr class="block8__slide-hr">
-                                <div class="block8__slide-footer">
-                                    <img src="{{ asset('/') }}purplerelaxFiles/womanshave/ref__footer.svg" alt>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide block8__slide">
-                            <div class="block8-slide__wrapper">
-                                <div class="block8__slide-header">
-                                    <div class="img-wrap">
-                                        <img src="{{ asset('/') }}purplerelaxFiles/womanshave/ava6.png" alt>
-                                    </div>
-                                    <div class="name">
-                                        <h3>Helen Ho</h3>
-                                        <span>12 hrs</span>
-                                    </div>
-                                </div>
-                                <p>Adoro questo depilatore!! Ho avuto una terribile irritazione usando i rasoi standard, ma con questo
-                                    ho dimenticato di qualsiasi sensazione spiacevole.
-                                </p>
-                                <div class="img-wrap">
-                                    <img src="{{ asset('/') }}purplerelaxFiles/womanshave/rev6.jpg" alt class="block8__slide-main">
-                                </div>
-                                <hr class="block8__slide-hr">
-                                <div class="block8__slide-footer">
-                                    <img src="{{ asset('/') }}purplerelaxFiles/womanshave/ref__footer.svg" alt>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide block8__slide">
-                            <div class="block8-slide__wrapper">
-                                <div class="block8__slide-header">
-                                    <div class="img-wrap">
-                                        <img src="{{ asset('/') }}purplerelaxFiles/womanshave/ava7.png" alt>
-                                    </div>
-                                    <div class="name">
-                                        <h3>Elen Elen</h3>
-                                        <span>5 hrs</span>
-                                    </div>
-                                </div>
-                                <p>Un'amica mia mi ha regalato il rasoio per il compleanno. Io adoro tutto il rosa e brillante!
-                                    Rimuove delicatamente tutti i peli, anche nelle ZONE più DELICATE. Tenerlo in mano è molto comodo.
-                                    Anche la retroilluminazione è molto utile. Consiglio vivamente!
-                                </p>
-                                <div class="img-wrap">
-                                    <img src="{{ asset('/') }}purplerelaxFiles/womanshave/rev7.jpg" alt class="block8__slide-main">
-                                </div>
-                                <hr class="block8__slide-hr">
-                                <div class="block8__slide-footer">
-                                    <img src="{{ asset('/') }}purplerelaxFiles/womanshave/ref__footer.svg" alt>
                                 </div>
                             </div>
                         </div>
@@ -569,29 +387,24 @@
     <section class="block9">
         <div class="container">
             <div class="title">
-                <h2>ORDINA <span class="accent">WOMAN SHAVE</span> <br> ADESSO</h2>
+                <h2>PORUČITE <span class="accent">WOMAN SHAVE</span> <br> ODMAH</h2>
             </div>
             <div class="block9__builets">
                 <div class="block9__item">
                     <div class="img-wrap"><img src="{{ asset('/') }}purplerelaxFiles/womanshave/builet1.svg" alt></div>
-                    <p>Lascia una richiesta</p>
+                    <p>Ostavite svoje podatke na našem sajtu</p>
                 </div>
                 <div class="block9__item">
                     <div class="img-wrap"><img src="{{ asset('/') }}purplerelaxFiles/womanshave/builet2.svg" alt></div>
-                    <p>Attendi<br>
-                        la chiamata del nostro<br>
-                        manager
-                    </p>
+                    <p>Kontaktiraćemo vas da potvrdimo porudžbinu</p>
                 </div>
                 <div class="block9__item">
                     <div class="img-wrap"><img src="{{ asset('/') }}purplerelaxFiles/womanshave/builet3.svg" alt></div>
-                    <p>Aspetta <br>
-                        la consegna
-                    </p>
+                    <p>Isporuka u roku od 1-2 radna dana</p>
                 </div>
                 <div class="block9__item">
                     <div class="img-wrap"><img src="{{ asset('/') }}purplerelaxFiles/womanshave/builet4.svg" alt></div>
-                    <p>Paga<br> al<br> ricevimento</p>
+                    <p>Plaćanje po pouzeću</p>
                 </div>
             </div>
         </div>
@@ -621,7 +434,7 @@
             </div>
             <div class="col-md-6 col-12">
                 <div class="heading">
-                    <h1>WOMAN SHAVE <br><span>Depilatore compatto </span></h1>
+                    <h1>WOMAN SHAVE <br><span>ŽENSKI BRIJAČ </span></h1>
                 </div>
                 <div class="price">
                      <span class="price__new">
@@ -635,35 +448,19 @@
                      </span>
                 </div>
                 <div class="block1__list">
-                    <p>100% garanzia di qualità</p>
-                    <p>Consegna entro 3 giorni</p>
-                    <p>Si paga al ricevimento</p>
+                    <p>100% garancija kvaliteta</p>
+                    <p>Isporuka u roku od 1-2 dana</p>
+                    <p>Plaća se po prijemu pošiljke</p>
                 </div>
-                {{--<div class="price__control">--}}
-                    {{--<div class="minus">-</div>--}}
-                    {{--<span class="number">1</span>--}}
-                    {{--<div class="plus">+</div>--}}
-                {{--</div>--}}
                 <div class="btn-wrap">
-                    <a href="#offer" class="btn left">Ordinare</a>
+                    <a href="#offer" class="btn left">PORUČI ODMAH</a>
                 </div>
-                {{--<div class="progress">--}}
-                    {{--<img src="{{ asset('/') }}purplerelaxFiles/womanshave/progress.svg" alt>--}}
-                    {{--<span>Rimangono: <b>4271</b> unità del prodotto <b>15346</b></span>--}}
-                {{--</div>--}}
             </div>
         </div>
     </section>
-    {{--<div class="trigger">--}}
-        {{--<p>L'offerta finisce entro</p>--}}
-        {{--<span class="t-hour num"></span>--}}
-        {{--<span class="dots">:</span>--}}
-        {{--<span class="t-min num"></span>--}}
-        {{--<span class="dots">:</span>--}}
-        {{--<span class="t-sec num"></span>--}}
-    {{--</div>--}}
 </main>
 <script src="{{ asset('/') }}purplerelaxFiles/womanshave/swiper.min.js"></script>
 <script src="{{ asset('/') }}purplerelaxFiles/womanshave/common.js"></script>
+@include('components.pixel_footer')
 </body>
 </html>

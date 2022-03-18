@@ -297,6 +297,10 @@ section{
     margin-right: 7px;
 }
 
+.top-image p {
+    font-size: 14px;
+}
+
 .top-block-v1.offer_bottom {
     background: url(offer_bottom_bg_new.png) 50% 0 no-repeat;
 }
@@ -326,7 +330,7 @@ section{
 .top-block-v1 .sale-cont>strong{
     display: block;
     font-size: 21px;
-    line-height: 21px;
+    line-height: 31px;
 }
 .top-block-v1 .cost-cont{
     height: 84px;

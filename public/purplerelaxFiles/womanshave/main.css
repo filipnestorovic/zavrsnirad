@@ -702,6 +702,12 @@ label {
         -ms-flex-pack: center;
         justify-content: center;
     }
+    .price__new {
+        font-size: 0.42rem !important;
+    }
+    .price__before {
+        font-size: 0.26rem !important;
+    }
 }
 
 .price__new {

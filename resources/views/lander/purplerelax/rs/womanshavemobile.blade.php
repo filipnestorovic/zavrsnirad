@@ -9,87 +9,55 @@
     <link rel="stylesheet" href="{{ asset('/') }}purplerelaxFiles/womanshavemobile/bootstrap.min.css">
     <link rel="stylesheet" href="{{ asset('/') }}purplerelaxFiles/womanshavemobile/fontawesome.min.css" type="text/css">
     <link rel="stylesheet" href="{{ asset('/') }}purplerelaxFiles/womanshavemobile/main.css" type="text/css">
-    <style>
-        @font-face {
-            font-family: "Glyphicons Halflings";
-            src: url({{ asset('/') }}fonts/glyphicons-halflings-regular.eot);
-            src: url({{ asset('/') }}fonts/glyphicons-halflings-regular.eot#iefix) format("embedded-opentype"),
-            url({{ asset('/') }}fonts/glyphicons-halflings-regular.woff2) format("woff2"),
-            url({{ asset('/') }}fonts/glyphicons-halflings-regular.woff) format("woff"),
-            url({{ asset('/') }}fonts/glyphicons-halflings-regular.ttf) format("truetype"),
-            url({{ asset('/') }}fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format("svg");
-        }
-        @font-face {
-            font-family: 'Proxima Nova';
-            src: url('{{ asset('/') }}fonts/subset-ProximaNova-Regular.woff2') format('woff2'),
-            url('{{ asset('/') }}fonts/subset-ProximaNova-Regular.woff') format('woff'),
-            url('{{ asset('/') }}fonts/subset-ProximaNova-Regular.ttf') format('truetype');
-            font-weight: 400;
-            font-style: normal;
-        }
-        @font-face {
-            font-family: 'Proxima Nova';
-            src: url('{{ asset('/') }}fonts/subset-ProximaNova-Bold.woff2') format('woff2'),
-            url('{{ asset('/') }}fonts/subset-ProximaNova-Bold.woff') format('woff'),
-            url('{{ asset('/') }}fonts/subset-ProximaNova-Bold.ttf') format('truetype');
-            font-weight: 700;
-            font-style: normal;
-        }
-    </style>
+    <style>@font-face{font-family:"Glyphicons Halflings";src:url({{asset('/')}}fonts/glyphicons-halflings-regular.eot);src:url({{asset('/')}}fonts/glyphicons-halflings-regular.eot#iefix) format("embedded-opentype"),url({{asset('/')}}fonts/glyphicons-halflings-regular.woff2) format("woff2"),url({{asset('/')}}fonts/glyphicons-halflings-regular.woff) format("woff"),url({{asset('/')}}fonts/glyphicons-halflings-regular.ttf) format("truetype"),url({{asset('/')}}fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format("svg")}@font-face{font-family:'Proxima Nova';src:url('{{ asset('/') }}fonts/subset-ProximaNova-Regular.woff2') format('woff2'),url('{{ asset('/') }}fonts/subset-ProximaNova-Regular.woff') format('woff'),url('{{ asset('/') }}fonts/subset-ProximaNova-Regular.ttf') format('truetype');font-weight:400;font-style:normal}@font-face{font-family:'Proxima Nova';src:url('{{ asset('/') }}fonts/subset-ProximaNova-Bold.woff2') format('woff2'),url('{{ asset('/') }}fonts/subset-ProximaNova-Bold.woff') format('woff'),url('{{ asset('/') }}fonts/subset-ProximaNova-Bold.ttf') format('truetype');font-weight:700;font-style:normal}</style>
 </head>
 <body>
 <div class="main-wrap">
+    @include('components.display_errors')
     <!-- Шапка-v1 -->
     <section class="title-block">
         <div class="sub-main-title lt0">
-            Pelle liscia senza sensazioni sgradevoli!
+            GLATKA KOŽA BEZ IRITACIJA
         </div>
         <h1 class="main-title lt1">Women Shave</h1>
     </section>
     <section class="top-block-v1">
         <div class="top-image">
             <img src="{{ asset('/') }}purplerelaxFiles/womanshavemobile/star.png" alt="star">
-            <p>delicato con la pelle,<br>senza pieta con i peli</p>
+            <p>NEŽAN PREMA KOŽI, <br> NEMILOSRDAN PREMA DLAČICAMA</p>
         </div>
         <div class="sale-cont lt2">
-            Offerta:
-            <strong>sconto di</strong> 50%
+            <strong>40% POPUSTA</strong>
         </div>
         <div class="cost-cont clearfix">
             <div class="cost old-cost lt3">
-                Prezzo standard:
+                Stara cena:
                 <strong>
                     {{ $prices[1]['originalPrice'] }} RSD
                 </strong>
             </div>
             <div class="cost new-cost lt4">
-                Prezzo scontato:
+                Nova cena:
                 <strong>
                     {{ $prices[1]['amount'] }} RSD
                 </strong>
             </div>
         </div>
         <div class="describe-cont">
-            {{--<div class="timer-cont">--}}
-                {{--<h3 class="lt8">--}}
-                    {{--La promozione durerà fino al  <script> dtime_nums(+1)</script> in tutta Italia--}}
-                {{--</h3>--}}
-            {{--</div>--}}
-            <a class="button-m lt12 btn2" href="#form-wrapper1" style="text-decoration: none;">Ordinare con lo sconto</a>
-            <div class="ost-col lt13">
-                Rimangono
-                <span>27</span> confezioni dell'offerta
-            </div>
+            <a class="button-m lt12 btn2" href="#form-wrapper1" style="text-decoration: none;">Poručite sa popustom</a>
         </div>
     </section>
     <section class="detail-block">
-        <h3 class="lvl-title lt14 oco">Women Shave è un rasoio versatile per rimuovere i peli indesiderati da tutte le aree, anche le più delicate.</h3>
+        <h3 class="lvl-title lt14 oco">WOMAN SHAVE JE SVESTRANI BRIJAČ ZA UKLANJANJE NEŽELJENIH DLAČICA SA SVIH PODRUČJA, PA ČAK I SA NAJDELIKANTIJIH MESTA.</h3>
         <img src="{{ asset('/') }}purplerelaxFiles/womanshavemobile/1.png" alt="">
         <div class="text-cont">
-            <p class="lt15">E' <b>completamente diverso dai rasoi classici.</b> Le innovative lame angolate rimuovono efficacemente anche i peli più piccoli senza danneggiare la pelle. L'ugello speciale consente di rendere le ascelle e la zona bikini perfettamente lisce senza disagio.</p>
-            <p class="lt16">Il rasoio è dotato di luce a LED, <b>quindi nessun pelo sarà inosservato!</b> Il design elegante ed ergonomico, il design speciale delle lame, l'illuminazione integrata: ora hai tutto per la tua pelle perfettamente liscia!!</p>
+            <p class="lt15">Potpuno se razlikuje od klasičnih brijača. Inovativna sečiva pod uglom efikasno uklanjaju čak i
+                najmanje dlačice bez oštećenja kože i omogućava vam
+                da učinite svoj pazuh i bikini zonu <b>savršeno glatkim bez neugodnosti.</b></p>
+            <p class="lt16">Brijač je opremljen <b>led svetlom</b>, tako da nijedna dlaka neće ostati neprimećena.
+                Elegantan i ergonomski dizajn, poseban dizajn oštrica i integrisano osvetljene - za savršeno glatku kožu!</p>
         </div>
-        <h3 class="lvl-title lt14 oco">Depilazione delicata senza fastidio</h3>
+        <h3 class="lvl-title lt14 oco">DELIKATNO UKLANJANJE DLAKA BEZ NEUGODNOSTI</h3>
         <p class="flex-discription">
 
         </p>
@@ -100,50 +68,51 @@
     </section>
     <!-- Состав-v2 -->
     <section class="compound-block-v2">
-        <h2 class="lvl-title lt22 oco" style="font-size: 28px;">E' perfetto per qualsiasi parte del corpo:</h2>
+        <h2 class="lvl-title lt22 oco" style="font-size: 28px;">SAVRŠEN JE ZA BILO KOJI DEO TELA:</h2>
         <ul class="compound-cont clearfix">
             <li>
                 <img alt="Women Shaver" src="{{ asset('/') }}purplerelaxFiles/womanshavemobile/benefits__benefit3_image.png" title="Women Shaver">
-                <strong class="lt23">il viso</strong>
+                <strong class="lt23">LICE</strong>
             </li>
             <li>
                 <img alt="Women Shaver" src="{{ asset('/') }}purplerelaxFiles/womanshavemobile/benefits__benefit2_image.png" title="Women Shaver">
-                <strong class="lt24">le braccia</strong>
+                <strong class="lt24">NOGE</strong>
             </li>
             <li>
                 <img alt="Women Shaver" src="{{ asset('/') }}purplerelaxFiles/womanshavemobile/benefits__benefit1_image.png" title="Women Shaver">
-                <strong class="lt25">la zona bikini</strong>
+                <strong class="lt25">BIKINI ZONA</strong>
             </li>
             <li>
                 <img alt="Women Shaver" src="{{ asset('/') }}purplerelaxFiles/womanshavemobile/benefits__benefit4_image.png" title="Women Shaver">
-                <strong class="lt26">le gambe</strong>
+                <strong class="lt26">RUKE</strong>
             </li>
         </ul>
     </section>
     <br>
-    <a class="button-m lt12 btn2" href="#form-wrapper1" style="text-decoration: none;margin-bottom: 1em;">Ordinare con lo sconto</a>
+    <a class="button-m lt12 btn2" href="#form-wrapper1" style="text-decoration: none;margin-bottom: 1em;">Poručite sa popustom</a>
     <section class="rev-block-v4 color_bg">
-        <h2 class="lvl-title lt35">Commenti dei clienti</h2>
+        <h2 class="lvl-title lt35">Utisci kupaca</h2>
         <div class="rev-cont clearfix">
             <div class="rev-item">
                 <img src="{{ asset('/') }}purplerelaxFiles/womanshavemobile/reviews__review1_photo.png" alt="Women Shaver" title="Women Shaver">
-                <h4>Federica Crespi, 25 anni</h4>
-                <p>L'ho regalato alla mia amica, lei ha la pelle molto sensibile, quindi prima ci ho provato su di me :) sono stata così sorpresa che ne ho ordinato subito un altro:)) Mi piace molto, può essere utilizzato ovunque, anche nelle aree più difficili da raggiungere! Funziona molto bene! Ho anche notato che i peli hanno iniziato a crescere più lentamente e meno densamente:)</p>
+                <h4>Mirjana Ristić, 25 godina</h4>
+                <p>Ovaj brijač je odličan, koristim ga već 3 meseca i oštrice u i dalje izuzetno oštre. Ima snažnu bateriju koja dugo traje!</p>
             </div>
             <div class="rev-item">
                 <img src="{{ asset('/') }}purplerelaxFiles/womanshavemobile/reviews__review2_photo.png" alt="Women Shaver" title="Women Shaver">
-                <h4>Loredana, 27 anni</h4>
-                <p>Uso Women Shave il secondo mese fa. Adoro questo rasoio, è così compatto che lo porto sempre nella mia borsa. Un paio di volte ho avuto un date non pianificato e questo rasoio mi ha salvata!</p>
+                <h4>Lara Mišić, 27 godina</h4>
+                <p>Super je ovaj brijač. Ja sam fotograf i često idem na putovanja. Toliko je praktičan i mali da stane u neseser i ne zauzima mi prostor.
+                    Ranije sam koristila neke brijače koji su me dosta čupali i izazivali neprijatan osećaj. Woman Shave je odličan! </p>
             </div>
             <div class="rev-item">
                 <img src="{{ asset('/') }}purplerelaxFiles/womanshavemobile/reviews__review3_photo.png" alt="Women Shaver" title="Women Shaver">
-                <h4>Nicoletta Caroli, 20 anni</h4>
-                <p>Non avrei mai pensato che Women Shave potesse aiutarmi! Tutti i rasoi e depilatori causavano una terribile irritazione. Ma la mia amica, che era entusiasta di questa cosa, mi ha convinto a comprarla. Beh, me l'ha consegnata il corriere, l'ho pagata e ho iniziato a provarla. E' fantastica, davvero!</p>
+                <h4>Daliborka Simenunović, 20 godina</h4>
+                <p>Woman Shave je čudo! Uvek ga nosim sa sobom, na odmoru i na poslu. Nema iritacija nakon brijanja, koža ostane glatka.</p>
             </div>
         </div>
     </section>
     <br>
-    <h2 class="lvl-title lt14">Attento alla pelle, spietato ai peli</h2>
+    <h2 class="lvl-title lt14">NEŽAN PREMA KOŽI, NEMILOSRDAN PREMA DLAČICAMA</h2>
     <div class="slider-block">
         <div class="slider-cont clearfix">
             <div>
@@ -165,37 +134,37 @@
     </div>
     <!-- Доставка/оплата-v3 -->
     <section class="delivery-block-v3">
-        <h2 class="lvl-title lt46">Consegna e pagamento</h2>
+        <h2 class="lvl-title lt46">Dostava i plaćanje</h2>
         <ul class="delivery-cont">
             <li>
-                <h3 class="lt47">Consegna</h3>
-                <p class="lt48">Consegna a posta corrente entro 1-3 giorni lavorativi</p>
+                <h3 class="lt47">ISPORUKA</h3>
+                <p class="lt48">Dostava brzom poštom u roku od 1-2 radna dana</p>
             </li>
             <li>
-                <h3 class="lt49">Nessun pagamento anticipato</h3>
-                <p class="lt50">Paga al ricevimento</p>
+                <h3 class="lt49">BEZ PLAĆANJA UNAPRED</h3>
+                <p class="lt50">Plaćanje po prijemu pošiljke</p>
             </li>
             <li>
-                <h3 class="lt51">Garanzia di qualità!</h3>
-                <p class="lt52">Tutti i prodotti hanno superato il controllo di qualità e sono completamente certificati!</p>
+                <h3 class="lt51">GARANCIJA KVALITETA</h3>
+                <p class="lt52">Svi proizvodi su prošli kontrolu kvaliteta i u potpunosti su sertifikovani!</p>
             </li>
             <li>
-                <h3 class="lt53">Consegna anonima</h3>
-                <p class="lt54">Il prodotto è confezionato in modo che non è possibile comprendere il contenuto della confezione. Non ci sono iscrizioni sulla confezione stessa. </p>
+                <h3 class="lt53">ANONIMNA ISPORUKA</h3>
+                <p class="lt54">Proizvod je upakovan na takav način da niko neće znati sadržaj pakovanja.</p>
             </li>
         </ul>
     </section>
     <!-- Заказ-v1 -->
     <section class="title-block">
         <div class="sub-main-title lt55">
-            Depilazione efficace
+            GLATKA KOŽA BEZ IRITACIJA
         </div>
         <h1 class="main-title lt56">Women Shave</h1>
     </section>
     <section class="top-block-v1 offer_bottom">
         <div class="top-image">
             <img src="{{ asset('/') }}purplerelaxFiles/womanshavemobile/star.png" alt="star">
-            <p>delicato con la pelle,<br>senza pieta con i peli</p>
+            <p>NEŽAN PREMA KOŽI, <br> NEMILOSRDAN PREMA DLAČICAMA</p>
         </div>
         <div class="sale-cont lt57">
             Offerta:
@@ -203,13 +172,13 @@
         </div>
         <div class="cost-cont clearfix" id="zakaz">
             <div class="cost old-cost lt58">
-                Prezzo standard:
+                Stara cena:
                 <strong>
                     {{ $prices[1]['originalPrice'] }} RSD
                 </strong>
             </div>
             <div class="cost new-cost lt59">
-                Prezzo scontato:
+                Nova cena:
                 <strong>
                     {{ $prices[1]['amount'] }} RSD
                 </strong>
@@ -254,5 +223,6 @@
 </div>
 <script src="{{ asset('/') }}shared_files/slick.min.js" type="text/javascript"></script>
 <script src="{{ asset('/') }}purplerelaxFiles/womanshavemobile/init.js" type="text/javascript"></script>
+@include('components.pixel_footer')
 </body>
 </html>
