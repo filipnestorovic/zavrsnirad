@@ -1,6 +1,6 @@
-$('form').submit(function(){
-    $(this).find(':submit').attr('disabled','disabled');
-});
+// $('form').submit(function(){
+//     $(this).find(':submit').attr('disabled','disabled');
+// });
 
 let currency = $('#currencyHidden').val();
 
