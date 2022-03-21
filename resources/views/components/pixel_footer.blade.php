@@ -60,6 +60,18 @@
                 let phone = $phone_input.val();
                 let country = '{{strtoupper($product->country_code)}}';
                 let validationResult = validatePhoneNumber(phone, country);
+                let errorText = "";
+                switch (country) {
+                    case 'RS':
+                        errorText = 'Pogrešan format telefona';
+                        break;
+                    case 'BG':
+                        errorText = 'Грешен формат на телефона';
+                        break;
+                    default:
+                        errorText = "Pogrešan format telefona";
+                }
+
                 if(validationResult === "1") {
                     $phone_input.removeClass('phoneErrorInput');
                     $('.phoneErrorText').hide();
@@ -67,7 +79,7 @@
                 } else {
                     e.preventDefault();
                     $phone_input.addClass('phoneErrorInput');
-                    $phone_input.after("<div class='phoneErrorText'>Pogrešan format telefona</div>");
+                    $phone_input.after("<div class='phoneErrorText'>" + errorText + "</div>");
                 }
             } else {
                 $(this).find(':submit').attr('disabled','disabled');

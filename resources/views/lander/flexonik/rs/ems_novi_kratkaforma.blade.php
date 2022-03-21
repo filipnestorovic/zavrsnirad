@@ -29,8 +29,8 @@
 </head>
 <body>
 <div class="main_wrapper">
-    @include('components.display_errors')
-    <!-- offer -->
+@include('components.display_errors')
+<!-- offer -->
     <header class="offer_section offer_top">
         <div class="title_block">
             <p class="subtitle lt0">EFIKASAN TRENING MIŠIĆA</p>
@@ -263,18 +263,18 @@
                         <input class="form-control input-lg phone" type="tel" id="phone" placeholder="Telefon" name="phone" required="required"/>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="col-xs-12">
-                        <label><b>Adresa</b></label>
-                        <input class="form-control input-lg other-simple-data" type="text" placeholder="Ulica i broj" name="shipping_address"/>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-xs-12">
-                        <label><b>Grad</b></label>
-                        <input class="form-control input-lg other-simple-data" type="text" placeholder="Grad" name="shipping_city"/>
-                    </div>
-                </div>
+                {{--<div class="form-group">--}}
+                    {{--<div class="col-xs-12">--}}
+                        {{--<label><b>Adresa</b></label>--}}
+                        {{--<input class="form-control input-lg other-simple-data" type="text" placeholder="Ulica i broj" name="shipping_address"/>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<div class="form-group">--}}
+                    {{--<div class="col-xs-12">--}}
+                        {{--<label><b>Grad</b></label>--}}
+                        {{--<input class="form-control input-lg other-simple-data" type="text" placeholder="Grad" name="shipping_city"/>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
                 <center>
                     <button id="submit-button" class="btn btn-lg btn-success" style="margin-top: 20px;font-size: 22px;" type="submit">
                         ZAVRŠITE PORUDŽBINU
