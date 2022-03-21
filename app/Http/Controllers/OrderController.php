@@ -213,7 +213,7 @@ class OrderController extends Controller
                                 $webhookResult = $this->createNewOrderWoocommerce($orderDetails);
                             } catch(\Exception $exception){
                                 Log::error("Error: Woocommerce Webhook \nMessage: " . $exception->getMessage() . "\nDetails: ". json_encode($orderDetails, JSON_PRETTY_PRINT));
-                            return redirect()->back()->withErrors([$this->customerErrorMessage]);
+                                return redirect()->back()->withErrors([$this->customerErrorMessage]);
                             }
                         }
 
@@ -413,7 +413,7 @@ class OrderController extends Controller
                 "city"=> (string)$orderDetails->city,
                 "state"=> "",
                 "postcode"=> (string)$orderDetails->zip,
-                "country"=> (string)$orderDetails->country_name,
+                "country"=> strtoupper((string)$orderDetails->country_code),
                 "email"=> (string)$orderDetails->email,
                 "phone"=> (string)$orderDetails->phone
             ],
@@ -425,7 +425,7 @@ class OrderController extends Controller
                 "city"=> (string)$orderDetails->city,
                 "state"=>"",
                 "postcode"=> (string)$orderDetails->zip,
-                "country"=> (string)$orderDetails->country_name
+                "country"=> strtoupper((string)$orderDetails->country_code)
             ],
             "line_items" => [
                 [
