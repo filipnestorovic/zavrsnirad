@@ -676,7 +676,7 @@ class OrderController extends Controller
             $responseJson = json_decode((string) $response->getBody());
 
             if($responseJson->code === 200) {
-                return $responseJson->status;
+                return 1;
             } else {
                 Log::critical("Error: Product size Webhook error \nServer response: " . $responseJson->status . "\nData: " .json_encode($data, JSON_PRETTY_PRINT));
                 return 0;
