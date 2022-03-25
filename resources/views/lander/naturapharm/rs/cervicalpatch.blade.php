@@ -15,6 +15,10 @@
             height: auto;
             padding-bottom: 20px;
         }
+        #quantity {
+            height: 40px;
+            width: 308px;
+        }
     </style>
 </head>
 <body>
@@ -298,6 +302,22 @@
             <dl>
                 <dt><label for="f_tel">Telefon: </label></dt>
                 <dd><input type="text" name="phone" id="f_tel" class="phone_n"></dd>
+            </dl>
+            <dl>
+                <dt><label for="f_tel">Količina: </label></dt>
+                <dd>
+                    <select name="quantity" id="quantity">
+                        @foreach($prices as $singlePrice)
+                            <option value="{{ $singlePrice['quantity'] }}" placeholder="{{ $singlePrice['is_free_shipping'] }}"
+                                    @if($singlePrice['is_default']) selected @endif
+                                    @if(old('quantity') == $singlePrice['quantity']) selected @endif
+                                    @if($singlePrice['is_free_shipping']) style="font-weight: bold;" @endif
+                            >
+                                &nbsp;{{ $singlePrice['quantity'] }} x {{$product->product_name}} ({{$singlePrice['amount']}} RSD)
+                            </option>
+                        @endforeach
+                    </select>
+                </dd>
             </dl>
             <p align="center"><input class="order" type="submit" value="Završi porudžbinu"></p>
         </form>
