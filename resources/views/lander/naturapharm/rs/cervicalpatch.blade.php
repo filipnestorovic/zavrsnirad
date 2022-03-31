@@ -22,6 +22,7 @@
     </style>
 </head>
 <body>
+@include('components.display_errors')
 <header>
     <div class="wrap">
         <div class="mobile">
@@ -44,6 +45,7 @@
             <!-- orderoffer -->
         </div>
         <!-- wrap -->
+    </div>
 </header>
 <section class="sec_" style="margin-top: 20px;">
     <div class="wrap">
@@ -348,4 +350,5 @@
 </section>
 <!-- sec_deliver -->
 </body>
+@include('components.pixel_footer')
 </html>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-<head> @include('components.pixel_init')
+<head>
+    @include('components.pixel_init')
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
@@ -45,57 +46,57 @@
     <link rel="stylesheet" href="{{ asset('/') }}dailysharkFiles/silencenight/style.css" />
 </head>
 <body>
+@include('components.display_errors')
 <!-- ШАПКА 1 -->
 <!-- after_qbici -->
 <section class="topul">
     <div class="wrap">
         <ul class="toplist">
             <li>
-                <p>Экологически чистый материал</p>
+                <p>Ekološki prihvatljiv materijal</p>
             </li>
             <li>
-                <p>100% гарантия результата</p>
+                <p>100% garancije rezultata</p>
             </li>
             <li>
-                <p>6789 человек уже заказали</p>
+                <p>6789 je već poručilo</p>
             </li>
         </ul>
     </div>
 </section>
 <section class="header-one">
     <div class="wrap">
-        <h1>клипса-антихрап</h1>
-        <h2>Верное средство для борьбы с храпом!</h2>
+        <h1>ANTI - SNORING</h1>
+        <h2>PRAVI LEK ZA HRKANJE!</h2>
         <div class="tovar-sale-cont">
             <div class="tovar-sale">
-                <p>53%</p> скидка
+                <p>40%</p> popusta
             </div>
             <img src="{{ asset('/') }}dailysharkFiles/silencenight/header1_tovar.jpg" alt="" />
         </div>
         <ul class="header-one_plus">
             <li>
-                <p>100% избавляет от храпа</p>
+                <p>100% ELIMINIŠE HRKANJE</p>
             </li>
             <li>
-                <p>Не нарушает сон спящего</p>
+                <p>NE OMETA SAN</p>
             </li>
             <li>
-                <p>Фильтрует воздух от вредных газов и пыли</p>
+                <p>FILTRIRA VAZDUH OD ŠTETNIH GASOVA I PRAŠINE</p>
             </li>
         </ul>
         <div class="price-button">
             <div class="price clearfix">
                 <div class="old-cost">
-                    <span>Обычная цена:</span>
+                    <span>Stara cena:</span>
                     <p><span>{{ $prices[1]['originalPrice'] }}</span><small> RSD</small></p>
                 </div>
                 <div class="new-cost">
-                    <span>Цена сегодня:</span>
+                    <span>Nova cena:</span>
                     <p>{{ $prices[1]['amount'] }}<small> RSD</small></p>
                 </div>
             </div>
-            <a href="#order_form" class="button-m">Заказать сейчас</a>
-            <div class="stock">Количество товара ограничено</div>
+            <a href="#order_form" class="button-m">PORUČITE ODMAH</a>
         </div>
     </div>
 </section>
@@ -104,15 +105,15 @@
         <ul class="list col4">
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/silencenight/pl1.png" alt="" />
-                <p>Эффективно уменьшает храп и улучшает качество сна</p>
+                <p>Efikasno smanjuje hrkanje i poboljšava kvalitet sna</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/silencenight/pl2.png" alt="" />
-                <p>Произведен из экологически чистого материала, не вредит Вашему здоровью</p>
+                <p>Napravljen od ekološki prihvatljivog materijala, ne šteti zdravlju</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/silencenight/pl3.png" alt="" />
-                <p>Обеспечивает приток чистого воздуха, фильтрует воздух от вредных газов и пыли</p>
+                <p>Obezbeđuje priliv čistog vazduha, filtrira vazduh od štetnih gasova i prašine</p>
             </li>
             <!-- <li><img src="img/pl4.png" alt=""><p>Расширяет дыхательных каналы, повышает содержание кислорода в крови</p></li> -->
         </ul>
@@ -121,7 +122,7 @@
 <!--ПРЕИМУЩЕСТВА 1-2 -->
 <section class="after">
     <div class="wrap nopad">
-        <h2 class="title">Страшные последствия храпа</h2>
+        <h2 class="title">POSLEDICE HRKANJA</h2>
         <!--ПРЕИМУЩЕСТВА 2-->
         <ul class="plus2 list col3 round border">
             <li>
@@ -129,7 +130,7 @@
                     <img src="{{ asset('/') }}dailysharkFiles/silencenight/po1.jpg" alt="" />
                 </div>
                 <div class="list-right">
-                    <h3>Ожирение</h3>
+                    <h3>GOJAZNOST</h3>
                 </div>
             </li>
             <li>
@@ -137,7 +138,7 @@
                     <img src="{{ asset('/') }}dailysharkFiles/silencenight/po2.jpg" alt="" />
                 </div>
                 <div class="list-right">
-                    <h3>Гипертония</h3>
+                    <h3>HIPERTENZIJA</h3>
                 </div>
             </li>
             <li>
@@ -145,7 +146,7 @@
                     <img src="{{ asset('/') }}dailysharkFiles/silencenight/po3.jpg" alt="" />
                 </div>
                 <div class="list-right">
-                    <h3>Инсульт</h3>
+                    <h3>GLAVABOLJA</h3>
                 </div>
             </li>
             <li>
@@ -153,7 +154,7 @@
                     <img src="{{ asset('/') }}dailysharkFiles/silencenight/po4.jpg" alt="" />
                 </div>
                 <div class="list-right">
-                    <h3>Инфаркт миокарда</h3>
+                    <h3>KARDIOVASKULARNI PROBLEMI</h3>
                 </div>
             </li>
             <li>
@@ -161,7 +162,7 @@
                     <img src="{{ asset('/') }}dailysharkFiles/silencenight/po5.jpg" alt="" />
                 </div>
                 <div class="list-right">
-                    <h3>Апноэ</h3>
+                    <h3>APNEJA</h3>
                 </div>
             </li>
             <li>
@@ -169,7 +170,7 @@
                     <img src="{{ asset('/') }}dailysharkFiles/silencenight/po6.jpg" alt="" />
                 </div>
                 <div class="list-right">
-                    <h3>Импотенция</h3>
+                    <h3>IMPOTENCIJA</h3>
                 </div>
             </li>
         </ul>
@@ -178,56 +179,57 @@
 <!--ХАРАКТЕРИСТИКИ 2-->
 <section>
     <div class="wrap nopad">
-        <h2 class="h2 title">Вы хотите избавиться от храпа?</h2>
-        <p class="subtitle">Храп — это проблема, способная нанести вред здоровью и опасная для жизни. Ночной храп может привести к апноэ — нарушению и даже остановке дыхания. Кроме того, храп мешает спокойно спать вашим близким.</p>
+        <h2 class="h2 title">KAKO SE REŠITI HRKANJA?</h2>
+        <p class="subtitle">Hrkanje je problem koji može biti štetan po zdravlje i opasan po život.
+            Hrkanje može dovesti do apneje u snu i poremetiti disanje, odnosno dovesti do potpunog prestanka.
+            Osim toga, hrkanje otežava san vašim najmilijima.</p>
         <div class="char2 two-col">
             <div class="two-col_left border2">
                 <img src="{{ asset('/') }}dailysharkFiles/silencenight/photo.jpg" alt="" />
             </div>
             <div class="two-col_right">
-                <p>Настало время покончить с этими проблемами раз и навсегда! Инновационная <b>клипса-антихрап Snorest поможет избавиться от храпа</b> меньше, чем за месяц и восстановить свободное дыхание! </p>
-                <p>Мягкий силикон, из которого изготовлена клипса, не вызывает аллергических реакций, практически не чувствуется на коже. Поэтому вы без труда заснете с этим девайсом.</p>
+                <p>Vreme je da ovi problemi prestanu <b>jednom zauvek!</b></p>
+                <p>Inovativni uređaj protiv hrkanja pomaže u rešavanju problema za manje od mesec dana i vraća slobodno disanje.</p>
+                <p>Mekani silikon od kog je napravljen <b>ne izaziva alergijske reakcije</b> i praktično se ne oseća na koži. Zbog toga
+                    može lako zaspati sa ovim uređajem.</p>
                 <ul class="char2_ul">
                     <li>
                         <p>
-                            <b>Размер:</b> 55 x 30 x 17 мм
+                            <b>Veličina:</b> 55x30x17mm
                         </p>
                     </li>
                     <li>
                         <p>
-                            <b>Вес:</b> 20 г
+                            <b>Težina:</b> 20g
                         </p>
                     </li>
                     <li>
                         <p>
-                            <b>Материал:</b> ABS, силикон
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <b>Цвет:</b> красный, белый, голубой
+                            <b>Materijal:</b> ABS, silikon
                         </p>
                     </li>
                 </ul>
-                <a href="#order_form" class="button-m">Заказать сейчас</a>
+                <a href="#order_form" class="button-m">PORUČITE ODMAH</a>
             </div>
         </div>
     </div>
 </section>
 <!--ВИДЕО-->
-{{-- <section class="video">
---}} {{-- <div class="wrap">
-                --}} {{-- <h2 class="title">Вы забудете о храпе навсегда!</h2>
-                --}} {{-- <div class="video-container shadow">
-                    --}} {{-- <div class="youtube" id="WMS41j1kB2k"></div>
-                    --}} {{-- </div>
-                --}} {{-- </div>
-            --}} {{-- </section>
-        --}}
+<section class="video">
+    <div class="wrap">
+        <h2 class="title">ZAUVEK ĆEŠ ZABORAVITI NA HRKANJE!</h2>
+        <div class="video-container shadow">
+            <div class="youtube" id="WMS41j1kB2k">
+
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="legend">
     <div class="wrap">
-        <h2 class="title">Антихрап устройство и очиститель воздуха 2 в 1</h2>
-        <h3>Легко снимается, надевается и не доставляет неудобств во время сна</h3>
+        <h2 class="title">ANTI SNORING UREĐAJ PROTIV HRKANJA I PREČISTAČ VAZDUHA 2 U 1</h2>
+        <h3>LAKO SE STAVLJA I SKIDA I NE IZAZIVA NEPRIJATNOSTI TOKOM SPAVANJA</h3>
         <div class="legend-img1"></div>
         <ul class="legend-list hidden">
             <li>Мягкие, удобные силиконовые расширители</li>
@@ -242,28 +244,32 @@
 -->
 <section>
     <div class="wrap nopad">
-        <h2 class="title">Отзывы довольных покупателей</h2>
-        <p class="subtitle">Мы получаем сотни благодарных отзывов ежедневно. Надеемся, что Вы останетесь довольны заказом и вернетесь к нам снова!</p>
+        <h2 class="title">UTISCI NAŠIH ZADOVOLJNIH KUPACA</h2>
+        <p class="subtitle">Svaki dan dobijamo stotine zahvalnih recenzija. Nadamo se da ćete biti zadovoljni porudžbinom i da ćete nam se ponovo vratiti!</p>
         <div class="reviews-5">
             <div>
                 <div class="rev shadow round">
                     <img src="{{ asset('/') }}dailysharkFiles/silencenight/rev1.jpg" alt="" />
-                    <h3>Эфирова Мирослава</h3>
-                    <p class="just"> Решила купить Snorest своему папе. Он уже много лет страдает храпом, естественно мешает спать маме. Пробовали какой-то спрей от храпа, но он не помог… Папа уже неделю как пользуется вашей клипсой. Мама не жалуется, говорит что отец спит нормально:)) </p>
+                    <h3>Elena Marković</h3>
+                    <p class="just">Odlučio sam da kupim ovaj uređaj za svog tatu. Već dugi niz godina pati od hrkanja, što ometa san moje majke.
+                        Probali smo neku vrstu spreja za hrkanje, ali nije pomoglo. Tata ga koristi već nedelju  dana, a mama kaže da otac normalno spava.</p>
                 </div>
             </div>
             <div>
                 <div class="rev shadow round">
                     <img src="{{ asset('/') }}dailysharkFiles/silencenight/rev2.jpg" alt="" />
-                    <h3>Гайдук Алексей</h3>
-                    <p class="just"> Сильно храплю во сне. Дома все привыкли, а вот в гостях неудобно. Купил клипсу и забыл про храп, очень приятная на ощупь. Изначально думал, что она будет выпадать, но держится уверенно. В комплект входит коробка-чехол, очень удобно. Спасибо за отличный девайс! </p>
+                    <h3>Gavrilo Aleksić</h3>
+                    <p class="just">Jako hrčem u snu. Kod kuće su svi već navikli, ali kada negde odem je jako nezgodno.
+                        Kupio sam ovaj proizvod i zaboravio na hrkanje. Veoma je prijatan, u početku sam mislio da će ispasti, ali je jako stabilan i prilično sam se navikao.
+                        Dolazi sa torbicom za nošenje i veoma je zgodan uređaj.</p>
                 </div>
             </div>
             <div>
                 <div class="rev shadow round">
                     <img src="{{ asset('/') }}dailysharkFiles/silencenight/rev3.jpg" alt="" />
-                    <h3>Харитонюк Семен</h3>
-                    <p class="just"> Много лет страдал храпом, жена стала часто спать в другой комнате. Пошел к врачу, он мне и рассказал про эту чудо-клипсу. Купил ее. Жена говорит, что практически перестал храпеть и теперь спит со мной рядом)). Так что рекомендую! </p>
+                    <h3>Željko Samardžija</h3>
+                    <p class="just">Dugi niz godina sam patio od hrkanja, a moja supruga je počela da spava u drugoj sobi.
+                        Otišao sam kod doktora i on je je preporučio ovaj proizvod. Kupio sam ga, moja žena je počela ponovo da spava pored mene, zato ga svima preporučujem. :)</p>
                 </div>
             </div>
         </div>
@@ -272,7 +278,7 @@
 </section>
 <section class="dark-bg">
     <div class="wrap nopad">
-        <h2 class="title">Доставка и оплата</h2>
+        <h2 class="title">DOSTAVA I PLAĆANJE</h2>
         <!--ДОСТАВКА 2-->
         <ul class="delivery-2 list col3">
             <li>
@@ -280,8 +286,8 @@
                     <img src="{{ asset('/') }}dailysharkFiles/silencenight/delivery2-1.jpg" alt="" />
                 </div>
                 <div class="list-right">
-                    <h3>Заявка</h3>
-                    <p>Оставьте заявку на нашем сайте, заполнив форму заказа</p>
+                    <h3>PORUČIVANJE</h3>
+                    <p>Ostavite svoje podatke na našoj web stranici</p>
                 </div>
             </li>
             <li>
@@ -289,8 +295,8 @@
                     <img src="{{ asset('/') }}dailysharkFiles/silencenight/delivery2-2.jpg" alt="" />
                 </div>
                 <div class="list-right">
-                    <h3>отправка</h3>
-                    <p>Оператор уточнит у вас детали и мы отправим ваш заказ</p>
+                    <h3>POTVRDA</h3>
+                    <p>Kontaktiraćemo vas da potvrdimo vašu porudžbinu</p>
                 </div>
             </li>
             <li>
@@ -298,8 +304,8 @@
                     <img src="{{ asset('/') }}dailysharkFiles/silencenight/delivery2-3.jpg" alt="" />
                 </div>
                 <div class="list-right">
-                    <h3>получение</h3>
-                    <p>Через 1-10 дней вы получите товар и оплатите его при получении</p>
+                    <h3>SLANJE</h3>
+                    <p>Pošiljku šaljemo brzom poštom u roku od 1-2 dana. Plaćate kuriru prilikom preuzimanja.</p>
                 </div>
             </li>
         </ul>
@@ -307,11 +313,11 @@
 </section>
 <section class="footer-one">
     <div class="wrap">
-        <h1>клипса-антихрап</h1>
-        <h2>Верное средство для борьбы с храпом!</h2>
+        <h1>ANTI - SNORING</h1>
+        <h2>PRAVI LEK ZA HRKANJE!</h2>
         <div class="tovar-sale-cont">
             <div class="tovar-sale">
-                <p>53%</p> скидка
+                <p>40%</p> popusta
             </div>
             <img src="{{ asset('/') }}dailysharkFiles/silencenight/header1_tovar.jpg" alt="" />
         </div>
@@ -321,20 +327,21 @@
             {{--</div>--}}
             <div class="price clearfix">
                 <div class="old-cost">
-                    <span>Обычная цена:</span>
+                    <span>Stara cena:</span>
                     <p><span>{{ $prices[1]['originalPrice'] }}</span><small> RSD</small></p>
                 </div>
                 <div class="new-cost">
-                    <span>Цена сегодня:</span>
+                    <span>Nova cena:</span>
                     <p>{{ $prices[1]['amount'] }}<small> RSD</small></p>
                 </div>
             </div>
-            <form id="order_form" class="m1-form" action="#" method="post">
-                <input class="field" name="name" type="text" placeholder="Введите ваше имя" />
-                <input class="field" name="phone" type="tel" placeholder="Введите ваш телефон" />
-                <button class="button-m">Заказать сейчас</button>
+            <form id="order_form" class="m1-form" action="{{$orderRoute}}" method="post">
+                {{csrf_field()}}
+                @include('lander.naturapharm.components.form_hidden_fields')
+                <input class="field" name="name" type="text" placeholder="Ime i prezime" />
+                <input class="field" name="phone" type="tel" placeholder="Telefon" />
+                <button class="button-m">PORUČITE ODMAH</button>
             </form>
-            <div class="stock">Количество товара ограничено</div>
         </div>
     </div>
 </section>
@@ -373,5 +380,6 @@
         });
     });
 </script>
+@include('components.pixel_footer')
 </body>
 </html>
