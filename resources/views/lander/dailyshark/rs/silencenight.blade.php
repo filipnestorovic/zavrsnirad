@@ -15,7 +15,6 @@
             font-weight: 300;
             font-style: normal;
         }
-
         @font-face {
             font-family: "AvenirNextCyr";
             src: url("{{ asset("/") }}fonts/subset-AvenirNextCyr-Regular.woff2") format("woff2"),
@@ -24,7 +23,6 @@
             font-weight: 400;
             font-style: normal;
         }
-
         @font-face {
             font-family: "AvenirNextCyr";
             src: url("{{ asset("/") }}fonts/subset-AvenirNextCyr-Medium.woff2") format("woff2"),
@@ -33,7 +31,6 @@
             font-weight: 500;
             font-style: normal;
         }
-
         @font-face {
             font-family: "AvenirNextCyr";
             src: url("{{ asset("/") }}fonts/subset-AvenirNextCyr-Bold.woff2") format("woff2"),
@@ -229,13 +226,13 @@
 <section class="legend">
     <div class="wrap">
         <h2 class="title">ANTI SNORING UREĐAJ PROTIV HRKANJA I PREČISTAČ VAZDUHA 2 U 1</h2>
-        <h3>LAKO SE STAVLJA I SKIDA I NE IZAZIVA NEPRIJATNOSTI TOKOM SPAVANJA</h3>
+{{--        <h3>LAKO SE STAVLJA I SKIDA I NE IZAZIVA NEPRIJATNOSTI TOKOM SPAVANJA</h3>--}}
         <div class="legend-img1"></div>
         <ul class="legend-list hidden">
-            <li>Мягкие, удобные силиконовые расширители</li>
-            <li>Современный дизайн, высокое качество сборки</li>
-            <li>Корпус выполнен из нетоксичного, гипоаллергенного материала</li>
-            <li>Очищающие фильтры от мелких частиц пыли</li>
+            <li>Mekani silikonski materijal</li>
+            <li>Moderan dizajn</li>
+            <li>Kvalitetna ABS plastika</li>
+            <li>Filteri za čišćenje vazduha</li>
         </ul>
     </div>
 </section>
