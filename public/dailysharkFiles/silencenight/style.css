@@ -1113,6 +1113,10 @@ p.subtitle {
     display: block;
     margin-bottom: 20px;
 }
+
+.video .video-container {
+    border-color: #f3f3f3 !important;
+}
 /*Ð’Ð˜Ð”Ð•Ðž*/
 .video .video-container {
     border:30px solid #fff;
@@ -2668,7 +2672,7 @@ p.subtitle {
     .video .video-container {
         border: 5px solid #fff;
         border-radius: 0;
-        height: 190px;
+        height: 150px;
     }
 
     .char1-1 li:last-child:after {

@@ -217,7 +217,7 @@
         <h2 class="title">ZAUVEK ĆEŠ ZABORAVITI NA HRKANJE!</h2>
         <div class="video-container shadow">
             <div class="youtube" id="WMS41j1kB2k">
-
+                <img src="{{ asset('/') }}dailysharkFiles/silencenight/video-bg.jpg" alt=""/>
             </div>
         </div>
     </div>
