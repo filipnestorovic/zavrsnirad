@@ -335,8 +335,8 @@
             <form id="order_form" class="m1-form" action="{{$orderRoute}}" method="post">
                 {{csrf_field()}}
                 @include('lander.naturapharm.components.form_hidden_fields')
-                <input class="field" name="name" type="text" placeholder="Ime i prezime" />
-                <input class="field" name="phone" type="tel" placeholder="Telefon" />
+                <input class="field" name="name" type="text" placeholder="Ime i prezime" required/>
+                <input class="field" name="phone" type="tel" placeholder="Telefon" required/>
                 <button class="button-m">PORUČITE ODMAH</button>
             </form>
         </div>
