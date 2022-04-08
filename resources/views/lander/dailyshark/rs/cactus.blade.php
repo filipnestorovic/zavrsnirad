@@ -5,44 +5,35 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-    <link rel="shortcut icon" href="https://cactus.xcartpro.com/r2/img/step1.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cactus.xcartpro.com/r2/css/settings.css">
-    <link rel="stylesheet" href="https://cactus.xcartpro.com/r2/css/timer.css">
-    <link rel="stylesheet" href="https://cactus.xcartpro.com/r2/css/slick.css">
-    <link rel="stylesheet" href="https://cactus.xcartpro.com/r2/css/style.css">
-    <link rel="stylesheet" href="https://cactus.xcartpro.com/r2/css/main.css">
+    <link rel="shortcut icon" href="{{ asset('/') }}dailysharkFiles/cactus/step1.png" type="image/x-icon">
+    <link rel="stylesheet" href="{{ asset('/') }}dailysharkFiles/cactus/style.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&amp;subset=cyrillic" rel="stylesheet">
-    <script src="https://cactus.xcartpro.com/r2/js/jquery.js" type="text/javascript"></script>
-    <script src="https://cactus.xcartpro.com/r2/js/jquery.panorama.js"></script>
-    <script>$(document).ready(function() {
-            $('img.panorama').panorama();
-        });
-    </script>
 </head>
 <body>
+@include('components.display_errors')
 <!-- michael-k90 -->
 <section class="block2">
     <div class="wrap">
         <div class="title-block clearfix">
-            <h1>Танцующий кактус</h1>
-            <h2>Музыкальная плюшевая говорящая игрушка</h2>
+            <h1>PLESNI KAKTUS</h1>
+            <h2>MUZIČKA PLIŠANA IGRAČKA ZA RAZGOVOR</h2>
         </div>
         <!--  <div class="sale">скидка <p>-50%</p></div>-->
         <ul class="plus">
             <li>
-                <p>Запоминает и повторяет слова</p>
+                <p>ZAPAMTI I PONAVLJA REČI</p>
             </li>
             <li>
-                <p>Танцует и поёт</p>
+                <p>PLEŠE I PEVA</p>
             </li>
             <li>
-                <p>Воспроизводит мелодии</p>
+                <p>SVIRA MELODIJE</p>
             </li>
             <li>
-                <p>Работает на батарейках</p>
+                <p>RADI NA BATERIJE</p>
             </li>
             <li>
-                <p>Изготовлена из мягкого плюша</p>
+                <p>NAPRAVLJEN OD MEKOG PLIŠA</p>
             </li>
         </ul>
         <!-- <div class="gift">
@@ -51,196 +42,135 @@
         <div class="formbox">
             <div class="price clearfix">
                 <div class="old-cost">
-                    <span>Обычная цена:</span>
+                    <span>Stara cena:</span>
                     <p>
-                        3180
-                        <x-currency>руб</x-currency>
+                        {{ $prices[1]['originalPrice'] }} RSD
                     </p>
                 </div>
                 <div class="new-cost">
-                    <span>Цена сегодня:</span>
+                    <span>Nova cena: </span>
                     <p>
-                        <x-newprice>1590</x-newprice>
-                        <x-currency>руб</x-currency>
+                        {{ $prices[1]['amount'] }} RSD
                     </p>
                 </div>
             </div>
-            <div class="countbox"></div>
-            <a href="#buy" class="button-m-1" style="width: 280px;">Заказать сейчас</a>
+            <br>
+            <a href="#buy" class="button-m-1" style="width: 280px;">Poručite sada</a>
         </div>
     </div>
 </section>
 <section class="block3" id="block3">
     <div class="wrap">
-        <h2 class="title">Забавная и мега популярная игрушка</h2>
-        <p>Танцующий кактус — новая музыкальная говорящая игрушка для вашего ребенка. Игрушка представляет из себя шевелящуюся поющую разговаривающую куклу в форме кактуса в горшке с большими глазами и улыбающимся лицом. Так же она способна запоминать ваши слова и повторять их, забавно танцуя при этом. Плюшевый танцующий кактус — это лучший подарок, который надолго увлечет как детей, так и взрослых, и подарит кучу радостных эмоций</p>
-        <div class="video-flex">
-            <div class="vid-1">
-                <video src="https://cactus.xcartpro.com/r2/video/1.mp4" width="100%" height="300px" preload="auto" playsinline="" webkit-playsinline="" controls="" draggable="true" poster="https://cactus.xcartpro.com/r2/video/1.jpg"></video>
-            </div>
-            <div class="vid-2">
-                <video src="https://cactus.xcartpro.com/r2/video/2.mp4" width="100%" height="300px" preload="auto" playsinline="" webkit-playsinline="" controls="" draggable="true" poster="https://cactus.xcartpro.com/r2/video/2.jpg"></video>
-            </div>
-        </div>
+        <h2 class="title">SMEŠNA I MEGA POPULARNA IGRAČKA</h2>
+        <p>Kaktus koji pleše je nova muzička igračka za vaše dete. Igračka je pokretna lutka kaktusa u saksiji sa velikim očima i nasmejanim licem koji peva i priča.
+            U stanju je da zapamti vaše reči i ponovi ih dok pleše na zabavan način.
+            Plišani plesni kaktus je najbolji poklon koji će dugo zabavljati decu i odrasle i dati mnogo radosnih emocija.</p>
     </div>
 </section>
 <!-- bizlife_inc -->
 <section class="block4" id="block4">
     <div class="wrap">
-        <h2 class="title">Преимущества танцующего кактуса</h2>
+        <h2 class="title">PREDNOSTI PLESNOG KAKTURA</h2>
         <ul class="preim">
             <li>
-                <img src="https://cactus.xcartpro.com/r2/img/pr1.jpg" alt="">
-                <p>Танцует со светомузыкой</p>
+                <img src="{{ asset('/') }}dailysharkFiles/cactus/pr1.jpg" alt="">
+                <p>Ples uz muziku</p>
             </li>
             <li>
-                <img src="https://cactus.xcartpro.com/r2/img/pr2.jpg" alt="">
-                <p>Повторяет звуки вокруг</p>
+                <img src="{{ asset('/') }}dailysharkFiles/cactus/pr2.jpg" alt="">
+                <p>Ponavlja zvukove</p>
             </li>
             <li>
-                <img src="https://cactus.xcartpro.com/r2/img/pr3.jpg" alt="">
-                <p>Воспроизводит более 30 треков</p>
+                <img src="{{ asset('/') }}dailysharkFiles/cactus/pr3.jpg" alt="">
+                <p>Pušta preko 30 numera</p>
             </li>
             <li>
-                <img src="https://cactus.xcartpro.com/r2/img/pr4.jpg" alt="">
-                <p>Создает приятную атмосферу</p>
+                <img src="{{ asset('/') }}dailysharkFiles/cactus/pr4.jpg" alt="">
+                <p>Stvara prijatnu i zabavnu atmosferu</p>
             </li>
         </ul>
         <div class="gallery">
             <div>
-                <div class="gal"><img src="https://cactus.xcartpro.com/r2/img/g1.jpg" alt=""></div>
+                <div class="gal"><img src="{{ asset('/') }}dailysharkFiles/cactus/g1.jpg" alt=""></div>
             </div>
             <div>
-                <div class="gal"><img src="https://cactus.xcartpro.com/r2/img/g2.jpg" alt=""></div>
+                <div class="gal"><img src="{{ asset('/') }}dailysharkFiles/cactus/g2.jpg" alt=""></div>
             </div>
             <div>
-                <div class="gal"><img src="https://cactus.xcartpro.com/r2/img/g3.jpg" alt=""></div>
+                <div class="gal"><img src="{{ asset('/') }}dailysharkFiles/cactus/g3.jpg" alt=""></div>
             </div>
         </div>
     </div>
 </section>
-<section class="block5" id="block5" style="background: rgb(254,254,254);
-         background: linear-gradient(111deg, rgba(254,254,254,0.006039915966386533) 2%, rgba(26,215,168,0.5494572829131652) 100%);">
-    <div class="wrap">
-        <h2 class="title" style="margin: 0 0 5px 0;">Каталог</h2>
-        <center class="title">
-            <h4>Выберите своего кактуса-тусовщика</h4>
-        </center>
-        <div class="cat-flex">
-            <div class="img-cat">
-                <img src="https://cactus.xcartpro.com/r2/img/1-1.jpg">
-                <h4 class="cat-p">Артикул: 001</h4>
-                <a href="#buy" class="button-m-1">Заказать сейчас</a>
-            </div>
-            <div class="img-cat">
-                <img src="https://cactus.xcartpro.com/r2/img/1-2.jpg">
-                <h4 class="cat-p">Артикул: 002</h4>
-                <a href="#buy" class="button-m-1">Заказать сейчас</a>
-            </div>
-            <div class="img-cat">
-                <img src="https://cactus.xcartpro.com/r2/img/1-3.jpg">
-                <h4 class="cat-p">Артикул: 003</h4>
-                <a href="#buy" class="button-m-1">Заказать сейчас</a>
-            </div>
-            <div class="img-cat">
-                <img src="https://cactus.xcartpro.com/r2/img/1-4.jpg">
-                <h4 class="cat-p">Артикул: 004</h4>
-                <a href="#buy" class="button-m-1">Заказать сейчас</a>
-            </div>
-            <div class="img-cat">
-                <img src="https://cactus.xcartpro.com/r2/img/1-5.jpg">
-                <h4 class="cat-p">Артикул: 005</h4>
-                <a href="#buy" class="button-m-1">Заказать сейчас</a>
-            </div>
-            <div class="img-cat">
-                <img src="https://cactus.xcartpro.com/r2/img/1-6.jpg">
-                <h4 class="cat-p">Артикул: 006</h4>
-                <a href="#buy" class="button-m-1">Заказать сейчас</a>
-            </div>
-            <div class="img-cat">
-                <img src="https://cactus.xcartpro.com/r2/img/1-7.jpg">
-                <h4 class="cat-p">Артикул: 007</h4>
-                <a href="#buy" class="button-m-1">Заказать сейчас</a>
-            </div>
-            <div class="img-cat">
-                <img src="https://cactus.xcartpro.com/r2/img/1-8.jpg">
-                <h4 class="cat-p">Артикул: 008</h4>
-                <a href="#buy" class="button-m-1">Заказать сейчас</a>
-            </div>
-            <div class="img-cat">
-                <img src="https://cactus.xcartpro.com/r2/img/1-9.jpg">
-                <h4 class="cat-p">Артикул: 009 *со светомузыкой</h4>
-                <a href="#buy" class="button-m-1">Заказать сейчас</a>
-            </div>
-        </div>
-    </div>
-</section>
+
 <section  class="gallery_sect" style="padding-top: 5px;">
-    <img src="https://cactus.xcartpro.com/r2/img/gallery.jpg" alt="" class="panorama" height="323" width="1968">
+    <img src="{{ asset('/') }}dailysharkFiles/cactus/gallery.jpg" alt="" class="panorama" height="323" width="1968">
 </section>
 <section class="block5"  style="padding: 40px 0 30px;" id="bl6">
     <div class="wrap">
-        <h2 class="title">Особенности</h2>
+        <h2 class="title">OSOBINE KAKTUSA</h2>
         <ul class="use">
             <li>
-                <img src="https://cactus.xcartpro.com/r2/img/step1.png" alt="">
-                <h3>Записывающие устройство в музыкальном кактусе запишет любое Ваше предложение, которые Вы произнесете рядом с кактусом!  </h3>
+                <img src="{{ asset('/') }}dailysharkFiles/cactus/step1.png" alt="">
+                <h3>DIKTAFON U MUZIČKOM KAKTUSU SNIMIĆE SVAKU REČENICU KOJU IZGOVORITE PORED KAKTUSA!</h3>
             </li>
             <li>
-                <img src="https://cactus.xcartpro.com/r2/img/step2.png" alt="">
-                <h3>Веселая музыка и танцы подходят для создания приятной атмосферы и подходят для вечеринок!</h3>
+                <img src="{{ asset('/') }}dailysharkFiles/cactus/step2.png" alt="">
+                <h3>VESELA MUZIKA I PLES SU POGODNI ZA STVARANJE LUDE ZABAVE I POGODNI SU ZA ŽURKE!</h3>
             </li>
             <li>
-                <img src="https://cactus.xcartpro.com/r2/img/step3.png" alt="">
-                <h3> Работает от пальчиковых батареек: требуется 3 батарейки типа АА</h3>
+                <img src="{{ asset('/') }}dailysharkFiles/cactus/step3.png" alt="">
+                <h3>RADI NA BATERIJE: POTREBNE SU 3 AA BATERIJE</h3>
             </li>
         </ul>
         <div class="use-details">
-            <p><b>Плюшевый кактус станет отличным развлечением не только для детей, но и для взрослых! </b></p>
+            <p><b>Plišani kaktus biće odlična zabava ne samo za decu, već i za odrasle!</b></p>
         </div>
     </div>
 </section>
 <section class="block7" id="block7">
     <div class="wrap">
-        <h2 class="title">Отзывы покупателей</h2>
+        <h2 class="title">UTISCI KUPACA</h2>
         <div class="reviews">
             <div>
-                <img src="https://cactus.xcartpro.com/r2/img/rev1.jpg" alt="">
-                <h3>Михаил, 34 года</h3>
-                <p>Купили в подарок, кактус бомба! Из всех подарков большинство детей заинтересовались именно им. Танцует, записывает, поёт. Именинник в восторге, нам приятно.) всем рекомендую! Кактус потрясающий!</p>
+                <img src="{{ asset('/') }}dailysharkFiles/cactus/rev1.jpg" alt="">
+                <h3>MIHAJLO, 34 GODINE</h3>
+                <p>Kupio sam ga sinu na poklon i oduševljen je! Od svih rođendanskih poklona ovaj mu se najviše dopao.
+                    Pleše, priča i peva. Klinac je presrećan i ludo se zabavlja, a i mi sa njim. Preporučujem svima!</p>
             </div>
             <div>
-                <img src="https://cactus.xcartpro.com/r2/img/rev2.jpg" alt="">
-                <h3>Света, 32 года</h3>
-                <p>Игрушкой очень довольны. Играться с ним не только детям интересно, но и взрослым. Игрушка записывает голоса и повторяет, поет и танцует. Песен много, все свежие, не переслушать! В целом советую заказать.</p>
+                <img src="{{ asset('/') }}dailysharkFiles/cactus/rev2.jpg" alt="">
+                <h3>CECA, 32 GODINE</h3>
+                <p>Veoma sam zadovoljna igračkom. Igranje nije zanimljivo samo mojoj deci nego i meni i mom suprugu. Kaktus snima
+                    glasove i ponavlja, peva i igra. Ima mnogo pesama i baš je zanimljiv. Generalno, savetujem svakome ko ima dete da ga poruči.</p>
             </div>
             <div>
-                <img src="https://cactus.xcartpro.com/r2/img/rev3.jpg" alt="">
-                <h3>Роман, 29 лет</h3>
-                <p>Очень классный кактус. Покупал племяннице на день рождение, она была в восторге, ну а в больше восторге были мы-взрослые! Веселая музыка для приятной атмосферы обеспеченно. Рекомендую!</p>
+                <img src="{{ asset('/') }}dailysharkFiles/cactus/rev3.jpg" alt="">
+                <h3>ROMEO, 29 GODINA</h3>
+                <p>Vrlo kul kaktus. Kupio sam ga nećakinji za rođendan, ona se oduševila ali i mi odrasli sa njom. Vesela muzila i prijatna atmosfera. Preporučujem!</p>
             </div>
         </div>
     </div>
 </section>
 <section class="block9" id="block9">
     <div class="wrap">
-        <h2 class="title">Как заказать?</h2>
+        <h2 class="title">KAKO PORUČITI</h2>
         <ul class="ship">
             <li>
-                <img src="https://cactus.xcartpro.com/r2/img/s1.png" alt="">
-                <p>Вы оставляете заявку на нашем сайте</p>
+                <img src="{{ asset('/') }}dailysharkFiles/cactus/s1.png" alt="">
+                <p>Ostavite podatke na našoj web stranici</p>
             </li>
             <li>
-                <img src="https://cactus.xcartpro.com/r2/img/s2.png" alt="">
-                <p>Менеджер перезванивает для оформления заказа</p>
+                <img src="{{ asset('/') }}dailysharkFiles/cactus/s2.png" alt="">
+                <p>Kontaktiraćemo vas da potvrdimo vašu porudžbinu</p>
             </li>
             <li>
-                <img src="https://cactus.xcartpro.com/r2/img/s3.png" alt="">
-                <p>Мы отправляем Ваш заказ почтой в любой регион</p>
+                <img src="{{ asset('/') }}dailysharkFiles/cactus/s3.png" alt="">
+                <p>Proizvod šaljemo brzom poštom u roku od 1-2 radna dana</p>
             </li>
             <li>
-                <img src="https://cactus.xcartpro.com/r2/img/s4.png" alt="">
-                <p>Вы оплачиваете заказ при получении</p>
+                <img src="{{ asset('/') }}dailysharkFiles/cactus/s4.png" alt="">
+                <p>Plaćate kuriru po preuzimanju pošiljke</p>
             </li>
         </ul>
     </div>
@@ -249,25 +179,25 @@
 <section class="block2 end" id="block10">
     <div class="wrap">
         <div class="title-block clearfix">
-            <h1>Танцующий кактус</h1>
-            <h2>МУЗЫКАЛЬНАЯ ПЛЮШЕВАЯ ГОВОРЯЩАЯ ИГРУШКА</h2>
+            <h1>PLESNI KAKTUS</h1>
+            <h2>MUZIČKA PLIŠANA IGRAČKA ZA RAZGOVOR</h2>
         </div>
         <!-- <div class="sale">скидка <p>-50%</p></div>-->
         <ul class="plus">
             <li>
-                <p>Запоминает и повторяет слова</p>
+                <p>ZAPAMTI I PONAVLJA REČI</p>
             </li>
             <li>
-                <p>Танцует и поёт</p>
+                <p>PLEŠE I PEVA</p>
             </li>
             <li>
-                <p>Воспроизводит мелодии</p>
+                <p>SVIRA MELODIJE</p>
             </li>
             <li>
-                <p>Долговечен, работает на батарейках</p>
+                <p>RADI NA BATERIJE</p>
             </li>
             <li>
-                <p>Изготовлен из мягкого плюша</p>
+                <p>NAPRAVLJEN OD MEKOG PLIŠA</p>
             </li>
         </ul>
         <!-- <div class="gift">
@@ -276,74 +206,36 @@
         <div class="formbox">
             <div class="price clearfix">
                 <div class="old-cost">
-                    <span>Обычная цена:</span>
+                    <span>Stara cena:</span>
                     <p>
-                        3180
-                        <x-currency>руб</x-currency>
+                        {{ $prices[1]['originalPrice'] }} RSD
                     </p>
                 </div>
                 <div class="new-cost">
-                    <span>Цена сегодня:</span>
+                    <span>Nova cena: </span>
                     <p>
-                        <x-newprice>1590</x-newprice>
-                        <x-currency>руб</x-currency>
+                        {{ $prices[1]['amount'] }} RSD
                     </p>
                 </div>
             </div>
-            <div class="countbox"></div>
-            <form id="buy" class="m1-form" action="#" method="post">
-                <input name="csrf_token" type="hidden" value="108f446fea9b312b7890f2c3f283ad62:1648820092" />
-                <select name="offer" class="form-control country_chang" style="display: none;">
-                    <option
-                        data-country-code="RU"
-                        selected="selected"
-                        value="28039"
-                    >
-                        Россия
-                    </option>
-                </select>
-                <input class="field" name="name" type="text" placeholder="Введите ваше имя" required>
-                <input class="field rumask" name="phone" type="tel" placeholder="Введите ваш телефон" required>
-                <input class="field" name="comments" type="hidden" value="Игрушка не выбрана">
-                <button class="button-m" type="submit">Заказать сейчас</button>
+            <br>
+            <form id="buy" class="m1-form" action="{{$orderRoute}}" method="post">
+                {{ csrf_field() }}
+                @include('lander.naturapharm.components.form_hidden_fields')
+                <input class="field" name="name" type="text" placeholder="Ime i prezime" required>
+                <input class="field" name="phone" type="tel" placeholder="Telefon" required>
+                <button class="button-m" type="submit">Poručite sada</button>
             </form>
         </div>
     </div>
 </section>
-<style>
-    .form-control{
-        position: relative;
-        display: block;
-        outline: 0;
-        border: none;
-        border-radius: 30px;
-        -webkit-border-radius: 30px;
-        width: 100%;
-        height: 50px;
-        line-height: 60px;
-        margin: 0 auto 15px;
-        padding: 0 20px;
-        background:#fff;
-        text-align: center;
-        font-size: 14px;
-        font-family: 'Oswald', sans-serif;
-        color: #333;
-        -webkit-transition: all 0.2s;
-        -moz-transition:    all 0.2s;
-        -o-transition:      all 0.2s;
-        -ms-transition:     all 0.2s;
-        transition:         all 0.2s;
-    }
-</style>
-<link rel="stylesheet" type="text/css" href="https://cactus.xcartpro.com/r2/css/roboto.css">
-<script src="https://cactus.xcartpro.com/r2/js/count.js"></script>
-<script src="https://cactus.xcartpro.com/r2/js/slick.min.js"></script>
-<script src="https://cactus.xcartpro.com/r2/js/main.js"></script>
+<script src="{{ asset('/') }}dailysharkFiles/cactus/jquery.panorama.js"></script>
+<script src="{{ asset('/') }}shared_files/slick.min.js"></script>
 <script>
-    $('.button-m-1').click(function (e) {
-        var articul = $(this).parent().find('h4').text(); //получаем название товара
-        $("input[name='comments']").val(articul); // вставляем название в input
+    $(document).ready(function() {
+        $('img.panorama').panorama();
     });
 </script>
+@include('components.pixel_footer')
 </body>
 </html>
