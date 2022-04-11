@@ -299,11 +299,11 @@
             @include('lander.naturapharm.components.form_hidden_fields')
             <dl>
                 <dt><label for="f_name">Ime i prezime: </label></dt>
-                <dd><input type="text" name="name" id="f_name"></dd>
+                <dd><input type="text" name="name" id="f_name" required></dd>
             </dl>
             <dl>
                 <dt><label for="f_tel">Telefon: </label></dt>
-                <dd><input type="text" name="phone" id="f_tel" class="phone_n"></dd>
+                <dd><input type="text" name="phone" id="f_tel" class="phone_n" required></dd>
             </dl>
             <dl>
                 <dt><label for="f_tel">Količina: </label></dt>
