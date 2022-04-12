@@ -18,29 +18,13 @@
         <div class="hero-top">
             <div class="hero-top__box tac">
                 <h1 class="hero__title">
-                    Ό,τι πρέπει για λεία επιδερμίδα!
+                    Sve što vam treba za savršene obrve!
                 </h1>
                 <p class="hero__subtitle">
-                    Σετ αποτρίχωσης
+                    Perfect Eyebrow
                 </p>
             </div>
-            <div class="hero-top__info" style="background-image: url('{{ asset('/') }}purplerelaxFiles/eyebrowremover2/product-trim.jpg');">
-                <div class="hero-top__products">
-                    <p class="hero-top__products-name">
-                        Κόκκοι για την αποτρίχωση
-                    </p>
-                    <span class="hero-top__products-sep db">
-                     +
-                     </span>
-                    <p class="hero-top__products-name">
-                        Φορητό τρίμερ φρυδιών
-                    </p>
-                </div>
-                <div class="hero-top__present pos-rel">
-                    <img src="{{ asset('/') }}purplerelaxFiles/eyebrowremover2/product-present.png" alt="" class="hero-top__present-img db">
-                    <img src="{{ asset('/') }}purplerelaxFiles/eyebrowremover2/product.png" alt="" class="hero-top__present-product db pos-ab">
-                </div>
-            </div>
+            <div class="hero-top__info"></div>
         </div>
         <div class="hero-bottom">
             <div class="price df al-c ju-b">
@@ -65,7 +49,7 @@
                         </svg>
                      </span>
                     <p class="hero-bottom__list-text">
-                        Κατάλληλο για όλους τύπους του δέρματος
+                        Pogodno za svaku ženu
                     </p>
                 </li>
                 <li class="hero-bottom__list-item df al-c">
@@ -77,7 +61,7 @@
                         </svg>
                      </span>
                     <p class="hero-bottom__list-text">
-                        αφαιρεί και τις πιο μικρές τρίχες
+                        Uklanja i najsitnije dlačice
                     </p>
                 </li>
                 <li class="hero-bottom__list-item df al-c">
@@ -89,7 +73,7 @@
                         </svg>
                      </span>
                     <p class="hero-bottom__list-text">
-                        δεν προκαλεί αλλεργίες και ερεθισμούς
+                        Ne izaziva alergije i iritacije
                     </p>
                 </li>
             </ul>
@@ -97,163 +81,94 @@
     </section>
     <section class="granules section">
         <h3 class="title granules__title">
-            6 οφέλη από τους κόκκους αποτρίχωσης
+            6 prednosti Perfect Eyebrow uređaja
         </h3>
         <img src="{{ asset('/') }}purplerelaxFiles/eyebrowremover2/granules-present.jpg" alt="" class="granules__img db">
         <ul class="granules-list">
             <li class="granules-list__item df">
                 <p class="granules-list__text">
-                    Έχει <span class="tt-a">χαμηλή θερμοκρασία τήξης</span> (42-45 βαθμούς), η οποία αποκλείει τα εγκαύματα.
+                    Savršeno precizan i za par trenutaka <span class="tt-a"> dovodi obrve do savršenstva</span>
                 </p>
             </li>
             <li class="granules-list__item df">
                 <p class="granules-list__text">
-                    Σκληραίνει αργά, <span class="tt-a">παρατείνοντας τον χρόνο επίδρασης της θερμότητας</span> για τα
-                    τριχοθυλάκια, λόγω των οποίων μειώνονται οι αισθήσεις του πόνου.
+                    Perfect Eyebrow ima <span class="tt-a">18-karatnu pozlaćenu glavu</span> koja ne izativa <span class="tt-a">alergije, crvenilo i osip kože</span>
                 </p>
             </li>
             <li class="granules-list__item df">
                 <p class="granules-list__text">
-                    Εφαρμόζεται με λεπτή στρώση, όχι μεγαλύτερη από 1 mm, (το σετ περιλαμβάνει <span class="tt-a">βολική
-                     σπάτουλα</span> για την εφαρμογή)
+                    Više ne morate da idete kod kozmetičara da biste sređivali obrve - <span class="tt-a"> uradite to sami</span>
                 </p>
             </li>
             <li class="granules-list__item df">
                 <p class="granules-list__text">
-                    Αντιγράφει πλήρως το ανάγλυφο της αποτριχωμένης περιοχής, <span class="tt-a">πιάνει όλες τις τρίχες</span>
-                    κοντά στην επιφάνεια του δέρματος και μόνο μετά από αυτό γίνεται σκληρό.
+                    Ne morate da trpite bol koji stvara pinceta ili vosak. <span class="tt-a">Iritacija i crvenilo </span> nestaće zauvek
                 </p>
             </li>
             <li class="granules-list__item df">
                 <p class="granules-list__text">
-                    <span class="tt-a">Δεν σπάει </span> κατά την αφαίρεση, δεν αφήνει σπασμένες τρίχες.
+                    <span class="tt-a">Profesionalci u svetu </span> ovaj uređaj sve više koriste i napuštaju zastarele tehnike kao što su pinceta, konac i vosak
                 </p>
             </li>
             <li class="granules-list__item df">
                 <p class="granules-list__text">
-                    Με συνεχή χρήση των κόκκων σε επεξεργασμένες περιοχές του σώματος <span class="tt-a">επιβραδύνεται η
-                     ανάπτυξη της τρίχας</span>: κάθε φορά οι τρίχες γίνονται πιο λεπτές και πιο ανοιχτές.
+                    Ima pozadinsko led osvetljenje, radi na baterije i <span class="tt-a">lako je prenosiv</span>
                 </p>
             </li>
         </ul>
         <a href="#form" class="link db mr-a tac">Poručite sada</a>
     </section>
-    <section class="components section section--accent">
-        <h3 class="title components__title">
-            Ενεργά συστατικά
-        </h3>
-        <div class="components-items">
-            <div class="components-item df al-c">
-                <div class="components-item__box">
-                    <img src="{{ asset('/') }}purplerelaxFiles/eyebrowremover2/item-1.png" alt="" class="components-item__img db">
-                </div>
-                <div class="components-item__info">
-                    <h4 class="components-item__title">
-                        Παραφίνη:
-                    </h4>
-                    <ul class="components-item__list">
-                        <li class="components-item__list-text">
-                            πλούσια σε βιταμίνες, που είναι ευεργετικές για το δέρμα.
-                        </li>
-                        <li class="components-item__list-text">
-                            έχει μαλακτικές, ενυδατικές, θρεπτικές και αντιφλεγμονώδεις ιδιότητες.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="components-item df al-c">
-                <div class="components-item__box">
-                    <img src="{{ asset('/') }}purplerelaxFiles/eyebrowremover2/item-2.png" alt="" class="components-item__img db">
-                </div>
-                <div class="components-item__info">
-                    <h4 class="components-item__title">
-                        Κηρήθρα (Κερί μέλισσας) ενισχυμένο με βιταμίνη Α:
-                    </h4>
-                    <ul class="components-item__list">
-                        <li class="components-item__list-text">
-                            είναι μια εξαιρετική, φυσική, ενυδατική σύνθεση.
-                        </li>
-                        <li class="components-item__list-text">
-                            δεν φράζει τους πόρους.
-                        </li>
-                        <li class="components-item__list-text">
-                            ελαχιστοποιεί τους ερεθισμούς μετά την αποτρίχωση
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="components-item df al-c">
-                <div class="components-item__box">
-                    <img src="{{ asset('/') }}purplerelaxFiles/eyebrowremover2/item-3.png" alt="" class="components-item__img db">
-                </div>
-                <div class="components-item__info">
-                    <h4 class="components-item__title">
-                        Λάδι καρύδας:
-                    </h4>
-                    <ul class="components-item__list">
-                        <li class="components-item__list-text">
-                            Μαλακώνει το δέρμα.
-                        </li>
-                        <li class="components-item__list-text">
-                            κάνει την αποτρίχωση γρήγορη και ανώδυνη.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <a href="#form" class="link db mr-a tac">Poručite sada</a>
-    </section>
     <section class="trimmer section">
         <h3 class="title trimmer__title">
-            Φορητό τρίμερ φρυδιών Flawless Brows
+            Prenosivi depilator za obrve Perfect Eyebrow
         </h3>
         <img src="{{ asset('/') }}purplerelaxFiles/eyebrowremover2/product.gif" alt="" class="trimmer__present">
         <div class="trimmer-info">
             <h4 class="trimmer-info__title">
-                Απαλή και επαγγελματική περιποίηση φρυδιών
+                Nežna i profesionalna nega obrva
             </h4>
             <p class="trimmer-info__text">
-                Ανώδυνη και ακριβής αποτρίχωση, χωρίς τους ερεθισμούς ή τις αλλεργίες. Σταματήστε να ταλαιπωρείται τον εαυτό
-                σας, βγάζοντας τα φρύδια σας τρίχα τρίχα με κοφτές κινήσεις. Με την αποτριχωτική συσκευή Flawless Brows, η
-                περιποίηση των φρυδιών σας θα είναι απόλαυση!
+                Bezbolno i precizno uklanjanje dlaka, bez iritacija i alergija. Prestanite da se mučite tako što
+                ćete oštrim pokretima čupati dlačice i stvarati bol. Sa Perfect Eyebrow depilatorom, tretiranje
+                obrva će biti zadovoljstvo!
             </p>
             <p class="trimmer-info__text">
-                Όταν το χρησιμοποιείτε, δεν χρειάζεστε τζελ, νερό ή άλλα πρόσθετα υλικά. Απλώς ξεβγάλτε το μακιγιάζ σας και
-                αφαιρέστε ομαλά τις ανεπιθύμητες τρίχες. Είναι τόσο συμπαγές, που χωράει εύκολα σε ένα μικρό τσαντάκι.
+                Kada ga koristite, nisu potrebni gel, voda ili drugi aditivi. Samo isperite šminku i glatko uklonite
+                neželjene dlačice. Jako je kompaktan i lako staje i u najmanju torbu.
             </p>
         </div>
     </section>
     <section class="benefits section section--accent">
         <h3 class="title benefits__title">
-            Οφέλη του τρίμερ
+            Prednosti trimera
         </h3>
         <img src="{{ asset('/') }}purplerelaxFiles/eyebrowremover2/benefits-present.jpg" alt="" class="benefits__present db">
         <ul class="benefits-list">
             <li class="benefits-list__item df">
                 <p class="benefits-list__text">
-                    ευκολία χρήσης.
+                    Lakoća korišćenja
                 </p>
             </li>
             <li class="benefits-list__item df">
                 <p class="benefits-list__text">
-                    μικρό μέγεθος και φορητότητα.
+                    Mala veličina i prenosivost
                 </p>
             </li>
             <li class="benefits-list__item df">
                 <p class="benefits-list__text">
-                    κομψό σχεδιασμό.
+                    Elegantan dizajn
                 </p>
             </li>
             <li class="benefits-list__item df">
                 <p class="benefits-list__text">
-                    ικανότητα χρήσης σε ευαίσθητο δέρμα, χωρίς φόβο του ερεθισμού.
+                    Mogućnost upotrebe na osetljivoj koži, bez straha od iritacije
                 </p>
             </li>
         </ul>
     </section>
     <section class="reviews section">
         <h3 class="reviews__title title">
-            Κριτικές πελατών
+            Utisci naših kupaca
         </h3>
         <div class="container reviews__container pos-rel">
             <div class="swiper">
@@ -265,10 +180,10 @@
                             </div>
                             <div class="slide-info">
                                 <h4 class="slide-info__title">
-                                    Άννα
+                                    Milica
                                 </h4>
                                 <p class="slide-info__date">
-                                    <span class="date-day"></span>.<span class="date-mont"></span>.<span class="date-year"></span>
+                                    29 godina
                                 </p>
                                 <div class="slide-info__stars">
                                     <img src="{{ asset('/') }}purplerelaxFiles/eyebrowremover2/stars.png" alt="" class="slide-info__stars-img">
@@ -276,17 +191,17 @@
                             </div>
                         </div>
                         <p class="slide__text">
-                            Πολύ ωραίο κερί. Εύκολη εφαρμογή, σκληραίνει γρήγορα στο δέρμα, χωρίς αλλεργίες μετά την αποτρίχωση. Εάν
-                            χρησιμοποιείται συνεχώς, οι τρίχες γίνονται όλο και πιο λεπτές. Μου άρεσε πολύ και η αποτριχωτική
-                            συσκευή. Ένα εξαιρετικό σετ για αποτρίχωση στο σπίτι. Συνιστώ!
+                            Sigurno najbolje otkriće ove godine! Trošim dosta vremena i truda na sređivanje obrva, ali sada je to stvar prošlosti.
+                            Epilator uklanja dlačice veoma nežno, ne oštećuje kožu i uopste nije neprijatan, što me je iznenadilo.
+                            Ovo je jedan od mojih omiljenih proizvoda za negu. Naravno, veliku zahvalnost dugujem Mariji, devojci koja radi u korisničkoj podršci i koja mi je pomogla oko izbora.
                         </p>
                         <div class="slide-grade grade">
                             <div class="grade-quality dg">
-                                <p class="grade-quality__text gr-a">Ποιότητα</p>
+                                <p class="grade-quality__text gr-a">Kvalitet</p>
                                 <p class="grade-quality__count gr-a mr-a">9/10</p>
                             </div>
                             <div class="grade-delivery dg">
-                                <p class="grade-delivery__text gr-a">Διανομή</p>
+                                <p class="grade-delivery__text gr-a">Dostava</p>
                                 <p class="grade-delivery__count gr-a mr-a">10/10</p>
                             </div>
                         </div>
@@ -298,10 +213,10 @@
                             </div>
                             <div class="slide-info">
                                 <h4 class="slide-info__title">
-                                    Όλγα
+                                    Kristina
                                 </h4>
                                 <p class="slide-info__date">
-                                    <span class="date-day"></span>.<span class="date-mont"></span>.<span class="date-year"></span>
+                                    32 godine
                                 </p>
                                 <div class="slide-info__stars">
                                     <img src="{{ asset('/') }}purplerelaxFiles/eyebrowremover2/stars.png" alt="" class="slide-info__stars-img">
@@ -309,18 +224,16 @@
                             </div>
                         </div>
                         <p class="slide__text">
-                            Έχω πολύ ευαίσθητο δέρμα, έχω δοκιμάσει ένα σωρό διαφορετικά προϊόντα, όλα μου προκαλούσαν
-                            αλλεργία. Και αυτοί οι κόκκοι μου ταιριάζουν τέλεια, δεν υπήρχε καν ερεθισμός. Το τρίμερ φρυδιών
-                            είναι επίσης εύχρηστο, μικρό, χωράει σε κάθε τσάντα καλλυντικών. Αφαιρεί όλες τις τρίχες, δεν το
-                            κάνεις με το τσιμπιδάκι. Συνιστώ ανεπιφύλακτα το σετ!
+                            Prijatno sam iznenađena svime što sam pročitala na sajtu pa sam odlučila i ja da naručim. Dugo mi je trebalo ovako nešto i kada sam videla reklamu na Facebook-u znala sam da je ovo stvar za mene.
+                            Naručila sam dva komada, jedan za mene, jedan za poklon. Veoma sam zadovoljna kvalitetom izrade. Hvala PurpleRelax timu za savršen proizvod, popravili ste mi raspoloženje.
                         </p>
                         <div class="slide-grade grade">
-                            <div class="grade-quality dg">
-                                <p class="grade-quality__text gr-a">Ποιότητα</p>
+                            <div class="grade-quality grade-quality-full dg">
+                                <p class="grade-quality__text gr-a">Kvalitet</p>
                                 <p class="grade-quality__count gr-a mr-a">10/10</p>
                             </div>
                             <div class="grade-delivery dg">
-                                <p class="grade-delivery__text gr-a">Διανομή</p>
+                                <p class="grade-delivery__text gr-a">Dostava</p>
                                 <p class="grade-delivery__count gr-a mr-a">10/10</p>
                             </div>
                         </div>
@@ -332,10 +245,10 @@
                             </div>
                             <div class="slide-info">
                                 <h4 class="slide-info__title">
-                                    Ειρήνη
+                                    Ana
                                 </h4>
                                 <p class="slide-info__date">
-                                    <span class="date-day"></span>.<span class="date-mont"></span>.<span class="date-year"></span>
+                                    23 godine
                                 </p>
                                 <div class="slide-info__stars">
                                     <img src="{{ asset('/') }}purplerelaxFiles/eyebrowremover2/stars.png" alt="" class="slide-info__stars-img">
@@ -343,15 +256,15 @@
                             </div>
                         </div>
                         <p class="slide__text">
-                            Παρήγγειλα το σετ και έμεινα πολύ ευχαριστημένη. Η αποτριχωτική συσκευή είναι εξαιρετική, δεν περίμενα καν να βγάλω τα φρύδια τόσο εύκολα και ανώδυνα. Οι κόκκοι είναι επίσης καλοί, αφαιρούν τις τρίχες εντελώς, το δέρμα μετά το προϊόν γίνεται βελούδινο σαν να έχεις χρησιμοποιήσει την κρέμα. Έμεινα πολύ ευχαριστημένη με τη σπάτουλα για την εφαρμογή. Ευχαριστώ!
+                            Htela bih da izdvojim 3 razloga zbog kojih sam najzadovoljnija: sjajna korisnička služba, brza dostava (24h) i naravno vrhunski kvalitet uređaja. Sve je kao što je opisano. Hvala puno!
                         </p>
                         <div class="slide-grade grade">
                             <div class="grade-quality dg">
-                                <p class="grade-quality__text gr-a">Ποιότητα</p>
+                                <p class="grade-quality__text gr-a">Kvalitet</p>
                                 <p class="grade-quality__count gr-a mr-a">9/10</p>
                             </div>
                             <div class="grade-delivery dg">
-                                <p class="grade-delivery__text gr-a">Διανομή</p>
+                                <p class="grade-delivery__text gr-a">Dostava</p>
                                 <p class="grade-delivery__count gr-a mr-a">10/10</p>
                             </div>
                         </div>
@@ -365,51 +278,51 @@
     </section>
     <section class="order section">
         <h3 class="title order__title">
-            Πως να Poručite sada;
+            Kako poručiti?
         </h3>
         <div class="order-steps mr-a">
             <div class="order-step">
                 <div class="order-step__title">
                     <img src="{{ asset('/') }}purplerelaxFiles/eyebrowremover2/resume.svg" alt="" class="order-step__title-icon">
                     <p class="order-step__title-text">
-                        Βήμα
+                        KORAK
                     </p>
                 </div>
                 <p class="order-step__text">
-                    Αφήστε το αίτημά σας στην ιστοσελίδα
+                    Ostavite svoje podatke na našem sajtu
                 </p>
             </div>
             <div class="order-step">
                 <div class="order-step__title">
                     <img src="{{ asset('/') }}purplerelaxFiles/eyebrowremover2/operator.svg" alt="" class="order-step__title-icon">
                     <p class="order-step__title-text">
-                        Βήμα
+                        KORAK
                     </p>
                 </div>
                 <p class="order-step__text">
-                    Ο εκπρόσωπός μας θα επικοινωνήσει μαζί σας, για να κάνετε την παραγγελία
+                    Kontaktiraćemo vas da potvrdimo porudžbinu
                 </p>
             </div>
             <div class="order-step">
                 <div class="order-step__title">
                     <img src="{{ asset('/') }}purplerelaxFiles/eyebrowremover2/donation.svg" alt="" class="order-step__title-icon">
                     <p class="order-step__title-text">
-                        Βήμα
+                        KORAK
                     </p>
                 </div>
                 <p class="order-step__text">
-                    Η παράδοση της παραγγελίας γίνεται με courier εντός 1-3 ημερών
+                    Paket šaljemo brzom poštom u roku od 1-2 radna dana
                 </p>
             </div>
             <div class="order-step">
                 <div class="order-step__title">
                     <img src="{{ asset('/') }}purplerelaxFiles/eyebrowremover2/payment.svg" alt="" class="order-step__title-icon">
                     <p class="order-step__title-text">
-                        Βήμα
+                        KORAK
                     </p>
                 </div>
                 <p class="order-step__text">
-                    Πληρωμή κατόπιν παράδοσης
+                    Plaćate kuriru brze pošte po prijemu paketa
                 </p>
             </div>
         </div>
@@ -418,28 +331,14 @@
         <div class="hero-top">
             <div class="hero-top__box tac">
                 <h1 class="hero__title">
-                    Ό,τι πρέπει για λεία επιδερμίδα!
+                    Sve što vam treba za savršene obrve!
                 </h1>
                 <p class="hero__subtitle">
-                    Σετ αποτρίχωσης
+                    Perfect Eyebrow
                 </p>
             </div>
-            <div class="hero-top__info" style="background-image: url('{{ asset('/') }}purplerelaxFiles/eyebrowremover2/product-trim.jpg');">
-                <div class="hero-top__products">
-                    <p class="hero-top__products-name">
-                        Κόκκοι για την αποτρίχωση
-                    </p>
-                    <span class="hero-top__products-sep db">
-                     +
-                     </span>
-                    <p class="hero-top__products-name">
-                        Φορητό τρίμερ φρυδιών
-                    </p>
-                </div>
-                <div class="hero-top__present pos-rel">
-                    <img src="{{ asset('/') }}purplerelaxFiles/eyebrowremover2/product-present.png" alt="" class="hero-top__present-img db">
-                    <img src="{{ asset('/') }}purplerelaxFiles/eyebrowremover2/product.png" alt="" class="hero-top__present-product db pos-ab">
-                </div>
+            <div class="hero-top__info">
+
             </div>
         </div>
         <div class="hero-bottom">

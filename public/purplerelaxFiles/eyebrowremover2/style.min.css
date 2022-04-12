@@ -276,6 +276,7 @@ table {
 .benefits-list__item::before,
 .granules-list__item::before,
 .hero-top__info {
+    background-image: url('product-trim.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center
@@ -410,7 +411,8 @@ body {
 .hero-top__info {
     margin-top: -50px;
     padding: 80px 15px 38px;
-    background-position: right top
+    background-position: right top;
+    height: 540px;
 }
 
 .hero-top__products {
@@ -820,6 +822,10 @@ body {
     background: #3480b9;
     border-radius: 20px;
     z-index: -1
+}
+
+.grade-quality-full::before {
+    width: 100%;
 }
 
 .grade-delivery {
