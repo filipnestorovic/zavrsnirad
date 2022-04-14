@@ -171,11 +171,11 @@
         <div class="advantages__wrap">
             <div class="advantages__item">
                 <div class="img-box--item"><img src="{{ asset('/') }}flexovalFiles/softknee/sec3-natural.svg" alt="Ikona naturas"/></div>
-                <p class="content__item">To je potpuno bezbedna metoda, koja se zasniva na najnovijim dostignućima u biomagnetnoj terapiji. <span class="text-green">100% PRIRODNO</span> i ne izaziva nikakve neželjene efekte.</p>
+                <p class="content__item">To je potpuno bezbedna metoda, koja se zasniva na najnovijim dostignućima u kompresivnoj terapiji. <span class="text-green">100% PRIRODNO</span> i ne izaziva nikakve neželjene efekte.</p>
             </div>
             <div class="advantages__item">
                 <div class="img-box--item"><img src="{{ asset('/') }}flexovalFiles/softknee/sec3-magnetic.svg" alt="Ikona pole magnetyczne"/></div>
-                <p class="content__item">Zahvaljujući feritnim magnetima ugrađenim u analgetičko - regenerativu traku, magnetno polje prodire direktno do izvoda bola. <span class="text-green">RADI 7 PUTA EFIKASNIJE</span> od bilo koje druge poznate metode.</p>
+                <p class="content__item">Zahvaljujući kompresivnim vlaknima ugrađenim u analgetičko - regenerativu traku, kompresivno dejstvo prodire direktno do izvoda bola. <span class="text-green">RADI 7 PUTA EFIKASNIJE</span> od bilo koje druge poznate metode.</p>
             </div>
             <div class="advantages__item">
                 <div class="img-box--item"><img src="{{ asset('/') }}flexovalFiles/softknee/sec3-bicycle.svg" alt="Ikona rower"/></div>
@@ -196,7 +196,7 @@
             <div class="img-box">
                 <img src="{{ asset('/') }}flexovalFiles/softknee/sec5-knee-pulse.jpg" alt="Soft Knee"/>
             </div>
-            <p><span class="span-bold">Magnetni impulsi</span> odmah prodiru u bolna područja i <span class="span-bold">gase signale bola na ćelijskom nivou</span></p>
+            <p><span class="span-bold">Kompresivno dejstvo</span> odmah deluje na bolna područja i <span class="span-bold">gasi signale bola na ćelijskom nivou</span></p>
         </div>
         <div class="pros-wrap">
             <div class="img-box">
