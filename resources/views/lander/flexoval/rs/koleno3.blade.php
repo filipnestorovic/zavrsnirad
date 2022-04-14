@@ -483,6 +483,19 @@
     </div>
 </div>
 <style>
+    input[type="radio"] {
+        width: 15px !important;
+        height: 15px !important;
+        cursor: pointer;
+    }
+    label {
+        height: 15px !important;
+        cursor: pointer;
+        font-size: 16px;
+        margin-left: 3px;
+        font-weight: 600;
+        font-family: Gilroy, Arial, system-ui, sans-serif;
+    }
     .freeShippingDiv {
         color: #d31f07;
         text-align: center;
