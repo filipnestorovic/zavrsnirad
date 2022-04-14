@@ -387,13 +387,13 @@
         </div>
         <div class=r>
             <div class='s m6 g6'>
-                <figure> <img src='{{ asset('/') }}purplerelaxFiles/flawless/8.png'> </figure>
+                <figure> <img src='{{ asset('/') }}purplerelaxFiles/flawless/3.png'> </figure>
             </div>
             <div class='s m6 g6'>
                 <ol>
                     <li>"Flawless Legs" depilator</li>
                     <li>Uputstvo za upotrebu</li>
-                    <li>Punjač</li>
+                    <li>Kabl za punjenje</li>
                 </ol>
                 <div class=price>
                     <span style='text-decoration: line-through'> <span class="js_old_price oldproductsum"></span> </span>
