@@ -24,6 +24,24 @@
     <script type="text/javascript" src="{{ asset('/') }}flexonikFiles/slimbody/flickity.pkgd.min.js"></script>
     <script type="text/javascript" src="{{ asset('/') }}flexonikFiles/slimbody/main.js"></script>
     <style>@font-face{font-family:'FontAwesome';src:url('{{ asset('/') }}fonts/fontawesome-webfont.eot');src:url('{{ asset('/') }}fonts/fontawesome-webfont_1.eot#iefix&v=4.7.0') format('embedded-opentype'),url('{{ asset('/') }}fonts/fontawesome-webfont.woff2') format('woff2'),url('{{ asset('/') }}fonts/fontawesome-webfont.woff') format('woff'),url('{{ asset('/') }}fonts/fontawesome-webfont.ttf') format('truetype'),url('{{ asset('/') }}fonts/fontawesome-webfont.svg#fontawesomeregular') format('svg');font-weight:400;font-style:normal}@font-face{font-family:'fontello';src:url('{{ asset('/') }}fonts/fontello.eot');src:url('{{ asset('/') }}fonts/fontello.eot#iefix') format('embedded-opentype'),url('{{ asset('/') }}fonts/fontello.woff2') format('woff2'),url('{{ asset('/') }}fonts/fontello.woff') format('woff'),url('{{ asset('/') }}fonts/fontello.ttf') format('truetype'),url('{{ asset('/') }}fonts/fontello.svg#fontello') format('svg');font-weight:400;font-style:normal}@font-face{font-family:'Product Sans';src:url('{{ asset('/') }}fonts/ProductSans-LightItalic.woff2') format('woff2'),url('{{ asset('/') }}fonts/ProductSans-LightItalic.woff') format('woff');font-weight:300;font-style:italic}@font-face{font-family:'Product Sans';src:url('{{ asset('/') }}fonts/ProductSans-Italic.woff2') format('woff2'),url('{{ asset('/') }}fonts/ProductSans-Italic.woff') format('woff');font-weight:400;font-style:italic}@font-face{font-family:'Product Sans';src:url('{{ asset('/') }}fonts/ProductSans-Black.woff2') format('woff2'),url('{{ asset('/') }}fonts/ProductSans-Black.woff') format('woff');font-weight:900;font-style:normal}@font-face{font-family:'Product Sans';src:url('{{ asset('/') }}fonts/ProductSans-Medium.woff2') format('woff2'),url('{{ asset('/') }}fonts/ProductSans-Medium.woff') format('woff');font-weight:500;font-style:normal}@font-face{font-family:'Product Sans';src:url('{{ asset('/') }}fonts/ProductSans-Bold.woff2') format('woff2'),url('{{ asset('/') }}fonts/ProductSans-Bold.woff') format('woff');font-weight:700;font-style:normal}@font-face{font-family:'Product Sans';src:url('{{ asset('/') }}fonts/ProductSans-BoldItalic.woff2') format('woff2'),url('{{ asset('/') }}fonts/ProductSans-BoldItalic.woff') format('woff');font-weight:700;font-style:italic}@font-face{font-family:'Product Sans';src:url('{{ asset('/') }}fonts/ProductSans-Regular.woff2') format('woff2'),url('{{ asset('/') }}fonts/ProductSans-Regular.woff') format('woff');font-weight:400;font-style:normal}@font-face{font-family:'Product Sans';src:url('{{ asset('/') }}fonts/ProductSans-MediumItalic.woff2') format('woff2'),url('{{ asset('/') }}fonts/ProductSans-MediumItalic.woff') format('woff');font-weight:500;font-style:italic}@font-face{font-family:'Product Sans';src:url('{{ asset('/') }}fonts/ProductSans-Light.woff2') format('woff2'),url('{{ asset('/') }}fonts/ProductSans-Light.woff') format('woff');font-weight:300;font-style:normal}@font-face{font-family:'Open Sans';src:url('{{ asset('/') }}fonts/subset-OpenSans-Light.woff2') format('woff2'),url('{{ asset('/') }}fonts/OpenSans-Light.woff') format('woff');font-weight:300;font-style:normal}@font-face{font-family:'Open Sans';src:url('{{ asset('/') }}fonts/subset-OpenSans.woff2') format('woff2'),url('{{ asset('/') }}fonts/OpenSans.woff') format('woff');font-weight:400;font-style:normal}@font-face{font-family:'Open Sans';src:url('{{ asset('/') }}fonts/subset-OpenSans-Bold.woff2') format('woff2'),url('{{ asset('/') }}fonts/OpenSans-Bold.woff') format('woff');font-weight:700;font-style:normal}@font-face{font-family:'Open Sans';src:url('{{ asset('/') }}fonts/subset-OpenSans-Semibold.woff2') format('woff2'),url('{{ asset('/') }}fonts/OpenSans-SemiBold.woff') format('woff');font-weight:600;font-style:normal}@font-face{font-family:'Open Sans';src:url('{{ asset('/') }}fonts/subset-OpenSans-Extrabold.woff2') format('woff2'),url('{{ asset('/') }}fonts/OpenSans-ExtraBold.woff') format('woff');font-weight:800;font-style:normal}.form-control{font-size:1.5rem}.ekko-lightbox .modal-header{padding:10px}.ekko-lightbox .modal-body{padding:0;text-align:center!important}.alert{margin:25px}.preloader{width:100px;height:100px;border-radius:100%;position:relative;margin:0 auto}.loader-1:before,.loader-1:after{content:"";position:absolute;top:-10px;left:-10px;width:100%;height:100%;border-radius:100%;border:10px solid transparent;border-top-color:#3498db}.loader-1:before{z-index:100;animation:spin 1s infinite}.loader-1:after{border:10px solid #ccc}@keyframes spin{0%{-webkit-transform:rotate(0deg);-ms-transform:rotate(0deg);-o-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(360deg);-ms-transform:rotate(360deg);-o-transform:rotate(360deg);transform:rotate(360deg)}}form .preloader{display:none}form .preloader.show{float:left;display:block;width:35px;margin:10px 0 0 15px;height:35px}form.loading{opacity:.5}form.loading .preloader{display:block;position:absolute;left:calc(50% - 50px);top:calc(50% - 50px)}#submit-button{margin-top:10px}.force-hidden{display:none!important}img{cursor:pointer}#info-privacy a{color:blue}.form-control{width:100%}#submit-button{background-color:#5cb85c;color:#fff}</style>
+    <style>
+        #header .object img {
+            height: 100%;
+            max-height: 900px;
+        }
+        #advise-banner {
+            background-color: #e1dfe0;
+        }
+        #advise-banner .dx img {
+            padding-left: 20px;
+            padding-right: 20px;
+            max-height: 850px;
+            height: 100%;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
 </head>
 <body>
 <div class="wrapper animated fadeIn">
@@ -31,7 +49,7 @@
     <section id="navMenu" class="row col-xs-12 center-xs no-margin-padding">
         <div class="content row center-xs no-margin-padding">
             <div class="logo row col-xs-12 start-xs middle-xs">
-                <img src="{{ asset('/') }}flexonikFiles/slimbody/logo_icon.png" alt>
+                <img src="{{ asset('/') }}naturapharmFiles/letsslim/logo_icon.png" alt>
                 <div class="mobile-menu hamburger hamburger hamburger--3dx-r" title="Mostra/Nascondi il men&ugrave;">
                     <div class="hamburger-box">
                         <div class="hamburger-inner"></div>
@@ -60,7 +78,7 @@
             <div class="logo-column row col-md-5 col-xs-12 end-md center-xs middle-xs">
                 <div class="logo row col-xs-12 center-xs top-xs">
                     <div class="wrap row col-xs-12 center-xs top-xs no-margin-padding">
-                        <img src="{{ asset('/') }}flexonikFiles/slimbody/logo_1.png" class>
+                        <img src="{{ asset('/') }}naturapharmFiles/letsslim/logo_1.png" class>
                     </div>
                 </div>
                 <div class="specs row col-xs-12 center-xs middle-xs">
@@ -78,7 +96,7 @@
                             <img src="{{ asset('/') }}flexonikFiles/slimbody/2.jpg">
                             <div class="text">
                                 <span>UDOBNO I PRAKTIČNO</span>
-                                Slim Body je udoban i veoma lak za nošenje. Kupite Slim Body i uživajte u svom telu
+                                Let's Slim je udoban i veoma lak za nošenje. Kupite Let's Slim i uživajte u svom telu
                             </div>
                         </div>
                     </div>
@@ -87,7 +105,7 @@
                             <img src="{{ asset('/') }}flexonikFiles/slimbody/3_1.jpg">
                             <div class="text">
                                 <span>ZATEŽE TELO</span>
-                                Slim Body je savršen za prikrivanje viška kilograma
+                                Let's Slim je savršen za prikrivanje viška kilograma
                             </div>
                         </div>
                     </div>
@@ -107,14 +125,14 @@
                 </div>
             </div>
             <div class="object row col-md-7 col-xs-12 center-xs bottom-xs no-margin-padding">
-                <img src="{{ asset('/') }}flexonikFiles/slimbody/comp_top.png" class>
+                <img src="{{ asset('/') }}naturapharmFiles/letsslim/comp_top.png" class>
             </div>
         </div>
     </section>
     <section id="only-text-banner" class>
         <div class="container row col-xs-12 center-xs middle-xs">
             <div class="row1">
-                Slim Body ima novi sistem tehnologije koji omogućava gubljenje dve do tri konfekcijske velićine!
+                Let's Slim ima novi sistem tehnologije koji omogućava gubljenje dve do tri konfekcijske velićine!
             </div>
             <div class="lower row col-xs-12 center-xs middle-xs">
                 <div class="countdown_button row col-xs-12 center-xs middle-xs">
@@ -139,10 +157,10 @@
                         </div>
                         <div class="description">
                             <p>
-                                <span class="italic">Slim Body</span> će nežno obaviti vašu <b>zadnjicu, stomak i noge,</b> a vi ćete zaboraviti
+                                <span class="italic">Let's Slim</span> će nežno obaviti vašu <b>zadnjicu i stomak,</b> a vi ćete zaboraviti
                                 da ste ga obukli i da je na vama. Na tržištu postoji dosta proizvoda ovog tipa koji su <b>loše kopije</b> i
                                 uglavnom ne daju skoro nikakav efekat.
-                                <br><br><span class="italic">Slim Body</span> je jedini <b>originalan</b>, napravljen je od inovativne tkanine i
+                                <br><br><span class="italic">Let's Slim</span> je jedini <b>originalan</b>, napravljen je od inovativne tkanine i
                                 mikrovlakana i oblikuje telo kao ruke vajara, što će vas učiniti <b>zavodljivim i privlačnim.</b>
                             </p>
                         </div>
@@ -151,7 +169,7 @@
                 <div class="images col-md-6 col-xs-12 center-xs middle-xs">
                     <div class="slider-carousel-1">
                         <div class="carousel-cell">
-                            <img src="{{ asset('/') }}flexonikFiles/slimbody/sovra1.jpg" alt>
+                            <img src="{{ asset('/') }}naturapharmFiles/letsslim/sovra1.jpg" alt>
                         </div>
                     </div>
                 </div>
@@ -162,7 +180,7 @@
                 <div class="images col-md-6 col-xs-12 center-xs middle-xs">
                     <div class="slider-carousel-1">
                         <div class="carousel-cell">
-                            <img src="{{ asset('/') }}flexonikFiles/slimbody/sovra2.jpg" alt>
+                            <img src="{{ asset('/') }}naturapharmFiles/letsslim/sovra2.jpg" alt>
                         </div>
                     </div>
                 </div>
@@ -173,10 +191,10 @@
                         </div>
                         <div class="description">
                             <p>
-                                Pogled u ogledalo više neće biti problem kada obučete Slim Body.
+                                Pogled u ogledalo više neće biti problem kada obučete Let's Slim.
                                 <br><br>
-                                Ovo nisu obične helanke, nego spoj <b>savremene tehnologije i vrhunskog dizajna</b> koji je prilagođen svakom telu.
-                                Kada jednom počnete da nosite Slim Body i vidite rezultat, oduševićete se postignutim efektom i stalno ćete da ih nosite.
+                                Ovo nije jedan od zastarelih proizvoda za mršavljenje, nego spoj <b>savremene tehnologije i vrhunskog dizajna</b> koji je prilagođen svakom telu.
+                                Kada jednom počnete da nosite Let's Slim i vidite rezultat, oduševićete se postignutim efektom i stalno ćete da ih nosite.
                             </p>
                         </div>
                     </div>
@@ -188,7 +206,7 @@
         <div class="maxColumn content row center-xs no-margin no-padding">
             <div class="sx row col-md-6 col-xs-12 start-xs middle-xs">
                 <span class="surtitle">LEP I PREFINJEN DIZAJN</span>
-                <span class="title"><span class="italic">Slim Body</span> ima posebnu konsturkciju i oblikuje figuru delujući na stomak, bokove i zadnjicu.</span>
+                <span class="title"><span class="italic">Let's Slim</span> ima posebnu konsturkciju i oblikuje figuru delujući na stomak, bokove i zadnjicu.</span>
                 <span class="subtitle">
                     Inovativne helanke sa vizuelnim efektom mršavljenja, zatezanja, podizanja zadnjice i užeg struka i kukova.
                     <br><br>
@@ -202,7 +220,7 @@
                   </span>
             </div>
             <div class="dx row col-md-6 col-xs-12 center-xs middle-xs">
-                <img src="{{ asset('/') }}flexonikFiles/slimbody/body.jpg">
+                <img src="{{ asset('/') }}naturapharmFiles/letsslim/body.jpg">
             </div>
         </div>
     </section>
@@ -220,7 +238,7 @@
                         <h2 class="row end-md center-xs middle-xs">
                             <img src="{{ asset('/') }}flexonikFiles/slimbody/elasticizzato.png"> ELASTIČNI ZID
                         </h2>
-                        <p>Sadrži rastegljivu tkaninu koja Slim Body čini veoma udobnim.</p>
+                        <p>Sadrži rastegljivu tkaninu koja Let's Slim čini veoma udobnim.</p>
                     </div>
                     <div class="feature-item feature-item-a">
                         <h2 class="row end-md center-xs middle-xs">
@@ -232,13 +250,13 @@
                         <h2 class="row end-md center-xs middle-xs">
                             <img src="{{ asset('/') }}flexonikFiles/slimbody/traspirante.png"> PROZRAČNOST
                         </h2>
-                        <p>Telo se ne znoji jer je Slim Body napravljen od prozračnih i veoma udobnih materijala.</p>
+                        <p>Telo se ne znoji jer je Let's Slim napravljen od prozračnih i veoma udobnih materijala.</p>
                     </div>
                 </div>
                 <div class="center-text col-md-4 col-xs-12">
                     <div class="big-g-carousel feature-img">
                         <div class="carousel-cell">
-                            <img class src="{{ asset('/') }}flexonikFiles/slimbody/woman.png">
+                            <img class src="{{ asset('/') }}naturapharmFiles/letsslim/woman.png">
                         </div>
                     </div>
                 </div>
@@ -271,7 +289,7 @@
                 DIZAJN DO NAJSITNIJIH DETALJA
             </div>
             <div class="subtitle">
-                <span class="italic">Slim Body</span> oblikuje struk, sužava bokove i podiže zadnjicu.
+                <span class="italic">Let's Slim</span> oblikuje struk, sužava bokove i podiže zadnjicu.
             </div>
             <ul class="box-banner-carousel">
                 <li class="carousel-cell">
@@ -296,7 +314,7 @@
                 <li class="carousel-cell is-selected">
                     <div class="content row col-xs-12 center-xs">
                         <div class="image">
-                            <img src="{{ asset('/') }}flexonikFiles/slimbody/2_1.jpg">
+                            <img src="{{ asset('/') }}naturapharmFiles/letsslim/2_2.jpg">
                         </div>
                         <div class="description row center-xs">
                             <div class="title row col-xs-12 middle-xs center-xs">
@@ -315,14 +333,14 @@
                 <li class="carousel-cell">
                     <div class="content row col-xs-12 center-xs">
                         <div class="image">
-                            <img src="{{ asset('/') }}flexonikFiles/slimbody/3.jpg">
+                            <img src="{{ asset('/') }}naturapharmFiles/letsslim/3_2.jpg">
                         </div>
                         <div class="description row center-xs">
                             <div class="title row col-xs-12 middle-xs center-xs">
                                 &#9733; EFEKTNO &#9733;
                             </div>
                             <div class="text">
-                                Slim Body je savršen za prikrivanje viška na pojedinim delovima tela.
+                                Let's Slim je savršen za prikrivanje viška na pojedinim delovima tela.
                                 Bićete veoma srećni što koristite tako dobar i istovremeno potpuno prirodan i efikasan proizvod.
                             </div>
                             <div class="cornerButton"><i class="icon icon-play"></i>
@@ -348,11 +366,11 @@
                     <div class="innerTitle">
                         TRANSFORMIŠITE SVOJE TELO
                     </div>
-                    Nosite <span class="italic">Slim Body</span> ispod odeće, ceo dan.
+                    Nosite <span class="italic">Let's Slim</span> ispod odeće, ceo dan.
                     <br><br>
                     Idealno rešenje za popodnevnu šetnju, šoping u gradu, večernji izlazak ili dejt.
                     <br><br>
-                    <span class="italic">Slim Body</span> napravljen je od rastegljive tkanine što omogućava
+                    <span class="italic">Let's Slim</span> napravljen je od rastegljive tkanine što omogućava
                     lagano i slobodno kretanje. Nećete osetiti da ga nosite.
                     <br><br>
                     Benefiti proizvoda:
@@ -391,7 +409,7 @@
                                     </div>
                                 </div>
                                 <div class="row text">
-                                    Slim Body je savršen, lak za nošenje, tkanina je mekana, otporna i ne stvara pritisak.
+                                    Let's Slim je savršen, lak za nošenje, tkanina je mekana, otporna i ne stvara pritisak.
                                     Veličina je univerzalna i prolagođava se telu.
                                     Odličan proizvod i odnos cene i kvaliteta. Preporučujem ga.
                                 </div>
@@ -423,7 +441,7 @@
                                 <div class="row text">
                                     Nisam mogla ništa da izvadim iz ormana iako je pun garderobe.
                                     Posle porođaja sam se mnogo ugojila i smetao mi je višak kilograma.
-                                    Pošto nisam bila u mogućnosti da kupujem novu odeću, na internetu sam naišla na reklamu za Slim Body.
+                                    Pošto nisam bila u mogućnosti da kupujem novu odeću, na internetu sam naišla na reklamu za Let's Slim.
                                     Poručila sam ga i efekat je WOW. Veoma je udoban, a ja konačno mogu da nosim sve pantalone i
                                     suknje koje imam u ormanu.
                                 </div>
@@ -455,9 +473,9 @@
                                 <div class="row text">
                                     Ćao svima!!! U poslednje vreme sam počela da nosim širu odeću jer su me moje regularne veličine počele da stežu.
                                     Zbog promene radnog mesta i dugog sedenja malo sam se ugojila i to me mnogo opterećivalo.
-                                    Drugarica mi je poručila Slim Body, i pomislila sam zašto ne bih probala.
+                                    Drugarica mi je poručila Let's Slim, i pomislila sam zašto ne bih probala.
                                     Super je, vratila sam samopouzdanje, sva odeća mi je taman. I mom suprugu se dopada kako izgledam,
-                                    iako zna da nosim Slim Body.
+                                    iako zna da nosim Let's Slim.
                                 </div>
                                 <hr>
                                 <div class="rating row col-xs-12">
