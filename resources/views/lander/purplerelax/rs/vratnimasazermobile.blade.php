@@ -13,11 +13,12 @@
 </head>
 <body>
 <div class="wrap">
+    @include('components.display_errors')
     <section class="b1">
-        <h1> Neck <span> Ring</span> Plus</h1>
-        <h2 class="gradient"> Massaggiatore a impulsi multifunzionale per collo e tutto il corpo</h2>
-        <div class="sale"> solo oggi! <span> -53%</span> <b> Risparmio di 66 &euro;</b></div>
-        <div class="effect"> Effetto di massaggio professionale</div>
+        <h1> PURPLE <span>RELAX</span></h1>
+        <h2 class="gradient">MULTIFUNKCIONALNI PULSNI MASAŽER ZA VRATA I CELO TELO</h2>
+        <div class="sale"> SAMO DANAS! <span> -40%</span> <b> POPUSTA</b></div>
+        <div class="effect">Profesionalni efekat masaže</div>
         <div class="pulse">
             <div></div>
             <div></div>
@@ -25,17 +26,17 @@
         </div>
         <ul class="checklist">
             <li>
-                <p> Allevia la fatica e il dolore all'istante</p>
+                <p>Momenatlno oslobađa od bola</p>
             </li>
             <li>
-                <p> Ha un effetto di rilassamento</p>
+                <p>Ima opuštajući efekat</p>
             </li>
             <li>
-                <p> Migliora la qualità e la profondità del sonno</p>
+                <p>Poboljšava kvalitet sna</p>
             </li>
         </ul>
         <div class="formbox">
-            <h3> Sbrigati a ordinare con uno sconto!</h3>
+            <h3>POŽURITE DA PORUČITE SA POPUSTOM OD 40%</h3>
             <ul class="price">
                 <li>
                     {{ $prices[1]['originalPrice'] }} <small>RSD</small>
@@ -44,173 +45,190 @@
                     {{ $prices[1]['amount'] }} <small>RSD</small>
                 </li>
             </ul>
-            <a href="#order_form" class="btn"> Ordina ora</a>
+            <a href="#order_form" class="btn">PORUČITE ODMAH</a>
         </div>
     </section>
     <section class="b2">
-        <h2 class="title"><span> Allevia il dolore di tutto<br> in pochi minuti e</span> massaggia professionalmente</h2>
+        <h2 class="title"><span>Oslobodite se bola</span> za samo nekoliko minuta masaže dnevno</h2>
         <img src="{{ asset('/') }}purplerelaxFiles/vratnimasazermobile/b2.jpg" alt>
-        <p><b> Neck Ring Plus è un massaggiatore vibrante intelligente che agisce da impulsi elettrici</b> migliorando la microcircolazione del sangue. I campi magnetici aumentano le difese del corpo, normalizzano la circolazione sanguigna, saturano cellule e tessuti con ossigeno, influenzano positivamente il sistema nervoso.</p>
-        <p> Il massaggiatore Neck Ring Plus <b> rapidamente allevia la tensione, il dolore e la fatica a casa, in ufficio o durante il viaggio.</b> Allo stesso tempo, riceverai un piacevole massaggio profondo e rilassante, paragonabile al lavoro di un massaggiatore professionista.</p>
-        <span> Dispositivo pratico copre<br> direzioni multiple:</span>
+        <p>Purple Relax je inteligentni vibracioni masažer koji deluje električnim impulsima poboljšavajući mikrocirkulaciju krvi.
+            <b>Elektro impulsi pokreću mišiće, normalizuju cirkulaciju krvi, zasićuju ćelije i tkiva kiseonikom i pozitivno utiču na nervni sistem.</b></p>
+        <p>Purple Relax masažer <b>brzo ublažava napetost, bol i umor, kod kuće, u kancelariji ili na putovanju.</b> Istovremeno, dobićete prijatnu, duboku i opuštajuću masažu,
+            uporedivu sa radom profesionalnog masera.</p>
+        <span>PRAKTIČNI UREĐAJ KOJI IMA <br> VIŠE EFEKATA:</span>
         <ul class="checklist">
             <li>
-                <p> Rilassa i muscoli del collo</p>
+                <p>Opušta mišiće vrata</p>
             </li>
             <li>
-                <p> Allevia il mal di testa</p>
+                <p>Ublažava glavobolju</p>
             </li>
             <li>
-                <p> Migliora l'apporto di sangue ai tessuti e al cervello</p>
+                <p>Poboljšava cirkulaciju krvi</p>
             </li>
             <li>
-                <p> Aiuta a superare l'insonnia e dormire abbastanza</p>
+                <p>Pomaže u prevazilaženju nesanice</p>
             </li>
             <li>
-                <p> Consigliato per osteocondrosi, artrite</p>
+                <p>Preporučuje se protiv bolova u vratu i mišićima</p>
             </li>
             <li>
-                <p> Dà una carica di allegria e buon umore</p>
+                <p>Daje naboj vedrine i dobrog raspoloženja</p>
             </li>
         </ul>
-        <a href="#order_form" class="btn"> Ordina il massaggiatore</a>
+        <a href="#order_form" class="btn">PORUČITE ODMAH</a>
     </section>
     <section class="b3 gradient">
-        <h2 class="title"> Uno dei migliori e più efficaci nella sua classe di massaggiatori</h2>
+        <h2 class="title">Jedan od najboljih i najefikasnijih masažera u svojoj klasi</h2>
         <div class="best__item">
             <img src="{{ asset('/') }}purplerelaxFiles/vratnimasazermobile/best1.jpg" alt>
-            <p><b> 6 modalità di massaggio di diversa intensità</b> Consentono di personalizzare la modalità di massaggio confortevole, adatta ad ogni occasione</p>
+            <p><b>6 REŽIMA MASAŽE RAZLIČITOG INTENZITETA</b>
+                Omogućavaju vam da prilagodite udoban režim masaže, pogodan za svaku priliku
+            </p>
         </div>
         <div class="best__item">
             <img src="{{ asset('/') }}purplerelaxFiles/vratnimasazermobile/best2.jpg" alt>
-            <p><b> Alta precisione di impatto</b> Gli elettrodi pulsati coincidono con i muscoli longitudinali posteriori del collo, quindi l'impatto è più efficace</p>
+            <p><b>DUBINSKO PRODIRANJE U MIŠIĆE</b>
+                Električni impulsi duboko prodiru u mišiće i u potpunosti ih pokreću
+            </p>
         </div>
         <div class="best__item">
             <img src="{{ asset('/') }}purplerelaxFiles/vratnimasazermobile/best3.jpg" alt>
-            <p><b> Elettrodi aggiuntivi</b> Per massaggiare qualsiasi parte del corpo: spalle, schiena, sura, gambe, braccia. Si collega al massaggiatore principale</p>
+            <p><b>DODATNI NASTAVCI</b>
+                Za masažu bilo kog dela tela: ramena, leđa, noge, ruke
+            </p>
         </div>
         <div class="best__item">
             <img src="{{ asset('/') }}purplerelaxFiles/vratnimasazermobile/best4.jpg" alt>
-            <p><b> Comodo e compatto </b> Non occupa molto spazio ed è alimentato da 2 batterie AAA, quindi può essere portato con te ovunque tu vada</p>
+            <p><b>POGODAN I KOMPAKTAN</b>
+                Ne zauzima mnogo prostora i napajaju ga 2 AAA baterije, tako da ga možete poneti sa sobom gde god da krenete
+            </p>
         </div>
-        <a href="#order_form" class="btn"> Ordina il massaggiatore</a>
+        <a href="#order_form" class="btn">PORUČITE ODMAH</a>
     </section>
     <section class="b4">
-        <h2 class="title"><span> Chi ha bisogno</span><br> del massaggiatore?</h2>
-        <p> Grazie alla sua versatilità, il massaggiatore Neck Ring Plus è consigliato a tutti, ma sarà particolarmente utile per le seguenti categorie di persone:</p>
+        <h2 class="title"><span>Kome treba</span><br> Purple Relax masažer?</h2>
+        <p>Zahvaljujući svojoj svestranosti, Purple Relax masažer preporučuje se svima ali je posebno koristan za sledeće kategorije ljudi:</p>
         <div class="body">
             <div class="body__item">
                 <img src="{{ asset('/') }}purplerelaxFiles/vratnimasazermobile/body1.jpg" alt>
-                <p> Impiegati</p>
+                <p> Zaposleni</p>
             </div>
             <div class="body__item">
                 <img src="{{ asset('/') }}purplerelaxFiles/vratnimasazermobile/body2.jpg" alt>
-                <p> Studenti e scolari</p>
+                <p> Studenti i školarci</p>
             </div>
             <div class="body__item">
                 <img src="{{ asset('/') }}purplerelaxFiles/vratnimasazermobile/body3.jpg" alt>
-                <p> Atleti</p>
+                <p> Sportisti</p>
             </div>
             <div class="body__item">
                 <img src="{{ asset('/') }}purplerelaxFiles/vratnimasazermobile/body4.jpg" alt>
-                <p> Chi soffre di dolore al collo ed emicrania</p>
+                <p> Svako ko pati od bolova u vratu i migrene</p>
             </div>
             <div class="body__item">
                 <img src="{{ asset('/') }}purplerelaxFiles/vratnimasazermobile/body5.jpg" alt>
-                <p> Chi ha problemi di sonno</p>
+                <p> One koji imaju probleme sa snom</p>
             </div>
             <div class="body__item">
                 <img src="{{ asset('/') }}purplerelaxFiles/vratnimasazermobile/body6.jpg" alt>
-                <p> Chi condusce uno stile di vita sedentario</p>
+                <p> One koji vode sedeći način života</p>
             </div>
         </div>
-        <a href="#order_form" class="btn"> Ordinare con lo sconto</a>
+        <a href="#order_form" class="btn">PORUČITE SA POPUSTOM</a>
     </section>
     <section class="b5 gradient">
-        <h2 class="title"> Goditi il massaggio di qualsiasi parte del corpo semplicemente collegando gli elettrodi</h2>
+        <h2 class="title">Uživajte u masaži bilo kog dela tela jednostavnim povezivanjem elektroda</h2>
         <img src="{{ asset('/') }}purplerelaxFiles/vratnimasazermobile/body_grad.jpg" alt>
-        <p><b> Gli elettrodi di massaggio alleviano efficacemente il dolore nei muscoli: con lividi, spasmi, distorsioni.</b> E contribuiscono anche al loro rafforzamento grazie agli effetti diretti degli impulsi che fanno contrarre i muscoli, così come nell'allenamento. <b> Gli elettrodi sono due piastre ipoallergeniche morbide</b> con adesivo, conduttivo strato di gel, che rende facile da fissare sul corpo.</p>
+        <p>Masažne elektrode efikasno ublažavaju bol u mišićima: <b>kod modrica, grčeva, uganuća, a doprinose i njihovom jačanju</b>
+            zahvaljujući direktnom dejstvu impulsa koji teraju mišiće da se kontrakuju. <b>Elektrode su dve mekane hipoalergene ploče
+                sa lepljivim provodljivim slojem gela,</b> što olakšava pričvršćivanje na telo.</p>
     </section>
     <section class="b6">
-        <h2 class="title"><span> Massaggiatore</span><br> professionale a casa tua!</h2>
+        <h2 class="title"><span> Profesionalni masažer </span><br> u vašem domu!</h2>
         <ul class="use">
-            <li><span>1</span> Accendere il massaggiatore<br> premendo il pulsante ON</li>
-            <li><span>2</span> Selezionare<br> modalità richiesta<br> massaggio</li>
-            <li><span>3</span> Mettere il massaggiatore sul<br> collo e godere<br> del massaggio</li>
-            <li><span>4</span> Collegare<br> aggiuntivi<br> elettrodi se<br> c'è bisogno</li>
+            <li><span>1</span> Uključite masažer <br> pritiskom na dugme ON</li>
+            <li><span>2</span> Izaberite režim <br> koji želite</li>
+            <li><span>3</span> Stavite <br> masažer na vrat i <br> uživajte u masaži</li>
+            <li><span>4</span> Povežite dodatne elektrode <br> ako je potrebno</li>
         </ul>
-        <a href="#order_form" class="btn"> Ordina il massaggiatore </a>
+        <a href="#order_form" class="btn">PORUČITE MASAŽER</a>
     </section>
     <section class="b7">
-        <h2 class="title"><span> Accessori</span> del massaggiatore Neck Ring Plus</h2>
+        <h2 class="title"><span>SPECIFIKACIJA</span> PROIZVODA</h2>
         <img src="{{ asset('/') }}purplerelaxFiles/vratnimasazermobile/char.jpg" alt>
         <ul class="char">
-            <li><b> Massaggiatore cervicale </b> <span> 1 unità</span></li>
-            <li><b> Elettrodi aggiuntivi </b> <span> 2 unità</span></li>
-            <li><b> Istruzione </b> <span> 1 unità</span></li>
-            <li><b> Batterie AAA </b> <span> 2 unità</span></li>
-            <li><b> Modalità di massaggio </b> <span> 6 modalità</span></li>
-            <li><b> Spegnimento automatico </b> <span> ogni 10 minuti</span></li>
+            <li><b> Vratni masažer </b> <span> 1 komad</span></li>
+            <li><b> Dodatne elektrode </b> <span> 2 komada</span></li>
+            <li><b> Uputstvo </b> <span> 1 komad</span></li>
+            <li><b> Način masaže </b> <span> 6 režima</span></li>
+            <li><b> Automatsko isključivanje </b> <span> svakih 10 minuta</span></li>
         </ul>
-        <a href="#order_form" class="btn"> Ordina ora</a>
+        <a href="#order_form" class="btn">PORUČITE ODMAH</a>
     </section>
     <section class="b8 gradient">
-        <h2 class="title"> Recensioni<br> del acquirenti di Neck Ring Plus</h2>
+        <h2 class="title">Utisci kupaca <br> kojima je <br> masažer pomogao</h2>
         <div class="reviews__item">
             <img src="{{ asset('/') }}purplerelaxFiles/vratnimasazermobile/rev1.jpg" alt>
-            <p><b> "Il massaggiatore per il collo è una cosa molto necessaria in casa,</b> perché passo molto tempo al computer e, naturalmente, ho un difetto professionale: il collo del computer. Spesso la zona del collo si irrigidisce e fa male. Ogni giorno uso questo dispositivo miracoloso. Mi piacciono molto i metodi di impatto (sensazioni piacevoli) e i benefici.»</p>
+            <p><b>Vrat me je dugo boleo, ponekad bolovi nisu ni prestajali.</b>
+                Umorna od posla, budila sam se noću. Dijagnoza doktora - "Degeneracija diska vratne kičme".
+                Prijatelji su mi preporučili kupovinu Purple Relax pulsnog masažera. Koristim ga više od mesec dana,
+                2-3 puta dnevno po nekoliko minuta i imama znatno olakšanje, super se osećam.</p>
             <div class="person">
                 <img src="{{ asset('/') }}purplerelaxFiles/vratnimasazermobile/ava1.jpg" alt>
-                <p> Elena<br> Bologna</p>
+                <p>Gabrijela<br> Novi Sad</p>
             </div>
         </div>
         <div class="reviews__item">
             <img src="{{ asset('/') }}purplerelaxFiles/vratnimasazermobile/rev2.jpg" alt>
-            <p><b> Il massaggiatore a impulsi è economico, ma porta un sacco di piacere e benefici!</b> Spesso ho sofferto da dolori alla schiena, quindi ora accendo il massaggiatore, collego gli elettrodi e mi eccito dalle piacevoli vibrazioni. Prima di acquistare, dubitavo se sarebbe doloroso. In realtà, si rilassa piacevolmente senza disagio. Bisogna solo impostare la modalità appropriata. Insomma, ragazzi, è una cosa mozzafiato! Consiglio.»</p>
+            <p>Pulsni masažer je jeftin, a donosi mnogo zadovoljstva i koristi! Česti sam patio od bolova u leđima,
+                pa sam počeo da koristim ovaj masažer. <b>Pre kupovine sam sumnjao, ali sada vidim
+                    da je u pitanju jedan odličan proizvod.</b> Opušta i ne stvara neprijatnosti. Ovo svakome preporučujem!</p>
             <div class="person">
                 <img src="{{ asset('/') }}purplerelaxFiles/vratnimasazermobile/ava2.jpg" alt>
-                <p> Sergio<br> Palermo</p>
+                <p>Srđan<br> Negotin</p>
             </div>
         </div>
         <div class="reviews__item">
-            <p><b> «E' una cosa molto utile in macchina, soprattutto quando si guida su lunghe distanze.</b> Lo porto sempre con me. Non c'è bisogno di preoccuparsi con i fili, basta mettere sul collo e si apre un secondo respiro, non pensavo che per quei soldi si possa ottenere un effetto così rilassante.»</p>
+            <p>Veoma korisna stvar u automobilu, <b>posebno kada idem na duge relacije.</b> Uvek ga nosim sa sobom, vrlo je praktičan i lako se koristi.
+                Nisam verovao da za tako malo novca mogu postići ovako dobar efekat.</p>
             <div class="person">
                 <img src="{{ asset('/') }}purplerelaxFiles/vratnimasazermobile/ava3.jpg" alt>
-                <p> Arturo<br> Torino</p>
+                <p>Andrija<br> Beograd</p>
             </div>
         </div>
-        <a href="#order_form" class="btn"> Ordinare con lo sconto</a>
+        <a href="#order_form" class="btn">PORUČITE SA POPUSTOM</a>
     </section>
     <section class="b9">
-        <h2 class="title"> Consegna e pagamento</h2>
+        <h2 class="title">Dostava i plaćanje</h2>
         <ul class="delivery">
             <li>
                 <img src="{{ asset('/') }}purplerelaxFiles/vratnimasazermobile/del1.png" alt>
-                <p><b> Consegna veloce</b> Tramite corriere entro 1-3 giorni</p>
+                <p><b>Brza isporuka</b> Kurirskom službom u roku od 1-2 radna dana</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}purplerelaxFiles/vratnimasazermobile/del2.png" alt>
-                <p><b> Pagamento alla consegna</b> Senza pagamento anticipato! Il pagamento viene effettuato solo alla consegna</p>
+                <p><b>Plaćanje pouzećem</b> Bez plaćanja unapred! Plaćanje se vrši prilikom isporuke</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}purplerelaxFiles/vratnimasazermobile/del3.png" alt>
-                <p><b> 100% garanzia di qualità</b> Controlliamo i prodotti prima della spedizione e garantiamo la qualità al 100% </p>
+                <p><b>100% garancija kvaliteta</b> Proveravano proizvode pre isporuke i garantujemo kvalitet 100%</p>
             </li>
         </ul>
     </section>
     <section class="b1 end">
-        <h1> Neck <span> Ring</span> Plus</h1>
-        <h2 class="gradient"> Massaggiatore a impulsi multifunzionale per collo e tutto il corpo</h2>
-        <div class="sale"> solo oggi! <span> -53%</span> <b> Risparmio di 66 &euro;</b></div>
-        <div class="effect"> Effetto di massaggio professionale</div>
+        <h1>PURPLE <span>RELAX</span></h1>
+        <h2 class="gradient">MULTIFUNKCIONALNI PULSNI MASAŽER ZA VRATA I CELO TELO</h2>
+        <div class="sale"> SAMO DANAS! <span> -40%</span> <b> POPUSTA</b></div>
+        <div class="effect">Profesionalni efekat masaže</div>
         <div class="pulse">
             <div></div>
             <div></div>
             <div></div>
         </div>
         <div class="formbox">
-            <h3> Ordina ora!</h3>
-            <p> e ti richiameremo. <br> per chiarire i dettagli dell'ordine</p>
+            <h3>PORUČITE ODMAH!</h3>
+            <p>A mi ćemo vas u najkraćem roku kontaktirati da potvrdimo porudžbinu.</p>
             <ul class="price">
                 <li>
                     {{ $prices[1]['originalPrice'] }} <small>RSD</small>
@@ -245,5 +263,6 @@
         });
     });
 </script>
+@include('components.pixel_footer')
 </body>
 </html>
