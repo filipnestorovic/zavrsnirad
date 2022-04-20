@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <link rel="shortcut icon" href="" type="image/png">
-    <link rel="stylesheet" type="text/css" href="{{ asset('/') }}flexonikFiles/slimlift/owl.carousel.min.css">
-    <link rel="stylesheet" type="text/css" href="{{ asset('/') }}flexonikFiles/slimlift/styles.css">
-    <link href="{{ asset('/') }}flexonikFiles/slimlift/custom-styless.min.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/') }}flexonikFiles/slimliftfemale/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/') }}flexonikFiles/slimliftfemale/styles.css">
+    <link href="{{ asset('/') }}flexonikFiles/slimliftfemale/custom-styless.min.css" type="text/css" rel="stylesheet">
 </head>
 <body>
 @include('components.display_errors')
@@ -32,19 +32,19 @@
 <div class="info_section">
     <div class="wrapper">
         <div class="info_item">
-            <img src="{{ asset('/') }}flexonikFiles/slimlift/b2-3.png" alt="Slim'N Lift" title="Slim'N Lift">
+            <img src="{{ asset('/') }}flexonikFiles/slimliftfemale/b2-3.png" alt="Slim'N Lift" title="Slim'N Lift">
             <p>Ova neverovatna majica bez rukava je napravljena od svilenkastog materijala i elastične likre, udobna je i lepo prijanja uz telo.</p>
         </div>
         <div class="info_item">
-            <img src="{{ asset('/') }}flexonikFiles/slimlift/b2-1.png" alt="Slim'N Lift" title="Slim'N Lift">
+            <img src="{{ asset('/') }}flexonikFiles/slimliftfemale/b2-1.png" alt="Slim'N Lift" title="Slim'N Lift">
             <p>Pomaže u održavanju atraktivnog izgleda tokom procesa mršavljenja.</p>
         </div>
         <div class="info_item">
-            <img src="{{ asset('/') }}flexonikFiles/slimlift/b2-4.png" alt="Slim'N Lift" title="Slim'N Lift">
+            <img src="{{ asset('/') }}flexonikFiles/slimliftfemale/b2-4.png" alt="Slim'N Lift" title="Slim'N Lift">
             <p>Efikasno zateže stomak i ističe dekolte, zahvaljujući posebnom obliku i strukturi.</p>
         </div>
         <div class="info_item">
-            <img src="{{ asset('/') }}flexonikFiles/slimlift/b2-2.png" alt="Slim'N Lift" title="Slim'N Lift">
+            <img src="{{ asset('/') }}flexonikFiles/slimliftfemale/b2-2.png" alt="Slim'N Lift" title="Slim'N Lift">
             <p>Zahvaljujući inovativnom dizajnu, preko ovoga se mogu nositi tanke majice, džemperi i lagane košulje.</p>
         </div>
     </div>
@@ -66,7 +66,7 @@
     <div class="wrapper">
         <div class="product_item male clearfix">
             <div class="gallery_block">
-                <img class="image one" src="{{ asset('/') }}flexonikFiles/slimlift/b4-1.jpg" alt="Slim'N Lift" title="Slim'N Lift">
+                <img class="image one" src="{{ asset('/') }}flexonikFiles/slimliftfemale/b4-1.jpg" alt="Slim'N Lift" title="Slim'N Lift">
             </div>
             <div class="info">
                 <h3>Karakteristike SLIM 'N LIFT ženske majice</h3>
@@ -134,19 +134,19 @@
         <h2>KAKO PORUČITI <span>Slim'N Lift?</span></h2>
         <div class="steps_list">
             <div class="step_item">
-                <img src="{{ asset('/') }}flexonikFiles/slimlift/order_steps__step1_image.png" alt="Slim'N Lift" title="Slim'N Lift">
+                <img src="{{ asset('/') }}flexonikFiles/slimliftfemale/order_steps__step1_image.png" alt="Slim'N Lift" title="Slim'N Lift">
                 <p>Ostavite podatke za dostavu na sajtu</p>
             </div>
             <div class="step_item">
-                <img src="{{ asset('/') }}flexonikFiles/slimlift/order_steps__step2_image.jpg" alt="Slim'N Lift" title="Slim'N Lift">
+                <img src="{{ asset('/') }}flexonikFiles/slimliftfemale/order_steps__step2_image.jpg" alt="Slim'N Lift" title="Slim'N Lift">
                 <p>Kontaktiraćemo Vas da potvrdimo porudžbinu</p>
             </div>
             <div class="step_item">
-                <img src="{{ asset('/') }}flexonikFiles/slimlift/order_steps__step3_image.jpg" alt="Slim'N Lift" title="Slim'N Lift">
+                <img src="{{ asset('/') }}flexonikFiles/slimliftfemale/order_steps__step3_image.jpg" alt="Slim'N Lift" title="Slim'N Lift">
                 <p>Poslaćemo pošiljku brzom poštom</p>
             </div>
             <div class="step_item">
-                <img src="{{ asset('/') }}flexonikFiles/slimlift/order_steps__step4_image.jpg" alt="Slim'N Lift" title="Slim'N Lift">
+                <img src="{{ asset('/') }}flexonikFiles/slimliftfemale/order_steps__step4_image.jpg" alt="Slim'N Lift" title="Slim'N Lift">
                 <p>Plaćanje se vrši po pouzeću</p>
             </div>
         </div>
@@ -157,7 +157,7 @@
         <h2>UTISCI ZADOVOLJNIH <span>KUPACA</span></h2>
         <div class="reviews_list owl-carousel">
             <div class="review_item clearfix">
-                <img src="{{ asset('/') }}flexonikFiles/slimlift/rew-1.jpg" alt="Slim'N Lift" title="Slim'N Lift">
+                <img src="{{ asset('/') }}flexonikFiles/slimliftfemale/rew-1.jpg" alt="Slim'N Lift" title="Slim'N Lift">
                 <div class="text_block">
                     <div class="author_info">Helena, 42 godine</div>
                     <p>Da budem iskrena, nisam mogla da verujem da je moguće nositi odeću 2-3 veličine manju. Kada sam ga isprobala, shvatila sam da je to to.
@@ -165,7 +165,7 @@
                 </div>
             </div>
             <div class="review_item clearfix">
-                <img src="{{ asset('/') }}flexonikFiles/slimlift/rew-2.jpg" alt="Slim'N Lift" title="Slim'N Lift">
+                <img src="{{ asset('/') }}flexonikFiles/slimliftfemale/rew-2.jpg" alt="Slim'N Lift" title="Slim'N Lift">
                 <div class="text_block">
                     <div class="author_info">Olga, 49 godina</div>
                     <p>Slim And Lift zaista zateže stomak i podiže grudi. Dobijam komplimente za izgled, a i lepše mi je gledati sebe u ogledalu.</p>
@@ -210,8 +210,8 @@
         </div>
     </div>
 </section>
-<script src="{{ asset('/') }}flexonikFiles/slimlift/owl.carousel.min.js"></script>
-<script src="{{ asset('/') }}flexonikFiles/slimlift/scripts.js"></script>
+<script src="{{ asset('/') }}flexonikFiles/slimliftfemale/owl.carousel.min.js"></script>
+<script src="{{ asset('/') }}flexonikFiles/slimliftfemale/scripts.js"></script>
 @include('components.pixel_footer')
 </body>
 </html>

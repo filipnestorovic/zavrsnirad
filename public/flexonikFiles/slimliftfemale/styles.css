@@ -639,6 +639,12 @@ h2 span {
     center -10px no-repeat;
 }
 
+@media screen and (min-width: 959px) {
+    .benefits_section .wrapper {
+        width: 1100px;
+    }
+}
+
 .benefits_section h2 {
     margin: 0 0 40px;
     color: #fff;
