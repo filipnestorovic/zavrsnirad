@@ -552,12 +552,12 @@ class HomeController extends Controller
                        foreach($this->returnedData['prices'] as $price) {
                            if($coupon === "blackfriday") {
                                $i = $price['quantity'];
-                               $this->returnedData['prices'][$i]['amount'] = $price['originalPrice'] * $discountMultiply;
+                               $this->returnedData['prices'][$i]['amount'] = round($price['originalPrice'] * $discountMultiply);
                                $this->returnedData['prices'][$i]['amountBeforeDiscount'] = $price['originalPrice'];
                                $discountPercent = $singleCoupon->discount;
                            } else {
                                $i = $price['quantity'];
-                               $this->returnedData['prices'][$i]['amount'] = $price['amount'] * $discountMultiply;
+                               $this->returnedData['prices'][$i]['amount'] = round($price['amount'] * $discountMultiply);
                                $this->returnedData['prices'][$i]['amountBeforeDiscount'] = $price['amount'];
                                $discountPercent = $singleCoupon->discount;
                            }

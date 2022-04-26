@@ -9,22 +9,12 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('/') }}innodermFiles/cellulite/favicon.ico" />
     <link rel="stylesheet" href="{{ asset('/') }}shared_files/bootstrap.min.css">
     <link rel="stylesheet" href="{{ asset('/') }}shared_files/font-awesome.min.css">
-{{--    <link rel="stylesheet" href="../stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">--}}
     <link rel="stylesheet" href="{{ asset('/') }}innodermFiles/cellulite/style.css">
 </head>
-<body class="home  ">
+<body class="home">
 <div class="wrapper">
+    @include('components.display_errors')
     <div class="menu-overlay"></div>
-{{--    <div class="menu-mobile">--}}
-{{--        <ul class="list-unstyled">--}}
-{{--            <li class="nav-el"><a href="#home" class="home">Home</a></li>--}}
-{{--            <li class="nav-el"><a href="#about" class="about">About</a></li>--}}
-{{--            <li class="nav-el"><a href="#ingredients" class="ingredients">Ingredients</a></li>--}}
-{{--            <li class="nav-el"><a href="#testimonials" class="testimonials">Opinions</a></li>--}}
-{{--            <li class="nav-el"><a href="#faq" class="faq">FAQ</a></li>--}}
-{{--            <li class="nav-el"><a href="{{$checkoutView}}" class="order"><strong>Order</strong></a></li>--}}
-{{--        </ul>--}}
-{{--    </div>--}}
     <header class="header scroll" id="header">
         <div class="container">
             <div class="row align-items-center vertical-align-center">
@@ -35,21 +25,13 @@
                 </div>
                 <nav class="col-md-7 col-3">
                     <ul class="list-unstyled list">
-                        <li class="nav-el"><a href="#effectiveness" class="about">About</a></li>
-                        <li class="nav-el"><a href="#ingredients" class="ingredients">Ingredients</a></li>
-                        <li class="nav-el"><a href="#testimonials" class="testimonials">Opinions</a></li>
+                        <li class="nav-el"><a href="#effectiveness" class="about">Efikasnost</a></li>
+                        <li class="nav-el"><a href="#how-to-fight" class="how-to-fight">O celulitu</a></li>
+                        <li class="nav-el"><a href="#testimonials" class="testimonials">Recenzije</a></li>
                         <li class="nav-el"><a href="#faq" class="faq">FAQ</a></li>
-                        <li class="nav-el"><a href="{{$checkoutView}}" class="order">Order</a></li>
+                        <li class="nav-el"><b><a href="{{$checkoutView}}" class="order">Poručite odmah</a></b></li>
                     </ul>
                 </nav>
-{{--                <div class="col-md-2 col-sm-3 col-3 hamburger-container">--}}
-{{--                    <button class="hamburger d-block d-lg-none" aria-label="Menu">--}}
-{{--                            <span class="hamburger__container" tabindex="-1">--}}
-{{--                                <span class="hamburger__bars"></span>--}}
-{{--                            </span>--}}
-{{--                    </button>--}}
-{{--                    <div class="flags"></div>--}}
-{{--                </div>--}}
             </div>
         </div>
     </header>
@@ -58,33 +40,31 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 col-lg-5">
-                        <h1 class="text-uppercase">The brand new anti-cellulite therapy</h1>
+                        <h1 class="text-uppercase">POTPUNO NOVA ANTICELULIT TERAPIJA</h1>
                         <ul class="list-unstyled list">
-                            <li>Visible cellulite reduction</li>
-                            <li>Firm and smooth skin</li>
-                            <li>Good moisturisation</li>
-                            <li>Less centimetres</li>
-                            <li>Clinically confirmed results</li>
-                            <li>Natural and safe composition</li>
+                            <li>Vidljivo smanjenje celulita</li>
+                            <li>Čvrsta i glatka koža</li>
+                            <li>Dobra hidratacija</li>
+                            <li>Manji obim</li>
+                            <li>Klinički potvrđeni rezultati</li>
+                            <li>Prirodan i siguran sastav</li>
                         </ul>
-                        <p>Perfect Body is a fast and effective way to fight with cellulite. This oppressive problem concerns most women, however, it does not mean that you have to struggle with it as well! If you dream about a beautiful and smooth body, without the “orange peel” effect, then this product is just for you.</p>
+                        <p>Sanfe Anti Celulit krema je brz i efikasan način za borbu protiv celulita. Ovaj problem muči većinu žena, ali se konačno pojavilo efikasno rešenje.
+                            Ako sanjate o lepom i glatkom telu bez "efekta pomorandžine kore", onda je ovaj proizvod baš za vas!</p>
                         <div class="btn-container mt-4 mt-lg-5">
-                            <a href="{{$checkoutView}}" class="btn" id="slm-btn">Take advantage of the special offer!</a>
-                            <p class="btn-attention">Attention! The product will be out of stock soon!</p>
+                            <a href="{{$checkoutView}}" class="btn" id="slm-btn">PORUČITE ODMAH SA 40% POPUSTA</a>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col mobile-bg">
                         <picture>
-{{--                            <source srcset="{{ asset('/') }}innodermFiles/cellulite/product-01.webp" type="image/webp" class="">--}}
                             <source srcset="{{ asset('/') }}innodermFiles/cellulite/product-01.png" type="image/png" class="">
                             <img src="{{ asset('/') }}innodermFiles/cellulite/product-01.png" alt="" class="packshot">
                         </picture>
                     </div>
                 </div>
                 <picture>
-{{--                    <source srcset="{{ asset('/') }}innodermFiles/cellulite/product-01.webp" type="image/webp" class="">--}}
                     <source srcset="{{ asset('/') }}innodermFiles/cellulite/product-01.png" type="image/png" class="">
                     <img src="{{ asset('/') }}innodermFiles/cellulite/product-01.png" alt="" class="packshot">
                 </picture>
@@ -94,29 +74,29 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 col-lg-6">
-                        <h3>What is cellulite and how can I get rid of it?</h3>
-                        <p>Cellulite is a multifactorial problem. It concerns approx. 86-97% of women. Cellulite is a skin appearance dysfunction and these changes are commonly called “orange peel” effect. The irregular bumps are mostly visible on thighs, belly, shoulders, or buttocks – exactly where the most fat is stored. These imperfections are very unaesthetic, however, you can effectively get rid of them.</p>
+                        <h3>Šta je celulit i kako da ga se rešim?</h3>
+                        <p>Celulit je višestruki problem koji ima oko 80% žena. Celulit je disfunkcija kože i ove promene se obično nazivaju efektom "pomorandžine kore".
+                            Nepravilne izbočine su uglavnom vidljive na butinama, stomaku, ramenima ili zadnjici - tačno tamo gde je uskladišteno najviše masti. Ove nesavršenosti
+                            su veoma neestetske, međutim možete ih se efikasno rešiti.</p>
                     </div>
                 </div>
                 <div class="row align-items-end">
                     <div class="col-md-4 skin-types text-center text-md-left">
                         <div class="row">
                             <div class="col-6">
-                                <span class="normal-skin">Normal skin</span>
+                                <span class="normal-skin">Normalna koža</span>
                             </div>
                             <div class="col-6">
-                                <span class="cellulite">Cellulite</span>
+                                <span class="cellulite">Celulit</span>
                             </div>
                         </div>
                         <picture>
-{{--                            <source srcset="{{ asset('/') }}innodermFiles/cellulite/cellulite-02.webp" type="image/webp" class="">--}}
                             <source srcset="{{ asset('/') }}innodermFiles/cellulite/cellulite-02.png" type="image/png" class="">
                             <img src="{{ asset('/') }}innodermFiles/cellulite/cellulite-02.png" alt="" class="">
                         </picture>
                     </div>
                     <div class="col-md-4 text-center text-md-left pt-4 pt-md-0">
                         <picture>
-{{--                            <source srcset="{{ asset('/') }}innodermFiles/cellulite/cellulite-01.webp" type="image/webp" class="">--}}
                             <source srcset="{{ asset('/') }}innodermFiles/cellulite/cellulite-01.png" type="image/png" class="">
                             <img src="{{ asset('/') }}innodermFiles/cellulite/cellulite-01.png" alt="" class="">
                         </picture>
@@ -125,7 +105,6 @@
             </div>
         </section>
         <picture>
-{{--            <source srcset="{{ asset('/') }}innodermFiles/cellulite/product-02.webp" type="image/webp" class="">--}}
             <source srcset="{{ asset('/') }}innodermFiles/cellulite/product-02.png" type="image/png" class="">
             <img src="{{ asset('/') }}innodermFiles/cellulite/product-02.png" alt="" class="packshot-cellulite">
         </picture>
@@ -135,22 +114,22 @@
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <picture>
-{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/cellulie-3.webp" type="image/webp" class="">--}}
                         <source srcset="{{ asset('/') }}innodermFiles/cellulite/cellulie-3.png" type="image/png" class="">
                         <img src="{{ asset('/') }}innodermFiles/cellulite/cellulie-3.png" alt="" class="d-block mx-auto">
                     </picture>
                 </div>
                 <div class="col-md-6 content">
-                    <h3 class="pt-5 pt-md-0">Clinically <br class="d-block d-md-none" />confirmed effectiveness</h3>
-                    <p>Perfect Body Cellulite was designed for women and their bodies, to help them get rid of these unaesthetic changes. This product contains carefully selected active ingredients, which effectively reduce cellulite, decrease centimetres in girth, improve moisturisation, skin firmness and smoothness.</p>
+                    <h3 class="pt-5 pt-md-0">Klinički <br class="d-block d-md-none"/>potvrđena efikasnost</h3>
+                    <p>Sanfe Anti Celulit krema je napravljena za žensko telo kako bi pomogla oslobađanju od celulita. Ovaj proizvod sadrži pažljivo odabrane aktivne sastojke, koji
+                        efikasno smanjuju obim tela, oslobađaju od celulita, poboljšavaju hidrataciju, čvrstoću i glatkoću kože. </p>
                     <ul class="list-unstyled list mt-5 mt-md-0">
-                        <li>87% cellulite reduction</li>
-                        <li>73% smoothed skin</li>
-                        <li>68% better skin moisturisation</li>
-                        <li>4cm less centimetres in girth</li>
+                        <li>87% smanjenje celulita</li>
+                        <li>73% zaglađena koža</li>
+                        <li>68% bolja hidratacija kože</li>
+                        <li>4cm manji obim kukova i zadnjice</li>
                     </ul>
-                    <p class="annotation">*measured in thighs</p>
-                    <a href="{{$checkoutView}}" class="btn mt-5 mt-md-0">Order <br class="d-block d-md-none" />Perfect Body Cellulite</a>
+                    <br>
+                    <a href="{{$checkoutView}}" class="btn mt-5 mt-md-0">PORUČITE ODMAH <br class="d-block d-md-none" /> DOK TRAJE POPUST</a>
                 </div>
             </div>
         </div>
@@ -159,26 +138,25 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-7">
-                    <h3>What <br class="d-block d-md-none" />causes cellulite?</h3>
-                    <p>As we have already mentioned, cellulite can be caused by many factors. The most frequent are:</p>
+                    <h3>Šta uzrokuje celulit?</h3>
+                    <p>Kao što smo već pomenuli, celulit može biti uzrokovan mnogim faktorima. Najčešći su:</p>
                     <ul class="list-unstyled list">
-                        <li>genetic predispositions</li>
-                        <li>sedentary lifestyle</li>
-                        <li>low physical activity</li>
-                        <li>bad diet (too many carbohydrates and fats)</li>
-                        <li>salt abuse, which causes water accumulation within your body</li>
-                        <li>hormone problems</li>
-                        <li>nervous system dysfunctions, including stress</li>
-                        <li>microcirculation problems</li>
-                        <li>alcohol, cigarettes</li>
-                        <li>pregnancy</li>
-                        <li>obesity</li>
+                        <li>genetske predispozicije</li>
+                        <li>stacionarni način života</li>
+                        <li>niska fizička aktivnost</li>
+                        <li>loša ishrana (previše ugljenih hidrata)</li>
+                        <li>previše soli, što uzrokuje nakupljanje vode u telu</li>
+                        <li>problemi sa hormonima</li>
+                        <li>stres</li>
+                        <li>problemi sa mikrocirkulacijom</li>
+                        <li>alkohol, cigarete</li>
+                        <li>trudnoća</li>
+                        <li>gojaznost</li>
                     </ul>
-                    <p>The most frequent cause of the problem is connected to lots of factors, which are hard to eliminate. However, how can you fight this “orange peel” effect?</p>
+                    <p>Najčešći uzrok problema je povezan sa mnoštvom faktora koji je teško eliminisati. Međutim, možete se boriti protiv efekta "pomorandžine kore" uz Sanfe Anti Celulit kremu.</p>
                 </div>
                 <div class="col-md-5 pt-4 pt-md-0">
                     <picture>
-{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/cellulie-4.webp" type="image/webp" class="">--}}
                         <source srcset="{{ asset('/') }}innodermFiles/cellulite/cellulie-4.png" type="image/png" class="">
                         <img src="{{ asset('/') }}innodermFiles/cellulite/cellulie-4.png" alt="" class="mobile-img">
                     </picture>
@@ -186,32 +164,33 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <a href="{{$checkoutView}}" class="btn mt-5">Make your body look the way you want it to look.</a>
+                    <a href="{{$checkoutView}}" class="btn mt-5">NEKA VAŠE TELO IZGLEDA ONAKO KAKO VI ŽELITE - PORUČITE ODMAH</a>
                 </div>
             </div>
         </div>
     </section>
-    <section class="how-to-fight">
+    <section id="how-to-fight" class="how-to-fight">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <picture>
-{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/cellulie-5.webp" type="image/webp" class="">--}}
                         <source srcset="{{ asset('/') }}innodermFiles/cellulite/cellulie-5.png" type="image/png" class="">
                         <img src="{{ asset('/') }}innodermFiles/cellulite/cellulie-5.png" alt="" class="mobile-img">
                     </picture>
                 </div>
                 <div class="col-md-6">
-                    <h3 class="pt-5 pt-md-0">How to fight cellulite?</h3>
-                    <p>Skin dimpling and nodularity that mostly accumulates on thighs and buttocks, are for most women the cause of complexes and bad mood. It is important to feel good in your own skin. So what can you do to get rid of this serious problem?</p>
-                    <p>Keep in mind that cellulite is a complex problem. Therefore, a complex approach is required. Physical activity, healthy and balanced diet, proper moisturisation, skin massage, and most importantly – a proper supplementation from the inside.</p>
-                    <p>It is essential to take a proven and effective product. Such product is Perfect Body Cellulite. The capsules are effectively eliminating the “orange peel” effect and the results are visible after just a few days. The skin dimpling and nodularity slowly disappear, it becomes firm and smooth.</p>
+                    <h3 class="pt-5 pt-md-0">Kako se boriti protiv celulita?</h3>
+                    <p>Udubljenja i izbočine na koži koja se uglavnom nakupljaju na butinama i zadnjici, za većinom žena uzrok su kompleksa i lošeg raspoloženja. Važno je osećati se dobro u sopstenoj
+                        koži.</p>
+                    <p>Imajte na umu da je celulit složen problem i zbog toga je potreban kompleksan pristup. Važni su fizička aktivnost, zdrava i uravnotežena ishrana, odgovarajuća hidratacija, ali je najvažnija
+                        dobra nega kože, odnosno krema za razbijanje celulita.</p>
+                    <p>Neophodno je uzeti dokazan i efikasan proizvod kao što je Sanfe Anti Celulit krema. Veoma brzo i efikasno eliminiše celulit, a rezultati su vidljivi već nakon nekoliko dana.
+                        Neravna koža se zategne vrlo brzo i postaje čvrsta i glatka.</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col mobile-bg">
                     <picture>
-{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/product-01.webp" type="image/webp" class="">--}}
                         <source srcset="{{ asset('/') }}innodermFiles/cellulite/product-01.png" type="image/png" class="">
                         <img src="{{ asset('/') }}innodermFiles/cellulite/product-01.png" alt="" class="packshot d-block mx-auto mx-md-0">
                     </picture>
@@ -224,24 +203,25 @@
             <div class="box">
                 <div class="row align-items-center">
                     <div class="col-md-12 col-lg-7">
-                        <h3>Perfect Body Cellulite is effective and safe</h3>
-                        <p>Women, who have decided to undergo expensive and invasive treatments or take strong pharmaceuticals, know that they may turn out to be ineffective and cause lots of side effects. The secret of Perfect Body Cellulite is its natural composition, which is safe and fast. Perfect Body Cellulite gets rid of the orange skin and prevents it from appearing – that is why many women take the capsules as a preventive method, due to their health beneficial properties.</p>
+                        <h3>Sanfe Anti Celulit krema je efikasna i bezbedna</h3>
+                        <p>Žene koje su odlučile da se podvrgnu skupim i invazivnim tretmanima ili jakim lekovima ne pretpostavljaju da mogu dobiti kontra produktivan i neželjen efekat.
+                            Tajna savršenog tela bez celulita leži u prirodnom sastavu ove kreme i postiže se na brz i siguran način. Sanfe Anti Celulit krema izbacuje celulit iz kože
+                            i sprečava njegovo ponovno pojavljivanje - zato mnoge žene koriste ovu kremu preventivno.</p>
                         <ul class="list-unstyled list">
-                            <li>Do you want to have smooth and firm skin?</li>
-                            <li>Do you want to get rid of the unaesthetic look of your skin?</li>
-                            <li>Do you want to have a properly moisturised skin?</li>
-                            <li>Do you want to show your body without shame?</li>
+                            <li>Da li želite da imate glatku i čvrstu kožu?</li>
+                            <li>Da li želite savršeno telo?</li>
+                            <li>Da li želite da budete zavodljivi i privlačni?</li>
+                            <li>Da li želite da uživate u letnjoj odeći?</li>
                         </ul>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <p class="if-you mt-2 mt-md-5 mb-5">If you have answered YES to any of the above questions, then you must try Perfect Body Cellulite!</p>
-                        <a href="{{$checkoutView}}" class="btn">Make your body look the way you want it to look.</a>
+                        <p class="if-you mt-2 mt-md-5 mb-5">Ako ste odgovorili sa DA na bilo koje od pitanja, onda morate isprobati Sanfe Anti Celulit kremu!</p>
+                        <a href="{{$checkoutView}}" class="btn">PORUČI ODMAH SA POPUSTOM</a>
                     </div>
                 </div>
                 <picture>
-{{--                    <source srcset="{{ asset('/') }}innodermFiles/cellulite/product-01.webp" type="image/webp" class="">--}}
                     <source srcset="{{ asset('/') }}innodermFiles/cellulite/product-01.png" type="image/png" class="">
                     <img src="{{ asset('/') }}innodermFiles/cellulite/product-01.png" alt="" class="packshot">
                 </picture>
@@ -252,168 +232,52 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h3 class="mb-4">Opinions of women, who have started their fight against cellulite</h3>
+                    <h3 class="mb-4">Mišljenja žena koje su krenule u borbu protiv celulita</h3>
                 </div>
             </div>
             <div class="row testimonials--row">
                 <div class="col-md-6">
                     <picture>
-{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/test1.webp" type="image/webp" class="">--}}
                         <source srcset="{{ asset('/') }}innodermFiles/cellulite/test1.png" type="image/png" class="">
                         <img src="{{ asset('/') }}innodermFiles/cellulite/test1.png" alt="" class="">
                     </picture>
-                    <p>I was always mad about a statement that you have to love your cellulite because everyone has it. Well, that is not true… and you do not have to love it. What is more, you can effectively get rid of it! I am a physically active person, but only Perfect Body Cellulite helped me eliminate this orange peel, which made my body ugly.</p>
-                    <p class="author">Agnes, 33 years old</p>
+                    <p>Uvek sam bila ljuta zbog izjave da moram voleti svoje telo ma kakvo god ono bilo. To nije istina, ne možete da volite celulit.
+                        Štaviše, možete ga se efikasno rešiti! Ja sam fizički aktivna osoba, ali mi je samo Sanfe krema pomogla da eliminišem celulit koji je činio da ne budem srećna u svojoj koži.</p>
+                    <p class="author">Ana, 33 godine</p>
                 </div>
                 <div class="col-md-6">
                     <picture>
-{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/test2.webp" type="image/webp" class="">--}}
                         <source srcset="{{ asset('/') }}innodermFiles/cellulite/test2.png" type="image/png" class="">
                         <img src="{{ asset('/') }}innodermFiles/cellulite/test2.png" alt="" class="">
                     </picture>
-                    <p>Perfect Body Cellulite is a super effective product. Everyone should use it. All my friends love it. The skin is looking beautiful after the treatment with Perfect Body Cellulite! Absolute revelation. Massages, lotions, peelings… nothing worked. However, I saw a significant difference after a month with this product and after 3 months my skin became firm and smooth as never before!</p>
-                    <p class="author">Pam, 29 years old</p>
+                    <p>Sanfe anticelulit krema je super efikasan proizvod. Sve moje prijateljice je vole i svi treba da je koriste. Koža izgleda lepše nakon 15 dana korišćenja.
+                        Masaže, losioni, pilinzi - ništa nije uspelo. Međutim, primetila sam značajnu razliku nakon što sam počeka da koristim Sanfe kremu. Nakon 3 meseca korišćenja
+                        moja koža je bila apsolutno bez celulita i glatka kao nikada do sada.</p>
+                    <p class="author">Biljana, 29 godina</p>
                 </div>
                 <div class="col-md-6">
                     <picture>
-{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/test3.webp" type="image/webp" class="">--}}
                         <source srcset="{{ asset('/') }}innodermFiles/cellulite/test3.png" type="image/png" class="">
                         <img src="{{ asset('/') }}innodermFiles/cellulite/test3.png" alt="" class="">
                     </picture>
-                    <p>I thought that nothing can help people in my age with skin problems. I have always hidden my body on the beach. My daughter bought herself capsules against cellulite and gave me one bottle. My husband cannot stop looking at my body, it has changed so much. Now I am buying Perfect Body Cellulite for myself. My skin is moisturised, smooth and the cellulite is barely visible. I don’t know how it works, but it does miracles.</p>
-                    <p class="author">Maria, 42 years old</p>
+                    <p>Mislila sam da ništa ne može pomoći ljudima u mojim godinama da reše problem sa celulitom. Uvek sam skrivala svoje telo na plaži i bila sramežljiva.
+                        Moja kćerka je kupila sebi Sanfe kremu i počeka sam da je koristim. Moj muž ne može da prestane da gleda u moje telo jer se baš mnogo promenilo na bolje.
+                        Sada za sebe kupujem kremu i moja koža je glatka, lepa, zategnuta i bez celulita. Sve preporuke!</p>
+                    <p class="author">Marija, 45 godina</p>
                 </div>
                 <div class="col-md-6">
                     <picture>
-{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/test4.webp" type="image/webp" class="">--}}
                         <source srcset="{{ asset('/') }}innodermFiles/cellulite/test4.png" type="image/png" class="">
                         <img src="{{ asset('/') }}innodermFiles/cellulite/test4.png" alt="" class="">
                     </picture>
-                    <p>If you want to fight with cellulite then do it only with Perfect Body. It’s awesome. I spent a fortune through years on different treatments. The fact that nothing worked was very frustrating. Luckily, Perfect Body Cellulite eliminated my problem completely. My skin looks awesome! I highly recommend the product!</p>
-                    <p class="author">Hannah, 34 years old</p>
+                    <p>Ako želite da se borite sa celulitom, uradite to sa Sanfe kremom. Godinama sam koristila razne proizvode i potrošila bogatstvo na stvari koje mi nisu pomagale.
+                        Činjenica da ništa ne pomaže bila je frustrirajuća. Srećom, Sanfe krema je u potpunosti eliminisala moj problem. Koža mi izgleda sjajno i toplo preporučujem ovaj proizvod!</p>
+                    <p class="author">Hana, 34 godine</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <a href="{{$checkoutView}}" class="btn mt-3 mt-lg-5">The first results are <br class="d-block d-md-none" />visible in just a few weeks!</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="ingredients" id="ingredients">
-        <div class="container">
-            <div class="row">
-                <div class="col text-center">
-                    <h3>What makes Perfect Body Cellulite so effective?</h3>
-                    <p>The secret of its effectiveness are the carefully selected ingredients. The capsules contain:</p>
-                </div>
-            </div>
-            <div class="row justify-content-center ingredients--list">
-                <div class="col-md-6 col-lg-3">
-                    <picture>
-{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/ingr1.webp" type="image/webp" class="">--}}
-                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/ingr1.png" type="image/png" class="">
-                        <img src="{{ asset('/') }}innodermFiles/cellulite/ingr1.png" alt="" class="">
-                    </picture>
-                    <h5>Green tea extract</h5>
-                    <p>Boosts metabolism, inhibits the absorption of fats and stimulates the release of the already stored one. What is more, green tea contains polyphenols that are antioxidants, which protect skin against free radicals. Thanks to this, proteins (such as collagen and elastin) are safe and their structure is strengthened. </p>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <picture>
-{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/ingr2.webp" type="image/webp" class="">--}}
-                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/ingr2.png" type="image/png" class="">
-                        <img src="{{ asset('/') }}innodermFiles/cellulite/ingr2.png" alt="" class="">
-                    </picture>
-                    <h5>Bitter orange fruit extract</h5>
-                    <p>Burns body fat and curbs appetite. Bitter orange contains synephrine, which causes thermogenesis that disintegrates fat and then removes it from your body.</p>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <picture>
-{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/ingr3.webp" type="image/webp" class="">--}}
-                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/ingr3.png" type="image/png" class="">
-                        <img src="{{ asset('/') }}innodermFiles/cellulite/ingr3.png" alt="" class="">
-                    </picture>
-                    <h5>Grape seed extract</h5>
-                    <p>Grape seeds contain oligomeric proanthocyanidins (OPC), which are the strongest antioxidants. These are very active flavonoids that have lots of beneficial properties. For example, they affect the connective tissue reducing cellulite and stretch marks. What is more, the extract strengthens blood vessels and improves microcirculation (capillary).</p>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <picture>
-{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/ingr4.webp" type="image/webp" class="">--}}
-                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/ingr4.png" type="image/png" class="">
-                        <img src="{{ asset('/') }}innodermFiles/cellulite/ingr4.png" alt="" class="">
-                    </picture>
-                    <h5>Cayenne pepper fruit extract</h5>
-                    <p>Effectively improves blood circulation, enhances metabolism and helps remove damaged skin cells. It also eliminates body toxins, which are one of the causes of cellulite. It is worth mentioning that capsaicin has also antioxidant properties and also causes thermogenesis.</p>
-                </div>
-                <div class="col-md-4 col-lg-3">
-                    <picture>
-{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/ingr5.webp" type="image/webp" class="">--}}
-                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/ingr5.png" type="image/png" class="">
-                        <img src="{{ asset('/') }}innodermFiles/cellulite/ingr5.png" alt="" class="">
-                    </picture>
-                    <h5>Common nettle herb extract</h5>
-                    <p>Significantly boosts water and metabolic waste excretion.</p>
-                </div>
-                <div class="col-md-4 col-lg-3">
-                    <picture>
-{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/ingr6.webp" type="image/webp" class="">--}}
-                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/ingr6.png" type="image/png" class="">
-                        <img src="{{ asset('/') }}innodermFiles/cellulite/ingr6.png" alt="" class="">
-                    </picture>
-                    <h5>Vitamin E</h5>
-                    <p>Inhibits the growth of fat tissue. It also regulates and supports fat burning processes.</p>
-                </div>
-                <div class="col-md-4 col-lg-3">
-                    <picture>
-{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/ingr7.webp" type="image/webp" class="">--}}
-                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/ingr7.png" type="image/png" class="">
-                        <img src="{{ asset('/') }}innodermFiles/cellulite/ingr7.png" alt="" class="">
-                    </picture>
-                    <h5>Vitamin C</h5>
-                    <p>Stimulates collagen production and improves its absorption, making skin firm and smooth. Vitamin C is yet another antioxidant that improves skin condition.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <a href="{{$checkoutView}}" class="btn mt-5">Get rid of cellulite <br class="d-block d-md-none" />once and for all!</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="myths">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h3 class="mb-4">Myths about cellulite reduction</h3>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-md-4 col-lg-3 text-center">
-                    <picture>
-{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/mity1.webp" type="image/webp" class="">--}}
-                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/mity1.png" type="image/png" class="">
-                        <img src="{{ asset('/') }}innodermFiles/cellulite/mity1.png" alt="" class="">
-                    </picture>
-                    <h5>High temperatures</h5>
-                    <p>Maybe some of you heard about heat therapies, wrapping in plastic foil, sauna as a cellulite reduction methods. However, the truth is that heat provides only a temporary “slimming” effect due to body dehydration rather than getting rid of fat. Our bodies return to their “normal” look very fast and the effect is deceptive.</p>
-                </div>
-                <div class="col-md-4 col-lg-3 text-center">
-                    <picture>
-{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/mity2.webp" type="image/webp" class="">--}}
-                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/mity2.png" type="image/png" class="">
-                        <img src="{{ asset('/') }}innodermFiles/cellulite/mity2.png" alt="" class="">
-                    </picture>
-                    <h5>Just lose weight</h5>
-                    <p>Many people think that losing weight eliminates the problem with cellulite. The truth is that weight loss only emphasizes the irregularities, which are also visible among lean people.</p>
-                </div>
-                <div class="col-md-4 col-lg-3 text-center">
-                    <picture>
-{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/mity3.webp" type="image/webp" class="">--}}
-                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/mity3.png" type="image/png" class="">
-                        <img src="{{ asset('/') }}innodermFiles/cellulite/mity3.png" alt="" class="">
-                    </picture>
-                    <h5>Lotions</h5>
-                    <p>Beauty stores are full of products that supposedly reduce cellulite. However, you should notice that almost all of them contains the same substances that may cause chilling, tingling or heat sensations… All of this makes you think “Wow, this works!”. In reality, even after a few treatments, the skin looks the same as before.</p>
+                    <a href="{{$checkoutView}}" class="btn mt-3 mt-lg-5">Prvi rezultati su vidljivi <br class="d-block d-md-none" /> za samo nekoliko nedelja | <br class="d-block d-md-none" /> PORUČI ODMAH</a>
                 </div>
             </div>
         </div>
@@ -422,24 +286,23 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-lg-6">
-                    <h3>Opinion of MD Kate Murphy</h3>
-                    <p>Every day at my office I meet women who tried to get rid of cellulite, unfortunately ineffectively.  The number of solutions to the problem is extremely high and in most cases, they are completely useless. Cellulite removal treatments are expensive. I have always recommended my clients the most natural solutions that help both from the inside and outside. Natural peelings (e.g. from coffee, coconut and honey oil) are great on the outside, but this is not enough.</p>
-                    <p>Our bodies require a more complex approach such us the Perfect Body Cellulite capsules. They have a very good composition that guarantees its effectiveness. It is an effective and completely safe method to get rid of cellulite.</p>
+                    <h3>Mišljenje struke</h3>
+                    <p>Svaki dan u svojoj ordinaciji srećem žene koje su pokušavale da se otarase celuilita, nažalost bezuspešno. Načina je mnogo, ali uglavnom ne daju nikakve rezultate.
+                        Tretmani za uklanjanje celulita su skupi i svojim klijentima preporučujem prirodna rešenja. Prirodni pilinzi (npr. kafa, kokosovo ulje i cimet) su odlični ali nisu dovoljni.</p>
+                    <p>Naše telo zahteva složeniji pristup kao što je Sanfe krema. Ima veoma dobar sastav koji garantuje njenu efikasnost. To je efikasan i potpuno bezbedan način za oslobađanje od celulita.</p>
                     <div class="btn-container mt-5 ml-auto mr-auto ml-lg-0 mr-lg-0">
-                        <p class="btn-attention">Are you ready to change your body?</p>
-                        <a href="{{$checkoutView}}" class="btn">Try Perfect Body Cellulite today!</a>
+                        <p class="btn-attention">Da li ste spremni da počnete da menjate svoje telo?</p>
+                        <a href="{{$checkoutView}}" class="btn">Poručite proizvod za eliminisanje celulita danas!</a>
                     </div>
                 </div>
             </div>
             <picture>
-{{--                <source srcset="{{ asset('/') }}innodermFiles/cellulite/doctor.webp" type="image/webp" class="">--}}
                 <source srcset="{{ asset('/') }}innodermFiles/cellulite/doctor.png" type="image/png" class="">
                 <img src="{{ asset('/') }}innodermFiles/cellulite/doctor.png" alt="" class="doctor--img">
             </picture>
             <div class="row">
                 <div class="col mobile-bg">
                     <picture>
-{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/mobile-doctor.webp" type="image/webp" class="">--}}
                         <source srcset="{{ asset('/') }}innodermFiles/cellulite/mobile-doctor.png" type="image/png" class="">
                         <img src="{{ asset('/') }}innodermFiles/cellulite/mobile-doctor.png" alt="" class="packshot d-block mx-auto mx-md-0">
                     </picture>
@@ -451,39 +314,39 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h3 class="text-center">FAQ – THE MOST FREQUENTLY ASKED QUESTIONS</h3>
+                    <h3 class="text-center">FAQ – NAJČEŠĆE POSTAVLJANA PITANJA</h3>
                     <div id="accordionFaq">
-                        <h5 class="active">1. Is Perfect Body Cellulite safe?</h5>
+                        <h5 class="active">1. Da li je Sanfe Anti Celulit krema bezbedna?</h5>
                         <div>
-                            <p>The product has a unique and safe formula, which consists of only natural ingredients. The food supplement does not cause any side effects and is completely safe.</p>
+                            <p>Proizvod ima jedinstvenu i bezbednu formulu koja se sastoji od prirodnih sastojaka. Ne izaziva neželjene efekte i potpuno je bezbedan.</p>
                         </div>
-                        <h5 >2. How to use Perfect Body Cellulite?</h5>
+                        <h5 >2. Kako koristiti Sanfe kremu?</h5>
                         <div>
-                            <p>Take 1 capsules per day and swallow it with a glass of water.</p>
+                            <p>Utrljajte kremu na željenu površinu i pustite je da upije.</p>
                         </div>
-                        <h5 >3. How many capsules are in one bottle of Perfect Body Cellulite?</h5>
+                        <h5 >3. Koliko je vremena potrebno da se koristi Sanfe Anti Celulit krema?</h5>
                         <div>
-                            <p>One bottle contains 30 capsules, which is enough for one month of use.</p>
+                            <p>Krema daje najbolji efekat nakon 3 meseca korišćenja.</p>
                         </div>
-                        <h5 >4. When will I see the first results?</h5>
+                        <h5 >4. Kada ću videti prve rezultate?</h5>
                         <div>
-                            <p>The first results are visible after 2-3 weeks of use. The optimum results start to maintain after a full 3-month treatment.</p>
+                            <p>Prvi rezultati su vidljivi nakon 2-3 nedelje upotrebe.</p>
                         </div>
-                        <h5 >5. How long do I have to wait for my parcel?</h5>
+                        <h5 >5. Koliko dugo moram da čekam svoju pošiljku?</h5>
                         <div>
-                            <p>The orders are processed in 24h. The shipping time may vary depending on your location, usually, the ordered goods are delivered within 2-3 working days.</p>
+                            <p>Porudžbine se šalju u roku od 1-2 radna dana i stižu sledeći dan na vašu adresu.</p>
                         </div>
-                        <h5 >6. Can I pay Cash On Delivery for Perfect Body Cellulite?</h5>
+                        <h5 >6. Mogu li da platim po pouzeću?</h5>
                         <div>
-                            <p>Yes, however, this payment option is available only in selected countries.</p>
+                            <p>Da, možete platiti kuriru brze pošte pri preuzimanju pošiljke.</p>
                         </div>
-                        <h5 >7. Do you ship abroad?</h5>
+                        <h5 >7. Na kojoj teritoriji šaljete?</h5>
                         <div>
-                            <p>Of course! We ship our products worldwide.</p>
+                            <p>Šaljemo na teritoriji cele Srbije.</p>
                         </div>
-                        <h5 >8. Will anyone know what I have ordered?</h5>
+                        <h5 >8. Da li će neko znati šta sam poručila?</h5>
                         <div>
-                            <p>Our top priority is your privacy. Therefore all ordered goods are packed in a discreet way. No one will know the contents of the parcel.</p>
+                            <p>Naš glavni prioritet je vaše zadovoljstvo i privatnost. Sva roba se šalje u kutijama za pakovanje pošiljki i niko neće znati sadržaj paketa.</p>
                         </div>
                     </div>
                 </div>
@@ -494,33 +357,29 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-lg-6">
-                    <!-- <img src="{{ asset('/') }}innodermFiles/cellulite/logo.svg" class="cellulite-end-logo d-block ml-auto mr-auto d-md-inline ml-md-0 mr-md-0" /> -->
                     <picture>
-{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/footer-logo.webp" type="image/webp" class="">--}}
                         <source srcset="{{ asset('/') }}innodermFiles/cellulite/footer-logo.png" type="image/png" class="">
                         <img src="{{ asset('/') }}innodermFiles/cellulite/footer-logo.png" alt="" class="cellulite-end-logo d-block ml-auto mr-auto d-md-inline ml-md-0 mr-md-0 mb-3">
                     </picture>
-                    <h2 class="text-uppercase">The brand new anti-cellulite therapy</h2>
+                    <h2 class="text-uppercase">POTPUNO NOVA ANTICELULIT TERAPIJA</h2>
                     <ul class="list-unstyled list">
-                        <li>Visible cellulite reduction</li>
-                        <li>Firm and smooth skin</li>
-                        <li>Good moisturisation</li>
-                        <li>Less centimetres</li>
-                        <li>Clinically confirmed results</li>
-                        <li>Natural and safe composition</li>
+                        <li>Vidljivo smanjenje celulita</li>
+                        <li>Čvrsta i glatka koža</li>
+                        <li>Dobra hidratacija</li>
+                        <li>Manji obim</li>
+                        <li>Klinički potvrđeni rezultati</li>
+                        <li>Prirodan i siguran sastav</li>
                     </ul>
-                    <a href="{{$checkoutView}}" class="btn ml-auto mr-auto ml-0 mr-0">Try the Perfect Body Cellulite today!</a>
+                    <a href="{{$checkoutView}}" class="btn ml-auto mr-auto ml-0 mr-0">PORUČITE ODMAH SA 40% POPUSTA!</a>
                 </div>
             </div>
             <div class="row d-block d-md-none">
                 <div class="col mobile-bg">
                     <picture>
-{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/product-02.webp" type="image/webp" class="">--}}
                         <source srcset="{{ asset('/') }}innodermFiles/cellulite/product-02.png" type="image/png" class="">
                         <img src="{{ asset('/') }}innodermFiles/cellulite/product-02.png" alt="" class="packshot">
                     </picture>
                     <picture>
-{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/mobile-footer-woman.webp" type="image/webp" class="">--}}
                         <source srcset="{{ asset('/') }}innodermFiles/cellulite/mobile-footer-woman.png" type="image/png" class="">
                         <img src="{{ asset('/') }}innodermFiles/cellulite/mobile-footer-woman.png" alt="" class="woman">
                     </picture>
@@ -532,51 +391,8 @@
 <script defer type="text/javascript" src="{{ asset('/') }}shared_files/jquery-ui.min.js"></script>
 <script src="{{ asset('/') }}shared_files/popper.min.js"></script>
 <script src="{{ asset('/') }}shared_files/bootstrap.min.js"></script>
-<!-- <script src="assets/js/custom.js?1650470421"></script> -->
-{{--<script type="text/javascript" src="assets/js/js.cookie.js"></script>--}}
-{{--<script type="text/javascript" src="assets/js/dialog-initdacd.js?1650470421"></script>--}}
-<!--
-         <script type="text/javascript" src="assets/js/exit-popup.js?1650470421"></script>
-         <script type="text/javascript" src="assets/js/exitebook-popup-init.js?1650470421"></script> -->
-{{--<script src="../api.celleasy.pl/common.js"></script>--}}
-{{--<script src="assets/js/customdacd.js?1650470421"></script>--}}
 <script type="text/javascript">
-    // function smoothScrollingTo(target, offset=0){
-    //     $('html,body').animate({scrollTop:$(target).offset().top+offset}, 500);
-    // }
-    //
-    // $('a.home').click(function(e){
-    //     e.preventDefault();
-    //     smoothScrollingTo(".wrapper");
-    // });
-    //
-    // $('a.about').click(function(e){
-    //     e.preventDefault();
-    //     if ( $(window).width() < 768 ){
-    //         smoothScrollingTo("#effectiveness .content", 0);
-    //     }
-    //     else{
-    //         smoothScrollingTo("#effectiveness", 0);
-    //     }
-    // });
-    //
-    // $('a.ingredients').click(function(e){
-    //     e.preventDefault();
-    //     smoothScrollingTo("#ingredients");
-    // });
-    //
-    // $('a.testimonials').click(function(e){
-    //     e.preventDefault();
-    //     smoothScrollingTo("#testimonials", 0);
-    // });
-    //
-    // $('a.faq').click(function(e){
-    //     e.preventDefault();
-    //     smoothScrollingTo("#faq", 0);
-    // });
-
     $(function(){
-
         $('#accordionFaq').accordion({
             active: 0,
             heightStyle: "content"
@@ -586,37 +402,8 @@
             $('#accordionFaq h5').removeClass('active');
             $(this).addClass('active');
         });
-
     });
-
-
-    // $(document).bind('click', function(e){
-    //     if (e.target.id !== 'menu' && e.target.id !== 'menu-input'){
-    //         console.log(e.target.id);
-    //         $('#menu-input').prop('checked', false);
-    //     }
-    // });
-
-
-    // navScroll();
-    // $( window ).scroll(function() {
-    //
-    //     navScroll();
-    //
-    // });
-    //
-    // function navScroll()
-    // {
-    //     var scroll_top  = $(window).scrollTop();
-    //
-    //     if (scroll_top > 0){
-    //         $('#header').addClass('scroll');
-    //     }
-    //     else{
-    //         $('#header').removeClass('scroll');
-    //     }
-    // }
-
 </script>
+@include('components.pixel_footer')
 </body>
 </html>
