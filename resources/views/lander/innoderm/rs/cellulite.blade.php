@@ -6,43 +6,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="{{ asset('/') }}innodermFiles/cellulite/favicon.ico" />
     <link rel="stylesheet" href="{{ asset('/') }}shared_files/bootstrap.min.css">
-    <link rel="stylesheet" href="../maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ asset('/') }}shared_files/font-awesome.min.css">
 {{--    <link rel="stylesheet" href="../stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">--}}
-    <link rel="stylesheet" href="assets/css/styleb953.css?v=1650470421">
+    <link rel="stylesheet" href="{{ asset('/') }}innodermFiles/cellulite/style.css">
 </head>
 <body class="home  ">
 <div class="wrapper">
     <div class="menu-overlay"></div>
-    <div class="menu-mobile">
-        <ul class="list-unstyled">
-            <li class="nav-el"><a href="#" class="home">Home</a></li>
-            <li class="nav-el"><a href="#" class="about">About</a></li>
-            <li class="nav-el"><a href="#" class="ingredients">Ingredients</a></li>
-            <li class="nav-el"><a href="#" class="testimonials">Opinions</a></li>
-            <li class="nav-el"><a href="#" class="faq">FAQ</a></li>
-            <li class="nav-el"><a href="order.html" class="order"><strong>Order</strong></a></li>
-        </ul>
-    </div>
-    <header class="header" id="header">
+{{--    <div class="menu-mobile">--}}
+{{--        <ul class="list-unstyled">--}}
+{{--            <li class="nav-el"><a href="#home" class="home">Home</a></li>--}}
+{{--            <li class="nav-el"><a href="#about" class="about">About</a></li>--}}
+{{--            <li class="nav-el"><a href="#ingredients" class="ingredients">Ingredients</a></li>--}}
+{{--            <li class="nav-el"><a href="#testimonials" class="testimonials">Opinions</a></li>--}}
+{{--            <li class="nav-el"><a href="#faq" class="faq">FAQ</a></li>--}}
+{{--            <li class="nav-el"><a href="{{$checkoutView}}" class="order"><strong>Order</strong></a></li>--}}
+{{--        </ul>--}}
+{{--    </div>--}}
+    <header class="header scroll" id="header">
         <div class="container">
             <div class="row align-items-center vertical-align-center">
                 <div class="col-md-3 col-sm-7 col-6">
-                    <a href="index.html">
-                        <img src="assets/images/logo.svg" class="cellulite-logo" />
+                    <a href="#">
+                        <img src="{{ asset('/') }}innodermFiles/cellulite/logo.svg" class="cellulite-logo" />
                     </a>
                 </div>
                 <nav class="col-md-7 col-3">
                     <ul class="list-unstyled list">
-                        <li class="nav-el"><a href="#" class="about">About</a></li>
-                        <li class="nav-el"><a href="#" class="ingredients">Ingredients</a></li>
-                        <li class="nav-el"><a href="#" class="testimonials">Opinions</a></li>
-                        <li class="nav-el"><a href="#" class="faq">FAQ</a></li>
-                        <li class="nav-el"><a href="order.html" class="order">Order</a></li>
+                        <li class="nav-el"><a href="#effectiveness" class="about">About</a></li>
+                        <li class="nav-el"><a href="#ingredients" class="ingredients">Ingredients</a></li>
+                        <li class="nav-el"><a href="#testimonials" class="testimonials">Opinions</a></li>
+                        <li class="nav-el"><a href="#faq" class="faq">FAQ</a></li>
+                        <li class="nav-el"><a href="{{$checkoutView}}" class="order">Order</a></li>
                     </ul>
                 </nav>
+{{--                <div class="col-md-2 col-sm-3 col-3 hamburger-container">--}}
+{{--                    <button class="hamburger d-block d-lg-none" aria-label="Menu">--}}
+{{--                            <span class="hamburger__container" tabindex="-1">--}}
+{{--                                <span class="hamburger__bars"></span>--}}
+{{--                            </span>--}}
+{{--                    </button>--}}
+{{--                    <div class="flags"></div>--}}
+{{--                </div>--}}
             </div>
         </div>
     </header>
@@ -62,7 +69,7 @@
                         </ul>
                         <p>Perfect Body is a fast and effective way to fight with cellulite. This oppressive problem concerns most women, however, it does not mean that you have to struggle with it as well! If you dream about a beautiful and smooth body, without the “orange peel” effect, then this product is just for you.</p>
                         <div class="btn-container mt-4 mt-lg-5">
-                            <a href="order.html" class="btn" id="slm-btn">Take advantage of the special offer!</a>
+                            <a href="{{$checkoutView}}" class="btn" id="slm-btn">Take advantage of the special offer!</a>
                             <p class="btn-attention">Attention! The product will be out of stock soon!</p>
                         </div>
                     </div>
@@ -70,16 +77,16 @@
                 <div class="row">
                     <div class="col mobile-bg">
                         <picture>
-                            <source srcset="/assets/images/product-01.webp" type="image/webp" class="">
-                            <source srcset="/assets/images/product-01.png" type="image/png" class="">
-                            <img src="assets/images/product-01.png" alt="" class="packshot">
+{{--                            <source srcset="{{ asset('/') }}innodermFiles/cellulite/product-01.webp" type="image/webp" class="">--}}
+                            <source srcset="{{ asset('/') }}innodermFiles/cellulite/product-01.png" type="image/png" class="">
+                            <img src="{{ asset('/') }}innodermFiles/cellulite/product-01.png" alt="" class="packshot">
                         </picture>
                     </div>
                 </div>
                 <picture>
-                    <source srcset="/assets/images/product-01.webp" type="image/webp" class="">
-                    <source srcset="/assets/images/product-01.png" type="image/png" class="">
-                    <img src="assets/images/product-01.png" alt="" class="packshot">
+{{--                    <source srcset="{{ asset('/') }}innodermFiles/cellulite/product-01.webp" type="image/webp" class="">--}}
+                    <source srcset="{{ asset('/') }}innodermFiles/cellulite/product-01.png" type="image/png" class="">
+                    <img src="{{ asset('/') }}innodermFiles/cellulite/product-01.png" alt="" class="packshot">
                 </picture>
             </div>
         </section>
@@ -102,25 +109,25 @@
                             </div>
                         </div>
                         <picture>
-                            <source srcset="/assets/images/cellulite-02.webp" type="image/webp" class="">
-                            <source srcset="/assets/images/cellulite-02.png" type="image/png" class="">
-                            <img src="assets/images/cellulite-02.png" alt="" class="">
+{{--                            <source srcset="{{ asset('/') }}innodermFiles/cellulite/cellulite-02.webp" type="image/webp" class="">--}}
+                            <source srcset="{{ asset('/') }}innodermFiles/cellulite/cellulite-02.png" type="image/png" class="">
+                            <img src="{{ asset('/') }}innodermFiles/cellulite/cellulite-02.png" alt="" class="">
                         </picture>
                     </div>
                     <div class="col-md-4 text-center text-md-left pt-4 pt-md-0">
                         <picture>
-                            <source srcset="/assets/images/cellulite-01.webp" type="image/webp" class="">
-                            <source srcset="/assets/images/cellulite-01.png" type="image/png" class="">
-                            <img src="assets/images/cellulite-01.html" alt="" class="">
+{{--                            <source srcset="{{ asset('/') }}innodermFiles/cellulite/cellulite-01.webp" type="image/webp" class="">--}}
+                            <source srcset="{{ asset('/') }}innodermFiles/cellulite/cellulite-01.png" type="image/png" class="">
+                            <img src="{{ asset('/') }}innodermFiles/cellulite/cellulite-01.png" alt="" class="">
                         </picture>
                     </div>
                 </div>
             </div>
         </section>
         <picture>
-            <source srcset="/assets/images/product-02.webp" type="image/webp" class="">
-            <source srcset="/assets/images/product-02.png" type="image/png" class="">
-            <img src="assets/images/product-02.png" alt="" class="packshot-cellulite">
+{{--            <source srcset="{{ asset('/') }}innodermFiles/cellulite/product-02.webp" type="image/webp" class="">--}}
+            <source srcset="{{ asset('/') }}innodermFiles/cellulite/product-02.png" type="image/png" class="">
+            <img src="{{ asset('/') }}innodermFiles/cellulite/product-02.png" alt="" class="packshot-cellulite">
         </picture>
     </section>
     <section class="effectiveness" id="effectiveness">
@@ -128,9 +135,9 @@
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <picture>
-                        <source srcset="/assets/images/cellulie-3.webp" type="image/webp" class="">
-                        <source srcset="/assets/images/cellulie-3.png" type="image/png" class="">
-                        <img src="assets/images/cellulie-3.png" alt="" class="d-block mx-auto">
+{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/cellulie-3.webp" type="image/webp" class="">--}}
+                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/cellulie-3.png" type="image/png" class="">
+                        <img src="{{ asset('/') }}innodermFiles/cellulite/cellulie-3.png" alt="" class="d-block mx-auto">
                     </picture>
                 </div>
                 <div class="col-md-6 content">
@@ -143,7 +150,7 @@
                         <li>4cm less centimetres in girth</li>
                     </ul>
                     <p class="annotation">*measured in thighs</p>
-                    <a href="order.html" class="btn mt-5 mt-md-0">Order <br class="d-block d-md-none" />Perfect Body Cellulite</a>
+                    <a href="{{$checkoutView}}" class="btn mt-5 mt-md-0">Order <br class="d-block d-md-none" />Perfect Body Cellulite</a>
                 </div>
             </div>
         </div>
@@ -171,15 +178,15 @@
                 </div>
                 <div class="col-md-5 pt-4 pt-md-0">
                     <picture>
-                        <source srcset="/assets/images/cellulie-4.webp" type="image/webp" class="">
-                        <source srcset="/assets/images/cellulie-4.png" type="image/png" class="">
-                        <img src="assets/images/cellulie-4.png" alt="" class="mobile-img">
+{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/cellulie-4.webp" type="image/webp" class="">--}}
+                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/cellulie-4.png" type="image/png" class="">
+                        <img src="{{ asset('/') }}innodermFiles/cellulite/cellulie-4.png" alt="" class="mobile-img">
                     </picture>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <a href="order.html" class="btn mt-5">Make your body look the way you want it to look.</a>
+                    <a href="{{$checkoutView}}" class="btn mt-5">Make your body look the way you want it to look.</a>
                 </div>
             </div>
         </div>
@@ -189,9 +196,9 @@
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <picture>
-                        <source srcset="/assets/images/cellulie-5.webp" type="image/webp" class="">
-                        <source srcset="/assets/images/cellulie-5.png" type="image/png" class="">
-                        <img src="assets/images/cellulie-5.png" alt="" class="mobile-img">
+{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/cellulie-5.webp" type="image/webp" class="">--}}
+                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/cellulie-5.png" type="image/png" class="">
+                        <img src="{{ asset('/') }}innodermFiles/cellulite/cellulie-5.png" alt="" class="mobile-img">
                     </picture>
                 </div>
                 <div class="col-md-6">
@@ -204,9 +211,9 @@
             <div class="row">
                 <div class="col mobile-bg">
                     <picture>
-                        <source srcset="/assets/images/product-01.webp" type="image/webp" class="">
-                        <source srcset="/assets/images/product-01.png" type="image/png" class="">
-                        <img src="assets/images/product-01.png" alt="" class="packshot d-block mx-auto mx-md-0">
+{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/product-01.webp" type="image/webp" class="">--}}
+                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/product-01.png" type="image/png" class="">
+                        <img src="{{ asset('/') }}innodermFiles/cellulite/product-01.png" alt="" class="packshot d-block mx-auto mx-md-0">
                     </picture>
                 </div>
             </div>
@@ -230,13 +237,13 @@
                 <div class="row">
                     <div class="col">
                         <p class="if-you mt-2 mt-md-5 mb-5">If you have answered YES to any of the above questions, then you must try Perfect Body Cellulite!</p>
-                        <a href="order.html" class="btn">Make your body look the way you want it to look.</a>
+                        <a href="{{$checkoutView}}" class="btn">Make your body look the way you want it to look.</a>
                     </div>
                 </div>
                 <picture>
-                    <source srcset="/assets/images/product-01.webp" type="image/webp" class="">
-                    <source srcset="/assets/images/product-01.png" type="image/png" class="">
-                    <img src="assets/images/product-01.png" alt="" class="packshot">
+{{--                    <source srcset="{{ asset('/') }}innodermFiles/cellulite/product-01.webp" type="image/webp" class="">--}}
+                    <source srcset="{{ asset('/') }}innodermFiles/cellulite/product-01.png" type="image/png" class="">
+                    <img src="{{ asset('/') }}innodermFiles/cellulite/product-01.png" alt="" class="packshot">
                 </picture>
             </div>
         </div>
@@ -251,36 +258,36 @@
             <div class="row testimonials--row">
                 <div class="col-md-6">
                     <picture>
-                        <source srcset="/assets/images/test1.webp" type="image/webp" class="">
-                        <source srcset="/assets/images/test1.png" type="image/png" class="">
-                        <img src="assets/images/test1.png" alt="" class="">
+{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/test1.webp" type="image/webp" class="">--}}
+                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/test1.png" type="image/png" class="">
+                        <img src="{{ asset('/') }}innodermFiles/cellulite/test1.png" alt="" class="">
                     </picture>
                     <p>I was always mad about a statement that you have to love your cellulite because everyone has it. Well, that is not true… and you do not have to love it. What is more, you can effectively get rid of it! I am a physically active person, but only Perfect Body Cellulite helped me eliminate this orange peel, which made my body ugly.</p>
                     <p class="author">Agnes, 33 years old</p>
                 </div>
                 <div class="col-md-6">
                     <picture>
-                        <source srcset="/assets/images/test2.webp" type="image/webp" class="">
-                        <source srcset="/assets/images/test2.png" type="image/png" class="">
-                        <img src="assets/images/test2.png" alt="" class="">
+{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/test2.webp" type="image/webp" class="">--}}
+                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/test2.png" type="image/png" class="">
+                        <img src="{{ asset('/') }}innodermFiles/cellulite/test2.png" alt="" class="">
                     </picture>
                     <p>Perfect Body Cellulite is a super effective product. Everyone should use it. All my friends love it. The skin is looking beautiful after the treatment with Perfect Body Cellulite! Absolute revelation. Massages, lotions, peelings… nothing worked. However, I saw a significant difference after a month with this product and after 3 months my skin became firm and smooth as never before!</p>
                     <p class="author">Pam, 29 years old</p>
                 </div>
                 <div class="col-md-6">
                     <picture>
-                        <source srcset="/assets/images/test3.webp" type="image/webp" class="">
-                        <source srcset="/assets/images/test3.png" type="image/png" class="">
-                        <img src="assets/images/test3.png" alt="" class="">
+{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/test3.webp" type="image/webp" class="">--}}
+                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/test3.png" type="image/png" class="">
+                        <img src="{{ asset('/') }}innodermFiles/cellulite/test3.png" alt="" class="">
                     </picture>
                     <p>I thought that nothing can help people in my age with skin problems. I have always hidden my body on the beach. My daughter bought herself capsules against cellulite and gave me one bottle. My husband cannot stop looking at my body, it has changed so much. Now I am buying Perfect Body Cellulite for myself. My skin is moisturised, smooth and the cellulite is barely visible. I don’t know how it works, but it does miracles.</p>
                     <p class="author">Maria, 42 years old</p>
                 </div>
                 <div class="col-md-6">
                     <picture>
-                        <source srcset="/assets/images/test4.webp" type="image/webp" class="">
-                        <source srcset="/assets/images/test4.png" type="image/png" class="">
-                        <img src="assets/images/test4.png" alt="" class="">
+{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/test4.webp" type="image/webp" class="">--}}
+                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/test4.png" type="image/png" class="">
+                        <img src="{{ asset('/') }}innodermFiles/cellulite/test4.png" alt="" class="">
                     </picture>
                     <p>If you want to fight with cellulite then do it only with Perfect Body. It’s awesome. I spent a fortune through years on different treatments. The fact that nothing worked was very frustrating. Luckily, Perfect Body Cellulite eliminated my problem completely. My skin looks awesome! I highly recommend the product!</p>
                     <p class="author">Hannah, 34 years old</p>
@@ -288,7 +295,7 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <a href="order.html" class="btn mt-3 mt-lg-5">The first results are <br class="d-block d-md-none" />visible in just a few weeks!</a>
+                    <a href="{{$checkoutView}}" class="btn mt-3 mt-lg-5">The first results are <br class="d-block d-md-none" />visible in just a few weeks!</a>
                 </div>
             </div>
         </div>
@@ -304,63 +311,63 @@
             <div class="row justify-content-center ingredients--list">
                 <div class="col-md-6 col-lg-3">
                     <picture>
-                        <source srcset="/assets/images/ingr1.webp" type="image/webp" class="">
-                        <source srcset="/assets/images/ingr1.png" type="image/png" class="">
-                        <img src="assets/images/ingr1.png" alt="" class="">
+{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/ingr1.webp" type="image/webp" class="">--}}
+                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/ingr1.png" type="image/png" class="">
+                        <img src="{{ asset('/') }}innodermFiles/cellulite/ingr1.png" alt="" class="">
                     </picture>
                     <h5>Green tea extract</h5>
                     <p>Boosts metabolism, inhibits the absorption of fats and stimulates the release of the already stored one. What is more, green tea contains polyphenols that are antioxidants, which protect skin against free radicals. Thanks to this, proteins (such as collagen and elastin) are safe and their structure is strengthened. </p>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <picture>
-                        <source srcset="/assets/images/ingr2.webp" type="image/webp" class="">
-                        <source srcset="/assets/images/ingr2.png" type="image/png" class="">
-                        <img src="assets/images/ingr2.png" alt="" class="">
+{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/ingr2.webp" type="image/webp" class="">--}}
+                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/ingr2.png" type="image/png" class="">
+                        <img src="{{ asset('/') }}innodermFiles/cellulite/ingr2.png" alt="" class="">
                     </picture>
                     <h5>Bitter orange fruit extract</h5>
                     <p>Burns body fat and curbs appetite. Bitter orange contains synephrine, which causes thermogenesis that disintegrates fat and then removes it from your body.</p>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <picture>
-                        <source srcset="/assets/images/ingr3.webp" type="image/webp" class="">
-                        <source srcset="/assets/images/ingr3.png" type="image/png" class="">
-                        <img src="assets/images/ingr3.png" alt="" class="">
+{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/ingr3.webp" type="image/webp" class="">--}}
+                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/ingr3.png" type="image/png" class="">
+                        <img src="{{ asset('/') }}innodermFiles/cellulite/ingr3.png" alt="" class="">
                     </picture>
                     <h5>Grape seed extract</h5>
                     <p>Grape seeds contain oligomeric proanthocyanidins (OPC), which are the strongest antioxidants. These are very active flavonoids that have lots of beneficial properties. For example, they affect the connective tissue reducing cellulite and stretch marks. What is more, the extract strengthens blood vessels and improves microcirculation (capillary).</p>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <picture>
-                        <source srcset="/assets/images/ingr4.webp" type="image/webp" class="">
-                        <source srcset="/assets/images/ingr4.png" type="image/png" class="">
-                        <img src="assets/images/ingr4.png" alt="" class="">
+{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/ingr4.webp" type="image/webp" class="">--}}
+                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/ingr4.png" type="image/png" class="">
+                        <img src="{{ asset('/') }}innodermFiles/cellulite/ingr4.png" alt="" class="">
                     </picture>
                     <h5>Cayenne pepper fruit extract</h5>
                     <p>Effectively improves blood circulation, enhances metabolism and helps remove damaged skin cells. It also eliminates body toxins, which are one of the causes of cellulite. It is worth mentioning that capsaicin has also antioxidant properties and also causes thermogenesis.</p>
                 </div>
                 <div class="col-md-4 col-lg-3">
                     <picture>
-                        <source srcset="/assets/images/ingr5.webp" type="image/webp" class="">
-                        <source srcset="/assets/images/ingr5.png" type="image/png" class="">
-                        <img src="assets/images/ingr5.png" alt="" class="">
+{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/ingr5.webp" type="image/webp" class="">--}}
+                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/ingr5.png" type="image/png" class="">
+                        <img src="{{ asset('/') }}innodermFiles/cellulite/ingr5.png" alt="" class="">
                     </picture>
                     <h5>Common nettle herb extract</h5>
                     <p>Significantly boosts water and metabolic waste excretion.</p>
                 </div>
                 <div class="col-md-4 col-lg-3">
                     <picture>
-                        <source srcset="/assets/images/ingr6.webp" type="image/webp" class="">
-                        <source srcset="/assets/images/ingr6.png" type="image/png" class="">
-                        <img src="assets/images/ingr6.png" alt="" class="">
+{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/ingr6.webp" type="image/webp" class="">--}}
+                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/ingr6.png" type="image/png" class="">
+                        <img src="{{ asset('/') }}innodermFiles/cellulite/ingr6.png" alt="" class="">
                     </picture>
                     <h5>Vitamin E</h5>
                     <p>Inhibits the growth of fat tissue. It also regulates and supports fat burning processes.</p>
                 </div>
                 <div class="col-md-4 col-lg-3">
                     <picture>
-                        <source srcset="/assets/images/ingr7.webp" type="image/webp" class="">
-                        <source srcset="/assets/images/ingr7.png" type="image/png" class="">
-                        <img src="assets/images/ingr7.png" alt="" class="">
+{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/ingr7.webp" type="image/webp" class="">--}}
+                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/ingr7.png" type="image/png" class="">
+                        <img src="{{ asset('/') }}innodermFiles/cellulite/ingr7.png" alt="" class="">
                     </picture>
                     <h5>Vitamin C</h5>
                     <p>Stimulates collagen production and improves its absorption, making skin firm and smooth. Vitamin C is yet another antioxidant that improves skin condition.</p>
@@ -368,7 +375,7 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <a href="order.html" class="btn mt-5">Get rid of cellulite <br class="d-block d-md-none" />once and for all!</a>
+                    <a href="{{$checkoutView}}" class="btn mt-5">Get rid of cellulite <br class="d-block d-md-none" />once and for all!</a>
                 </div>
             </div>
         </div>
@@ -383,27 +390,27 @@
             <div class="row justify-content-center">
                 <div class="col-md-4 col-lg-3 text-center">
                     <picture>
-                        <source srcset="/assets/images/mity1.webp" type="image/webp" class="">
-                        <source srcset="/assets/images/mity1.png" type="image/png" class="">
-                        <img src="assets/images/mity1.png" alt="" class="">
+{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/mity1.webp" type="image/webp" class="">--}}
+                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/mity1.png" type="image/png" class="">
+                        <img src="{{ asset('/') }}innodermFiles/cellulite/mity1.png" alt="" class="">
                     </picture>
                     <h5>High temperatures</h5>
                     <p>Maybe some of you heard about heat therapies, wrapping in plastic foil, sauna as a cellulite reduction methods. However, the truth is that heat provides only a temporary “slimming” effect due to body dehydration rather than getting rid of fat. Our bodies return to their “normal” look very fast and the effect is deceptive.</p>
                 </div>
                 <div class="col-md-4 col-lg-3 text-center">
                     <picture>
-                        <source srcset="/assets/images/mity2.webp" type="image/webp" class="">
-                        <source srcset="/assets/images/mity2.png" type="image/png" class="">
-                        <img src="assets/images/mity2.png" alt="" class="">
+{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/mity2.webp" type="image/webp" class="">--}}
+                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/mity2.png" type="image/png" class="">
+                        <img src="{{ asset('/') }}innodermFiles/cellulite/mity2.png" alt="" class="">
                     </picture>
                     <h5>Just lose weight</h5>
                     <p>Many people think that losing weight eliminates the problem with cellulite. The truth is that weight loss only emphasizes the irregularities, which are also visible among lean people.</p>
                 </div>
                 <div class="col-md-4 col-lg-3 text-center">
                     <picture>
-                        <source srcset="/assets/images/mity3.webp" type="image/webp" class="">
-                        <source srcset="/assets/images/mity3.png" type="image/png" class="">
-                        <img src="assets/images/mity3.png" alt="" class="">
+{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/mity3.webp" type="image/webp" class="">--}}
+                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/mity3.png" type="image/png" class="">
+                        <img src="{{ asset('/') }}innodermFiles/cellulite/mity3.png" alt="" class="">
                     </picture>
                     <h5>Lotions</h5>
                     <p>Beauty stores are full of products that supposedly reduce cellulite. However, you should notice that almost all of them contains the same substances that may cause chilling, tingling or heat sensations… All of this makes you think “Wow, this works!”. In reality, even after a few treatments, the skin looks the same as before.</p>
@@ -420,21 +427,21 @@
                     <p>Our bodies require a more complex approach such us the Perfect Body Cellulite capsules. They have a very good composition that guarantees its effectiveness. It is an effective and completely safe method to get rid of cellulite.</p>
                     <div class="btn-container mt-5 ml-auto mr-auto ml-lg-0 mr-lg-0">
                         <p class="btn-attention">Are you ready to change your body?</p>
-                        <a href="order.html" class="btn">Try Perfect Body Cellulite today!</a>
+                        <a href="{{$checkoutView}}" class="btn">Try Perfect Body Cellulite today!</a>
                     </div>
                 </div>
             </div>
             <picture>
-                <source srcset="/assets/images/doctor.webp" type="image/webp" class="">
-                <source srcset="/assets/images/doctor.png" type="image/png" class="">
-                <img src="assets/images/doctor.png" alt="" class="doctor--img">
+{{--                <source srcset="{{ asset('/') }}innodermFiles/cellulite/doctor.webp" type="image/webp" class="">--}}
+                <source srcset="{{ asset('/') }}innodermFiles/cellulite/doctor.png" type="image/png" class="">
+                <img src="{{ asset('/') }}innodermFiles/cellulite/doctor.png" alt="" class="doctor--img">
             </picture>
             <div class="row">
                 <div class="col mobile-bg">
                     <picture>
-                        <source srcset="/assets/images/mobile-doctor.webp" type="image/webp" class="">
-                        <source srcset="/assets/images/mobile-doctor.png" type="image/png" class="">
-                        <img src="assets/images/mobile-doctor.png" alt="" class="packshot d-block mx-auto mx-md-0">
+{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/mobile-doctor.webp" type="image/webp" class="">--}}
+                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/mobile-doctor.png" type="image/png" class="">
+                        <img src="{{ asset('/') }}innodermFiles/cellulite/mobile-doctor.png" alt="" class="packshot d-block mx-auto mx-md-0">
                     </picture>
                 </div>
             </div>
@@ -487,11 +494,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-lg-6">
-                    <!-- <img src="/assets/images/logo.svg" class="cellulite-end-logo d-block ml-auto mr-auto d-md-inline ml-md-0 mr-md-0" /> -->
+                    <!-- <img src="{{ asset('/') }}innodermFiles/cellulite/logo.svg" class="cellulite-end-logo d-block ml-auto mr-auto d-md-inline ml-md-0 mr-md-0" /> -->
                     <picture>
-                        <source srcset="/assets/images/footer-logo.webp" type="image/webp" class="">
-                        <source srcset="/assets/images/footer-logo.png" type="image/png" class="">
-                        <img src="assets/images/footer-logo.png" alt="" class="cellulite-end-logo d-block ml-auto mr-auto d-md-inline ml-md-0 mr-md-0 mb-3">
+{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/footer-logo.webp" type="image/webp" class="">--}}
+                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/footer-logo.png" type="image/png" class="">
+                        <img src="{{ asset('/') }}innodermFiles/cellulite/footer-logo.png" alt="" class="cellulite-end-logo d-block ml-auto mr-auto d-md-inline ml-md-0 mr-md-0 mb-3">
                     </picture>
                     <h2 class="text-uppercase">The brand new anti-cellulite therapy</h2>
                     <ul class="list-unstyled list">
@@ -502,38 +509,72 @@
                         <li>Clinically confirmed results</li>
                         <li>Natural and safe composition</li>
                     </ul>
-                    <a href="order.html" class="btn ml-auto mr-auto ml-0 mr-0">Try the Perfect Body Cellulite today!</a>
+                    <a href="{{$checkoutView}}" class="btn ml-auto mr-auto ml-0 mr-0">Try the Perfect Body Cellulite today!</a>
                 </div>
             </div>
             <div class="row d-block d-md-none">
                 <div class="col mobile-bg">
                     <picture>
-                        <source srcset="/assets/images/product-02.webp" type="image/webp" class="">
-                        <source srcset="/assets/images/product-02.png" type="image/png" class="">
-                        <img src="assets/images/product-02.png" alt="" class="packshot">
+{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/product-02.webp" type="image/webp" class="">--}}
+                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/product-02.png" type="image/png" class="">
+                        <img src="{{ asset('/') }}innodermFiles/cellulite/product-02.png" alt="" class="packshot">
                     </picture>
                     <picture>
-                        <source srcset="/assets/images/mobile-footer-woman.webp" type="image/webp" class="">
-                        <source srcset="/assets/images/mobile-footer-woman.png" type="image/png" class="">
-                        <img src="assets/images/mobile-footer-woman.png" alt="" class="woman">
+{{--                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/mobile-footer-woman.webp" type="image/webp" class="">--}}
+                        <source srcset="{{ asset('/') }}innodermFiles/cellulite/mobile-footer-woman.png" type="image/png" class="">
+                        <img src="{{ asset('/') }}innodermFiles/cellulite/mobile-footer-woman.png" alt="" class="woman">
                     </picture>
                 </div>
             </div>
         </div>
     </section>
 </div>
-<script defer type="text/javascript" src="assets/js/jquery-ui.min.js"></script>
-<script src="../cdn.jsdelivr.net/npm/popper.js%401.16.0/dist/umd/popper.min.js"></script>
-<script src="../stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script defer type="text/javascript" src="{{ asset('/') }}shared_files/jquery-ui.min.js"></script>
+<script src="{{ asset('/') }}shared_files/popper.min.js"></script>
+<script src="{{ asset('/') }}shared_files/bootstrap.min.js"></script>
 <!-- <script src="assets/js/custom.js?1650470421"></script> -->
 {{--<script type="text/javascript" src="assets/js/js.cookie.js"></script>--}}
 {{--<script type="text/javascript" src="assets/js/dialog-initdacd.js?1650470421"></script>--}}
 <!--
          <script type="text/javascript" src="assets/js/exit-popup.js?1650470421"></script>
          <script type="text/javascript" src="assets/js/exitebook-popup-init.js?1650470421"></script> -->
-<script src="../api.celleasy.pl/common.js"></script>
-<script src="assets/js/customdacd.js?1650470421"></script>
+{{--<script src="../api.celleasy.pl/common.js"></script>--}}
+{{--<script src="assets/js/customdacd.js?1650470421"></script>--}}
 <script type="text/javascript">
+    // function smoothScrollingTo(target, offset=0){
+    //     $('html,body').animate({scrollTop:$(target).offset().top+offset}, 500);
+    // }
+    //
+    // $('a.home').click(function(e){
+    //     e.preventDefault();
+    //     smoothScrollingTo(".wrapper");
+    // });
+    //
+    // $('a.about').click(function(e){
+    //     e.preventDefault();
+    //     if ( $(window).width() < 768 ){
+    //         smoothScrollingTo("#effectiveness .content", 0);
+    //     }
+    //     else{
+    //         smoothScrollingTo("#effectiveness", 0);
+    //     }
+    // });
+    //
+    // $('a.ingredients').click(function(e){
+    //     e.preventDefault();
+    //     smoothScrollingTo("#ingredients");
+    // });
+    //
+    // $('a.testimonials').click(function(e){
+    //     e.preventDefault();
+    //     smoothScrollingTo("#testimonials", 0);
+    // });
+    //
+    // $('a.faq').click(function(e){
+    //     e.preventDefault();
+    //     smoothScrollingTo("#faq", 0);
+    // });
+
     $(function(){
 
         $('#accordionFaq').accordion({
@@ -549,12 +590,12 @@
     });
 
 
-    $(document).bind('click', function(e){
-        if (e.target.id !== 'menu' && e.target.id !== 'menu-input'){
-            console.log(e.target.id);
-            $('#menu-input').prop('checked', false);
-        }
-    });
+    // $(document).bind('click', function(e){
+    //     if (e.target.id !== 'menu' && e.target.id !== 'menu-input'){
+    //         console.log(e.target.id);
+    //         $('#menu-input').prop('checked', false);
+    //     }
+    // });
 
 
     // navScroll();
