@@ -158,7 +158,7 @@ header.header .cellulite-logo {
 }
 
 header.header.scroll .cellulite-logo {
-    transform: scale(0.6);
+    transform: scale(0.9);
 }
 
 #menuToggle {
@@ -1325,6 +1325,9 @@ footer a:hover {
     }
     footer li::after {
         content: none;
+    }
+    header.header.scroll .cellulite-logo {
+        margin-left: 60%;
     }
 }
 
