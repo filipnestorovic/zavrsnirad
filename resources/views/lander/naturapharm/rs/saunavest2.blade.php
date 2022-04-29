@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <link rel="shortcut icon" href="" type="image/png">
-    <link rel="stylesheet" type="text/css" href="{{ asset('/') }}naturapharmFiles/saunavest/owl.carousel.min.css">
-    <link rel="stylesheet" type="text/css" href="{{ asset('/') }}naturapharmFiles/saunavest/styles.css">
-    <link href="{{ asset('/') }}naturapharmFiles/saunavest/custom-styless.min.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/') }}naturapharmFiles/saunavest2/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/') }}naturapharmFiles/saunavest2/styles.css">
+    <link href="{{ asset('/') }}naturapharmFiles/saunavest2/custom-styless.min.css" type="text/css" rel="stylesheet">
     <style>
         @media screen and (min-width: 640px) {
             .button {
@@ -83,19 +83,19 @@
 <div class="info_section">
     <div class="wrapper">
         <div class="info_item">
-            <img src="{{ asset('/') }}naturapharmFiles/saunavest/b2-3.png" alt="Slim'N Lift" title="Slim'N Lift">
+            <img src="{{ asset('/') }}naturapharmFiles/saunavest2/b2-3.png" alt="Slim'N Lift" title="Slim'N Lift">
             <p>Ova neverovatna majica bez rukava za sagorevanje masnoće je napravljena je od polimera nove generacije.</p>
         </div>
         <div class="info_item">
-            <img src="{{ asset('/') }}naturapharmFiles/saunavest/b2-1.png" alt="Slim'N Lift" title="Slim'N Lift">
+            <img src="{{ asset('/') }}naturapharmFiles/saunavest2/b2-1.png" alt="Slim'N Lift" title="Slim'N Lift">
             <p>Pospešuje proces mršavljenja sagorevajući masti i kalorije velikom brzinom.</p>
         </div>
         <div class="info_item">
-            <img src="{{ asset('/') }}naturapharmFiles/saunavest/b2-4.png" alt="Slim'N Lift" title="Slim'N Lift">
+            <img src="{{ asset('/') }}naturapharmFiles/saunavest2/b2-4.png" alt="Slim'N Lift" title="Slim'N Lift">
             <p>Za kratak period i kvalitetan trening, trbušnjaci će postati vidljivi.</p>
         </div>
         <div class="info_item">
-            <img src="{{ asset('/') }}naturapharmFiles/saunavest/b2-2.png" alt="Slim'N Lift" title="Slim'N Lift">
+            <img src="{{ asset('/') }}naturapharmFiles/saunavest2/b2-2.png" alt="Slim'N Lift" title="Slim'N Lift">
             <p>Zahvaljhujući inovativnom dizajnu, preko ovoga se mogu nositi majice i trenerke.</p>
         </div>
     </div>
@@ -119,7 +119,7 @@
     <div class="wrapper">
         <div class="product_item male clearfix">
             <div class="gallery_block">
-                <img class="image one" src="{{ asset('/') }}naturapharmFiles/saunavest/b4-1.jpg" alt="Slim'N Lift" title="Slim'N Lift">
+                <img class="image one" src="{{ asset('/') }}naturapharmFiles/saunavest2/b4-1.jpg" alt="Slim'N Lift" title="Slim'N Lift">
             </div>
             <div class="info">
                 <h3>KARAKTERISTIKE 2u1 SAUNA VEST</h3>
@@ -186,19 +186,19 @@
         <h2>KAKO PORUČITI <span>2u1 SAUNA VEST</span></h2>
         <div class="steps_list">
             <div class="step_item">
-                <img src="{{ asset('/') }}naturapharmFiles/saunavest/order_steps__step1_image.png" alt="Slim'N Lift" title="Slim'N Lift">
+                <img src="{{ asset('/') }}naturapharmFiles/saunavest2/order_steps__step1_image.png" alt="Slim'N Lift" title="Slim'N Lift">
                 <p>Ostavite podatke za dostavu na sajtu</p>
             </div>
             <div class="step_item">
-                <img src="{{ asset('/') }}naturapharmFiles/saunavest/order_steps__step2_image.jpg" alt="Slim'N Lift" title="Slim'N Lift">
+                <img src="{{ asset('/') }}naturapharmFiles/saunavest2/order_steps__step2_image.jpg" alt="Slim'N Lift" title="Slim'N Lift">
                 <p>Kontaktiraćemo Vas da potvrdimo porudžbinu</p>
             </div>
             <div class="step_item">
-                <img src="{{ asset('/') }}naturapharmFiles/saunavest/order_steps__step3_image.jpg" alt="Slim'N Lift" title="Slim'N Lift">
+                <img src="{{ asset('/') }}naturapharmFiles/saunavest2/order_steps__step3_image.jpg" alt="Slim'N Lift" title="Slim'N Lift">
                 <p>Poslaćemo pošiljku brzom poštom</p>
             </div>
             <div class="step_item">
-                <img src="{{ asset('/') }}naturapharmFiles/saunavest/order_steps__step4_image.jpg" alt="Slim'N Lift" title="Slim'N Lift">
+                <img src="{{ asset('/') }}naturapharmFiles/saunavest2/order_steps__step4_image.jpg" alt="Slim'N Lift" title="Slim'N Lift">
                 <p>Plaćanje se vrši po pouzeću</p>
             </div>
         </div>
@@ -209,7 +209,7 @@
         <h2>UTISCI ZADOVOLJNIH <span>KUPACA</span></h2>
         <div class="reviews_list owl-carousel">
             <div class="review_item clearfix">
-                <img src="{{ asset('/') }}naturapharmFiles/saunavest/rew-1.jpg" alt="Slim'N Lift" title="Slim'N Lift">
+                <img src="{{ asset('/') }}naturapharmFiles/saunavest2/rew-1.jpg" alt="Slim'N Lift" title="Slim'N Lift">
                 <div class="text_block">
                     <div class="author_info">Bojan, 42 godine</div>
                     <p>Da budem iskren, nisam mogao da verujem da je moguće nositi odeću 2-3 veličine manju za kratak period.
@@ -218,7 +218,7 @@
                 </div>
             </div>
             <div class="review_item clearfix">
-                <img src="{{ asset('/') }}naturapharmFiles/saunavest/rew-2.jpg" alt="Slim'N Lift" title="Slim'N Lift">
+                <img src="{{ asset('/') }}naturapharmFiles/saunavest2/rew-2.jpg" alt="Slim'N Lift" title="Slim'N Lift">
                 <div class="text_block">
                     <div class="author_info">Oliver, 49 godina</div>
                     <p>Imam višak kilograma. Slim And Lift zaista skida stomak, masne naslage sa leđa i
@@ -266,8 +266,8 @@
         </div>
     </div>
 </section>
-<script src="{{ asset('/') }}naturapharmFiles/saunavest/owl.carousel.min.js"></script>
-<script src="{{ asset('/') }}naturapharmFiles/saunavest/scripts.js"></script>
+<script src="{{ asset('/') }}naturapharmFiles/saunavest2/owl.carousel.min.js"></script>
+<script src="{{ asset('/') }}naturapharmFiles/saunavest2/scripts.js"></script>
 @include('components.pixel_footer')
 </body>
 </html>
