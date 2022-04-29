@@ -144,7 +144,7 @@ h2 span {
 
 .offer_section .benefits_list {
     float: right;
-    margin: 155px 375px 0 0;
+    margin: 155px -200px 0 0;
     width: 210px;
 }
 
