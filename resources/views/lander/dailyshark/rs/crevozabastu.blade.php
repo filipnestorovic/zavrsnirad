@@ -209,6 +209,29 @@
                     <input type="tel" class="form-control" name="phone" id="phone" placeholder="Telefon" required>
                 </div>
                 <div class="form-group">
+                    <label for="shipping_address" class="control-label">Adresa</label>
+                    <input type="text" class="form-control" name="shipping_address" id="shipping_address" placeholder="Adresa" required>
+                </div>
+                <div class="form-group">
+                    <label for="shipping_city" class="control-label">Grad</label>
+                    <input type="text" class="form-control" name="shipping_city" id="shipping_city" placeholder="Grad" required>
+                </div>
+                <div class="form-group">
+                    <p class="control-label" style="color: #fff; text-align: center; font-size: 20px;margin: 10px auto;">Izaberite dužinu</p>
+                    <div class="lengthDiv">
+                        <input type="radio" id="length1" class="length" name="length" value="1:22M">
+                        <label for="length1" class="lengthLabel" style="display: inline !important;">22 metara ({{$prices[1]['amount']}} RSD)</label>
+                    </div>
+                    <div class="lengthDiv">
+                        <input type="radio" id="length2" class="length" name="length" value="2:45M">
+                        <label for="length2" class="lengthLabel" style="display: inline !important;">45 metara ({{$prices[2]['amount']}} RSD)</label>
+                    </div>
+                    <div class="lengthDiv">
+                        <input type="radio" id="length3" class="length" name="length" value="3:60M" checked>
+                        <label for="length3" class="lengthLabel" style="display: inline !important;">60 metara ({{$prices[3]['amount']}} RSD)</label>
+                    </div>
+                </div>
+                <div class="form-group">
                     <button type="submit" name="submit">Poruči sada</button>
                 </div>
             </form>

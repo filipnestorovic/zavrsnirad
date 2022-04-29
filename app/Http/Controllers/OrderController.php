@@ -24,7 +24,7 @@ class OrderController extends Controller
 {
 
     public $customerErrorMessage = "An error has occurred during checkout, please contact us at info@wombatsbrand.com!";
-    
+
     public function __construct()
     {
         $this->middleware('guest');
@@ -113,6 +113,16 @@ class OrderController extends Controller
                 Log::error("Error: Variation with this quantity not found - DB");
                 return redirect()->back()->withErrors([$this->customerErrorMessage]);
             } else {
+
+                if($variation->sku === "RB-ST-BASTENSKOCREVO" && $request->get('length')) {
+                    $lengthArray = explode(":",$request->get('length'));
+                    $quantityIndex = $lengthArray[0];
+                    $length = $lengthArray[1];
+
+                    $variation = $this->modelVariation->getVariationByIdAndQuantity($variation_id, $quantityIndex);
+                    $variation->sku = $variation->sku.$length;
+                    $variation->quantity = 1;
+                }
 
                 $session_id = $request->get('session_id');
                 $userSession = $this->modelSession->getSingleSession($session_id);
