@@ -120,7 +120,7 @@ class OrderController extends Controller
                     $length = $lengthArray[1];
 
                     $variation = $this->modelVariation->getVariationByIdAndQuantity($variation_id, $quantityIndex);
-                    $variation->sku = $variation->sku.$length;
+                    $this->modelOrder->order_note = $length;
                     $variation->quantity = 1;
                 }
 
@@ -207,6 +207,10 @@ class OrderController extends Controller
                                 }
                             }
                         }
+                    }
+
+                    if($orderDetails->sku === "RB-ST-BASTENSKOCREVO" && $orderDetails->note) {
+                        $orderDetails->sku = $orderDetails->sku.$orderDetails->note;
                     }
 
                     try {
