@@ -45,11 +45,11 @@
     <div class="container">
         <div class="logo"><img src="{{ asset('/') }}dailysharkFiles/crevozabastu/logo.png" class="img-fluid" alt=""></div>
         <ul class="menu">
-            <li class="page-scroll" data-scroll-id="#advantage"><a href="#">Преимущества</a></li>
-            <li class="page-scroll" data-scroll-id="#description"><a href="#">Описание</a></li>
-            <li class="page-scroll" data-scroll-id="#instructions"><a href="#">Использование</a></li>
-            <li class="page-scroll" data-scroll-id="#how-we-work"><a href="#">Доставка</a></li>
-            <li class="page-scroll" data-scroll-id="#reviews"><a href="#">Отзывы</a></li>
+            <li class="page-scroll" data-scroll-id="#advantage"><a href="#">Prednosti</a></li>
+            <li class="page-scroll" data-scroll-id="#description"><a href="#">Opis</a></li>
+            <li class="page-scroll" data-scroll-id="#instructions"><a href="#">Instrukcije</a></li>
+            <li class="page-scroll" data-scroll-id="#how-we-work"><a href="#">Dostava</a></li>
+            <li class="page-scroll" data-scroll-id="#reviews"><a href="#">Recenzije</a></li>
         </ul>
     </div>
 </section>
@@ -59,26 +59,25 @@
         <div class="left">
             <div class="product-box">
                 <div class="present">
-                    Подарок
-                    <div>насадка-распылитель</div>
+                    Poklon
+                    <div>sprej mlaznice</div>
                 </div>
                 <div class="product"><img src="{{ asset('/') }}dailysharkFiles/crevozabastu/plus-product.png" class="img-fluid" alt=""></div>
-                <div class="discount">СКИДКА <span>-50%</span></div>
-                <div class="bottom-text">Количество товара ограничено!</div>
+                <div class="discount">POPUST <span>-40%</span></div>
             </div>
         </div>
         <div class="right">
             <div class="img"><img src="{{ asset('/') }}dailysharkFiles/crevozabastu/dark-logo.png" class="img-fluid" alt=""></div>
-            <div class="subtitle">Многофункциональный шланг для полива Hose Max X</div>
+            <div class="subtitle">Multifunkcionalno crevo za zalivanje</div>
             <ul>
                 <li>
-                    <img src="{{ asset('/') }}dailysharkFiles/crevozabastu/check-mark.png" alt="">Не образует петлей и заломов
+                    <img src="{{ asset('/') }}dailysharkFiles/crevozabastu/check-mark.png" alt="">Ne pravi petlje i nabore
                 </li>
                 <li>
-                    <img src="{{ asset('/') }}dailysharkFiles/crevozabastu/check-mark.png" alt="">Весит около полутора килограммов
+                    <img src="{{ asset('/') }}dailysharkFiles/crevozabastu/check-mark.png" alt="">Ukupno je teško oko 1.5 kg
                 </li>
                 <li>
-                    <img src="{{ asset('/') }}dailysharkFiles/crevozabastu/check-mark.png" alt="">Увеличивается почти в три раза
+                    <img src="{{ asset('/') }}dailysharkFiles/crevozabastu/check-mark.png" alt="">Može da se izduži skoro 3 puta
                 </li>
             </ul>
             <div class="price">
@@ -89,38 +88,38 @@
                     {{ $prices[1]['amount'] }} RSD
                 </div>
             </div>
-            <a href="#" class="btn btn_blue page-scroll" data-scroll-id="#order-section__bottom">Заказать</a>
+            <a href="#" class="btn btn_blue page-scroll" data-scroll-id="#order-section__bottom">Poruči sada</a>
         </div>
     </div>
 </section>
 <section class="advantage" id="advantage">
     <div class="advantage__top">
         <div class="container">
-            <h4>7 режимов полива с помощью подарочной насадки-распылителя</h4>
+            <h4>7 režima zalivanja sa poklon mlaznicom za prskanje</h4>
             <div class="main">
                 <div class="imgs"><img src="{{ asset('/') }}dailysharkFiles/crevozabastu/imgs.jpg" class="img-fluid" alt=""></div>
                 <div class="hose">
                     <div class="img"><img src="{{ asset('/') }}dailysharkFiles/crevozabastu/hose.png" class="img-fluid" alt=""></div>
                     <div class="tooltip tooltip-1">
-                        <span>2 - </span>Ливень
+                        <span>2 - </span>Zalivanje
                     </div>
                     <div class="tooltip tooltip-2">
-                        <span>3 - </span>Аэрозоль
+                        <span>3 - </span>Prskanje
                     </div>
                     <div class="tooltip tooltip-3">
-                        <span>4 - </span>Полная струя
+                        <span>4 - </span>Pun mlaz
                     </div>
                     <div class="tooltip tooltip-4">
-                        <span>5- </span>Конус
+                        <span>5- </span>Kupa
                     </div>
                     <div class="tooltip tooltip-5">
-                        <span>6 - </span>Центральная струя
+                        <span>6 - </span>Ciljani mlaz
                     </div>
                     <div class="tooltip tooltip-6">
-                        <span>7 - </span>Плоская струя
+                        <span>7 - </span>Ravni mlaz
                     </div>
                     <div class="tooltip tooltip-7">
-                        <span>1 - </span>Душ
+                        <span>1 - </span>Tuš
                     </div>
                 </div>
             </div>
@@ -128,36 +127,36 @@
     </div>
     <div class="advantage__bottom">
         <div class="container">
-            <h4>Легкий и компактный шланг <span>Hose Max X</span><br> Ваш лучший помощник</h4>
+            <h4>Lagano i kompaktno crevo <br> Vaš najbolji pomoćnik</h4>
             <div class="main">
                 <ul>
                     <li>
                         <div class="img"><img src="{{ asset('/') }}dailysharkFiles/crevozabastu/1.png" class="img-fluid" alt=""></div>
-                        <div class="text">Для мойки окон или фасада дома</div>
+                        <div class="text">Za pranje prozora ili fasade kuće</div>
                     </li>
                     <li>
                         <div class="img"><img src="{{ asset('/') }}dailysharkFiles/crevozabastu/2.png" class="img-fluid" alt=""></div>
-                        <div class="text">Для мытья машины или автофургона</div>
+                        <div class="text">Za pranje automobila ili teretnih vozila</div>
                     </li>
                     <li>
                         <div class="img"><img src="{{ asset('/') }}dailysharkFiles/crevozabastu/3.png" class="img-fluid" alt=""></div>
-                        <div class="text">Для ухода за растениями в саду</div>
+                        <div class="text">Za negu biljaka u bašti</div>
                     </li>
                     <li>
                         <div class="img"><img src="{{ asset('/') }}dailysharkFiles/crevozabastu/4.png" class="img-fluid" alt=""></div>
-                        <div class="text">Для полива рассады и цветов</div>
+                        <div class="text">Za zalivanje sadnica i cveća</div>
                     </li>
                     <li>
                         <div class="img"><img src="{{ asset('/') }}dailysharkFiles/crevozabastu/5.png" class="img-fluid" alt=""></div>
-                        <div class="text">Для гаража и дачного участка</div>
+                        <div class="text">Za garažu i dvorište</div>
                     </li>
                     <li>
                         <div class="img"><img src="{{ asset('/') }}dailysharkFiles/crevozabastu/6.png" class="img-fluid" alt=""></div>
-                        <div class="text">Незаменим в ландшафтном дизайне!</div>
+                        <div class="text">Neophodan je u pejzažnom dizajnu</div>
                     </li>
                     <li>
                         <div class="img"><img src="{{ asset('/') }}dailysharkFiles/crevozabastu/7.png" class="img-fluid" alt=""></div>
-                        <div class="text">Необходим в сельском фозяйстве!</div>
+                        <div class="text">Neophodan je u poljoprivredi</div>
                     </li>
                 </ul>
                 <div class="img-circle"><img src="{{ asset('/') }}dailysharkFiles/crevozabastu/circle.png" class="img-fluid" alt=""></div>
@@ -169,23 +168,23 @@
     <div class="order-section__top">
         <div class="top-panel">
             <div class="container">
-                <div class="title">Успейте заказать универсальный шланг по скидке!</div>
-                <div class="subtitle">Саморастягивающийся шланг увеличивается до 3-ех раз</div>
+                <div class="title">Požurite da poručite univerzalno crevo sa popustom od 40%!</div>
+                <div class="subtitle">Samoproširujuće crevo se širi do 3 puta</div>
             </div>
         </div>
         <div class="container">
             <div class="main">
-                <div class="discount">СКИДКА <span>-50%</span></div>
+                <div class="discount">POPUST <span>-40%</span></div>
                 <div class="hose-hands">
                     <div class="text">
-                        Подарок
-                        <div>насадка-распылитель</div>
+                        Poklon
+                        <div>sprej mlaznice</div>
                     </div>
                     <div class="img"><img src="{{ asset('/') }}dailysharkFiles/crevozabastu/hose-hands.png" class="img-fluid" alt=""></div>
                 </div>
                 <div class="hose">
                     <div class="text">
-                        ВСЕГО ЗА
+                        SAMO ZA
                         <div>
                             {{ $prices[1]['amount'] }} RSD
                         </div>
@@ -197,26 +196,22 @@
     </div>
     <div class="order-section__bottom" id="order-section__bottom">
         <div class="container">
-            <div class="title">Количество шлангов на складе ограничено.<br> Не откладывайте покупку на потом. Экономьте сейчас!</div>
-{{--            <div class="meter" id="progressBar1">--}}
-{{--                <span style="width: 0%"></span>--}}
-{{--                <div class="percent">0%</div>--}}
-{{--            </div>--}}
-            <!-- <div class="progress-bar"><img src=".//img/order-section/progressbar75.png" class="img-fluid" alt=""></div> -->
-            <form class="order-form" name="form1" action="#" method="POST">
+            <div class="title">Unesite podatke za dostavu</div>
+            <form class="order-form" name="form1" action="{{$orderRoute}}" method="POST">
+                {{csrf_field()}}
+                @include('lander.naturapharm.components.form_hidden_fields')
                 <div class="form-group">
-                    <label for="name_first" class="control-label">Имя:</label>
-                    <input type="text" class="form-control" name="name" id="name_first" placeholder="Имя" required>
+                    <label for="name_first" class="control-label">Ime i prezime</label>
+                    <input type="text" class="form-control" name="name" id="name_first" placeholder="Ime i prezime" required>
                 </div>
                 <div class="form-group">
-                    <label for="phone" class="control-label">Телефон:</label>
-                    <input type="tel" class="form-control" name="phone" id="phone" placeholder="Телефон" required>
+                    <label for="phone" class="control-label">Telefon</label>
+                    <input type="tel" class="form-control" name="phone" id="phone" placeholder="Telefon" required>
                 </div>
                 <div class="form-group">
-                    <button type="submit" name="submit">Заказать</button>
+                    <button type="submit" name="submit">Poruči sada</button>
                 </div>
             </form>
-{{--            <div class="bottom-text">Введите ваше имя и номер телефона, кликните по кнопке «Заказать» и мы Вам перезвоним!</div>--}}
         </div>
     </div>
 </section>
@@ -224,58 +219,58 @@
     <section class="description" id="description">
         <div class="container">
             <div class="img-hose">
-                <div class="discount">СКИДКА <span>-50%</span></div>
+                <div class="discount">POPUST <span>-40%</span></div>
                 <div class="img"><img src="{{ asset('/') }}dailysharkFiles/crevozabastu/hose3.png" class="img-fluid" alt=""></div>
             </div>
             <div class="info">
-                <h4>Универсальный шланг для полива Hose Max X Ознакомьтесь с его характеристиками</h4>
+                <h4>Karakteristike univeralnog creva za zalivanje</h4>
                 <table>
                     <tr>
-                        <td>Диаметр</td>
-                        <td>20 мм</td>
+                        <td>Prečnik</td>
+                        <td>20 mm</td>
                     </tr>
                     <tr>
-                        <td>Вес</td>
-                        <td>менее 1600 г</td>
+                        <td>Težina</td>
+                        <td>manje od 1600g</td>
                     </tr>
                     <tr>
-                        <td>Цвет</td>
-                        <td>синий</td>
+                        <td>Boja</td>
+                        <td>plava ili zelena</td>
                     </tr>
                     <tr>
-                        <td>Материал шланга</td>
-                        <td>нейлон, тканое полиэфирное полотно</td>
+                        <td>Materijal creva</td>
+                        <td>najlon, poliesterska tkanina</td>
                     </tr>
                     <tr>
-                        <td>Материал арматуры</td>
-                        <td>ABS-пластик, латекс</td>
+                        <td>Materijal prskalice</td>
+                        <td>ABS plastika, lateks</td>
                     </tr>
                     <tr>
-                        <td>Температура воды</td>
-                        <td>от 0 до 36 градусов Цельсия</td>
+                        <td>Temperatura vode</td>
+                        <td>0 do 36 stepeni Celzijusa</td>
                     </tr>
                     <tr>
-                        <td>Давление воды</td>
-                        <td>от 2 до 16 атмосфер</td>
+                        <td>Pritisak vode</td>
+                        <td>2 do 16 atmosfera</td>
                     </tr>
                 </table>
                 <div class="list-box">
-                    <div class="list-title">Комплект поставки:</div>
+                    <div class="list-title">Sadržaj paketa</div>
                     <ul>
                         <li>
-                            <span>1.</span> Универсальный шланг для полива Hose Max X
+                            <span>1.</span> Univerzalno crevo za prskanje
                         </li>
                         <li>
-                            <span>2.</span> Подарочная насадка-распылитель
+                            <span>2.</span> Mlaznica za prskanje (poklon)
                         </li>
                         <li>
-                            <span>3.</span> Клапан
+                            <span>3.</span> Ventili
                         </li>
                         <li>
-                            <span>4.</span> Фирменная коробка
+                            <span>4.</span> Uputstvo za upotrebu
                         </li>
                         <li>
-                            <span>5.</span> Инструкция по эксплуатации
+                            <span>5.</span> Brendirana kutija
                         </li>
                     </ul>
                 </div>
@@ -286,43 +281,34 @@
         <div class="scroll-to" id="instructions"></div>
         <div class="container">
             <div class="info">
-                <h4>Как работать с шлангом для полива <span>Hose Max X</span>:</h4>
+                <h4>Kako raditi sa univerzalnim crevom za zalivanje</h4>
                 <ul>
                     <li>
                         <div>01</div>
-                        <p>Закройте клапан на шланге.</p>
+                        <p>Stavite ventil na crevo.</p>
                     </li>
                     <li>
                         <div>02</div>
-                        <p>Подключите шланг к источнику воды (перекрытому)
-                            и откройте воду. Через несколько секунд шланг
-                            достигнет нужной длины под напором воды.
-                        </p>
+                        <p>Povežite crevo sa izvorom vode i otvorite vodu. Nakon nekoliko sekundi crevo će dostići željenu dužinu pod pritiskom vode.</p>
                     </li>
                     <li>
                         <div>03</div>
-                        <p>Присоедините насадку-разбрызгиватель к клапану.</p>
+                        <p>Pričvrstite mlaznicu za prskanje na ventil.</p>
                     </li>
                     <li>
                         <div>04</div>
-                        <p>Откройте клапан. Вода польется через насадку,
-                            Вы можете выбрать нужный режим полива
-                            (всего 7 режимов).
-                        </p>
+                        <p>Otvorite ventil. Voda će teći kroz mlaznicu, možete odabrati jedan od 7 režima prskanja.</p>
                     </li>
                     <li>
                         <div>05</div>
-                        <p>После того, как полив закончен, перекройте воду
-                            в источнике. Через несколько секунд вся вода выльется
-                            из шланга, и он вернется к первоначальным размерам.
-                        </p>
+                        <p>Nakon što se prskanje završi, isključite vodu. Posle nekoliko sekundi, sva voda će se izliti iz creva i vratiće se u prvobitnu veličinu.</p>
                     </li>
                     <li>
                         <div>06</div>
-                        <p>Отсоедините шланг и уберите его в место для хранения.</p>
+                        <p>Odvojite crevo i odložite ga za skladištenje.</p>
                     </li>
                 </ul>
-                <a href="#" class="btn btn_blue page-scroll" data-scroll-id="#order-section__bottom">Заказать</a>
+                <a href="#" class="btn btn_blue page-scroll" data-scroll-id="#order-section__bottom">Poruči sada</a>
             </div>
             <div class="img"><img src="{{ asset('/') }}dailysharkFiles/crevozabastu/plant.png" class="img-fluid" alt=""></div>
         </div>
@@ -331,49 +317,43 @@
 <section class="main-advantages">
     <div class="main-advantages__top">
         <div class="container">
-            <h3>Ключевые преимущества шланга <span>"Hose Max X"</span>:</h3>
+            <h3>Ključne prednosti</h3>
             <div class="items">
                 <div class="item">
                     <div class="img"><img src="{{ asset('/') }}dailysharkFiles/crevozabastu/i1.png" class="img-fluid" alt=""></div>
-                    <h4>Большая длина</h4>
-                    <p>Хотя в "спокойном" состоянии шланг не превышает <span class="yellow">12 метров</span>, стоит подключить его к воде, как он <span class="yellow text-uppercase text-calibri-bold">УВЕЛИЧИТСЯ</span> почти В <span class="yellow text-uppercase text-calibri-bold">ТРИ РАЗА</span>
-                        — до 30 метров! Этого вполне достаточно, чтобы полить клумбу
-                        или газон перед домом, помыть машину и т.п. Если же такой длины будет недостаточно, Вы всегда можете купить еще один аналогичный шланг
-                        и <span class="yellow text-calibri-bold">присоединить его к вашему.</span>
+                    <h4>Dužina</h4>
+                    <p>
+                        Iako u mirnom stanju crevo nije predugačko, pri pritisku vode produžava se i do <span class="yellow text-uppercase text-calibri-bold">3 puta!</span>
+                        Ovo je sasvim dovoljno za zalivanje <span class="yellow">travnjaka</span> ili bilo kod udaljenog dela <span class="yellow">dvorišta i vrta.</span>
                     </p>
                 </div>
                 <div class="item">
                     <div class="img"><img src="{{ asset('/') }}dailysharkFiles/crevozabastu/i2.png" class="img-fluid" alt=""></div>
-                    <h4>Комфортное использование</h4>
-                    <p>"Икс Хоз" не перекручивается и не запутывается, <span class="yellow  text-calibri-bold">не образует петлей и заломов.</span> Вода беспрепятственно льется, даже если шланг перегибается.</p>
+                    <h4>Udobna upotreba</h4>
+                    <p>Univerzalno crevo se ne uvija i <span class="yellow text-calibri-bold">ne formira čvorove</span> koji otežavaju protok vode. Voda slobodno teče i kada je crevo presavijeno.</p>
                 </div>
                 <div class="item">
                     <div class="img"><img src="{{ asset('/') }}dailysharkFiles/crevozabastu/i3.png" class="img-fluid" alt=""></div>
-                    <h4>Супер компактность и удобное хранение</h4>
-                    <p>Сухой шланг <span class="yellow text-calibri-bold">весит около полутора килограммов</span> и не занимает много места (например, без проблем помещается в цветочном горшке).</p>
+                    <h4>Super kompaktno i lako skladištenje</h4>
+                    <p>Crevo je teško oko <span class="yellow text-calibri-bold">jedan i po kilogram</span> i ne zauzima mnogo prostora.</p>
                 </div>
-                <div class="bottom-text">Но и это еще не все! В ПОДАРОК Вы получите специальную насадку для шланга с 7 режимами!</div>
+                <div class="bottom-text">A to nije sve! na poklon dobijate specijalnu mlaznicu za crevo sa 7 režima!</div>
             </div>
         </div>
     </div>
     <div class="main-advantages__bottom">
         <div class="container">
-            <h4>Двойная конструкция гарантирует максимальное удобство и долговечность</h4>
+            <h4>Dvostruka konstrukcija garantuje maksimalnu udobnost i izdržljivost</h4>
             <div class="main">
                 <div class="img-hose"><img src="{{ asset('/') }}dailysharkFiles/crevozabastu/hose-cut.png" class="img-fluid" alt=""></div>
                 <div class="text">
                     <div class="item">
-                        <h6>Внутренний шланг из ABS-пластика и латекса</h6>
-                        <p>Суперпрочный и гибкий материал обеспечивает необходимое расширение под давлением воды. Благодаря этому универсальный шланг для полива «Икс Хоз» способен растягиваться в несколько раз.</p>
+                        <h6>Unutrašnje crevo od ABS plastike i lateksa</h6>
+                        <p>Super jak i fleksibilan materijal obezbeđuje neophodnu ekspanziju pod pritiskom vode. Zahvaljujući tome, univerzalno crevo može se rastegnuti i do 3 puta.</p>
                     </div>
                     <div class="item">
-                        <h6>Внешний шланг из нейлона и тканого полиэфирного полотна</h6>
-                        <p>Жесткая износостойкая материя надежно защищает
-                            внутреннюю часть от порезов, трещин, заломов
-                            и других повреждений. В "спокойном" виде внешний
-                            чехол собран в складки, это сделано для того, чтобы
-                            он не мешал растягиваться внутреннему материалу.
-                        </p>
+                        <h6>Spoljno crevo od najlona i tankog poliestera</h6>
+                        <p>Čvrsti materijal otporan je na habanje i pouzdano štiti unutrašnjost od pukotina, nabora i drugih oštećenja.</p>
                     </div>
                 </div>
             </div>
@@ -384,26 +364,24 @@
     <section class="how-we-work" id="how-we-work">
         <div class="container">
             <div class="info">
-                <h4>Как мы работаем</h4>
-                <p>Доставка осуществляется в течение 3х-7 дней.
-                    Оплата товара производится на пункте выдачи посылки.
-                </p>
+                <h4>Kako radimo</h4>
+                <p>Isporuka se vrši u roku od 1-2 radna dana. Plaćanje se vrši po preuzimanju pošiljke.</p>
                 <div class="items">
                     <div class="item">
                         <div class="img"><img src="{{ asset('/') }}dailysharkFiles/crevozabastu/j1.png" class="img-fluid" alt=""></div>
-                        <p>Вы оставляете заявку</p>
+                        <p>Ostavite zahtev</p>
                     </div>
                     <div class="item">
                         <div class="img"><img src="{{ asset('/') }}dailysharkFiles/crevozabastu/j2.png" class="img-fluid" alt=""></div>
-                        <p>Мы связываемся с Вами</p>
+                        <p>Mi vas kontaktiramo</p>
                     </div>
                     <div class="item">
                         <div class="img"><img src="{{ asset('/') }}dailysharkFiles/crevozabastu/j3.png" class="img-fluid" alt=""></div>
-                        <p>Отправляем вашу посылку</p>
+                        <p>Šaljemo vam paket</p>
                     </div>
                     <div class="item">
                         <div class="img"><img src="{{ asset('/') }}dailysharkFiles/crevozabastu/j4.png" class="img-fluid" alt=""></div>
-                        <p>Вы оплачиваете ее на почте</p>
+                        <p>Plaćate kuriru brze pošte po pouzeću</p>
                     </div>
                 </div>
             </div>
@@ -414,22 +392,19 @@
         <div class="scroll-to" id="reviews"></div>
         <div class="container">
             <div class="slider">
-                <h4>Что о нас говорят наши клиенты</h4>
+                <h4>Šta naši kupci kažu o nama</h4>
                 <div class="owl-carousel">
                     <div class="slide">
                         <div class="top">
                             <div class="img"><img src="{{ asset('/') }}dailysharkFiles/crevozabastu/8.jpg" class="img-fluid" alt=""></div>
                             <div class="contact">
-                                <div class="name">Сергей Рашковский</div>
+                                <div class="name">Srđan Rašević</div>
                             </div>
                         </div>
                         <div class="bottom">
                             <div class="comment">
-                                <p>Добрый день! Купил шланг для полива Hose Max X и хочу выделить 5 его преимуществ: он удобен, мало весит, не перекручивается, в пассивном состоянии аккуратно лежит под краном и не мешает, низкая цена.</p>
-                                <p>Рекомендую всем кто не испытывает затруднений с напором воды. Сейчас заказал еще один своим соседям по их просьбе. </p>
-                            </div>
-                            <div class="date">
-                                <div class="time">16:24</div>
+                                <p>Dobar dan! kupio sam crevo za zalivanje i prezadovljan sam. Želim da istaknem 5 njegovih prednosti. Zgodno je, nije teško, ne uvija se, u pasivnom stanju uredno leži ispod slavine i ima nisku cenu.</p>
+                                <p>Preporučujem svima koji imaju problem sa pritiskom vode. Poručio sam još jedno za komšiju.</p>
                             </div>
                         </div>
                     </div>
@@ -437,15 +412,13 @@
                         <div class="top">
                             <div class="img"><img src="{{ asset('/') }}dailysharkFiles/crevozabastu/6.jpg" class="img-fluid" alt=""></div>
                             <div class="contact">
-                                <div class="name">Артем Малышев</div>
+                                <div class="name">Arsen Matić</div>
                             </div>
                         </div>
                         <div class="bottom">
                             <div class="comment">
-                                <p>Он и правда очень легкий и почти мгновенно приобретает исходный размер после окончания полива. Насчет увеличения, мне почему-то казалось что он будет потолще. Однако, шланг хорошо управляем и превосходно справляется с мытьем автомобиля и поливом цветов, потому не путается под ногами и сделан из легкого материала.</p>
-                            </div>
-                            <div class="date">
-                                <div class="time">13:21</div>
+                                <p>Zaista je veoma lagan i momentalno se vraća u prvobitnu veličinu nakon zalivanja. Što se povećanja tiče, iz nekog razloga mi se činilo da će biti deblje. Ipak, crevo je pod pritiskom ostajalo tanko i na taj način obezbeđivalo jak mlaz.
+                                    Mogu lako da perem automobil pod visokim pritiskom.</p>
                             </div>
                         </div>
                     </div>
@@ -453,16 +426,14 @@
                         <div class="top">
                             <div class="img"><img src="{{ asset('/') }}dailysharkFiles/crevozabastu/4.jpg" class="img-fluid" alt=""></div>
                             <div class="contact">
-                                <div class="name">Виктория Степина</div>
+                                <div class="name">Violeta Krkobabić</div>
                             </div>
                         </div>
                         <div class="bottom">
                             <div class="comment">
-                                <p>Поливать стало удовольствием, не приходится таскать за собой резиновый шланг. Что самое приятное - во время полива шланг нигде не пропускает воду, его двойная конструкция придает надежности. Синий цвет не показывает загрязнений.</p>
-                                <p>Шланг Hose Max X полезен и отлично помогает по хозяйству!</p>
-                            </div>
-                            <div class="date">
-                                <div class="time">11:02</div>
+                                <p>Zalivanje mi je konačno postalo zadovoljstvo jer ne moram da teglim gumeno crevo za sobom. Najbolji deo je što tokom zalivanja crevo
+                                    ne propušta vodu nigde i lako se pomera gde god želim.</p>
+                                <p>Definitivno, ovo crevo je veoma korisno i od velike mi pomoći u dvorištu.</p>
                             </div>
                         </div>
                     </div>
@@ -470,15 +441,12 @@
                         <div class="top">
                             <div class="img"><img src="{{ asset('/') }}dailysharkFiles/crevozabastu/7.jpg" class="img-fluid" alt=""></div>
                             <div class="contact">
-                                <div class="name">Вениамин Щербин</div>
+                                <div class="name">Dane Biorac</div>
                             </div>
                         </div>
                         <div class="bottom">
                             <div class="comment">
-                                <p>Отличный шланг реально облегчает жизнь не только садоводам, а всем у кого есть участок земли. Легкий и компактный поливочный шланг по низкой стоимости – удача. Каждый режим насадки распылителя проверил – все исправно. Благодарю!</p>
-                            </div>
-                            <div class="date">
-                                <div class="time">12:22</div>
+                                <p>Odlično crevo koje zaista olakšava život, ne samo nama baštovanima već i svima koji imaju komad zemlje. Lagano je i mogu da ga izdužim i sa njim stignem do kraja njive. Mogu čak i da kupam stoku. Pozdrav!</p>
                             </div>
                         </div>
                     </div>
@@ -490,17 +458,17 @@
 <section class="bottom-section">
     <div class="container">
         <div class="top">
-            <h2>Универсальный шланг Hose Max X Ваш надежный помощник</h2>
-            <div class="subtitle">Не перекручивается и не запутывается, не образует петлей и заломов</div>
+            <h2>Multifunkcionalno crevo za zalivanje</h2>
+            <div class="subtitle">Ne uvija se, ne pravi petlje i nabore</div>
         </div>
         <div class="bottom">
             <div class="img-hose">
-                <div class="discount">СКИДКА <span>-50%</span></div>
+                <div class="discount">POPUST <span>-40%</span></div>
                 <div class="img"><img src="{{ asset('/') }}dailysharkFiles/crevozabastu/hose3.png" class="img-fluid" alt=""></div>
                 <div class="bottom-section-price-mob">
                     SAMO ZA <span>{{ $prices[1]['amount'] }} RSD</span>
                 </div>
-                <a href="#" class="btn btn_red page-scroll" data-scroll-id="#order-section__bottom">Заказать</a>
+                <a href="#" class="btn btn_red page-scroll" data-scroll-id="#order-section__bottom">Poruči sada</a>
             </div>
             <div class="img-hose-2">
                 <div class="bottom-section-price">
@@ -513,8 +481,6 @@
 </section>
 <script src="{{ asset('/') }}dailysharkFiles/crevozabastu/libs.js"></script>
 <script src="{{ asset('/') }}shared_files/jquery.fancybox.min.js"></script>
-{{--<script src="https://xhoses.xcartpro.com/js/LPFunctions.js"></script>--}}
-{{--<script src="https://xhoses.xcartpro.com/js/common.js"></script>--}}
 <script>
     var pageScroll = function (userSettings) {
         var defaultSettings = {
@@ -553,5 +519,6 @@
         });
     });
 </script>
+@include('components.pixel_footer')
 </body>
 </html>
