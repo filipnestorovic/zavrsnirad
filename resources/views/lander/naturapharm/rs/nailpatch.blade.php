@@ -13,6 +13,16 @@
         .intro__main {
             background-image: url({{ asset('/') }}naturapharmFiles/nailpatch/back__intro.png);
         }
+        .price__item--righ b {
+            margin-left: 15px;
+        }
+        .price__item--lef s {
+            margin-right: 15px;
+        }
+        .price__center {
+            width: 0.8rem;
+            height: 0.8rem;
+        }
     </style>
 </head>
 <body>
