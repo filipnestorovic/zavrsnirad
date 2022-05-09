@@ -37,7 +37,7 @@
         </ul>
         <div class="info">
             <div class="title_block">
-                <h1 class="main_title">Kompres</h1>
+                <h1 class="main_title">Kompres Zip</h1>
                 <p>Za poboljšanu cirkulaciju <span>i protiv proširenih vena</span></p>
             </div>
             <div class="discount">Popust <span>-40%</span></div>
@@ -297,7 +297,7 @@
         </ul>
         <div class="info">
             <div class="title_block">
-                <h1 class="main_title">Kompres</h1>
+                <h1 class="main_title">Kompres Zip</h1>
                 <p>Za poboljšanu cirkulaciju <span>i protiv proširenih vena</span></p>
             </div>
             <div class="discount">Popust <span>-40%</span></div>
