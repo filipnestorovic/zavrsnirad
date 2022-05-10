@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/') }}naturapharmFiles/kneepatch2/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/') }}naturapharmFiles/kneepatch2/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;500&amp;display=swap" rel="stylesheet">
     <link href="{{ asset('/') }}naturapharmFiles/kneepatch2/animation.css" rel="stylesheet" type="text/css" />
     <link href="{{ asset('/') }}naturapharmFiles/kneepatch2/woco-accordion.css" rel="stylesheet">
@@ -59,14 +59,14 @@
                             <img src="{{ asset('/') }}naturapharmFiles/kneepatch2/toggle.png" width="40" height="27" alt=""></button>
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav ml-auto" id="mainNav">
-                                <li> <a class="scroll-menu" href="#sec1">WHY HYDROGEL</a> </li>
-                                <li> <a class="scroll-menu" href="#sec2">Our Mission</a> </li>
-                                <li> <a class="scroll-menu" href="#sec3">Hydrogel Benefits</a> </li>
-                                <li> <a class="scroll-menu" href="#sec4">Reviews</a> </li>
-                                <li> <a class="scroll-menu" href="#sec5">FAQ</a> </li>
+                                <li> <a class="scroll-menu" href="#sec1">Zašto koristiti</a> </li>
+                                <li> <a class="scroll-menu" href="#sec2">Čemu služe</a> </li>
+                                <li> <a class="scroll-menu" href="#sec3">Prednosti</a> </li>
+                                <li> <a class="scroll-menu" href="#sec4">Utisci</a> </li>
+                                <li> <a class="scroll-menu" href="#sec5">Česta pitanja</a> </li>
                             </ul>
                             <div class="buttonouter d-none d-xl-inline-block">
-                                <a href="{{$checkoutView}}" class="btn-default wow zoomIn orderNowmove">order Now</a>
+                                <a href="{{$checkoutView}}" class="btn-default wow zoomIn orderNowmove">Poruči odmah</a>
                             </div>
                         </div>
                     </nav>
@@ -79,26 +79,28 @@
             <div class="bannerprodimg d-none d-sm-block"><img src="{{ asset('/') }}naturapharmFiles/kneepatch2/bannerrightimg1-391.png" alt="" width="459" height="579" /></div>
             <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                    <h1>How are you dealing with your pain?</h1>
-                    <h6>We manufacture innovative hemp oil products that are all-natural and lab tested.</h6>
+                    <h1>Kako se rešiti bola u kolenu?</h1>
+                    <h6>Predstavljamo Knee Patch flastere koji su se pokazali
+                        kao <br> najbolje sredstvo protiv bola u kolenu!</h6>
                     <div class="row">
                         <div class="col-xl-8 col-lg-7 col-md-8 col-sm-9 col-12">
                             <div class="bannercontent">
                                 <ul>
-                                    <li>Relieves Occasional&nbsp;Pain</li>
-                                    <li>Fast Acting in Minutes</li>
-                                    <li>Regulates Inflammation Levels</li>
-                                    <li>Boosts Range of Motion</li>
+                                    <li>Otklanjaju osećaj bola</li>
+                                    <li>Obnavljanje funkcionalne aktivnosti zglobova</li>
+                                    <li>Refleksioni uticaj na unutrašnje organe</li>
+                                    <li>Aktivacija mikrocirkulacije u koži i potkožnom tkivu</li>
                                 </ul>
                                 <div class="buttonouter d-none d-xl-block">
-                                    <a class="btn-default btn-default-orange wow zoomIn" href="{{$checkoutView}}">Try something new</a>
-                                    <div class="reusetext d-none d-xl-inline-block">Reusable for over 72 hours of relief</div>
+                                    <a class="btn-default btn-default-orange wow zoomIn" href="{{$checkoutView}}">PORUČITE ODMAH SA 40% POPUSTA</a>
+{{--                                    <div class="reusetext d-none d-xl-inline-block">Reusable for over 72 hours of relief</div>--}}
                                 </div>
                                 <div class="bannertesti d-none d-xl-block">
-                                    <p class="m-0">I really like the Nano Patch. I've tried a number of patches and these work the best and last the longest. You can take them off and put them back on. That's an added bonus.</p>
+                                    <p class="m-0">Život bez bola - upravo tako bih nazvala period upotrebe ovih čudotvornih flastera.
+                                        Sada znam da je moguće živeti bez bola i uzimanja tableta!</p>
                                     <div class="authortext">
                                         <div class="authorcontent">
-                                            <div class="authorname">Al&iacute;z S.</div>
+                                            <div class="authorname">Anđela P.</div>
                                             <div class="star"><img src="{{ asset('/') }}naturapharmFiles/kneepatch2/star1-360.png" alt="" width="123" height="20" /></div>
                                         </div>
                                     </div>
@@ -106,16 +108,17 @@
                             </div>
                         </div>
                     </div>
-                    <h5 class="d-lg-none">reusable for over 72 hours of relief</h5>
+{{--                    <h5 class="d-lg-none">reusable for over 72 hours of relief</h5>--}}
                     <div class="buttonouter d-xl-none">
-                        <a class="btn-default btn-default-orange wow zoomIn" href="{{$checkoutView}}">Try something new</a>
-                        <div class="reusetext d-none d-lg-inline-block">Reusable for over 72 hours of relief</div>
+                        <a class="btn-default btn-default-orange wow zoomIn" href="{{$checkoutView}}">PORUČITE ODMAH SA 40% POPUSTA</a>
+{{--                        <div class="reusetext d-none d-lg-inline-block">Reusable for over 72 hours of relief</div>--}}
                     </div>
                     <div class="bannertesti d-xl-none">
-                        <p class="m-0">I really like the Nano Patch. I've tried a number of patches and these work the best and last the longest. You can take them off and put them back on. That's an added bonus.</p>
+                        <p class="m-0">Život bez bola - upravo tako bih nazvala period upotrebe ovih čudotvornih flastera.
+                            Sada znam da je moguće živeti bez bola i uzimanja tableta!</p>
                         <div class="authortext">
                             <div class="authorcontent">
-                                <div class="authorname">Al&iacute;z S.</div>
+                                <div class="authorname">Anđela P.</div>
                                 <div class="star"><img src="{{ asset('/') }}naturapharmFiles/kneepatch2/star1-360.png" alt="" width="123" height="20" /></div>
                             </div>
                         </div>
@@ -135,31 +138,31 @@
     </div>
     <div class="section whysec" id="sec1">
         <div class="container">
-            <h3 class="text-center">Why Grown <span class="d-block d-sm-inline">Science Hydrogel?</span></h3>
+            <h3 class="text-center">Bol u kolenu doživi <span class="d-block d-sm-inline">oko 80% ljudi</span> u toku svog života</h3>
             <div class="row">
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
                     <div class="whybox">
                         <div class="number">1</div>
-                        <h4>Comfort</h4>
-                        <p>Our hydrogel adhesive is soothing and comfortable on the skin. The high water content of hydrogel allows&nbsp;hemp extract to easily be absorbed into the skin without causing irritation.</p>
+                        <h4>Kvalitet života</h4>
+                        <p>Bolovi u kolenu predstavljaju problem prvog stepena jer zaista utiču na kvalitet života.</p>
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
                     <div class="whybox">
                         <div class="number">2</div>
-                        <h4>Time-Release Formula</h4>
-                        <p>Our patch releases a steady stream of&nbsp;hemp extract through the skin&nbsp;straight to where its needed&nbsp;over a period of time.</p>
+                        <h4>Rizična grupa</h4>
+                        <p>U rizičnoj grupi su ljudi koji se bave teškim fizičkim poslovima, profesionalnim sportom ili provode mnogo vremena za volanom.</p>
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
                     <div class="whybox">
                         <div class="number">3</div>
-                        <h4>Reusable</h4>
-                        <p>Our patch can be removed and reapplied multiple times. Our hydrogel adhesive technology allows our patches to retain their adhesion over time.</p>
+                        <h4>Posledice</h4>
+                        <p>Svake godine bolovi u zglobovima napadaju sve više mlade ljude kojima predstavljaju problem i ostavljaju povremene ili trajne posledice!</p>
                     </div>
                 </div>
             </div>
-            <div class="buttonouter text-center"><a class="btn-default wow zoomIn" href="{{$checkoutView}}">Try something new</a></div>
+            <div class="buttonouter text-center"><a class="btn-default wow zoomIn" href="{{$checkoutView}}">PORUČI ODMAH SA 40% POPUSTA</a></div>
         </div>
     </div>
     <div class="missionsec" id="sec2">
@@ -170,12 +173,11 @@
                 </div>
                 <div class="col-xl-7 col-lg-7 col-md-8 col-sm-12 col-12">
                     <div class="missioncontent">
-                        <h6>Built in Nature. Supported by Science.</h6>
-                        <h3>Our Mission</h3>
-                        <p>At&nbsp;Grown Science&nbsp;we believe that nature knows best. We research and develop natural products that work without harmful side effects. Our Mission is to empower self-care by incorporating natural products with research science.</p>
-                        <p>At Grown Science, it&rsquo;s all about you.</p>
-                        <p>Our Broad Spectrum Hemp Extract&nbsp;contains 0.0% THC. It is made of industrial hemp sourced from premium, organic, non-GMO farms. We use the latest technologies to extract and process the Hemp's active ingredients.</p>
-                        <p>We offer the only nano-hemp hydrogel patch on the market.</p>
+                        <h6>Prirodni sastojci. Naučno ispitani.</h6>
+                        <h3><b>Knee Patch</b> <br> biljni flasteri protiv bola u kolenu</h3>
+                        <p>Još su prvi taoisti govorili da su zdravi zglobovi glavni energetski izvor u telu i da to obezbjeđuje normalan rad organizma.
+                            Bilo kakvi poremećaji u njihovom funkcionisanju neizbežno ostavljaju tragove po zdravlje izazivajući bolesti kao što su impotencija, mastopatija, hipertonija, glavobolje, hronični umor i mnoge druge.</p>
+                        <p>Prema idejama taoističkih monaha i tradicionalnoj medicini Kine, negativna energija koja se širi po telu se može zaustaviti i izbaciti iz organizma baš u zglobovima.</p>
                     </div>
                 </div>
             </div>
@@ -184,18 +186,18 @@
     <div class="midsec">
         <div class="midsec-left">
             <div class="midimg wow slideInLeft"><img src="{{ asset('/') }}naturapharmFiles/kneepatch2/otbk9t_midimg1.jpg" width="617" height="338" alt=""></div>
-            <h3>Built in Nature</h3>
-            <p>All the ingredients in our products are natural and tested by time. We never use harmful additives, fillers.  Our products are free of THC, latex, parabens, sulfates, synthetic fragrances, artificial dyes, and colors.</p>
+            <h3>Prirodna receptura</h3>
+            <p>Recept za flastere uključuje preko 9 lekovitih biljaka i dobijen je kao rezultat vekovnih istraživanja narodnih iscelitelja.</p>
         </div>
         <div class="midsec-right">
             <div class="midimg wow slideInRight"><img src="{{ asset('/') }}naturapharmFiles/kneepatch2/mcqCfl_midimg2.jpg" width="617" height="338" alt=""></div>
-            <h3>Backed by Science</h3>
-            <p>We designed our state-of-the-art patch to deliver sustained, discrete application. Each batch is third-party tested for safety, purity, and potency. We post the results for every batch on the Internet with a tracking code on every unit, so you know what you are getting.</p>
+            <h3>Savremena tehnologija</h3>
+            <p>Flasteri protiv bola se proizvode po savremenoj tehnologiji i najvišim međunarodnim normama za kvalitet. Flasteri KNEE PATCH ne sadrže hemijske dodatke, nisu toksični, bezopasni su i nemaju štetne efekte na organizam.</p>
         </div>
     </div>
     <div class="benifitsec section" id="sec3">
         <div class="container">
-            <h3 class="text-center">Benefits of Grown <span class="d-block d-md-inline">Science Hydrogel</span></h3>
+            <h3 class="text-center">Prednosti <span class="d-block d-md-inline">"Knee Patch" flastera</span> protiv bola u kolenu</h3>
             <div class="row benifitrow">
                 <div class="col-xl-5 col-lg-4 col-md-12 col-sm-12 col-12 leftbenifit">
                     <div class="row benifitcontentrow">
@@ -204,8 +206,8 @@
                         </div>
                         <div class="col-xl-10 col-lg-9 col-md-10 col-sm-10 col-9 order-lg-1">
                             <div class="benitcontent">
-                                <h6>THC-Free</h6>
-                                <p>We ensure that all THC is naturally removed from our products during manufacturing.</p>
+                                <h6>Efikasno sredstvo protiv bola</h6>
+                                <p>Pomaže u otkanjanu bolova, otoka i upala i saniranju povreda.</p>
                             </div>
                         </div>
                     </div>
@@ -215,8 +217,8 @@
                         </div>
                         <div class="col-xl-10 col-lg-9 col-md-10 col-sm-10 col-9 order-lg-1">
                             <div class="benitcontent">
-                                <h6>Lab Tested</h6>
-                                <p>Every batch is tested for quality, potentcy, and to ensure it's free of pesticides, solvents, and heavy metals.</p>
+                                <h6>Brz efekat</h6>
+                                <p>Nakon što se flaster zalepi, počinje odmah da deluje i brzo oslobađa bola.</p>
                             </div>
                         </div>
                     </div>
@@ -226,8 +228,8 @@
                         </div>
                         <div class="col-xl-10 col-lg-9 col-md-10 col-sm-10 col-9 order-lg-1">
                             <div class="benitcontent">
-                                <h6>Quality Ingredients</h6>
-                                <p>All of our ingredients are of the highest quality</p>
+                                <h6>Lekoviti sastojci</h6>
+                                <p>Posebna kombinacija 9 lekovitih kineskih trava.</p>
                             </div>
                         </div>
                     </div>
@@ -242,8 +244,8 @@
                         </div>
                         <div class="col-xl-10 col-lg-9 col-md-10 col-sm-10 col-9">
                             <div class="benitcontent">
-                                <h6>GMP Certified</h6>
-                                <p>We follow good manufacturing processes in our production facilities.</p>
+                                <h6>Duboko prodiranje i dejstvo</h6>
+                                <p>Dozirano i neprestano prodiranje duboko u mišić otklanjajući bol.</p>
                             </div>
                         </div>
                     </div>
@@ -253,8 +255,8 @@
                         </div>
                         <div class="col-xl-10 col-lg-9 col-md-10 col-sm-10 col-9">
                             <div class="benitcontent">
-                                <h6>Industrial Hemp</h6>
-                                <p>We use Farm Bill compliant industrial hemp in our manufacturing process. Our products are legal in all states.</p>
+                                <h6>Laboratorijski testirano</h6>
+                                <p>Proizvod je laboratorijski tastiran i ispitan prema najvećim medicinskim standardima.</p>
                             </div>
                         </div>
                     </div>
@@ -264,23 +266,23 @@
                         </div>
                         <div class="col-xl-10 col-lg-9 col-md-10 col-sm-10 col-9">
                             <div class="benitcontent">
-                                <h6>Made in the USA</h6>
-                                <p>All of our products are manufactured in the USA from USA-sourced ingredients.</p>
+                                <h6>Prirodni delotvorni sastojci</h6>
+                                <p>Svi sastojci su prirodni, bez hemijskih dodataka. Svaki sastojak ima svoje ciljano dejstvo u otklanjanju bola u kolenu.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="buttonouter text-center"><a href="{{$checkoutView}}" class="btn-default wow zoomIn">Try something new</a></div>
+            <div class="buttonouter text-center"><a href="{{$checkoutView}}" class="btn-default wow zoomIn">PORUČI ODMAH SA 40% POPUSTA</a></div>
         </div>
     </div>
     <div class="moneybacksec section">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-xl-9 col-lg-8 col-md-8 col-sm-12 col-12 order-2 order-md-1">
-                    <h3>Money Back Guarantee</h3>
-                    <p>Here at Grown Science, we want to take the guesswork out of purchasing All orders are covered by a 180 day, 100% money back guarantee.  If you are not satisfied with your purchase get in touch with us for a full refund. No questions asked!  </p>
-                    <div class="buttonouter"><a href="{{$checkoutView}}" class="btn-default wow zoomIn">Try something new</a></div>
+                    <h3>Ukoliko ne budete zadovoljni vratićemo vam novac</h3>
+                    <p>U slučaju da ne budete zadovoljni Knee Patch flasterima, kontaktirajte nas i vratićemo vam novac bez potrebe za dodatnim objašnjenjima.</p>
+                    <div class="buttonouter"><a href="{{$checkoutView}}" class="btn-default wow zoomIn">PORUČI ODMAH SA 40% POPUSTA</a></div>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-4 col-sm-12 col-12 order-1 order-md-2">
                     <div class="moneybakimg wow slideInRight"><img src="{{ asset('/') }}naturapharmFiles/kneepatch2/lK522j_botimg.jpg" width="359" height="481" alt=""></div>
@@ -290,18 +292,20 @@
     </div>
     <div class="reviewsec section" id="sec4">
         <div class="container">
-            <h3 class="text-center">Here’s what our customers have to say...</h3>
+            <h3 class="text-center">Evo šta o nama kažu naši kupci...</h3>
             <div class="row">
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
                     <div class="reviewbox">
                         <div class="authortext">
                             <div class="authorimg"><img src="{{ asset('/') }}naturapharmFiles/kneepatch2/vwBc1Z_reviewimg1.png" width="60" height="60" alt=""></div>
                             <div class="authorcontent">
-                                <div class="authorname">Raechel T.</div>
+                                <div class="authorname">Milena</div>
                                 <div class="star"><img src="{{ asset('/') }}naturapharmFiles/kneepatch2/star.png" width="123" height="20" alt=""></div>
                             </div>
                         </div>
-                        <p>&ldquo;With the growing Opiod epidemic, I wanted a safe, more natural approach to pain management. This patch is perfect!&rdquo;</p>
+                        <p>Dobar dan. Moja mama ima 79 godina i mučili su je strašni bolovi u kolenina.
+                            Od vas sam kupila 3 kutije flastera i bolovi su se umanjili, mama se mnogo bolje oseća.
+                            Samo zalepiš i čekaš da dođe do okakšanja. Mogu li da poručim još 6 kutija? Neizmerno vam hvala!</p>
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
@@ -309,11 +313,16 @@
                         <div class="authortext">
                             <div class="authorimg"><img src="{{ asset('/') }}naturapharmFiles/kneepatch2/Iy5eeE_reviewimg2.png" width="60" height="60" alt=""></div>
                             <div class="authorcontent">
-                                <div class="authorname">Graham S.</div>
+                                <div class="authorname">Nikola</div>
                                 <div class="star"><img src="{{ asset('/') }}naturapharmFiles/kneepatch2/star.png" width="123" height="20" alt=""></div>
                             </div>
                         </div>
-                        <p>&ldquo;These patches from grown science have helped me stay on track with my fitness training with little to no pain.&rdquo;</p>
+                        <p>Od svih prednosti želim izdvojiti široki dijapazon delovanja i pristupačnu cenu.
+                            Imam problem sa kolenom koji se povremeno pogoršava, posebno u jesen i proleće i ne da mi živeti normalno.
+                            Nakon korišćenja raznih masti, našao sam flastere KNEE PATCH.
+                            Nakon prvog tretmana, osetio sam veliko olakšanje.
+                            Bolovi ne samo da su prošli, nego se nisu ni vraćali tokom cele godine!
+                            Od tada se ovi flasteri nalaze u mojoj privatnoj apoteci.</p>
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
@@ -321,11 +330,13 @@
                         <div class="authortext">
                             <div class="authorimg"><img src="{{ asset('/') }}naturapharmFiles/kneepatch2/DalYn2_reviewimg3.png" width="60" height="60" alt=""></div>
                             <div class="authorcontent">
-                                <div class="authorname">Jeff N.</div>
+                                <div class="authorname">Lazar</div>
                                 <div class="star"><img src="{{ asset('/') }}naturapharmFiles/kneepatch2/star.png" width="123" height="20" alt=""></div>
                             </div>
                         </div>
-                        <p>&ldquo;I love that this patch lasts 72 hrs, I do not need to worry about carrying several with me if I go on a weekend trip!&rdquo;</p>
+                        <p>Povreda kolena na treningu me je terala na stalno korišćenje tableta protiv bolova i zbog toga sam dobio probleme sa želucem.
+                            Bol je postao deo mog života, a više nisam mogao piti tablete protiv bolova.
+                            Nakon mnogo masti, losiona i tableta, probao sam vaš proizvod i shvatio da nisam naišao na bolje sredstvo protiv hroničnih bolova u kolenu od KNEE PATCH flastera.</p>
                     </div>
                 </div>
             </div>
@@ -336,35 +347,31 @@
             <div class="row align-items-center">
                 <div class="col-xl-5 col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="faqcontent">
-                        <h3 class="text-center">Got Questions?</h3>
-                        <h6 class="text-center">We’ve got you covered!</h6>
+                        <h3 class="text-center">Često postavljana pitanja</h3>
+{{--                        <h6 class="text-center">We’ve got you covered!</h6>--}}
                     </div>
                 </div>
                 <div class="col-xl-7 col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="accordion">
-                        <h6>Where should I apply the patch?</h6>
+                        <h6>Mogu li nositi flastere za koleno ceo dan?</h6>
                         <div>
-                            <p>CBD patches are good for the whole body.</p>
-                            <p>One major misconception about patches is that they are mainly used to treat targeted areas of the body. That can’t be further from the truth.</p>
-                            <p>Ideally, you want to place it on a venous area of the body that is free of hair,  irritation, burns or open wounds.</p>
-                            <p>Some places on the body absorb better and allow more of the product to flow into the body faster and at higher levels than others. The lower back area is way more effective then it would be if you placed the patch on top of your foot, even if you are experiencing foot pain. While the foot has a lot of little veins, the area on the lower back is much more absorbent. Even if you’re not currently experiencing pain in your low back, applying the patch to this area allows the product to flow to the desired area.</p>
+                            <p>Apsolutno, možete nositi flastere tokom celog dana. Bilo da se opuštate kod kuće, vežbate ili ste na poslu. Dizajnirani su da vam pruže udobnost i olakšanje - gde god da se nalazite!</p>
                         </div>
-                        <h6>How often do I need to wear the patch?</h6>
+                        <h6>Koje pogodnosti mogu da očekujem od flastera za koleno?</h6>
                         <div>
-                            <p>With a CBD patch, you don’t need to worry about dosing schedules.</p>
-                            <p>Another benefit of CBD patches is that it provides a steady dose of CBD. For those people who have a hard time remembering to take their vitamins or struggle swallowing pills or oils then a CBD patch is a very easy way to incorporate CBD into your daily routine. You can stick the patch on and forget about it.</p>
-                            <p>The patch lasts a long time. The patch releases slowly and allows your body to get a continuous stream of CBD. This is beneficial because it doesn’t spike a quick uptake of CBD. Instead, it provides gradual relief.</p>
+                            <p>Flasteri za koleno imaju mnogo prednosti! Korisnici osećaju olakšanje i toplotu, kao i lakše pomeranje zglobova.</p>
+                            <p>Time sprečavaju povrede, povećavaju stabilnost i pokretljivost. Ovo je od najveće pomoći onima koji imaju ukočena, umorna ili bolna kolena.
+                                Takođe su napravljeni za one koji veći deo dana provode stojeći, neprekidno se kreću i/ili su na tvrdoj podlozi.</p>
                         </div>
-                        <h6>How long does it last?</h6>
+                        <h6>Kako se koriste Knee Patch flasteri?</h6>
                         <div>
-                            <p>The CBD patch lasts up to 72 hours</p>
-                            <p>The patch lasts a long time. The patch releases slowly and allows your body to get a continuous stream of CBD. This is beneficial because it doesn’t spike a quick uptake of CBD. Instead, it provides gradual relief.</p>
+                            <p>1. Kožu oprati vodom i prosušiti. Otvorite pakovanje i izvadite flaster.</p>
+                            <p>2. Nalepiti flaster na koleno. Ostaviti da deluje. Flasteri su čvrsti i neće spadati.</p>
+                            <p>3. Pažljivo skinuti flaster. Oprati kožu vodom i sapunom kako ne bi ostala lepljiva.</p>
                         </div>
-                        <h6>Can I get the patch wet?</h6>
+                        <h6>Kakva je vaša politika vraćanja novca?</h6>
                         <div>
-                            <p>The CBD patch can get wet. You can bathe, shower or even swim at the pool or the beach and it won’t cause any problems with your patch. Just put your patch on and go about your day.</p>
-                            <p>The patch is perfect to use when you’re about to do something physically exerting. </p>
-                            <p>Other CBD products can offer higher levels of CBD at one time. A few drops of CBD oil can bring you really fast relief when you’re suffering with anxiety or pain. And then you’ll want to continue to take more drops throughout the day to keep feeling good. However with patches you simply place it once a day. At the end of the period simply remove the patch and discard. It is always good to clean the area thoroughly before and after using the patch.</p>
+                            <p>Vaše zadovoljstvo je naš glavni cilj. Ako iz bilo kog razloga želite da vratite proizvod - samo nas kontaktirajte na info@wombatsbrand.com, a mi ćemo izvršiti povraćaj novca.</p>
                         </div>
                     </div>
                 </div>
@@ -374,7 +381,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                <div class="buttonouter text-center bottombtn"><a href="{{$checkoutView}}" class="btn-default wow zoomIn">Try something new</a></div>
+                <div class="buttonouter text-center bottombtn"><a href="{{$checkoutView}}" class="btn-default wow zoomIn">PORUČI ODMAH SA 40% POPUSTA</a></div>
             </div>
         </div>
     </div>
@@ -386,12 +393,12 @@
                 <div class="footlogo"><a href="{{$checkoutView}}" class="indexUrl"><img src="{{ asset('/') }}naturapharmFiles/kneepatch2/5n3mVl_footlogo.jpg" width="177" height="25" alt=""></a></div>
             </div>
             <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 order-xl-1">
-                <div class="copyright">© 2020 Grown Science. All Rights Reserved</div>
+                <div class="copyright">© {{ now()->year }} Natura Pharm. Sva prava zadržana.</div>
             </div>
         </div>
     </div>
 </div>
-<script src="{{ asset('/') }}shared_files/bootstrap.js"></script>
+<script src="{{ asset('/') }}naturapharmFiles/kneepatch2/bootstrap.js"></script>
 <script src="{{ asset('/') }}naturapharmFiles/kneepatch2/woco.accordion.min.js"></script>
 <script src="{{ asset('/') }}naturapharmFiles/kneepatch2/wow.js"></script>
 <script>
@@ -402,9 +409,11 @@
             $(window).scrollTop() >= 80 ? $(".top-outer").addClass("fixednav") : $(".top-outer").removeClass("fixednav")
         })
         $(".navbar-nav>li>a").on("click", function() {
-            $(".navbar-collapse").collapse("hide")
+            $(".navbar-collapse").collapse("hide");
         });
     });
+</script>
+
 </script>
 @include('components.pixel_footer')
 </body>
