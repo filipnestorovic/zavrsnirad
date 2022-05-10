@@ -127,15 +127,15 @@
             </div>
         </div>
     </div>
-    <div class="section logosec">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                    <div class="text-center"><img src="{{ asset('/') }}naturapharmFiles/kneepatch2/C29muW_logos.png" width="700" height="115" alt=""></div>
-                </div>
-            </div>
-        </div>
-    </div>
+{{--    <div class="section logosec">--}}
+{{--        <div class="container">--}}
+{{--            <div class="row">--}}
+{{--                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">--}}
+{{--                    <div class="text-center"><img src="{{ asset('/') }}naturapharmFiles/kneepatch2/C29muW_logos.png" width="700" height="115" alt=""></div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
     <div class="section whysec" id="sec1">
         <div class="container">
             <h3 class="text-center">Bol u kolenu doživi <span class="d-block d-sm-inline">oko 80% ljudi</span> u toku svog života</h3>
