@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <link rel="icon" type="image/png" href="">
-    <link rel="stylesheet" type="text/css" href="{{ asset('/') }}purplerelaxFiles/scrubber/styles.css">
-    <link rel="stylesheet" type="text/css" href="{{ asset('/') }}purplerelaxFiles/scrubber/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/') }}naturapharmFiles/acnepatch/styles.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/') }}naturapharmFiles/acnepatch/owl.carousel.min.css">
     <style>
         @font-face {
             font-family: 'AvenirNextCyr';
@@ -54,15 +54,15 @@
     <div class="content_block" id="content_block">
         <div class="wrapper">
             <div class="title_block">
-                <h3 class="main_title">ULTRAZVUČNI <br>PILING LICA</h3>
-                <p class="subtitle">KVALITETAN UREĐAJ ZA NEGU KOŽE KOD KUĆE</p>
+                <h3 class="main_title">SKIN TAG & ACNE <br> REMOVAL PATCHES</h3>
+                <p class="subtitle">Rešava bubuljica i fleka na efikasan i jednostavan način</p>
             </div>
             <div class="discount"></div>
             <ul>
-                <li>Uklanja mrtve ćelije</li>
-                <li>Zateže lice i eliminiše bore</li>
-                <li>Vraća čvrstinu i elastičnost kože</li>
-                <li>Eliminiše mitesere i sprečava nastanak akni</li>
+                <li>Sasušuje bubuljice i uklanja ih</li>
+                <li>Odstranjuje sitne flekice na koži</li>
+                <li>Sprečava stvaranje ožiljaka od bubuljica</li>
+                <li>Teško primetno na koži i lako za korišćenje</li>
             </ul>
             <div class="price_block clearfix">
                 <div class="price_item old">
@@ -89,17 +89,18 @@
 <!-- results -->
 <section class="results_section" >
     <div class="wrapper">
-        <h2 style="color:#9F2C99">ULTRAZVUČNI ČISTAČ PROŠIRUJE VAŠE MOGUĆNOSTI KUĆNE NEGE</h2>
+        <h2 style="color:#9F2C99">TRENUTNO NAJBOLJE SREDSTVO ZA BUBULJICE NA NAŠEM TRŽIŠTU</h2>
         <div class="box-osob" id="os">
             <div class="img-toptop">
                 <!--left-img-->
-                <img src="{{ asset('/') }}purplerelaxFiles/scrubber/ver1.jpg">
+                <img src="{{ asset('/') }}naturapharmFiles/acnepatch/ver1.jpg">
             </div>
             <div class="img-toptop">
                 <div class="main-text" style="margin: 10px 20px 20px 20px;">
                     <h3 class="box__body-title"> </h3>
-                    <div class="box__body-text" style="font-size: 18px; margin-top: 45px;">Ultrazvučni čistač je prenosivi uređaj koji je dizajniran za čišćenje i podmlađivanje kože. Zbog svoje kompaktne veličine, ovaj model se često bira za kućnu upotrebu i nosi na putovanja.
-                        Može se koristiti bilo gde, ne zauzima mnogo prosora u ženskoj torbi ili koferu.</div>
+                    <div class="box__body-text" style="font-size: 18px; margin-top: 45px;">Ovi providni flasteri za bubuljice su vrlo efikasni jednostavni i praktični za korišćenje.
+                        Napravljeni su od prirodnih aktivnih sastojaka koji deluju lokalno regenerišući kožu i odstranjujući mrtve ćelije.
+                        Na taj način dolazi do ubrzanog odstranjivanja bubuljica i fleka.</div>
                 </div>
             </div>
         </div>
@@ -107,22 +108,22 @@
 </section>
 <section class="use_section" id="use_section">
     <div class="wrapper">
-        <h2 style="color: #9F2C99;">3 REŽIMA RADA</h2>
+        <h2 style="color: #9F2C99;">KAKO SE KORISTE</h2>
         <div class="use_list">
             <div class="use_item">
-                <img src="{{ asset('/') }}purplerelaxFiles/scrubber/5.png" alt="Kelvin Safety Tool">
-                <h4>PILING</h4>
-                <p>Uz pomoć aparata vrši se ultrazvučno čišćenje lica (piling), uklanjaju se "crne tačkice", ujednačava se boja kože i povećava elastičnost.</p>
+                <img src="{{ asset('/') }}naturapharmFiles/acnepatch/5.png" alt="Kelvin Safety Tool">
+                <h4>DEZINFEKCIJA</h4>
+                <p>Operite sapunom područje koje želite da tretirate i osušite kožu peškirom.</p>
             </div>
             <div class="use_item">
-                <img src="{{ asset('/') }}purplerelaxFiles/scrubber/6.png" alt="Kelvin Safety Tool">
-                <h4>MIKROMASAŽA</h4>
-                <p>Ultrazvučna mikromasaža uz pomoć aparata stimuliše procese obnavljanja tkiva, ubrzava metaboličke procese u ćelijama kože, stimuliše procesne sinteze kolagena i elastina.</p>
+                <img src="{{ asset('/') }}naturapharmFiles/acnepatch/6.png" alt="Kelvin Safety Tool">
+                <h4>ZALEPITE</h4>
+                <p>Nežno zalepite providni flasterčić na željeno mesto i ostavite da deluje do 12 sati.</p>
             </div>
             <div class="use_item">
-                <img src="{{ asset('/') }}purplerelaxFiles/scrubber/7.png" alt="Kelvin Safety Tool">
-                <h4>FONOFOREZA</h4>
-                <p>Ultrazvučna mikromasaža pomoću uređaja u kombinaciji sa kozmetičkim sredstvima pruža efekat liftinga i smanjuje natečenost.</p>
+                <img src="{{ asset('/') }}naturapharmFiles/acnepatch/7.png" alt="Kelvin Safety Tool">
+                <h4>ODLEPITE</h4>
+                <p>Nakon 12h skinite flaster i proverite rezultat. Kod većih bubuljica ili fleka ponoviti proces više puta.</p>
             </div>
             <a href="#order_form" class="button">Poručite sada</a>
         </div>
@@ -132,7 +133,7 @@
         {{--<h2 style="color:#9F2C99">Как правильно пользоваться<br> ультразвуковым скрабером</h2>--}}
         {{--<div class="video_wrapper">--}}
             {{--<div class="video_block">--}}
-                {{--<video width="100%" height="100%" controls="controls" controls poster="{{ asset('/') }}purplerelaxFiles/scrubber/poster.jpg" >--}}
+                {{--<video width="100%" height="100%" controls="controls" controls poster="{{ asset('/') }}naturapharmFiles/acnepatch/poster.jpg" >--}}
                     {{--<source src="" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>--}}
                 {{--</video>--}}
             {{--</div>--}}
@@ -144,12 +145,12 @@
     <div class="box-osob-2">
         <div class="img-toptop">
             <div class="main-text">
-                <h3 class="box__body-title" style="color:#9F2C99">Nežan i pouzdan</h3>
-                <div class="box__body-text"  style="font-size: 19px">Blagi efekat vibracije ultrazvučnih talasa prodire u kožu i uništava vezivne čestice između keratinizovanih ćelija. Ovo uklanja mrtvi sloj ćelija kože i otpušava začepljene pore.</div>
+                <h3 class="box__body-title" style="color:#9F2C99">Nepoželjne akne</h3>
+                <div class="box__body-text"  style="font-size: 19px">Niste krivi što se akne pojavljuju u najgorem mogućem trenutku. Ponekad je to uzrokovan stresom, a ponekad se čini da se pojavljuju baš onda kada ih najmanje želimo.</div>
             </div>
         </div>
         <div class="img-toptop flex-left">
-            <img src="{{ asset('/') }}purplerelaxFiles/scrubber/box-5-ver1.jpg" style="
+            <img src="{{ asset('/') }}naturapharmFiles/acnepatch/box-5-ver1.jpg" style="
                   height: 100%;
                   width: 100%;
                   ">
@@ -158,28 +159,27 @@
     <div class="box-osob" id="os">
         <div class="img-toptop">
             <!--left-img-->
-            <img src="{{ asset('/') }}purplerelaxFiles/scrubber/box-5_ver2.jpg" style="
+            <img src="{{ asset('/') }}naturapharmFiles/acnepatch/box-5_ver2.jpg" style="
                   height: 100%;
                   width: 100%;
                   ">
         </div>
         <div class="img-toptop">
             <div class="main-text">
-                <h3 class="box__body-title" style="color:#9F2C99">Uvek pri ruci</h3>
-                <div class="box__body-text" style="font-size: 18px">Zahvaljujući svojoj kompaktnoj veličini, ultrazvučni čistač možete poneti sa sobom na odmor ili poslovno putovanje, tako da vam može biti pri ruci u svakoj situaciji.</div>
+                <h3 class="box__body-title" style="color:#9F2C99">Preuzmite kontrolu</h3>
+                <div class="box__body-text" style="font-size: 18px">Bilo da je važan dan na poslu ili treba da idete na prvi dejt ovaj proizvod će vam pomoći kada se pojavi nepoželjna akna. Posebno dizajnirani za jednostavnu upotrebu omogućiće vam da preuzmete kontrolu nad danom i izgledate najbolje. </div>
             </div>
         </div>
     </div>
     <div class="box-osob-2">
         <div class="img-toptop">
             <div class="main-text">
-                <h3 class="box__body-title" style="color:#9F2C99">Ultrazvučno čišćenje kože</h3>
-                <div class="box__body-text"  style="font-size: 19px">Zahvaljujući komobinaciji aktivnog delovanja sredstva za čišćenje lica i ultrazvučnih vibracija, gornji sloj kože se eksfolira, pigmentne mrlje se posvetljuju a ten ujednačava.
-                    Očišćena koža prima više kiseonika i dublje apsorbuje hranjive i hidratantne agense.</div>
+                <h3 class="box__body-title" style="color:#9F2C99">Efikasno dejstvo</h3>
+                <div class="box__body-text"  style="font-size: 19px">Prljavština i bakterije nisu baš prijatelji za koje želite da se pojave nepozvani kako bi pokvarili dan ili veče. Acne Removal Patch se bori protiv toga i brzo deluje.</div>
             </div>
         </div>
         <div class="img-toptop flex-left">
-            <img src="{{ asset('/') }}purplerelaxFiles/scrubber/box-5-ver3.jpg" style="
+            <img src="{{ asset('/') }}naturapharmFiles/acnepatch/box-5-ver3.jpg" style="
                   height: 100%;
                   width: 100%;
                   ">
@@ -188,67 +188,65 @@
     <div class="box-osob" id="os">
         <div class="img-toptop">
             <!--left-img-->
-            <img src="{{ asset('/') }}purplerelaxFiles/scrubber/box-5-ver4.jpg" style="
+            <img src="{{ asset('/') }}naturapharmFiles/acnepatch/box-5-ver4.jpg" style="
                   height: 100%;
                   width: 100%;
                   ">
         </div>
         <div class="img-toptop">
             <div class="main-text" >
-                <h3 class="box__body-title" style="color:#9F2C99">Mikro-masaža na ćelijskom nivou</h3>
-                <div class="box__body-text" style="font-size: 18px">Duboko i nežno delujući na kožu i potkožno tkivo, ultrazvuk pospešuje metaboličke procese, podstiče regeneraciju kože i pokreće procese prirodnog podmlađivanja.
-                    Tretman na ćelijskom nivou je veoma nežan i ne povređuje kožu, što je veoma važno kada koža već pokazuje znake starenja.</div>
+                <h3 class="box__body-title" style="color:#9F2C99">Prikriva nedostatke</h3>
+                <div class="box__body-text" style="font-size: 18px">Naš proizvod kamuflira bubuljicu, dok Hydrocolloid obavlja posao kako bi vaše lice sutradan izgledalo najbolje moguće. Manje crvenila po licu znači mnogo više samopouzdanja.</div>
             </div>
         </div>
     </div>
     <div class="box-osob-2">
         <div class="img-toptop">
             <div class="main-text">
-                <h3 class="box__body-title" style="color:#9F2C99">Pomaže u čišćenju kože</h3>
-                <div class="box__body-text"  style="font-size: 19px">Pospešuje prodiranje aktivne kozmetike u duboke slojeve kože što značajno povećava evikasnost korišćenja kozmetike. Pomaže u ujednačavanju tena i povećava volumen kože.
-                    Kombinacije ultrazvučnog pilinga i masaže daje ubedljivo najbolji efekat.</div>
+                <h3 class="box__body-title" style="color:#9F2C99">Jednostavan i praktičan</h3>
+                <div class="box__body-text"  style="font-size: 19px">Proizvod je vrlo praktičan, možete ga nositi sa sobom u torbi, novčaniku ili u jednostavno u džepu. Uvek uz vas u svako vreme i na svakom mestu.</div>
             </div>
         </div>
         <div class="img-toptop flex-left">
-            <img src="{{ asset('/') }}purplerelaxFiles/scrubber/box-5-ver5.jpg" style="height: 100%; width: 100%;">
+            <img src="{{ asset('/') }}naturapharmFiles/acnepatch/box-5-ver5.jpg" style="height: 100%; width: 100%;">
         </div>
     </div>
 </section>
 <!-- use -->
 <section class="benefits_section" id="pochemu">
     <div class="wrapper">
-        <h2 style="color: #9F2C99;">KARAKTERISTIKE ULTRAZVUČNOG ČISTAČA</h2>
+        <h2 style="color: #9F2C99;">SKIN TAG & ACNE REMOVAL PATCHES IMAJU SLEDEĆE EFEKTE</h2>
         <div class="benefits_list">
             <div class="benefit_item">
                 <div class="icon_block">
-                    <img src="{{ asset('/') }}purplerelaxFiles/scrubber/1.jpg" class="block-img" alt="">
+                    <img src="{{ asset('/') }}naturapharmFiles/acnepatch/1.jpg" class="block-img" alt="">
                 </div>
                 <div  class="top-info">
-                    <p class="right-2">Eliminiše <br>komedone</p>
+                    <p class="right-2">Uklanjaju bubuljice</p>
                 </div>
             </div>
             <div class="benefit_item">
                 <div class="icon_block">
-                    <img src="{{ asset('/') }}purplerelaxFiles/scrubber/2.jpg" class="block-img" alt="">
+                    <img src="{{ asset('/') }}naturapharmFiles/acnepatch/2.jpg" class="block-img" alt="">
                 </div>
                 <div  class="top-info">
-                    <p class="right-2">Smanjuje <br>akne</p>
+                    <p class="right-2">Čine kožu nežnom</p>
                 </div>
             </div>
             <div class="benefit_item">
                 <div class="icon_block">
-                    <img src="{{ asset('/') }}purplerelaxFiles/scrubber/3.jpg" class="block-img" alt="">
+                    <img src="{{ asset('/') }}naturapharmFiles/acnepatch/3.jpg" class="block-img" alt="">
                 </div>
                 <div  class="top-info">
-                    <p class="right-2">Posvetljuje <br>pege</p>
+                    <p class="right-2">Odstranjuju fleke</p>
                 </div>
             </div>
             <div class="benefit_item">
                 <div class="icon_block">
-                    <img src="{{ asset('/') }}purplerelaxFiles/scrubber/4.jpg" class="block-img" alt="">
+                    <img src="{{ asset('/') }}naturapharmFiles/acnepatch/4.jpg" class="block-img" alt="">
                 </div>
                 <div  class="top-info">
-                    <p class="right-2">Poboljšava ten <br>i teksturu kože</p>
+                    <p class="right-2">Sprečavaju nastanak ožiljaka</p>
                 </div>
             </div>
         </div>
@@ -261,21 +259,26 @@
         <h2 style="color:#9F2C99">UTISCI NAŠIH KUPACA</h2>
         <div class="reviews_list owl-carousel">
             <div class="review_item">
-                <img src="{{ asset('/') }}purplerelaxFiles/scrubber/reviews__review1_photo.jpg" alt="спиннер">
+                <img src="{{ asset('/') }}naturapharmFiles/acnepatch/reviews__review1_photo.jpg" alt="спиннер">
                 <div class="author_name">Katarina, 26 godina</div>
-                <p>Koristim ovaj uređaj mesec dana i mogu reći da zaista odlično radi, poboljšava ten i stanje kože, a korišćenje je zgodno i jednostavno. Čistač je kompaktan i veoma praktičan. Sve preporuke za ovaj proizvod.</p>
+                <p>Imala sam problema sa bubuljicama i konstrantno su me nervirale. Nisam ih imala mnogo, ali kada se po neka pojavi bila je dosta ružna.
+                    Poručila sam ovaj proizvod i u dobroj meri mi je smirio lice. Kada izađe bubuljica nalepim providni flastečić, manje se vidi a i sprečava stvaranje infekcije.
+                    Već sutradan bude mnogo bolje i bubuljica skroro nestane. Sve preporuke za ovaj proizvod.</p>
             </div>
             <div class="review_item">
-                <img src="{{ asset('/') }}purplerelaxFiles/scrubber/reviews__review2_photo.jpg" alt="спиннер">
-                <div class="author_name">Ines, 30 godina</div>
-                <p>Nikada ranije nisam videla ništa slično, ali kada sam videla reklamu na Instagramu, odlučila sam se da ga nabavim za sebe. Prvi rezultat sam primetila nakon nedelju dana, koža mi je izgledala
-                    čisto i zdravo. Izgledala je lepa i negovana kao posle kozmetičkog salona. Sve u svemu, rezultat je definitivno vredan novca koji sam dala za ovu spravicu.</p>
+                <img src="{{ asset('/') }}naturapharmFiles/acnepatch/reviews__review2_photo.jpg" alt="спиннер">
+                <div class="author_name">Ines, 34 godine</div>
+                <p>Moje lice je konačno bez flekica i sitnih bubuljica. Koristim ovaj proizvod oko 2 meseca i stavljam ga pred spavanje na čisto lice.
+                    Do ujutru se sve umiri. Nemam više bele ružne bubuljice. Hvala mojoj sestri za preporuku!</p>
             </div>
             <div class="review_item">
-                <img src="{{ asset('/') }}purplerelaxFiles/scrubber/reviews__review3_photo.jpg" alt="спиннер">
+                <img src="{{ asset('/') }}naturapharmFiles/acnepatch/reviews__review3_photo.jpg" alt="спиннер">
                 <div class="author_name">Natalija, 24 godine</div>
-                <p>Nemam priliku da redovno posećujem kozmetičara. Ovaj piling mi je dar od Boga i oslobađa me problema sa kožom lica. Prilikom upoitrebe nemam neprijatnosti, ultrazvučni piling nežno prolazi kroz
-                    kožu, ne ostavljajući tragove i ogrebotine. Savetujem svima kupovinu!</p>
+                <p>Najveći stres u mom životu su mi izazivale bubuljice. Stalno sam bila nervozna zbog njih i terale su me na suze.
+                    Nema koja sredstva nisam probala i na kakve sve tretmane nisam išla, ali ništa nije pomoglo.
+                    Kada sam već izgubila sve nade i postala ravnodušna, iskočila mi je reklama za ovo čudo.
+                    Pokušala sam da se uhvalim za slamku spasa i upalilo jeeee. :)
+                    Po prvi put sam videla napredak nakon 7 dana. Sada je sve pod kontrolom, ne smem na glas ni da se hvalim.</p>
             </div>
         </div>
     </div>
@@ -288,28 +291,28 @@
         <div class="steps_list">
             <div class="step_item">
                 <div class="image_block">
-                    <img src="{{ asset('/') }}purplerelaxFiles/scrubber/order_steps__step1_image.jpg" alt="Гамак для отдыха">
+                    <img src="{{ asset('/') }}naturapharmFiles/acnepatch/order_steps__step1_image.jpg" alt="Гамак для отдыха">
                     <div class="number">1</div>
                 </div>
                 <p>Ostavite podatke za dostavu na našem sajtu</p>
             </div>
             <div class="step_item">
                 <div class="image_block">
-                    <img src="{{ asset('/') }}purplerelaxFiles/scrubber/order_steps__step2_image.jpg" alt="Гамак для отдыха">
+                    <img src="{{ asset('/') }}naturapharmFiles/acnepatch/order_steps__step2_image.jpg" alt="Гамак для отдыха">
                     <div class="number">2</div>
                 </div>
                 <p>Kontaktiraćemo vas da potvrdimo porudžbinu</p>
             </div>
             <div class="step_item">
                 <div class="image_block">
-                    <img src="{{ asset('/') }}purplerelaxFiles/scrubber/order_steps__step3_image.jpg" alt="Гамак для отдыха">
+                    <img src="{{ asset('/') }}naturapharmFiles/acnepatch/order_steps__step3_image.jpg" alt="Гамак для отдыха">
                     <div class="number">3</div>
                 </div>
                 <p>Paket šaljemo brzom poštom u roku od 1-2 radna dana</p>
             </div>
             <div class="step_item">
                 <div class="image_block">
-                    <img src="{{ asset('/') }}purplerelaxFiles/scrubber/order_steps__step4_image.jpg" alt="Гамак для отдыха">
+                    <img src="{{ asset('/') }}naturapharmFiles/acnepatch/order_steps__step4_image.jpg" alt="Гамак для отдыха">
                     <div class="number">4</div>
                 </div>
                 <p>Plaćate kuriru po prijemu pošiljke</p>
@@ -322,14 +325,14 @@
 <section class="order_section" id="order-form">
     <div class="top_title_block">
         <div class="wrapper">
-            <h3>PORUČITE SADA SA  <span>40% POPUSTA</span></h3>
+            <h3>PORUČITE ODMAH I ISKORISTITE <span>POPUST OD 40%</span></h3>
         </div>
     </div>
     <div class="content_block">
         <div class="wrapper">
             <div class="title_block">
-                <h3 class="main_title">ULTRAZVUČNI <br>PILING LICA</h3>
-                <p class="subtitle">KVALITETAN UREĐAJ ZA NEGU KOŽE KOD KUĆE</p>
+                <h3 class="main_title">SKIN TAG & ACNE <br> REMOVAL PATCHES</h3>
+                <p class="subtitle">Rešava bubuljica i fleka na efikasan i jednostavan način</p>
             </div>
             <div class="discount"> </div>
             <div class="form_block">
@@ -381,7 +384,7 @@
     </div>
 </section>
 <center></center>
-<script src="{{ asset('/') }}purplerelaxFiles/scrubber/owl.carousel.min.js"></script>
+<script src="{{ asset('/') }}naturapharmFiles/acnepatch/owl.carousel.min.js"></script>
 <script>
     $(document).ready(function() {
 
