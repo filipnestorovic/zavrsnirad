@@ -28,7 +28,7 @@
 
                     <div class="de elHeadlineWrapper ui-droppable de-editable" style="margin-top: 0px; cursor: pointer; outline: none; font-family: 'Open Sans', Helvetica, sans-serif !important;" data-hide-on="mobile">
                         <div class="ne elHeadline hsSize3 lh4 elMargin0 elBGStyle0 hsTextShadow0" style="text-align: left; font-size: 18px;">
-                            <b>Pojas za leđa ®</b>
+                            <b>Correct Belt ®</b>
                         </div>
                     </div>
 
@@ -40,7 +40,7 @@
 
                     <div class="de elBTN elMargin0 elAlign_center ui-droppable elButtonBlock de-editable" style="margin-top: 15px; outline: none; cursor: pointer; font-family: 'Open Sans', Helvetica, sans-serif !important;" data-hide-on="mobile">
                         <a href="{{$checkoutView}}" id="mobileSubmit" class="elButton elButtonSize1 elButtonColor1 elButtonSquare elButtonPadding3 elButtonShadow2 elButtonCorner3 elBTNone elButtonFull elBtnHP_00 elBtnVP_20" style="color: rgb(255, 255, 255); background-color: rgb(26, 184, 0); font-size: 16px; cursor: pointer;">
-                            <span class="elButtonMain" aria-label="">PORUČITE VAŠ POJAS ZA LEĐA</span>
+                            <span class="elButtonMain" aria-label="">PORUČITE VAŠ CORRECT BELT</span>
                             <span class="elButtonSub" style="font-size: 13px;">KLIKNITE OVDE</span>
                         </a>
                     </div>
@@ -105,7 +105,7 @@
                 <div class="col-inner bgCover noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin">
                     <div class="de elHeadlineWrapper ui-droppable de-editable" id="scroll-Section2" style="margin-top: 0px; cursor: pointer; outline: none; font-family: 'Open Sans', Helvetica, sans-serif !important;">
                         <div class="ne elHeadline hsSize3 lh4 elMargin0 elBGStyle0 hsTextShadow0" style="text-align: left; font-size: 27px;">
-                            <b style="color: inherit;">Pojas za leđa ®</b>
+                            <b style="color: inherit;">Correct Belt ®</b>
                             <b style="color: inherit;"></b>
                         </div>
                     </div>
@@ -118,7 +118,7 @@
                     <div class="de elBTN elMargin0 ui-droppable elAlign_left de-editable" style="margin-top: 20px; outline: none; cursor: pointer; font-family: 'Open Sans', Helvetica, sans-serif !important;">
 
                         <a href="{{$checkoutView}}" id="desktopSubmit" class="elButton elButtonSize1 elButtonColor1 elButtonSquare elButtonPadding3 elButtonCorner5 elButtonShadow2 elBtnVP_15 elBtnHP_40 elButtonFull" style="color: rgb(255, 255, 255); background-color: rgb(26, 184, 0); font-size: 26px; cursor: pointer;">
-                            <span class="elButtonMain">PORUČITE VAŠ POJAS ZA LEĐA</span>
+                            <span class="elButtonMain">PORUČITE VAŠ CORRECT BELT</span>
                             <span class="elButtonSub">KLIKNITE OVDE</span>
                         </a>
 
@@ -149,7 +149,7 @@
                 <div class="col-inner bgCover noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin" style="padding: 0 10px">
                     <div class="de elHeadlineWrapper ui-droppable de-editable" style="margin-top: 3px; outline: none; cursor: pointer;">
                         <div class="ne elHeadline hsSize3 lh4 elMargin0 elBGStyle0 hsTextShadow0" style="text-align: left; font-size: 22px; color: rgb(0, 0, 0);">
-                            <i>"Bol u leđima i vratu postaje sve češći kako starite, čak i od jednostavnih svakodnevnih aktivnosti. Tokom godina bol postaje sve učestlaliji i intenzivniji – Nakon spavanja, prilikom sedenja za računarom ili često bez ikakvog razloga."</i><div><i> - Medicinska škola Harvard</i></div>
+                            <i>"Bol u leđima i vratu postaje sve češći kako starite, čak i od jednostavnih svakodnevnih aktivnosti. Tokom godina bol postaje sve učestaliji i intenzivniji – Nakon spavanja, prilikom sedenja za računarom ili često bez ikakvog razloga."</i><div><i> - Medicinska škola Harvard</i></div>
                         </div>
                     </div>
                 </div>
@@ -170,7 +170,7 @@
                     </div>
                     <div class="de elHeadlineWrapper ui-droppable de-editable" style="margin-top: 30px; outline: none; cursor: pointer;">
                         <div class="ne elHeadline hsSize3 lh4 elMargin0 elBGStyle0 hsTextShadow0" style="text-align: center; font-size: 16px; color: rgb(0, 0, 0);" >
-                            <i>"Bol u leđima i vratu postaje sve češći kako starite, čak i od jednostavnih svakodnevnih aktivnosti. Tokom godina bol postaje sve učestlaliji i intenzivniji – Nakon spavanja, prilikom sedenja za računarom ili često bez ikakvog razloga." - Medicinska Škola Harvard</i>
+                            <i>"Bol u leđima i vratu postaje sve češći kako starite, čak i od jednostavnih svakodnevnih aktivnosti. Tokom godina bol postaje sve učestaliji i intenzivniji – Nakon spavanja, prilikom sedenja za računarom ili često bez ikakvog razloga." - Medicinska Škola Harvard</i>
                         </div>
                     </div>
                 </div>
@@ -187,7 +187,7 @@
                 <div class="col-inner bgCover noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin" style="padding: 0 10px">
                     <div class="de elHeadlineWrapper ui-droppable de-editable" style="margin-top: 40px; outline: none; cursor: pointer; font-family: 'Open Sans', Helvetica, sans-serif !important;">
                         <div class="ne elHeadline hsSize3 lh4 elMargin0 elBGStyle0 hsTextShadow0" style="text-align: left; font-size: 32px;">
-                            <b>PORUČITE POJAS ZA LEĐA JOŠ DANAS!</b>
+                            <b>PORUČITE CORRECT BELT JOŠ DANAS!</b>
                         </div>
                     </div>
                     <div class="de elHeadlineWrapper ui-droppable de-editable" style="margin-top: 25px; cursor: pointer; outline: none; display: block; font-family: 'Open Sans', Helvetica, sans-serif !important;" >
@@ -254,7 +254,7 @@
                     </div>
                     <div class="de elHeadlineWrapper ui-droppable de-editable" style="margin-top: 30px; outline: none; cursor: pointer; font-family: 'Open Sans', Helvetica, sans-serif !important;">
                         <div class="ne elHeadline hsSize3 lh4 elMargin0 elBGStyle0 hsTextShadow0" style="text-align: center;font-size: 32px">
-                            <b>PORUČITE POJAS ZA LEĐA JOŠ DANAS!</b>
+                            <b>PORUČITE CORRECT BELT JOŠ DANAS!</b>
                         </div>
                     </div>
                     <div class="de elHeadlineWrapper ui-droppable de-editable" style="margin-top: 25px; cursor: pointer; outline: none; display: block; font-family: 'Open Sans', Helvetica, sans-serif !important;">
@@ -315,21 +315,21 @@
 {{--<div class="dropZoneForSections ui-droppable" style="display: none;"><div class="dropIconr"><i class="fa fa-plus"></i></div></div>--}}
 <div class="container noTopMargin padding20-top padding20-bottom padding40H noBorder borderSolid border3px cornersAll radius0 shadow0 bgNoRepeat wideContainer emptySection addBonusBottomSpacing activeSection innerToolsTop" style="padding-top: 20px; padding-bottom: 20px; background-color: rgb(255, 255, 255); outline: none;" data-hide-on="">
     <div id="accordion">
-        <h3>Koje su veličine pojasa za leđa?</h3>
+        <h3>Koje su veličine Correct Belt-a?</h3>
         <div>
             <p>Dostupne veličine pojasa: M, L, XL</p>
         </div>
-        <h3>Mogu li nositi pojas za leđa ceo dan?</h3>
+        <h3>Mogu li nositi Correct Belt ceo dan?</h3>
         <div>
-            <p>Apsolutno, možete nositi pojas za leđa tokom celog dana. Bilo da se opuštate kod kuće, vežbate ili ste na poslu. Dizajniran je da Vam obezbedi pravilno držanje I olakša svakodnevne obaveze.</p>
+            <p>Apsolutno, možete nositi Correct Belt tokom celog dana. Bilo da se opuštate kod kuće, vežbate ili ste na poslu. Dizajniran je da Vam obezbedi pravilno držanje I olakša svakodnevne obaveze.</p>
         </div>
         <h3>Ne želim nešto glomazno - Hoće li steznik stati ispod odeće?</h3>
         <div>
             <p>Da, steznik je vrhunskog niskoprofilnog dizajna. Možete ga nositi ispod bilo koje majice, košulje, džempera – apsolutno je neprimetan. Toliko je tanak i diskretan - niko neće znati da ga nosite</p>
         </div>
-        <h3>Koje pogodnosti mogu da očekujem od pojasa za leđa?</h3>
+        <h3>Koje pogodnosti mogu da očekujem od Correct Belt-a?</h3>
         <div>
-            <p>Pre svega pojas za leđa će Vas rešiti bolova u leđima I vratnom delu kao I ramenima. Takođe Bez obzira na to koliko lepo izgledate, loše držanje tela se ne možete sakriti. Ne samo da povijena leđa doprinose skrnavljenu sveukupne vizuelne slike o vama, već u značajnoj meri utiču, kako na fizičko, tako i na psihičko stanje. Loše držanje sa sobom nosi i rizike od degenerativnih bolesti kičme koje mogu ostaviti trajne posledice na Vaš organizam, a ovaj pojas će Vam sa sigurnošću pomoći da popravite svoje držanje u vrlo kratkom vremenskom roku.</p>
+            <p>Pre svega Correct Belt će Vas rešiti bolova u leđima I vratnom delu kao I ramenima. Takođe Bez obzira na to koliko lepo izgledate, loše držanje tela se ne možete sakriti. Ne samo da povijena leđa doprinose skrnavljenu sveukupne vizuelne slike o vama, već u značajnoj meri utiču, kako na fizičko, tako i na psihičko stanje. Loše držanje sa sobom nosi i rizike od degenerativnih bolesti kičme koje mogu ostaviti trajne posledice na Vaš organizam, a ovaj pojas će Vam sa sigurnošću pomoći da popravite svoje držanje u vrlo kratkom vremenskom roku.</p>
         </div>
         <h3>Kakva je vaša politika vraćanja novca?</h3>
         <div>
@@ -359,7 +359,7 @@
                 <div class="col-inner bgCover noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin" style="padding: 0 10px">
                     <div class="de elHeadlineWrapper ui-droppable de-editable" style="margin-top: 0px; outline: none; cursor: pointer; font-family: 'Open Sans', Helvetica, sans-serif !important;">
                         <div class="ne elHeadline hsSize3 lh4 elMargin0 elBGStyle0 hsTextShadow0" style="text-align: center;font-size: 32px">
-                            <p style="color:#2d2d2d"><b>Evo zašto naši kupci vole ovaj pojas za ledja!</b></p>
+                            <p style="color:#2d2d2d"><b>Evo zašto naši kupci vole Correct Belt!</b></p>
                         </div>
                     </div>
                 </div>
@@ -377,7 +377,7 @@
                 <div class="col-inner bgCover noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin" style="padding: 0 10px">
                     <div class="de elHeadlineWrapper ui-droppable de-editable" style="margin-top: 0px; outline: none; cursor: pointer; font-family: 'Open Sans', Helvetica, sans-serif !important;">
                         <div class="ne elHeadline hsSize3 lh4 elMargin0 elBGStyle0 hsTextShadow0" style="text-align: center;font-size: 32px" >
-                            <p style="color:#2d2d2d"><b>Evo zašto naši kupci vole ovaj pojas za ledja!</b></p>
+                            <p style="color:#2d2d2d"><b>Evo zašto naši kupci vole Correct Belt!</b></p>
                         </div>
                     </div>
                 </div>
@@ -422,7 +422,7 @@
                     </div>
                     <div class="de elHeadlineWrapper ui-droppable de-editable" style="margin-top: 15px; outline: none; cursor: pointer; font-family: 'Open Sans', Helvetica, sans-serif !important;">
                         <div class="ne elHeadline hsSize3 lh4 elMargin0 elBGStyle0 hsTextShadow0" style="text-align: left; font-size: 20px;">
-                            Pojas je stigao u predviđenom roku i sve je kao što je opisano u tekstu na sajtu, zahvalna sam i korisničkoj podršci koja mi je izašla u susret i odgovorila na sva moja pitanja.
+                            Correct Belt je stigao u predviđenom roku i sve je kao što je opisano u tekstu na sajtu, zahvalna sam i korisničkoj podršci koja mi je izašla u susret i odgovorila na sva moja pitanja.
                         </div>
                     </div>
 
@@ -487,7 +487,7 @@
                     </div>
                     <div class="de elHeadlineWrapper ui-droppable hiddenElementTools de-editable" style="margin-top: 15px; outline: none; cursor: pointer; font-family: 'Open Sans', Helvetica, sans-serif !important;">
                         <div class="ne elHeadline hsSize3 lh4 elMargin0 elBGStyle0 hsTextShadow0" style="text-align: left; font-size: 20px;">
-                            Pojas je stigao u predviđenom roku i sve je kao što je opisano u tekstu na sajtu, zahvalna sam i korisničkoj podršci koja mi je izašla u susret i odgovorila na sva moja pitanja.
+                            Correct belt je stigao u predviđenom roku i sve je kao što je opisano u tekstu na sajtu, zahvalna sam i korisničkoj podršci koja mi je izašla u susret i odgovorila na sva moja pitanja.
                         </div>
                     </div>
 

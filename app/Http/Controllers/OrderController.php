@@ -647,7 +647,7 @@ class OrderController extends Controller
             $sku = $request->get('productSku');
             $size = $request->get('size');
 
-            if($size != null) {
+            if($size != null && $size != 0) {
                 $this->modelOrder->order_note = "Veličina: ".$size;
                 $updateResult = $this->modelOrder->updateOrderNote($orderId);
 
