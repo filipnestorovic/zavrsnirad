@@ -27,7 +27,7 @@
             }
         }
         .sec9__container:before {
-            background: url({{ asset('/') }}naturapharmFiles/slimmingpatch/prod.png) no-repeat;
+            background: url({{ asset('/') }}naturapharmFiles/kiyeskibodyshaping/prod.png) no-repeat;
             width: 472px;
             height: 584px;
             right: -90px;
@@ -40,16 +40,16 @@
 <div class="main__wrapper s__main">
     <div class="header">
         <div class="header__container">
-            <div class="logo font-mons"><b> SLIMMING PATCH </b></div>
+            <div class="logo font-mons"><b> KIYESKI BODY SHAPING </b></div>
             <div class="h1 font-mons" data-xd="t3"><b>Za ravan i privlačan stomak!</b></div>
         </div>
     </div>
     <section class="sec1">
         <div class="sec1__container">
-            <div class="sec1__h1 only-web sec1__text__gr font-mons" data-xd="t2">Smršajte brzo i lako, bez jo-jo efekta!</div>
+            <div class="sec1__h1 only-web sec1__text__gr font-mons" data-xd="t2">Smršajte brzo i lako, na potpuno prirodan način!</div>
             <div class="h1 only-mob sec1__text__gr font-mons" data-xd="t2"> Smršajte brzo i lako </div>
-            <div class="h2 only-mob font-mons" data-xd="t2"> bez jo-jo efekta! </div>
-            <img alt class="sec1__prod only-web" src="{{ asset('/') }}naturapharmFiles/slimmingpatch/prod2.png"><img alt class="sec1__prod only-mob" src="{{ asset('/') }}naturapharmFiles/slimmingpatch/prod2.png"><button class="btn for_scroll"> Naručite </button>
+            <div class="h2 only-mob font-mons" data-xd="t2"> na potpuno prirodan način! </div>
+            <img alt class="sec1__prod only-web" src="{{ asset('/') }}naturapharmFiles/kiyeskibodyshaping/prod2.png"><img alt class="sec1__prod only-mob" src="{{ asset('/') }}naturapharmFiles/kiyeskibodyshaping/prod2.png"><button class="btn for_scroll"> Naručite </button>
             <div class="last__block">
                 <div class="h2 blue font-mons" data-xd="t2"> Gubite težinu tokom celog dana! </div>
                 <div class="h1 blue font-mons" data-xd="t2"> 24-satni sistem </div>
@@ -60,7 +60,7 @@
                     <li><b> Ubrzava </b> metabolizam čak i kad se odmarate </li>
                 </ul>
                 <div class="kletki font-mons"><span> masne ćelije (pre) </span><span> masne ćelije (posle) </span><img alt src="{{ asset('/') }}natureteaFiles/slimonex1/photo3.png"></div>
-                <img alt class="prod only-web" src="{{ asset('/') }}naturapharmFiles/slimmingpatch/prod.png" width="300px">
+                <img alt class="prod only-web" src="{{ asset('/') }}naturapharmFiles/kiyeskibodyshaping/prod.png" width="300px">
             </div>
         </div>
     </section>
@@ -83,14 +83,14 @@
     <section class="sec3">
         <div class="sec3__container">
             <span class="h2 blue font-mons" data-xd="t2">Započnite dan sa Energijom</span>
-            <div class="h1 blue font-mons" data-xd="t2"> SLIMMING FLASTERA</div>
+            <div class="h1 blue font-mons" data-xd="t2"> KIYESKI FLASTERA</div>
             <div class="h2 pink font-mons" data-xd="t2">Za samo nekoliko dana vaše telo će biti <b>pročišćeno, puno energije a kilaža će biti<br> osetno manja.</b></div>
             <div class="sec3__grid" dir="rtl">
                 <div class="sec3__part" dir="ltr">
-                    <div class="only-web"><img alt class="prod" src="{{ asset('/') }}naturapharmFiles/slimmingpatch/prod.png"></div>
-                    <div class="only-mob"><img alt class="prod" src="{{ asset('/') }}naturapharmFiles/slimmingpatch/prod.png"></div>
+                    <div class="only-web"><img alt class="prod" src="{{ asset('/') }}naturapharmFiles/kiyeskibodyshaping/prod.png"></div>
+                    <div class="only-mob"><img alt class="prod" src="{{ asset('/') }}naturapharmFiles/kiyeskibodyshaping/prod.png"></div>
                     <div class="girl"></div>
-                    <p class="white_block pink font-mons only-web">SLIMMING PATCH DAJE ENERGIJU TOKOM CELOG DANA</p>
+                    <p class="white_block pink font-mons only-web">KIYESKI BODY SHAPING DAJE ENERGIJU TOKOM CELOG DANA</p>
                     <button class="btn for_scroll only-web"> Naručite </button>
                 </div>
                 <div class="sec3__part" dir="ltr">
@@ -104,7 +104,7 @@
                         <li>Smanjuje nivo holesterola u krvi</li>
                         <li>Smanjuje apetit</li>
                     </ul>
-                    <p class="white_block pink font-mons only-mob">SLIMMING PATCH DAJE ENERGIJU TOKOM CELOG DANA</p>
+                    <p class="white_block pink font-mons only-mob">KIYESKI BODY SHAPING DAJE ENERGIJU TOKOM CELOG DANA</p>
                     <button class="btn for_scroll only-mob"> Naručite </button>
                 </div>
             </div>
@@ -112,7 +112,7 @@
     </section>
     <section class="sec5">
         <div class="sec5__container">
-            <div class="h1 blue font-mons" data-xd="t2"> SLIMMING PATCH </div>
+            <div class="h1 blue font-mons" data-xd="t2"> KIYESKI BODY SHAPING </div>
             <div class="h2 blue font-mons" data-xd="t2">Šta je tako jedinstveno u njegovom sastavu?</div>
             <p class="font-PT"> Vaše telo se transformiše zahvaljujući posebnoj kombinaciji prirodnih sastojaka <b class="blue">koji daju energiju i ubrzavaju sagorevanje masti</b></p>
             <div class="sec5__grid">
@@ -142,7 +142,7 @@
                             <div class="h1 font-mons"> Mršavljenje </div>
                             <ul class="font-PT">
                                 <li class="red"> Obične dijete </li>
-                                <li class="gr"> Slimming Patch </li>
+                                <li class="gr"> Kiyeski Body Shaping </li>
                             </ul>
                         </div>
                     </div>
@@ -173,7 +173,7 @@
                             <div class="h1 font-mons"> Održavanje težine </div>
                             <ul class="font-PT">
                                 <li class="red"> Obične dijete </li>
-                                <li class="gr"> Slimming Patch </li>
+                                <li class="gr"> Kiyeski Body Shaping </li>
                             </ul>
                         </div>
                     </div>
@@ -214,7 +214,7 @@
                     <div class="after"></div>
                     <div class="girl-name blue font-mons" data-xd="t46"> Dijana, 28 godina </div>
                     <p class="last-p font-PT">Udebljala sam se nakon porođaja. Mislila sam da ću lako da smršam, ali nakon mnogih dijeta, i dalje sam se debljala.
-                        Bila sam stalno gladna i lošeg raspoloženja. Nakon korišćenja Slimming flastera, odmah sam počela da se osećam bolje.
+                        Bila sam stalno gladna i lošeg raspoloženja. Nakon korišćenja Kiyeski flastera, odmah sam počela da se osećam bolje.
                         Imala sam više energije tokom dana, uveče sam bila manje umorna, živela sam s manje stresa.
                         Kao rezultat, postigla sam idealnu težinu u roku od 2,5 meseca. Inače, nisam dolazila do idealne težine ni za godinu dana držanja dijete!</p>
                 </div>
@@ -228,8 +228,8 @@
                 <div class="h1 blue font-mons" data-xd="t2"> 12 kg manje </div>
                 <div class="h2 pink font-mons" data-xd="t2"> u roku od 2 meseca </div>
                 <p class="font-PT up_p"> Ovakvi rezultati se postižu zahvaljujući kombinaciji dva faktora - <b class="blue"> razgradnji masti + eliminaciji toksina. </b></p>
-                <div class="only-web"><img alt class="prod" src="{{ asset('/') }}naturapharmFiles/slimmingpatch/prod.png"></div>
-                <div class="only-mob"><img alt class="prod" src="{{ asset('/') }}naturapharmFiles/slimmingpatch/prod.png"></div>
+                <div class="only-web"><img alt class="prod" src="{{ asset('/') }}naturapharmFiles/kiyeskibodyshaping/prod.png"></div>
+                <div class="only-mob"><img alt class="prod" src="{{ asset('/') }}naturapharmFiles/kiyeskibodyshaping/prod.png"></div>
                 <div class="girl"></div>
             </div>
             <p class="font-PT margin-left"><b class="pink"> Toksini napuštaju telo već tokom prvih nedelja tretmana. </b><br> Zato su rezultati vidljivi odmah. </p>
@@ -245,8 +245,8 @@
                     <div class="girl"></div>
                     <p class="blue font-mons"> Gordana, <br> dijetetičar </p>
                 </div>
-                <p class="font-PT">Slimming Patch je biološki aktivan proizvod s celovitim efektom poboljšanja zdravlja koje će čak i ljudi oko vas da primete.
-                    Pozitivni rezultati mogu da se vide i u analizi krvi. Nizak nivo holesterola, stabilan nivo šećera, zdrava količina proteina su ono što nalazi mojih pacijenata pokažu zahvaljujući Slimming flasterima!</p>
+                <p class="font-PT">Kiyeski Body Shaping je biološki aktivan proizvod s celovitim efektom poboljšanja zdravlja koje će čak i ljudi oko vas da primete.
+                    Pozitivni rezultati mogu da se vide i u analizi krvi. Nizak nivo holesterola, stabilan nivo šećera, zdrava količina proteina su ono što nalazi mojih pacijenata pokažu zahvaljujući Kiyeski flasterima!</p>
                 <div class="photo_after"></div>
             </div>
         </div>
@@ -254,11 +254,11 @@
     <section class="sec10">
         <div class="sec10__container">
             <div class="sec10__grid">
-                <div class="sec10__part"><img alt class="prod only-web" src="{{ asset('/') }}naturapharmFiles/slimmingpatch/prod.png"></div>
+                <div class="sec10__part"><img alt class="prod only-web" src="{{ asset('/') }}naturapharmFiles/kiyeskibodyshaping/prod.png"></div>
                 <div class="sec10__part">
-                    <div class="h1 blue font-mons" data-xd="t2"> SLIMMING PATCH </div>
+                    <div class="h1 blue font-mons" data-xd="t2"> KIYESKI BODY SHAPING </div>
                     <div class="h2 pink font-mons" data-xd="t2"> Oblikujte svoje telo! </div>
-                    <img alt class="prod only-mob" src="{{ asset('/') }}naturapharmFiles/slimmingpatch/prod.png"><button class="btn for_scroll"> Naručite </button>
+                    <img alt class="prod only-mob" src="{{ asset('/') }}naturapharmFiles/kiyeskibodyshaping/prod.png"><button class="btn for_scroll"> Naručite </button>
                 </div>
             </div>
         </div>
@@ -269,7 +269,7 @@
             <div class="h2 green font-mons" data-xd="t2"> kupci </div>
             <div class="comment">
                 <div class="star5"></div>
-                <p class="font-PT">Čula sam za Slimming Patch pre 6 meseci. Tada sam imala 90 kg. Za samo dva meseca, smršala sam gotovo 20 kg! Presrećna sam! Nakon toga, počela sam da mršavim sporo. Uprkos tome, sad imam 62,5 kg i osećam se bolje nego ikad.</p>
+                <p class="font-PT">Čula sam za Kiyeski Body Shaping pre 6 meseci. Tada sam imala 90 kg. Za samo dva meseca, smršala sam gotovo 20 kg! Presrećna sam! Nakon toga, počela sam da mršavim sporo. Uprkos tome, sad imam 62,5 kg i osećam se bolje nego ikad.</p>
                 <img alt class="comm_img" src="{{ asset('/') }}natureteaFiles/slimonex1/comm1.jpg">
                 <p class="font-PT">
                     <b class="blue">
@@ -279,7 +279,7 @@
             </div>
             <div class="comment">
                 <div class="star5"></div>
-                <p class="font-PT">Smršala sam sa Slimming flasterima pre godinu dana. Najvažnije je što nisu samo pomogli da smršam 20 kg, nego su i pročistili moje telo.
+                <p class="font-PT">Smršala sam sa Kiyeski flasterima pre godinu dana. Najvažnije je što nisu samo pomogli da smršam 20 kg, nego su i pročistili moje telo.
                     Stomak me više ne boli, nemam alergije i osećam da sam puna energije.</p>
                 <img alt class="comm_img" src="{{ asset('/') }}natureteaFiles/slimonex1/comm2.jpg">
                 <p class="font-PT">
@@ -299,7 +299,7 @@
             </div>
             <div class="comment">
                 <div class="star4"></div>
-                <p class="font-PT">Koristim Slimming Patch nedelju dana i već vidim rezultate. Pantalone me više ne stežu.</p>
+                <p class="font-PT">Koristim Kiyeski Body Shaping nedelju dana i već vidim rezultate. Pantalone me više ne stežu.</p>
                 <p class="font-PT">
                     <b class="blue">
                         Miroslava
@@ -307,7 +307,7 @@
                 </p>
             </div>
             <div class="comment">
-                <p class="font-PT">Naporno sam trenirao u teretani 2 godine. Osim toga, bio sam stalno na dijeti jer sam hteo da smršam 45 kg. Bilo je baš teško. Odlučio sam da probam Slimming Patch jer ne znam više šta da radim s kilogramima.</p>
+                <p class="font-PT">Naporno sam trenirao u teretani 2 godine. Osim toga, bio sam stalno na dijeti jer sam hteo da smršam 45 kg. Bilo je baš teško. Odlučio sam da probam Kiyeski Body Shaping jer ne znam više šta da radim s kilogramima.</p>
                 <p class="font-PT">
                     <b class="blue">
                         Bojan
@@ -316,7 +316,7 @@
             </div>
             <div class="comment">
                 <div class="star4"></div>
-                <p class="font-PT">Moj kolega koristi Slimming svaki dan. Mnogo je smršao! Sa XL veličine je prešao na S tako da mogu reći da ovaj dodatak stvarno deluje. Bolje deluje od dijete, vi budete pobednici.</p>
+                <p class="font-PT">Moj kolega koristi Kiyeski svaki dan. Mnogo je smršao! Sa XL veličine je prešao na S tako da mogu reći da ovaj dodatak stvarno deluje. Bolje deluje od dijete, vi budete pobednici.</p>
                 <p class="font-PT">
                     <b class="blue">
                         Ana
@@ -325,7 +325,7 @@
             </div>
             <div class="comment">
                 <div class="star5"></div>
-                <p class="font-PT">Sviđa mi se osećaj lakoće koji daje Slimming Patch! Imam mnogo energije tokom dana! Višak kilograma je za mene stvar prošlosti.</p>
+                <p class="font-PT">Sviđa mi se osećaj lakoće koji daje Kiyeski Body Shaping! Imam mnogo energije tokom dana! Višak kilograma je za mene stvar prošlosti.</p>
                 <p class="font-PT">
                     <b class="blue">
                         Kristina
@@ -334,7 +334,7 @@
             </div>
             <div class="comment">
                 <div class="star5"></div>
-                <p class="font-PT">Jeeee! Slimming Patch je nešto neverovatno! Smršao sam 7 kg bez imalo napora u samo mesec dana. Sada radim na trbušnim mišićima.</p>
+                <p class="font-PT">Jeeee! Kiyeski Body Shaping je nešto neverovatno! Smršao sam 7 kg bez imalo napora u samo mesec dana. Sada radim na trbušnim mišićima.</p>
                 <img alt class="comm_img" src="{{ asset('/') }}natureteaFiles/slimonex1/comm3.jpg">
                 <p class="font-PT">
                     <b class="blue">
@@ -344,7 +344,7 @@
             </div>
             <div class="comment">
                 <div class="star5"></div>
-                <p class="font-PT">Više od mesec dana sam gubila težinu sa Slimming flasterima. Malo po malo, apetit mi se smanjivao. Počela sam da se osećam sito već nakon malih porcija.
+                <p class="font-PT">Više od mesec dana sam gubila težinu sa Kiyeski flasterima. Malo po malo, apetit mi se smanjivao. Počela sam da se osećam sito već nakon malih porcija.
                     Nisam bila na dijeti, samo sam ograničila unos šećera i testenine. Kao rezultat, smršala sam 12 kg. Salo sa grudi i stomaka je nestalo. Pogledajte moju građu.</p>
                 <img alt class="comm_img" src="{{ asset('/') }}natureteaFiles/slimonex1/comm4.jpg">
                 <p class="font-PT">
@@ -362,7 +362,7 @@
                 </p>
             </div>
             <div class="comment">
-                <p class="font-PT">Slimming Patch je moja zadnja nada! Borim se s viškom kilograma već 10 godina. Probala sam sve. Naručila sam danas ovo sredstvo. Videćemo kad stigne.</p>
+                <p class="font-PT">Kiyeski Body Shaping je moja zadnja nada! Borim se s viškom kilograma već 10 godina. Probala sam sve. Naručila sam danas ovo sredstvo. Videćemo kad stigne.</p>
                 <p class="font-PT">
                     <b class="blue">
                         Jelena
@@ -382,7 +382,7 @@
             </div>
             <div class="comment">
                 <div class="star5"></div>
-                <p class="font-PT">Volim da koristim Slimming Patch pre treninga. Daje mi mnogo energije, dovoljno da obavim sve zadatke tokom dana.</p>
+                <p class="font-PT">Volim da koristim Kiyeski Body Shaping pre treninga. Daje mi mnogo energije, dovoljno da obavim sve zadatke tokom dana.</p>
                 <p class="font-PT">
                     <b class="blue">
                         Aleksandra
@@ -390,7 +390,7 @@
                 </p>
             </div>
             <div class="comment">
-                <p class="font-PT">Bavim se sportom ceo život i uvek sam imala problema sa strukom i bedrima. Želim savršeno telo. Došlo je vreme da probam Slimming Patch.</p>
+                <p class="font-PT">Bavim se sportom ceo život i uvek sam imala problema sa strukom i bedrima. Želim savršeno telo. Došlo je vreme da probam Kiyeski Body Shaping.</p>
                 <p class="font-PT">
                     <b class="blue">
                         Dunja
@@ -403,11 +403,11 @@
         <div class="sec12__container">
             <div class="sec12__grid">
                 <div class="sec12__part">
-                    <div class="h2 blue font-mons" data-xd="t2"> SLIMMING PATCH - Za ravan i privlačan stomak! </div>
-                    <div class="h1 blue font-mons" data-xd="t2"> SLIMMING PATCH</div>
+                    <div class="h2 blue font-mons" data-xd="t2"> KIYESKI BODY SHAPING - Za ravan i privlačan stomak! </div>
+                    <div class="h1 blue font-mons" data-xd="t2"> KIYESKI BODY SHAPING</div>
                     <div class="h2 pink font-mons" data-xd="t2"> Za savršeno telo bez štete po zdravlje </div>
                     <div class="discount font-PT"> -40% </div>
-                    <img alt class="prod only-web" src="{{ asset('/') }}naturapharmFiles/slimmingpatch/prod2.png"><img alt class="prod only-mob" src="{{ asset('/') }}naturapharmFiles/slimmingpatch/prod2.png">
+                    <img alt class="prod only-web" src="{{ asset('/') }}naturapharmFiles/kiyeskibodyshaping/prod2.png"><img alt class="prod only-mob" src="{{ asset('/') }}naturapharmFiles/kiyeskibodyshaping/prod2.png">
                 </div>
                 <div class="sec12__part">
                     <div class="order">
