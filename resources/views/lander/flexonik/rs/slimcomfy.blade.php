@@ -34,18 +34,18 @@
         }
         .top-block-v2{
             padding: 432px 0 0;
-            background: url('{{ asset('/') }}flexonikFiles/burningbelt/top-block-v2.png') 50% 0 no-repeat;
+            background: url('{{ asset('/') }}flexonikFiles/slimcomfy/top-block-v2.png') 50% 0 no-repeat;
         }
     </style>
 </head>
 <body>
 <div class="main-wrap">
-    @include('components.display_errors')
+@include('components.display_errors')
 
-    <!-- -v2 -->
+<!-- -v2 -->
     <section class="title-block">
-        <div class="sub-main-title">NOSITE I MRŠAVITE <br>KORSET ZA SAGOREVANJE MASTI</div>
-        <h1 class="main-title">Burning Belt</h1>
+        <div class="sub-main-title">NOSITE SLIM COMFY <br>I IZGLEDAJTE SAVRŠENO</div>
+        <h1 class="main-title">SLIM COMFY</h1>
     </section>
 
     <section class="top-block-v2">
@@ -76,61 +76,57 @@
 
     <!-- -v3 -->
     <section class="sup-block-v3 benefits1_section">
-        <h2 class="lvl-title">BURNING BELT <br/>SE PREPORUČUJE <br/>UKOLIKO:</h2>
+        <h2 class="lvl-title">SLIM COMFY <br/>SE PREPORUČUJE <br/>UKOLIKO:</h2>
         <ul class="sup-cont clearfix">
             <li>
                 <img src="{{ asset('/') }}naturapharmFiles/korset/sup-block-v3_1.jpg" alt="Burning Belt">
-                <p>Želite lepu figuru u najkraćem mogućem roku</p>
+                <p>Želite da imate lepu figuru u najkraćem roku. Pri treningu topi masne naslage</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}naturapharmFiles/korset/sup-block-v3_2.jpg" alt="Burning Belt">
-                <p>Odlučili ste da dovedete svoje telo do savršenstva bez izgladnjivanja i dijeta</p>
+                <p>Odlučili ste da vaše telo izgleda savršeno bez izgladnjivanja i dijeta</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}naturapharmFiles/korset/sup-block-v3_3.jpg" alt="Burning Belt">
-                <p>Hoćete da imate idealnu kilažu</p>
+                <p>Želite da vaše telo izgleda kao da imate idealnu kilažu</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}naturapharmFiles/korset/sup-block-v3_4.jpg" alt="Burning Belt">
-                <p>Želite zavodljiv i tanak struk</p>
+                <p>Želite zavodljiv i tanak struk sa istaknutim grudima</p>
             </li>
         </ul>
     </section>
 
     <!--  -->
     <section class="detail-block about_section">
-        <h2 class="lvl-title">BURNING BELT KORSET ZA SAGOREVANJE MASTI</h2>
+        <h2 class="lvl-title">SLIM COMFY ZA OBLIKOVANJE TELA</h2>
         <div class="text-cont">
-            <p>Posebno je dizajniran za <b>siguran i brz</b> gubitak težine.</p>
-            <p>Burning Belt korset za sagorevanje masti dobro pristaje vašem telu,
-                dok jedinstvena <b>Neotex tehnologija</b> stimuliše povećanje unutrašnje temperature,
-                utičući ne samo na površinske nego i na <b>duboke naslage masti.</b></p>
-            <p>Ova akcija izaziva povećanje znojenja, i to <b>do 4 puta više</b> nego u
-                normalnom stanju. Ovo omogućava telu da se oslobodi viška tečnosti
-                i toksina.</p>
-            <img src="{{ asset('/') }}flexonikFiles/burningbelt/pic-1.png" alt="Burning Belt">
+            <p>Posebno je dizajniran za momentalni vizuelni <b>efekat savršenog tela.</b></p>
+            <p>Slim Comfy je napravljen da <b>savršeno prijanja uz vaše telo,</b> oblikujući ga i praveći idealnu figuru. Može da se nosi ispod odeće i <b>veoma je neosetan.</b></p>
+            <p>Poznato je da je struk najteže oblikovati, zato se kod nas pojavilo idealno rešenje za to - <b>obučeš Slim Comfy i gotovo</b> - svi će biti oduševljeni tvojim izgledom.</p>
+            <img src="{{ asset('/') }}flexonikFiles/slimcomfy/pic-1.png" alt="Burning Belt">
         </div>
     </section>
 
     <!-- -v2 -->
     <section class="sup-block-v2">
-        <h2 class="lvl-title">EFIKASNOST KORSETA <br/> BURNING BELT</h2>
+        <h2 class="lvl-title">EFIKASNOT SLIM COMFY-A</h2>
         <ul class="sup-cont clearfix grig">
             <li>
-                <h4>POVEĆAVA ZNOJENJE 4 PUTA</h4>
-                <p>Smanjiće masne naslage na nepotrebnim mestima, a mišići će postati istaknutiji</p>
+                <h4>SMANJUJE EFEKAT NADUDOSTI</h4>
+                <p>Kompresiona vlakna pozitivno utiču na mišićnu strukturu i na taj način smanjuju vizuelni efekat nadutosti i stvaraju ravan stomak.</p>
             </li>
             <li>
-                <h4>UBRZAVA METABOLIZAM</h4>
-                <p>Redovnom upotrebom daje 100% rezultat (i do minus 6 kilograma mesečno)</p>
+                <h4>DOPADLJIVA FIGURA</h4>
+                <p>Obucite i imajte atraktivno telo bez muke i napora.</p>
             </li>
             <li>
                 <h4>NEOTEX TEHNOLOGIJA</h4>
-                <p>Napravljen je od Neotex tkanine čiji unutrašnji sloj pojačava rad znojnih žlezda, a spoljašnji sloj upija znoj sprečavajući vlaženje tkanine</p>
+                <p>Napravljen je od Neotex tkanine koja savršeno diše i ne stvara neprijatno znojenje. Ukoliko želite da trenirate uz Slim Comfy, onda će pospešiti zagrevanje i topljenje masti.</p>
             </li>
             <li>
-                <h4>PRIMETAN UČINAK</h4>
-                <p>Sagoreva 72% više masti tokom treninga, a ima pozitivan efekat i pri mirovanju</p>
+                <h4>INSTANT EFEKAT</h4>
+                <p>Nije potrebno vreme da bi proizvod dao rezultate. Obucite ga i gotovo.</p>
             </li>
         </ul>
         <a class="button-m" href="#zakaz">PORUČITE SADA</a>
@@ -139,7 +135,7 @@
 
     <!-- -v3 -->
     <section class="sup-block-v3 use_section">
-        <h2 class="lvl-title">KADA I GDE MOŽE DA SE KORISTI BURNING BELT KORSET?</h2>
+        <h2 class="lvl-title">KADA I GDE MOŽE DA SE NOSI SLIM COMFY?</h2>
         <ul class="sup-cont clearfix">
             <li>
                 <img src="{{ asset('/') }}naturapharmFiles/korset/use1.jpg" alt="Burning Belt">
@@ -166,12 +162,12 @@
                 <p>ČUVANJE DECE</p>
             </li>
         </ul>
-        <p class="description">UPRAŽNJAVAJ SVOJE SVAKODNEVNE AKTIVNOSTI I USPUT DOVEDI SVOJE TELO U <br/> SAVRŠENU LINIJU!</p>
+        <p class="description">UPRAŽNJAVAJTE SVOJE SVAKODNEVNE AKTIVNOSTI <br> I IZGLEDAJTE SAVRŠENO</p>
     </section>
 
     <!-- -v1 -->
     <section class="delivery-block-v1">
-        <h2 class="lvl-title">KAKO PORUČITI <br/> BURNING BELT KORSET?</h2>
+        <h2 class="lvl-title">KAKO PORUČITI <br/> SLIM COMFY?</h2>
         <ul class="delivery-cont clearfix">
             <li>
                 <p>Poručite popunjavanjem forme na našem sajtu</p>
@@ -183,7 +179,7 @@
                 <p>Paket ćete dobiti brzom poštom u roku od 2 radna dana</p>
             </li>
             <li>
-                <p>Pošiljku ćete platiti kuriru brze pošte po preuzimanju.</p>
+                <p>Pošiljku ćete platiti kuriru brze pošte po preuzimanju</p>
             </li>
         </ul>
     </section>
@@ -195,29 +191,27 @@
             <div class="rev-item">
                 <img src="{{ asset('/') }}naturapharmFiles/korset/rev-block-v3_1.jpg" alt="Burning Belt">
                 <h4>Milica Mitrović, 33 godine</h4>
-                <p>Videla sam oglas i i odlučila sam da pokušam. Rezultati su neverovatni! Sviđa mi se što steže bočne strane i nije vidljiv ispod odeće.
-                    Samo nedelju dana kasnije ljudi iz moje okoline su počeli da mi govore da sam smršala!
-                    Moj rezultat za mesec dana je čak minus 8 kilograma! Preporučujem svakome ovaj proizvod!</p>
+                <p>Videla sam oglas i odlučila sam da pokušam. Rezultat je neverovatan. Sviđa mi se što steže bočne strane i nije vidljiv ispod odeće. Ljudi iz moje okoline su mi počeli govoriti da sam smršala.
+                    Ja sam čak i trenirala u njemu i dao je odlične efekte. Mnogo zagreva telo i pospešuje znojenje, ali najbolje od svega je što diše i što se ne osećam kao pod folijom.</p>
             </div>
             <div class="rev-item">
-                <img src="{{ asset('/') }}naturapharmFiles/korset/rev-block-v3_2.jpg" alt="Burning Belt">
+                <img src="{{ asset('/') }}flexonikFiles/slimcomfy/rev-block-v3_2.png" alt="Burning Belt">
                 <h4>Boriša Gavrić , 31 godina</h4>
-                <p>Kupio sam korset za svoju suprugu, jer je dugo pokušavala da izgubi kilograme.
-                    Imao sam sreću da sam proizvod kupio sa popustom, a ona je izgubila kilograme i srećna je kao nikada do sada, a i ja sa njom! Hvala Vam!</p>
+                <p>Kupio sam Slim Comfy za svoju suprugu jer je dugo i bezuspešno pokušavala da se oslobodi stomaka. Imao sam sreću da sam proizvod kupio sa popustom, a ona je izgledala kao gorska vila. Presrećni smo, hvala vam.</p>
             </div>
             <div class="rev-item">
                 <img src="{{ asset('/') }}naturapharmFiles/korset/rev-block-v3_3.jpg" alt="Burning Belt">
                 <h4>Dragana Marković, 29 godina</h4>
-                <p>Korset je isporučen 2 dana nakon što sam ga poručila. Koristim ga već 9 nedelja. Nosim ga gde god je to moguće – u šetnji sa detetom, kod kuće, na trčanju.
-                    Rezultat je kao što i sami vidite. Struk mi je tanji za 14 centimetara, a bokovi za 12. Ne želim da stanem na ovome, nastaviću da ga nosim.</p>
+                <p>Slim Comfy mi je stigao 2 dana nakon što sam ga poručila. Koristim ga već 9 nedelja. Nosim ga kad god je to moguće - u šetnji sa detetom, kod kuće pa i na trčanju. Primetila sam da kada trčim u njemu da
+                    jako pospešuje znojenje i topljenje masnih naslaga. Struk mi je tanji za 14 centimetara. Ne želim da stanem na ovome, nastaviću da ga nosim.</p>
             </div>
         </div>
     </section>
 
     <!-- -v2 -->
     <section class="title-block">
-        <div class="sub-main-title">NOSITE I MRŠAVITE <br>KORSET ZA SAGOREVANJE MASTI</div>
-        <h1 class="main-title">Burning Belt</h1>
+        <div class="sub-main-title">NOSITE SLIM COMFY <br> I IZGLEDAJTE SAVRŠENO</div>
+        <h1 class="main-title">SLIM COMFY</h1>
     </section>
 
     <section class="top-block-v2">
@@ -251,7 +245,6 @@
                     <button class="button-m">PORUČITE SADA</button>
                 </div>
             </form>
-            {{--<div class="ost-col"><span>12</span> PEÇAS RESTANTES NO STOCK</div>--}}
         </div>
     </section>
 </div>
