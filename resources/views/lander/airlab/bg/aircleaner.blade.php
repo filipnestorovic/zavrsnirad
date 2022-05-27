@@ -22,7 +22,7 @@
                 <img data-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}myairlabFiles/shared_files/airlab_logo.png" id="isc5n" data-lazy-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}myairlabFiles/shared_files/airlab_logo.png" src="{{ asset('/') }}myairlabFiles/shared_files/airlab_logo.png" width="378" height="56">
             </picture>
             <div id="i4gz85" class="i4gz85_global">
-                <div id="i298zd">Očistite vazduh od štetnih alergena, prašine, bakterija i mirisa!</div>
+                <div id="i298zd">Почистете въздуха от вредни алергени, прах, бактерии и миризми!</div>
             </div>
         </div>
         <a ctr-type-link="external" href="{{$checkoutView}}" call-to-action cta-id="ij3opi" id="ij3opi">
@@ -46,7 +46,7 @@
                         <source srcset="{{ asset('/') }}myairlabFiles/shared_files/airlab_logo.png" type="image/png">
                         <img data-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}myairlabFiles/shared_files/airlab_logo.png" id="i02b57" data-lazy-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}myairlabFiles/shared_files/airlab_logo.png" src="{{ asset('/') }}myairlabFiles/shared_files/airlab_logo.png" width="378" height="56">
                     </picture>
-                    <div id="ivq6yl">Očistite vazduh od štetnih alergena, prašine, bakterija i mirisa!</div>
+                    <div id="ivq6yl">Почистете въздуха от вредни алергени, прах, бактерии и миризми!</div>
                     <div id="illync" class="illync_global"><a href="{{$checkoutView}}" ctr-type-link="external" id="i7cqnm" target="_blank" class="navbar-menu-link">Poručite sada</a></div>
                 </div>
             </div>
@@ -57,8 +57,8 @@
             <div id="i8qct3" class="col i8qct3_global">
                 <div id="irre9i" class="gjs-row">
                     <div id="inlm9z" class="gjs-cell">
-                        <div id="i09ldq">Pročistite vazduh koji udišete jednim pritiskom na dugme!</div>
-                        <div id="iv56sl"><span id="ipre0c">Očistite vazduh od štetnih alergena, prašine, bakterija i mirisa!</span></div>
+                        <div id="i09ldq">Пречистете въздуха, който дишeте  само с едно натискане на бутона!</div>
+                        <div id="iv56sl"><span id="ipre0c">Почистете въздуха от вредни алергени, прах, бактерии и миризми!</span></div>
                         <div id="i2qdim" class="i2qdim_global"></div>
                         <div id="irfmnp" class="container irfmnp_global">
                             <div id="ilwkdw" class="col ilwkdw_global">
@@ -473,8 +473,8 @@
         <div id="ihj3x4" class="container ihj3x4_global">
             <div id="id9nh5" class="col id9nh5_global">
                 <div id="ixmeth" class="gjs-cell">
-                    <div id="izzf6n">Pročistite vazduh koji udišete jednim pritiskom na dugme!</div>
-                    <div id="izafln">Očistite vazduh od štetnih alergena, prašine, bakterija i mirisa!</div>
+                    <div id="izzf6n">Пречистете въздуха, който дишeте  само с едно натискане на бутона!</div>
+                    <div id="izafln">Почистете въздуха от вредни алергени, прах, бактерии и миризми!</div>
                     <div id="it8ctn" class="it8ctn_global"></div>
                     <div id="ih8uyi" class="ih8uyi_global">
                         <picture class="ctr-generated">
