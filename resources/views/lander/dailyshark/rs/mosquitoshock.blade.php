@@ -106,15 +106,15 @@
                 <div id="i2c7mz" class="i2c7mz_global">
                     <img data-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}dailysharkFiles/mosquitoshock/image/584ea331-0cd2-4c48-85d9-737f9dddfa0b/6267aa9c00cfe910c010cdd9/5b3ea898-7354-4f8a-b033-40febac20612/buzz-bgonefarm.webp?t=20220317T192337346" id="inb3o3" data-ctr-islazy data-lazy-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}dailysharkFiles/mosquitoshock/image/584ea331-0cd2-4c48-85d9-737f9dddfa0b/6267aa9c00cfe910c010cdd9/5b3ea898-7354-4f8a-b033-40febac20612/buzz-bgonefarm.webp?t=20220317T192337346" data-ctr-lazy-src="{{ asset('/') }}dailysharkFiles/mosquitoshock/image/584ea331-0cd2-4c48-85d9-737f9dddfa0b/6267aa9c00cfe910c010cdd9/5b3ea898-7354-4f8a-b033-40febac20612/buzz-bgonefarm.webp?t=20220317T192337346" loading="lazy" class="ctr-lazy-image" width="1" height="1"><img data-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}dailysharkFiles/mosquitoshock/image/584ea331-0cd2-4c48-85d9-737f9dddfa0b/6267aa9c00cfe910c010cdd9/a3695b97-3a4d-4878-ba77-f884415fe40a/img_2.webp?t=20220317T192337403" data-lazy-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}dailysharkFiles/mosquitoshock/image/584ea331-0cd2-4c48-85d9-737f9dddfa0b/6267aa9c00cfe910c010cdd9/a3695b97-3a4d-4878-ba77-f884415fe40a/img_2.webp?t=20220317T192337403" id="itw9vx" data-ctr-islazy data-ctr-lazy-src="{{ asset('/') }}dailysharkFiles/mosquitoshock/image/584ea331-0cd2-4c48-85d9-737f9dddfa0b/6267aa9c00cfe910c010cdd9/a3695b97-3a4d-4878-ba77-f884415fe40a/img_2.webp?t=20220317T192337403" loading="lazy" class="ctr-lazy-image" width="1" height="1">
                     <div id="ikzeox">
-                        Ima punjivu litijumsku bateriju koja <b id="iafsba">traje i preko 14 sati,</b>
-                        što je odlično jer možete da ga koristite <b id="i86y5k">bez povezivanja na utičnicu.</b>
-                        Ova lampa stvara i <b id="i62v5n">UV frekvenciju</b> koju komarci ne podnose.
+{{--                        Ima punjivu litijumsku bateriju koja <b id="iafsba">traje i preko 14 sati,</b>--}}
+{{--                        što je odlično jer možete da ga koristite <b id="i86y5k">bez povezivanja na utičnicu.</b>--}}
+                        Ova lampa stvara <b id="i62v5n">UV frekvenciju</b> koju komarci ne podnose.
                     </div>
                 </div>
                 <div id="ida9if">
-                    Ima punjivu litijumsku bateriju koja <b id="iafsba">traje i preko 14 sati,</b>
-                    što je odlično jer možete da ga koristite <b id="i86y5k">bez povezivanja na utičnicu.</b>
-                    Ova lampa stvara i <b id="i62v5n">UV frekvenciju</b> koju komarci ne podnose.
+{{--                    Ima punjivu litijumsku bateriju koja <b id="iafsba">traje i preko 14 sati,</b>--}}
+{{--                    što je odlično jer možete da ga koristite <b id="i86y5k">bez povezivanja na utičnicu.</b>--}}
+                    Ova lampa stvara <b id="i62v5n">UV frekvenciju</b> koju komarci ne podnose.
                 </div>
                 <picture class="ctr-generated">
                     <source data-srcset="{{ asset('/') }}dailysharkFiles/mosquitoshock/image/584ea331-0cd2-4c48-85d9-737f9dddfa0b/6267aa9c00cfe910c010cdd9/44a4be42-ffae-4140-92be-0864f9817661/img_4_mb.webp" media="(max-width:767px)">
@@ -257,18 +257,18 @@
                         <div id="irkqsv"><span draggable="true" id="i7ko3l">Kompaktan i prenosiv</span> –
                             <a id="it55lx" ctr-type-link="internal" call-to-action cta-id="it55lx" href="{{$checkoutView}}">Mosquito Shock</a>
                             se savršeno uklapa u bilo koji ugao vaše sobe i <b id="inkzxq">dovoljno je lagan da se ponese u prirodu.</b>
-                            Pošto se može puniti, ne morate razmišljati da li ćete imati utičnicu.
+{{--                            Pošto se može puniti, ne morate razmišljati da li ćete imati utičnicu.--}}
                         </div>
                     </div>
                 </div>
-                <div id="iwguy5" class="iwguy5_global">
-                    <img data-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}dailysharkFiles/mosquitoshock/image/584ea331-0cd2-4c48-85d9-737f9dddfa0b/6267aa9c00cfe910c010cdd9/df110e29-a84a-4cd6-8add-0138f3c70927/num_5.webp?t=20220317T192337515" data-lazy-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}dailysharkFiles/mosquitoshock/image/584ea331-0cd2-4c48-85d9-737f9dddfa0b/6267aa9c00cfe910c010cdd9/df110e29-a84a-4cd6-8add-0138f3c70927/num_5.webp?t=20220317T192337515" data-ctr-islazy id="i6qid7" data-ctr-lazy-src="{{ asset('/') }}dailysharkFiles/mosquitoshock/image/584ea331-0cd2-4c48-85d9-737f9dddfa0b/6267aa9c00cfe910c010cdd9/df110e29-a84a-4cd6-8add-0138f3c70927/num_5.webp?t=20220317T192337515" loading="lazy" class="ctr-lazy-image" width="1" height="1">
-                    <div id="inecyk" class="inecyk_global">
-                        <div id="innbb7"><span draggable="true" id="icqhyi">Dug vek trajanja baterije</span> –
-                            Ova neverovatna energetski efikasna lampa traje <b id="i32dpx">do 14 sati</b> sa <span id="ib5m8s">jednim punjenjem.</span>
-                        </div>
-                    </div>
-                </div>
+{{--                <div id="iwguy5" class="iwguy5_global">--}}
+{{--                    <img data-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}dailysharkFiles/mosquitoshock/image/584ea331-0cd2-4c48-85d9-737f9dddfa0b/6267aa9c00cfe910c010cdd9/df110e29-a84a-4cd6-8add-0138f3c70927/num_5.webp?t=20220317T192337515" data-lazy-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}dailysharkFiles/mosquitoshock/image/584ea331-0cd2-4c48-85d9-737f9dddfa0b/6267aa9c00cfe910c010cdd9/df110e29-a84a-4cd6-8add-0138f3c70927/num_5.webp?t=20220317T192337515" data-ctr-islazy id="i6qid7" data-ctr-lazy-src="{{ asset('/') }}dailysharkFiles/mosquitoshock/image/584ea331-0cd2-4c48-85d9-737f9dddfa0b/6267aa9c00cfe910c010cdd9/df110e29-a84a-4cd6-8add-0138f3c70927/num_5.webp?t=20220317T192337515" loading="lazy" class="ctr-lazy-image" width="1" height="1">--}}
+{{--                    <div id="inecyk" class="inecyk_global">--}}
+{{--                        <div id="innbb7"><span draggable="true" id="icqhyi">Dug vek trajanja baterije</span> –--}}
+{{--                            Ova neverovatna energetski efikasna lampa traje <b id="i32dpx">do 14 sati</b> sa <span id="ib5m8s">jednim punjenjem.</span>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
                 <div id="itwyzl" class="itwyzl_global">
                     <h2 id="i7yn6k">Zaključak: <span id="i2xaak">Nabavite Mosquito Shock već danas!</span></h2>
                 </div>
@@ -338,7 +338,7 @@
                 <div id="iufi68">
                     Kako doći do ovog proizvoda:
                     <div id="i1xwuv"><b id="ii8wlk">Korak 1:</b> <a id="ir7lq8" ctr-type-link="internal" call-to-action cta-id="ir7lq8" href="{{$checkoutView}}">Kliknite na dugme iznad i proverite dostupnost.</a> Ukoliko je proizvod dostupan poručite ga.</div>
-                    <div id="i9er3v"><b id="i1jec3">Korak 2:</b> Proizvod vam šaljemo brzom poštom u roku od 1-2 radna dana.</div>
+                    <div id="i9er3v"><b id="i1jec3">Korak 2:</b> Proizvod se šalje brzom poštom u roku od 1-2 radna dana.</div>
                     <div id="iikajb"><b id="i6nyih">Korak 3:</b> Plaćate kuriru brze pošte po preuzimanju pošiljke</div>
                 </div>
                 <div id="ihu2hd" class="ihu2hd_global animatedBackground">
