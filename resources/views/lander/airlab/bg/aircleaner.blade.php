@@ -11,7 +11,9 @@
     <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css?family=Roboto:400,500&amp;display=swap">
     <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css?family=Big+Shoulders+Display:400,700&amp;display=swap">
     <link rel="stylesheet" href="{{ asset('/') }}purplerelaxFiles/aircleaner/index-v1.css?v=1635494907499">
-    <style>@font-face{font-family:Avenir Next Regular;font-stretch:normal;font-style:normal;unicode-range:U+0-10FFFF;src:url({{asset('/')}}fonts/avenirnextltpro-regular.otf);font-weight:400;font-display:swap}</style><style>@font-face{font-family:Avenir Next Bold;font-stretch:normal;font-style:normal;unicode-range:U+0-10FFFF;src:url({{asset('/')}}fonts/avenirnextltpro-bold.otf);font-weight:400;font-display:swap}</style><style>b,strong{font-family:Avenir Next Bold!important}@media (max-width:767px){#ipyroh{padding:0!important;background:none!important}#ih1pz6{padding:0!important;background:none!important}#ixxh7{padding:0!important;background:none!important}}@media (max-width:480px){.w-step{max-width:240px}}</style><style>@font-face{font-family:Avenir-next-medium;font-stretch:normal;font-style:normal;unicode-range:U+0-10FFFF;src:url({{asset('/')}}fonts/avenirnextltpro-medium.otf);font-weight:400;font-display:swap}</style><style>@font-face{font-family:Avenir Next Ultra Light;font-stretch:normal;font-style:normal;unicode-range:U+0-10FFFF;src:url({{asset('/')}}fonts/avenirnext-ultralight.ttf);font-weight:400;font-display:swap}</style><style>@font-face{font-family:AvenirNext-Bold;font-stretch:normal;font-style:normal;unicode-range:U+0-10FFFF;src:url({{asset('/')}}fonts/avenir-next-bold.ttf);font-display:swap;font-weight:400}</style><style>@font-face{font-family:Avenir Next Medium;font-stretch:normal;font-style:normal;unicode-range:U+0-10FFFF;src:url({{asset('/')}}fonts/avenirnext-medium.ttf);font-weight:400;font-display:swap}</style><style>video{max-width:100%}picture.ctr-generated{display:contents}.component-hidden{display:none}.ctr-lazy-image{-webkit-transition:opacity 50ms ease-in-out;-moz-transition:opacity 50ms ease-in-out;-o-transition:opacity 50ms ease-in-out;transition:opacity 50ms ease-in-out;max-width:100%;opacity:0}.ctr-lazy-image.b-loaded{opacity:1}h1{font-size:2em}ul{padding:0;padding-inline-start:0;list-style-position:inside}.ctr_wow_body iframe{width:100%}img{max-width:100%;width:auto;height:auto}button:focus,input:focus,textarea:focus,select:focus{outline:none}.click-map-container:hover{opacity:1!important}</style>
+    <style>@font-face{font-family:Avenir Next Regular;font-stretch:normal;font-style:normal;unicode-range:U+0-10FFFF;src:url('{{ asset('/') }}fonts/AvenirNextCyr-Regular.otf') format('otf'),url('{{ asset('/') }}fonts/AvenirNextCyr-Regular.eot') format('eot'),url('{{ asset('/') }}fonts/AvenirNextCyr-Regular.woff') format('woff'),url('{{ asset('/') }}fonts/AvenirNextCyr-Regular.ttf') format('truetype');font-weight:400;font-display:swap}@font-face{font-family:Avenir Next Bold;font-stretch:normal;font-style:normal;unicode-range:U+0-10FFFF;src:url('{{ asset('/') }}fonts/AvenirNextCyr-Bold.eot') format('eot'),url('{{ asset('/') }}fonts/AvenirNextCyr-Bold.woff') format('woff'),url('{{ asset('/') }}fonts/AvenirNextCyr-Bold.ttf') format('truetype');font-weight:400;font-display:swap}@font-face{font-family:Avenir-next-medium;font-stretch:normal;font-style:normal;unicode-range:U+0-10FFFF;src:url('{{ asset('/') }}fonts/AvenirNextCyr-Medium.eot') format('eot'),url('{{ asset('/') }}fonts/AvenirNextCyr-Medium.woff') format('woff'),url('{{ asset('/') }}fonts/AvenirNextCyr-Medium.ttf') format('truetype');font-weight:400;font-display:swap}@font-face{font-family:Avenir Next Ultra Light;font-stretch:normal;font-style:normal;unicode-range:U+0-10FFFF;src:url('{{ asset('/') }}fonts/AvenirNextCyr-UltraLight.eot') format('eot'),url('{{ asset('/') }}fonts/AvenirNextCyr-UltraLight.woff') format('woff'),url('{{ asset('/') }}fonts/AvenirNextCyr-UltraLight.ttf') format('truetype');font-weight:400;font-display:swap}@font-face{font-family:AvenirNext-Bold;font-stretch:normal;font-style:normal;unicode-range:U+0-10FFFF;src:url('{{ asset('/') }}fonts/AvenirNextCyr-Bold.eot') format('eot'),url('{{ asset('/') }}fonts/AvenirNextCyr-Bold.woff') format('woff'),url('{{ asset('/') }}fonts/AvenirNextCyr-Bold.ttf') format('truetype');font-display:swap;font-weight:400}@font-face{font-family:Avenir Next Medium;font-stretch:normal;font-style:normal;unicode-range:U+0-10FFFF;src:url('{{ asset('/') }}fonts/AvenirNextCyr-Medium.eot') format('eot'),url('{{ asset('/') }}fonts/AvenirNextCyr-Medium.woff') format('woff'),url('{{ asset('/') }}fonts/AvenirNextCyr-Medium.ttf') format('truetype');font-weight:400;font-display:swap}</style>
+    <style>b,strong{font-family:Avenir Next Bold !important}@media(max-width:767px){#ipyroh{padding:0 !important;background:none !important}#ih1pz6{padding:0 !important;background:none !important}#ixxh7{padding:0 !important;background:none !important}}@media(max-width:480px){.w-step{max-width:240px}}</style>
+    <style>video{max-width:100%}picture.ctr-generated{display:contents}.component-hidden{display:none}.ctr-lazy-image{-webkit-transition:opacity 50ms ease-in-out;-moz-transition:opacity 50ms ease-in-out;-o-transition:opacity 50ms ease-in-out;transition:opacity 50ms ease-in-out;max-width:100%;opacity:0}.ctr-lazy-image.b-loaded{opacity:1}h1{font-size:2em}ul{padding:0;padding-inline-start:0;list-style-position:inside}.ctr_wow_body iframe{width:100%}img{max-width:100%;width:auto;height:auto}button:focus,input:focus,textarea:focus,select:focus{outline:none}.click-map-container:hover{opacity:1!important}</style>
 <body>
 <div data-hidden id="iz1tl9" url="" box-title="Blast Auxiliary" class="sticky-bar sticky-top iz1tl9_global hidden">
     <div id="iq0xht" class="iq0xht_global">
@@ -26,7 +28,7 @@
             </div>
         </div>
         <a ctr-type-link="external" href="{{$checkoutView}}" call-to-action cta-id="ij3opi" id="ij3opi">
-            <div id="i0oz37">PORUČITE SVOJ ČISTAČ VAZDUHA ODMAH</div>
+            <div id="i0oz37">ПОРЪЧАЙ СЕГА</div>
         </a>
     </div>
 </div>
@@ -47,7 +49,7 @@
                         <img data-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}myairlabFiles/shared_files/airlab_logo.png" id="i02b57" data-lazy-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}myairlabFiles/shared_files/airlab_logo.png" src="{{ asset('/') }}myairlabFiles/shared_files/airlab_logo.png" width="378" height="56">
                     </picture>
                     <div id="ivq6yl">Почистете въздуха от вредни алергени, прах, бактерии и миризми!</div>
-                    <div id="illync" class="illync_global"><a href="{{$checkoutView}}" ctr-type-link="external" id="i7cqnm" target="_blank" class="navbar-menu-link">Poručite sada</a></div>
+                    <div id="illync" class="illync_global"><a href="{{$checkoutView}}" ctr-type-link="external" id="i7cqnm" target="_blank" class="navbar-menu-link">Поръчай сега</a></div>
                 </div>
             </div>
         </div>
@@ -69,7 +71,7 @@
                                 </picture>
                             </div>
                             <div id="i68eqt" class="col i68eqt_global">
-                                <div id="iznn5p">Particle Filter uklanja i najsitnije čestice iz vazduha koji udišete.</div>
+                                <div id="iznn5p">Particle Филтърът премахва дори и най-малките частици от въздуха, който дишете.</div>
                             </div>
                         </div>
                         <div id="ij9leh" class="container ij9leh_global">
@@ -81,7 +83,7 @@
                                 </picture>
                             </div>
                             <div id="ikn4sk" class="col ikn4sk_global">
-                                <div id="itnfmm">Filter sa aktivnim ugljem oslobađa vazduh od neželjenih i štetnih zagađivača.</div>
+                                <div id="itnfmm">Филтърът с активен въглен премахва въздуха от нежелани и вредни замърсители.</div>
                             </div>
                         </div>
                         <div id="ihlwna" class="container ihlwna_global">
@@ -93,7 +95,7 @@
                                 </picture>
                             </div>
                             <div id="ir47rk" class="col ir47rk_global">
-                                <div id="idypzj">Nečujni aparat vas neće uznemiravati, čak i ako čitate ili slabo spavate.</div>
+                                <div id="idypzj">Устройството е безшумно и  няма да ви обезпокои, дори и ако четете или спите лошо.</div>
                             </div>
                         </div>
                         <div id="ieri1l" class="container ieri1l_global">
@@ -105,14 +107,14 @@
                                 </picture>
                             </div>
                             <div id="idqkm2" class="col idqkm2_global">
-                                <div id="ig3n5n">Aparat je mali i dovoljno lagan da ga ponesete bilo gde!</div>
+                                <div id="ig3n5n">Устройството е малко и достатъчно леко, за да можете  да го носите навсякъде!</div>
                             </div>
                         </div>
                         <div id="it3iik" class="it3iik_global">
-                            <div id="iy068y">Iskoristsite svoj specijalni popust od <span id="i175nf">40%</span> ukoliko poručite odmah!</div>
+                            <div id="iy068y">Вземи специална отсъпка от <span id="i175nf">40%</span> ако поръчаш сега!</div>
                         </div>
                         <a ctr-type-link="external" call-to-action cta-id="i4m4nw" href="{{$checkoutView}}" id="i4m4nw" data-anim-repeat title="Blast Auxiliary" class="animated--hover infinite">
-                            <div id="i42wie">PORUČITE SVOJ ČISTAČ VAZDUHA ODMAH</div>
+                            <div id="i42wie">Поръчай веднага вашият пречиствател на въздуха</div>
                         </a>
                     </div>
                 </div>
@@ -122,7 +124,7 @@
     <section id="imt0xo" class="imt0xo_global">
         <div id="id40ce" class="container id40ce_global">
             <div id="ivpdml" class="col ivpdml_global">
-                <div id="ixaiu6">Promotivna ponuda je ograničena i ova <span id="i1tid5">PONUDA OD 40% REDOVNE CENE</span> traje dok traju zalihe!</div>
+                <div id="ixaiu6">Промоционалната оферта е ограничена и тази <span id="i1tid5">ОФЕРТА от 40% от РЕДОВНА ЦЕНА</span> е валидна до изчерпване на количествата!</div>
             </div>
         </div>
     </section>
@@ -144,9 +146,9 @@
                         </picture>
                     </div>
                     <div id="i47xd" class="gjs-cell">
-                        <div id="iwpwhy">JAKA FILTRACIJA</div>
-                        <div id="i20t9t">JAKA FILTRACIJA</div>
-                        <div id="iygppg">Filtracija vazduha uklanja štetne čestice iz vazduha koji udišete.</div>
+                        <div id="iwpwhy">СИЛНА ФИЛТРАЦИЯ</div>
+                        <div id="i20t9t">СИЛНА ФИЛТРАЦИЯ</div>
+                        <div id="iygppg">Филтрирането на въздуха премахва вредните частици от въздуха, който дишете.</div>
                     </div>
                 </div>
                 <div id="ipotsi" class="gjs-row">
@@ -158,10 +160,10 @@
                         </picture>
                     </div>
                     <div id="izbwpm" class="gjs-cell">
-                        <div id="ihasjc">FILTER SA AKTIVNIM UGLJEM</div>
-                        <div id="i1ae3w">FILTER SA AKTIVNIM UGLJEM</div>
-                        <div id="ilfhj9">Oslobađa vaš vazduh neželjenih i štetnih zagađivača, poput PM2.5, PM10, Sumpor dioksida i furlana  koji mogu predstavljati opasnost po vaše zdravlje i zdravlje vaše dece.</div>
-                        <div id="ihcxtl">Oslobađa vaš vazduh neželjenih i štetnih zagađivača, poput PM2.5, PM10, Sumpor dioksida i furlana  koji mogu predstavljati opasnost po vaše zdravlje i zdravlje vaše dece.</div>
+                        <div id="ihasjc">ФИЛТЪРТ С АКТИВЕН ВЪГЛЕН</div>
+                        <div id="i1ae3w">ФИЛТЪРТ С АКТИВЕН ВЪГЛЕН</div>
+                        <div id="ilfhj9">Той освобождава въздуха от нежелаеми и вредни замърсители, като PM2,5, PM10, сумпор-диоксид и фурлан, които могат да представляват опасност за вашето здраве и здравето на вашите деца.</div>
+                        <div id="ihcxtl">Той освобождава въздуха от нежелаеми и вредни замърсители, като PM2,5, PM10, сумпор-диоксид и фурлан, които могат да представляват опасност за вашето здраве и здравето на вашите деца.</div>
                     </div>
                 </div>
                 <div id="idhgwj" class="gjs-row">
@@ -175,8 +177,8 @@
                     <div id="i6b5mj" class="gjs-cell">
                         <div id="ie5cpm">NEGATIVE ION TECH</div>
                         <div id="ix1qny">NEGATIVE ION TECH</div>
-                        <div id="ipa9q6">Daje česticama negativan električni naboj, zbog čega ispadaju iz vazduha i time čisti vazduh i od najsitnijih zagađivača.</div>
-                        <div id="ils8yh">Daje česticama negativan električni naboj, zbog čega ispadaju iz vazduha i time čisti vazduh i od najsitnijih zagađivača.</div>
+                        <div id="ipa9q6">Придава на частиците отрицателен електрически заряд, поради което те падат от въздуха и така почистват въздуха дори от най-малките замърсители.</div>
+                        <div id="ils8yh">Придава на частиците отрицателен електрически заряд, поради което те падат от въздуха и така почистват въздуха дори от най-малките замърсители.</div>
                     </div>
                 </div>
             </div>
@@ -199,12 +201,12 @@
                 </div>
                 <div id="idn0di" class="idn0di_global">
                     <div id="iuvrc3" class="iuvrc3_global">
-                        <div id="iaeu6v">ŠOKANTNO! Vazduh u zatvorenom prostoru je podjednako, mažda čak i PRLJAVIJI od vazduha koji udišete na otvorenom! A svi znamo kakav nam je vazduh. </div>
-                        <div id="irc5oi" class="irc5oi_global"></div>
-                        <div id="ixpd3f">Najnoviji izveštaj govori da je zagađenje vazduha <span id="i6n5df">jedan od deset glavnih globalnih faktora rizika po zdravlje.</span>. Smatra se da je širom sveta oko 7 miliona ljudi umrlo ranije zbog zagađenja. A u Srbiji čak <span id="inooqd">10 000 godišnje</span> umre od posledica zagađenog vazduha.  Ako vam je stalo do svog zdravlja ili zdravlja vaše porodice, morate početi sa prečišćavanjem vazduha koji udišete!</div>
+                        <div id="iaeu6v">Шoкиращо! Въздухът на закрито е може би дори по МЪРСЕН от въздуха, който дишате на открито! А всички знаеме какъв е нашият въздух.</div>
+{{--                        <div id="irc5oi" class="irc5oi_global">Според агенциите за опазване на околната среда въздухът у дома може да бъде до пет пъти по-замърсен от външния. Освен това, според проучване на Медицинската академия към университета Джонс Хопкинс, замърсяването вкъщи може да има особено силно влияние върху децата, увеличавайки риска им от развитие на алергии, респираторни проблеми и астма.</div>--}}
+                        <div id="ixpd3f">В последния доклад се казва, че замърсяването на въздуха е един от десет основни глобални рискови фактора за здравето. Изчислено е, че около <span id="i6n5df">7 милиона души по света</span> са починали по-рано поради замърсяване. А в България около <span id="inooqd">10 000 умират годишно</span> като резултат на мръсния въздух. Ако се грижите за вашето здраве или здравето на вашето семейство, трябва да започнете да пречиствате въздуха, който дишате!</div>
                         <div id="i57ikm">
                             <div id="i202vg"></div>
-                            <div id="itzd4j">Tu dolazi prenosni čistač vazduha! Korišćenjem kombinacije filtriranja, aktivnog uglja i tehnologije negativnih jona, Blast Air Cleaner prečišćivač uklanja mirise i najmanje 99,97% štetnih čestica u vazduhu iz vazduha koji udišete.</div>
+                            <div id="itzd4j">Тук идва преносимият пречиствател на въздуха! Използвайки комбинация от филтриране, активен въглен и технология за отрицателни йони, пречиствателят Blast Air Cleaner премахва миризмите и най-малко 99,97% от вредните частици във въздуха, който дишате.</div>
                         </div>
                     </div>
                 </div>
@@ -216,21 +218,21 @@
                     </picture>
                     <div id="ih2vwm" class="ih2vwm_global">
                         <div id="ikjkxg" class="ikjkxg_global">
-                            <div id="ifht3f">SA LAKOĆOM STERILIZUJTE VAZDUH KOJI DIŠETE!</div>
+                            <div id="ifht3f">ЛЕСНО СТЕРИЛИЗАЙТЕ ВЪЗДУХА който ДИШЕТЕ!</div>
                             <div id="ic8jea" class="ic8jea_global">
-                                <div id="izqg8b">Samo jedno dugme</div>
+                                <div id="izqg8b">Само един бутон</div>
                                 <div id="i8lybo" class="i8lybo_global"></div>
-                                <div id="ilga4a">Vrhunska jednostavnost i lakoća upotrebe - prenosni prečišćivač vazduha može se aktivirati pritiskom na dugme i nema komplikovanog podešavanja.</div>
+                                <div id="ilga4a">Превъзходно просто и леко за използване - преносимият пречиствател на въздуха може да се активира с натискане само на един бутон и няма сложни настройки.</div>
                             </div>
                             <div id="ihhl8n" class="ihhl8n_global">
-                                <div id="ihyhtx">RGB svetlo</div>
+                                <div id="ihyhtx">RGB светлина</div>
                                 <div id="iyajar" class="iyajar_global"></div>
-                                <div id="i2wadd">Blast Air Cleaner prenosni prečišćivač ima svetlo za raspoloženje koje postavlja ton i odgovara svakom dekoru, da li u vašem autu, kancelariji ili spavaćoj sobi. </div>
+                                <div id="i2wadd">Преносимият пречиствател Blast Air Cleaner има светлина за настроение, която задава тона и подхожда на всеки декор, независимо дали сте във вашия автомобил, офис или спалня.</div>
                             </div>
                             <div id="ipzjnu" class="ipzjnu_global">
-                                <div id="igxd3v">Lagan i prenosiv</div>
+                                <div id="igxd3v">Лек и преносим</div>
                                 <div id="i7c46l" class="i7c46l_global"></div>
-                                <div id="ib7aue">Blast Air Cleaner prenosni prečišćivač ide sa vama gde god vam je potreban. Njegova mala težina i prenosiva veličina čine savršenog pratioca gde god želite da udišete čist, svež vazduh.</div>
+                                <div id="ib7aue">Преносимият пречиствател Blast Air Cleaner върви с вас, където и да имате нужда. Лекото му тегло и преносим размер го правят идеалният спътник, когато искате да дишете чист и свеж въздух.</div>
                             </div>
                         </div>
                     </div>
@@ -238,14 +240,14 @@
                 <div id="igqx33" class="igqx33_global">
                     <div id="ihp1p6" class="ihp1p6_global">
                         <div id="ibg8xi" class="ibg8xi_global">
-                            <div id="i1hrdi">NAJLAKŠI NAČIN DA OČISTITE VAZDUH!</div>
-                            <div id="izo982">Pored jednostavnih problema kao što su kašalj, iritacija oka, glavobolja i alergijske reakcije, studije su povezale brojne zdravstvene probleme sa zagađenjem česticama, uključujući nepravilan rad srca, astmu, smanjenu funkciju pluća i druge ozbiljne respiratorne probleme.</div>
+                            <div id="i1hrdi">НАЙ-ЛЕСНИЯТ НАЧИН ЗА ПОЧИСТВАНЕ НА ВЪЗДУХА!</div>
+                            <div id="izo982">В допълнение към проблеми като кашлица, дразнене на очите, главоболие и алергични реакции, проучванията свързват редица здравословни проблеми със замърсяването с частици, включително неравномерен пулс, астма, намалена белодробна функция и други сериозни респираторни проблеми.</div>
                             <div id="iu8cti">
                                 <div id="i0l10l"></div>
-                                <div id="ivjejs">HEPA filter uklanja do 99,97% čestica u vazduhu iz vazduha koji udišete. I svaki zamenljivi filter će vam trajati i do šest meseci. Zbog toga pametni potrošači danas biraju Blast Air Cleaner prenosni čistač vazduha!</div>
+                                <div id="ivjejs">HEPA филтърът премахва до 99,97% от въздушните частици от въздуха, който дишате и всеки сменяем филтър ще ви издържи до шест месеца. Ето защо интелигентните потребители днес избират преносимия пречиствател на въздух Blast Air Cleaner!</div>
                             </div>
                             <a href="{{$checkoutView}}" ctr-type-link="external" call-to-action id="i4qq2e" cta-id="i4qq2e">
-                                <div id="iopx5l">PORUČITE SADA</div>
+                                <div id="iopx5l">Поръчай сега</div>
                             </a>
                         </div>
                     </div>
@@ -261,33 +263,33 @@
     <section id="iptkha" class="iptkha_global">
         <div id="i0ozu8" class="container i0ozu8_global">
             <div id="ic675z" class="col ic675z_global">
-                <h1 id="i1r3io">BLAST AIR CLEANER ČISTI VAŠ VAZDUH TRI NAČINA</h1>
+                <h1 id="i1r3io">BLAST AIR CLEANER ПОЧИСТВА ВЪЗДУХА ВИ ПО ТРИ НАЧИНА</h1>
                 <div id="i1txao" class="i1txao_global w-step">
                     <div id="iqgj6i" class="iqgj6i_global">
                         <picture class="ctr-generated">
-                            <source srcset="{{ asset('/') }}purplerelaxFiles/aircleaner/air-filter.png.webp" type="image/webp">
-                            <source srcset="{{ asset('/') }}purplerelaxFiles/aircleaner/air-filter.png" type="image/png">
-                            <img data-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/air-filter.png?t=20210708T065047141" data-lazy-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/air-filter.png?t=20210708T065047141" id="i1kd9o" src="{{ asset('/') }}purplerelaxFiles/aircleaner/air-filter.png?t=20210708T065047141" width="210" height="41">
+                            <source srcset="{{ asset('/') }}airlabFiles/aircleaner/air-filter.png.webp" type="image/webp">
+                            <source srcset="{{ asset('/') }}airlabFiles/aircleaner/air-filter.png" type="image/png">
+                            <img data-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}airlabFiles/aircleaner/air-filter.png?t=20210708T065047141" data-lazy-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}airlabFiles/aircleaner/air-filter.png?t=20210708T065047141" id="i1kd9o" src="{{ asset('/') }}airlabFiles/aircleaner/air-filter.png?t=20210708T065047141" width="210" height="41">
                         </picture>
                         <picture class="ctr-generated">
                             <source srcset="{{ asset('/') }}purplerelaxFiles/aircleaner/7-2x.jpg.webp" type="image/webp">
                             <source srcset="{{ asset('/') }}purplerelaxFiles/aircleaner/7-2x.jpg" type="image/jpeg">
                             <img data-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/7-2x.jpg?t=20210916T091102878" data-lazy-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/7-2x.jpg?t=20210916T091102878" id="ipqyvp" src="{{ asset('/') }}purplerelaxFiles/aircleaner/7-2x.jpg?t=20210916T091102878" width="480" height="480">
                         </picture>
-                        <div id="itovvy">Uklanja čestice iz vazduha koji udišete.</div>
+                        <div id="itovvy">Премахва частиците от въздуха, който дишате.</div>
                     </div>
                     <div id="i0zypp" class="i0zypp_global">
                         <picture class="ctr-generated">
-                            <source srcset="{{ asset('/') }}purplerelaxFiles/aircleaner/activated-carbon.png.webp" type="image/webp">
-                            <source srcset="{{ asset('/') }}purplerelaxFiles/aircleaner/activated-carbon.png" type="image/png">
-                            <img data-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/activated-carbon.png?t=20210708T065047132" data-lazy-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/activated-carbon.png?t=20210708T065047132" id="i8ju01" src="{{ asset('/') }}purplerelaxFiles/aircleaner/activated-carbon.png?t=20210708T065047132" width="271" height="26">
+                            <source srcset="{{ asset('/') }}airlabFiles/aircleaner/activated-carbon.png.webp" type="image/webp">
+                            <source srcset="{{ asset('/') }}airlabFiles/aircleaner/activated-carbon.png" type="image/png">
+                            <img data-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}airlabFiles/aircleaner/activated-carbon.png?t=20210708T065047132" data-lazy-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}airlabFiles/aircleaner/activated-carbon.png?t=20210708T065047132" id="i8ju01" src="{{ asset('/') }}airlabFiles/aircleaner/activated-carbon.png?t=20210708T065047132" width="271" height="26">
                         </picture>
                         <picture class="ctr-generated">
                             <source srcset="{{ asset('/') }}purplerelaxFiles/aircleaner/8-2x.jpg.webp" type="image/webp">
                             <source srcset="{{ asset('/') }}purplerelaxFiles/aircleaner/8-2x.jpg" type="image/jpeg">
                             <img data-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/8-2x.jpg?t=20210916T091102664" data-lazy-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/8-2x.jpg?t=20210916T091102664" id="il42ok" src="{{ asset('/') }}purplerelaxFiles/aircleaner/8-2x.jpg?t=20210916T091102664" width="480" height="480">
                         </picture>
-                        <div id="if4h9j">Najefikasniji način za uklanjanje dima i mirisa.</div>
+                        <div id="if4h9j">Най-ефективният начин за премахване на дим и миризми.</div>
                     </div>
                     <div id="ia2jji" class="ia2jji_global">
                         <picture class="ctr-generated">
@@ -300,7 +302,7 @@
                             <source srcset="{{ asset('/') }}purplerelaxFiles/aircleaner/9-2x.jpg" type="image/jpeg">
                             <img data-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/9-2x.jpg?t=20210916T091102457" data-lazy-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/9-2x.jpg?t=20210916T091102457" id="i9b8zy" src="{{ asset('/') }}purplerelaxFiles/aircleaner/9-2x.jpg?t=20210916T091102457" width="480" height="480">
                         </picture>
-                        <div id="icy5dk">Daje negativan naboj česticama, što dovodi do njihovog pada i uklanjanja iz vazduha.</div>
+                        <div id="icy5dk">Придава отрицателен заряд на частиците, което води до падането им и отстраняването им от въздуха.</div>
                     </div>
                 </div>
             </div>
@@ -309,7 +311,7 @@
     <section id="iqeriz" class="iqeriz_global section-9">
         <div id="ierdyz" class="container ierdyz_global">
             <div id="iz0jga" class="col iz0jga_global">
-                <div id="iyjwj9">ŠTA NAŠI KLIJENT IMAJU DA KAŽU O BLAST AIR CLEANER PRENOSNOM PREČIŠĆIVAČU VAZDUHA</div>
+                <div id="iyjwj9">КАКВО НАШИТЕ КЛИЕНТИ KAЗВАТ  ЗА преносимия пречиствател на въздух Blast Air Cleaner!</div>
                 <div id="i0oqfp" class="i0oqfp_global">
                     <picture class="ctr-generated">
                         <source srcset="{{ asset('/') }}purplerelaxFiles/aircleaner/right-quote-mb.png.webp" type="image/webp">
@@ -317,9 +319,9 @@
                         <img id="il3vgi" data-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/right-quote-mb.png?t=20210702T081120023" data-lazy-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/right-quote-mb.png?t=20210702T081120023" src="{{ asset('/') }}purplerelaxFiles/aircleaner/right-quote-mb.png?t=20210702T081120023" width="96" height="76">
                     </picture>
                     <div id="i4fu46" class="i4fu46_global">
-                        <div id="iiib6x">MOJE ALERGIJE SU NESTALE!</div>
-                        <div id="ipbxi4">Ovaj neverovatan mali uređaj je rešio moje alergije! Stalno sam imala crvenilo, svrbež u očima i začepljene sinuse, ali prenosivi čistač vazduha je stao na kraj svemu tome. VOLIM ovu stvar, potpuno mi je promenila život i jedva čekam da kažem svojim sestrama o tome. Cela moja porodica pati od problema sa alergijama, i oni su uradili da imaju nešto što ovako dobro funkcioniše.</div>
-                        <div id="icerkf"><span id="irzn3y">Maša F. – Novi Sad</span></div>
+                        <div id="iiib6x">АЛЕРГИИТЕ МИ ИЗЧЕЗНАХА!</div>
+                        <div id="ipbxi4">Това невероятно малко устройство излекува алергиите ми! Имах постоянно зачервяване, сърбящи очи и запушени синуси, но преносимия пречиствател на въздуха сложи край на всичко. ОБИЧАМ това нещо, напълно промени живота ми и нямам търпение да кажа на сестрите си за него. Цялото ми семейство страда от проблеми с алергиите и сe радваме, че са направили нещо, което работи толкова добре.</div>
+                        <div id="icerkf"><span id="irzn3y">Йована Д. – София</span></div>
                     </div>
                     <picture class="ctr-generated">
                         <source srcset="{{ asset('/') }}purplerelaxFiles/aircleaner/left-quote-mb.png.webp" type="image/webp">
@@ -328,7 +330,7 @@
                     </picture>
                 </div>
                 <a ctr-type-link="external" id="i6vvlr" data-anim-repeat call-to-action cta-id="i6vvlr" href="{{$checkoutView}}" title="Blast Auxiliary" class="animated--hover infinite">
-                    <div id="iy1rpi">PORUČITE SVOJ ČISTAČ VAZDUHA ODMAH</div>
+                    <div id="iy1rpi">ПОРЪЧАЙ СЕГА</div>
                 </a>
             </div>
         </div>
@@ -345,7 +347,7 @@
                                 <source srcset="{{ asset('/') }}purplerelaxFiles/aircleaner/45-stars.png" type="image/png">
                                 <img id="ijvl9h" data-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/45-stars.png?t=20210409T110358385" data-lazy-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/45-stars.png?t=20210409T110358385" src="{{ asset('/') }}purplerelaxFiles/aircleaner/45-stars.png?t=20210409T110358385" width="226" height="42">
                             </picture>
-                            <div id="icheoh">Average Rating</div>
+                            <div id="icheoh">Среден рейтинг</div>
                         </div>
                         <div id="iu13yj" class="iu13yj_global">
                             <div id="itnysh" class="itnysh_global">
@@ -414,34 +416,34 @@
                     </div>
                     <div id="iql6l5" class="iql6l5_global">
                         <div id="iomaam" class="iomaam_global">
-                            <div id="iyrtol"><b id="ipk9dt">Jovana D. </b> — Kraljevo</div>
+                            <div id="iyrtol"><b id="ipk9dt">Boyana B. </b> — София</div>
                             <picture class="ctr-generated">
                                 <source srcset="{{ asset('/') }}purplerelaxFiles/aircleaner/5-stars.png.webp" type="image/webp">
                                 <source srcset="{{ asset('/') }}purplerelaxFiles/aircleaner/5-stars.png" type="image/png">
                                 <img id="iu2di4" data-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/5-stars.png?t=20210408T074805963" data-lazy-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/5-stars.png?t=20210408T074805963" src="{{ asset('/') }}purplerelaxFiles/aircleaner/5-stars.png?t=20210408T074805963" width="224" height="40">
                             </picture>
                             <div id="imhpc9"></div>
-                            <div id="isbuh">Nekada sam se budila više puta tokom noći, uvek kašljajući. Ali nakon što sam nekoliko dana koristila BLAST AIR CLEANER prenosni prečišćivač , moj kašalj je potpuno prestao! Ne mogu vam reći kako je konačno ponovo dobro odspavati! Sve što mogu da kažem je, nabavite sebi jedan prenosni prečišćivač vazduha dok možete – sa zadovoljstvom bih platila duplu cenu ako bih ponovo kupovao.</div>
+                            <div id="isbuh">Събуждах се по няколко пъти през нощта, винаги кашлях. Но след като започнах да използвам преносимиа пречиствател BLAST AIR CLEANER в продължение на няколко дни, кашлицата ми спря напълно! Не мога да ви опиша колко е хубаво най-накрая отново да заспите! Всичко, което мога да кажа, е, вземете си преносимиа пречиствател на въздуха, докато можете - с удоволствие би платила и двойна цена за него.</div>
                         </div>
                         <div id="iu6do5" class="iu6do5_global">
-                            <div id="ii825r"><font face="Avenir Next Bold" id="iju52j"><b id="icz1mg">Dragoslav K. </b></font>— Niš</div>
+                            <div id="ii825r"><font face="Avenir Next Bold" id="iju52j"><b id="icz1mg">Nayden Y. </b></font>— Пловдив</div>
                             <picture class="ctr-generated">
                                 <source srcset="{{ asset('/') }}purplerelaxFiles/aircleaner/5-stars.png.webp" type="image/webp">
                                 <source srcset="{{ asset('/') }}purplerelaxFiles/aircleaner/5-stars.png" type="image/png">
                                 <img data-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/5-stars.png?t=20210408T074805963" data-lazy-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/5-stars.png?t=20210408T074805963" id="itntbg" src="{{ asset('/') }}purplerelaxFiles/aircleaner/5-stars.png?t=20210408T074805963" width="224" height="40">
                             </picture>
                             <div id="ijcfkv"></div>
-                            <div id="idsa5f">Žena i ja smo od skoro postali roditelji i nismo želeli da izlažemo bebu prljavom i štetnom vazduhu. Videli smo reklamu za Blast Air Cleaner, i nismo mnogo razmišljali – uzeli smo 2, jedan za dnevnu sobu, a jedan za spavaću sobu koji ja u toku dana nosim sa sobom na posao. Prezadovoljni smo jednostavnošću proizvoda i učinkom, pošto dugo nismo ovako lepo spavali. </div>
+                            <div id="idsa5f">Със съпругата ми наскоро станахме родители и не искахме да излагаме бебето на мръсен и вреден въздух. Видяхме обява за Blast Air Cleaner и не се мислихме много – взехме 2 бр., един за хола и един за спалнята, които носим със себе си на работа през деня. Много сме доволни от простотата на продукта и ефекта, защото отдавна не сме спали така хубаво.</div>
                         </div>
                         <div id="ib4p7c" class="ib4p7c_global">
-                            <div id="io07dy"><font face="Avenir Next Bold" id="ib3co9"><b id="ivki99">Ranko P. </b></font> — Beograd</div>
+                            <div id="io07dy"><font face="Avenir Next Bold" id="ib3co9"><b id="ivki99">Ognian T. </b></font> — София</div>
                             <picture class="ctr-generated">
                                 <source srcset="{{ asset('/') }}purplerelaxFiles/aircleaner/5-stars.png.webp" type="image/webp">
                                 <source srcset="{{ asset('/') }}purplerelaxFiles/aircleaner/5-stars.png" type="image/png">
                                 <img data-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/5-stars.png?t=20210408T074805963" data-lazy-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/5-stars.png?t=20210408T074805963" id="iq97ip" src="{{ asset('/') }}purplerelaxFiles/aircleaner/5-stars.png?t=20210408T074805963" width="224" height="40">
                             </picture>
                             <div id="itpmra"></div>
-                            <div id="iwyecg">Pošto sam taksista primetio sam da sve zagađeniji vazduh u saobraćaju utiče na moje zdravlje. Odlučio sam da uzmem stvar u svoje ruke i kupio BLAST AIR CLEANER prenosni prećišćivač vazduha. Posle samo nekoliko dana počeo sam bolje da spavam i da imam daleko veću koncentraciju u vožnji, a i moji klijenti su prijatno iznenađeni svežinom vazduha i time što brinem i o njima u vreme ove pandemije. </div>
+                            <div id="iwyecg">Като таксиметров шофьор забелязах, че все по-мръсният въздух в трафика се отразява на здравето ми. Реших да взема нещата в свои ръце и купих преносим пречиствател на въздух BLAST AIR CLEANER. Само след няколко дни започнах да спим по-добре и да имам много по-голяма концентрация по време на шофериране, а клиентите ми също са приятно изненадени от свежестта на въздуха и от факта, че се грижа за тях по време на тази пандемия.</div>
                         </div>
                     </div>
                 </div>
@@ -452,11 +454,11 @@
         <div id="i09o4g" class="container i09o4g_global">
             <div id="i6cujo" class="col i6cujo_global">
                 <div id="iedsdb" class="gjs-cell">
-                    <div id="iowl5a">POSEBNA PONUDA SAMO DANAS!</div>
-                    <p id="i11x08">PORUČITE DANAS I DOBIĆETE POPUST
-                    <div id="ixwwus">Ne postoji NIŠTA više osvežavajuće od dubokog udisanja lepog, čistog vazduha! Prestanite da se gušite isparenjima, dimom i prašinom! Nabavite svoj BLAST AIR CLEANER sada i počnite da uživate u osećaju udisanja svežeg, čistog vazduha!</div>
+                    <div id="iowl5a">СПЕЦИАЛНА ОФЕРТА САМО ДНЕС!</div>
+                    <p id="i11x08">ПОРЪЧАЙТЕ ДНЕС И ЩЕ ПОЛУЧИТЕ ОТСТЪПКА</p>
+                    <div id="ixwwus">Няма НИЩО по-освежаващо от дълбоко вдишване на красив, чист въздух! Спрете да се задушавате от изпарения, дим и прах! Вземете своя BLAST AIR CLEANER сега и започнете да се наслаждавате на усещането да дишате свеж, чист въздух!</div>
                     <a ctr-type-link="external" id="izorm8" data-anim-repeat call-to-action cta-id="izorm8" href="{{$checkoutView}}" title="Blast Auxiliary" class="animated--hover infinite">
-                        <div id="izx1qk">PORUČITE SVOJ ČISTAČ VAZDUHA ODMAH</div>
+                        <div id="izx1qk">ПОРЪЧАЙ СЕГА</div>
                     </a>
                 </div>
             </div>
@@ -465,7 +467,7 @@
     <section id="ice3gj" class="ice3gj_global">
         <div id="insoe1" class="container insoe1_global">
             <div id="i9tsec" class="col i9tsec_global">
-                <div id="ixsh4w">Promotivna ponuda je ograničena i ova <span id="i1tid5">PONUDA OD 40% REDOVNE CENE</span> traje dok traju zalihe!</div>
+                <div id="ixsh4w">Промоционалната оферта е ограничена и тази <span id="i1tid5">ОФЕРТА от 40% от РЕДОВНА ЦЕНА</span> е валидна до изчерпване на количествата!</div>
             </div>
         </div>
     </section>
@@ -482,7 +484,7 @@
                             <source srcset="{{ asset('/') }}purplerelaxFiles/aircleaner/symbol-2x.png" type="image/png">
                             <img data-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/symbol-2x.png?t=20210408T065348661" id="ihlcw5" data-lazy-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/symbol-2x.png?t=20210408T065348661" src="{{ asset('/') }}purplerelaxFiles/aircleaner/symbol-2x.png?t=20210408T065348661" width="34" height="34">
                         </picture>
-                        <div id="iqq45c">Particle Filter uklanja i najsitnije čestice iz vazduha koji udišete.</div>
+                        <div id="iqq45c">Particle Филтърът премахва дори и най-малките частици от въздуха, който дишете.</div>
                     </div>
                     <div id="iish8n" class="iish8n_global">
                         <picture class="ctr-generated">
@@ -490,7 +492,7 @@
                             <source srcset="{{ asset('/') }}purplerelaxFiles/aircleaner/symbol-2x.png" type="image/png">
                             <img data-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/symbol-2x.png?t=20210408T065348661" data-lazy-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/symbol-2x.png?t=20210408T065348661" id="iymyk8" src="{{ asset('/') }}purplerelaxFiles/aircleaner/symbol-2x.png?t=20210408T065348661" width="34" height="34">
                         </picture>
-                        <div id="ibs1y9">Filter sa aktivnim ugljem oslobađa vazduh od neželjenih i štetnih zagađivača.</div>
+                        <div id="ibs1y9">Филтърът с активен въглен премахва въздуха от нежелани и вредни замърсители.</div>
                     </div>
                     <div id="ida15q" class="ida15q_global">
                         <picture class="ctr-generated">
@@ -498,7 +500,7 @@
                             <source srcset="{{ asset('/') }}purplerelaxFiles/aircleaner/symbol-2x.png" type="image/png">
                             <img data-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/symbol-2x.png?t=20210408T065348661" data-lazy-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/symbol-2x.png?t=20210408T065348661" id="ieoevv" src="{{ asset('/') }}purplerelaxFiles/aircleaner/symbol-2x.png?t=20210408T065348661" width="34" height="34">
                         </picture>
-                        <div id="ix2kxe">Nečujni aparat vas neće uznemiravati, čak i ako čitate ili slabo spavate.</div>
+                        <div id="ix2kxe">Устройството е безшумно и  няма да ви обезпокои, дори и ако четете или спите лошо.</div>
                     </div>
                     <div id="iegs7a" class="iegs7a_global">
                         <picture class="ctr-generated">
@@ -506,13 +508,13 @@
                             <source srcset="{{ asset('/') }}purplerelaxFiles/aircleaner/symbol-2x.png" type="image/png">
                             <img data-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/symbol-2x.png?t=20210408T065348661" data-lazy-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/symbol-2x.png?t=20210408T065348661" id="izodaj" src="{{ asset('/') }}purplerelaxFiles/aircleaner/symbol-2x.png?t=20210408T065348661" width="34" height="34">
                         </picture>
-                        <div id="iwakgb">Aparat je mali i dovoljno lagan da ga ponesete bilo gde!</div>
+                        <div id="iwakgb">Устройството е малко и достатъчно леко, за да можете  да го носите навсякъде!</div>
                     </div>
                     <div id="isyapy" class="isyapy_global">
-                        <div id="igynlo">Iskoristsite svoj specijalni popust od <span id="i175nf">40%</span> ukoliko poručite odmah!</div>
+                        <div id="igynlo">Вземи специална отсъпка от <span id="i175nf">40%</span> ако поръчаш сега!</div>
                     </div>
                     <a ctr-type-link="external" data-anim-repeat call-to-action cta-id="inc7rm" href="{{$checkoutView}}" id="inc7rm" title="Blast Auxiliary" class="animated--hover infinite">
-                        <div id="iz7084">PORUČITE SVOJ ČISTAČ VAZDUHA ODMAH</div>
+                        <div id="iz7084">Поръчай веднага вашият пречиствател на въздуха</div>
                     </a>
                 </div>
             </div>
