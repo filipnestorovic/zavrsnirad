@@ -727,7 +727,7 @@ class HomeController extends Controller
                 Log::error("Error: CApi Error | Exception: " . $exception->getMessage());
             }
 
-            if(!empty(json_decode($response, true))) {
+            if(isset($response) && !empty(json_decode($response, true))) {
                 return $response;
             } else {
                 return $fb_event;
