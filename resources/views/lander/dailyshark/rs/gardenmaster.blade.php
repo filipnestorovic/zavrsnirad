@@ -112,8 +112,8 @@
                      </span>
                   </span>
 
-                <input placeholder='Ime i prezime' name="name" type='text'>
-                <input placeholder='Telefon' name="phone" type='text'>
+                <input placeholder='Ime i prezime' name="name" type='text' required>
+                <input placeholder='Telefon' name="phone" type='text' required>
                 <input type='submit' value='Poručite sa popustom'>
             </form>
         </div>
@@ -1071,8 +1071,8 @@
                         {{ $prices[1]['currency'] }}
                      </span>
                   </span>
-                <input placeholder='Ime i prezime' name="name" type='text'>
-                <input placeholder='Telefon' name="phone" type='text'>
+                <input placeholder='Ime i prezime' name="name" type='text' required>
+                <input placeholder='Telefon' name="phone" type='text' required>
                 <input type='submit' value='Poručite sa popustom'>
             </form>
         </div>
