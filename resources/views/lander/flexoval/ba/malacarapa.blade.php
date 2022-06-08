@@ -58,11 +58,11 @@
             <div class="discount">Popust <span>-40%</span></div>
             <div class="price_block clearfix">
                 <div class="price_item old">
-                    <div class="text">Stara cena:</div>
+                    <div class="text">Stara cijena:</div>
                     <div class="value">{{ $prices[1]['originalPrice'] }} KM </div>
                 </div>
                 <div class="price_item new">
-                    <div class="text">Nova cena:</div>
+                    <div class="text">Nova cijena:</div>
                     <div class="value">{{ $prices[1]['amount'] }} KM</div>
                 </div>
             </div>
@@ -248,14 +248,14 @@
                 <img src="{{asset('/')}}flexovalFiles/carapa/reviews__review1_photo.jpg" alt="" title="">
                 <div class="text_block">
                     <div class="author_info">Katarina Životić, <span>Barajevo</span></div>
-                    <p>Iskreno, nisam mnogo nade polagala u ove dokolenice. Ali pristupačna cena (dosta jeftinije nego u apotekama) i pozitivna iskustva prijatelja su me naterala da ih probam – i nisam razočarana. Za manje od mesec dana rešila sam se proširenih vena. Noge su prestale da mi trnu, pogotovo listovi. Sada ih nosim svakodnevno bar 3-4 sata preventivno. Sjajne su i mogu vam reći da se i ja sjajno osećam!</p>
+                    <p>Iskreno, nisam mnogo nade polagala u ove dokolenice. Ali pristupačna cijena (dosta jeftinije nego u apotekama) i pozitivna iskustva prijatelja su me naterala da ih probam – i nisam razočarana. Za manje od mesec dana rešila sam se proširenih vena. Noge su prestale da mi trnu, pogotovo listovi. Sada ih nosim svakodnevno bar 3-4 sata preventivno. Sjajne su i mogu vam reći da se i ja sjajno osećam!</p>
                 </div>
             </div>
             <div class="review_item clearfix">
                 <img src="{{asset('/')}}flexovalFiles/carapa/reviews__review2_photo.jpg" alt="" title="">
                 <div class="text_block">
                     <div class="author_info">Anastasija Katić, <span>Beograd</span></div>
-                    <p>Kupila sam majci dva para, i veoma joj se sviđaju. Kaže da izgledaju kao regularne čarape samo dosta punije i mekše. Efekat je sjajan! Pre par nedelja jedva je mogla da ide po kući, a danas se igra sa unučićima po parku. Jako smo zahvalni na tim čarapama.</p>
+                    <p>Kupila sam majci dva para, i veoma joj se sviđaju. Kaže da izgledaju kao regularne čarape samo dosta punije i mekše. Efekat je sjajan! Pre par nedelja jedva je mogla da ide po kući, a danas se igra sa unučićima pop parku. Jako smo zahvalni na tim čarapama.</p>
                 </div>
             </div>
             <div class="review_item clearfix">
@@ -318,11 +318,11 @@
             <div class="discount">Popust <span>-40%</span></div>
             <div class="price_block clearfix">
                 <div class="price_item old">
-                    <div class="text">Stara cena:</div>
+                    <div class="text">Stara cijena:</div>
                     <div class="value">{{ $prices[1]['originalPrice'] }} KM </div>
                 </div>
                 <div class="price_item new">
-                    <div class="text">Nova cena:</div>
+                    <div class="text">Nova cijena:</div>
                     <div class="value">{{ $prices[1]['amount'] }} KM</div>
                 </div>
             </div>
