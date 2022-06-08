@@ -11,31 +11,28 @@
     <style>@font-face{font-family:'Roboto';src:local('Roboto Thin'),local('Roboto-Thin'),url('{{asset('/')}}fonts/robotothin.woff2') format('woff2'),url('{{asset('/')}}fonts/robotothin.woff') format('woff'),url('{{asset('/')}}fonts/robotothin.ttf') format('truetype');font-weight:100;font-style:normal}@font-face{font-family:'Roboto';src:local('Roboto Thin Italic'),local('Roboto-ThinItalic'),url('{{asset('/')}}fonts/robotothinitalic.woff2') format('woff2'),url('{{asset('/')}}fonts/robotothinitalic.woff') format('woff'),url('{{asset('/')}}fonts/robotothinitalic.ttf') format('truetype');font-weight:100;font-style:italic}@font-face{font-family:'Roboto';src:local('Roboto Light'),local('Roboto-Light'),url('{{asset('/')}}fonts/robotolight.woff2') format('woff2'),url('{{asset('/')}}fonts/robotolight.woff') format('woff'),url('{{asset('/')}}fonts/robotolight.ttf') format('truetype');font-weight:300;font-style:normal}@font-face{font-family:'Roboto';src:local('Roboto Light Italic'),local('Roboto-LightItalic'),url('{{asset('/')}}fonts/robotolightitalic.woff2') format('woff2'),url('{{asset('/')}}fonts/robotolightitalic.woff') format('woff'),url('{{asset('/')}}fonts/robotolightitalic.ttf') format('truetype');font-weight:300;font-style:italic}@font-face{font-family:'Roboto';src:local('Roboto'),local('Roboto-Regular'),url('{{asset('/')}}fonts/roboto.woff2') format('woff2'),url('{{asset('/')}}fonts/roboto.woff') format('woff'),url('{{asset('/')}}fonts/roboto.ttf') format('truetype');font-weight:400;font-style:normal}@font-face{font-family:'Roboto';src:local('Roboto Italic'),local('Roboto-Italic'),url('{{asset('/')}}fonts/robotoitalic.woff2') format('woff2'),url('{{asset('/')}}fonts/robotoitalic.woff') format('woff'),url('{{asset('/')}}fonts/robotoitalic.ttf') format('truetype');font-weight:400;font-style:italic}@font-face{font-family:'Roboto';src:local('Roboto Medium'),local('Roboto-Medium'),url('{{asset('/')}}fonts/robotomedium.woff2') format('woff2'),url('{{asset('/')}}fonts/robotomedium.woff') format('woff'),url('{{asset('/')}}fonts/robotomedium.ttf') format('truetype');font-weight:500;font-style:normal}@font-face{font-family:'Roboto';src:local('Roboto Medium Italic'),local('Roboto-MediumItalic'),url('{{asset('/')}}fonts/robotomediumitalic.woff2') format('woff2'),url('{{asset('/')}}fonts/robotomediumitalic.woff') format('woff'),url('{{asset('/')}}fonts/robotomediumitalic.ttf') format('truetype');font-weight:500;font-style:italic}@font-face{font-family:'Roboto';src:local('Roboto Bold'),local('Roboto-Bold'),url('{{asset('/')}}fonts/robotobold.woff2') format('woff2'),url('{{asset('/')}}fonts/robotobold.woff') format('woff'),url('{{asset('/')}}fonts/robotobold.ttf') format('truetype');font-weight:700;font-style:normal}@font-face{font-family:'Roboto';src:local('Roboto Bold Italic'),local('Roboto-BoldItalic'),url('{{asset('/')}}fonts/robotobolditalic.woff2') format('woff2'),url('{{asset('/')}}fonts/robotobolditalic.woff') format('woff'),url('{{asset('/')}}fonts/robotobolditalic.ttf') format('truetype');font-weight:700;font-style:italic}@font-face{font-family:'Roboto';src:local('Roboto Black'),local('Roboto-Black'),url('{{asset('/')}}fonts/robotoblack.woff2') format('woff2'),url('{{asset('/')}}fonts/robotoblack.woff') format('woff'),url('{{asset('/')}}fonts/robotoblack.ttf') format('truetype');font-weight:900;font-style:normal}@font-face{font-family:'Roboto';src:local('Roboto Black Italic'),local('Roboto-BlackItalic'),url('{{asset('/')}}fonts/robotoblackitalic.woff2') format('woff2'),url('{{asset('/')}}fonts/robotoblackitalic.woff') format('woff'),url('{{asset('/')}}fonts/robotoblackitalic.ttf') format('truetype');font-weight:900;font-style:italic}</style>
     <style>
         .offer_section.offer_top {
-            background: #354356 url({{asset('/')}}flexovalFiles/malacarapa/desctop__offer_top_bg.png) center top no-repeat;
+            background: #354356 url({{asset('/')}}flexovalFiles/calfrelief/desctop__offer_top_bg.png) center top no-repeat;
         }
         .offer_section.offer_top ul {
-            margin: 70px 0 0 80px;
-        }
-        .offer_section.offer_top ul li, .offer_section.offer_top ul li b {
-            color: #fff;
+            margin: 110px 0 0 -90px;
         }
         .offer_section.offer_bottom {
-            background: #354356 url({{asset('/')}}flexovalFiles/malacarapa/desctop__offer_top_bg.png) center top no-repeat;
+            background: #354356 url({{asset('/')}}flexovalFiles/calfrelief/desctop__offer_top_bg.png) center top no-repeat;
         }
         .offer_section.offer_bottom ul {
             margin: 75px 0 0 80px;
         }
         @media screen and (max-width: 639px) {
             .offer_section.offer_top {
-                background-image: url({{asset('/')}}flexovalFiles/malacarapa/mobile__offer_bg.png);
+                background-image: url({{asset('/')}}flexovalFiles/calfrelief/mobile__offer_bg.png);
                 background-position: -190px 0;
             }
             .offer_section .discount {
                 top: 178px;
-                left: 80px;
+                left: 60px;
             }
             .offer_section.offer_bottom {
-                background-image: url({{asset('/')}}flexovalFiles/malacarapa/mobile__offer_bg.png);
+                background-image: url({{asset('/')}}flexovalFiles/calfrelief/mobile__offer_bg.png);
                 background-position: -190px 0;
             }
         }
@@ -52,8 +49,8 @@
         </ul>
         <div class="info">
             <div class="title_block">
-                <h1 class="main_title">Kompres</h1>
-                <p>Za poboljšanu cirkulaciju <span>i protiv proširenih vena</span></p>
+                <h1 class="main_title">CALF RELIEF</h1>
+                <p>KOMPRESIONI STEZNIK ZA LISTOVE</p>
             </div>
             <div class="discount">Popust <span>-40%</span></div>
             <div class="price_block clearfix">
@@ -105,10 +102,10 @@
 </section>
 <section class="about_section">
     <div class="wrapper">
-        <h2>Kompres čarape <span>štite zdravlje!</span></h2>
-        <img src="{{asset('/')}}flexovalFiles/carapa/about__image1.png" alt="" title="">
+        <h2>CALF RELIEF STEZNICI <span>štite zdravlje!</span></h2>
+        <img src="{{asset('/')}}flexovalFiles/calfrelief/about__image1.png" alt="" title="">
         <div class="text_block">
-            <p>Tajna njihove efikasnosti leži u <b>jedinstvenom sastavu </b> - Kombinovana medicinska trikotaža i pamuk. Regulišu telesnu temperaturu, a ne samo da pružaju jako prijatan osećaj, već regulišu i nivo vlažnosti kože. Za razliku od ostalih čarapa, <b>Kompres dokolenice rešavaju problem u korenu!</b></p>
+            <p>Tajna njihove efikasnosti leži u <b>jedinstvenom sastavu </b> - Kombinovana medicinska trikotaža i pamuk. Regulišu telesnu temperaturu, a ne samo da pružaju jako prijatan osećaj, već regulišu i nivo vlažnosti kože. Za razliku od ostalih steznika, <b>Calf Relief steznici rešavaju problem u korenu!</b></p>
         </div>
         <ul>
             <li>Rešavaju noge <b>umora, bola, trnjenja</b> kao i upala i otoka</li>
@@ -121,7 +118,7 @@
 </section>
 <section class="components_section">
     <div class="wrapper">
-        <h2>Kome su <span>namenjene Kompres carape?</span></h2>
+        <h2>Kome su <span>NAMENJENI CALF RELIEF STEZNICI?</span></h2>
     </div>
     <div class="components_list">
         <div class="component_item">
@@ -176,11 +173,11 @@
             <img src="{{asset('/')}}flexovalFiles/carapa/problems__image.jpg" alt="" title="">
         </div>
         <div class="info">
-            <h3>Zašto su <b>Kompres čarape korisne?</b></h3>
+            <h3>Zašto su <b>CALF RELIEF STEZNICI ZA LISTOVE KORISNI?</b></h3>
             <ul>
-                <li>Sprečavaju urastanje noktiju, pjave žuljeva, kurjih očiju i slično</li>
+                <li>Sprečavaju proširenje vena i momentalno opuštaju noge i oslobađaju ih bolova</li>
+                <li>Smanjuju otok nogu</li>
                 <li>Nemaju nikakvih neželjenih efekata</li>
-                <li>Jednako ih je prijatno nositi kako u obući, tako i po kući bez ičeg drugog na nogama</li>
                 <li>Jako kvalitetne i udobne</li>
             </ul>
         </div>
@@ -188,11 +185,11 @@
 </section>
 <section class="benefits_section">
     <div class="wrapper">
-        <h3>Po čemu su <span>kompres čarape jedinstvene na tržištu?</span></h3>
+        <h3>Po čemu su <span>CALF RELIEF STEZNICI JEDINSTVENI NA TRŽIŠTU?</span></h3>
         <div class="table">
             <div class="row">
                 <div class="cell head">Obične kompresione čarape</div>
-                <div class="cell head">Kompres čarape</div>
+                <div class="cell head">CALF RELIEF STEZNICI</div>
                 <div class="cell head">Kreme i ulja</div>
             </div>
             <div class="row">
@@ -207,7 +204,7 @@
             </div>
             <div class="row">
                 <div class="cell">Ne mogu da se nose tokom celog dana – postoji ograničeno vreme nošenja. Pojava edema kao nuspojava</div>
-                <div class="cell">Nemaju ograničen rok nošenja. Nosite ih ceo dan. Veoma su lagane i udobne</div>
+                <div class="cell">Nemaju ograničen rok nošenja. Nosite ih ceo dan. Veoma su lagani i udobni</div>
                 <div class="cell">Ograničeno vreme korišćenja</div>
             </div>
             <div class="row">
@@ -235,7 +232,7 @@
             </div>
             <div class="text_block">
                 <h3>Mišljenje <span>struke</span></h3>
-                <p>Na velikom broju uzoraka različitih problema sa venama i cirkulacijom zaključeno je da je jako teško da za svaki slučaj postoji jedan univerzalni način lečenja. <br>Međutim, Kompres dokolenice to demantuju – više stotina zadovoljnih korisnika potvrdjuje njihove izvanredne rezultate u tretiranju ovog problema. Svi oni prijavljuju da se cirkulacija vratila u normalu i da je protok krvi poboljšan. Preporučuju se za sve koji primete prve tragove proširenih vena. Toliko su lagane i udobne da ih većina korisnika nosi i na posao.</p>
+                <p>Na velikom broju uzoraka različitih problema sa venama i cirkulacijom zaključeno je da je jako teško da za svaki slučaj postoji jedan univerzalni način lečenja. <br>Međutim, Calf Relief steznici to demantuju – više stotina zadovoljnih korisnika potvrdjuje njihove izvanredne rezultate u tretiranju ovog problema. Svi oni prijavljuju da se cirkulacija vratila u normalu i da je protok krvi poboljšan. Preporučuju se za sve koji primete prve tragove proširenih vena. Toliko su lagani i udobni da ih većina korisnika nosi i na posao.</p>
             </div>
         </div>
     </div>
@@ -248,22 +245,22 @@
                 <img src="{{asset('/')}}flexovalFiles/carapa/reviews__review1_photo.jpg" alt="" title="">
                 <div class="text_block">
                     <div class="author_info">Katarina Životić, <span>Barajevo</span></div>
-                    <p>Iskreno, nisam mnogo nade polagala u ove dokolenice. Ali pristupačna cena (dosta jeftinije nego u apotekama) i pozitivna iskustva prijatelja su me naterala da ih probam – i nisam razočarana. Za manje od mesec dana rešila sam se proširenih vena. Noge su prestale da mi trnu, pogotovo listovi. Sada ih nosim svakodnevno bar 3-4 sata preventivno. Sjajne su i mogu vam reći da se i ja sjajno osećam!</p>
+                    <p>Iskreno, nisam mnogo nade polagala u ove steznike. Ali pristupačna cena (dosta jeftinije nego u apotekama) i pozitivna iskustva prijatelja su me naterala da ih probam – i nisam razočarana. Za manje od mesec dana rešila sam se proširenih vena. Noge su prestale da mi trnu, pogotovo listovi. Sada ih nosim svakodnevno bar 3-4 sata preventivno. Sjajni su i mogu vam reći da se i ja sjajno osećam!</p>
                 </div>
             </div>
             <div class="review_item clearfix">
                 <img src="{{asset('/')}}flexovalFiles/carapa/reviews__review2_photo.jpg" alt="" title="">
                 <div class="text_block">
                     <div class="author_info">Anastasija Katić, <span>Beograd</span></div>
-                    <p>Kupila sam majci dva para, i veoma joj se sviđaju. Kaže da izgledaju kao regularne čarape samo dosta punije i mekše. Efekat je sjajan! Pre par nedelja jedva je mogla da ide po kući, a danas se igra sa unučićima po parku. Jako smo zahvalni na tim čarapama.</p>
+                    <p>Kupila sam majci dva para, i veoma joj se sviđaju. Kaže da izgledaju kao regularni steznici samo dosta puniji i mekši. Efekat je sjajan! Pre par nedelja jedva je mogla da ide po kući, a danas se igra sa unučićima po parku. Jako smo zahvalni na tim steznicima.</p>
                 </div>
             </div>
             <div class="review_item clearfix">
                 <img src="{{asset('/')}}flexovalFiles/carapa/reviews__review3_photo.jpg" alt="" title="">
                 <div class="text_block">
                     <div class="author_info">Olja Micić, <span>Niš</span></div>
-                    <p>Nisam očekivala proširene vene u ovim godinama, ali eto i to se desilo. Primetila sam da me listovi bole svako veče i da mi trnu. Naručila sam Kompres čarape čim sam videla reklamu na Instagramu. Zahvalila bih se za ekspresnu dostavu – zahvaljujući tome jako brzo sam ponovo bila na nogama.
-                        Umor je nestao, a vene više nisu proširene. Ove čarape su čudo – moja topla preporuka!</p>
+                    <p>Nisam očekivala proširene vene u ovim godinama, ali eto i to se desilo. Primetila sam da me listovi bole svako veče i da mi trnu. Naručila sam Calf Relief steznike čim sam videla reklamu na Instagramu. Zahvalila bih se za ekspresnu dostavu – zahvaljujući tome jako brzo sam ponovo bila na nogama.
+                        Umor je nestao, a vene više nisu proširene. Ovi steznici su čudo – moja topla preporuka!</p>
                 </div>
             </div>
         </div>
@@ -305,15 +302,15 @@
 </section>
 <section class="offer_section offer_bottom">
     <div class="wrapper clearfix">
-        <ul>
-            <li><b>Poboljšava </b><br>cirkulaciju</li>
-            <li><b>Smanjuje </b><br>upale i otoke</li>
-            <li><b>Bez </b><br>nuspojava</li>
-        </ul>
+{{--        <ul>--}}
+{{--            <li><b>Poboljšava </b><br>cirkulaciju</li>--}}
+{{--            <li><b>Smanjuje </b><br>upale i otoke</li>--}}
+{{--            <li><b>Bez </b><br>nuspojava</li>--}}
+{{--        </ul>--}}
         <div class="info">
             <div class="title_block">
-                <h1 class="main_title">Kompres</h1>
-                <p>Za poboljšanu cirkulaciju <span>i protiv proširenih vena</span></p>
+                <h1 class="main_title">CALF RELIEF</h1>
+                <p>KOMPRESIONI STEZNIK ZA LISTOVE</p>
             </div>
             <div class="discount">Popust <span>-40%</span></div>
             <div class="price_block clearfix">
