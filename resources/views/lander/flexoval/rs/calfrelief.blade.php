@@ -56,11 +56,11 @@
             <div class="price_block clearfix">
                 <div class="price_item old">
                     <div class="text">Stara cena:</div>
-                    <div class="value">{{ $prices[1]['originalPrice'] }} KM </div>
+                    <div class="value">{{ $prices[1]['originalPrice'] }} RSD </div>
                 </div>
                 <div class="price_item new">
                     <div class="text">Nova cena:</div>
-                    <div class="value">{{ $prices[1]['amount'] }} KM</div>
+                    <div class="value">{{ $prices[1]['amount'] }} RSD</div>
                 </div>
             </div>
             <form class="order_form" action="{{$orderRoute}}" method="post">
@@ -316,11 +316,11 @@
             <div class="price_block clearfix">
                 <div class="price_item old">
                     <div class="text">Stara cena:</div>
-                    <div class="value">{{ $prices[1]['originalPrice'] }} KM </div>
+                    <div class="value">{{ $prices[1]['originalPrice'] }} RSD </div>
                 </div>
                 <div class="price_item new">
                     <div class="text">Nova cena:</div>
-                    <div class="value">{{ $prices[1]['amount'] }} KM</div>
+                    <div class="value">{{ $prices[1]['amount'] }} RSD</div>
                 </div>
             </div>
             <form id="order_form" class="order_form" action="{{$orderRoute}}" method="post">
