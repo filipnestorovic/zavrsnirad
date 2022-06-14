@@ -169,7 +169,7 @@ class OrderController extends Controller
                 $customerNote = null;
 
                 $size = $request->get('size');
-                if($size != null && $size != 0) {
+                if($size != null && $size != "0") {
                     $this->modelOrder->order_note = "Veličina: ".$size;
                 }
 
@@ -307,7 +307,7 @@ class OrderController extends Controller
         }
 
         $meta_size = [];
-        if($size != null && $size != 0) {
+        if($size != null && $size != "0") {
             $meta_size = [
                 [
                     "key" => "velicina",
@@ -644,7 +644,7 @@ class OrderController extends Controller
             $sku = $request->get('productSku');
             $size = $request->get('size');
 
-            if($size != null && $size != 0) {
+            if($size != null && $size != "0") {
                 $this->modelOrder->order_note = "Veličina: ".$size;
                 $updateResult = $this->modelOrder->updateOrderNote($orderId);
 
