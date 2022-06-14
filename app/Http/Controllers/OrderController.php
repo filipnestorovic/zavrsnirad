@@ -169,10 +169,7 @@ class OrderController extends Controller
                 $customerNote = null;
 
                 $size = $request->get('size');
-                if($size != null) {
-                    if($size === "0") {
-                        $size = "Nije izabrano";
-                    }
+                if($size != null && $size != 0) {
                     $this->modelOrder->order_note = "Veličina: ".$size;
                 }
 
@@ -310,7 +307,7 @@ class OrderController extends Controller
         }
 
         $meta_size = [];
-        if($size != null) {
+        if($size != null && $size != 0) {
             $meta_size = [
                 [
                     "key" => "velicina",
