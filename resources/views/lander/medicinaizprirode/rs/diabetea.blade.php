@@ -2,72 +2,6 @@
 <html>
 <head>
     @include('lander.medicinaizprirode.components.pixel_header')
-    <script type="text/javascript">
-        var ccode = "EN";
-        var ip_ccode = "EN";
-        var package_prices = {
-            "1": {
-                "old_price": 6380,
-                "price": 3190,
-                "price_w_vat": 3190,
-                "shipment_price": 0
-            },
-            "2": {
-                "old_price": 9900,
-                "price": 4950,
-                "price_w_vat": 4950,
-                "shipment_price": 0
-            },
-            "3": {
-                "old_price": 12400,
-                "price": 6200,
-                "price_w_vat": 6200,
-                "shipment_price": 0
-            },
-            "4": {
-                "old_price": 14700,
-                "price": 7350,
-                "price_w_vat": 7350,
-                "shipment_price": 0
-            },
-            // "6": {
-            //     "old_price": 18700,
-            //     "price": 9350,
-            //     "price_w_vat": 9350,
-            //     "shipment_price": 0
-            // }
-        };
-        var shipment_price = 0;
-        var name_hint = "Jelena Skrba";
-        var phone_hint = "+381 XXX XXX XXX";
-        var iew = true;
-        var offer_countries = {};
-    </script>
-    <script src="{{ asset('/') }}medicinaizprirodeFiles/diabetea/js/jquery-1.12.4.min.js"
-            type="text/javascript"></script>
-    <style>
-        .ac_footer {
-            position: relative;
-            top: 10px;
-            height: 0;
-            text-align: center;
-            margin-bottom: 70px;
-            color: #A12000;
-        }
-        .ac_footer a {
-            color: #A12000;
-        }
-        .ac_footer p {
-            text-align: center;
-        }
-        img[height="1"],
-        img[width="1"] {
-            display: none !important;
-        }
-    </style>
-    <!--retarget-->
-    <!--retarget-->
-    {{--    <script src="{{ asset('/') }}medicinaizprirodeFiles/diabetea/js/9_12.min.js" type="text/javascript"></script>--}}
     <meta data-text-id="156653">
     <meta charset="utf-8">
     <meta data-text-id="156653">
@@ -77,10 +11,9 @@
     <link href="{{ asset('/') }}medicinaizprirodeFiles/diabetea/css/ruletka.css" rel="stylesheet" type="text/css">
     <link href="{{ asset('/') }}medicinaizprirodeFiles/diabetea/css/spin.css" rel="stylesheet">
     <link href="{{ asset('/') }}medicinaizprirodeFiles/diabetea/css/formStyles.css" rel="stylesheet">
+    <style>.order_block {display: none;} .priceс br {display: none;}</style>
 </head>
 <body>
-<!--retarget-->
-<!--retarget-->
 <div class="page-wrap">
     @include('components.display_errors')
     <header class="header">
@@ -92,16 +25,13 @@
             <div class="nav">
                 <ul class="nav__inner">
                     <li class="mobile-show">
-                        <span class="cursPointer"> Novosti </span>
+                        <span class="cursPointer"> <a href="#order_form">Novosti</a> </span>
                     </li>
                     <li class="mobile-show">
-                        <span class="cursPointer"> Video </span>
+                        <span class="cursPointer"> <a href="#order_form">Video</a> </span>
                     </li>
                     <li class="mobile-show">
-                        <span class="cursPointer"> Život </span>
-                    </li>
-                    <li class>
-                        <a href> televizní program (pořad) </a>
+                        <span class="cursPointer"> <a href="#order_form">Život</a> </span>
                     </li>
                 </ul>
             </div>
@@ -114,26 +44,17 @@
             <div class="content__inner content__inner_wide">
                 <div class="article">
                     <div class="article__date date-15 time">
-                        <script>
-                            var now = new Date(),
-                                need = new Date(now.getTime() - 1000 * 60 * 60 * 24 * 7).toLocaleString('cs', {
-                                    day: 'numeric',
-                                    month: 'long',
-                                    year: 'numeric'
-                                })
-                            document.write(need);
-                        </script>
+                        {{ date('d.m.Y.',strtotime("-7 days")) }}
                     </div>
-                    <h1 class="article__title"> Naučite da razlikujete stvarnost od uobrazilje, a onda se izlečite od
-                        dijabetesa!
+                    <h1 class="article__title"> Naučite da razlikujete stvarnost od imaginacije i tretirajte dijabetes kako treba!
                     </h1>
                     <h2> Glavna zabluda o dijabetesu u Srbiji koji skraćuje život </h2>
                     <div class="article__text">
                         <div class="js-mediator-article">
                             <div class="article_content">
-                                <p> Doktor Jovan Andrić - srpski endokrinolog. Danas se smatra najboljim specijalistom
+                                <p> Doktor Žarko Pavlović - srpski endokrinolog. Danas se smatra najboljim specijalistom
                                     za lečenje dijabetesa u državi. Sve poznate ličnosti koje boluju od dijabetesa
-                                    pokušavaju da se zakažu kod njega na pregled. Dolaze mu pacijenti iz Francuske,
+                                    pokušavaju da zakažu pregled kod njega. Dolaze mu pacijenti iz Francuske,
                                     Nemačke, Velike Britanije i drugih država. Jedan je od najuticajnijih endokrinologa
                                     u EU. Napisao je 32 naučne knjige, a u njegovom arsenalu nalazi se 3 puta više
                                     naučnih radova objavljenih u časopisima.
@@ -142,12 +63,11 @@
                                     <img src="{{ asset('/') }}medicinaizprirodeFiles/diabetea/images/-1.jpg">
                                     <span class="Figure-caption"></span>
                                 </figure>
-                                <p> Doktor Jovan Andrić retko daje intervjue, ali je pristao da odgovori na pitanja
+                                <p> Doktor Žarko Pavlović retko daje intervjue, ali je pristao da odgovori na pitanja
                                     našeg dopisnika. Ispod ćete naći važne informacije koje će vam pomoći u borbi protiv
                                     dijabetesa.
                                 </p>
-                                <p> DOKTOR JOVAN ANDRIĆ NAS ČVRSTO UVERAVA DA SE DIJABETES TIPA DVA U VEĆINI SLUČAJEVA
-                                    LEČI POMOĆU SAVREMENIH SAZNANJA!
+                                <p> DOKTOR Žarko Pavlović NAS ČVRSTO UVERAVA DA SE DIJABETES TIPA DVA U VEĆINI SLUČAJEVA TRETIRA POMOĆU SAVREMENIH SAZNANJA!
                                 </p>
                                 <p> Teme pomenute u ovom materijalu: </p>
                                 <ul class="ListBlock-root ListBlock-ul">
@@ -162,7 +82,7 @@
                                 </div>
                                 <br>
                                 <p>
-                                    <b> Doktor Jovan Andrić: </b>
+                                    <b> Doktor Žarko Pavlović: </b>
                                 </p>
                                 <p> Danas preparati na bazi metformina predstavljaju praktično osnovu većine metoda za
                                     lečenje. Isto tako, ovo predstavlja i zabludu neupućenih pacijenata i lekara.
@@ -214,7 +134,7 @@
                                     <b> Ako metformin ubija, zbog čega se koristi? </b>
                                 </p>
                                 <p>
-                                    <b> Doktor Jovan Andrić: </b>
+                                    <b> Doktor Žarko Pavlović: </b>
                                 </p>
                                 <p> Nažalost, danas se malo lekara brine o zdravlju svojih pacijenata. Kažem vam da više
                                     nikog nije briga. Oni prosto rade svoj posao i za nju dobijaju novac. Svejedno im je
@@ -315,7 +235,7 @@
                                         Da li može da se izleči? </b>
                                 </p>
                                 <p>
-                                    <b> Doktor Jovan Andrić: </b>
+                                    <b> Doktor Žarko Pavlović: </b>
                                 </p>
                                 <p> Još jednom želim da napomenem da je dijabetes tipa 2 složena, opasna i sistemska
                                     bolest. To nije prehlada i proliv. Ovo je mnogo gore. Bolest se širi po celom
@@ -327,20 +247,20 @@
                                     ceo organizam.
                                 </p>
                                 <p> Ako je reč o konkretnim preparatima koje ljudi mogu da koriste za samostalno lečenje
-                                    dijabetesa, ja bih preporučio preparat kao što je <a href> Diabetea </a> . Srpski
+                                    dijabetesa, ja bih preporučio preparat kao što je <a href="#order_form"> Diabetea </a> . Srpski
                                     centar za endokrinologiju ga je razvio 2019 godine. Nije u pitanju hemija poput
                                     metformina, nego PRIRODNI KOMPLEKS PROTIV DIJABETESA KOJI SADRŽI VIŠE OD 60 (!)
                                     RAZNIH AKTIVNIH KOMPONENATA.
                                 </p>
                                 <p> U sastav preparata ulaze svi najneophodniji vitamini , makro i mikroelementi u
-                                    slučaju dijabetesa tipa 2. Diabetea sadrži 28 ekstrakata trava ubranih u raznim
+                                    slučaju dijabetesa tipa 2. <a href="#order_form"> Diabetea </a> sadrži 28 ekstrakata trava ubranih u raznim
                                     delovima sveta.
                                 </p>
-                                <p class="text_color"> Diabetea je dobar zbog toga što ne šteti organizmu. Štaviše, on
+                                <p class="text_color"> <a href="#order_form"> Diabetea </a> je dobar zbog toga što ne šteti organizmu. Štaviše, on
                                     ojačava organizam dijabetičara. Najvažnije je da blagotvorno deluje na bolest sa
                                     svih strana.
                                 </p>
-                                <p> Efikasnost <a href> Diabetea </a> je neuporediva! Nakon što smo ovaj preparat počeli
+                                <p> Efikasnost <a href="#order_form"> Diabetea </a> je neuporediva! Nakon što smo ovaj preparat počeli
                                     da preporučujemo našim pacijentima, procenat ozdravljenja.... A mislim na POTPUNO
                                     IZLEČENJE OD DIJABETESA koje je poraslo d 96%. To znači da 96 od 100 ljudi više nije
                                     bolesno. Više nemaju šećer i savršeno se osećaju.
@@ -358,7 +278,8 @@
                                         <img src="{{ asset('/') }}medicinaizprirodeFiles/diabetea/images/-4.jpg">
                                         <span class="Figure-caption"> Milena Pavić, 67 godina. Penzionerka iz Srbije, boluje od dijabetesa. Živi u Novom Sadu. </span>
                                     </figure>
-                                    <p> „Zbog čega drugi lekari kriju od ljudi ovaj čudesni lek Diabetea? Imala sam
+                                    <p> „Zbog čega drugi lekari kriju od ljudi ovaj čudesni lek <a href="#order_form">
+                                            Diabetea </a>? Imala sam
                                         užasan oblik dijabetesa. Bolujem od 28. godine. Sa 49 godina sam dobila ozbiljne
                                         komplikacije na očima i bubrezima. Nisu radili, osećala sam miris acetona. Moja
                                         kćer nije mogla da sedi pored mene. A stalno sam imala čireve na nogama i crne
@@ -379,7 +300,7 @@
                                         dijabetesa kao sad! Počela sam dobro da spavam, nestala je stalna žeđ, prestala
                                         sam da stalno idem u toalet, nije bilo nikakvih znakova umora i stalne slabosti.
                                         Pritisak je takođe prestao da raste. Popravio mi se vid. Još uvek traje moje
-                                        lečenje, a uverena sam da ću to preživeti. Mnogo vam hvala za <a href>
+                                        lečenje, a uverena sam da ću to preživeti. Mnogo vam hvala za <a href="#order_form">
                                             Diabetea </a> .
                                     </p>
                                 </div>
@@ -388,7 +309,7 @@
                                 </h3>
                                 <br>
                                 <p>
-                                    <b> Doktor Jovan Andrić: <br>
+                                    <b> Doktor Žarko Pavlović: <br>
                                         <br> Iskreno, proces nije brz, ali je temeljan. Traje nekoliko meseci. Može da
                                         traje i pola godine. </b>
                                 </p>
@@ -397,13 +318,13 @@
                                     cukrovkou.
                                 </p>
                                 <p>
-                                    <a href> Diabetea </a> pomáhá všem, včetně seniorů s oslabenou imunitou.
+                                    <a href="#order_form"> Diabetea </a> pomáhá všem, včetně seniorů s oslabenou imunitou.
                                 </p>
                                 <p> Opisaću vam faze lečenja </p>
                                 <p style="text-align: center;">
                                     <b> Obnavljanje krvnih sudova </b>
                                 </p>
-                                <p> Osnovno delovanje <a href> Diabetea </a> je u tome što ne samo da uklanja šećer iz
+                                <p> Osnovno delovanje <a href="#order_form"> Diabetea </a> je u tome što ne samo da uklanja šećer iz
                                     krvi, nego i normalizuje nivo glukoze. On takođe rastvara šećer koji je već prošao
                                     kroz zidove krvnih sudova zbog ginko bilobe u njegovom sastavu. Zidovi krvnih
                                     sudova, koji se bukvalno oslobađaju leda, ponovo dobijaju sposobnost sužavanja i
@@ -415,7 +336,7 @@
                                 <p style="text-align: center;">
                                     <b> Normalizacija nivoa glukoze </b>
                                 </p>
-                                <p> Diabetea ne povećava nivo insulina i zato je bezbedan. Ali ima izuzetno koristan
+                                <p> <a href="#order_form"> Diabetea </a> ne povećava nivo insulina i zato je bezbedan. Ali ima izuzetno koristan
                                     efekat, a upravo on snižava rezistenciju na insulin. To je veoma dobro svojstvo.
                                     Biološki aktivne komponente preparata prodiru direktno u ćelije mišića, masti i
                                     jetre i stimulišu ih tako da bolje počnu da reaguju na prisustvo hormona u krvi. U
@@ -439,7 +360,7 @@
                                 <p style="text-align: center;">
                                     <b> Moguća normalizacija </b>
                                 </p>
-                                <p> Mnogi dijabetičari nemaju snage. Jedno od fascinantnih dejstava preparata <a href>
+                                <p> Mnogi dijabetičari nemaju snage. Jedno od fascinantnih dejstava preparata <a href="#order_form">
                                         Diabetea </a> je normalizovanje nivoa testosterona i obnova zdrave potencije.
                                     Čak i sa 50, 60 godina muškarci mogu da imaju seks.
                                 </p>
@@ -456,7 +377,7 @@
                                 <p style="text-align: center;">
                                     <b> Efekat leptira za svakog dijabetičara! </b>
                                 </p>
-                                <p> Delovanje preparata <a href> Diabetea </a> slično je na delovanje leptirovih krila
+                                <p> Delovanje preparata <a href="#order_form"> Diabetea </a> slično je na delovanje leptirovih krila
                                     koje izaziva lančanu reakciju izlečenja unutrašnjih organa i poboljšanje
                                     zdravstvenog stanja. Počinje normalizacijom rada krvnih sudova, a završava obnovom
                                     vida i zglobova.
@@ -508,14 +429,14 @@
                                     pobrinuti za sebe.
                                 </p>
                                 <p>
-                                    <b> Deficit preparata Diabetea u apotekama u Srbiji! </b>
+                                    <b> Deficit preparata <a href="#order_form"> Diabetea </a> u apotekama u Srbiji! </b>
                                 </p>
                                 <p>
-                                    <b> Koliko je nama poznato, veoma je teško kupiti <a href> Diabetea </a> Ovaj lek je
+                                    <b> Koliko je nama poznato, veoma je teško kupiti <a href="#order_form"> Diabetea </a> Ovaj lek je
                                         retko dostupan. Da li je to tačno? I šta biste mogli da posavetujete
                                         dijabetičarima u Srbiji? </b>
                                 </p>
-                                <p> Da, upravo tako. Diabetea se pušta u prodaju u ograničenim serijama i zato ne dolazi
+                                <p> Da, upravo tako. <a href="#order_form"> Diabetea </a> se pušta u prodaju u ograničenim serijama i zato ne dolazi
                                     od apoteka. Veliki deo, nažalost, odlazi u inostranstvo i kupuju ga privatne
                                     klinike.
                                 </p>
@@ -524,19 +445,19 @@
                                     dostavljamo preko pošte direktno pacijentima u kuću. U bilo koji region u
                                     Srbiji.
                                 </p>
-                                <p> Evo koji su uslovi za dobijanje preparata <a href> Diabetea </a> . </p>
+                                <p> Evo koji su uslovi za dobijanje preparata <a href="#order_form"> Diabetea </a> . </p>
                                 <p> Treba da: </p>
                                 <ul class="ListBlock-root" style="list-style-type: decimal;  padding-left: 45px;">
                                     <li> Treba da živite u Srbiji. Nećemo slati u inostranstvo. Diabetea.</li>
-                                    <li> Diabetea možete da dobijete SAMO ZA LIČNU UPOTREBU. Molimo preprodavače da ne
-                                        preprodaju profitabilni Diabetea Nije čovečno zarađivati na bolesnim ljudima!
-                                        Diabetea Diabetea će da se šalje samo jednoj osobi i to u količini koja je
+                                    <li> <a href="#order_form"> Diabetea </a> možete da dobijete SAMO ZA LIČNU UPOTREBU. Molimo preprodavače da ne
+                                        preprodaju profitabilni <a href="#order_form"> Diabetea </a> Nije čovečno zarađivati na bolesnim ljudima!
+                                        <a href="#order_form"> Diabetea </a> će da se šalje samo jednoj osobi i to u količini koja je
                                         neophodna samo za lečenje JEDNE osobe - ili dve ako u porodici ima nekoliko
                                         dijabetičara).
                                     </li>
                                 </ul>
                                 <p> Da biste sudjelovali u našem programu, morate kliknuti na gumb „zavrti” na biciklu
-                                    sa donjim popustima. Ovisno o tome što točak prikazuje, možete pobijediti <a href>
+                                    sa donjim popustima. Ovisno o tome što točak prikazuje, možete pobijediti <a href="#order_form">
                                         Diabetea </a> uz određeni popust. Točak možete okrenuti samo jednom.
                                 </p>
                                 <p>
@@ -548,21 +469,14 @@
                                     da ga naručite što je pre moguće dok ga još ima na zalihama.
                                 </p>
                                 <p id="form" style="text-align: center;">
-                                    <b> Pozor! <a href> Diabetea </a> akcija se brzo završava! <br> Broj dostupnih paketa se brzo
+                                    <b> Pozor! <a href="#order_form"> Diabetea </a> akcija se brzo završava! <br> Broj dostupnih
+                                        paketa se brzo
                                         smanjuje! </b>
                                 </p>
                                 <p style="text-align: center; color: red;">
                                     <b>
                                     <span class="date-0">
-                                       <script type="text/javascript">
-                                          var d = new Date();
-                                          var curr_date = d.getDate() + 0;
-                                          var curr_month = d.getMonth() + 1;
-                                          var curr_year = d.getFullYear();
-                                          if (curr_month < 10) curr_month = '0' + curr_month;
-                                          if (curr_date < 10) curr_date = '0' + curr_date;
-                                          document.write(curr_date + '.' + curr_month + '.' + curr_year);
-                                       </script>
+                                        {{ date('d.m.Y.') }}
                                     </span>
                                         broj paketa sa popustom je:
                                     </b>
@@ -571,7 +485,7 @@
                                     <b class="prod_left_val"> 19 komada </b>
                                 </h3>
                                 <h4 style="text-align: center; color:green;">
-                                    <span> Ti <u> možeš </u> popuniti obrazac i preuzeti „ <a href> Diabetea </a> ” po sniženoj ceni </span>
+                                    <span> Ti <u> možeš </u> popuniti obrazac i preuzeti „ <a href="#order_form"> Diabetea </a> ” po sniženoj ceni </span>
                                 </h4>
                                 <div class="center">
                                     <div class="features-wrapper">
@@ -580,7 +494,7 @@
                                             <p>
                                                 <b> Pažnja! </b>
                                                 <br> Posetioci naše stranice imaju ekskluzivnu mogućnost da naruče
-                                                Diabetea s popustom do 50%! Da biste to uradili, zavrtite kolo sreće
+                                                <a href="#order_form"> Diabetea </a> s popustom do 50%! Da biste to uradili, zavrtite kolo sreće
                                                 tako što ćete kliknuti na taster „ZAVRTI” i zatim sačekajte da se
                                                 potpuno zaustavi. Ko zna, možda ste baš Vi taj srećnik koji će danas
                                                 uspeti malo da uštedi! Srećno!
@@ -608,7 +522,8 @@
                                                         <span class="js_old_price price_old"> {{ $prices[1]['amount']*2 }} RSD </span>
                                                     </s>
                                                     <br>
-                                                    <b class="new_price js_new_price price_main"> {{ $prices[1]['amount'] }} RSD </b>
+                                                    <b class="new_price js_new_price price_main"> {{ $prices[1]['amount'] }}
+                                                        RSD </b>
                                                 </div>
                                             </div>
                                             <center class="mt45 mb35">
@@ -618,7 +533,8 @@
                                                         class="time_remains" id="sec"></span>
                                                 </h3>
                                             </center>
-                                            <form action="{{$orderRoute}}" class="order_form" method="POST">
+                                            <form action="{{$orderRoute}}" id="order_form" class="order_form"
+                                                  method="POST">
                                                 {{csrf_field()}}
                                                 @include('lander.naturapharm.components.form_hidden_fields')
                                                 <label class="data_label" for="name"> Vaše ime: </label>
@@ -643,20 +559,10 @@
                                         </div>
                                         <center>
                                             <h2 class="time_remains_title"> PONUDA VAŽI DO (ISKLJUČIVO): <span
-                                                    class="time_remains"> {{ date('d.m.y.') }} </span>
+                                                    class="time_remains"> {{ date('d.m.Y.') }} </span>
                                             </h2>
                                             <br>
                                         </center>
-                                        <style>
-                                            .order_block {
-                                                display: none;
-                                            }
-                                        </style>
-                                        <style>
-                                            .priceс br {
-                                                display: none;
-                                            }
-                                        </style>
                                     </div>
                                 </div>
                                 <div id="comments">
@@ -769,7 +675,7 @@
                                             </div>
                                             <span class="name"> Anđela
                                        </span>
-                                            <div class="pg"> Diabetea JE RASPRODAT !!!!!!!! Nisam uspela da naručim.
+                                            <div class="pg"> <a href="#order_form"> Diabetea </a> JE RASPRODAT !!!!!!!! Nisam uspela da naručim.
                                                 Kažu da je bilo juče, a danas nema... Dijabetes me je već namučio. Ne
                                                 znam šta da radim. Nadala sam se da će Diabetea. Gde mogu da ga nađem??
                                             </div>
@@ -798,7 +704,7 @@
                                        </span>
                                             <div class="pg"> Pozdrav svima. Imam 59 godina, početna kilaža mi je bila
                                                 124 kg, a sad imam 80 kg, visoka sam 168 cm. Nivo glukoze je od 18 do
-                                                12, a bio je 29. Sad je 5,0. Uzimam Diabetea tokom 3 meseca. Drago mi je
+                                                12, a bio je 29. Sad je 5,0. Uzimam <a href="#order_form"> Diabetea </a> tokom 3 meseca. Drago mi je
                                                 zbog rezultata. Nijedan lek mi nije tako pomogao.
                                             </div>
                                         </div>
@@ -823,7 +729,7 @@
                                             </div>
                                             <span class="name"> Katarina
                                        </span>
-                                            <div class="pg"> Diabetea se vratio u prodaju! Kako piše na sajtu, klinika
+                                            <div class="pg"> <a href="#order_form"> Diabetea </a> se vratio u prodaju! Kako piše na sajtu, klinika
                                                 je dala još 1000 pakovanja za dijabetičare u Srbiji! Kako lekari kažu,
                                                 to je zadnje što mogu da daju.
                                             </div>
@@ -881,7 +787,7 @@
                                             <span class="name"> Marija
                                        </span>
                                             <div class="pg"> Moj otac ima dijabetes i ne želi da pije tablete. Zna li
-                                                neko hoće li mu Diabetea pomoći?
+                                                neko hoće li mu <a href="#order_form"> Diabetea </a> pomoći?
                                             </div>
                                         </div>
                                     </div>
@@ -894,7 +800,7 @@
                                             <span class="name"> Кristina
                                        </span>
                                             <div class="pg"> Naravno da će mu pomoći! U svakom slučaju treba da proba, a
-                                                i Diabetea košta puno manje od ovog metformina.
+                                                i <a href="#order_form"> Diabetea </a> košta puno manje od ovog metformina.
                                             </div>
                                         </div>
                                     </div>
@@ -906,11 +812,10 @@
                                             </div>
                                             <span class="name"> Кatarina
                                        </span>
-                                            <div class="pg"> Diabetea je predivan lek. Naša kćer je dobila dijabetes.
+                                            <div class="pg"> <a href="#order_form"> Diabetea </a> je predivan lek. Naša kćer je dobila dijabetes.
                                                 Ima samo 7 godina. Nisam htela da joj dajem hemiju jer je previše mala.
                                                 Konsultovala sam se s mnogim endokrinolozima. Odlučili smo da odaberemo
-                                                Diabetea. Dobro joj je pomogao. Šećer je skoro prestao da raste <a
-                                                    href></a> .
+                                                Diabetea. Dobro joj je pomogao. Šećer je skoro prestao da raste .
                                             </div>
                                         </div>
                                     </div>
@@ -960,33 +865,11 @@
         </div>
     </div>
 </div>
-<script src="{{ asset('/') }}medicinaizprirodeFiles/diabetea/js/index.js"></script>
-<script src="{{ asset('/') }}medicinaizprirodeFiles/diabetea/js/js.cookie.min.js" type="text/javascript"></script>
-<script>
-    $(document).ready(function () {
-        try {
-            moment.locale("");
-            $('.day-before').text(moment().subtract(1, 'day').format('D.MM.YYYY'));
-            $('.day-after').text(moment().add(1, 'day').format('D.MM.YYYY'));
-        } catch (e) {
-            console.log('moment problems!');
-        }
-    });
-</script>
-<!--retarget-->
-<!--retarget-->
 <div class="ac_footer">
     <span> © 2022 Copyright. All rights reserved. </span>
-    {{--    <br>--}}
-    {{--    <a href="febatigr.com/content/shared/html/policy_en.html" target="_blank"> Privacy policy </a> | <a href="http://ac-feedback.com/report_form/"> Report </a>--}}
-    {{--
-    <p></p>
-    --}}
-    {{--    <script>--}}
-    {{--        typeof adc_clearFooter !== 'undefined' && adc_clearFooter();--}}
-    {{--
- </script>--}}
 </div>
+<script src="{{ asset('/') }}medicinaizprirodeFiles/diabetea/js/index.js"></script>
+<script src="{{ asset('/') }}medicinaizprirodeFiles/diabetea/js/js.cookie.min.js" type="text/javascript"></script>
 @include('lander.medicinaizprirode.components.pixel_footer')
 </body>
 </html>

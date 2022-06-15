@@ -2,134 +2,15 @@
 <html dir="ltr">
 <head>
     @include('lander.medicinaizprirode.components.pixel_header')
-    <script>
-        var lang_locale = "sr";
-    </script>
-    <script type="text/javascript">
-        var ccode = "EN";
-        var ip_ccode = "EN";
-        var iew = true;
-    </script>
-    <script src="{{ asset('/') }}medicinaizprirodeFiles/innoderm/js/jquery-1.12.4.min.js" type="text/javascript"></script>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        .ac_footer {
-            position: relative;
-            top: 10px;
-            height: 0;
-            text-align: center;
-            margin-bottom: 70px;
-            color: #a12000;
-        }
-
-        .ac_footer a {
-            color: #a12000;
-        }
-
-        .ac_footer p {
-            text-align: center;
-        }
-
-        img[height="1"],
-        img[width="1"] {
-            display: none !important;
-        }
-    </style>
-    <style type="text/css">
-        .form-style-6{
-            font: 95% Arial, Helvetica, sans-serif;
-            max-width: 400px;
-            margin: 10px auto;
-            padding: 16px;
-            background: #F7F7F7;
-        }
-        .form-style-6 h1{
-            background: #704F81;
-            padding: 20px 0;
-            font-size: 140%;
-            font-weight: 300;
-            text-align: center;
-            color: #fff;
-            margin: -16px -16px 16px -16px;
-        }
-        .form-style-6 input[type="text"],
-        .form-style-6 input[type="date"],
-        .form-style-6 input[type="datetime"],
-        .form-style-6 input[type="email"],
-        .form-style-6 input[type="number"],
-        .form-style-6 input[type="search"],
-        .form-style-6 input[type="time"],
-        .form-style-6 input[type="url"],
-        .form-style-6 textarea,
-        .form-style-6 select
-        {
-            -webkit-transition: all 0.30s ease-in-out;
-            -moz-transition: all 0.30s ease-in-out;
-            -ms-transition: all 0.30s ease-in-out;
-            -o-transition: all 0.30s ease-in-out;
-            outline: none;
-            box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            width: 100%;
-            background: #fff;
-            margin-bottom: 4%;
-            border: 1px solid #ccc;
-            padding: 3%;
-            color: #555;
-            font: 95% Arial, Helvetica, sans-serif;
-        }
-        .form-style-6 input[type="text"]:focus,
-        .form-style-6 input[type="date"]:focus,
-        .form-style-6 input[type="datetime"]:focus,
-        .form-style-6 input[type="email"]:focus,
-        .form-style-6 input[type="number"]:focus,
-        .form-style-6 input[type="search"]:focus,
-        .form-style-6 input[type="time"]:focus,
-        .form-style-6 input[type="url"]:focus,
-        .form-style-6 textarea:focus,
-        .form-style-6 select:focus
-        {
-            box-shadow: 0 0 5px #704F81;
-            padding: 3%;
-            border: 1px solid #704F81;
-        }
-
-        .form-style-6 input[type="submit"],
-        .form-style-6 input[type="button"]{
-            box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            width: 100%;
-            padding: 3%;
-            background: #704F81;
-            border-bottom: 2px solid #30C29E;
-            border-top-style: none;
-            border-right-style: none;
-            border-left-style: none;
-            color: #fff;
-        }
-        .form-style-6 input[type="submit"]:hover,
-        .form-style-6 input[type="button"]:hover{
-            background: #2EBC99;
-        }
-    </style>
-
-    <!--retarget-->
-    <!--retarget-->
-    <script src="{{ asset('/') }}medicinaizprirodeFiles/innoderm/js/9.min.js" type="text/javascript"></script>
     <meta data-text-id="152707" />
     <meta charset="utf-8" />
     <meta data-text-id="152707" />
-    <title>Vraćanje mladosti nakon 40-e godine brzo i lako</title>
     <meta content="width=device-width,minimum-scale=0.25,maximum-scale=4.0,user-scalable=yes" name="viewport" />
+{{--    <script src="{{ asset('/') }}medicinaizprirodeFiles/innoderm/js/9.min.js" type="text/javascript"></script>--}}
     <link href="{{ asset('/') }}medicinaizprirodeFiles/innoderm/css/index.css" media="all" rel="stylesheet" type="text/css" />
+    <style>html{scroll-behavior:smooth}.form-style-6{font:95% Arial,Helvetica,sans-serif;max-width:400px;margin:10px auto;padding:16px;background:#f7f7f7}.form-style-6 h1{background:#704f81;padding:20px 0;font-size:140%;font-weight:300;text-align:center;color:#fff;margin:-16px -16px 16px -16px}.form-style-6 input[type="text"],.form-style-6 input[type="date"],.form-style-6 input[type="datetime"],.form-style-6 input[type="email"],.form-style-6 input[type="number"],.form-style-6 input[type="search"],.form-style-6 input[type="time"],.form-style-6 input[type="url"],.form-style-6 textarea,.form-style-6 select{-webkit-transition:all .30s ease-in-out;-moz-transition:all .30s ease-in-out;-ms-transition:all .30s ease-in-out;-o-transition:all .30s ease-in-out;outline:0;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;width:100%;background:#fff;margin-bottom:4%;border:1px solid #ccc;padding:3%;color:#555;font:95% Arial,Helvetica,sans-serif}.form-style-6 input[type="text"]:focus,.form-style-6 input[type="date"]:focus,.form-style-6 input[type="datetime"]:focus,.form-style-6 input[type="email"]:focus,.form-style-6 input[type="number"]:focus,.form-style-6 input[type="search"]:focus,.form-style-6 input[type="time"]:focus,.form-style-6 input[type="url"]:focus,.form-style-6 textarea:focus,.form-style-6 select:focus{box-shadow:0 0 5px #704f81;padding:3%;border:1px solid #704f81}.form-style-6 input[type="submit"],.form-style-6 input[type="button"]{box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;width:100%;padding:3%;background:#704f81;border-bottom:2px solid #30c29e;border-top-style:none;border-right-style:none;border-left-style:none;color:#fff}.form-style-6 input[type="submit"]:hover,.form-style-6 input[type="button"]:hover{background:#2ebc99}</style>
 </head>
-
 <body>
-<!--retarget--><!--retarget-->
 <div>
     @include('components.display_errors')
     <div class="header">
@@ -289,9 +170,7 @@
             <p>
                 <b> Zoran Hadži-Stević: </b> To je sasvim tačno. Vreme kada se program završava je
                 <b>
-                    <script type="text/javascript">
-                        dtime_nums(-1, true);
-                    </script>
+                    {{ date('d.m.Y.') }}
                 </b>
                 . Pre ovog termina (isključivo), <a href="#orderForm"> mora se ostaviti zahtev na stranici </a> . Tako da ko god želi da kupi <a href="#orderForm"> InnoDerm </a> po posebnoj ceni i koristi ovu
                 kremu radi kursa podmlađivanja treba da požuri.
@@ -381,9 +260,7 @@
             </div>
             <h2>
                 Podsećamo Vas da je akcija validna samo za porudžbine iz Srbije do datuma:
-                <script type="text/javascript">
-                    dtime_nums(-1, true);
-                </script>
+                {{ date('d.m.Y.') }}
             </h2>
             <div class="vk-container">
                 <div class="vk-header">
@@ -646,31 +523,12 @@
         </div>
     </div>
     <div class="footer">
-        <p class="footer-text">© <span class="ryear"> 2018 </span> Tradicionalni lekarski portal</p>
+        <p class="footer-text">© <span class="ryear"> {{now()->year}} </span> Tradicionalni lekarski portal</p>
     </div>
 </div>
 <script src="{{ asset('/') }}medicinaizprirodeFiles/innoderm/js/countdown.js"></script>
 <script src="{{ asset('/') }}medicinaizprirodeFiles/innoderm/js/main.js"></script>
 <script src="{{ asset('/') }}medicinaizprirodeFiles/innoderm/js/js.cookie.min.js" type="text/javascript"></script>
-<script>
-    $(document).ready(function () {
-        try {
-            moment.locale("");
-            $(".day-before").text(moment().subtract(1, "day").format("D.MM.YYYY"));
-            $(".day-after").text(moment().add(1, "day").format("D.MM.YYYY"));
-        } catch (e) {
-            console.log("moment problems!");
-        }
-    });
-</script>
-<!--retarget--><!--retarget-->
-{{--<div class="ac_footer">--}}
-{{--    <a href="{{ asset('/') }}medicinaizprirodeFiles/innoderm/http://ac-feedback.com/report_form/"> Report </a>--}}
-{{--    <p></p>--}}
-{{--    <script>--}}
-{{--        typeof adc_clearFooter !== "undefined" && adc_clearFooter();--}}
-{{--    </script>--}}
-{{--</div>--}}
 @include('lander.medicinaizprirode.components.pixel_footer')
 </body>
 </html>

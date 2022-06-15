@@ -13,6 +13,14 @@
 <script>
     $(document).ready(function () {
 
+        try {
+            moment.locale("");
+            $('.day-before').text(moment().subtract(1, 'day').format('D.MM.YYYY'));
+            $('.day-after').text(moment().add(1, 'day').format('D.MM.YYYY'));
+        } catch (e) {
+            console.log('moment problems!');
+        }
+
         let name, email, phone, city, zip, country_code, currency_symbol, currency_code, amount;
         const baseURL = "{{ asset('/') }}";
         const csrf_token = "{{ csrf_token() }}";
