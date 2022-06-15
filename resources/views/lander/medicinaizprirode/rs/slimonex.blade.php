@@ -268,8 +268,8 @@
                                                 <div style="max-width: 100%;">
                                                     <div id="orderForm" class="form-style-6">
                                                         <h2 style="text-align:center;font-size:24px;">AKCIJA <span style="color:#704F81;">1 + 1 GRATIS</span></h2>
-                                                        <span style="text-align:center;font-size:18px;display:block;"><s>Regularna cena: 5390 din</s></span>
-                                                        <span style="text-align:center;font-size:24px;display:block;font-weight:800;">AKCIJSKA CENA: <span style="color:#704F81;">3190 din</span></span>
+                                                        <span style="text-align:center;font-size:18px;display:block;"><s>Regularna cena: {{ $prices[1]['amount']*2 }} RSD</s></span>
+                                                        <span style="text-align:center;font-size:24px;display:block;font-weight:800;">AKCIJSKA CENA: <span style="color:#704F81;">{{ $prices[1]['amount'] }} RSD</span></span>
                                                         <form method="POST" action="{{$orderRoute}}" style="margin:20px;">
                                                             {{csrf_field()}}
                                                             @include('lander.naturapharm.components.form_hidden_fields')
