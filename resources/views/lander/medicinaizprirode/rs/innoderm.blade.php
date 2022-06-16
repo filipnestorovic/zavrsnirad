@@ -58,7 +58,7 @@
             <div class="content-left-doctor">
                 <div class="content-left-doctor-foto"><img src="{{ asset('/') }}medicinaizprirodeFiles/innoderm/img/doc-dic-1.jpg" /></div>
                 <div class="content-left-doctor-text">
-                    <strong> Zoran Hadži-Stević odgovara na naša pitanja </strong>
+                    <strong> Goran Rajković odgovara na naša pitanja </strong>
                     <p>Profesor i doktor medicinskih nauka, vodeći specijalista u kurativnoj kozmetologiji u centrima za lepotu i zdravlje.</p>
                     <p>Praksa: preko 20 godina</p>
                 </div>
@@ -66,22 +66,22 @@
             <p><i> "Zapamtite jednostavnu istinu i nikoga ne slušajte: možete da se podmladite bez operacija i injekcija čak i u dubokoj starosti" </i></p>
             <p>
                 Pre mesec i po, jedan kanal je emitovao emisiju u kojoj se razgovaralo o revolucionarnoj novoj stvari u svetu kozmetologije. Ovo je bio brzi preparat za podmlađivanje koji, prema posebnom programu,
-                <a href="#orderForm"> može svako da naruči po posebnoj ceni </a> ! Odmah po završetku naše emisije uživo, profesor - specijalista za tretmane u kozmetologiji, Zoran Hadži-Stević- je pristao da nam da
+                <a href="#orderForm"> može svako da naruči po posebnoj ceni </a> ! Odmah po završetku naše emisije uživo, profesor - specijalista za tretmane u kozmetologiji, Goran Rajković- je pristao da nam da
                 intervju.
             </p>
             <img class="ph" src="{{ asset('/') }}medicinaizprirodeFiles/innoderm/img/ph2.jpg" />
             <p><b> Novinar: Dobar dan, doktore Hadži-Steviću. Recite mi, jeste li dobili potvrdu da starenje kože nakon 35-e godine mogu da zaustave jedino injekcije botoksa ili plastične operacije? </b></p>
             <p>
-                <b> Zoran Hadži-Stević </b> Dobar dan! Naravno da to nije tačno. Injekcije botoksa imaju niz komplikacija uključujući i nepovratne deformacije dela lica gde je injekcija ubrizgana! Bilo je čak i smrtnih ishoda zbog
+                <b> Goran Rajković </b> Dobar dan! Naravno da to nije tačno. Injekcije botoksa imaju niz komplikacija uključujući i nepovratne deformacije dela lica gde je injekcija ubrizgana! Bilo je čak i smrtnih ishoda zbog
                 toga što je telo odbijalo botoks. Povrh svega, plastična operacija samo kratkotrajno zaglađuje bore, a problem je u tome da se vraćaju s komplikacijama. Ovo je vrtlog i veoma lak način da se privatnici u
                 kozmetologiji obogate. A nemaju svi kozmetolozi potrebno iskustvo i licence. U stvarnosti je koža izuzetno podložna podmlađivanju u bilo kojoj dobi. Ovo nije čudo, nego obična nauka.
             </p>
             <p>Međutim, ako znate tajnu i uložite malo truda, možete da skinete s lica 10-20 godina kod kuće veoma brzo. Ovo rade hiljade pacijentkinja koje ne odlaze redovno kod kozmetologa i ne rade tonu skupih operacija.</p>
             <p>Cela tajna leži u obnovi ishrane i stimulisanju procesa regeneracije kože. Tako da je obnavljamo za kratak vremenski period!</p>
             <p><b> Novinar: Da, ali zar se ne smatra da je nemoguće obnoviti kožu nakon 45-e godine? </b></p>
-            <p><b> Zoran Hadži-Stević: </b> Nikako! Vratio sam mladost mnogim mojim pacijentkinjama bez ikakvih problema, a imaju preko 50 godina.</p>
+            <p><b> Goran Rajković: </b> Nikako! Vratio sam mladost mnogim mojim pacijentkinjama bez ikakvih problema, a imaju preko 50 godina.</p>
             <p><strong> Novinar: Pomažete li i svojim prijateljima i porodici sa podmlađivanjem? </strong></p>
-            <p><b> Zoran Hadži-Stević: </b> Da, prvo svojoj ženi. Mnogi ljudi ponekad misle da mi je ona zapravo kćer iako je dve godine starija od mene, ima 47 godina!</p>
+            <p><b> Goran Rajković: </b> Da, prvo svojoj ženi. Mnogi ljudi ponekad misle da mi je ona zapravo kćer iako je dve godine starija od mene, ima 47 godina!</p>
             <p>
                 Većina mojih pacijentkinja su obične žene koje imaju preko 40 godina i imaju znakove "godina" na licu. Dolaze mi s ozbiljnim problemima: mimičke bore, prevoji oko usana i obrva, krugovi ispod očiju, opušten oblik
                 lica, vrećice ispod očiju itd. Ovi kozmetički problemi su deprimirajući i otežavaju život.
@@ -93,21 +93,21 @@
             </p>
             <p><strong> Novinar: Pa kako vraćate mladost u tim godinama? </strong></p>
             <p>
-                <b> Zoran Hadži-Stević: </b> Do nedavno sam lečio žene pomoću gimnastike za lice i kompleksa od 96 vežbi. Ovo je veoma delotvorno, ali naporno i dugo traje. Ženama bude teško, nestane im energije i nemaju vremena za
+                <b> Goran Rajković: </b> Do nedavno sam lečio žene pomoću gimnastike za lice i kompleksa od 96 vežbi. Ovo je veoma delotvorno, ali naporno i dugo traje. Ženama bude teško, nestane im energije i nemaju vremena za
                 ove vežbe svakog dana. Lako odustaju. Za te pacijentkinje sam tražio i našao drugu metodu.
             </p>
             <p><strong> Novinar: Baš interesantno! Molim vas da o tome ispričate i našim čitaocima. </strong></p>
             <p>
-                <b> Zoran Hadži-Stević: </b> Naši centri za lepotu i zdravlje dobili su odobrenje za pristup najnovijem preparatu za podmlađivanje. Priznajem da sam se samo nasmejao kad sam čuo za njega prvi put. Ali kad sam ga
+                <b> Goran Rajković: </b> Naši centri za lepotu i zdravlje dobili su odobrenje za pristup najnovijem preparatu za podmlađivanje. Priznajem da sam se samo nasmejao kad sam čuo za njega prvi put. Ali kad sam ga
                 testirao, šokirao sam se! 3.436 žena koje su učestvovale u testiranju se podmladilo i izgleda 10-25 godina mlađe. Ovo je više od 72% ispitanica, a 23% je osetilo značajne promene, dok 5% nije primetilo nikakva
                 poboljšanja.
             </p>
             <p><strong> Novinar: A o kakvoj vrsti preparata je reč? </strong></p>
             <p>
-                <b> Zoran Hadži-Stević: </b> Govorim o specijalnoj kremi <a href="#orderForm"> InnoDerm </a> . Ovo je preparat koji vam omogućava da do rezultata dođete u najkraćem vremenskom roku - bukvalno 1 nedelju
+                <b> Goran Rajković: </b> Govorim o specijalnoj kremi <a href="#orderForm"> InnoDerm </a> . Ovo je preparat koji vam omogućava da do rezultata dođete u najkraćem vremenskom roku - bukvalno 1 nedelju
                 kasnije mogu se videti vidljiva poboljšanja na koži, a za nekoliko meseci koža može da se obnovi i podmladi čak i u najekstremnijim slučajevima.
             </p>
-            <p>Ovaj preparat je rezultat udruženih napora američkih i korejskih kozmetologa. Originalni proizvod se pravi samo u Republici Koreji i tek je nedavno postao dostupan širom sveta.</p>
+            <p>Ovaj preparat je rezultat udruženih napora svetskih kozmetologa. Ovakav proizvod je tek nedavno postao dostupan širom sveta.</p>
             <div class="box">
                 <div class="box-content">
                     <img class="content-product-img" src="{{ asset('/') }}medicinaizprirodeFiles/innoderm/img/skelet.jpg" />
@@ -124,14 +124,14 @@
             </div>
             <p><strong> Novinar: I kako ova čudotvorna krema deluje? </strong></p>
             <p>
-                <b> Zoran Hadži-Stević: </b> Nema tu nikakvog čuda, samo ovozemaljska nauka. Ova krema sadrži kompleks ulja koja regenerišu kožu: ulje semena ricinusa, ulje muskatne žalfije i ulje šipurka. Drugim rečima, njen glavni
+                <b> Goran Rajković: </b> Nema tu nikakvog čuda, samo ovozemaljska nauka. Ova krema sadrži kompleks ulja koja regenerišu kožu, kompleks aktivnih sastojaka, kao i vitamin C. Drugim rečima, njen glavni
                 zadatak je da razvija kolagen i regeneriše "matrice" među ćelijama. Možete li da zamislite biološku silu takvog mehanizma? Nema ništa efikasnije u prirodi za aktiviranje procesa regeneracije u koži. Obnavljanjem kože
                 iznutra i štiteći je spolja, InnoDerm je čini savršenom. Kod redovne upotrebe kreme crte lica postaju jasne, bore se smanjuju, nestaje opuštenost obraza i podbradka, koža postaje snežnobela i sjajna.
             </p>
             <p>Njenom upotrebom aktiviraćete oko 930.000 ćelija. Eto kako podmlađivanje funkcioniše. Ali glavna stvar je stabilnost.</p>
             <p><strong> Novinar: Zvuči impresivno. Ali objasnite nam šta to znači za obične žene starije od 40 godina? </strong></p>
             <p>
-                <b> Zoran Hadži-Stević: </b> Ovo znači da opasne procedure za podmlađivanje iz salona polako nestaju i da mladost možete vratiti kod kuće za jedan ili dva meseca. <a href="#orderForm"> InnoDerm </a> ne
+                <b> Goran Rajković: </b> Ovo znači da opasne procedure za podmlađivanje iz salona polako nestaju i da mladost možete vratiti kod kuće za jedan ili dva meseca. <a href="#orderForm"> InnoDerm </a> ne
                 zamrzava, ne uklanja osećaj, nego "ponovo pokreće" telo na ćelijskom nivou. Krema eliminiše uzrok starenje i vraća kožu u normalno stanje. Osoba se ne rešava samo simptoma.
                 <a href="#orderForm"> InnoDerm </a> deluje na uzrok samog starenja - dehidrataciju zbog sporih i starih ćelija.
             </p>
@@ -143,20 +143,20 @@
                 <strong> Novinar: Recite mi da li <a href="#orderForm"> InnoDerm </a> pomaže samo kod bora i prevoja? </strong>
             </p>
             <p>
-                <b> Zoran Hadži-Stević: </b> Ne. Kažem vam: krema deluje na ćelijskom nivou, hidrira, bori se protiv starenja tako što štiti ćelije od uništenja. Stimuliše protok krvi i limfe radi uklanjanja natečenosti, "vrećica" i
+                <b> Goran Rajković: </b> Ne. Kažem vam: krema deluje na ćelijskom nivou, hidrira, bori se protiv starenja tako što štiti ćelije od uništenja. Stimuliše protok krvi i limfe radi uklanjanja natečenosti, "vrećica" i
                 smanjenja crnih krugova oko očiju. Ojačava strukturu kože, zateže konture i oblik lica zahvaljujući prirodnoj proizvodnji kolagena i elastina. Bore, prevoji, opuštenost kože, vrećice i tamni krugovi oko očiju, čak i
                 opušteni oblik lica - sve se ovo može korigovati. Ova kreme je zaista delotvorna!
             </p>
             <p><strong> Novinar: Ovo je stvarno interesantan preparat. Da li stvarno eliminiše sve ove probleme, a ne samo da privremeno uklanja nedostatke na koži? </strong></p>
             <p>
-                <b> Zoran Hadži-Stević: </b><a href="#orderForm"> InnoDerm </a> čak eliminiše uzroke starenja (naravno u početnoj fazi) i potpuno obnavlja sve vidljive problematične zone. Verujte mi, za ove godine mog
+                <b> Goran Rajković: </b><a href="#orderForm"> InnoDerm </a> čak eliminiše uzroke starenja (naravno u početnoj fazi) i potpuno obnavlja sve vidljive problematične zone. Verujte mi, za ove godine mog
                 iskustva nisam naišao na delotvorniji preparat. Za većinu žena ovo je najjednostavnija, najdelotvornija i najpristupačnija metoda za podmlađivanje.
             </p>
             <p>
                 <strong> Novinar: Rekli ste da <a href="#orderForm"> InnoDerm </a> može da se kupi po posebnoj ceni. Može li svako to da uradi? </strong>
             </p>
             <p>
-                <b> Zoran Hadži-Stević: </b> Da, naravna stvar. Međutim, ima tu još nešto. Ovaj program je aktivan samo na teritoriji Evropske Unije. Naravno da bi bilo dobro da se započne masovna prodaja u apotekama i kozmetološkim
+                <b> Goran Rajković: </b> Da, naravna stvar. Međutim, ima tu još nešto. Ovaj program je aktivan samo na teritoriji Evropske Unije. Naravno da bi bilo dobro da se započne masovna prodaja u apotekama i kozmetološkim
                 centrima, ali ne možemo da se dogovorimo s apotekama jer InnoDerm može da uzrokuje štetu njihovom poslovanju. Ljudi godinama kupuju od njih preparate i odlaze na procedure za podmlađivanje, a broj onih koji žele
                 dobro da izgledaju raste iz dana u dan. Ova situacija ih čini vrlo zadovoljnima.
             </p>
@@ -168,7 +168,7 @@
                 <strong> Novinar: Do kada će trajati ovaj program? Hoće li stanovnici Srbije moći da kupe <a href="#orderForm"> InnoDerm </a> po posebnoj ceni nakon toga? </strong>
             </p>
             <p>
-                <b> Zoran Hadži-Stević: </b> To je sasvim tačno. Vreme kada se program završava je
+                <b> Goran Rajković: </b> To je sasvim tačno. Vreme kada se program završava je
                 <b>
                     {{ date('d.m.Y.') }}
                 </b>
@@ -217,7 +217,7 @@
             </div>
             <p><strong> Novinar: Doktore Hadži-Steviću, hvala vam za intervju! Da li biste hteli reći nešto našim čitaocima pre kraja? </strong></p>
             <p>
-                <b> Zoran Hadži-Stević: </b> Da, naravno. Hteo bih da skrenem pažnju čitalaca na činjenicu da protiv starenja može učinkovito da se bori. Čak i žene starosti od 50-70! Preuzmite vreme u svoje ruke i PODMLADITE SE
+                <b> Goran Rajković: </b> Da, naravno. Hteo bih da skrenem pažnju čitalaca na činjenicu da protiv starenja može učinkovito da se bori. Čak i žene starosti od 50-70! Preuzmite vreme u svoje ruke i PODMLADITE SE
                 10-20 GODINA>
             </p>
             <p>I zapamtite: bore nastale zbog starosti ne donose samo nelagodu. One uništavaju život jedne od tri žene!</p>
