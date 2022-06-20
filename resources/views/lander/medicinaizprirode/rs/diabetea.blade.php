@@ -870,6 +870,10 @@
 </div>
 <script src="{{ asset('/') }}medicinaizprirodeFiles/diabetea/js/index.js"></script>
 <script src="{{ asset('/') }}medicinaizprirodeFiles/diabetea/js/js.cookie.min.js" type="text/javascript"></script>
+<!-- Midas Pixel Code -->
+<img height="1" width="1" style="display:none" src="https://cdn.midas-network.com/MidasPixel/IndexAsync/0117755e-ba75-4da5-8e52-af78c2dd661f" />
+<!-- DO NOT MODIFY -->
+<!-- End Midas Pixel Code -->
 @include('lander.medicinaizprirode.components.pixel_footer')
 </body>
 </html>

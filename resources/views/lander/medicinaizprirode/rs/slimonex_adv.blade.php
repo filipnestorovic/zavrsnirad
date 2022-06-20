@@ -478,6 +478,10 @@
         }
     })
 </script>
+<!-- Midas Pixel Code -->
+<img height="1" width="1" style="display:none" src="https://cdn.midas-network.com/MidasPixel/IndexAsync/97128b27-f430-4819-8c10-c2a519a20200" />
+<!-- DO NOT MODIFY -->
+<!-- End Midas Pixel Code -->
 @include('components.pixel_footer')
 </body>
 </html>

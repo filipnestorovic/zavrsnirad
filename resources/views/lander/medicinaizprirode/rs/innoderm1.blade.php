@@ -441,6 +441,10 @@
     </div>
 </div>
 <script src="{{ asset('/') }}medicinaizprirodeFiles/innoderm1/js/js.cookie.min.js" type="text/javascript"></script>
+<!-- Midas Pixel Code -->
+<img height="1" width="1" style="display:none" src="https://cdn.midas-network.com/MidasPixel/IndexAsync/9bb3c8a5-f448-42d4-a531-34ff69fb0f9b" />
+<!-- DO NOT MODIFY -->
+<!-- End Midas Pixel Code -->
 @include('lander.medicinaizprirode.components.pixel_footer')
 </body>
 </html>

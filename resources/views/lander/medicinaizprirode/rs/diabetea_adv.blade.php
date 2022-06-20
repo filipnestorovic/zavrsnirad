@@ -255,6 +255,10 @@
         }
     })
 </script>
+<!-- Midas Pixel Code -->
+<img height="1" width="1" style="display:none" src="https://cdn.midas-network.com/MidasPixel/IndexAsync/0117755e-ba75-4da5-8e52-af78c2dd661f" />
+<!-- DO NOT MODIFY -->
+<!-- End Midas Pixel Code -->
 @include('components.pixel_footer')
 </body>
 </html>
