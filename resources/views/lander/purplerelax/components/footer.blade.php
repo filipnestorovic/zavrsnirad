@@ -11,7 +11,7 @@
 <footer>
     <div class="nav-footer">
         <div class="container">
-            <div class="copright">Copyright© 2020 PurpleRelax | All Rights Reserved.</div>
+            <div class="copright">Copyright© {{now()->year}} PurpleRelax | All Rights Reserved.</div>
         </div>
     </div>
     <div class="DMCA_Logo">
