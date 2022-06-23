@@ -70,9 +70,9 @@
         <h2>FOOT CALLUS REMOVER JE VRLO JEDNOSTAVAN I PRAKTIČAN ZA KORIŠĆENJE</h2>
         <div class=text_block>
             <p><b>Električni uređaj za negu stopala postao je neizostavan proizvod u svakom ženskom domu.</b>
-                Poseduje ugrađenu glavu za glačanje i čišćenje kože izrađenu od visokokvalitetnog nerđajućeg čelika koji će bezbolno i efikasno očistiti stopala, skinuti sve
+                Poseduje ugrađenu glavu za glačanje i čišćenje kože izrađenu od visokokvalitetnog materijala koji će bezbolno i efikasno očistiti stopala, skinuti sve
                 neravnine i učiniti kožu nežnom i glatkom.</p>
-            <p>Uređaj je kompaktan i radi na baterije, lako se čisti i ne zahteva posebno održavanje.</p>
+            <p>Uređaj je kompaktan, radi na bateriju koja se puni, lako se čisti i ne zahteva posebno održavanje.</p>
         </div>
         <div class="images_block clearfix">
             {{--<img src="{{ asset('/') }}purplerelaxFiles/pedispin/about__image1.jpg" alt="PediAir">--}}
@@ -123,7 +123,7 @@
                 </div>
                 <div class=text_block>
                     <h4>BEZBEDNO</h4>
-                    <p>Dodaci za brušenje i glačanje kože su nežni toliko da neće oštetiti ni balon</p>
+                    <p>Nežan je toliko da neće oštetiti ni balon</p>
                 </div>
             </div>
             <div class=benefit_item>

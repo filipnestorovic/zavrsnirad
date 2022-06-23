@@ -70,6 +70,10 @@
             </div>
         </div>
         <div class="describe-cont">
+            <div style="text-align: center;margin-bottom: 30px;">
+                <h1>DOBIJATE GRATIS</h1>
+                <h2>GEL ZA MRŠAVLJENJE</h2>
+            </div>
             <a class="button-m" href="#zakaz">PORUČITE SADA</a>
         </div>
     </section>
@@ -243,8 +247,8 @@
         </div>
         <div class="describe-cont">
             <div style="text-align: center;margin-bottom: 30px;">
-                <h1>GRATIS</h1>
-                <p>Termalna krema i santimetar</p>
+                <h1>DOBIJATE GRATIS</h1>
+                <h2>GEL ZA MRŠAVLJENJE</h2>
             </div>
             <form class="m1-form" method="post" action="{{$orderRoute}}">
                 {{csrf_field()}}
