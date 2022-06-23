@@ -44,7 +44,7 @@
 @include('components.display_errors')
 <section class=offer_section>
     <div class=wrapper>
-        <h1 class=main_title>FOOT CALLUS - ZA NEŽNA I LEPA STOPALA</h1>
+        <h1 class=main_title>FOOT CALLUS REMOVER - ZA NEŽNA I LEPA STOPALA</h1>
         <p class=subtitle>Nega stopala nikada nije bila tako dostupna i jednostavna!</p>
         <div class=discount>Akcija! <span>40%</span> popusta</div>
         <ul>
@@ -67,7 +67,7 @@
 </section>
 <section class=about_section>
     <div class=wrapper>
-        <h2>FOOT CALLUS JE VRLO JEDNOSTAVAN I PRAKTIČAN ZA KORIŠĆENJE</h2>
+        <h2>FOOT CALLUS REMOVER JE VRLO JEDNOSTAVAN I PRAKTIČAN ZA KORIŠĆENJE</h2>
         <div class=text_block>
             <p><b>Električni uređaj za negu stopala postao je neizostavan proizvod u svakom ženskom domu.</b>
                 Poseduje ugrađenu glavu za glačanje i čišćenje kože izrađenu od visokokvalitetnog nerđajućeg čelika koji će bezbolno i efikasno očistiti stopala, skinuti sve
@@ -106,7 +106,7 @@
 </section>
 <section class=benefits_section>
     <div class="wrapper clearfix">
-        <h2>FOOT CALLUS - UREĐAJ NOVE GENERACIJE</h2>
+        <h2>FOOT CALLUS REMOVER - UREĐAJ NOVE GENERACIJE</h2>
         <div class=benefits_list>
             <div class=benefit_item>
                 <div class=image_block>
@@ -132,7 +132,7 @@
                 </div>
                 <div class=text_block>
                     <h4>KOMPAKTAN</h4>
-                    <p>Foot Callus ne zauzima puno prostora, lako ga možete poneti sa sobom bilo gde</p>
+                    <p>Foot Callus Remover ne zauzima puno prostora, lako ga možete poneti sa sobom bilo gde</p>
                 </div>
             </div>
         </div>
@@ -170,12 +170,12 @@
 </section>
 <section class=comparison_section>
     <div class=wrapper>
-        <h2>FOOT CALLUS JE NAJBOLJI NAČIN ZA NEGU STOPALA</h2>
-        <p class=description>Za razliku od skupih i složenih postupaka u kozmetičkim salonima, <b>Foot Callus je jeftin i potpuno jednostavan za upotrebu.</b>
-            U odnosu na kućne tretmane Foot Callus je potpuno praktičan, jer postupak uklanjanja grube kože traje i do <b>5 puta kraće.</b></p>
+        <h2>FOOT CALLUS REMOVER JE NAJBOLJI NAČIN ZA NEGU STOPALA</h2>
+        <p class=description>Za razliku od skupih i složenih postupaka u kozmetičkim salonima, <b>Foot Callus Remover je jeftin i potpuno jednostavan za upotrebu.</b>
+            U odnosu na kućne tretmane Foot Callus Remover je potpuno praktičan, jer postupak uklanjanja grube kože traje i do <b>5 puta kraće.</b></p>
         <div class="products_list owl-carousel">
             <div class="product_item first">
-                <h4>UREĐAJ<br>FOOT CALLUS</h4>
+                <h4>UREĐAJ<br>FOOT CALLUS REMOVER</h4>
                 <div class=image_block>
                     <img src="{{ asset('/') }}purplerelaxFiles/footcallus/comparison__product1_image.png" alt="PediAir">
                 </div>
@@ -221,8 +221,8 @@
         <div class=text_block>
             <p>Problemi s kožom na peti, stopalu i ispod nožnih prstiju nedavno se pojavljuju u sve mlađoj dobi.
                 Razlozi za to su neudobne cipele s visokom potpeticom i niz drugih faktora.</p>
-            <p>Već dugo preporučujemo "Foot Callus". <b>Jedinstvenost ovog uređaja leži u činjenici da se učinkovito uklanjanju mrtve ćelije kože bezbolno i za vrlo kratko vreme.</b></p>
-            <p>Foot Callus je u stanju da se izbori čak i sa kurijim očima, bez uklanjanja zamrzavanjem i ostalim laserskim i hirurškim procedurama.</p>
+            <p>Već dugo preporučujemo "Foot Callus Remover". <b>Jedinstvenost ovog uređaja leži u činjenici da se učinkovito uklanjanju mrtve ćelije kože bezbolno i za vrlo kratko vreme.</b></p>
+            <p>Foot Callus Remover je u stanju da se izbori čak i sa kurijim očima, bez uklanjanja zamrzavanjem i ostalim laserskim i hirurškim procedurama.</p>
             <div class=author_info>
                 <div class=name></div>
                 <div class=text></div>
@@ -252,7 +252,7 @@
             <div class=review_item>
                 <img src="{{ asset('/') }}purplerelaxFiles/footcallus/review3.png" alt="PediAir">
                 <div class=author_info>Natalija, 61 godina</div>
-                <p>Pete su mi bile ukočene i ispucale, ali Foot Callus mi je rešio problem.
+                <p>Pete su mi bile ukočene i ispucale, ali Foot Callus Remover mi je rešio problem.
                     Savršeno uklanja mrtve slojeve kože ali istovremeno ne grebe kožu i sve se odvija bezbolno.</p>
             </div>
         </div>
@@ -260,7 +260,7 @@
 </section>
 <section class=order_steps_section>
     <div class=wrapper>
-        <h2>KAKO NARUČITI FOOT CALLUS?</h2>
+        <h2>KAKO NARUČITI FOOT CALLUS REMOVER?</h2>
         <div class=steps_list>
             <div class=step_item>
                 <h4>Korak 1</h4>
@@ -284,7 +284,7 @@
 <section class=order_section>
     <div class=title_block>
         <div class=wrapper>
-            <h4>Naručite Foot Callus po promotivnoj ceni, akcija može trajati još samo malo!</h4>
+            <h4>Naručite Foot Callus Remover po promotivnoj ceni, akcija može trajati još samo malo!</h4>
         </div>
     </div>
     <div class=content_block>
