@@ -15,6 +15,7 @@ class ProductSizes extends Model
         'description',
         'product_id',
         'priority',
+        'woo_variation_id'
     ];
 
     public function product() {

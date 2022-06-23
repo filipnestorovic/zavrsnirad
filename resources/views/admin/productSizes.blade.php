@@ -44,6 +44,12 @@
                                 <input type="number" name="priority" id="priority" class="form-control" data-value="priority" required="">
                             </div>
                             <div class="md-form input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm">Woocommerce ID</span>
+                                </div>
+                                <input type="text" name="woo_variation_id" id="woo_variation_id" class="form-control" data-value="woo_variation_id">
+                            </div>
+                            <div class="md-form input-group input-group-sm mb-3">
                                 <button type="submit" id="addProductSizeBtn" class="btn btn-primary btn-lg btn-block">Add size</button>
                             </div>
                         </div>
@@ -61,6 +67,7 @@
                                         <th class="text-center">Size</th>
                                         <th class="text-center">Description</th>
                                         <th class="text-center">Priority</th>
+                                        <th class="text-center">Woocommerce ID</th>
                                         <th class="text-center"></th>
                                     </tr>
                                     </thead>
@@ -77,6 +84,7 @@
                                                     <td class="pt-3-half sizeTd">{{$size->product_size}}</td>
                                                     <td class="pt-3-half descriptionTd">{{$size->description}}</td>
                                                     <td class="pt-3-half priorityTd">{{$size->priority}}</td>
+                                                    <td class="pt-3-half wooVariationTd">{{$size->woo_variation_id ?? 'x'}}</td>
                                                     <td>
                                                         <span class="table-edit"><button type="button" class="btn btn-primary btn-rounded btn-sm my-0 editSizeBtn" value="{{$size->id}}">EDIT</button></span>
                                                         <span class="table-remove"><a href="{{ route('deleteProductSize',['id' => $size->id]) }}"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0 deleteSizeBtn">DELETE</button></a></span>
@@ -104,10 +112,12 @@
                     let size = $(this).parent().parent().parent().find('.sizeTd').text();
                     let sizeDescription = $(this).parent().parent().parent().find('.descriptionTd').text();
                     let priority = $(this).parent().parent().parent().find('.priorityTd').text();
+                    let wooVariation = $(this).parent().parent().parent().find('.wooVariationTd').text();
                     $('#sizeId').val(sizeId);
                     $('#size').val(size);
                     $('#size_description').val(sizeDescription);
                     $('#priority').val(priority);
+                    $('#woo_variation_id').val(wooVariation);
                 }
             });
             $('.deleteSizeBtn').click(function () {

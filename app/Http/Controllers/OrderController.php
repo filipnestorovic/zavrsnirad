@@ -7,6 +7,7 @@ use App\Mail\NewOrderEmail;
 use App\Models\AbandonedCart;
 use App\Models\Event;
 use App\Models\Order;
+use App\Models\ProductSizes;
 use App\Models\UserSession;
 use App\Models\Variation;
 use Carbon\Carbon;
@@ -221,7 +222,7 @@ class OrderController extends Controller
                             }
                         } else {
                             try {
-                                $webhookResult = $this->createNewOrderWoocommerce($orderDetails);
+                                $webhookResult = $this->createNewOrderWoocommerce($orderDetails, $size);
                             } catch(\Exception $exception){
                                 Log::error("Error: Woocommerce Webhook \nMessage: " . $exception->getMessage() . "\nDetails: ". json_encode($orderDetails, JSON_PRETTY_PRINT));
                                 return redirect()->back()->withErrors([$this->customerErrorMessage]);
@@ -366,7 +367,7 @@ class OrderController extends Controller
 
     }
 
-    public function createNewOrderWoocommerce($orderDetails) {
+    public function createNewOrderWoocommerce($orderDetails, $size = null) {
 
         $language = "";
         switch ($orderDetails->country_code) {
@@ -400,6 +401,15 @@ class OrderController extends Controller
                     "total"=> "0.00"
                 ],
             ];
+        }
+
+        if($size != null) {
+            try {
+                $productSize = ProductSizes::where([['product_size', $size], ['product_id', $orderDetails->product_id]])->first();
+            } catch(\Exception $exception){
+                Log::error("Error: Woocommerce Webhook - Product Size - \nMessage: " . $exception->getMessage() . "\nSize: ".$size."\nDetails: ". json_encode($orderDetails, JSON_PRETTY_PRINT));
+                return redirect()->back()->withErrors([$this->customerErrorMessage]);
+            }
         }
 
         $woocommerce = new WooClient(
@@ -442,7 +452,8 @@ class OrderController extends Controller
                 [
                     "product_id"=> (string)$orderDetails->woocommerce_product_id,
                     "quantity"=> (string)$orderDetails->quantity,
-                    "total" => (string)$orderDetails->price
+                    "total" => (string)$orderDetails->price,
+                    "variation_id" => $productSize->woo_variation_id ?? '0',
                 ]
             ],
             "lang" => $language,

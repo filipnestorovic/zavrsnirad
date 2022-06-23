@@ -503,6 +503,7 @@ class ProductController extends Controller
         $size = $request->get('size');
         $size_description = $request->get('size_description');
         $priority = $request->get('priority');
+        $wooVariationId = $request->get('woo_variation_id');
 
         $sizeId = $request->get('sizeId');
 
@@ -512,6 +513,7 @@ class ProductController extends Controller
             $productSizeModel->description = $size_description;
             $productSizeModel->priority = $priority;
             $productSizeModel->product_id = $product_id;
+            $productSizeModel->woo_variation_id = $wooVariationId;
 
             if($productSizeModel->save()) {
                 return redirect()->back()->with('success','The size has been added successfully!');
@@ -523,6 +525,7 @@ class ProductController extends Controller
             $singleSize->product_size = $size;
             $singleSize->description = $size_description;
             $singleSize->priority = $priority;
+            $singleSize->woo_variation_id = $wooVariationId;
 
             if($singleSize->save()) {
                 return redirect()->back()->with('success','The size has been edited successfully!');
