@@ -1,3 +1,5 @@
+<script>var midasPixelHash="4dd9e514-87b3-43a0-8a95-0da46658396b";</script>
+<script async src="https://cdn2.midas-network.com/js/midas-pixel.min.js"></script>
 <input type="hidden" id="currencyHidden" value="{{ $prices[1]['currency']}}"/>
 <style>
     .phoneErrorInput {
