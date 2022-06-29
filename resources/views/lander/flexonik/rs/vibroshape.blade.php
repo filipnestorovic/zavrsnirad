@@ -4,8 +4,6 @@
     @include('components.pixel_init')
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-    <meta name="description" content="">
-    <meta name="keywords" content="">
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,500" rel="stylesheet">
     <style>
@@ -39,6 +37,15 @@
         }
         label {
             font-size: 16px !important;
+        }
+        .price {
+            font-size: 34px;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 767px){
+            .price {
+                font-size: 30px !important;
+            }
         }
     </style>
     <link rel="stylesheet" href="{{ asset('/') }}shared_files/font-awesome.min.css">
@@ -80,6 +87,10 @@
                     <div class="story-content">
                         <h6 class="text-uppercase">VIBRO SHAPE® JE MASAŽNI POJAS ZA MRŠAVLJENJE</h6>
                         <h1><span class="sp-1">Dobijate <span class="sp-2">savršenu figuru</span> bez napora!</span></h1>
+                        <h2 class="price">
+                            <span class="sp-1" style="color: #222;"><del>{{ $prices[1]['originalPrice'] }} {{ $prices[1]['currency'] }}</del></span>
+                            <span class="sp-2" style="color: #f37a1d;">{{ $prices[1]['amount'] }} {{ $prices[1]['currency'] }}</span>
+                        </h2>
                         <a href="#ordina" class="genric-btn primary circle arrow">PORUČITE ODMAH <span class="lnr lnr-arrow-right"></span></a>
                     </div>
                 </div>
@@ -220,61 +231,6 @@
         </div>
     </section>
     <!-- End Team Force Area -->
-    <!-- Start Feature Area -->
-    {{--<section class="feature-area pt-100 pb-100  relative boxrisparmia1" id="offerta">--}}
-        {{--<div class="overlay overlay-bg boxrisparmia2"></div>--}}
-        {{--<div class="container">--}}
-            {{--<div class="row">--}}
-                {{--<div class="boxprice">--}}
-                    {{--<h2 class="text-white">Risparmia <span>fino al 45%</span>!</h2>--}}
-                    {{--<p class="text-white">--}}
-                        {{--Ordina la cintura X-Shaper® insieme ad un amico e risparmia fino al 45%.--}}
-                    {{--</p>--}}
-                {{--</div>--}}
-                {{--<div class="col-lg-4 col-sm-6 d-flex align-items-stretch">--}}
-                    {{--<div class="single-feature">--}}
-                        {{--<div class="desc text-center">--}}
-                            {{--<h2 class="text-uppercase">1 Cintura <br /> X-Shaper®</h2>--}}
-                            {{--<h3 class="text-center price">--}}
-                                {{--{{ $prices[1]['amount'] }} RSD--}}
-                            {{--</h3>--}}
-                            {{--<p class="textpricedec">--}}
-                                {{--Spedizione Gratuita<br />--}}
-                                {{--Pagamento alla consegna<br />--}}
-                            {{--</p>--}}
-                            {{--<a href="#ordina" class="genric-btn primary circle arrow">PORUČITE ODMAH</a>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-                {{--<div class="col-lg-4 col-sm-6 d-flex align-items-stretch">--}}
-                    {{--<div class="single-feature">--}}
-                        {{--<div class="desc text-center">--}}
-                            {{--<h2 class="text-uppercase">2 Cinture <br /> X-Shaper®</h2>--}}
-                            {{--<h3 class="text-center price">€ 79,00</h3>--}}
-                            {{--<p class="textpricedec">--}}
-                                {{--Spedizione Gratuita<br />--}}
-                                {{--Pagamento alla consegna<br />--}}
-                            {{--</p>--}}
-                            {{--<a href="#ordina" class="genric-btn primary circle arrow">PORUČITE ODMAH</a>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-                {{--<div class="col-lg-4 col-sm-6 d-flex align-items-stretch">--}}
-                    {{--<div class="single-feature">--}}
-                        {{--<div class="desc text-center">--}}
-                            {{--<h2 class="text-uppercase">3 Cinture <br />  X-Shaper®</h2>--}}
-                            {{--<h3 class="text-center price">€ 99,00</h3>--}}
-                            {{--<p class="textpricedec">--}}
-                                {{--Spedizione Gratuita<br />--}}
-                                {{--Pagamento alla consegna<br />--}}
-                            {{--</p>--}}
-                            {{--<a href="#ordina" class="genric-btn primary circle arrow">PORUČITE ODMAH</a>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--</section>--}}
     <!-- Start Banner Area -->
     <section class="generic-banner elements-banner relative pt-100 pb-100">
         <div class="container">
@@ -307,6 +263,10 @@
             <form method="post" action="{{$orderRoute}}" style="background: #fff; padding: 5%;color:#000">
                 {{csrf_field()}}
                 @include('lander.naturapharm.components.form_hidden_fields')
+                <h2 class="price text-center">
+                    <span class="sp-1" style="color: #222;"><del>{{ $prices[1]['originalPrice'] }} {{ $prices[1]['currency'] }}</del></span>
+                    <span class="sp-2" style="color: #f37a1d;">{{ $prices[1]['amount'] }} {{ $prices[1]['currency'] }}</span>
+                </h2>
                 <center>
                     <h3 class="title">PODACI ZA DOSTAVU</h3>
                 </center>
@@ -327,34 +287,6 @@
                     <label>Grad</label>
                     <input type="text" name="shipping_city" class="form-control" placeholder="Grad" required="required"/>
                 </div>
-                {{--<div class="form-row">--}}
-                    {{--<div class="col-md-1 d-none d-md-block text-center">--}}
-                        {{--<img style="max-width:100%;max-height:80px" src="{{ asset('/') }}flexonikFiles/vibroshape/2891_7064f4ac2b547b3d5fe189c105bb46ba_1533196256.jpg">--}}
-                    {{--</div>--}}
-                    {{--<div class="form-group col-md-11">--}}
-                        {{--<label>Scegli un'offerta</label>--}}
-                        {{--<select name="other[quantity]" class="form-control" required="required">--}}
-                            {{--<option value="1" selected="selected">--}}
-                                {{--1 X-Shaper--}}
-                                {{--{{ $prices[1]['amount'] }}--}}
-                                {{--RSD--}}
-                            {{--</option>--}}
-                            {{--<option value="2">2 X-Shaper 79 €</option>--}}
-                            {{--<option value="3">3 X-Shaper 99 €</option>--}}
-                        {{--</select>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-                {{--<div class="form-group">--}}
-                    {{--<div class="text-center">--}}
-                        {{--<span style="--}}
-                           {{--color: black;--}}
-                           {{--padding: 4px;--}}
-                           {{--background: #ffc205;--}}
-                           {{--font-weight: bold;--}}
-                           {{--border-radius: 5px;--}}
-                           {{--">&nbsp;<i class="fa fa-truck"></i> La spedizione è gratuita!! </span>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
                 <center>
                     <button id="submit-button" class="btn btn-lg btn-warning new-sbm-btn" type="submit">PORUČITE SADA</button>
                 </center>

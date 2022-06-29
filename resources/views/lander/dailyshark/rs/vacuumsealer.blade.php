@@ -14,48 +14,38 @@
 <div class="main_wrapper">
     @include('components.display_errors')
     <header class="offer_section">
-        <h1 class="main_title">Ambalator cu vid Freshpack Pro<br> + SET LOVE FOREVER gratis</h1>
-        <div class="forget-pain"><span></span>Măriți durata de valabilitate a produselor de 10 ori</div>
+        <h1 class="main_title">NAJBOLJA KUĆNA VAKUMERKA<br> + PAKOVANJE KESA GRATIS</h1>
+        <div class="forget-pain">POVEĆAJTE ROK TRAJANJA PROIZVODA ZA 10 PUTA</div>
         <div class="box">
             <div class="sale">
-                <p>Reducere 50%
-                </p>
+                <p>Popust 40%</p>
             </div>
         </div>
         <div class="offer_text">
-               <span><i class="icon-truck"></i>ESTE VALABILĂ LIVRAREA PRIN CURIER
-               </span> <span><i class="icon-cc-visa"></i> PLATA LA LIVRARE</span>
+            <span><i class="icon-truck"></i>DOSTAVA KURIRSKOM SLUŽBOM</span>
+            <span><i class="icon-cc-visa"></i>PLAĆANJE PRI ISPORUCI</span>
         </div>
         <ul class="list1">
-            <li><b>Economisiți banii</b><br>De ce să plătești mai mult pentru produsele ambalate în vacuum, dacă el pot fi ambalate acasă în cinci minute?</li>
-            <li><b>Termenul maxim de păstrare</b><br>Produsele, ambalate cu ajutorul acestui apărat, pot fi păstrate de 10 ori mai mult!</li>
-            <li><b>Ușor de folosit</b><br>Posibilitatea de a lua produse în călătorie, fără teamă, că ele se vor altera</li>
+            <li><b>Uštedite novac</b><br>Zašto plaćati više novca za vakumirane proizvode to možete sami da učinite kod kuće za 5 minuta?</li>
+            <li><b>Maksimalan rok čuvanja</b><br>Hrana može da se očuva sveža i do 10 puta duže kada se vakumira!</li>
+            <li><b>Jednostavan transport hrane</b><br>Hranu možete da ponesete sa sobom i na letovanje, bez straha da će se pokvariti!</li>
         </ul>
-        <a href="#order_form" class="button-m">Comandă cu reducere</a>
+        <a href="#order_form" class="button-m">Poručite sada</a>
     </header>
     <section class="video_sect">
         <video poster="{{ asset('/') }}dailysharkFiles/vacuumsealer/poster.png" controls="controls" width="480" height="270"  >
             <source src="{{ asset('/') }}dailysharkFiles/vacuumsealer/video.mp4" type="">
         </video>
         <ul class="list1">
-            <li>Cea mai bună adâncime a vacuumului</li>
-            <li>Lucrează de la orice priză</li>
-            <li>Posibilitatea lipirii pachetelor fără crearea vidului</li>
-            <li>Lucrează cu pachete de diferită lățime</li>
-            <li>Nu necesită întreținere speciale</li>
+            <li>Jak i čvrst vakum koji izvlači sav vazduh</li>
+            <li>Mogućnost lepljenja kesa bez vakumiranja</li>
+            <li>Radi sa kesama različitih širina</li>
+            <li>Nije potrebno posebno održavanje</li>
+            <li>Maksimalna svežina hrane</li>
         </ul>
-        {{--
-        <h2 class="title">Cu să folosești ambalatorul cu vid?</h2>
-        --}}
-        {{--
-        <div class="video_block">--}}
-        {{--            <iframe width="480" height="270" src="https://www.youtube.com/embed/B5uL946nV7Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>--}}
-        {{--
-     </div>
-     --}}
     </section>
     <section class="sect2 color_theme">
-        <h2 class="title white"><span>Prelungiți durata de valabilitate a produselor cu ambalatorul cu vid Freshpack Pro</span></h2>
+        <h2 class="title white"><span>PRODUŽITE ROK TRAJANJA PROIZVODA UZ VACUUM SEALER VAKUMERKU</span></h2>
         <style>
             table.iksweb{text-decoration: none;border-collapse:collapse;width:100%;text-align:center;}
             table.iksweb th{font-weight:normal;font-size:15px; color:#ffffff;background-color:#354251;}
@@ -67,98 +57,80 @@
             <table class="iksweb">
                 <tbody>
                 <tr>
-                    <th>Produs</th>
-                    <th>Termenul de păstrare în condiții obișnuite</th>
-                    <th>Termen de păstrare în ambalaj cu vid</th>
+                    <th>Proizvod</th>
+                    <th>Rok trajanja u normalnim uslovima</th>
+                    <th>Rok trajanja u vakuum pakovanju</th>
                 </tr>
                 <tr>
-                    <td>Carne de vită </td>
-                    <td>3-4 zile </td>
-                    <td>8-9 zile </td>
+                    <td>Govedina</td>
+                    <td>3-4 dana </td>
+                    <td>8-9 dana </td>
                 </tr>
                 <tr>
                     <div>
-                        <td>Carne de porc, vițel, ovine, pasăre</td>
-                        <td>2-3 zile</td>
-                        <td>6-9 zile </td>
+                        <td>Svinjetina, teletina, jagnjetina, piletina</td>
+                        <td>2-3 dana</td>
+                        <td>6-9 dana </td>
                     </div>
                 </tr>
                 <tr>
-                    <td>Pește</td>
-                    <td>1-2 zile</td>
-                    <td>4-5 zile</td>
+                    <td>Kuvano jelo</td>
+                    <td>1-2 dana</td>
+                    <td>4-5 dana</td>
                 </tr>
                 <tr>
-                    <td>Fructe </td>
-                    <td>5-7 zile </td>
-                    <td>14-20 zile</td>
+                    <td>Voće</td>
+                    <td>5-7 dana </td>
+                    <td>14-20 dana</td>
                 </tr>
                 <tr>
-                    <td>Legume </td>
-                    <td>1-3 zile</td>
-                    <td>7-10 zile</td>
+                    <td>Mahunarke</td>
+                    <td>1-3 dana</td>
+                    <td>7-10 dana</td>
                 </tr>
                 <tr>
-                    <td>Paste, orez, crupe</td>
-                    <td>5-6 luni</td>
-                    <td>12 luni</td>
+                    <td>Testenina, pirinač</td>
+                    <td>5-6 meseci</td>
+                    <td>12 meseci</td>
                 </tr>
                 <tr>
-                    <td>Lapte praf</td>
-                    <td>1-2 luni</td>
-                    <td>12 luni</td>
+                    <td>Mleko u prahu</td>
+                    <td>1-2 meseca</td>
+                    <td>12 meseci</td>
                 </tr>
                 <tr>
-                    <td>Cașcaval (brânză)</td>
-                    <td>15-20 zile </td>
-                    <td>25-60 zile </td>
+                    <td>Sir</td>
+                    <td>15-20 dana </td>
+                    <td>25-60 dana </td>
                 </tr>
                 </tbody>
             </table>
         </div>
-        <!-- <ul class="benef2">
-           <li>
-            <img src="images/pol1.jpg" alt="">
-            <p>Срабатывает без прикосновений</p>
-           </li>
-           <li>
-            <img src="images/pol2.jpg" alt="">
-            <p>Мыло дозируется в нужных порциях</p>
-           </li>
-           <li>
-            <img src="images/pol3.jpg" alt="">
-            <p>Мыла в ёмкости хватит на долго</p>
-           </li>
-           <li>
-            <img src="images/pol4.jpg" alt="">
-            <p>Можно налить любое жидкое средство</p>
-           </li>
-           </ul> -->
-        <a href="#order_form" class="button-m">Comandă cu reducere</a>
+        <a href="#order_form" class="button-m">Poručite sada</a>
     </section>
     <section class="sect6">
-        <h2 class="title"><span>Caracteristicile </span><br> Freshpack Pro</h2>
+        <h2 class="title">VACUUM SEALER<br><span>KARAKTERISTIKE</span></h2>
         <img src="{{ asset('/') }}dailysharkFiles/vacuumsealer/photo1.jpg" alt="">
         <ul class="list3">
             <li>
-                <b>Putere:</b>
-                <p>100 Wați</p>
+                <b>Snaga:</b>
+                <p>90W</p>
             </li>
             <li>
-                <b>Tensiune:</b>
-                <p>220 Volți</p>
+                <b>Voltaža:</b>
+                <p>240V</p>
             </li>
             <li>
-                <b>Lungimea etanșantului:</b>
-                <p>28 cm</p>
+                <b>Dužina zaptivača:</b>
+                <p>29 cm</p>
             </li>
             <li>
-                <b>Materialul pungilor:</b>
-                <p>ABS - plastic</p>
+                <b>Materijal:</b>
+                <p>Kvalitetna ABS plastika</p>
             </li>
             <li>
-                <b>Dimensiuni:</b>
-                <p>360*54*50mm</p>
+                <b>Dimenzije proizvoda:</b>
+                <p>36x7x4 cm</p>
             </li>
         </ul>
         <div class="reviews owl-carousel">
@@ -174,76 +146,76 @@
         </div>
     </section>
     <section class="sect7 color_theme">
-        <h2 class="title white">Părerile cumpărătorilor</h2>
+        <h2 class="title white">UTISCI KUPACA</h2>
         <div class="reviews owl-carousel">
             <div class="rev_item">
                 <img src="{{ asset('/') }}dailysharkFiles/vacuumsealer/rev1.jpg" alt="">
-                <p>Un lucru minunat, este comod să congelezi legume, pomușoare pentru iarnă, economisesc spațiul în congelator!)</p>
-                <p class="name">Maria</p>
+                <p>Divna stvar, zgodno je za zamrzavanje i održavanje proizvoda svežim. Štedi prostor u frižideru!</p>
+                <p class="name">Marija</p>
             </div>
             <div class="rev_item">
                 <img src="{{ asset('/') }}dailysharkFiles/vacuumsealer/rev2.jpg" alt="">
-                <p>L-am primit în 3 zile din momentul efectuării comenzii. Un lucru super! Mulțumesc! O achiziționare superbă pentru sezonul pomușoarelor și fructelor, legumelor de vară, pentru a le îngheța în ambalaj cu vid. Îl recomand tuturor gospodinelor, este un ajutor de neînlocuit în bucătărie. Vă mulțumesc de o sută de ori. Un aparat puternic</p>
-                <p class="name">Florin</p>
+                <p>Dobio sam je u roku od 2 dana od kada sam naručio. Sjajna stvar! Hvala vam! Odavno nisam kupio ništa bolje i korisnije. Hrana ostane sveža i po 10 dana.
+                    Mnogo moćan uređaj.</p>
+                <p class="name">Filip</p>
             </div>
             <div class="rev_item">
                 <img src="{{ asset('/') }}dailysharkFiles/vacuumsealer/rev3.jpg" alt="">
-                <p>O calitate excelentă a tuturor mărfurilor! recomand! Mulțumesc pentru livrarea rapidă și fără probleme! Pungile sunt de calitate superioară! țin bine, economisesc spațiul în congelator, formidabil! Însușii aparatul a depășit toate așteptările. ❤</p>
-                <p class="name">Mircea</p>
+                <p>Odličan kvalitet proizvoda, toplo ga preporučujem. Kese su vrhunskog kvaliteta, dobro drže i pouzdane su. Konačno mogu da nosim doručak na posao, a da mi ne iscuri ili zauzima mnogo prostora.
+                    Ovaj uređaj je prevazišao sva moja očekivanja.</p>
+                <p class="name">Jovan</p>
             </div>
         </div>
-        <a href="#order_form" class="button-m">Comandă cu reducere</a>
+        <a href="#order_form" class="button-m">Poručite sada</a>
     </section>
     <section class="sect8">
-        <h2 class="title"><span>Cum poți comanda</span></h2>
+        <h2 class="title"><span>KAKO MOŽETE NARUČITI</span></h2>
         <ul class="order_list">
             <li>
                 <div class="img"><img src="{{ asset('/') }}dailysharkFiles/vacuumsealer/order1.png" alt=""></div>
                 <div class="text">
-                    <span>Pasul 1</span>
-                    <p>Lăsați cererea pe site-ul nostru</p>
+                    <span>Korak 1</span>
+                    <p>Ostavite podake za dostavu na našem sajtu</p>
                 </div>
             </li>
             <li>
                 <div class="img"><img src="{{ asset('/') }}dailysharkFiles/vacuumsealer/order2.png" alt=""></div>
                 <div class="text">
-                    <span>Pasul 2</span>
-                    <p>Managerul va lua legătura cu Dumneavoastră pentru confirmarea comenzii</p>
+                    <span>Korak 2</span>
+                    <p>Kontaktiraćemo Vas da potvrdimo porudžbinu</p>
                 </div>
             </li>
             <li>
                 <div class="img"><img src="{{ asset('/') }}dailysharkFiles/vacuumsealer/order3.png" alt=""></div>
                 <div class="text">
-                    <span>Pasul 3</span>
-                    <p>Livrăm comanda în termen de 2-5 zile prin curier până la ușă.</p>
+                    <span>Korak 3</span>
+                    <p>Proizvod šaljemo u roku od 1-2 radna dana</p>
                 </div>
             </li>
             <li>
                 <div class="img"><img src="{{ asset('/') }}dailysharkFiles/vacuumsealer/order4.png" alt=""></div>
                 <div class="text">
-                    <span>Pasul 4</span>
-                    <p>Achitați după verificarea mărfii</p>
+                    <span>Korak 4</span>
+                    <p>Plaćate kuriru brze pošte prilikom preuzimanja paketa</p>
                 </div>
             </li>
         </ul>
     </section>
     <section class="offer_section ">
-        <h1 class="main_title">Ambalator cu vid Freshpack Pro<br> + SET LOVE FOREVER gratis</h1>
-        <div class="forget-pain"><span></span>Măriți durata de valabilitate a produselor de 10 ori</div>
+        <h1 class="main_title">NAJBOLJA KUĆNA VAKUMERKA <br> + PAKOVANJE KESA GRATIS</h1>
+        <div class="forget-pain">POVEĆAJTE ROK TRAJANJA PROIZVODA ZA 10 PUTA</div>
         <div class="box1">
             <div class="sale">
-                <p>Reducere
-                    50%
-                </p>
+                <p>Popust 40%</p>
             </div>
         </div>
         <div class="offer_text">
-            <span><i class="icon-truck"></i>ESTE VALABILĂ LIVRAREA PRIN CURIER</span> <span><i class="icon-cc-visa"></i> PLATA LA LIVRARE</span>
+            <span><i class="icon-truck"></i> DOSTAVA KURIRSKOM SLUŽBOM</span> <span><i class="icon-cc-visa"></i> PLAĆANJE PRI ISPORUCI</span>
         </div>
         <div class="price_block clearfix">
             <div class="price">
                 <div class="old">
-                    Prețul vechi:
+                    Stara cena:
                     <p>
                         <font class="price_old13348">
                             {{ $prices[1]['originalPrice'] }}
@@ -253,7 +225,7 @@
                     </p>
                 </div>
                 <div class="new">
-                    Prețul promoțional:
+                    Nova cena:
                     <p>
                         <font class="price_old13348">
                             {{ $prices[1]['amount'] }}
@@ -263,19 +235,17 @@
                     </p>
                 </div>
             </div>
-            <div class="economy">Economie  <span>
-                  50%</span>
-            </div>
+            <div class="economy">UŠTEDA <span>40%</span></div>
         </div>
         <div class="formbox" id="order_form">
-            <h4>Completați cererea</h4>
-            <p>și veți primi Freshpack Pro  <span>cu o reducere de <i>
-                  50%</i></span>
-            </p>
-            <form class="main-order-form m1-form" action="#" method="post">
-                <input type="text" name="name" placeholder="Numele dvs." />
-                <input type="tel" name="phone" id="phone" placeholder="Nr. de telefon" />
-                <button class="button-m js_submit" type="submit">Comandă</button>
+            <h4>Podaci za dostavu</h4>
+            <p></p>
+            <form class="main-order-form m1-form" action="{{$orderRoute}}" method="post">
+                {{ csrf_field() }}
+                @include('lander.naturapharm.components.form_hidden_fields')
+                <input type="text" name="name" placeholder="Ime i prezime" required/>
+                <input type="tel" name="phone" id="phone" placeholder="Telefon" required/>
+                <button class="button-m js_submit" type="submit">Poruči</button>
             </form>
         </div>
     </section>
