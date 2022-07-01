@@ -68,8 +68,23 @@
                     case 'BG':
                         errorText = 'Грешен формат на телефона';
                         break;
+                    case 'RO':
+                        errorText = 'Format de telefon greșit';
+                        break;
+                    case 'GR':
+                        errorText = 'Λάθος μορφή τηλεφώνου';
+                        break;
+                    case 'PL':
+                        errorText = 'Nieprawidłowy format telefonu';
+                        break;
+                    case 'SK':
+                        errorText = 'Nesprávny formát telefónu';
+                        break;
+                    case 'CZ':
+                        errorText = 'Špatný formát telefonu';
+                        break;
                     default:
-                        errorText = "Pogrešan format telefona";
+                        errorText = "Wrong phone number format";
                 }
 
                 if(validationResult === "1") {
