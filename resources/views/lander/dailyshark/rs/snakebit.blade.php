@@ -252,7 +252,7 @@
     <div class="wrap">
         <div class="box" style="padding-top: 10px;">
             <h1>MULTIFUNKCIONALNI ŠRAFCIGER <span>SNAKE BIT</span></h1>
-            <h2>JEDINSTVENI I <span>APSOLUTNO NEOPHODAN ALAT!</span></h2>
+{{--            <h2>JEDINSTVENI I <span>APSOLUTNO NEOPHODAN ALAT!</span></h2>--}}
             <div class="sale">Popust <b>-40%</b></div>
             <div class="plus">
                 <ul>
