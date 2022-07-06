@@ -317,7 +317,7 @@
                                     </div>
 
                                     <div class="form-group form-group--email">
-                                        <input id="customer_email" value="{{ old('email') }}" name="email" class="customer-email" type="email" maxlength="200" placeholder="Email adresa" required="" type="email">
+                                        <input id="customer_email" value="{{ old('email') }}" name="email" class="customer-email" type="email" maxlength="200" placeholder="Email adresa (opciono)" type="email">
                                         <span class="error-message hidden">Molimo unesite validnu email adresu.</span>
                                     </div>
 

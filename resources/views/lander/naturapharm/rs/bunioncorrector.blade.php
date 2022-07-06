@@ -342,7 +342,7 @@
                 <div class="logo">
                     {{--<img src="{{ $product->logo_url }}" alt="Logo" class="no-lazy">--}}
                 </div>
-                <div class="right-ft">Nabavi <b>Longetu za čukljeve</b> već danas!<a href="{{$checkoutView}}">KUPI ODMAH</a></div>
+                <div class="right-ft">Nabavi <b>Bunion Corrector</b> već danas!<a href="{{$checkoutView}}">KUPI ODMAH</a></div>
             </div>
         </div>
     </div>
