@@ -7,11 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="{{ asset('/') }}purplerelaxFiles/hairoil/main.min.css">
-{{--    <script src="http://hairex1.xcartpro.com/r1/js/scripts.min.js"></script>--}}
     <link rel="shortcut icon" href="{{ asset('/') }}purplerelaxFiles/hairoil/pack_big.png" type="image/x-icon">
 </head>
 <body>
 <div class="overflow">
+    @include('components.display_errors')
     <div class="block1">
         <div class="container">
             <div class="block1-header">
@@ -24,7 +24,7 @@
                             <img src="{{ asset('/') }}purplerelaxFiles/hairoil/ic1.png" alt="">
                         </div>
                         <div class="block1-header-list__text">
-                            Efectividad confirmada
+                            POTVRĐENA EFIKASNOST
                         </div>
                     </li>
                     <li class="block1-header-list__item">
@@ -32,7 +32,7 @@
                             <img src="{{ asset('/') }}purplerelaxFiles/hairoil/ic2.png" alt="">
                         </div>
                         <div class="block1-header-list__text">
-                            Producto del año 2017
+                            PROIZVOD GODINE 2021
                         </div>
                     </li>
                     <li class="block1-header-list__item">
@@ -40,28 +40,27 @@
                             <img src="{{ asset('/') }}purplerelaxFiles/hairoil/ic3.png" alt="">
                         </div>
                         <div class="block1-header-list__text">
-                            Ingredientes 100% naturales
+                            100% PRIRODNI SASTOJCI
                         </div>
                     </li>
                 </ul>
             </div>
-            <h1 class="block1__heading">Restauración completa del cabello durante <span class="green">28 días</span>
-            </h1>
+            <h1 class="block1__heading">KOMPLETNA REGENERACIJA KOSE U <span class="green">28 DANA</span></h1>
             <ul class="block1-list desktop">
                 <li class="block1-list__item">
                     <img src="{{ asset('/') }}purplerelaxFiles/hairoil/leaf.png" alt="" class="block1-list__img">
-                    <div class="block1-list__text">Rebrote del cabello</div>
+                    <div class="block1-list__text">Ponovni rast kose</div>
                 </li>
                 <li class="block1-list__item">
                     <img src="{{ asset('/') }}purplerelaxFiles/hairoil/leaf.png" alt="" class="block1-list__img">
-                    <div class="block1-list__text">Despertar de los folículos capilares dormidos</div>
+                    <div class="block1-list__text">Buđenje uspavanih folikula</div>
                 </li>
                 <li class="block1-list__item">
                     <img src="{{ asset('/') }}purplerelaxFiles/hairoil/leaf.png" alt="" class="block1-list__img">
-                    <div class="block1-list__text">Protección contra caídas</div>
+                    <div class="block1-list__text">Sprečavanje opadanja</div>
                 </li>
             </ul>
-            <h2 class="block1__subheading desktop">Detener la pérdida de cabello para siempre!</h2>
+            <h2 class="block1__subheading desktop">ZAUSTAVLJANJE GUBITKA KOSE ZAUVEK</h2>
             <div class="block1-girl"></div>
             <div class="block1-decor1"></div>
             <div class="block1-decor2"></div>
@@ -78,7 +77,7 @@
                         </div>
                     </div>
                 </div>
-                <button class="button-mobile __js-scroll-form">ORDENAR AHORA</button>
+                <button class="button-mobile __js-scroll-form">PORUČITE SADA</button>
             </div>
         </div>
     </div>
@@ -87,39 +86,41 @@
             <ul class="block1-list mobile">
                 <li class="block1-list__item">
                     <img src="{{ asset('/') }}purplerelaxFiles/hairoil/leaf.png" alt="" class="block1-list__img">
-                    <div class="block1-list__text">Rebrote del cabello</div>
+                    <div class="block1-list__text">Ponovni rast kose</div>
                 </li>
                 <li class="block1-list__item">
                     <img src="{{ asset('/') }}purplerelaxFiles/hairoil/leaf.png" alt="" class="block1-list__img">
-                    <div class="block1-list__text">Despertar de los folículos capilares dormidos</div>
+                    <div class="block1-list__text">Buđenje uspavanih folikula</div>
                 </li>
                 <li class="block1-list__item">
                     <img src="{{ asset('/') }}purplerelaxFiles/hairoil/leaf.png" alt="" class="block1-list__img">
-                    <div class="block1-list__text">Protección contra caídas</div>
+                    <div class="block1-list__text">Sprečavanje opadanja</div>
                 </li>
             </ul>
-            <h2 class="block1__subheading mobile">Detener la pérdida de cabello para siempre!</h2>
+            <h2 class="block1__subheading mobile">ZAUSTAVLJANJE GUBITKA KOSE ZAUVEK</h2>
             <img class="mobile block1-girl__mobile" src="{{ asset('/') }}purplerelaxFiles/hairoil/girl1.png" alt="">
         </div>
     </div>
     <div class="block2">
         <div class="container">
-            <form class="  orderForm  form desktop" action="#" method="POST">
+            <form class="orderForm form desktop" action="{{$orderRoute}}" method="POST">
+                {{csrf_field()}}
+                @include('lander.naturapharm.components.form_hidden_fields')
                 <div class="form__wrapper">
                     <div class="form-pack">
-                        <div class="form-pack__sale">-50%</div>
+                        <div class="form-pack__sale">-40%</div>
                     </div>
-                    <div class="form__header">¡Compra ahora con un descuento!</div>
+                    <div class="form__header">Kupite odmah sa popustom!</div>
                     <div class="form__main">
                         <div class="form__element">
                             <div class="input-group tooltip-hide">
-                                <input name='name' class="form-input order_data" placeholder="Nombre y Apellido"
+                                <input name='name' class="form-input order_data" placeholder="Ime i prezime"
                                        required type="text">
                             </div>
                         </div>
                         <div class="form__element">
                             <div class="input-group tooltip-hide">
-                                <input name='phone' class="form-input order_data" placeholder="Teléfono móvil" required
+                                <input name='phone' class="form-input order_data" placeholder="Telefon" required
                                        type="tel">
                             </div>
                         </div>
@@ -148,33 +149,32 @@
                         </div>
                     </div>
                     <div class="form__button">
-                        <input class="form__button-element buynow" type="submit" value="ORDENAR">
+                        <input class="form__button-element buynow" type="submit" value="PORUČI">
                     </div>
                 </div>
             </form>
             <div class="block2__wrap">
-                <div class="block2__heading">Causas de <span class="red">pérdida de cabello </span> entre las mujeres
-                </div>
+                <div class="block2__heading">UZROCI <span class="red"> GUBITKA </span> KOSE</div>
                 <ul class="block2-list">
                     <li class="block2-list__item">
                         <img src="{{ asset('/') }}purplerelaxFiles/hairoil/b2_i1.png" alt="" class="block2-list__img">
-                        <div class="block2-list__tx">Herencia</div>
+                        <div class="block2-list__tx">Nasledni faktor</div>
                     </li>
                     <li class="block2-list__item">
                         <img src="{{ asset('/') }}purplerelaxFiles/hairoil/b2_i2.png" alt="" class="block2-list__img">
-                        <div class="block2-list__tx">Desequilibrio <br> hormonal</div>
+                        <div class="block2-list__tx">Hormonalni <br> disbalans</div>
                     </li>
                     <li class="block2-list__item">
                         <img src="{{ asset('/') }}purplerelaxFiles/hairoil/b2_i3.png" alt="" class="block2-list__img">
-                        <div class="block2-list__tx">Estrés</div>
+                        <div class="block2-list__tx">Stres</div>
                     </li>
                     <li class="block2-list__item">
                         <img src="{{ asset('/') }}purplerelaxFiles/hairoil/b2_i4.png" alt="" class="block2-list__img">
-                        <div class="block2-list__tx">Bloqueo de folículos capilares</div>
+                        <div class="block2-list__tx">Blokada folikula dlake</div>
                     </li>
                     <li class="block2-list__item">
                         <img src="{{ asset('/') }}purplerelaxFiles/hairoil/b2_i5.png" alt="" class="block2-list__img">
-                        <div class="block2-list__tx">La influencia de los factores tóxicos</div>
+                        <div class="block2-list__tx">Uticaj toksičnih faktora</div>
                     </li>
                 </ul>
             </div>
@@ -184,16 +184,13 @@
     </div>
     <div class="block3">
         <div class="container">
-            <h3 class="block3__heading">¿Cómo funciona <span class="blue">HairEX</span> y por qué es mejor que los
-                análogos?
+            <h3 class="block3__heading">KAKO EELHOE ULJE ZA KOSU FUNKCIONIŠE I ZAŠTO JE <span class="blue">BOLJE OD OSTALIH?</span>
             </h3>
             <ul class="block3-list">
                 <li class="block3-list__item">
                     <div class="block3-list__wrap">
-                        <div class="block3-list__tx">Como <span class="blue">HairEX trabaja para fortalecer el crecimiento
-                           de cabello en áreas con poca densidad </span> y cabello muy delgado, y forma una
-                            barrera contra los
-                            daños a la cutícula.
+                        <div class="block3-list__tx">Eelhoe ulje deluje na ubrzavanje rasta dlake u <span class="blue">područjima sa malom gustoćom</span>
+                            i stvara barijeru protiv oštećenja folikula.
                         </div>
                         <div class="block3-list__img">
                             <img src="{{ asset('/') }}purplerelaxFiles/hairoil/b3_i1.png" alt="">
@@ -203,11 +200,9 @@
                 </li>
                 <li class="block3-list__item">
                     <div class="block3-list__wrap">
-                        <div class="block3-list__tx"><span class="blue">Activa folículos pilosos latentes </span> a
-                            nivel
-                            microcelular, los revitaliza desde el interior gracias a un conjunto de nutrientes
-                            especialmente
-                            seleccionados.
+                        <div class="block3-list__tx">Aktivira uspavane folikule dlake na mikroćelijskom nivou, <span
+                                class="blue">revitalizujući ih iznutra</span> zahvaljujući setu posebno odabranih
+                            hranjivih sastojaka.
                         </div>
                         <div class="block3-list__img">
                             <img src="{{ asset('/') }}purplerelaxFiles/hairoil/b3_i2.png" alt="">
@@ -217,11 +212,8 @@
                 </li>
                 <li class="block3-list__item">
                     <div class="block3-list__wrap">
-                        <div class="block3-list__tx"><span class="blue">Previene más perdida de cabello </span>
-                            fortaleciendo y
-                            recuperando el folículo piloso. Crea una película protectora contra los efectos de factores
-                            ambientales
-                            negativos.
+                        <div class="block3-list__tx">Sprečava dalji gubitak kose jačanjem i obnavljanjem folikula dlake.
+                            <span class="blue">Stvara zaštitni sloj</span> protiv uticaja negativnih faktora okoline.
                         </div>
                         <div class="block3-list__img">
                             <img src="{{ asset('/') }}purplerelaxFiles/hairoil/b3_i3.png" alt="">
@@ -237,46 +229,42 @@
     </div>
     <div class="block4">
         <div class="container">
-            <h3 class="block4__heading">HairEX RECOLECTA LOS <span class="blue">INGREDIENTES MÁS PODEROSOS</span> PARA
-                EL FORTALECIMIENTO DEL CABELLO
-            </h3>
+            <h3 class="block4__heading">EELHOE ULJE ZA KOSU SADRŽI <span class="blue">NAJMOĆNIJE SASTOJKE</span> ZA
+                JAČANJE KOSE</h3>
             <ul class="block4-list">
                 <li class="block4-list__item">
                     <div class="block4-list__img">
                         <img src="{{ asset('/') }}purplerelaxFiles/hairoil/b4_i1.png" alt="">
                     </div>
-                    <div class="block4-list__header">Extracto <br>de Triticum <br>Vulgare</div>
-                    <div class="block4-list__tx"><span class="bold">Disminuye el proceso de envejecimiento </span> de
-                        folículos,
-                        previene la caída del cabello y activa folículos pilosos "dormidos"
+                    <div class="block4-list__header">EKSTRAKT <br> PŠENICE</div>
+                    <div class="block4-list__tx"><span class="bold">Smanjuje proces starenja folikula,</span> sprečava
+                        gubitak kose i aktivira uspavane folikule dlake
                     </div>
                 </li>
                 <li class="block4-list__item">
                     <div class="block4-list__img">
                         <img src="{{ asset('/') }}purplerelaxFiles/hairoil/b4_i2.png" alt="">
                     </div>
-                    <div class="block4-list__header">Extracto de Germen Scutellaria</div>
-                    <div class="block4-list__tx">Rellena los vacíos de los tallos del pelo, pega las escamas, <span
-                            class="bold">hace que el cabello sea elástico y fácil de mantener</span></div>
+                    <div class="block4-list__header">EKSTRAKT <br> KVASCA</div>
+                    <div class="block4-list__tx">Popunjava praznine u vlasima i čini kosu <span class="bold">elastičnom i lakom za održavanje.</span>
+                    </div>
                 </li>
                 <li class="block4-list__item">
                     <div class="block4-list__img">
                         <img src="{{ asset('/') }}purplerelaxFiles/hairoil/b4_i3.png" alt="">
                     </div>
-                    <div class="block4-list__header">Extracto <br> de Raíz de <br>Baicalensis</div>
-                    <div class="block4-list__tx">Participa en la asimilación de nutrientes importantes para el cabello
-                        (calcio,
-                        fósforo, vitamina B6, B1, E), <span class="bold">previene el cabello gris y quebradizo</span>
+                    <div class="block4-list__header">EKSTRAKT <br> ĐUMBIRA</div>
+                    <div class="block4-list__tx">Učestvuje u asimilaciji važnih <span class="bold">hranjivih materija za kosu (kalcijum, fosfor, vitamin B6, B1, E)</span>
+                        i sprečava pucanje kose.
                     </div>
                 </li>
                 <li class="block4-list__item">
                     <div class="block4-list__img">
                         <img src="{{ asset('/') }}purplerelaxFiles/hairoil/b4_i4.png" alt="">
                     </div>
-                    <div class="block4-list__header">Betula</div>
-                    <div class="block4-list__tx"><span class="bold">Nutre el cuero cabelludo, hidrata y previene la formación de
-                        sequedad, picazón y caspa. </span> Mejora la circulación sanguínea y mejora el
-                        crecimiento del cabello
+                    <div class="block4-list__header">BREZA</div>
+                    <div class="block4-list__tx"><span class="bold">Hrani kožu glave, vlaži i sprečava nastanak suvoće, svraba i peruti.</span>
+                        Poboljšava cirkulaciju krvi i ubrzava rast kose.
                     </div>
                 </li>
             </ul>
@@ -285,143 +273,88 @@
     </div>
     <div class="block5">
         <div class="container">
-            <div class="block5__header"><span class="green">FÓRMULA <br>UNIVERSAL </span> PARA <br>HOMBRES Y
-                MUJERES!<span
-                    class="block5__line"></span>
-            </div>
-            <div class="block5__label mobile">Funciona genial en cabello teñido</div>
+            <div class="block5__header"><span class="green">UNIVERZALNA FORMULA </span> ZA MUŠKARCE <br> I ŽENE<span
+                    class="block5__line"></span></div>
+            <div class="block5__label mobile">ODLIČNO DELUJE NA FARBANU KOSU</div>
             <div class="block5__man"></div>
             <div class="block5__girl"></div>
-            <div class="block5__label desktop">Funciona genial en cabello teñido</div>
+            <div class="block5__label desktop">ODLIČNO DELUJE NA FARBANU KOSU</div>
             <img src="{{ asset('/') }}purplerelaxFiles/hairoil/girl4.png" alt="" class="block5-girl__mobile mobile">
         </div>
     </div>
     <div class="block6">
         <div class="container">
-            <div class="block6__header">SIMPLE Y FÁCIL DE USAR PARA ALCANZAR <span class="green">EL RESULTADO MÁS
-                  RÁPIDO!</span>
+            <div class="block6__header">JEDNOSTAVNO I LAKO KORIŠĆENJE <span class="green">ZA POSTIZANJE NAJBOLJIH REZULTATA</span>
             </div>
             <ul class="block6-list">
                 <li class="block6-list__item">
                     <div class="block6-list__img">
                         <img src="{{ asset('/') }}purplerelaxFiles/hairoil/b6_i.png" alt="">
                     </div>
-                    <div class="block6-list__tx">Cabello liso y sedoso</div>
+                    <div class="block6-list__tx">GLATKA I SVILENKASTA KOSA</div>
                 </li>
                 <li class="block6-list__item">
                     <div class="block6-list__img">
                         <img src="{{ asset('/') }}purplerelaxFiles/hairoil/b6_i2.png" alt="">
                     </div>
-                    <div class="block6-list__tx">REDUCCIÓN DE LA PÉRDIDA DE CABELLO A MÍNIMO</div>
+                    <div class="block6-list__tx">SMANJUJE PUCANJE KOSE NA MINIMUM</div>
                 </li>
                 <li class="block6-list__item">
                     <div class="block6-list__img">
                         <img src="{{ asset('/') }}purplerelaxFiles/hairoil/b6_i3.png" alt="">
                     </div>
-                    <div class="block6-list__tx">DISMINUYA los parches calvos al 99%</div>
+                    <div class="block6-list__tx">SMANJUJE OPADANJE KOSE</div>
                 </li>
                 <li class="block6-list__item">
                     <div class="block6-list__img">
                         <img src="{{ asset('/') }}purplerelaxFiles/hairoil/b6_i4.png" alt="">
                     </div>
-                    <div class="block6-list__tx">MANTENER LOS RESULTADOS</div>
+                    <div class="block6-list__tx">DAJE EFEKAT BUJNE I SJAJNE KOSE</div>
                 </li>
             </ul>
-        </div>
-    </div>
-    <div class="block7">
-        <div class="container">
-            <div class="block7__header">
-                OPINIÓN EXPERTA SOBRE <span class="blue">HairEX</span>
-            </div>
-            <div class="block7__main">
-                <div class="block7-text">
-                    <p class="block7-text__paragraph">Todas las personas pueden sufrir problemas de pérdida de cabello,
-                        independientemente de su género. La calidad actual del entorno, el trabajo constante y la dieta
-                        desequilibrada empeoran la condición del cuero cabelludo y el cabello.
-                    </p>
-                    <p class="block7-text__paragraph">Como resultado, el cabello se desvanece, pierde su fuerza y
-                        volumen, se
-                        quiebra, se rompe y se cae. Como tricólogo, durante los años de mi práctica, he probado muchas
-                        herramientas que podrían ayudar a los pacientes en casa a fortalecer su cabello, mantener una
-                        buena
-                        apariencia y mejorar la estructura del cabello.
-                    </p>
-                    <p class="block7-text__paragraph"><span class="bold blue">Spray para el cabello HairEX </span> –
-                        ¡este
-                        es un descubrimiento real! Los ingredientes naturales que se incluyen en su composición <span
-                            class="bold">restauran efectivamente el cabello frágil, dividido y dañado. </span> Los
-                        ensayos clínicos
-                        del aerosol demuestran su eficacia en la lucha contra las calvas y la caída del cabello.
-                    </p>
-                    <p class="block7-text__paragraph bold">Carlos Moreno<br> Profesor, tricólogo</p>
-                </div>
-                <div class="block7-text__sign"></div>
-            </div>
-            <div class="block7-pack">
-                <div class="block7-pack__label">
-                    <span class="block7-pack__label_lg">100%</span> componentes naturales
-                </div>
-            </div>
         </div>
     </div>
     <div class="block8">
         <div class="container">
             <div class="block8__header">
-                REVISIONES DE <span class="blue">HairEX</span>
+                UTISCI NAŠIH <span class="blue">ZADOVOLJNIH</span> KUPACA
             </div>
             <ul class="review-list">
                 <li class="review-list__item">
                     <div class="review-list__img">
                         <img src="{{ asset('/') }}purplerelaxFiles/hairoil/rev1.png" alt="">
-                        <div class="review-list__before">Antes</div>
-                        <div class="review-list__after">Después</div>
                     </div>
-                    <div class="review-list__tx"><span class="bold">¡Después de 2 semanas vi el resultado! </span> Antes
-                        de la
-                        aplicación, examiné cuidadosamente el área de la cabeza en el borde de la calvicie y el cuero
-                        cabelludo
-                        ... en el día 7-8 de la aplicación ya empecé a notar un cabello pequeño y oscuro ... desde una
-                        distancia
-                        que no noté, pero ¡Definitivamente identifiqué que el NUEVO cabello comenzó a crecer! ¿Quién
-                        creería que
-                        el dicho de que la pérdida de cabello es irreversible es incorrecto? No he notado las
-                        desventajas.
+                    <div class="review-list__tx"><span
+                            class="bold">Nakon dve nedelje korišćenja primetila sam rezultat!</span> Na temenu sam imala
+                        proređenu kosu i to me je dosta iritiralo.
+                        Počela sam da koristim ovaj proizvod i već nakon 7-8 dana videla sam poboljšanje. Nova mlada
+                        kosa počela je da raste i
+                        postala je gušća. Skroz sam zadovoljna ovim proizvodom i preporučiću ga svima, pozdrav!
                     </div>
-                    <div class="review-list__author">Mary, 37 años</div>
+                    <div class="review-list__author">Marija, 37 godina</div>
                 </li>
                 <li class="review-list__item">
                     <div class="review-list__img">
                         <img src="{{ asset('/') }}purplerelaxFiles/hairoil/rev2.png" alt="">
-                        <div class="review-list__before">Antes</div>
-                        <div class="review-list__after">Después</div>
                     </div>
-                    <div class="review-list__tx">Después de 35 años, comenzaron a aparecer los primeros parches de
-                        calvicie. Por
-                        casualidad, recibí un spray para el crecimiento del cabello - "HairEX" y decidí guardar el
-                        cabello
-                        que todavía está allí. Después de 4 meses, mis amigos notaron que había cabello en lugares donde
-                        antes era
-                        calva. Aunque realmente no lo creía, comencé a usarlo todos los días. <span class="bold">Un año después,
-                        el pelo se volvió más grueso. </span> ¡Salvé mi cabello gracias a los desarrolladores de
-                        este producto!
+                    <div class="review-list__tx">Nakon 35. godine počele su mi se pojavljivati površine na glavi sa
+                        proređenom kosom. Igrom slučaja sam dobila ove kapi i odlučila sam da pokušam sa njima.
+                        <span class="bold">Nakon 4 meseca korišćenja, moji prijatelji su primetili da mi je kosa bujnija i lepša.</span>
+                        Nisam odustala, evo već godinu dana koristim ove kapi i nemam nikakvih problema,
+                        potpuno sam zadovoljna.
                     </div>
-                    <div class="review-list__author">Anabel, 52 años  </div>
+                    <div class="review-list__author">Anica, 38 godina</div>
                 </li>
                 <li class="review-list__item">
                     <div class="review-list__img">
                         <img src="{{ asset('/') }}purplerelaxFiles/hairoil/rev3.png" alt="">
-                        <div class="review-list__before">Antes</div>
-                        <div class="review-list__after">Después</div>
                     </div>
-                    <div class="review-list__tx">Lo primero que quiero señalar es la eficiencia. El pelo creció en la
-                        zona de
-                        calvas y el pelo en mi cabeza se hizo notablemente más grueso. En segundo lugar, las
-                        consecuencias cesaron
-                        por completo. En tercer lugar, el cabello delgado se hizo más fuerte. <span class="bold">Durante un mes,
-                        devolví la confianza en mi apariencia y en mí mismo ¡Gracias!</span>
-                    </div>
-                    <div class="review-list__author">Sofia, 40 años</div>
+                    <div class="review-list__tx">Prva stvar koju želim da istaknem je efikasnost. Kosa mi je bila jako
+                        retka i to me baš brinulo. Nema šta nisam probala, ali bezuspešno.
+                        Počela sam da koristim ovo čudo, kosa mi je počela dodatno rasti, postala je gušća i sjajnija.
+                        <span class="bold">Vratilo mi se samopouzdanje!
+                            Hvala vam na ovom proizvodu!</span></div>
+                    <div class="review-list__author">Sofija, 40 godina</div>
                 </li>
             </ul>
         </div>
@@ -434,17 +367,16 @@
                         <div class="block9-warning__img">
                             <img src="{{ asset('/') }}purplerelaxFiles/hairoil/vosl.png" alt="">
                         </div>
-                        <div class="block-warning__header">¡Cuidado con <br> las imitaciones!</div>
+                        <div class="block-warning__header">ČUVAJTE SE IMITACIJA <br> OVOG PROIZVODA</div>
                     </div>
-                    <div class="block9__text">Para evitar contrapartes falsas y deficientes, compre el producto original
-                        solo en
-                        este sitio.
+                    <div class="block9__text">Da biste izbegli kupovinu lažnih proizvoda i loših kopija, kupujte
+                        isključivo preko našeg sajta.
                     </div>
-                    <div class="block9__text up bold">¡CALIDAD 100% GARANTIZADA DEL FABRICANTE!</div>
+                    <div class="block9__text up bold">100% GARANCIJA KVALITETA PROIZVOĐAČA</div>
                 </div>
                 <div class="block9-right">
                     <div class="block9-pack">
-                        <div class="block9-pack__label">RECOMENDACIONES <br> DE ESPECIALISTAS</div>
+                        <div class="block9-pack__label">PREPORUKA <br> SPECIJALISTA</div>
                         <img src="{{ asset('/') }}purplerelaxFiles/hairoil/pack_m.png" alt="">
                     </div>
                 </div>
@@ -453,15 +385,15 @@
     </div>
     <div class="block10">
         <div class="container">
-            <div class="block10__header">¿CÓMO HACER UN PEDIDO?</div>
+            <div class="block10__header">KAKO PORUČITI?</div>
             <ul class="block10-list">
                 <li class="block10-list__item">
                     <div class="block10-list__img">
                         <img src="{{ asset('/') }}purplerelaxFiles/hairoil/b10_i1.png" alt="">
                     </div>
                     <div class="block10-list__wrapper">
-                        <div class="block10-list__header">PASO 1</div>
-                        <div class="block10-list__text">Hacer el pedido en este sitio, llenando el formulario.</div>
+                        <div class="block10-list__header">KORAK 1</div>
+                        <div class="block10-list__text">Ostavite podatke za dostavu na našem sajtu</div>
                     </div>
                 </li>
                 <li class="block10-list__item">
@@ -469,8 +401,8 @@
                         <img src="{{ asset('/') }}purplerelaxFiles/hairoil/b10_i2.png" alt="">
                     </div>
                     <div class="block10-list__wrapper">
-                        <div class="block10-list__header">PASO 2</div>
-                        <div class="block10-list__text">Un colega lo contactará en 60 minutos.</div>
+                        <div class="block10-list__header">KORAK 2</div>
+                        <div class="block10-list__text">Kontaktiraćemo vas da potvrdimo porudžbinu</div>
                     </div>
                 </li>
                 <li class="block10-list__item">
@@ -478,10 +410,8 @@
                         <img src="{{ asset('/') }}purplerelaxFiles/hairoil/b10_i3.png" alt="">
                     </div>
                     <div class="block10-list__wrapper">
-                        <div class="block10-list__header">PASO 3</div>
-                        <div class="block10-list__text">Cuidadosamente empacaremos su orden y enviaremos ese mismo
-                            día.
-                        </div>
+                        <div class="block10-list__header">KORAK 3</div>
+                        <div class="block10-list__text">Pošiljku šaljemo brzom poštom u roku od 1-2 radna dana</div>
                     </div>
                 </li>
                 <li class="block10-list__item">
@@ -489,8 +419,8 @@
                         <img src="{{ asset('/') }}purplerelaxFiles/hairoil/b10_i4.png" alt="">
                     </div>
                     <div class="block10-list__wrapper">
-                        <div class="block10-list__header">PASO 4</div>
-                        <div class="block10-list__text">El pago se debe a la recepción de la orden.</div>
+                        <div class="block10-list__header">KORAK 4</div>
+                        <div class="block10-list__text">Plaćate po pouzeću kuriru brze pošte</div>
                     </div>
                 </li>
             </ul>
@@ -508,7 +438,7 @@
                             <img src="{{ asset('/') }}purplerelaxFiles/hairoil/ic1.png" alt="">
                         </div>
                         <div class="block1-header-list__text">
-                            Efectividad confirmada
+                            POTVRĐENA EFIKASNOST
                         </div>
                     </li>
                     <li class="block1-header-list__item">
@@ -516,7 +446,7 @@
                             <img src="{{ asset('/') }}purplerelaxFiles/hairoil/ic2.png" alt="">
                         </div>
                         <div class="block1-header-list__text">
-                            Producto del año 2017
+                            PROIZVOD GODINE 2021
                         </div>
                     </li>
                     <li class="block1-header-list__item">
@@ -524,28 +454,30 @@
                             <img src="{{ asset('/') }}purplerelaxFiles/hairoil/ic3.png" alt="">
                         </div>
                         <div class="block1-header-list__text">
-                            Ingredientes 100% naturales
+                            100% PRIRODNI SASTOJCI
                         </div>
                     </li>
                 </ul>
             </div>
-            <h1 class="block1__heading">RECUPERACIÓN DE PELO COMPLETO <span class="green">DURANTE 28 DÍAS</span></h1>
-            <form class="  orderForm  form desktop" action="#" method="POST">
+            <h1 class="block1__heading">KOMPLETNA REGENERACIJA KOSE U <span class="green">28 DANA</span></h1>
+            <form class="orderForm form desktop" action="{{$orderRoute}}" method="POST">
+                {{csrf_field()}}
+                @include('lander.naturapharm.components.form_hidden_fields')
                 <div class="form__wrapper">
                     <div class="form-pack">
-                        <div class="form-pack__sale">-50%</div>
+                        <div class="form-pack__sale">-40%</div>
                     </div>
-                    <div class="form__header">¡Compra ahora con un descuento!</div>
+                    <div class="form__header">Kupite odmah sa popustom!</div>
                     <div class="form__main">
                         <div class="form__element">
                             <div class="input-group tooltip-hide">
-                                <input name='name' class="form-input order_data" placeholder="Nombre y Apellido"
-                                       required type="text">
+                                <input name='name' class="form-input order_data" placeholder="Ime i prezime" required
+                                       type="text">
                             </div>
                         </div>
                         <div class="form__element">
                             <div class="input-group tooltip-hide">
-                                <input name='phone' class="form-input order_data" placeholder="Teléfono móvil" required
+                                <input name='phone' class="form-input order_data" placeholder="Telefon" required
                                        type="tel">
                             </div>
                         </div>
@@ -574,13 +506,15 @@
                         </div>
                     </div>
                     <div class="form__button">
-                        <input class="form__button-element buynow" type="submit" value="ORDENAR">
+                        <input class="form__button-element buynow" type="submit" value="PORUČI">
                     </div>
                 </div>
             </form>
-            <form class=" orderForm   js-scroll-form form mobile" action="#" method="POST">
+            <form class="orderForm js-scroll-form form mobile" action="{{$orderRoute}}" method="POST">
+                {{csrf_field()}}
+                @include('lander.naturapharm.components.form_hidden_fields')
                 <div class="form__wrapper">
-                    <div class="form__header">¡Compra ahora con un descuento!</div>
+                    <div class="form__header">Kupite odmah sa popustom!</div>
                     <div class="pack-img">
                         <img src="{{ asset('/') }}purplerelaxFiles/hairoil/pack.png" alt="">
                     </div>
@@ -597,19 +531,19 @@
                     <div class="form__main">
                         <div class="form__element">
                             <div class="input-group tooltip-hide">
-                                <input name='name' class="form-input order_data" placeholder="Nombre y Apellido"
+                                <input name='name' class="form-input order_data" placeholder="Ime i prezime"
                                        required type="text">
                             </div>
                         </div>
                         <div class="form__element">
                             <div class="input-group tooltip-hide">
-                                <input name='phone' class="form-input order_data" placeholder="Teléfono móvil" required
+                                <input name='phone' class="form-input order_data" placeholder="Telefon" required
                                        type="tel">
                             </div>
                         </div>
                     </div>
                     <div class="form__button">
-                        <input class="form__button-element buynow" type="submit" value="ORDENAR">
+                        <input class="form__button-element buynow" type="submit" value="PORUČI">
                     </div>
                 </div>
             </form>
@@ -618,12 +552,6 @@
             <div class="block1-decor2"></div>
         </div>
     </div>
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-text">
-            </div>
-        </div>
-    </footer>
 </div>
 <script>
     $(document).ready(function () {
@@ -637,5 +565,6 @@
         })
     });
 </script>
+@include('components.pixel_footer')
 </body>
 </html>

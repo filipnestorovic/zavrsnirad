@@ -3884,15 +3884,15 @@ body {
     z-index: 2
 }
 
-.block9-pack::after {
-    content: '';
-    position: absolute;
-    width: 221px;
-    height: 318px;
-    background: url(cert.png) no-repeat center;
-    right: -107px;
-    top: -20px
-}
+/*.block9-pack::after {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    width: 221px;*/
+/*    height: 318px;*/
+/*    background: url(cert.png) no-repeat center;*/
+/*    right: -107px;*/
+/*    top: -20px*/
+/*}*/
 
 .block9-pack__label {
     position: absolute;
