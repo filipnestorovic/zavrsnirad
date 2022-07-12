@@ -48,27 +48,27 @@
     <div class="container">
         <div class="row">
             <div class="col-md-2 col-sm-3 col-xs-8">
-                <div class="top-logo"> Ez&nbsp;Steam</div>
+                <div class="top-logo">Garment Steamer</div>
             </div>
             <div class="col-md-3 col-md-push-7 col-sm-6 mobile-section">
-                <div class="top-button"><a href="#order"> Поръчка Ez&nbsp;Steam</a></div>
+                <div class="top-button"><a href="#order">Poručite odmah</a></div>
             </div>
             <div class="col-md-7 col-md-pull-3 col-sm-9 col-xs-4">
                 <ul class="top-menu">
-                    <li><a href="#ex1"> 8 причини да купите</a></li>
-                    <li><a href="#ex2"> Защо<span> Ez&nbsp;Steam</span></a></li>
-                    <li><a href="#ex4"> Препоръки</a></li>
-                    <li><a href="#ex5"> За нас</a></li>
+                    <li><a href="#ex1"> 8 razloga da kupite</a></li>
+                    <li><a href="#ex2"> ZAŠTO <span>GARMENT STEAMER</span></a></li>
+                    <li><a href="#ex4"> Preporuke</a></li>
+                    <li><a href="#ex5"> Kako poručiti</a></li>
                 </ul>
                 <a href="#" class="menu-icon" id="menu-icon">
                     <div class="icon-list icon2x"></div>
                 </a>
                 <ul id="menu-mobile-menu" class="menu">
-                    <li><a href="#ex1"> 8 причини да купите</a></li>
-                    <li><a href="#ex2"> Защо<span> Ez&nbsp;Steam</span></a></li>
-                    <li><a href="#ex4"> Препоръки</a></li>
-                    <li><a href="#ex5"> За нас</a></li>
-                    <li class="call-modal"><a href="#order"> Поръчка Ez&nbsp;Steam</a></li>
+                    <li><a href="#ex1"> 8 razloga da kupite</a></li>
+                    <li><a href="#ex2"> ZAŠTO <span>GARMENT STEAMER</span></a></li>
+                    <li><a href="#ex4"> Preporuke</a></li>
+                    <li><a href="#ex5"> Kako poručiti</a></li>
+                    <li class="call-modal"><a href="#order">Poručite odmah</a></li>
                 </ul>
             </div>
         </div>
