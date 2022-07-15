@@ -82,7 +82,9 @@
                                     {{ $prices[1]['currency'] }}
                                 </div>
                             </div>
-                            <form method="post" action="#">
+                            <form method="post" action="{{$orderRoute}}">
+                                {{csrf_field()}}
+                                @include('lander.naturapharm.components.form_hidden_fields')
                                 <div class="form_group">
                                     <div class="form-group">
                                         <input type="text" class="form-control" name="name" placeholder="Ime i prezime" required>
@@ -289,7 +291,9 @@
                                     {{ $prices[1]['currency'] }}
                                 </div>
                             </div>
-                            <form method="post" action="#">
+                            <form method="post" action="{{$orderRoute}}">
+                                {{csrf_field()}}
+                                @include('lander.naturapharm.components.form_hidden_fields')
                                 <div class="form_group">
                                     <div class="form-group">
                                         <input type="text" class="form-control" name="name" placeholder="Ime i prezime" required>
