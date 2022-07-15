@@ -102,8 +102,8 @@
                     <div class="col s12 m5">
                         <ul class="header_list">
                             <li><span class="list_icon"><i class="fas fa-check-circle"></i></span> Ima 4 oštra plastična nastavka za prst</li>
-                            <li><span class="list_icon"><i class="fas fa-check-circle"></i></span> Kvalitetan silikonski materijal</li>
-                            <li><span class="list_icon"><i class="fas fa-check-circle"></i></span> Lako kopanje ruba i pravljenje brazdi</li>
+                            <li><span class="list_icon"><i class="fas fa-check-circle"></i></span> Pogodno za vađenje plodova iz zemlje</li>
+                            <li><span class="list_icon"><i class="fas fa-check-circle"></i></span> Lako kopanje rupa i pravljenje brazdi</li>
                             <li><span class="list_icon"><i class="fas fa-check-circle"></i></span> Idealno za čupanje korova i trave u vrtu</li>
                         </ul>
                     </div>
@@ -311,8 +311,8 @@
                     <div class="col s12 m5">
                         <ul class="header_list">
                             <li><span class="list_icon"><i class="fas fa-check-circle"></i></span> Ima 4 oštra plastična nastavka za prst</li>
-                            <li><span class="list_icon"><i class="fas fa-check-circle"></i></span> Kvalitetan silikonski materijal</li>
-                            <li><span class="list_icon"><i class="fas fa-check-circle"></i></span> Lako kopanje ruba i pravljenje brazdi</li>
+                            <li><span class="list_icon"><i class="fas fa-check-circle"></i></span> Pogodno za vađenje plodova iz zemlje</li>
+                            <li><span class="list_icon"><i class="fas fa-check-circle"></i></span> Lako kopanje rupa i pravljenje brazdi</li>
                             <li><span class="list_icon"><i class="fas fa-check-circle"></i></span> Idealno za čupanje korova i trave u vrtu</li>
                         </ul>
                     </div>
