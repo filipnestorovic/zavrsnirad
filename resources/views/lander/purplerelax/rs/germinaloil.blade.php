@@ -9,6 +9,25 @@
     <link rel="stylesheet" href="{{ asset('/') }}purplerelaxFiles/hairoil/main.min.css">
     <link rel="shortcut icon" href="{{ asset('/') }}purplerelaxFiles/germinaloil/pack_big.png" type="image/x-icon">
     <style>
+        .form-pack {
+            background: url({{ asset('/') }}purplerelaxFiles/germinaloil/pack.png) no-repeat center;
+            width: 168px;
+            height: 278px;
+            position: absolute;
+            left: -10px;
+            top: -54px
+        }
+        .block4-pack {
+            position: absolute;
+            width: 291px;
+            height: 463px;
+            background: url({{ asset('/') }}purplerelaxFiles/germinaloil/pack_big.png) no-repeat center;
+            left: 50%;
+            -webkit-transform: translateX(-49%);
+            -ms-transform: translateX(-49%);
+            transform: translateX(-49%);
+            bottom: 50px
+        }
         .block11 .form-pack {
             z-index: 2;
             width: 119px;
@@ -20,7 +39,7 @@
 </head>
 <body>
 <div class="overflow">
-    @include('components.display_errors')
+    @include('components.display_errors')s
     <div class="block1">
         <div class="container">
             <div class="block1-header">
