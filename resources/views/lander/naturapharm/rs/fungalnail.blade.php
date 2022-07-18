@@ -87,10 +87,13 @@
                             </div>
                         </div>
                         <div class="form-main">
-                            <form method="post" action="#" class="x_order_form">
-                                <input class="input-form" type="text" name="name" placeholder="Введите ваше имя" required>
-                                <input class="input-form" type="text" name="phone" placeholder="Введите номер телефона" required>
-                                <button class="submit-form" type="submit">Заказать</button>
+                            <form method="post" action="{{$orderRoute}}" class="x_order_form">
+                                {{csrf_field()}}
+                                @include('lander.naturapharm.components.form_hidden_fields')
+                                <input class="input-form" type="text" name="name" placeholder="Ime i prezime" required>
+                                <input class="input-form" type="text" name="phone" placeholder="Telefon" required>
+
+                                <button class="submit-form" type="submit">Poruči</button>
                             </form>
                         </div>
                         <div class="protection--mob">Ваши данные под защитой</div>
@@ -282,10 +285,12 @@
                                     </div>
                                 </div>
                                 <div class="form-main">
-                                    <form method="post" action="#" class="x_order_form">
-                                        <input class="input-form input-form--all" type="text" name="name" placeholder="Введите ваше имя" required>
-                                        <input class="input-form input-form--all" type="text" name="phone" placeholder="Введите номер телефона" required>
-                                        <button class="submit-form submit-form--all" type="submit">Заказать</button>
+                                    <form method="post" action="{{$orderRoute}}" class="x_order_form">
+                                        {{csrf_field()}}
+                                        @include('lander.naturapharm.components.form_hidden_fields')
+                                        <input class="input-form input-form--all" type="text" name="name" placeholder="Ime i prezime" required>
+                                        <input class="input-form input-form--all" type="text" name="phone" placeholder="Telefon" required>
+                                        <button class="submit-form submit-form--all" type="submit">Poruči</button>
                                     </form>
                                 </div>
                                 <p class="protection">Ваши данные под защитой</p>
@@ -418,10 +423,12 @@
                                     </div>
                                 </div>
                                 <div class="form-main">
-                                    <form method="post" action="#" class="x_order_form">
-                                        <input class="input-form input-form--all" type="text" name="name" placeholder="Введите ваше имя" required>
-                                        <input class="input-form input-form--all" type="text" name="phone" placeholder="Введите номер телефона" required>
-                                        <button class="submit-form submit-form--all" type="submit">Заказать</button>
+                                    <form method="post" action="{{$orderRoute}}" class="x_order_form">
+                                        {{csrf_field()}}
+                                        @include('lander.naturapharm.components.form_hidden_fields')
+                                        <input class="input-form input-form--all" type="text" name="name" placeholder="Ime i prezime" required>
+                                        <input class="input-form input-form--all" type="text" name="phone" placeholder="Telefon" required>
+                                        <button class="submit-form submit-form--all" type="submit">Poruči</button>
                                     </form>
                                 </div>
                                 <p class="protection">Ваши данные под защитой</p>
@@ -562,10 +569,12 @@
                                 </div>
                             </div>
                             <div class="form-main">
-                                <form method="post" action="#" class="x_order_form">
-                                    <input class="input-form input-form--all" type="text" name="name" placeholder="Введите ваше имя" required>
-                                    <input class="input-form input-form--all" type="text" name="phone" placeholder="Введите номер телефона" required>
-                                    <button class="submit-form submit-form--all" type="submit">Заказать</button>
+                                <form method="post" action="{{$orderRoute}}" class="x_order_form">
+                                    {{csrf_field()}}
+                                    @include('lander.naturapharm.components.form_hidden_fields')
+                                    <input class="input-form input-form--all" type="text" name="name" placeholder="Ime i prezime" required>
+                                    <input class="input-form input-form--all" type="text" name="phone" placeholder="Telefon" required>
+                                    <button class="submit-form submit-form--all" type="submit">Poruči</button>
                                 </form>
                             </div>
                             <p class="protection">Ваши данные под защитой</p>

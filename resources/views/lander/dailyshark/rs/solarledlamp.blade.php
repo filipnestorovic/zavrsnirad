@@ -14,7 +14,8 @@
         * {
             font-family: Zawgyi-One;
         }
-        @font-face{
+
+        @font-face {
             font-family: 'Zawgyi-One';
             src: url('{{ asset('/') }}fonts/zawgyi.eot');
             src: url('{{ asset('/') }}fonts/zawgyi.eot@iefix') format('eot'),
@@ -52,7 +53,7 @@
                             <p class="price-old">
                               <span class="al-cost-promo">
                                  {{ $prices[1]['originalPrice'] }}
-                                 {{ $prices[1]['currency'] }}
+                                  {{ $prices[1]['currency'] }}
                               </span>
                             </p>
                             <p class="price-new al-cost">
@@ -61,7 +62,9 @@
                             </p>
                         </div>
                     </div>
-                    <form method="POST" action="#" class="al-form">
+                    <form method="POST" action="{{$orderRoute}}" class="al-form">
+                        {{csrf_field()}}
+                        @include('lander.naturapharm.components.form_hidden_fields')
                         <div class="form-group"><input type="text" class="form-control" name="name" placeholder="အမည္"
                                                        required="" value=""></div>
                         <div class="form-group"><input type="tel" class="form-control" name="phone"
@@ -584,7 +587,7 @@
                             <p class="price-old">
                               <span class="al-cost-promo">
                                  {{ $prices[1]['originalPrice'] }}
-                                 {{ $prices[1]['currency'] }}
+                                  {{ $prices[1]['currency'] }}
                               </span>
                             </p>
                             <p class="price-new al-cost">
@@ -593,7 +596,9 @@
                             </p>
                         </div>
                     </div>
-                    <form method="POST" action="#" class="al-form">
+                    <form method="POST" action="{{$orderRoute}}" class="al-form">
+                        {{csrf_field()}}
+                        @include('lander.naturapharm.components.form_hidden_fields')
                         <div class="form-group"><input type="text" class="form-control" name="name" placeholder="အမည္"
                                                        required="" value=""></div>
                         <div class="form-group"><input type="tel" class="form-control" name="phone"
@@ -674,7 +679,9 @@
                     <p class="text-small">အခ်က္အလက္မ်ား မွားေနပါက <a href="#"
                                                                      class="show-form">ျပန္လည္ျဖည့္စြက္ေပးပါ။ </a></p>
                 </div>
-                <form method="POST" action="#" class="al-form">
+                <form method="POST" action="{{$orderRoute}}" class="al-form">
+                    {{csrf_field()}}
+                    @include('lander.naturapharm.components.form_hidden_fields')
                     <div class="form-group"><input type="text" class="form-control" name="name" placeholder="အမည္"
                                                    required="" value=""></div>
                     <div class="form-group"><input type="tel" class="form-control" name="phone"
@@ -692,10 +699,10 @@
 <script src="{{ asset('/') }}shared_files/slick.min.js"></script>
 {{--<script src="{{ asset('/') }}dailysharkFiles/solarledlamp/app.js"></script>--}}
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         $("a").on("click", function (event) {
             event.preventDefault();
-            var id  = $(this).attr('href'),
+            var id = $(this).attr('href'),
                 top = $(id).offset().top;
             $('body,html').animate({scrollTop: top}, 1000);
         });
