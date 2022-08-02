@@ -12,6 +12,7 @@
 </head>
 <body>
 <div class="body-wrap">
+    @include('components.display_errors')
     <!--header-->
     <header>
         <div class="wrapper">
@@ -261,7 +262,7 @@
     <!--section6-->
     <a id="effect"></a>
     <div class="section6">
-        <div class="wrapper"> 
+        <div class="wrapper">
             <p class="title">Efekat nakon 30 dana <span class="title6-span1">korišćenja kreme </span> "Fungal Nail"</p>
             <div class="effect">
                 <div class="effect__block effect__block--1">Uklanja gljivice na nogama i noktima
@@ -536,5 +537,6 @@ Jednostavan način da pobedite gljivice, žute i ispucale nokte!
     </div>
 </div>
 <!--body-wrap-->
+@include('components.pixel_footer')
 </body>
 </html>

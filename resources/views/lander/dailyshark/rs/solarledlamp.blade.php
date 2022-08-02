@@ -28,6 +28,7 @@
     </style>
 </head>
 <body class="zawgyi">
+@include('components.display_errors)
 <section class="sec-1">
     <div class="row-2">
         <div class="pageTitle">
@@ -577,5 +578,6 @@ lopovi zaobilaziti moju kuću. Konačno mirno spavam ha ha.
         })
     });
 </script>
+@include('components.pixel_footer')
 </body>
 </html>
