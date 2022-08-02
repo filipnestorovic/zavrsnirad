@@ -28,7 +28,7 @@
     </style>
 </head>
 <body class="zawgyi">
-@include('components.display_errors)
+@include('components.display_errors')
 <section class="sec-1">
     <div class="row-2">
         <div class="pageTitle">
