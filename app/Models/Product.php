@@ -173,6 +173,7 @@ class Product extends Model
                 if($country_id != null) {
                     if($temp->is_default_product === 1 && $temp->country_id === $country_id) {
                         $result->where('product.id_product','=',$temp->id_product);
+                        break;
                     }
                 } else {
                     if($temp->is_default_product === 1) {
