@@ -44,8 +44,8 @@
 
 <!-- -v2 -->
     <section class="title-block">
-        <div class="sub-main-title">NOSITE CELLULITE WAIST <br>I IZGLEDAJTE SAVRŠENO</div>
-        <h1 class="main-title">CELLULITE WAIST</h1>
+        <div class="sub-main-title">NOSITE BODY SHAPING WRAP <br>I IZGLEDAJTE SAVRŠENO</div>
+        <h1 class="main-title">BODY SHAPING WRAP</h1>
     </section>
 
     <section class="top-block-v2">
@@ -76,22 +76,22 @@
 
     <!-- -v3 -->
     <section class="sup-block-v3 benefits1_section">
-        <h2 class="lvl-title">CELLULITE WAIST <br/>SE PREPORUČUJE <br/>UKOLIKO:</h2>
+        <h2 class="lvl-title">BODY SHAPING WRAP <br/>SE PREPORUČUJE <br/>UKOLIKO:</h2>
         <ul class="sup-cont clearfix">
             <li>
-                <img src="{{ asset('/') }}naturapharmFiles/korset/sup-block-v3_1.jpg" alt="Burning Belt">
+                <img src="{{ asset('/') }}naturapharmFiles/korset/sup-block-v3_1.jpg" alt="Body Shaping Wrap">
                 <p>Želite da imate lepu figuru u najkraćem roku. Pri treningu topi masne naslage</p>
             </li>
             <li>
-                <img src="{{ asset('/') }}naturapharmFiles/korset/sup-block-v3_2.jpg" alt="Burning Belt">
+                <img src="{{ asset('/') }}naturapharmFiles/korset/sup-block-v3_2.jpg" alt="Body Shaping Wrap">
                 <p>Odlučili ste da vaše telo izgleda savršeno bez izgladnjivanja i dijeta</p>
             </li>
             <li>
-                <img src="{{ asset('/') }}naturapharmFiles/korset/sup-block-v3_3.jpg" alt="Burning Belt">
+                <img src="{{ asset('/') }}naturapharmFiles/korset/sup-block-v3_3.jpg" alt="Body Shaping Wrap">
                 <p>Želite da vaše telo izgleda kao da imate idealnu kilažu</p>
             </li>
             <li>
-                <img src="{{ asset('/') }}naturapharmFiles/korset/sup-block-v3_4.jpg" alt="Burning Belt">
+                <img src="{{ asset('/') }}naturapharmFiles/korset/sup-block-v3_4.jpg" alt="Body Shaping Wrap">
                 <p>Želite zavodljiv i tanak struk sa istaknutim grudima</p>
             </li>
         </ul>
@@ -99,18 +99,18 @@
 
     <!--  -->
     <section class="detail-block about_section">
-        <h2 class="lvl-title">CELLULITE WAIST ZA OBLIKOVANJE TELA</h2>
+        <h2 class="lvl-title">BODY SHAPING WRAP ZA OBLIKOVANJE TELA</h2>
         <div class="text-cont">
             <p>Posebno je dizajniran za momentalni vizuelni <b>efekat savršenog tela.</b></p>
-            <p>Cellulite Waist je napravljen da <b>savršeno prijanja uz vaše telo,</b> oblikujući ga i praveći idealnu figuru. Može da se nosi ispod odeće i <b>veoma je neosetan.</b></p>
-            <p>Poznato je da je struk najteže oblikovati, zato se kod nas pojavilo idealno rešenje za to - <b>obučeš Cellulite Waist i gotovo</b> - svi će biti oduševljeni tvojim izgledom.</p>
-            <img src="{{ asset('/') }}naturapharmFiles/bodyshapingwrap/pic-1.png" alt="Burning Belt">
+            <p>Body Shaping Wrap je napravljen da <b>savršeno prijanja uz vaše telo,</b> oblikujući ga i praveći idealnu figuru. Može da se nosi ispod odeće i <b>veoma je neosetan.</b></p>
+            <p>Poznato je da je struk najteže oblikovati, zato se kod nas pojavilo idealno rešenje za to - <b>obučeš Body Shaping Wrap i gotovo</b> - svi će biti oduševljeni tvojim izgledom.</p>
+            <img src="{{ asset('/') }}naturapharmFiles/bodyshapingwrap/pic-1.png" alt="Body Shaping Wrap">
         </div>
     </section>
 
     <!-- -v2 -->
     <section class="sup-block-v2">
-        <h2 class="lvl-title">EFIKASNOT CELLULITE WAIST-A</h2>
+        <h2 class="lvl-title">EFIKASNOT BODY SHAPING WRAP-A</h2>
         <ul class="sup-cont clearfix grig">
             <li>
                 <h4>SMANJUJE EFEKAT NADUDOSTI</h4>
@@ -122,7 +122,7 @@
             </li>
             <li>
                 <h4>NEOTEX TEHNOLOGIJA</h4>
-                <p>Napravljen je od Neotex tkanine koja savršeno diše i ne stvara neprijatno znojenje. Ukoliko želite da trenirate uz Cellulite Waist, onda će pospešiti zagrevanje i topljenje masti.</p>
+                <p>Napravljen je od Neotex tkanine koja savršeno diše i ne stvara neprijatno znojenje. Ukoliko želite da trenirate uz Body Shaping Wrap, onda će pospešiti zagrevanje i topljenje masti.</p>
             </li>
             <li>
                 <h4>INSTANT EFEKAT</h4>
@@ -135,30 +135,30 @@
 
     <!-- -v3 -->
     <section class="sup-block-v3 use_section">
-        <h2 class="lvl-title">KADA I GDE MOŽE DA SE NOSI CELLULITE WAIST?</h2>
+        <h2 class="lvl-title">KADA I GDE MOŽE DA SE NOSI BODY SHAPING WRAP?</h2>
         <ul class="sup-cont clearfix">
             <li>
-                <img src="{{ asset('/') }}naturapharmFiles/korset/use1.jpg" alt="Burning Belt">
+                <img src="{{ asset('/') }}naturapharmFiles/korset/use1.jpg" alt="Body Shaping Wrap">
                 <p>ODMOR</p>
             </li>
             <li>
-                <img src="{{ asset('/') }}naturapharmFiles/korset/use2.jpg" alt="Burning Belt">
+                <img src="{{ asset('/') }}naturapharmFiles/korset/use2.jpg" alt="Body Shaping Wrap">
                 <p>KUĆNI POSLOVI</p>
             </li>
             <li>
-                <img src="{{ asset('/') }}naturapharmFiles/korset/use3.jpg" alt="Burning Belt">
+                <img src="{{ asset('/') }}naturapharmFiles/korset/use3.jpg" alt="Body Shaping Wrap">
                 <p>ŠOPING</p>
             </li>
             <li>
-                <img src="{{ asset('/') }}naturapharmFiles/korset/use4.jpg" alt="Burning Belt">
+                <img src="{{ asset('/') }}naturapharmFiles/korset/use4.jpg" alt="Body Shaping Wrap">
                 <p>TRČANJE</p>
             </li>
             <li>
-                <img src="{{ asset('/') }}naturapharmFiles/korset/use5.jpg" alt="Burning Belt">
+                <img src="{{ asset('/') }}naturapharmFiles/korset/use5.jpg" alt="Body Shaping Wrap">
                 <p>FITNES</p>
             </li>
             <li>
-                <img src="{{ asset('/') }}naturapharmFiles/korset/use6.jpg" alt="Burning Belt">
+                <img src="{{ asset('/') }}naturapharmFiles/korset/use6.jpg" alt="Body Shaping Wrap">
                 <p>ČUVANJE DECE</p>
             </li>
         </ul>
@@ -167,7 +167,7 @@
 
     <!-- -v1 -->
     <section class="delivery-block-v1">
-        <h2 class="lvl-title">KAKO PORUČITI <br/> CELLULITE WAIST?</h2>
+        <h2 class="lvl-title">KAKO PORUČITI <br/> BODY SHAPING WRAP?</h2>
         <ul class="delivery-cont clearfix">
             <li>
                 <p>Poručite popunjavanjem forme na našem sajtu</p>
@@ -189,20 +189,20 @@
         <h2 class="lvl-title">UTISCI <br/> NAŠIH KUPACA</h2>
         <div class="rev-cont clearfix">
             <div class="rev-item">
-                <img src="{{ asset('/') }}naturapharmFiles/korset/rev-block-v3_1.jpg" alt="Burning Belt">
+                <img src="{{ asset('/') }}naturapharmFiles/korset/rev-block-v3_1.jpg" alt="Body Shaping Wrap">
                 <h4>Milica Mitrović, 33 godine</h4>
                 <p>Videla sam oglas i odlučila sam da pokušam. Rezultat je neverovatan. Sviđa mi se što steže bočne strane i nije vidljiv ispod odeće. Ljudi iz moje okoline su mi počeli govoriti da sam smršala.
                     Ja sam čak i trenirala u njemu i dao je odlične efekte. Mnogo zagreva telo i pospešuje znojenje, ali najbolje od svega je što diše i što se ne osećam kao pod folijom.</p>
             </div>
             <div class="rev-item">
-                <img src="{{ asset('/') }}flexonikFiles/bodyshapingwrap/rev-block-v3_2.png" alt="Burning Belt">
+                <img src="{{ asset('/') }}naturapharmFiles/bodyshapingwrap/rev-block-v3_2.png" alt="Body Shaping Wrap">
                 <h4>Boriša Gavrić , 31 godina</h4>
-                <p>Kupio sam Cellulite Waist za svoju suprugu jer je dugo i bezuspešno pokušavala da se oslobodi stomaka. Imao sam sreću da sam proizvod kupio sa popustom, a ona je izgledala kao gorska vila. Presrećni smo, hvala vam.</p>
+                <p>Kupio sam Body Shaping Wrap za svoju suprugu jer je dugo i bezuspešno pokušavala da se oslobodi stomaka. Imao sam sreću da sam proizvod kupio sa popustom, a ona je izgledala kao gorska vila. Presrećni smo, hvala vam.</p>
             </div>
             <div class="rev-item">
-                <img src="{{ asset('/') }}naturapharmFiles/korset/rev-block-v3_3.jpg" alt="Burning Belt">
+                <img src="{{ asset('/') }}naturapharmFiles/korset/rev-block-v3_3.jpg" alt="Body Shaping Wrap">
                 <h4>Dragana Marković, 29 godina</h4>
-                <p>Cellulite Waist mi je stigao 2 dana nakon što sam ga poručila. Koristim ga već 9 nedelja. Nosim ga kad god je to moguće - u šetnji sa detetom, kod kuće pa i na trčanju. Primetila sam da kada trčim u njemu da
+                <p>Body Shaping Wrap mi je stigao 2 dana nakon što sam ga poručila. Koristim ga već 9 nedelja. Nosim ga kad god je to moguće - u šetnji sa detetom, kod kuće pa i na trčanju. Primetila sam da kada trčim u njemu da
                     jako pospešuje znojenje i topljenje masnih naslaga. Struk mi je tanji za 14 centimetara. Ne želim da stanem na ovome, nastaviću da ga nosim.</p>
             </div>
         </div>
@@ -210,8 +210,8 @@
 
     <!-- -v2 -->
     <section class="title-block">
-        <div class="sub-main-title">NOSITE CELLULITE WAIST <br> I IZGLEDAJTE SAVRŠENO</div>
-        <h1 class="main-title">CELLULITE WAIST</h1>
+        <div class="sub-main-title">NOSITE BODY SHAPING WRAP <br> I IZGLEDAJTE SAVRŠENO</div>
+        <h1 class="main-title">BODY SHAPING WRAP</h1>
     </section>
 
     <section class="top-block-v2">
