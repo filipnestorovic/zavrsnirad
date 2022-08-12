@@ -61,6 +61,8 @@
                             @include('lander.naturapharm.components.form_hidden_fields')
                             <input name="name" placeholder="Imię i nazwisko" type="text" required/>
                             <input class="only_number" name="phone" placeholder="Telefon" type="text" required/>
+                            <input name="shipping_address" placeholder="Adres zamieszkania" type="text" required/>
+                            <input name="shipping_city" placeholder="Miasto" type="text" required/>
                             <div>
                                 @foreach($prices as $singlePrice)
                                     <input type="hidden" id="product{{ $singlePrice['quantity'] }}" value="{{ $singlePrice['originalPrice'] }}" placeholder="{{ $singlePrice['amount'] }}"/>
@@ -330,6 +332,8 @@
                             @include('lander.naturapharm.components.form_hidden_fields')
                             <input name="name" placeholder="Imię i nazwisko" type="text" required/>
                             <input class="only_number" name="phone" placeholder="Telefon" type="text" required/>
+                            <input name="shipping_address" placeholder="Adres zamieszkania" type="text" required/>
+                            <input name="shipping_city" placeholder="Miasto" type="text" required/>
                             <div>
                                 @foreach($prices as $singlePrice)
                                     <input type="radio" name="quantity" value="{{$singlePrice['quantity']}}" class="productQuantity{{$singlePrice['quantity']}} quantity" id="SecondProductLabel{{$singlePrice['quantity']}}" placeholder="{{ $singlePrice['is_free_shipping'] }}"
@@ -507,6 +511,8 @@
                             @include('lander.naturapharm.components.form_hidden_fields')
                             <input name="name" placeholder="Imię i nazwisko" type="text" required/>
                             <input class="only_number" name="phone" placeholder="Telefon" type="text" required/>
+                            <input name="shipping_address" placeholder="Adres zamieszkania" type="text" required/>
+                            <input name="shipping_city" placeholder="Miasto" type="text" required/>
                             <div>
                                 @foreach($prices as $singlePrice)
                                     <input type="radio" name="quantity" value="{{$singlePrice['quantity']}}" class="productQuantity{{$singlePrice['quantity']}} quantity" id="ThirdProductLabel{{$singlePrice['quantity']}}" placeholder="{{ $singlePrice['is_free_shipping'] }}"
