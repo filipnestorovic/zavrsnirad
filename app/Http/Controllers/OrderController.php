@@ -362,6 +362,8 @@ class OrderController extends Controller
 //            Log::critical("Error: Webhook accepting BACKUP route error \nServer message: " . $exception->getMessage() . "\nJSON: " . json_encode($jsonArray, JSON_PRETTY_PRINT));
 //        }
 
+        Log::debug("WooOrder: ".json_encode($jsonArray));
+
         try {
             $response = $client->post($webhookUrl, ['body' => json_encode($jsonArray)]);
             return $response;
