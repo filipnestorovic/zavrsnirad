@@ -471,7 +471,7 @@ class OrderController extends Controller
             "currency" => $orderDetails->currency_code,
         ];
 
-        Log::debug("WooOrder: ".json_encode($data));
+//        Log::debug("WooOrder: ".json_encode($data));
 
 //        dd($result = $woocommerce->get('orders/6639'));
 
