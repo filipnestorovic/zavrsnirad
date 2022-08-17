@@ -138,6 +138,7 @@
                             <input class="only_number" name="phone" placeholder="Telefon" type="text" required/>
                             <input name="shipping_address" placeholder="Adresa" type="text" required/>
                             <input name="shipping_city" placeholder="Město" type="text" required/>
+                            <input name="shipping_zip" placeholder="PSČ" type="text" required/>
                             <div>
                                 @foreach($prices as $singlePrice)
                                     <input type="hidden" id="product{{ $singlePrice['quantity'] }}"
@@ -429,6 +430,7 @@
                             <input class="only_number" name="phone" placeholder="Telefon" type="text" required/>
                             <input name="shipping_address" placeholder="Adresa" type="text" required/>
                             <input name="shipping_city" placeholder="Město" type="text" required/>
+                            <input name="shipping_zip" placeholder="PSČ" type="text" required/>
                             <div>
                                 @foreach($prices as $singlePrice)
                                     <input type="radio" name="quantity" value="{{$singlePrice['quantity']}}"
@@ -635,6 +637,7 @@
                             <input class="only_number" name="phone" placeholder="Telefon" type="text" required/>
                             <input name="shipping_address" placeholder="Adresa" type="text" required/>
                             <input name="shipping_city" placeholder="Město" type="text" required/>
+                            <input name="shipping_zip" placeholder="PSČ" type="text" required/>
                             <div>
                                 @foreach($prices as $singlePrice)
                                     <input type="radio" name="quantity" value="{{$singlePrice['quantity']}}"
