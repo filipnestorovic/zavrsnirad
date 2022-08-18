@@ -837,8 +837,8 @@ class HomeController extends Controller
                 Log::warning("Validation - Phone is null - Request: ".$request);
             }
         } catch (\Exception $exception){
-            $customer_data = "Name: ".$name."\nEmail: ".$email."\nAddress: ".$address."\nCity: ".$city."\nZip: ".$zip."\nQuantity: ".$quantity."\nVariation: ".$variation_id;
-            Log::warning("Validation - Phone: ".$number." Country: ".$countryCode."\nError: ".$exception->getMessage()."\n".$customer_data);
+            $customer_data = "Phone: ".$number."\nName: ".$name."\nEmail: ".$email."\nAddress: ".$address."\nCity: ".$city."\nZip: ".$zip."\nQuantity: ".$quantity."\nVariation: ".$variation_id;
+            Log::warning("Validation - Country: ".$countryCode."\nError: ".$exception->getMessage()."\n".$customer_data);
             return 0;
         }
     }

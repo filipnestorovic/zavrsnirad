@@ -75,7 +75,7 @@ class OrderController extends Controller
             $this->customerErrorMessage = "Pri pokladni sa vyskytla chyba, kontaktujte nás na info@wombatshop.eu!";
         } else if($request->get('countryShortcode') == "cz") {
             $this->customerErrorMessage = "Při placení došlo k chybě, kontaktujte nás prosím na info@wombatshop.eu!";
-        } else if($request->get('countryShortcode') == "sl") {
+        } else if($request->get('countryShortcode') == "si") {
             $this->customerErrorMessage = "Napaka pri naročilu, prosimo stopite v stik znami na info@wombatshop.eu!";
         } else if($request->get('countryShortcode') == "rs" || $request->get('countryShortcode') == "ba") {
             $this->customerErrorMessage = "Greška prilikom porudžbine, molimo da nas kontaktirate putem emaila info@wombatsbrand.com!";
@@ -395,7 +395,7 @@ class OrderController extends Controller
             case "cz":
                 $language = "cs_CZ";
                 break;
-            case "sl":
+            case "si":
                 $language = "sl_SI";
                 break;
         }
