@@ -83,6 +83,9 @@
                     case 'CZ':
                         errorText = 'Špatný formát telefonu';
                         break;
+                    case 'SL':
+                        errorText = 'Napačen format telefonske številke';
+                        break;
                     default:
                         errorText = "Wrong phone number format";
                 }
