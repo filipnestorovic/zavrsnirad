@@ -18,19 +18,19 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 text-right header__title">
-                <h1>Ziołowe plastry detoksykacyjne</h1>
-                <h2>DETOX</h2>
-                <span>„Chińska mądrość, nowoczesna technologia”</span>
+                <h1>Билкови детоксикиращи пластири</h1>
+                <h2>ДЕТОКС</h2>
+                <span>„Китайска мъдрост, модерна технология“</span>
             </div>
         </div>
         <div class="row">
             <div class="labelmain firstCircle">
                 <div condensed="" roboto="" style="margin-top: 40px;font-size: 33px;padding-left: 10px;padding-right: 10px;font-size:2em;color: #029648;font-weight:bold;">
-                    <div style="color:red">AKCJA!</div>
-                    <div style="color: black;margin-top: 5px;font-size: 24px;">nowa cena</div>
+                    <div style="color:red">АКЦИЯ!</div>
+                    <div style="color: black;margin-top: 5px;font-size: 24px;">нова цена</div>
                 </div>
                 <div class="line4 price_land_s1" style="margin-top:0px;">{{ $prices[1]['amount'] }}</div>
-                <div class="line5 price_land_curr">{{ $prices[1]['currency'] }}</div>
+                <div class="line5 price_land_curr"> лв.</div>
             </div>
             <div class="col-xs-12 col-md-3 hidden-xs hidden-sm">
                 <div class="monk"><img alt="" src="{{ asset('/') }}naturapharmFiles/kneepatch/monk.png"/></div>
@@ -44,41 +44,39 @@
             <div class="col-xs-12 col-md-4">
                 <div class="form">
                     <div class="form__title">
-                        <h3>UWAGA, AKCJA!</h3>
-                        <span>ZNIŻKI 40%</span>
+                        <h3>ВНИМАНИЕ, АКЦИЯ!</h3>
+                        <span>40% НАМАЛЕНИЕ</span>
                     </div>
                     <div class="form__content">
                         <p></p>
                         <span class="form__product-name">{{ $product->product_name }}</span>
                         <div class="price">
                             <div class="old_price"></div>
-                            <span>Cena</span>
+                            <span>Цена</span>
                             <span class="displayCurrentPriceNoCyr price_land_s1 new_price"></span>
-                            <span class="displayCurrentCurrency price_land_curr">{{ $prices[1]['currency'] }}</span>
+                            <span class="displayCurrentCurrency price_land_curr"> лв.</span>
                         </div>
                         <form action="{{$orderRoute}}" class="orderFormWrapper orderformcdn" method="post">
                             {{csrf_field()}}
                             @include('lander.naturapharm.components.form_hidden_fields')
-                            <input name="name" placeholder="Imię i nazwisko" type="text" required/>
-                            <input class="only_number" name="phone" placeholder="Telefon" type="text" required/>
-                            <input name="shipping_address" placeholder="Adres zamieszkania" type="text" required/>
-                            <input name="shipping_city" placeholder="Miasto" type="text" required/>
-                            <input name="shipping_zip" placeholder="Kod pocztowy" type="text" required/>
+                            <input name="name" placeholder="Име и фамилия" type="text" required/>
+                            <input class="only_number" name="phone" placeholder="Телефон" type="text" required/>
+                            <input name="shipping_address" placeholder="Адрес" type="text" required/>
+                            <input name="shipping_city" placeholder="Град" type="text" required/>
+                            <input name="shipping_zip" placeholder="Пощенски код" type="text" required/>
                             <div>
                                 @foreach($prices as $singlePrice)
                                     <input type="hidden" id="product{{ $singlePrice['quantity'] }}" value="{{ $singlePrice['originalPrice'] }}" placeholder="{{ $singlePrice['amount'] }}"/>
-                                    <input type="radio" name="quantity" value="{{$singlePrice['quantity']}}" class="productQuantity{{$singlePrice['quantity']}} quantity" id="productLabel{{$singlePrice['quantity']}}" placeholder="{{ $singlePrice['is_free_shipping'] }}"
+                                    <input type="radio" name="quantity" value="{{$singlePrice['quantity']}}" class="productQuantity{{$singlePrice['quantity']}}" id="productLabel{{$singlePrice['quantity']}}"
                                            @if($singlePrice['is_default']) checked @endif
                                            @if(old('quantity') == $singlePrice['quantity']) checked @endif >
                                     <label for="productLabel{{$singlePrice['quantity']}}">
-                                        {{$singlePrice['quantity']}} x {{$product->product_name}} ({{$singlePrice['amount']}} {{ $prices[1]['currency'] }})
-                                        @if($singlePrice['is_free_shipping']) * @endif
+                                        {{$singlePrice['quantity']}} x {{$product->product_name}} ({{$singlePrice['amount']}}  лв.)
                                     </label>
                                     <br>
                                 @endforeach
                             </div>
-                            <div class="freeShippingDiv">* DARMOWA DOSTAWA</div>
-                            <input class="form__submit js_submit button__text" type="submit" value="ZAMÓW TERAZ"/>
+                            <input class="form__submit js_submit button__text" type="submit" value="Поръчай сега"/>
                         </form>
                     </div>
                 </div>
@@ -90,22 +88,22 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-2 triggers__item triggers__icon--bowl">
-                <div class="triggers__desc">Stuletni przepis</div>
+                <div class="triggers__desc">Столетна рецепта</div>
             </div>
             <div class="col-xs-2 triggers__item triggers__icon--gate">
-                <div class="triggers__desc">Aktywacja mikrokrążenia w skórze</div>
+                <div class="triggers__desc">Активиране на микроциркулацията в кожата</div>
             </div>
             <div class="col-xs-2 triggers__item triggers__icon--medallion">
-                <div class="triggers__desc">Wydalanie nadmiaru wody z organizmu</div>
+                <div class="triggers__desc">Изхвърляне на излишната вода от тялото</div>
             </div>
             <div class="col-xs-2 triggers__item triggers__icon--beep2">
-                <div class="triggers__desc">Szeroka gama efektów</div>
+                <div class="triggers__desc">Широк набор от ефекти</div>
             </div>
             <div class="col-xs-2 triggers__item triggers__icon--flower">
-                <div class="triggers__desc">Całkowita detoksykacja organizmu</div>
+                <div class="triggers__desc">Цялостна детоксикация на организма</div>
             </div>
             <div class="col-xs-2 triggers__item triggers__icon--ying-yang">
-                <div class="triggers__desc">100% skuteczny i bezpieczny</div>
+                <div class="triggers__desc">100% ефективни и безопасни</div>
             </div>
         </div>
     </div>
@@ -114,7 +112,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h2 class="section__title">W DZISIEJSZYCH CZASACH DETOKSYKACJA I REGENERACJA ORGANIZMU POŻĄDANE JEST CO NAJMNIEJ RAZ W MIESIĄCU</h2>
+                <h2 class="section__title">В ДНЕШНО ВРЕМЕ Е ЖЕЛАТЕЛНО ДА ДЕТОКСИКИРАШ ОРГАНИЗМА СИ ПОНЕ ВЕДНЪЖ В МЕСЕЦА И ДА РЕГЕНЕРИРАШ СВОЕТО ТЯЛО</h2>
             </div>
         </div>
         <div class="row pair">
@@ -122,13 +120,15 @@
                 <img alt="" src="{{ asset('/') }}naturapharmFiles/kneepatch/kinoki2.png"/>
             </div>
             <div class="col-md-12 col-lg-5 section__content section__content--pair">
-                <p>Obecnie wszyscy prowadzimy częściowo niezdrowy tryb życia i bardzo ważne jest <span>regularne odtruwanie organizmu.</span> Plastry detoksujące wykonane są z ekstraktów roślinnych według tradycyjnej chińskiej receptury i mają na celu wydalenie nadmiaru płynów i toksyn z organizmu poprzez <span>punkty akupunkturowe.</span></p>
-                <p>Plastry Kinoki łagodzą napięcie i zmęczenie, poprawiają sen, oczyszczają skórę i poprawiają ogólny stan zdrowia. Za pomocą tych plastrów toksyny gromadzące się w organizmie i <span>krwiobiegu są szybko usuwane z organizmu.</span></p>
+                <p>В днешно време всички ние частично водим нездравословен начин на живот и е много важно да детоксикираме тялото си редовно. Детоксикиращите пластири „Kinoki“ са направени от растителни екстракти съгласно традиционна китайска рецепта и са предназначени за изхвърляне на излишните течности и токсини от тялото през акупунктурните точки.</p>
+                <p>Пластири Kinoki облекчават напрежението и умората, подобряват съня, пречистват кожата и подобряват общото здравословно състояние. При използването на тези пластири натрупаните в тялото и потока на кръвта токсини биват бързо премахнати от тялото.</p>
+                <p></p>
+                <p></p>
             </div>
         </div>
         <div class="row scope">
             <div class="col-xs-12">
-                <h2 class="section__title scope__title">OBSZARY ZASTOSOWANIA PLASTRÓW „KINOKI”</h2>
+                <h2 class="section__title scope__title">ОБЛАСТИ НА ПРИЛОЖЕНИЕ НА ПЛАСТИРИ „KINOKI“</h2>
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-4 text-center scope__item">
                 <div class="scope__icon-wrapp">
@@ -136,7 +136,7 @@
                         <div class="scope__icon"></div>
                     </div>
                 </div>
-                <div class="scope__desc">Reumatologia</div>
+                <div class="scope__desc">Ревматология</div>
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-4 text-center scope__item">
                 <div class="scope__icon-wrapp scope__icon-wrapp--rotate-90">
@@ -144,7 +144,7 @@
                         <div class="scope__icon"></div>
                     </div>
                 </div>
-                <div class="scope__desc">Limfologia</div>
+                <div class="scope__desc">Лимфология</div>
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-4 text-center scope__item">
                 <div class="scope__icon-wrapp scope__icon-wrapp--rotate-180">
@@ -152,7 +152,7 @@
                         <div class="scope__icon"></div>
                     </div>
                 </div>
-                <div class="scope__desc">Neurologia</div>
+                <div class="scope__desc">Неврология</div>
             </div>
         </div>
     </div>
@@ -161,15 +161,15 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h2 class="section__title">OCZYSZCZA TWÓJ ORGANIZM Z TOKSYN W ZALEDWIE 5 DNI Z POMOCĄ PLASTRÓW „KINOKI”</h2>
+                <h2 class="section__title">ПРЕЧИСТИ ТЯЛОТО СИ ОТ ТОКСИНИ САМО ЗА 5 ДНИ С ПОМОЩТА НА ПЛАСТИРИ „KINOKI“</h2>
             </div>
             <div class="col-xs-12 section__content">
-                <p>Już pierwsi taoiści mówili, że <span>toksyny</span> są główną przyczyną spadku energii w organizmie.</p>
-                <p>Nadmierne ilości toksyn nieuchronnie zostawiają ślad na zdrowiu lub organach i powodują choroby takie jak <span>impotencja, mastopatia, nadciśnienie, bóle głowy, chroniczne zmęczenie</span> i wiele innych.</p>
-                <p>Zgodnie z ideami mnichów taoistycznych i tradycyjnej medycyny chińskiej, negatywna energia, która rozprzestrzenia się po całym ciele, <span>może zostać zatrzymana przez detoksykację</span>, dzięki czemu przerwiemy jej ruch w całym ciele.</p>
+                <p>Дори първите таоисти казват, че токсините са били основната причина за понижаване на енергията в тялото. </p>
+                <p>Извънмерните количества токсини неминуемо въздействат върху здравето или някой орган и причиняват заболявания като импотентност, мастопатия, хипертензия, главоболие, хронична умора и много други. </p>
+                <p>Според идеите на монасите таоисти и традиционната китайска медицина негативната енергия, която се разпространява из цялото тяло, може да бъде премахната чрез детоксикация и нейното действие из тялото да бъде прекъснато.</p>
             </div>
             <div class="col-xs-12 text-right quote">
-                <div class="quote__text">„Zdrowe ciało – zdrowy duch”</div>
+                <div class="quote__text">„Здраво тяло – здрав дух“</div>
                 <div class="quote__author">Sun Shu-Min</div>
             </div>
         </div>
@@ -182,14 +182,14 @@
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-6">
-                    <p class="scroll__text">Lecznicze działanie plastra opiera się na następujących efektach:</p>
+                    <p class="scroll__text">Лечебното действие на пластира се основава на следните ефекти:</p>
                     <ul class="scroll__list">
-                        <li class="scroll__list-item">Detoksykacja organizmu</li>
-                        <li class="scroll__list-item">Łagodzenie bólów głowy i stresu</li>
-                        <li class="scroll__list-item">Odmładzanie ciała</li>
-                        <li class="scroll__list-item">Poprawa jakości snu</li>
-                        <li class="scroll__list-item">Pozytywny wpływ na narządy wewnętrzne</li>
-                        <li class="scroll__list-item">Zapobieganie nieprzyjemnym zapachom</li>
+                        <li class="scroll__list-item">Детоксикация на организма</li>
+                        <li class="scroll__list-item">Облекчаване на главоболието и стреса</li>
+                        <li class="scroll__list-item">Подмладяване на тялото</li>
+                        <li class="scroll__list-item">Подобряване качеството на съня</li>
+                        <li class="scroll__list-item">Положително влияние върху вътрешните органи</li>
+                        <li class="scroll__list-item">Предпазване от неприятни миризми</li>
                     </ul>
                 </div>
             </div>
@@ -198,9 +198,9 @@
     <div class="container">
         <div class="row composition">
             <div class="col-xs-12 composition__caption">
-                <h2 class="section__title">SKŁAD PLASTRÓW DETOKSUJĄCYCH „KINOKI”:</h2>
-                <p>Receptura na plastry zawiera ponad 9 ziół leczniczych i została uzyskana w wyniku wielowiekowych badań ludowych uzdrowicieli.</p>
-                <p>Plastry detoksujące produkowane są zgodnie z nowoczesną technologią i najwyższymi międzynarodowymi standardami jakości. Plastry Kinoki nie zawierają dodatków chemicznych, są nieszkodliwe dla organizmu.</p>
+                <h2 class="section__title">СЪСТАВ НА ДЕТОКСИКИРАЩИ ПЛАСТИРИ „KINOKI“: </h2>
+                <p>Рецептата за пластирите включва над 9 лечебни билки и е постигната като резултат от вековни проучвания на народни лечители.</p>
+                <p>Детоксикиращите пластири са произведени според модерна технология и най-високите международни стандарти за качество. Пластири Kinoki не съдържат химически добавки, те са безвредни за тялото.</p>
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-4 text-center composition__item">
                 <div class="composition__icon-wrapp composition__icon-wrapp--rotate-180">
@@ -232,7 +232,7 @@
                         <div class="composition__icon"></div>
                     </div>
                 </div>
-                <div class="composition__desc">Szafran</div>
+                <div class="composition__desc">Шафран</div>
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-4 text-center composition__item">
                 <div class="composition__icon-wrapp">
@@ -248,7 +248,7 @@
                         <div class="composition__icon"></div>
                     </div>
                 </div>
-                <div class="composition__desc">dziki imbir</div>
+                <div class="composition__desc">див джинджифил</div>
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-4 text-center composition__item">
                 <div class="composition__icon-wrapp composition__icon-wrapp--rotate-270">
@@ -264,7 +264,7 @@
                         <div class="composition__icon"></div>
                     </div>
                 </div>
-                <div class="composition__desc">salsa cistanche</div>
+                <div class="composition__desc">cistanche salsa</div>
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-4 text-center composition__item">
                 <div class="composition__icon-wrapp">
@@ -272,7 +272,7 @@
                         <div class="composition__icon"></div>
                     </div>
                 </div>
-                <div class="composition__desc">korzeń jarmułki</div>
+                <div class="composition__desc">корен от скутелария</div>
             </div>
         </div>
     </div>
@@ -281,17 +281,17 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 section__caption">
-                <h2 class="section__title">„KINOKI” OCZYSZCZĄ TWÓJ ORGANIZM Z TOKSYN <br> W NAJKRÓTSZYM MOŻLIWYM CZASIE!</h2>
+                <h2 class="section__title">„KINOKI“ ЩЕ ПРЕЧИСТЯТ ТВОЕТО ТЯЛО ОТ ТОКСИНИТЕ <br> ВЪВ ВЪЗМОЖНО НАЙ-КРАТЪК СРОК!</h2>
             </div>
         </div>
         <div class="row">
             <div class="labelmain2">
                 <div condensed="" roboto="" style="margin-top: 40px;font-size: 33px;padding-left: 10px;padding-right: 10px;font-size:2em;color: #029648;font-weight:bold;">
-                    <div style="color:red"> AKCJA!</div>
-                    <div style="color: black;margin-top: 5px;font-size: 24px;"> nowa cena</div>
+                    <div style="color:red"> АКЦИЯ!</div>
+                    <div style="color: black;margin-top: 5px;font-size: 24px;"> нова цена</div>
                 </div>
                 <div class="line4 price_land_s1" style="margin-top:0px;">{{ $prices[1]['amount'] }}</div>
-                <div class="line5 price_land_curr">{{ $prices[1]['currency'] }}</div>
+                <div class="line5 price_land_curr"> лв.</div>
             </div>
             <div class="col-xs-12 col-md-8 productSection">
                 <div class="product">
@@ -302,54 +302,52 @@
                         </div>
                     </div>
                     <div class="product__desc product__desc--bold">
-                        <div>Leczniczy, naturalny i silny środek detoksykujący.</div>
-                        <div>Pomaga łagodzić bóle głowy, stres, uwalnia organizm od płynów, poprawia jakość snu i przywraca energię.</div>
+                        <div>Лечебно, натурално и силно пречистващо средство.</div>
+                        <div>Помага за облекчаване на главоболието, стреса, освобождава тялото от секреции, подобрява качеството на съня и възвръща енергията.</div>
                     </div>
                     <ul class="product__list list-checked">
-                        <li class="list-checked__item">Specjalna kombinacja leczniczych ziół chińskich</li>
-                        <li class="list-checked__item">Wielowiekowe przepisy medycyny chińskiej</li>
-                        <li class="list-checked__item">Nowoczesna technologia produkcji</li>
-                        <li class="list-checked__item">Zbierze wszystkie toksyny z organizmu w jednym miejscu</li>
+                        <li class="list-checked__item">Специална комбинация от лечебни китайски билки</li>
+                        <li class="list-checked__item">Вековни рецепти от китайската медицина</li>
+                        <li class="list-checked__item">Модерна технология на произвеждане</li>
+                        <li class="list-checked__item">Ще извлече всички токсини от тялото на едно място</li>
                     </ul>
                 </div>
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form">
                     <div class="form__title">
-                        <h3>UWAGA, AKCJA!</h3>
-                        <span>ZNIŻKI 40%</span>
+                        <h3>ВНИМАНИЕ, АКЦИЯ!</h3>
+                        <span>40% НАМАЛЕНИЕ</span>
                     </div>
                     <div class="form__content">
                         <p></p>
                         <span class="form__product-name">{{ $product->product_name }}</span>
                         <div class="price">
                             <div class="old_price"></div>
-                            <span>Cena</span>
+                            <span>Цена</span>
                             <span class="displayCurrentPriceNoCyr price_land_s1 new_price"></span>
-                            <span class="displayCurrentCurrency price_land_curr">{{ $prices[1]['currency'] }}</span>
+                            <span class="displayCurrentCurrency price_land_curr"> лв.</span>
                         </div>
                         <form action="{{$orderRoute}}" class="orderFormWrapper orderformcdn" method="post">
                             {{csrf_field()}}
                             @include('lander.naturapharm.components.form_hidden_fields')
-                            <input name="name" placeholder="Imię i nazwisko" type="text" required/>
-                            <input class="only_number" name="phone" placeholder="Telefon" type="text" required/>
-                            <input name="shipping_address" placeholder="Adres zamieszkania" type="text" required/>
-                            <input name="shipping_city" placeholder="Miasto" type="text" required/>
-                            <input name="shipping_zip" placeholder="Kod pocztowy" type="text" required/>
+                            <input name="name" placeholder="Име и фамилия" type="text" required/>
+                            <input class="only_number" name="phone" placeholder="Телефон" type="text" required/>
+                            <input name="shipping_address" placeholder="Адрес" type="text" required/>
+                            <input name="shipping_city" placeholder="Град" type="text" required/>
+                            <input name="shipping_zip" placeholder="Пощенски код" type="text" required/>
                             <div>
                                 @foreach($prices as $singlePrice)
-                                    <input type="radio" name="quantity" value="{{$singlePrice['quantity']}}" class="productQuantity{{$singlePrice['quantity']}} quantity" id="SecondProductLabel{{$singlePrice['quantity']}}" placeholder="{{ $singlePrice['is_free_shipping'] }}"
+                                    <input type="radio" name="quantity" value="{{$singlePrice['quantity']}}" class="productQuantity{{$singlePrice['quantity']}}" id="SecondProductLabel{{$singlePrice['quantity']}}"
                                            @if($singlePrice['is_default']) checked @endif
                                            @if(old('quantity') == $singlePrice['quantity']) checked @endif >
                                     <label for="SecondProductLabel{{$singlePrice['quantity']}}">
-                                        {{$singlePrice['quantity']}} x {{$product->product_name}} ({{$singlePrice['amount']}} {{ $prices[1]['currency'] }})
-                                        @if($singlePrice['is_free_shipping']) * @endif
+                                        {{$singlePrice['quantity']}} x {{$product->product_name}} ({{$singlePrice['amount']}}  лв.)
                                     </label>
                                     <br>
                                 @endforeach
                             </div>
-                            <div class="freeShippingDiv">* DARMOWA DOSTAWA</div>
-                            <input class="form__submit js_submit button__text" type="submit" value="ZAMÓW TERAZ"/>
+                            <input class="form__submit js_submit button__text" type="submit" value="Поръчай сега"/>
                         </form>
                     </div>
                 </div>
@@ -361,7 +359,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 section__caption">
-                <h2 class="section__title">CO MÓWIĄ LEKARZE O ZIOŁOWYCH PLASTRACH „KINOKI” DO DETOKSYKACJI</h2>
+                <h2 class="section__title">КАКВО КАЗВАТ ЛЕКАРИТЕ ЗА БИЛКОВИ ПЛАСТИРИ ЗА ДЕТОКСИКАЦИЯ „KINOKI“</h2>
             </div>
         </div>
         <div class="row comment doctorSection">
@@ -370,12 +368,12 @@
             </div>
             <div class="col-xs-12 col-lg-4">
                 <div class="comment__text">
-                    <p>Najważniejszą rzeczą w procesie leczenia każdej choroby jest oczyszczenie organizmu z toksyn, które organizm gromadzi w wyniku prowadzenia niezdrowego stylu życia. Wcześniej jedynym rozwiązaniem było przepisywanie produktów detoksykacji, które negatywnie wpływają na wątrobę i przewód pokarmowy.</p>
-                    <p>Miałem pacjentów, którzy skarżyli się na bóle głowy, chroniczne zmęczenie, bóle kręgosłupa szyjnego, a wszystko to w wyniku nagromadzenia toksyn w organizmie, które zaburzały normalne funkcje organizmu.</p>
-                    <p>Kiedy zacząłem polecać KINOKI swoim pacjentom, po pewnym czasie spora część z nich miała znacznie mniej problemów, a u większości z nich problemy całkowicie zniknęły. Plastry KINOKI świetnie sprawdzają się w naturalnej eliminacji toksyn z organizmu i każdemu polecam detoksykację przynajmniej raz w miesiącu.</p>
+                    <p>Най-важното нещо в процеса на лечение на каквото и да е заболяване е тялото да се пречисти от токсините, които събира заради нездравословния начин на живот. Някога единственото решение е било предписването на продукти за детоксикация, които оказват негативно влияние върху черния дроб и храносмилателния тракт.</p>
+                    <p>Имах пациенти, които се оплакваха от главоболие, хронична умора, болка в шийния гръбнак, всичко това в резултат на натрупването на токсини в тялото, които разрушават нормалните телесни функции.</p>
+                    <p>Известно време, след като започнах да препоръчвам KINOKI на моите пациенти, голяма част от тях имаха значително по-малко проблеми и повечето от проблемите изчезнаха напълно. Пластири KINOKI са чудесни за естественото премахване на токсините от тялото и аз препоръчвам на всеки детоксикация поне веднъж месечно.</p>
                 </div>
                 <div class="comment__author"></div>
-                <div class="comment__job"> Reumatolog</div>
+                <div class="comment__job"> Ревматолог</div>
             </div>
         </div>
     </div>
@@ -384,26 +382,26 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 section__caption">
-                <h2 class="section__title">OPINIE NASZYCH KLIENTÓW</h2>
+                <h2 class="section__title">ОТЗИВИ НА НАШИТЕ КЛИЕНТИ</h2>
             </div>
         </div>
         <div class="row comments">
             <div class="col-xs-12 col-md-4 comments__item">
-                <div class="comments__title">Blanka, 21 lat</div>
+                <div class="comments__title">Деница, 21 години</div>
                 <div class="comments__text">
-                    <p>Cześć. Dużo pracuję w biurze i miałam problem z bólami mięśni, nogi były ciężkie, brakowało mi energii i byłam bardzo zrzędliwy. Znalazłam w internecie plastry KINOKI i próbowałam odtruć swój organizm. Po dwóch pudełkach niepokojące mnie objawy całkowicie ustąpiły i od 3 miesięcy czuję się świetnie. Teraz zapobiegawczo kupuję jedno pudełko co miesiąc, ponieważ nie chcę, aby ten trudny okres się powtórzył.</p>
+                    <p>Здравейте. Работя много в офиса и имам проблем с болката в мускулите, усещах краката си уморени и натежали, нямах достатъчно енергия и бях много раздразнителна. Открих пластири KINOKI в интернет и опитах да детоксикирам тялото си. След 2 кутии симптомите, които ме безпокояха, изчезнаха изцяло и от 3 месеца се чувствам чудесно. В настоящия момент употребявам превантивно 1 кутия всеки месец, защото не искам този труден период да се случи отново.</p>
                 </div>
             </div>
             <div class="col-xs-12 col-md-4 comments__item">
-                <div class="comments__title">Bronisława, 65 lat</div>
+                <div class="comments__title">Людмила, 65 години</div>
                 <div class="comments__text">
-                    <p>Od lat miałam problem z nadmiarem płynów w organizmie i obrzękiem nóg. Próbowałem wszystkiego, ale lekarstwa często powodowały inne problemy. Moja córka kupiła mi Kinoki i to jedyny produkt, który mi pomógł. Mam go w apteczce w większych zapasach. Dziękuję bardzo!</p>
+                    <p>Години наред имах проблем с излишни секреции в тялото и отекли крака. Пробвах всичко, но често лекарствата пораждаха други проблеми. Моята дъщеря ми купи Kinoki и това е единственият продукт, който ми помогна. Имам го в моята аптечка в големи количества. Благодаря Ви!</p>
                 </div>
             </div>
             <div class="col-xs-12 col-md-4 comments__item">
-                <div class="comments__title">Albin, 32 lata</div>
+                <div class="comments__title">Драгомир, 32 години</div>
                 <div class="comments__text">
-                    <p>Często jem fast foody i słodycze, piję dużo soków smakowych i jestem palaczem. Z biegiem czasu zacząłem odczuwać trudności, takie jak zmęczenie i bóle głowy. Moja mama używała kinoki i mi też je poleciła. Początkowo nie wierzyłem, że to pomoże, ale mama upierała się, żebym się nie poddawał i już w drugim tygodniu stosowania poczułem się znacznie lepiej. Obudziłem się bardziej wypoczęty, miałem więcej energii i ból głowy zniknął. Mogę śmiało powiedzieć, że wszystkim polecam ten produkt, bo jest naprawdę dobry!</p>
+                    <p>Често ям полуфабрикати и сладко, пия много газирани напитки и съм пушач. Започнах да изпитвам трудности като преумора и главоболие. Майка ми е използвала kinoki и ми ги препоръча. Първоначално не вярвах, че биха помогнали, но поради настоятелността на моята майка не се отказах и вече ги ползвам втора седмица, чувствах се много по-добре. Събуждах се по-отпочинал, имах повече енергия и нямах главоболие. Определено мога да кажа, че препоръчвам този продукт на всеки, защото наистина е добър!</p>
                 </div>
             </div>
         </div>
@@ -413,7 +411,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 section__caption">
-                <h2 class="section__title">JAK POPRAWNIE UŻYWAĆ NASZYWKI „KINOKI”?</h2>
+                <h2 class="section__title">КАК ДА ИЗПОЛЗВАШ ПЛАСТИР „KINOKI“ ПРАВИЛНО</h2>
             </div>
         </div>
         <div class="row manual">
@@ -424,8 +422,9 @@
                     </div>
                 </div>
                 <div class="manual__number">1</div>
-                <div class="manual__title">OTWÓRZ OPAKOWANIE I <br> WYJMIJ PLASTER</div>
-                <div class="manual__desc">Umyj stopy wodą i osusz</div>
+                <div class="manual__title"> ОТВОРИ ОПАКОВКАТА И
+                    <br/> ОТСТРАНИ ПЛАСТИРА</div>
+                <div class="manual__desc">Измий ходилата си с вода и ги подсуши</div>
             </div>
             <div class="col-xs-12 col-md-4 manual__item">
                 <div class="manual__icon-wrapp">
@@ -434,8 +433,9 @@
                     </div>
                 </div>
                 <div class="manual__number">2</div>
-                <div class="manual__title">PRZYKLEJ PLASTER <br> NA STOPĘ</div>
-                <div class="manual__desc">Zostaw na noc.</div>
+                <div class="manual__title"> ЗАЛЕПИ ПЛАСТИРА НА
+                    <br/> ХОДИЛОТО СИ</div>
+                <div class="manual__desc">Остави го през цялата нощ</div>
             </div>
             <div class="col-xs-12 col-md-4 manual__item">
                 <div class="manual__icon-wrapp manual__icon-wrapp--rotate-270">
@@ -444,16 +444,16 @@
                     </div>
                 </div>
                 <div class="manual__number">3</div>
-                <div class="manual__title">ZDEJMIJ PLASTER <br> RANO</div>
-                <div class="manual__desc">Umyj stopy wodą!</div>
+                <div class="manual__title"> НА СУТРИНТА <br/> МАХНИ ПЛАСТИРИТЕ</div>
+                <div class="manual__desc">Измий ходилата си с вода!</div>
             </div>
         </div>
-        <div class="col-xs-12 manual__notice">* Trzymaj jedną łatkę na obu stopach przez całą noc</div>
+        <div class="col-xs-12 manual__notice"> * Остави по един пластир и на двете ходила през цялата нощ</div>
         <center>
             <br/><br/>
-            <h3><strong>Wyniki widoczne po 1 pudełku</strong></h3></center>
+            <h3><strong>Видими резултати след 1 кутия</strong></h3></center>
         <center>
-            <div class="col-xs-12 manual__notice">Aby uzyskać najlepsze wyniki, zaleca się stosowanie 2-3 pudełek bez przerwy</div>
+            <div class="col-xs-12 manual__notice">За най-добри резултати се препоръчва да се използват 2-3 кутии без прекъсване</div>
         </center>
     </div>
 </section>
@@ -461,17 +461,17 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 section__caption">
-                <h2 class="section__title">„PLASTRY DETOKSUJĄCE” NIE SĄ TYMCZASOWYM, ALE TRWAŁYM UWOLNIENIEM OD SZKODLIWYCH TOKSYN W ORGANIZMIE!</h2>
+                <h2 class="section__title">„ДЕТОКСИКИРАЩ ПЛАСТИР“ НЕ Е ПРЕХОДНО, А ДЪЛГОВРЕМЕННО ИЗБАВЛЕНИЕ ОТ ВРЕДНИТЕ ТОКСИНИ В ТЯЛОТО!</h2>
             </div>
         </div>
         <div class="row">
             <div class="labelmain2 ThirdCircle">
                 <div condensed="" roboto="" style="margin-top: 40px;font-size: 33px;padding-left: 10px;padding-right: 10px;font-size:2em;color: #029648;font-weight:bold;">
-                    <div style="color:red"> AKCJA!</div>
-                    <div style="color: black;margin-top: 5px;font-size: 24px;"> nowa cena</div>
+                    <div style="color:red"> АКЦИЯ!</div>
+                    <div style="color: black;margin-top: 5px;font-size: 24px;"> нова цена</div>
                 </div>
                 <div class="line4 price_land_s1" style="margin-top:0px;">{{ $prices[1]['amount'] }}</div>
-                <div class="line5 price_land_curr">{{ $prices[1]['currency'] }}</div>
+                <div class="line5 price_land_curr"> лв.</div>
             </div>
             <div class="col-xs-12 col-md-8 productSection">
                 <div class="product">
@@ -482,54 +482,52 @@
                         </div>
                     </div>
                     <div class="product__desc product__desc--bold">
-                        <div>Leczniczy, naturalny i silny środek detoksykujący.</div>
-                        <div>Pomaga łagodzić bóle głowy, stres, uwalnia organizm od płynów, poprawia jakość snu i przywraca energię.</div>
+                        <div>Лечебно, натурално и силно пречистващо средство.</div>
+                        <div>Помага за облекчаване на главоболието, стреса, освобождава тялото от секреции, подобрява качеството на съня и възвръща енергията.</div>
                     </div>
                     <ul class="product__list list-checked">
-                        <li class="list-checked__item">Specjalna kombinacja leczniczych ziół chińskich</li>
-                        <li class="list-checked__item">Wielowiekowe przepisy medycyny chińskiej</li>
-                        <li class="list-checked__item">Nowoczesna technologia produkcji</li>
-                        <li class="list-checked__item">Zbierze wszystkie toksyny z organizmu w jednym miejscu</li>
+                        <li class="list-checked__item">Специална комбинация от лечебни китайски билки</li>
+                        <li class="list-checked__item">Вековни рецепти от китайската медицина</li>
+                        <li class="list-checked__item">Модерна технология на произвеждане</li>
+                        <li class="list-checked__item">Ще извлече всички токсини от тялото на едно място</li>
                     </ul>
                 </div>
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form">
                     <div class="form__title">
-                        <h3>UWAGA, AKCJA!</h3>
-                        <span>ZNIŻKI 40%</span>
+                        <h3>ВНИМАНИЕ, АКЦИЯ!</h3>
+                        <span>40% НАМАЛЕНИЕ</span>
                     </div>
                     <div class="form__content">
                         <p></p>
                         <span class="form__product-name">{{ $product->product_name }}</span>
                         <div class="price">
                             <div class="old_price"></div>
-                            <span>Cena</span>
+                            <span>Цена</span>
                             <span class="displayCurrentPriceNoCyr price_land_s1 new_price"></span>
-                            <span class="displayCurrentCurrency price_land_curr">{{ $prices[1]['currency'] }}</span>
+                            <span class="displayCurrentCurrency price_land_curr"> лв.</span>
                         </div>
                         <form action="{{$orderRoute}}" class="orderFormWrapper orderformcdn" method="post">
                             {{csrf_field()}}
                             @include('lander.naturapharm.components.form_hidden_fields')
-                            <input name="name" placeholder="Imię i nazwisko" type="text" required/>
-                            <input class="only_number" name="phone" placeholder="Telefon" type="text" required/>
-                            <input name="shipping_address" placeholder="Adres zamieszkania" type="text" required/>
-                            <input name="shipping_city" placeholder="Miasto" type="text" required/>
-                            <input name="shipping_zip" placeholder="Kod pocztowy" type="text" required/>
+                            <input name="name" placeholder="Име и фамилия" type="text" required/>
+                            <input class="only_number" name="phone" placeholder="Телефон" type="text" required/>
+                            <input name="shipping_address" placeholder="Адрес" type="text" required/>
+                            <input name="shipping_city" placeholder="Град" type="text" required/>
+                            <input name="shipping_zip" placeholder="Пощенски код" type="text" required/>
                             <div>
                                 @foreach($prices as $singlePrice)
-                                    <input type="radio" name="quantity" value="{{$singlePrice['quantity']}}" class="productQuantity{{$singlePrice['quantity']}} quantity" id="ThirdProductLabel{{$singlePrice['quantity']}}" placeholder="{{ $singlePrice['is_free_shipping'] }}"
+                                    <input type="radio" name="quantity" value="{{$singlePrice['quantity']}}" class="productQuantity{{$singlePrice['quantity']}}" id="ThirdProductLabel{{$singlePrice['quantity']}}"
                                            @if($singlePrice['is_default']) checked @endif
                                            @if(old('quantity') == $singlePrice['quantity']) checked @endif >
                                     <label for="ThirdProductLabel{{$singlePrice['quantity']}}">
-                                        {{$singlePrice['quantity']}} x {{$product->product_name}} ({{$singlePrice['amount']}} {{ $prices[1]['currency'] }})
-                                        @if($singlePrice['is_free_shipping']) * @endif
+                                        {{$singlePrice['quantity']}} x {{$product->product_name}} ({{$singlePrice['amount']}}  лв.)
                                     </label>
                                     <br>
                                 @endforeach
                             </div>
-                            <div class="freeShippingDiv">* DARMOWA DOSTAWA</div>
-                            <input class="form__submit js_submit button__text" type="submit" value="ZAMÓW TERAZ"/>
+                            <input class="form__submit js_submit button__text" type="submit" value="Поръчай сега"/>
                         </form>
                     </div>
                 </div>
@@ -539,28 +537,9 @@
 </section>
 <footer class="footer copyright">
     <div class="container">
-        <span>&copy; {{ now()->year }} {{ $product->brand_name }} | Wszelkie prawa zastrzeżone.</span>
+        <span>&copy; {{ now()->year }} {{ $product->brand_name }} | Sva prava zadržana.</span>
     </div>
 </footer>
-<style>
-    .freeShippingDiv {
-        color: #d31f07;
-        text-align: center;
-        margin-bottom: 0;
-        display: none;
-        font-weight: bold;
-        margin-top: 20px;
-    }
-</style>
-<script>
-    $('.quantity').click(function () {
-        let fsh = $(this).attr('placeholder');
-        if(parseInt(fsh) === 1) {
-            $(this).closest('.orderformcdn').find('.freeShippingDiv').slideDown();
-        } else {
-            $(this).closest('.orderformcdn').find('.freeShippingDiv').slideUp();        }
-    })
-</script>
 @include('components.pixel_footer')
 <script type="text/javascript" src="{{ asset('/') }}naturapharmFiles/kneepatch/form.js"></script>
 </body>

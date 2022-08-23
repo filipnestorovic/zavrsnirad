@@ -10,7 +10,7 @@
     <link href="{{ asset('/') }}naturapharmFiles/kneepatch/trigger-icon-medallion.png" type="image/png" rel="icon">
     <link href="{{ asset('/') }}naturapharmFiles/kneepatch/style.css" rel="stylesheet" type="text/css"/>
     <link href="{{ asset('/') }}naturapharmFiles/kneepatch/order_me.min.css" rel="stylesheet" media="all" type="text/css">
-    <style>img[height="1"],img[width="1"]{display:none!important}input[type="radio"]{width:15px!important;height:15px!important;cursor:pointer;box-shadow:none}label{cursor:pointer;font-size:18px}@media only screen and (max-width:424px){.firstCircle{position:relative;top:30px}.doctorSection img{margin-top:-40px!important}.productSection{margin-top:50px}.scroll__list{position:relative;top:30px}.pair img{margin-top:40px}}@media only screen and (min-width:424px){.scroll__list{position:relative;top:60px}.pair img{margin:50px}}.manual__icon-inner--1 .manual__icon{width:152px;height:185px;background-image:url({{asset('/')}}naturapharmFiles/kneepatch/kinoki3.png)}.manual__icon-inner--2{padding-top:24px}.manual__icon-inner--2 .manual__icon{margin-left:0;width:166px;height:169px;background-image:url({{asset('/')}}naturapharmFiles/kneepatch/kinoki4.png)}.manual__icon-inner--3 .manual__icon{width:143px;height:213px;background-image:url({{asset('/')}}naturapharmFiles/kneepatch/kinoki5.png)}</style>
+    <style>img[height="1"],img[width="1"]{display:none!important}input[type="radio"]{width:15px!important;height:15px!important;cursor:pointer;box-shadow:none}label{cursor:pointer;font-size:18px}@media only screen and (max-width:424px){.header__title h2 {font-size: 50px;}.firstCircle{position:relative;top:30px}.doctorSection img{margin-top:-40px!important}.productSection{margin-top:50px}.scroll__list{position:relative;top:30px}.pair img{margin-top:40px}}@media only screen and (min-width:424px){.scroll__list{position:relative;top:60px}.pair img{margin:50px}}.manual__icon-inner--1 .manual__icon{width:152px;height:185px;background-image:url({{asset('/')}}naturapharmFiles/kneepatch/kinoki3.png)}.manual__icon-inner--2{padding-top:24px}.manual__icon-inner--2 .manual__icon{margin-left:0;width:166px;height:169px;background-image:url({{asset('/')}}naturapharmFiles/kneepatch/kinoki4.png)}.manual__icon-inner--3 .manual__icon{width:143px;height:213px;background-image:url({{asset('/')}}naturapharmFiles/kneepatch/kinoki5.png)}</style>
 </head>
 <body>
 @include('components.display_errors')
@@ -18,16 +18,16 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 text-right header__title">
-                <h1>Ziołowe plastry detoksykacyjne</h1>
-                <h2>DETOX</h2>
-                <span>„Chińska mądrość, nowoczesna technologia”</span>
+                <h1>Φυτικά επιθέματα αποτοξίνωσης</h1>
+                <h2>ΑΠΟΤΟΞΙΝΩΣΗ</h2>
+                <span>"Κινεζική σοφία, σύγχρονη τεχνολογία"</span>
             </div>
         </div>
         <div class="row">
             <div class="labelmain firstCircle">
                 <div condensed="" roboto="" style="margin-top: 40px;font-size: 33px;padding-left: 10px;padding-right: 10px;font-size:2em;color: #029648;font-weight:bold;">
-                    <div style="color:red">AKCJA!</div>
-                    <div style="color: black;margin-top: 5px;font-size: 24px;">nowa cena</div>
+                    <div style="color:red">Πώληση!</div>
+                    <div style="color: black;margin-top: 5px;font-size: 24px;">νέα τιμή</div>
                 </div>
                 <div class="line4 price_land_s1" style="margin-top:0px;">{{ $prices[1]['amount'] }}</div>
                 <div class="line5 price_land_curr">{{ $prices[1]['currency'] }}</div>
@@ -44,26 +44,26 @@
             <div class="col-xs-12 col-md-4">
                 <div class="form">
                     <div class="form__title">
-                        <h3>UWAGA, AKCJA!</h3>
-                        <span>ZNIŻKI 40%</span>
+                        <h3>ΠΡΟΣΟΧΗ, ΔΡΑΣΗ!</h3>
+                        <span>ΕΚΠΤΩΣΗ 40%</span>
                     </div>
                     <div class="form__content">
                         <p></p>
                         <span class="form__product-name">{{ $product->product_name }}</span>
                         <div class="price">
                             <div class="old_price"></div>
-                            <span>Cena</span>
+                            <span>Τιμή</span>
                             <span class="displayCurrentPriceNoCyr price_land_s1 new_price"></span>
                             <span class="displayCurrentCurrency price_land_curr">{{ $prices[1]['currency'] }}</span>
                         </div>
                         <form action="{{$orderRoute}}" class="orderFormWrapper orderformcdn" method="post">
                             {{csrf_field()}}
                             @include('lander.naturapharm.components.form_hidden_fields')
-                            <input name="name" placeholder="Imię i nazwisko" type="text" required/>
-                            <input class="only_number" name="phone" placeholder="Telefon" type="text" required/>
-                            <input name="shipping_address" placeholder="Adres zamieszkania" type="text" required/>
-                            <input name="shipping_city" placeholder="Miasto" type="text" required/>
-                            <input name="shipping_zip" placeholder="Kod pocztowy" type="text" required/>
+                            <input name="name" placeholder="Όνομα και επώνυμο" type="text" required/>
+                            <input class="only_number" name="phone" placeholder="Τηλέφωνο" type="text" required/>
+                            <input name="shipping_address" placeholder="Διεύθυνση" type="text" required/>
+                            <input name="shipping_city" placeholder="Πόλη" type="text" required/>
+                            <input name="shipping_zip" placeholder="Τ.Κ." type="text" required/>
                             <div>
                                 @foreach($prices as $singlePrice)
                                     <input type="hidden" id="product{{ $singlePrice['quantity'] }}" value="{{ $singlePrice['originalPrice'] }}" placeholder="{{ $singlePrice['amount'] }}"/>
@@ -77,8 +77,8 @@
                                     <br>
                                 @endforeach
                             </div>
-                            <div class="freeShippingDiv">* DARMOWA DOSTAWA</div>
-                            <input class="form__submit js_submit button__text" type="submit" value="ZAMÓW TERAZ"/>
+                            <div class="freeShippingDiv">* ΔΩΡΕΑΝ ΜΕΤΑΦΟΡΑ</div>
+                            <input class="form__submit js_submit button__text" type="submit" value="Παράγγειλε τώρα"/>
                         </form>
                     </div>
                 </div>
@@ -90,22 +90,22 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-2 triggers__item triggers__icon--bowl">
-                <div class="triggers__desc">Stuletni przepis</div>
+                <div class="triggers__desc">Συνταγή ενός αιώνα</div>
             </div>
             <div class="col-xs-2 triggers__item triggers__icon--gate">
-                <div class="triggers__desc">Aktywacja mikrokrążenia w skórze</div>
+                <div class="triggers__desc">Ενεργοποίηση της μικροκυκλοφορίας στο δέρμα</div>
             </div>
             <div class="col-xs-2 triggers__item triggers__icon--medallion">
-                <div class="triggers__desc">Wydalanie nadmiaru wody z organizmu</div>
+                <div class="triggers__desc">Αποβολή περίσσειας νερού από το σώμα</div>
             </div>
             <div class="col-xs-2 triggers__item triggers__icon--beep2">
-                <div class="triggers__desc">Szeroka gama efektów</div>
+                <div class="triggers__desc">Ένα ευρύ φάσμα αποτελεσμάτων</div>
             </div>
             <div class="col-xs-2 triggers__item triggers__icon--flower">
-                <div class="triggers__desc">Całkowita detoksykacja organizmu</div>
+                <div class="triggers__desc">Πλήρης αποτοξίνωση του οργανισμού</div>
             </div>
             <div class="col-xs-2 triggers__item triggers__icon--ying-yang">
-                <div class="triggers__desc">100% skuteczny i bezpieczny</div>
+                <div class="triggers__desc">100% αποτελεσματικό και ασφαλές</div>
             </div>
         </div>
     </div>
@@ -114,7 +114,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h2 class="section__title">W DZISIEJSZYCH CZASACH DETOKSYKACJA I REGENERACJA ORGANIZMU POŻĄDANE JEST CO NAJMNIEJ RAZ W MIESIĄCU</h2>
+                <h2 class="section__title">ΣΗΜΕΡΑ ΕΙΝΑΙ ΕΠΙΘΥΜΗΤΟ ΝΑ ΑΠΟΤΟΞΙΝΩΝΕΤΕ ΤΟΝ ΟΡΓΑΝΙΣΜΟ ΣΑΣ ΤΟΥΛΑΧΙΣΤΟΝ ΜΙΑ ΦΟΡΑ ΤΟ ΜΗΝΑ ΚΑΙ ΝΑ ΑΝΑΓΕΝΝΑΤΕ ΤΟ ΣΩΜΑ ΣΑΣ</h2>
             </div>
         </div>
         <div class="row pair">
@@ -122,13 +122,19 @@
                 <img alt="" src="{{ asset('/') }}naturapharmFiles/kneepatch/kinoki2.png"/>
             </div>
             <div class="col-md-12 col-lg-5 section__content section__content--pair">
-                <p>Obecnie wszyscy prowadzimy częściowo niezdrowy tryb życia i bardzo ważne jest <span>regularne odtruwanie organizmu.</span> Plastry detoksujące wykonane są z ekstraktów roślinnych według tradycyjnej chińskiej receptury i mają na celu wydalenie nadmiaru płynów i toksyn z organizmu poprzez <span>punkty akupunkturowe.</span></p>
-                <p>Plastry Kinoki łagodzą napięcie i zmęczenie, poprawiają sen, oczyszczają skórę i poprawiają ogólny stan zdrowia. Za pomocą tych plastrów toksyny gromadzące się w organizmie i <span>krwiobiegu są szybko usuwane z organizmu.</span></p>
+                <p>Σήμερα, όλοι ζούμε έναν μερικώς ανθυγιεινό τρόπο ζωής και είναι πολύ σημαντικό να <span>αποτοξινώνουμε τον οργανισμό τακτικά.</span>
+                    Τα επιθέματα αποτοξίνωσης φτιάχνονται από φυτικά εκχυλίσματα σύμφωνα με μια παραδοσιακή κινέζικη συνταγή και προορίζονται
+                    για την αποβολή της περίσσειας υγρών και τοξινών από το σώμα μέσω των <span>σημείων βελονισμού.</span></p>
+                <p>Τα επιθέματα Kinoki ανακουφίζουν από <span>την ένταση και την κούραση, βελτιώνουν τον ύπνο, καθαρίζουν το δέρμα και
+                    βελτιώνουν τη γενική υγεία.</span> Χρησιμοποιώντας αυτά τα επιθέματα, οι τοξίνες που συσσωρεύονται στο σώμα και στην κυκλοφορία
+                    του αίματος αποβάλλονται γρήγορα από το σώμα.</p>
+                <p></p>
+                <p></p>
             </div>
         </div>
         <div class="row scope">
             <div class="col-xs-12">
-                <h2 class="section__title scope__title">OBSZARY ZASTOSOWANIA PLASTRÓW „KINOKI”</h2>
+                <h2 class="section__title scope__title">ΤΟΜΕΙΣ ΕΦΑΡΜΟΓΗΣ ΤΩΝ ΕΠΙΘΕΜΑΤΩΝ “KINOKI”</h2>
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-4 text-center scope__item">
                 <div class="scope__icon-wrapp">
@@ -136,7 +142,7 @@
                         <div class="scope__icon"></div>
                     </div>
                 </div>
-                <div class="scope__desc">Reumatologia</div>
+                <div class="scope__desc">Ρευματολογία</div>
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-4 text-center scope__item">
                 <div class="scope__icon-wrapp scope__icon-wrapp--rotate-90">
@@ -144,7 +150,7 @@
                         <div class="scope__icon"></div>
                     </div>
                 </div>
-                <div class="scope__desc">Limfologia</div>
+                <div class="scope__desc">Λεμφολογία</div>
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-4 text-center scope__item">
                 <div class="scope__icon-wrapp scope__icon-wrapp--rotate-180">
@@ -152,7 +158,7 @@
                         <div class="scope__icon"></div>
                     </div>
                 </div>
-                <div class="scope__desc">Neurologia</div>
+                <div class="scope__desc">Νευρολογία</div>
             </div>
         </div>
     </div>
@@ -161,16 +167,16 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h2 class="section__title">OCZYSZCZA TWÓJ ORGANIZM Z TOKSYN W ZALEDWIE 5 DNI Z POMOCĄ PLASTRÓW „KINOKI”</h2>
+                <h2 class="section__title">ΚΑΘΑΡΙΣΤΕ ΤΟ ΣΩΜΑ ΣΑΣ ΑΠΟ ΤΟΞΙΝΕΣ ΣΕ 5 ΜΟΛΙΣ ΜΕΡΕΣ ΜΕ ΤΗ ΒΟΗΘΕΙΑ ΤΩΝ ΕΠΙΘΕΜΑΤΩΝ «KINOKI»</h2>
             </div>
             <div class="col-xs-12 section__content">
-                <p>Już pierwsi taoiści mówili, że <span>toksyny</span> są główną przyczyną spadku energii w organizmie.</p>
-                <p>Nadmierne ilości toksyn nieuchronnie zostawiają ślad na zdrowiu lub organach i powodują choroby takie jak <span>impotencja, mastopatia, nadciśnienie, bóle głowy, chroniczne zmęczenie</span> i wiele innych.</p>
-                <p>Zgodnie z ideami mnichów taoistycznych i tradycyjnej medycyny chińskiej, negatywna energia, która rozprzestrzenia się po całym ciele, <span>może zostać zatrzymana przez detoksykację</span>, dzięki czemu przerwiemy jej ruch w całym ciele.</p>
+                <p>Ακόμη και οι πρώτοι Ταοϊστές είπαν ότι οι <span>τοξίνες</span> ήταν η κύρια αιτία της πτώσης της ενέργειας στο σώμα.</p>
+                <p>Οι υπερβολικές ποσότητες τοξινών αφήνουν αναπόφευκτα σημάδια στην υγεία ή σε κάποιο όργανο και προκαλούν ασθένειες όπως <span>ανικανότητα, μαστοπάθεια, υπέρταση, πονοκεφάλους, χρόνια κόπωση και πολλές άλλες.</span></p>
+                <p>Σύμφωνα με τις ιδέες των Ταοϊστών μοναχών και την παραδοσιακή κινεζική ιατρική, η αρνητική ενέργεια που εξαπλώνεται σε όλο το σώμα μπορεί να σταματήσει με την <span>αποτοξίνωση</span> που μπορεί να διακόψει την κίνησή της σε όλο το σώμα.</p>
             </div>
             <div class="col-xs-12 text-right quote">
-                <div class="quote__text">„Zdrowe ciało – zdrowy duch”</div>
-                <div class="quote__author">Sun Shu-Min</div>
+                <div class="quote__text">"Υγιές σώμα - υγιές πνεύμα"</div>
+                <div class="quote__author"> Sun Šu-Min</div>
             </div>
         </div>
     </div>
@@ -182,14 +188,14 @@
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-6">
-                    <p class="scroll__text">Lecznicze działanie plastra opiera się na następujących efektach:</p>
+                    <p class="scroll__text">Το θεραπευτικό αποτέλεσμα του επιθέματος βασίζεται στα ακόλουθα αποτελέσματα:</p>
                     <ul class="scroll__list">
-                        <li class="scroll__list-item">Detoksykacja organizmu</li>
-                        <li class="scroll__list-item">Łagodzenie bólów głowy i stresu</li>
-                        <li class="scroll__list-item">Odmładzanie ciała</li>
-                        <li class="scroll__list-item">Poprawa jakości snu</li>
-                        <li class="scroll__list-item">Pozytywny wpływ na narządy wewnętrzne</li>
-                        <li class="scroll__list-item">Zapobieganie nieprzyjemnym zapachom</li>
+                        <li class="scroll__list-item">Αποτοξίνωση του οργανισμού</li>
+                        <li class="scroll__list-item">Ανακούφιση από πονοκεφάλους και στρες</li>
+                        <li class="scroll__list-item">Αναζωογόνηση του σώματος</li>
+                        <li class="scroll__list-item">Αύξηση της ποιότητας του ύπνου</li>
+                        <li class="scroll__list-item">Θετική επίδραση στα εσωτερικά όργανα</li>
+                        <li class="scroll__list-item">Πρόληψη δυσάρεστων οσμών</li>
                     </ul>
                 </div>
             </div>
@@ -198,9 +204,9 @@
     <div class="container">
         <div class="row composition">
             <div class="col-xs-12 composition__caption">
-                <h2 class="section__title">SKŁAD PLASTRÓW DETOKSUJĄCYCH „KINOKI”:</h2>
-                <p>Receptura na plastry zawiera ponad 9 ziół leczniczych i została uzyskana w wyniku wielowiekowych badań ludowych uzdrowicieli.</p>
-                <p>Plastry detoksujące produkowane są zgodnie z nowoczesną technologią i najwyższymi międzynarodowymi standardami jakości. Plastry Kinoki nie zawierają dodatków chemicznych, są nieszkodliwe dla organizmu.</p>
+                <h2 class="section__title">ΣΥΝΘΕΣΗ ΕΠΙΘΕΜΑΤΩΝ ΑΠΟΤΟΞΙΝΩΣΗΣ "KINOKI": </h2>
+                <p>Η συνταγή για τα επιθέματα περιλαμβάνει πάνω από 9 φαρμακευτικά βότανα και ελήφθη ως αποτέλεσμα αιώνων έρευνας από λαϊκούς θεραπευτές.</p>
+                <p>Τα επιθέματα αποτοξίνωσης παράγονται σύμφωνα με τη σύγχρονη τεχνολογία και τα υψηλότερα διεθνή πρότυπα ποιότητας. Τα επιθέματα Kinoki δεν περιέχουν χημικά πρόσθετα, είναι αβλαβή για τον οργανισμό.</p>
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-4 text-center composition__item">
                 <div class="composition__icon-wrapp composition__icon-wrapp--rotate-180">
@@ -208,7 +214,7 @@
                         <div class="composition__icon"></div>
                     </div>
                 </div>
-                <div class="composition__desc">hamalomena</div>
+                <div class="composition__desc">homalomena</div>
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-4 text-center composition__item">
                 <div class="composition__icon-wrapp">
@@ -232,7 +238,7 @@
                         <div class="composition__icon"></div>
                     </div>
                 </div>
-                <div class="composition__desc">Szafran</div>
+                <div class="composition__desc">Σαφράν</div>
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-4 text-center composition__item">
                 <div class="composition__icon-wrapp">
@@ -248,7 +254,7 @@
                         <div class="composition__icon"></div>
                     </div>
                 </div>
-                <div class="composition__desc">dziki imbir</div>
+                <div class="composition__desc">άγριο τζίντζερ</div>
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-4 text-center composition__item">
                 <div class="composition__icon-wrapp composition__icon-wrapp--rotate-270">
@@ -264,7 +270,7 @@
                         <div class="composition__icon"></div>
                     </div>
                 </div>
-                <div class="composition__desc">salsa cistanche</div>
+                <div class="composition__desc">cistanche salsa</div>
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-4 text-center composition__item">
                 <div class="composition__icon-wrapp">
@@ -272,7 +278,7 @@
                         <div class="composition__icon"></div>
                     </div>
                 </div>
-                <div class="composition__desc">korzeń jarmułki</div>
+                <div class="composition__desc">η ρίζα του skullcaps</div>
             </div>
         </div>
     </div>
@@ -281,14 +287,14 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 section__caption">
-                <h2 class="section__title">„KINOKI” OCZYSZCZĄ TWÓJ ORGANIZM Z TOKSYN <br> W NAJKRÓTSZYM MOŻLIWYM CZASIE!</h2>
+                <h2 class="section__title">Το "KINOKI" ΘΑ ΚΑΘΑΡΙΣΕΙ ΤΟ ΣΩΜΑ ΣΑΣ ΑΠΟ ΤΟΞΙΝΕΣ <br> ΣΤΟ ΠΙΟ ΣΥΝΤΟΜΟ ΔΥΝΑΤΟ ΧΡΟΝΟ!</h2>
             </div>
         </div>
         <div class="row">
             <div class="labelmain2">
                 <div condensed="" roboto="" style="margin-top: 40px;font-size: 33px;padding-left: 10px;padding-right: 10px;font-size:2em;color: #029648;font-weight:bold;">
-                    <div style="color:red"> AKCJA!</div>
-                    <div style="color: black;margin-top: 5px;font-size: 24px;"> nowa cena</div>
+                    <div style="color:red"> Πώληση!</div>
+                    <div style="color: black;margin-top: 5px;font-size: 24px;"> νέα τιμή</div>
                 </div>
                 <div class="line4 price_land_s1" style="margin-top:0px;">{{ $prices[1]['amount'] }}</div>
                 <div class="line5 price_land_curr">{{ $prices[1]['currency'] }}</div>
@@ -302,40 +308,40 @@
                         </div>
                     </div>
                     <div class="product__desc product__desc--bold">
-                        <div>Leczniczy, naturalny i silny środek detoksykujący.</div>
-                        <div>Pomaga łagodzić bóle głowy, stres, uwalnia organizm od płynów, poprawia jakość snu i przywraca energię.</div>
+                        <div>Θεραπευτικός, φυσικός και ισχυρός αποτοξινωτικός παράγοντας.</div>
+                        <div>Βοηθά στην ανακούφιση από πονοκεφάλους, στρες, απελευθερώνει το σώμα από υγρά, βελτιώνει την ποιότητα του ύπνου και αποκαθιστά την ενέργεια.</div>
                     </div>
                     <ul class="product__list list-checked">
-                        <li class="list-checked__item">Specjalna kombinacja leczniczych ziół chińskich</li>
-                        <li class="list-checked__item">Wielowiekowe przepisy medycyny chińskiej</li>
-                        <li class="list-checked__item">Nowoczesna technologia produkcji</li>
-                        <li class="list-checked__item">Zbierze wszystkie toksyny z organizmu w jednym miejscu</li>
+                        <li class="list-checked__item">Ένας ιδιαίτερος συνδυασμός φαρμακευτικών κινέζικων βοτάνων</li>
+                        <li class="list-checked__item">Συνταγές κινέζικης ιατρικής αιώνων</li>
+                        <li class="list-checked__item">Σύγχρονη τεχνολογία παραγωγής</li>
+                        <li class="list-checked__item">Θα συσσωρεύσει όλες τις τοξίνες από το σώμα σε ένα μέρος</li>
                     </ul>
                 </div>
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form">
                     <div class="form__title">
-                        <h3>UWAGA, AKCJA!</h3>
-                        <span>ZNIŻKI 40%</span>
+                        <h3>ΠΡΟΣΟΧΗ, ΔΡΑΣΗ!</h3>
+                        <span>ΕΚΠΤΩΣΗ 40%</span>
                     </div>
                     <div class="form__content">
                         <p></p>
                         <span class="form__product-name">{{ $product->product_name }}</span>
                         <div class="price">
                             <div class="old_price"></div>
-                            <span>Cena</span>
+                            <span>Τιμή</span>
                             <span class="displayCurrentPriceNoCyr price_land_s1 new_price"></span>
                             <span class="displayCurrentCurrency price_land_curr">{{ $prices[1]['currency'] }}</span>
                         </div>
                         <form action="{{$orderRoute}}" class="orderFormWrapper orderformcdn" method="post">
                             {{csrf_field()}}
                             @include('lander.naturapharm.components.form_hidden_fields')
-                            <input name="name" placeholder="Imię i nazwisko" type="text" required/>
-                            <input class="only_number" name="phone" placeholder="Telefon" type="text" required/>
-                            <input name="shipping_address" placeholder="Adres zamieszkania" type="text" required/>
-                            <input name="shipping_city" placeholder="Miasto" type="text" required/>
-                            <input name="shipping_zip" placeholder="Kod pocztowy" type="text" required/>
+                            <input name="name" placeholder="Όνομα και επώνυμο" type="text" required/>
+                            <input class="only_number" name="phone" placeholder="Τηλέφωνο" type="text" required/>
+                            <input name="shipping_address" placeholder="Διεύθυνση" type="text" required/>
+                            <input name="shipping_city" placeholder="Πόλη" type="text" required/>
+                            <input name="shipping_zip" placeholder="Τ.Κ." type="text" required/>
                             <div>
                                 @foreach($prices as $singlePrice)
                                     <input type="radio" name="quantity" value="{{$singlePrice['quantity']}}" class="productQuantity{{$singlePrice['quantity']}} quantity" id="SecondProductLabel{{$singlePrice['quantity']}}" placeholder="{{ $singlePrice['is_free_shipping'] }}"
@@ -348,8 +354,8 @@
                                     <br>
                                 @endforeach
                             </div>
-                            <div class="freeShippingDiv">* DARMOWA DOSTAWA</div>
-                            <input class="form__submit js_submit button__text" type="submit" value="ZAMÓW TERAZ"/>
+                            <div class="freeShippingDiv">* ΔΩΡΕΑΝ ΜΕΤΑΦΟΡΑ</div>
+                            <input class="form__submit js_submit button__text" type="submit" value="Παράγγειλε τώρα"/>
                         </form>
                     </div>
                 </div>
@@ -361,7 +367,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 section__caption">
-                <h2 class="section__title">CO MÓWIĄ LEKARZE O ZIOŁOWYCH PLASTRACH „KINOKI” DO DETOKSYKACJI</h2>
+                <h2 class="section__title">ΤΙ ΛΕΝΕ ΟΙ ΓΙΑΤΡΟΙ ΓΙΑ ΤΑ ΦΥΤΙΚΑ ΕΠΙΘΕΜΑΤΑ «KINOKI» <br> ΓΙΑ ΑΠΟΤΟΞΙΝΩΣΗ</h2>
             </div>
         </div>
         <div class="row comment doctorSection">
@@ -370,12 +376,13 @@
             </div>
             <div class="col-xs-12 col-lg-4">
                 <div class="comment__text">
-                    <p>Najważniejszą rzeczą w procesie leczenia każdej choroby jest oczyszczenie organizmu z toksyn, które organizm gromadzi w wyniku prowadzenia niezdrowego stylu życia. Wcześniej jedynym rozwiązaniem było przepisywanie produktów detoksykacji, które negatywnie wpływają na wątrobę i przewód pokarmowy.</p>
-                    <p>Miałem pacjentów, którzy skarżyli się na bóle głowy, chroniczne zmęczenie, bóle kręgosłupa szyjnego, a wszystko to w wyniku nagromadzenia toksyn w organizmie, które zaburzały normalne funkcje organizmu.</p>
-                    <p>Kiedy zacząłem polecać KINOKI swoim pacjentom, po pewnym czasie spora część z nich miała znacznie mniej problemów, a u większości z nich problemy całkowicie zniknęły. Plastry KINOKI świetnie sprawdzają się w naturalnej eliminacji toksyn z organizmu i każdemu polecam detoksykację przynajmniej raz w miesiącu.</p>
+                    <p>Το πιο σημαντικό πράγμα στη διαδικασία θεραπείας οποιασδήποτε ασθένειας είναι να καθαρίσετε το σώμα από τις τοξίνες που συλλέγει λόγω ενός ανθυγιεινού τρόπου ζωής.
+                        Παλαιότερα, η μόνη λύση ήταν η συνταγογράφηση προϊόντων αποτοξίνωσης που επηρεάζουν αρνητικά το συκώτι και το πεπτικό σύστημα.</p>
+                    <p>Είχα ασθενείς που παραπονέθηκαν για πονοκεφάλους, χρόνια κόπωση, πόνο στην αυχενική μοίρα της σπονδυλικής στήλης, όλα ως αποτέλεσμα της συσσώρευσης τοξινών στο σώμα που διαταράσσουν τις φυσιολογικές σωματικές λειτουργίες.</p>
+                    <p>Όταν άρχισα να προτείνω το KINOKI στους ασθενείς μου, μετά από λίγο καιρό, οι περισσότεροι από αυτούς είχαν σημαντικά λιγότερα προβλήματα και τα περισσότερα προβλήματα εξαφανίστηκαν εντελώς. Τα επιθέματα KINOKI είναι εξαιρετικά για τη φυσική αποβολή των τοξινών από το σώμα και συνιστώ την αποτοξίνωση σε όλους τουλάχιστον μία φορά το μήνα.</p>
                 </div>
-                <div class="comment__author"></div>
-                <div class="comment__job"> Reumatolog</div>
+                <div class="comment__author">Παντελής Σαμαράς</div>
+                <div class="comment__job"> Ρευματολόγος</div>
             </div>
         </div>
     </div>
@@ -384,26 +391,26 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 section__caption">
-                <h2 class="section__title">OPINIE NASZYCH KLIENTÓW</h2>
+                <h2 class="section__title">ΚΡΙΤΙΚΕΣ ΠΕΛΑΤΩΝ ΜΑΣ</h2>
             </div>
         </div>
         <div class="row comments">
             <div class="col-xs-12 col-md-4 comments__item">
-                <div class="comments__title">Blanka, 21 lat</div>
+                <div class="comments__title">Δήμητρα, 21 ετών</div>
                 <div class="comments__text">
-                    <p>Cześć. Dużo pracuję w biurze i miałam problem z bólami mięśni, nogi były ciężkie, brakowało mi energii i byłam bardzo zrzędliwy. Znalazłam w internecie plastry KINOKI i próbowałam odtruć swój organizm. Po dwóch pudełkach niepokojące mnie objawy całkowicie ustąpiły i od 3 miesięcy czuję się świetnie. Teraz zapobiegawczo kupuję jedno pudełko co miesiąc, ponieważ nie chcę, aby ten trudny okres się powtórzył.</p>
+                    <p>Γεια. Δουλεύω πολύ στο γραφείο, και είχα πρόβλημα με μυϊκούς πόνους, ένιωθα τα πόδια μου βαριά, δεν είχα αρκετή ενέργεια και ήμουν πολύ γκρινιάρα. Βρήκα τα επιθέματα KINOKI στο διαδίκτυο και προσπάθησα να αποτοξινώσω το σώμα μου. Μετά από δύο κουτιά εξαφανίστηκαν τελείως τα συμπτώματα που με ενοχλούσαν και εδώ και 3 μήνες νιώθω υπέροχα. Τώρα προληπτικά ξοδεύω ένα κουτί κάθε μήνα γιατί δεν θέλω καν να ξαναπεράσω εκείνη τη δύσκολη περίοδος.</p>
                 </div>
             </div>
             <div class="col-xs-12 col-md-4 comments__item">
-                <div class="comments__title">Bronisława, 65 lat</div>
+                <div class="comments__title">Λένα, 65 ετών</div>
                 <div class="comments__text">
-                    <p>Od lat miałam problem z nadmiarem płynów w organizmie i obrzękiem nóg. Próbowałem wszystkiego, ale lekarstwa często powodowały inne problemy. Moja córka kupiła mi Kinoki i to jedyny produkt, który mi pomógł. Mam go w apteczce w większych zapasach. Dziękuję bardzo!</p>
+                    <p>Για χρόνια είχα πρόβλημα με τα υπερβολικά υγρά στο σώμα και πρήξιμο στα πόδια. Δοκίμασα τα πάντα, αλλά τα φάρμακα μου προκαλούσαν συχνά άλλα προβλήματα. Η κόρη μου μού αγόρασε τα Kinoki και είναι το μόνο προϊόν που με βοήθησε. Τα έχω στο κουτί φαρμάκων μου σε μεγάλες ποσότητες. Σας ευχαριστώ!</p>
                 </div>
             </div>
             <div class="col-xs-12 col-md-4 comments__item">
-                <div class="comments__title">Albin, 32 lata</div>
+                <div class="comments__title">Αντρέας, 32 ετών</div>
                 <div class="comments__text">
-                    <p>Często jem fast foody i słodycze, piję dużo soków smakowych i jestem palaczem. Z biegiem czasu zacząłem odczuwać trudności, takie jak zmęczenie i bóle głowy. Moja mama używała kinoki i mi też je poleciła. Początkowo nie wierzyłem, że to pomoże, ale mama upierała się, żebym się nie poddawał i już w drugim tygodniu stosowania poczułem się znacznie lepiej. Obudziłem się bardziej wypoczęty, miałem więcej energii i ból głowy zniknął. Mogę śmiało powiedzieć, że wszystkim polecam ten produkt, bo jest naprawdę dobry!</p>
+                    <p>Τρώω συχνά φαγητό από έξω και γλυκά, πίνω πολλά αναψυκτικά και είμαι καπνιστής. Με τον καιρό άρχισα να αντιμετωπίζω δυσκολίες όπως εξάντληση και πονοκεφάλους. Η μητέρα μου χρησιμοποιούσε τα kinoki και μου τα συνέστησε και εμένα. Στην αρχή, δεν πίστευα ότι θα βοηθούσαν, αλλά η μητέρα μου επέμενε, δεν τα παράτησα και ήδη από τη δεύτερη εβδομάδα χρήσης, ένιωθα πολύ καλύτερα. Ξυπνούσα πιο ξεκούραστος, είχα περισσότερη ενέργεια και ο πονοκέφαλος είχε φύγει. Μπορώ ελεύθερα να πω ότι προτείνω αυτό το προϊόν σε όλους, γιατί είναι πραγματικά καλό!</p>
                 </div>
             </div>
         </div>
@@ -413,7 +420,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 section__caption">
-                <h2 class="section__title">JAK POPRAWNIE UŻYWAĆ NASZYWKI „KINOKI”?</h2>
+                <h2 class="section__title">ΠΩΣ ΝΑ ΧΡΗΣΙΜΟΠΟΙΗΣΕΤΕ ΣΩΣΤΑ ΤΟ ΕΠΙΘΕΜΑ "ΚΙΝΟΚΙ"</h2>
             </div>
         </div>
         <div class="row manual">
@@ -424,8 +431,8 @@
                     </div>
                 </div>
                 <div class="manual__number">1</div>
-                <div class="manual__title">OTWÓRZ OPAKOWANIE I <br> WYJMIJ PLASTER</div>
-                <div class="manual__desc">Umyj stopy wodą i osusz</div>
+                <div class="manual__title">ΑΝΟΙΞΤΕ ΤΗ ΣΥΣΚΕΥΑΣΙΑ ΚΑΙ <br> ΑΦΑΙΡΕΣΤΕ ΤΟ ΕΠΙΘΕΜΑ</div>
+                <div class="manual__desc">Πλύνετε τα πόδια σας με νερό και στεγνώστε</div>
             </div>
             <div class="col-xs-12 col-md-4 manual__item">
                 <div class="manual__icon-wrapp">
@@ -434,8 +441,8 @@
                     </div>
                 </div>
                 <div class="manual__number">2</div>
-                <div class="manual__title">PRZYKLEJ PLASTER <br> NA STOPĘ</div>
-                <div class="manual__desc">Zostaw na noc.</div>
+                <div class="manual__title">ΚΟΛΛΗΣΤΕ ΤΟ ΕΠΙΘΕΜΑ <br> ΣΤΑ ΠΟΔΙΑ</div>
+                <div class="manual__desc">Αφήστε το όλο το βράδυ</div>
             </div>
             <div class="col-xs-12 col-md-4 manual__item">
                 <div class="manual__icon-wrapp manual__icon-wrapp--rotate-270">
@@ -444,16 +451,16 @@
                     </div>
                 </div>
                 <div class="manual__number">3</div>
-                <div class="manual__title">ZDEJMIJ PLASTER <br> RANO</div>
-                <div class="manual__desc">Umyj stopy wodą!</div>
+                <div class="manual__title">ΒΓΑΛΤΕ ΤΑ ΕΠΙΘΕΜΑΤΑ <br> ΤΟ ΠΡΩΙ</div>
+                <div class="manual__desc">Πλύνετε τα πόδια σας με νερό!</div>
             </div>
         </div>
-        <div class="col-xs-12 manual__notice">* Trzymaj jedną łatkę na obu stopach przez całą noc</div>
+        <div class="col-xs-12 manual__notice"> * Κρατήστε ένα έμπλαστρο σε κάθε πόδι όλη τη νύχτα</div>
         <center>
             <br/><br/>
-            <h3><strong>Wyniki widoczne po 1 pudełku</strong></h3></center>
+            <h3><strong>Τα αποτελέσματα είναι ορατά μετά από 1 κουτί</strong></h3></center>
         <center>
-            <div class="col-xs-12 manual__notice">Aby uzyskać najlepsze wyniki, zaleca się stosowanie 2-3 pudełek bez przerwy</div>
+            <div class="col-xs-12 manual__notice">Για καλύτερα αποτελέσματα, συνιστάται η χρήση 2-3 κουτιών χωρίς διακοπή</div>
         </center>
     </div>
 </section>
@@ -461,14 +468,14 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 section__caption">
-                <h2 class="section__title">„PLASTRY DETOKSUJĄCE” NIE SĄ TYMCZASOWYM, ALE TRWAŁYM UWOLNIENIEM OD SZKODLIWYCH TOKSYN W ORGANIZMIE!</h2>
+                <h2 class="section__title">Το «ΕΠΙΘΕΜΑ ΑΠΟΤΟΞΙΝΩΣΗΣ» ΔΕΝ ΕΙΝΑΙ ΠΡΟΣΩΡΙΝΗ, <br> ΑΛΛΑ ΜΟΝΙΜΗ ΑΠΕΛΕΥΘΕΡΩΣΗ ΑΠΟ <br> ΤΙΣ ΒΛΑΒΕΡΕΣ ΤΟΞΙΝΕΣ ΣΤΟ ΣΩΜΑ!</h2>
             </div>
         </div>
         <div class="row">
             <div class="labelmain2 ThirdCircle">
                 <div condensed="" roboto="" style="margin-top: 40px;font-size: 33px;padding-left: 10px;padding-right: 10px;font-size:2em;color: #029648;font-weight:bold;">
-                    <div style="color:red"> AKCJA!</div>
-                    <div style="color: black;margin-top: 5px;font-size: 24px;"> nowa cena</div>
+                    <div style="color:red"> Πώληση!</div>
+                    <div style="color: black;margin-top: 5px;font-size: 24px;"> νέα τιμή</div>
                 </div>
                 <div class="line4 price_land_s1" style="margin-top:0px;">{{ $prices[1]['amount'] }}</div>
                 <div class="line5 price_land_curr">{{ $prices[1]['currency'] }}</div>
@@ -482,40 +489,40 @@
                         </div>
                     </div>
                     <div class="product__desc product__desc--bold">
-                        <div>Leczniczy, naturalny i silny środek detoksykujący.</div>
-                        <div>Pomaga łagodzić bóle głowy, stres, uwalnia organizm od płynów, poprawia jakość snu i przywraca energię.</div>
+                        <div>Θεραπευτικός, φυσικός και ισχυρός αποτοξινωτικός παράγοντας.</div>
+                        <div>Βοηθά στην ανακούφιση από πονοκεφάλους, στρες, απελευθερώνει το σώμα από υγρά, βελτιώνει την ποιότητα του ύπνου και αποκαθιστά την ενέργεια.</div>
                     </div>
                     <ul class="product__list list-checked">
-                        <li class="list-checked__item">Specjalna kombinacja leczniczych ziół chińskich</li>
-                        <li class="list-checked__item">Wielowiekowe przepisy medycyny chińskiej</li>
-                        <li class="list-checked__item">Nowoczesna technologia produkcji</li>
-                        <li class="list-checked__item">Zbierze wszystkie toksyny z organizmu w jednym miejscu</li>
+                        <li class="list-checked__item">Ένας ιδιαίτερος συνδυασμός φαρμακευτικών κινέζικων βοτάνων</li>
+                        <li class="list-checked__item">Συνταγές κινέζικης ιατρικής αιώνων</li>
+                        <li class="list-checked__item">Σύγχρονη τεχνολογία παραγωγής</li>
+                        <li class="list-checked__item">Θα συσσωρεύσει όλες τις τοξίνες από το σώμα σε ένα μέρος</li>
                     </ul>
                 </div>
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form">
                     <div class="form__title">
-                        <h3>UWAGA, AKCJA!</h3>
-                        <span>ZNIŻKI 40%</span>
+                        <h3>ΠΡΟΣΟΧΗ, ΔΡΑΣΗ!</h3>
+                        <span>ΕΚΠΤΩΣΗ 40%</span>
                     </div>
                     <div class="form__content">
                         <p></p>
                         <span class="form__product-name">{{ $product->product_name }}</span>
                         <div class="price">
                             <div class="old_price"></div>
-                            <span>Cena</span>
+                            <span>Τιμή</span>
                             <span class="displayCurrentPriceNoCyr price_land_s1 new_price"></span>
                             <span class="displayCurrentCurrency price_land_curr">{{ $prices[1]['currency'] }}</span>
                         </div>
                         <form action="{{$orderRoute}}" class="orderFormWrapper orderformcdn" method="post">
                             {{csrf_field()}}
                             @include('lander.naturapharm.components.form_hidden_fields')
-                            <input name="name" placeholder="Imię i nazwisko" type="text" required/>
-                            <input class="only_number" name="phone" placeholder="Telefon" type="text" required/>
-                            <input name="shipping_address" placeholder="Adres zamieszkania" type="text" required/>
-                            <input name="shipping_city" placeholder="Miasto" type="text" required/>
-                            <input name="shipping_zip" placeholder="Kod pocztowy" type="text" required/>
+                            <input name="name" placeholder="Όνομα και επώνυμο" type="text" required/>
+                            <input class="only_number" name="phone" placeholder="Τηλέφωνο" type="text" required/>
+                            <input name="shipping_address" placeholder="Διεύθυνση" type="text" required/>
+                            <input name="shipping_city" placeholder="Πόλη" type="text" required/>
+                            <input name="shipping_zip" placeholder="Τ.Κ." type="text" required/>
                             <div>
                                 @foreach($prices as $singlePrice)
                                     <input type="radio" name="quantity" value="{{$singlePrice['quantity']}}" class="productQuantity{{$singlePrice['quantity']}} quantity" id="ThirdProductLabel{{$singlePrice['quantity']}}" placeholder="{{ $singlePrice['is_free_shipping'] }}"
@@ -528,8 +535,8 @@
                                     <br>
                                 @endforeach
                             </div>
-                            <div class="freeShippingDiv">* DARMOWA DOSTAWA</div>
-                            <input class="form__submit js_submit button__text" type="submit" value="ZAMÓW TERAZ"/>
+                            <div class="freeShippingDiv">* ΔΩΡΕΑΝ ΜΕΤΑΦΟΡΑ</div>
+                            <input class="form__submit js_submit button__text" type="submit" value="Παράγγειλε τώρα"/>
                         </form>
                     </div>
                 </div>
@@ -539,7 +546,7 @@
 </section>
 <footer class="footer copyright">
     <div class="container">
-        <span>&copy; {{ now()->year }} {{ $product->brand_name }} | Wszelkie prawa zastrzeżone.</span>
+        <span>&copy; {{ now()->year }} {{ $product->brand_name }} | Ολα τα δικαιώματα διατηρούνται.</span>
     </div>
 </footer>
 <style>
