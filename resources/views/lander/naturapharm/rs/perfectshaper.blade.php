@@ -32,9 +32,9 @@
             font-weight: 700;
             font-style: normal;
         }
-        .top-block-v2{
+        .top-block-v2 {
             padding: 432px 0 0;
-            background: url('{{ asset('/') }}naturapharmFiles/hipshaper/top-block-v2.png') 50% 0 no-repeat;
+            background: url('{{ asset('/') }}naturapharmFiles/perfectshaper/top-block-v2.png') 50% 0 no-repeat;
         }
     </style>
 </head>
@@ -44,8 +44,8 @@
 
     <!-- -v2 -->
     <section class="title-block">
-        <div class="sub-main-title">NOSITE BODY SHAPING WRAP <br>I IZGLEDAJTE SAVRŠENO</div>
-        <h1 class="main-title">BODY SHAPING WRAP</h1>
+        <div class="sub-main-title">NOSITE SHAPER <br>I IZGLEDAJTE SAVRŠENO</div>
+        <h1 class="main-title">PERFECT SHAPER</h1>
     </section>
 
     <section class="top-block-v2">
@@ -53,7 +53,7 @@
             <div class="cost old-cost">
                 Stara cena:
                 <strong>
-                    {{ $prices[1]['originalPrice'] }} RSD
+                    {{ $prices[1]['originalPrice'] }} {{ $prices[1]['currency'] }}
                 </strong>
             </div>
             <div class="sale-cont">
@@ -65,7 +65,7 @@
             <div class="cost new-cost">
                 Nova cena:
                 <strong>
-                    {{ $prices[1]['amount'] }} RSD
+                    {{ $prices[1]['amount'] }} {{ $prices[1]['currency'] }}
                 </strong>
             </div>
         </div>
@@ -76,11 +76,11 @@
 
     <!-- -v3 -->
     <section class="sup-block-v3 benefits1_section">
-        <h2 class="lvl-title">BODY SHAPING WRAP <br/>SE PREPORUČUJE <br/>UKOLIKO:</h2>
+        <h2 class="lvl-title">PERFECT SHAPER <br/>SE PREPORUČUJE <br/>UKOLIKO:</h2>
         <ul class="sup-cont clearfix">
             <li>
                 <img src="{{ asset('/') }}naturapharmFiles/korset/sup-block-v3_1.jpg" alt="Body Shaping Wrap">
-                <p>Želite da imate lepu figuru u najkraćem roku. Pri treningu topi masne naslage</p>
+                <p>Želite da imate lepu figuru u najkraćem roku.</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}naturapharmFiles/korset/sup-block-v3_2.jpg" alt="Body Shaping Wrap">
@@ -88,29 +88,29 @@
             </li>
             <li>
                 <img src="{{ asset('/') }}naturapharmFiles/korset/sup-block-v3_3.jpg" alt="Body Shaping Wrap">
-                <p>Želite da vaše telo izgleda kao da imate idealnu kilažu</p>
+                <p>Želite da vaše telo izgleda kao da imate idealnu figuru</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}naturapharmFiles/korset/sup-block-v3_4.jpg" alt="Body Shaping Wrap">
-                <p>Želite zavodljiv i tanak struk sa istaknutim grudima</p>
+                <p>Želite zavodljiv i tanak struk sa istaknutim oblinama</p>
             </li>
         </ul>
     </section>
 
     <!--  -->
     <section class="detail-block about_section">
-        <h2 class="lvl-title">BODY SHAPING WRAP ZA OBLIKOVANJE TELA</h2>
+        <h2 class="lvl-title">PERFECT SHAPER ZA ISTAKNUTU FIGURU</h2>
         <div class="text-cont">
             <p>Posebno je dizajniran za momentalni vizuelni <b>efekat savršenog tela.</b></p>
-            <p>Body Shaping Wrap je napravljen da <b>savršeno prijanja uz vaše telo,</b> oblikujući ga i praveći idealnu figuru. Može da se nosi ispod odeće i <b>veoma je neosetan.</b></p>
-            <p>Poznato je da je struk najteže oblikovati, zato se kod nas pojavilo idealno rešenje za to - <b>obučeš Body Shaping Wrap i gotovo</b> - svi će biti oduševljeni tvojim izgledom.</p>
-            <img src="{{ asset('/') }}naturapharmFiles/hipshaper/pic-1.png" alt="Body Shaping Wrap">
+            <p>Perfect Shaper je napravljen da <b>savršeno prijanja uz vaše telo,</b> oblikujući ga i praveći idealnu figuru. Može da se nosi ispod odeće i <b>veoma je neprimetan.</b></p>
+            <p>Zadnjicu je teško oblikovati, zato se kod nas pojavilo idealno rešenje za to - <b>obučeš Perfect Shaper i gotovo</b> - svi će biti oduševljeni tvojim izgledom.</p>
+            <img src="{{ asset('/') }}naturapharmFiles/perfectshaper/pic-1.png" alt="Body Shaping Wrap">
         </div>
     </section>
 
     <!-- -v2 -->
     <section class="sup-block-v2">
-        <h2 class="lvl-title">EFIKASNOT BODY SHAPING WRAP-A</h2>
+        <h2 class="lvl-title">EFIKASNOST PERFECT SHAPER-A</h2>
         <ul class="sup-cont clearfix grig">
             <li>
                 <h4>SMANJUJE EFEKAT NADUDOSTI</h4>
@@ -122,11 +122,11 @@
             </li>
             <li>
                 <h4>NEOTEX TEHNOLOGIJA</h4>
-                <p>Napravljen je od Neotex tkanine koja savršeno diše i ne stvara neprijatno znojenje. Ukoliko želite da trenirate uz Body Shaping Wrap, onda će pospešiti zagrevanje i topljenje masti.</p>
+                <p>Napravljen je od Neotex tkanine koja savršeno diše i ne stvara neprijatno znojenje.</p>
             </li>
             <li>
                 <h4>INSTANT EFEKAT</h4>
-                <p>Nije potrebno vreme da bi proizvod dao rezultate. Obucite ga i gotovo.</p>
+                <p>Nije potrebno vreme da bi proizvod dao rezultate. Obucite ga i gotovo!</p>
             </li>
         </ul>
         <a class="button-m" href="#zakaz">PORUČITE SADA</a>
@@ -135,7 +135,7 @@
 
     <!-- -v3 -->
     <section class="sup-block-v3 use_section">
-        <h2 class="lvl-title">KADA I GDE MOŽE DA SE NOSI BODY SHAPING WRAP?</h2>
+        <h2 class="lvl-title">KADA I GDE MOŽE DA SE NOSI PERFECT SHAPER?</h2>
         <ul class="sup-cont clearfix">
             <li>
                 <img src="{{ asset('/') }}naturapharmFiles/korset/use1.jpg" alt="Body Shaping Wrap">
@@ -167,7 +167,7 @@
 
     <!-- -v1 -->
     <section class="delivery-block-v1">
-        <h2 class="lvl-title">KAKO PORUČITI <br/> BODY SHAPING WRAP?</h2>
+        <h2 class="lvl-title">KAKO PORUČITI <br/> PERFECT SHAPER?</h2>
         <ul class="delivery-cont clearfix">
             <li>
                 <p>Poručite popunjavanjem forme na našem sajtu</p>
@@ -189,29 +189,28 @@
         <h2 class="lvl-title">UTISCI <br/> NAŠIH KUPACA</h2>
         <div class="rev-cont clearfix">
             <div class="rev-item">
-                <img src="{{ asset('/') }}naturapharmFiles/hipshaper/rev-block-v3_1.jpg" alt="Body Shaping Wrap">
+                <img src="{{ asset('/') }}naturapharmFiles/perfectshaper/rev-block-v3_1.jpg" alt="Body Shaping Wrap">
                 <h4>Milica Mitrović, 33 godine</h4>
-                <p>Videla sam oglas i odlučila sam da pokušam. Rezultat je neverovatan. Sviđa mi se što steže bočne strane i nije vidljiv ispod odeće. Ljudi iz moje okoline su mi počeli govoriti da sam smršala.
-                    Ja sam čak i trenirala u njemu i dao je odlične efekte. Mnogo zagreva telo i pospešuje znojenje, ali najbolje od svega je što diše i što se ne osećam kao pod folijom.</p>
+                <p>Videla sam oglas i odlučila sam da pokušam, stigao je 2 dana nakon što sam ga poručila. Sviđa mi se jako što steže bočne strane i potpuno je nevidljiv ispod odeće.
+                    Ljudi iz moje okoline su mi počeli govoriti da izgledam dosta bolje, ali ni ne slute šta je u pitanju. </p>
             </div>
             <div class="rev-item">
-                <img src="{{ asset('/') }}naturapharmFiles/hipshaper/rev-block-v3_2.png" alt="Body Shaping Wrap">
-                <h4>Boriša Gavrić , 31 godina</h4>
-                <p>Kupio sam Body Shaping Wrap za svoju suprugu jer je dugo i bezuspešno pokušavala da se oslobodi stomaka. Imao sam sreću da sam proizvod kupio sa popustom, a ona je izgledala kao gorska vila. Presrećni smo, hvala vam.</p>
+                <img src="{{ asset('/') }}naturapharmFiles/perfectshaper/rev-block-v3_2.png" alt="Body Shaping Wrap">
+                <h4>Jovana Matković, 29 godina</h4>
+                <p>Izuzetan proizvod, učinio je da izgledam savršeno! Podigao mi je samopouzdanje na maksimum, a najveća prednost je što niko ne zna da ga nosim ispod odeće. Preporučujem svima!</p>
             </div>
             <div class="rev-item">
-                <img src="{{ asset('/') }}naturapharmFiles/hipshaper/rev-block-v3_3.jpg" alt="Body Shaping Wrap">
+                <img src="{{ asset('/') }}naturapharmFiles/perfectshaper/rev-block-v3_3.jpg" alt="Body Shaping Wrap">
                 <h4>Dragana Marković, 29 godina</h4>
-                <p>Body Shaping Wrap mi je stigao 2 dana nakon što sam ga poručila. Koristim ga već 9 nedelja. Nosim ga kad god je to moguće - u šetnji sa detetom, kod kuće pa i na trčanju. Primetila sam da kada trčim u njemu da
-                    jako pospešuje znojenje i topljenje masnih naslaga. Struk mi je tanji za 14 centimetara. Ne želim da stanem na ovome, nastaviću da ga nosim.</p>
+                <p>Prvi put sam obukla Perfect Shaper na proslavi firme u kojoj radim, kada sam videla kakav efekat ima, nisam prestala da ga nosim u svakom mogućem trenutku. Ovo je slika sa te proslave, uverite se i sami. </p>
             </div>
         </div>
     </section>
 
     <!-- -v2 -->
     <section class="title-block">
-        <div class="sub-main-title">NOSITE BODY SHAPING WRAP <br> I IZGLEDAJTE SAVRŠENO</div>
-        <h1 class="main-title">BODY SHAPING WRAP</h1>
+        <div class="sub-main-title">NOSITE SHAPER <br>I IZGLEDAJTE SAVRŠENO</div>
+        <h1 class="main-title">PERFECT SHAPER</h1>
     </section>
 
     <section class="top-block-v2">
@@ -219,7 +218,7 @@
             <div class="cost old-cost">
                 Stara cena:
                 <strong>
-                    {{ $prices[1]['originalPrice'] }} RSD
+                    {{ $prices[1]['originalPrice'] }} {{ $prices[1]['currency'] }}
                 </strong>
             </div>
             <div class="sale-cont">
@@ -231,7 +230,7 @@
             <div class="cost new-cost">
                 Nova cena:
                 <strong>
-                    {{ $prices[1]['amount'] }} RSD
+                    {{ $prices[1]['amount'] }} {{ $prices[1]['currency'] }}
                 </strong>
             </div>
         </div>
@@ -241,9 +240,12 @@
                 @include('lander.naturapharm.components.form_hidden_fields')
                 <div><input type="text" name="name" placeholder="Ime i prezime" required></div>
                 <div><input type="tel" name="phone" placeholder="Telefon" required></div>
+                <div><input type="text" name="shipping_address" placeholder="Adresa" required></div>
+                <div><input type="text" name="shipping_city" placeholder="Grad" required></div>
                 <div>
                     <button class="button-m">PORUČITE SADA</button>
                 </div>
+                <p style="text-align: center;"><b>Garantovana privatnost</b> <br> Proizvod stiže u diskretnom pakovanju na navedenu adresu.</p>
             </form>
         </div>
     </section>
