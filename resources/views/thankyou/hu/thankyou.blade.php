@@ -29,20 +29,20 @@
                     </div>
                     <div class="de elHeadlineWrapper ui-droppable de-editable" style="margin-top: 10%; outline: none; font-family: 'Open Sans', Helvetica, sans-serif !important;">
                         <div class="ne elHeadline hsSize2 lh3 elMargin0 elBGStyle0 hsTextShadow0" style="text-align: center; font-size: 30px; color:#3e54a9;">
-                            <b>Hvala Vam na poverenju!</b>
+                            <b>Köszönet a bizalmáért!</b>
                         </div>
                     </div>
                     <div class="de elHeadlineWrapper ui-droppable de-editable" style="margin-top: 10%; outline: none; cursor: pointer; font-family: 'Open Sans', Helvetica, sans-serif !important;">
                         <div class="ne elHeadline hsSize2 lh3 elMargin0 elBGStyle0 hsTextShadow0" style="text-align: center; font-size: 20px; color:#3f8fca;">
-                            Vaša poruzdbina je primljena i potvrdjena.<br/><br/>
-                            Za sve informacije mozete nas kontaktirati putem Facebook-a, Instagrama i na +38160/046-0469<br/><br/><br/><br/>
-                            Vaš {{$product->brand_name}}
+                            Megrendelését megkaptuk és visszaigazoltuk.<br/><br/>
+                            Minden információért forduljon hozzánk Facebookon és Instagramon<br/><br/><br/><br/>
+                            A tiéd {{$product->brand_name}}
                         </div>
                     </div>
 
                     <div class="de elHeadlineWrapper ui-droppable de-editable" style="margin-top: 10%; margin-bottom: 10%; outline: none; cursor: pointer; font-family: 'Open Sans', Helvetica, sans-serif !important;">
                         <div class="ne elHeadline hsSize2 lh3 elMargin0 elBGStyle0 hsTextShadow0" style="text-align: center; font-size: 20px; ">
-                            <a href="/{{$product->slug}}">Povratak na početnu stranu</a>
+                            <a href="/{{$product->slug}}">Vissza a kezdőlapra</a>
                         </div>
                     </div>
 
@@ -57,7 +57,12 @@
         </div>
     </div>
 </div>
+<style>
+    a:visited {
+        color: rgb(211, 211, 211);
+    }
+    a {
+        color: rgb(211, 211, 211);
+    }
+</style>
 @include('lander.flexoval.components.footer')
-@if($product->brand_name === "Flexonik" || $product->slug === "koleno" || $product->slug === "jonskitus")
-    @include('components.company_footer')
-@endif

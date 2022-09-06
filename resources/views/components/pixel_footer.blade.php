@@ -86,6 +86,9 @@
                     case 'SI':
                         errorText = 'Napačen format telefonske številke';
                         break;
+                    case 'HU':
+                        errorText = 'Hibás telefonszám-formátum';
+                        break;
                     default:
                         errorText = "Wrong phone number format";
                 }
