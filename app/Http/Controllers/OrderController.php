@@ -400,6 +400,9 @@ class OrderController extends Controller
             case "si":
                 $language = "sl_SI";
                 break;
+            case "hu":
+                $language = "hu_HU";
+                break;
         }
 
         if($orderDetails->is_free_shipping == 0) {
