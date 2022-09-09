@@ -16,53 +16,52 @@
 <section class="block1">
     <div class="wrap">
         <div class="title-box">
-            <h1>NANO ADESIVO FLOURISH LAMA</h1>
-            <h2>FISSAGGIO AFFIDABILE PER IL TUO SMARTPHONE E ALTRI GADGET </h2>
+            <h1>KEY FINDER</h1>
+            <h2>PRONAĐITE ZAGUBLJENE STVARI JEDNIM ZVIŽDUKOM</h2>
         </div>
         <div class="tovar"></div>
         <div class="sale">
-            SCONTO
-            <p class="discount">50%</p>
+            POPUST
+            <p class="discount">40%</p>
         </div>
         <div class="hit">
-            VENDITE DI SUCCESSO
-            <p>DELL'ANNO 2019</p>
+            NAJPRODAVANIJE U
+            <p>2022. GODINI</p>
         </div>
         <ul class="topul">
             <li>
-                <p>Molti modi d'uso</p>
+                <p>Pouzdano čuva vaše stvari</p>
             </li>
             <li>
-                <p>Mantiene carico fino a 2 kg</p>
+                <p>Veoma lagan i neprimetan</p>
             </li>
             <li>
-                <p>SSi monta su diversi materiali</p>
+                <p>Aktivira se na zvižduk</p>
             </li>
         </ul>
         <div class="formbox">
             <div class="price clearfix">
                 <div class="old-cost">
-                    <span>PREZZO NORMALE:</span>
+                    <span>REGULARNA CENA:</span>
                     <p><span class="price_land_s2">{{ $prices[1]['originalPrice'] }}</span><small
                             class="price_land_curr">{{ $prices[1]['currency'] }}</small></p>
                 </div>
                 <div class="new-cost">
-                    <span>PREZZO DI PROMOZIONE:</span>
+                    <span>CENA NA AKCIJI:</span>
                     <p><span class="price_land_s1">{{ $prices[1]['amount'] }}</span><small
                             class="price_land_curr">{{ $prices[1]['currency'] }}</small></p>
                 </div>
             </div>
-            <form action="#" method="post" class="orderformcdn m1-form">
-
-                <input class="field" name="name" type="text" placeholder="Inserire il nome completo" required>
-                <input class="field" name="phone" type="tel" placeholder="Inserisci il telefono" required>
-
+            <form action="{{$orderRoute}}" method="post" class="orderformcdn m1-form">
+                {{csrf_field()}}
+                @include('lander.naturapharm.components.form_hidden_fields')
+                <input class="field" name="name" type="text" placeholder="Ime i prezime" required>
+                <input class="field" name="phone" type="tel" placeholder="Telefon" required>
                 <button class="button-m">PORUČITE SADA</button>
-
             </form>
             <div class="stock">
-                <p>Quantità di merce in magazzino:</p>
-                <div><span></span><b>13 pz.</b></div>
+                <p>Na stanju ostalo još: </p>
+                <div><span></span><b>13 komada</b></div>
             </div>
         </div>
     </div>
@@ -71,18 +70,16 @@
 
 <section class="block3">
     <div class="wrap">
-        <h2 class="title">COME FUNZIONA <span class="col">NANO ADESIVO?</span></h2>
+        <h2 class="title">ČEMU SLUŽI <span class="col">KEY FINDER?</span></h2>
         <img src="{{ asset('/') }}dailysharkFiles/keyfinder/photo.jpg" alt="">
         <div class="job">
-            <p>L'adesivo è realizzato in materiale speciale con migliaia di sacche d'aria microscopiche che agiscono
-                come piccoli polloni. Fissandolo ad una parete, ad esempio, l'aria viene estratta dalle tasche
-                microscopiche dell'adesivo, creando un vuoto. Il vuoto fornisce l'aspirazione e l'aspirazione è la
-                presa!</p>
+            <p>Da li Vam se nekada desilo da izgubite ključeve ili druge važne stvari? Ukoliko je odgovor potvrdan, ovaj proizvod je sigurno za vas!
+                <b>Privezak koji se oglašava kada se začuje zvižduk.</b> Predstavlja jako praktičan način da sačuvate stvari koje se mogu lako zagubiti - pre svega ključeve, torbe, novčanik ili čak kućne ljubimce. </p>
             <ul>
-                <li><b>Materiale: </b>nano gomma, silicone</li>
-                <li><b>Kit: </b>flessibile, l'adesivo di telaio</li>
-                <li><b>Carico massimo: </b> 2 kg</li>
-                <li><b>Colori: </b>nero</li>
+                <li><b>Dimenzije: </b> 5.7 x 3 x 1.5 cm</li>
+                <li><b>Boje: </b> bela, crna, crvena i plava</li>
+                <li><b>Svetlo: </b> LED crvene boje</li>
+                <li><b>Baterija: </b> 1 x LR44 (dolaze u proizvodu)</li>
             </ul>
         </div>
     </div>
@@ -90,48 +87,45 @@
 <!-- bizlife_inc -->
 <section class="block4">
     <div class="wrap">
-        <h2 class="title">TECNOLOGIE PIÙ NUOVE 2019 <span class="col2">VANTAGGI DELLE DEL NANO ADESIVO</span></h2>
+        <h2 class="title">NAJNOVIJA TEHNOLOGIJA 2022 <span class="col2">PREDNOSTI KEY FINDERA</span></h2>
         <ul class="preim">
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/keyfinder/p1.jpg" alt="">
-                <p>Associato a materiali diversi</p>
+                <p>Pogodan kao privezak za ključeve</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/keyfinder/p2.jpg" alt="">
-                <p>Sopporta il carico<br>
-                    fino a 2 kg</p>
+                <p>Ima lampu kojom možete osvetliti ključaonicu</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/keyfinder/p3.jpg" alt="">
-                <p>Facile<br> da pulire</p>
+                <p>Oglašava se i zvučno i svetlosno</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/keyfinder/p4.jpg" alt="">
-                <p>Comodo<br> in uso</p>
+                <p>Jednostavno zviznete i on će se oglasiti</p>
             </li>
         </ul>
-        <a href="#order_form" class="button-m">ORDINA ORA</a>
+        <a href="#order_form" class="button-m">PORUČITE SADA</a>
     </div>
 </section>
 <section class="block5">
     <div class="wrap">
-        <h2 class="title">PERCHÉ SCEGLIERE <span class="col">NANO ADESIVO FLOURISH LAMA?</span></h2>
+        <h2 class="title">ZAŠTO KUPITI <span class="col">KEY FINDER?</span></h2>
         <div class="select clearfix">
             <div class="select-left">
                 <ul class="poch">
                     <li>
-                        <p>L'adesivo flessibile e comodo che ti aiuterà in qualsiasi momento, e ovunque</p>
+                        <p>Ne dozvolite više sebi da ikada gubite vreme na traženje zagubljenih ključeva</p>
                     </li>
                     <li>
-                        <p>Non lascia segni sulla superficie a cui è stato collegato, a differenza di tutti gli altri
-                            analoghi</p>
+                        <p>Zbog svojih mogućnosti možete ga pronaći kako u velikoj torbi, tako i u mraku</p>
                     </li>
                     <li>
-                        <p>Tiene il tuo gadget molto saldamente e puoi non avere paura che nel momento più inopportuno
-                            cadrà</p>
+                        <p>Budite originalni u svom društvu i okruženju</p>
                     </li>
                     <li>
-                        <p>Facile da pulire se si sporca, basta sciacquarlo con acqua</p>
+                        <p>Proizvod je vrhunskog kvaliteta i elegantnog dizajna</p>
                     </li>
                 </ul>
             </div>
@@ -152,21 +146,18 @@
         <ul class="ship">
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/keyfinder/s1.png" alt="">
-                <h3>CONSEGNA VELOCE</h3>
-                <p>Posta o corriere entro 1-10 giorni. Spese di spedizione da 17$. Invia una richiesta e l'operatore ti
-                    aiuterà a scegliere il metodo di consegna.</p>
+                <h3>KAKO PORUČITI</h3>
+                <p>Ostavite svoje podatke na našem sajtu. Kontaktiraćemo vas da potvrdimo porudžbinu i proizvod šaljemo brzom poštom u roku od 1-2 radna dana.</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/keyfinder/s2.png" alt="">
-                <h3>PAGAMENTO ALLA CONSEGNA</h3>
-                <p>Non accettiamo i pagamenti anticipati. Il pagamento viene effettuato solo alla consegna
-                    dell'ordine.</p>
+                <h3>BEZ PLAĆANJA UNAPRED</h3>
+                <p>Nema potrebe da plaćate unapred. Paket plaćate kuriru po preuzimanju.</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/keyfinder/s3.png" alt="">
-                <h3>GARANZIE</h3>
-                <p>Tutti i prodotti hanno superato il controllo di qualità. Linea di assistenza clienti 24 ore su 24
-                    lavora per te.</p>
+                <h3>GARANCIJA KVALITETA</h3>
+                <p>Ukoliko ne budete zadovoljni proizvodom, pošaljite nam ga nazad a mi ćemo vam vratiti novac.</p>
             </li>
         </ul>
     </div>
@@ -175,38 +166,38 @@
 <section class="block1 end">
     <div class="wrap">
         <div class="title-box">
-            <h1>NANO ADESIVO FLOURISH LAMA</h1>
-            <h2>FISSAGGIO AFFIDABILE PER IL TUO SMARTPHONE E ALTRI GADGET</h2>
+            <h1>KEY FINDER</h1>
+            <h2>PRONAĐITE ZAGUBLJENE STVARI JEDNIM ZVIŽDUKOM</h2>
         </div>
         <div class="tovar"></div>
         <div class="sale">
-            SCONTO
-            <p class="discount">50%</p>
+            POPUST
+            <p class="discount">40%</p>
         </div>
         <div class="hit">
-            VENDITE DI SUCCESSO
-            <p>DELL'ANNO 2019</p>
+            NAJPRODAVANIJE U
+            <p>2022. GODINI</p>
         </div>
         <ul class="topul">
             <li>
-                <p>Grande variazione di utilizzo</p>
+                <p>Pouzdano "čuva" vaše stvari</p>
             </li>
             <li>
-                <p>Mantiene carico fino a 2 kg</p>
+                <p>Veoma lagan i neprimetan</p>
             </li>
             <li>
-                <p>Si monta su diversi materiali</p>
+                <p>Aktivira se na zvižduk</p>
             </li>
         </ul>
         <div class="formbox">
             <div class="price clearfix">
                 <div class="old-cost">
-                    <span>PREZZO NORMALE:</span>
+                    <span>REGULARNA CENA:</span>
                     <p><span class="price_land_s2">{{ $prices[1]['originalPrice'] }}</span><small
                             class="price_land_curr">{{ $prices[1]['currency'] }}</small></p>
                 </div>
                 <div class="new-cost">
-                    <span>PREZZO DI PROMOZIONE:</span>
+                    <span>CENA NA AKCIJI:</span>
                     <p><span class="price_land_s1">{{ $prices[1]['amount'] }}</span><small
                             class="price_land_curr">{{ $prices[1]['currency'] }}</small></p>
                 </div>
@@ -219,8 +210,8 @@
                 <button class="button-m">PORUČITE SADA</button>
             </form>
             <div class="stock">
-                <p>Quantità di merce in magazzino: </p>
-                <div><span></span><b>13 pz.</b></div>
+                <p>Na stanju ostalo još: </p>
+                <div><span></span><b>13 komada</b></div>
             </div>
         </div>
 
