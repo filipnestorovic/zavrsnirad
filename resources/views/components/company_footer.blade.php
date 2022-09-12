@@ -75,6 +75,7 @@
         margin-top: 10px;
     }
     .footerCompany {
+        clear: both;
         text-align: center !important;
         padding: 10px;
         font-size: 16px !important;

@@ -27,7 +27,7 @@
         <div id="info" style="text-align: left">
             Objavljeno
             <span>
-                  
+
                </span>
             19:51 | Autor
         </div>
@@ -508,7 +508,7 @@
     <span>&copy; {{ now()->year }} Copyright. Sva prava zadržana.</span><br>
     <p></p>
 </div>
-@include('components.company_footer')
+{{--@include('components.company_footer')--}}
 @include('components.pixel_footer')
 </body>
 </html>

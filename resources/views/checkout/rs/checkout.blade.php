@@ -318,7 +318,7 @@
         </div>
     </div>
     @if($product->slug === "koleno" || $product->slug === "jonskitus")
-        @include('components.company_footer')
+{{--        @include('components.company_footer')--}}
     @endif
 </form>
 @include('components.change_quantity_script')

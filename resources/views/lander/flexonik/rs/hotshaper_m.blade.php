@@ -178,7 +178,7 @@
             </div>
         </div>
     </div>
-    @include('components.company_footer')
+{{--    @include('components.company_footer')--}}
 </div>
 @include('components.pixel_footer')
 </body>

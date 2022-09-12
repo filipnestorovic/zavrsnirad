@@ -278,7 +278,7 @@
         </div>
     </section>
 </div>
-@include('components.company_footer')
+{{--@include('components.company_footer')--}}
 <div class="ac_footer">
     <span>&copy; {{ now()->year }} Copyright. Sva prava zadržana.</span><br>
     <p></p>

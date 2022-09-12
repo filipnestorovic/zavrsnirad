@@ -513,7 +513,7 @@
         </div>
     </footer>
     @if($product->brand_name === "Flexonik")
-        @include('components.company_footer')
+{{--        @include('components.company_footer')--}}
     @endif
 </div>
 

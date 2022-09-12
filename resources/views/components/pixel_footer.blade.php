@@ -1,3 +1,4 @@
+@include('components.company_footer')
 <input type="hidden" id="currencyHidden" value="{{ $prices[1]['currency']}}"/>
 <style>
     .phoneErrorInput {

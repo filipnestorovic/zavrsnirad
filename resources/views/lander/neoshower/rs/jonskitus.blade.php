@@ -340,7 +340,7 @@
             </div>
         </div>
     </main>
-    @include('components.company_footer')
+{{--    @include('components.company_footer')--}}
 </div>
 @include('components.pixel_footer')
 <script src="{{ asset('/') }}neoshowerFiles/jonskitus/owl.carousel.min.js"></script>
