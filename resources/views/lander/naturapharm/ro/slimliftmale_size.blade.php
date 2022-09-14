@@ -227,7 +227,7 @@
                 {{csrf_field()}}
                 @include('lander.naturapharm.components.form_hidden_fields')
                 <input class="input" type="text" name="name" placeholder="Numele și prenumele" required="">
-                <input class="input-phone input" type="tel" name="Numar de telefon" placeholder="Telefon" required="" id="phone">
+                <input class="input-phone input" type="tel" name="phone" placeholder="Numar de telefon" required="" id="phone">
                 <input class="input" type="text" name="shipping_address" placeholder="Strada și numărul" required="">
                 <input class="input" type="text" name="shipping_city" placeholder="Oraș" required="">
                 <input class="input" type="text" name="shipping_zip" placeholder="Număr poștal" required="">
