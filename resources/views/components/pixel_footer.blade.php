@@ -1,4 +1,6 @@
-@include('components.company_footer')
+@if(isset($product->country_code) && $product->country_code === "rs")
+    @include('components.company_footer')
+@endif
 <input type="hidden" id="currencyHidden" value="{{ $prices[1]['currency']}}"/>
 <style>
     .phoneErrorInput {
