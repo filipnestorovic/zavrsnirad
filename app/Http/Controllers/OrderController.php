@@ -433,7 +433,7 @@ class OrderController extends Controller
         }
 
         $woocommerce = new WooClient(
-            'https://wombatshop.eu',
+            'https://wombatshopz.com',
             'ck_9fd314e0b1342eb7550928b54fa3e3c63349b427',
             'cs_fdc71728a01eb53f7712f474bd23f1b5b2e8cd15',
             [
