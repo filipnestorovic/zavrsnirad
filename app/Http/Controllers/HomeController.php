@@ -662,7 +662,7 @@ class HomeController extends Controller
         if($domain === "dailysharkpena.com"||$domain === "myairlab.com") {
             $token = 'EAACkTAiEwt0BAJ5scyudCeixFDDP7KSvmnjoBlZAnfeQdY2LPTviCEMbU1csadl9MZBv6LfzVmtIiXQpaPJBh8zRfUOK75QqKwEwfUMkWdzIo1oLew3BIGqjE9PIQZCGmwLQCO5cBjvmvx9uTLyZByCBgqseoz5w4WnPxNeIbjQbFe6rDrgQ';
         } else {
-            $token = 'EAAOuqmKBZBMMBAPy36r8D32y8HMXZABIn2FhA1IzaKoX2ymPZB0aWErizXpR1TQCnxHdWiKDh27UdFYy0jiAODOW067vxiynm3mFge4bj9lo4BT9Tl53vMnmgAHRYLWP6R1tVtZAqrqEBL5rBFWW99J9YPbl4imbM9CEuQWb2mCFuolj6ulQ';
+            $token = 'EAACkTAiEwt0BAAB6UuOToDz8hwYouVR9OkroOk6JZAGfmLdFYGmzyI4RyCuVQ9GRfPaC8LoSyOXsaiZCtYqRYZAOIw3ixQlTW8SJd4ZCsZBEk51E7aw2gwjrdV0vcI6oqHXxGgMjOGminrWIYT2qGAsQf4aMNnGYnF0yAnIE2R5jNF6zHY7We';
         }
 
         $excludeCApi = ["937389627038619", "324231612589924","171186311596788","228655165563052","486215135791311", "587201949053897"];
