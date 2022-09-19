@@ -654,6 +654,8 @@ class HomeController extends Controller
 
     public function sendConversionApiFB(Request $request) {
 
+        return $request->get('fb_event');
+
         $session_id = $request->get('session_id');
         $pixel_id = $request->get('pixel_id');
         $fb_event = $request->get('fb_event');
