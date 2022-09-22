@@ -190,7 +190,7 @@ a {
     margin: auto;
     padding: 30px 0;
     border: 1px solid #888;
-    width: 337px;
+    width: 337px !important;
     text-align: center;
 
 }

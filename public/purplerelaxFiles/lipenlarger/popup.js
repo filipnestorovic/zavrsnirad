@@ -1,15 +1,12 @@
- 
-var modal2 = document.getElementById("myModal2");
-var span9 = document.getElementsByClassName("close9")[0];
+
+var orderModal = document.getElementById("orderModal");
+
 $(document).ready(function(){
     $(".fform").click(function() {
-        modal2.style.display = "block";
+        orderModal.style.display = "block";
     });
+    var closeSpan = document.getElementsByClassName("close")[0];
+    closeSpan.onclick = function() {
+        orderModal.style.display = "none";
+    };
 });
- 
-window.onclick = function(event) {
-    if (event.target == modal2) {
-        modal2.style.display = "none";
-    }
-   
-}
