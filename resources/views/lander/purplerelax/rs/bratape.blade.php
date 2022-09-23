@@ -54,13 +54,13 @@
             <div class="cost clearfix">
                         <span class="old-cost">
                             Redovna cena:<br/>
-                            <span class="price_land_s4">{{ $prices[1]['originalPrice'] }}</span>
-                            <span class="price_land_curr">{{ $prices[1]['currency'] }}</span>
+                            <span class="price_land_s4">{{ $prices[2]['originalPrice'] }}</span>
+                            <span class="price_land_curr">{{ $prices[2]['currency'] }}</span>
                         </span>
                 <span class="new-cost">
                             Cena sada:<br/>
-                             <span class="price_land_s1">{{ $prices[1]['amount'] }}</span><span
-                        class="price_land_curr">{{ $prices[1]['currency'] }}</span>
+                             <span class="price_land_s1">{{ $prices[2]['amount'] }}</span><span
+                        class="price_land_curr">{{ $prices[2]['currency'] }}</span>
                         </span>
             </div>
             <a class="button-m" href="#zakaz">Poručite sada</a>
@@ -164,13 +164,13 @@
             <div class="cost clearfix">
                         <span class="old-cost">
                             Redovna cena:<br/>
-                            <span class="price_land_s4">{{ $prices[1]['originalPrice'] }}</span>
-                            <span class="price_land_curr">{{ $prices[1]['currency'] }}</span>
+                            <span class="price_land_s4">{{ $prices[2]['originalPrice'] }}</span>
+                            <span class="price_land_curr">{{ $prices[2]['currency'] }}</span>
                         </span>
                 <span class="new-cost">
                             Cena sa popustom:<br/>
-                             <span class="price_land_s1">{{ $prices[1]['amount'] }}</span><span
-                        class="price_land_curr">{{ $prices[1]['currency'] }}</span>
+                             <span class="price_land_s1">{{ $prices[2]['amount'] }}</span><span
+                        class="price_land_curr">{{ $prices[2]['currency'] }}</span>
                         </span>
             </div>
             <div class="order" id="zakaz">
