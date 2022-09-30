@@ -305,9 +305,9 @@
                 <form class="main-order-form order-form" action="{{$orderRoute}}" method="post">
                     {{ csrf_field() }}
                     @include('lander.naturapharm.components.form_hidden_fields')
+                    <input type="hidden" name="gpid" value="256"/>
                     <input type="text" class="form-item" name="name" placeholder="Ime i prezime" required>
                     <input type="tel" class="form-item only_number" name="phone" placeholder="Telefon" required>
-
                     <div class="wrapper-prod">
                         <div class="prod"></div>
                         <div class="price">
