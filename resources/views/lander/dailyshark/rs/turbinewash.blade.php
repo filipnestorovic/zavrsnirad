@@ -10,66 +10,7 @@
     <link rel="stylesheet" href="{{ asset('/') }}dailysharkFiles/turbinewash/flexboxgrid.min.css" type="text/css" media="all">
     <link rel="stylesheet" href="{{ asset('/') }}dailysharkFiles/turbinewash/slick.css">
     <link rel="stylesheet" href="{{ asset('/') }}dailysharkFiles/turbinewash/style.css" type="text/css" media="all">
-    <style>
-        @charset 'UTF-8';
-        /* Slider */
-        .slick-loading .slick-list {
-            background: #fff url('{{ asset('/') }}shared_files/ajax-loader.gif') center center no-repeat;
-        }
-        /* Icons */
-        @font-face {
-            font-family: 'slick';
-            font-weight: normal;
-            font-style: normal;
-
-            src: url('{{ asset('/') }}fonts/slick.eot');
-            src: url('{{ asset('/') }}fonts/slick.eot%40#iefix') format('embedded-opentype'), url('{{ asset('/') }}fonts/slick.woff') format('woff'), url('{{ asset('/') }}fonts/slick.ttf') format('truetype'), url('{{ asset('/') }}fonts/slick.svg#slick') format('svg');
-        }
-        @font-face {
-            font-family: 'fontello';
-            src: url('{{ asset('/') }}fonts/fontello.eot');
-            src: url('{{ asset('/') }}fonts/fontello.eot#iefix') format('embedded-opentype'),
-            url('{{ asset('/') }}fonts/fontello.woff2') format('woff2'),
-            url('{{ asset('/') }}fonts/fontello.woff') format('woff'),
-            url('{{ asset('/') }}fonts/fontello.ttf') format('truetype'),
-            url('{{ asset('/') }}fonts/fontello.svg#fontello') format('svg');
-            font-weight: normal;
-            font-style: normal;
-        }
-        [class^="icon-"]:before, [class*=" icon-"]:before {
-            font-family: "fontello";
-            font-style: normal;
-            font-weight: normal;
-            speak: none;
-            display: inline-block;
-            text-decoration: inherit;
-            width: 1em;
-            margin-right: .2em;
-            text-align: center;
-            font-variant: normal;
-            text-transform: none;
-            line-height: 1em;
-            margin-left: .2em;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;/
-        }
-        .icon-down-open:before { content: '\e800'; } /* '' */
-        .icon-play:before { content: '\e801'; } /* '' */
-        .icon-star:before { content: '\e802'; } /* '' */
-        .icon-star-empty:before { content: '\e803'; } /* '' */
-        .icon-heart:before { content: '\e804'; } /* '' */
-        .icon-blood-drop:before { content: '\e808'; } /* '' */
-        .icon-distance:before { content: '\e809'; } /* '' */
-        .icon-footsteps-silhouette-variant:before { content: '\e80a'; } /* '' */
-        .icon-ok-circled:before { content: '\f06d'; } /* '' */
-        .icon-mail-alt:before { content: '\f0e0'; } /* '' */
-        .icon-star-half-alt:before { content: '\f123'; } /* '' */
-        .icon-thumbs-up-alt:before { content: '\f164'; } /* '' */
-        .icon-heartbeat:before { content: '\f21e'; } /* '' */
-        .icon-bed:before { content: '\f236'; } /* '' */
-        .icon-facebook-squared:before { content: '\f30e'; } /* '' */
-        .icon-fire:before { content: '\f525'; } /* '' */
-    </style>
+    <style>@charset 'UTF-8';.slick-loading .slick-list{background:#fff url('{{ asset('/') }}shared_files/ajax-loader.gif') center center no-repeat}@font-face{font-family:'slick';font-weight:normal;font-style:normal;src:url('{{ asset('/') }}fonts/slick.eot');src:url('{{ asset('/') }}fonts/slick.eot%40#iefix') format('embedded-opentype'),url('{{ asset('/') }}fonts/slick.woff') format('woff'),url('{{ asset('/') }}fonts/slick.ttf') format('truetype'),url('{{ asset('/') }}fonts/slick.svg#slick') format('svg')}@font-face{font-family:'fontello';src:url('{{ asset('/') }}fonts/fontello.eot');src:url('{{ asset('/') }}fonts/fontello.eot#iefix') format('embedded-opentype'),url('{{ asset('/') }}fonts/fontello.woff2') format('woff2'),url('{{ asset('/') }}fonts/fontello.woff') format('woff'),url('{{ asset('/') }}fonts/fontello.ttf') format('truetype'),url('{{ asset('/') }}fonts/fontello.svg#fontello') format('svg');font-weight:normal;font-style:normal}[class^="icon-"]:before,[class*=" icon-"]:before{font-family:"fontello";font-style:normal;font-weight:normal;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:.2em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;margin-left:.2em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;/}.icon-down-open:before{content:'\e800'}.icon-play:before{content:'\e801'}.icon-star:before{content:'\e802'}.icon-star-empty:before{content:'\e803'}.icon-heart:before{content:'\e804'}.icon-blood-drop:before{content:'\e808'}.icon-distance:before{content:'\e809'}.icon-footsteps-silhouette-variant:before{content:'\e80a'}.icon-ok-circled:before{content:'\f06d'}.icon-mail-alt:before{content:'\f0e0'}.icon-star-half-alt:before{content:'\f123'}.icon-thumbs-up-alt:before{content:'\f164'}.icon-heartbeat:before{content:'\f21e'}.icon-bed:before{content:'\f236'}.icon-facebook-squared:before{content:'\f30e'}.icon-fire:before{content:'\f525'}</style>
 </head>
 <body>
 <div class="wrapper animated fadeIn">
@@ -90,7 +31,7 @@
                 <div class="price row col-xs-12 center-xs middle-xs">
                      <span class="old">
                         {{ $prices[1]['originalPrice'] }}
-                        {{ $prices[1]['currency'] }}
+                         {{ $prices[1]['currency'] }}
                      </span>
                     <span class="new pulse">
                         {{ $prices[1]['amount'] }}
@@ -130,14 +71,15 @@
             </div>
             <div class="text">
                 <div class="title">TURBO PRITISAK I VISOKI BROJ OBRTAJA!</div>
-                <b><span class="italic">Turbine Wash </span></b> je inovativni uređaj koji se u Evropi uveliko koristi radi uštede električne energije i vode. <br>
+                <b><span class="italic">Turbine Wash </span></b> je inovativni uređaj koji se u Evropi uveliko koristi
+                radi uštede električne energije i vode. <br>
                 <span>Smanjuje račune za vodu i struju do 30%</span>
             </div>
             <div class="lower row col-xs-12 center-xs middle-xs">
                 <div class="countdown_button row col-xs-12 center-xs middle-xs">
                     <div class="content row col-xs-12 center-xs middle-xs">
                         <div class="btn row col-sm-6 col-xs-12 center-xs middle-xs">
-                            <a href="#order_frame" class="scroll_to_order" title="ORDINA ORA">
+                            <a href="#order_frame" class="scroll_to_order" title="NARUČITE SADA">
                                 <div class="mybutton_round_2"> NARUČITE SADA</div>
                             </a>
                         </div>
@@ -166,7 +108,8 @@
                         <h2 class="row end-md center-xs middle-xs">
                             <i class="icon icon-ok-circled"></i> PRANJE <br/> SUDOVA
                         </h2>
-                        <p>Potopite sudove u sudoperu, sipajte toplu vodu, deterdžent i pustite ga da radi. Nakon nekoliko minuta <b>samo isperite sudove čistom vodom.</b></p>
+                        <p>Potopite sudove u sudoperu, sipajte toplu vodu, deterdžent i pustite ga da radi. Nakon
+                            nekoliko minuta <b>samo isperite sudove čistom vodom.</b></p>
                     </div>
                 </div>
                 <div class="center-text col-md-4 col-xs-12">
@@ -181,13 +124,15 @@
                         <h2 class="row start-md center-xs middle-xs">
                             <i class="icon icon-ok-circled"></i> PRANJE <br/> VEŠA
                         </h2>
-                        <p>Sipajte toplu ili vruću vodu u posudu, prašak za veš i uključite Turbine Wash. Nakon <span>10 do 15 minuta</span> isperite veš u čistoj vodi i smatrajte ga opranim.</p>
+                        <p>Sipajte toplu ili vruću vodu u posudu, prašak za veš i uključite Turbine Wash. Nakon <span>10 do 15 minuta</span>
+                            isperite veš u čistoj vodi i smatrajte ga opranim.</p>
                     </div>
                     <div class="feature-item feature-item-e">
                         <h2 class="row start-md center-xs middle-xs">
                             <i class="icon icon-ok-circled"></i> PRANJE <br/> VOĆA I POVRĆA
                         </h2>
-                        <p>Najefikasnije pranje voća i povrća ikada. Sipajte čistu hladnu vodu u posudu i Turbine Wash će ga oprati <b>daleko bolje nego što vi ručno možete.</b></p>
+                        <p>Najefikasnije pranje voća i povrća ikada. Sipajte čistu hladnu vodu u posudu i Turbine Wash
+                            će ga oprati <b>daleko bolje nego što vi ručno možete.</b></p>
                     </div>
                 </div>
             </div>
@@ -208,13 +153,18 @@
             <div class="text lightBlueTexture row col-md-6 col-xs-12 center-xs middle-xs no-margin no-padding">
                 <div class="title start-xs">
                     <div class="innerTitle">UŠTEDA STRUJE, VODE I VREMENA?</div>
-                    <p>U periodu kada su komunalije poskupele, ovaj proizvod je odlično rešenje za <strong>uštedu kućnog budžeta!</strong></p>
-                    <p>Pranje sudova nekada zna da oduzme mnogo vremena, a ostaci hrane često izazivaju osećaj gađenja. Potopite Turbine Wash u sudoperu, poređajte sudove okolo,
-                        sipajte vodu i deterdžent i pranje može da počne. Posle isperite samo čistom vodom i ceo proces je gotov.</p>
+                    <p>U periodu kada su komunalije poskupele, ovaj proizvod je odlično rešenje za <strong>uštedu kućnog
+                            budžeta!</strong></p>
+                    <p>Pranje sudova nekada zna da oduzme mnogo vremena, a ostaci hrane često izazivaju osećaj gađenja.
+                        Potopite Turbine Wash u sudoperu, poređajte sudove okolo,
+                        sipajte vodu i deterdžent i pranje može da počne. Posle isperite samo čistom vodom i ceo proces
+                        je gotov.</p>
                     <p><strong>Zašto kupovati skupe mašine za pranje sudova koje troše mnogo struje i vode?</strong></p>
                     <br>
                     <br>
-                    <div class="cornerButton"><i class="icon icon-play"></i><a href="#order_frame" class="scroll_to_order"> KUPITE SADA</a></div>
+                    <div class="cornerButton"><i class="icon icon-play"></i><a href="#order_frame"
+                                                                               class="scroll_to_order"> KUPITE SADA</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -234,8 +184,12 @@
                                 <span> 1</span> MALI POTROŠAČ
                             </div>
                             <div class="text">Turbine Wash je dizajniran i patentiran u cilju uštede električne enerije.
-                                Neverovatno, ali potrebno mu je samo USB napajanje. Dakle, potrošiće isto struje za 10 minuta rada kao telefon koji je na punjenju 10 minuta.</div>
-                            <div class="cornerButton"><i class="icon icon-play"></i><a href="#order_frame" class="scroll_to_order"> KUPITE SADA</a></div>
+                                Neverovatno, ali potrebno mu je samo USB napajanje. Dakle, potrošiće isto struje za 10
+                                minuta rada kao telefon koji je na punjenju 10 minuta.
+                            </div>
+                            <div class="cornerButton"><i class="icon icon-play"></i><a href="#order_frame"
+                                                                                       class="scroll_to_order"> KUPITE
+                                    SADA</a></div>
                         </div>
                     </div>
                 </li>
@@ -248,8 +202,13 @@
                             <div class="title row col-xs-12 middle-xs center-xs">
                                 <span> 2</span> SNAŽAN MOTOR
                             </div>
-                            <div class="text">Snažan motor koji poseduje Turbine Wash je implementiran u malo kućište, tako da ne zauzima mnogo prostora i može da se ubaci u bilo koju malo veću plastičnu posudu i čak u najmanju sudoperu.</div>
-                            <div class="cornerButton"><i class="icon icon-play"></i><a href="#order_frame" class="scroll_to_order"> KUPITE SADA</a></div>
+                            <div class="text">Snažan motor koji poseduje Turbine Wash je implementiran u malo kućište,
+                                tako da ne zauzima mnogo prostora i može da se ubaci u bilo koju malo veću plastičnu
+                                posudu i čak u najmanju sudoperu.
+                            </div>
+                            <div class="cornerButton"><i class="icon icon-play"></i><a href="#order_frame"
+                                                                                       class="scroll_to_order"> KUPITE
+                                    SADA</a></div>
                         </div>
                     </div>
                 </li>
@@ -262,8 +221,12 @@
                             <div class="title row col-xs-12 middle-xs center-xs">
                                 <span> 3</span> NAPAJANJE
                             </div>
-                            <div class="text">Uređaj radi na USB napajanje, tako da ga možete pokretati čak i sa računara, a može se povezivati i na strujni adapter za bilo kog telefona.</div>
-                            <div class="cornerButton"><i class="icon icon-play"></i><a href="#order_frame" class="scroll_to_order"> KUPITE SADA</a></div>
+                            <div class="text">Uređaj radi na USB napajanje, tako da ga možete pokretati čak i sa
+                                računara, a može se povezivati i na strujni adapter za bilo kog telefona.
+                            </div>
+                            <div class="cornerButton"><i class="icon icon-play"></i><a href="#order_frame"
+                                                                                       class="scroll_to_order"> KUPITE
+                                    SADA</a></div>
                         </div>
                     </div>
                 </li>
@@ -290,7 +253,7 @@
             <div
                 class="text lightBlueTexture row col-md-4 col-sm-5 col-xs-12 center-xs middle-xs no-margin no-padding">
                 <div class="title start-xs">
-                    <div class="innerTitle"> ZAŠTO KUPITI TURBINE WASH? </div>
+                    <div class="innerTitle"> ZAŠTO KUPITI TURBINE WASH?</div>
                     Evo nekoliko razloga zbog kojih se naši kupci odlučuju za ovaj uređaj: <br><br>
                     <ul>
                         <li>Ušteda struje</li>
@@ -301,7 +264,9 @@
                     </ul>
                     <br>
                     <br>
-                    <div class="cornerButton"><i class="icon icon-play"></i><a href="#order_frame" class="scroll_to_order"> KUPITE SADA</a></div>
+                    <div class="cornerButton"><i class="icon icon-play"></i><a href="#order_frame"
+                                                                               class="scroll_to_order"> KUPITE SADA</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -321,13 +286,16 @@
                                     </div>
                                     <div class="row header">
                                         <div class="avatar">
-                                            <img src="{{ asset('/') }}dailysharkFiles/turbinewash/people_3.jpg" alt="Katarina">
+                                            <img src="{{ asset('/') }}dailysharkFiles/turbinewash/people_3.jpg"
+                                                 alt="Katarina">
                                         </div>
                                         <div class="name">
                                             <h5><a> Katarina</a></h5>
                                         </div>
                                     </div>
-                                    <div class="row text">Odlična kupovima, dobar i kvalitetan proizvod. Vrlo je jednostavan za upotrebu. Uključite ga i to je to! Sve preporuke</div>
+                                    <div class="row text">Odlična kupovima, dobar i kvalitetan proizvod. Vrlo je
+                                        jednostavan za upotrebu. Uključite ga i to je to! Sve preporuke
+                                    </div>
                                     <hr>
                                     <div class="rating row col-xs-12">
                                         <i class="icon icon-star"></i>
@@ -347,13 +315,16 @@
                                     </div>
                                     <div class="row header">
                                         <div class="avatar">
-                                            <img src="{{ asset('/') }}dailysharkFiles/turbinewash/people_4.jpg" alt="Francesca dell'Olmo">
+                                            <img src="{{ asset('/') }}dailysharkFiles/turbinewash/people_4.jpg"
+                                                 alt="Francesca dell'Olmo">
                                         </div>
                                         <div class="name">
                                             <h5><a> Una</a></h5>
                                         </div>
                                     </div>
-                                    <div class="row text">Turbine Wash je extraaaa! Moćno radi, moćno izgleda, isporuke je bila brza a cena odlična! Bolju kupovinu odavno nisam imala!</div>
+                                    <div class="row text">Turbine Wash je extraaaa! Moćno radi, moćno izgleda, isporuke
+                                        je bila brza a cena odlična! Bolju kupovinu odavno nisam imala!
+                                    </div>
                                     <hr>
                                     <div class="rating row col-xs-12">
                                         <i class="icon icon-star"></i>
@@ -373,14 +344,18 @@
                                     </div>
                                     <div class="row header">
                                         <div class="avatar">
-                                            <img src="{{ asset('/') }}dailysharkFiles/turbinewash/people_2.jpg" alt="Giacomo Partisani">
+                                            <img src="{{ asset('/') }}dailysharkFiles/turbinewash/people_2.jpg"
+                                                 alt="Giacomo Partisani">
                                         </div>
                                         <div class="name">
                                             <h5><a href target="_blank"> Jovan</a></h5>
                                         </div>
                                     </div>
-                                    <div class="row text">Živim sam i jako malo veša imam za pranje. Ne isplati mi se paliti veš mašinu često. Sa ovim proizvodom operem donji veš i peškire za čas posla.
-                                        Jako sam zadovoljan, potpuno zadovoljava moje potrebe.</div>
+                                    <div class="row text">Živim sam i jako malo veša imam za pranje. Ne isplati mi se
+                                        paliti veš mašinu često. Sa ovim proizvodom operem donji veš i peškire za čas
+                                        posla.
+                                        Jako sam zadovoljan, potpuno zadovoljava moje potrebe.
+                                    </div>
                                     <hr>
                                     <div class="rating row col-xs-12">
                                         <i class="icon icon-star"></i>
@@ -419,23 +394,28 @@
                             <h3 class="title">PODACI ZA DOSTAVU</h3>
                         </center>
                         <div class="form-group">
-{{--                            <label>Ime i prezime</label>--}}
-                            <input type="text" name="name" class="form-control" placeholder="Ime i prezime" required="required">
+                            {{--                            <label>Ime i prezime</label>--}}
+                            <input type="text" name="name" class="form-control" placeholder="Ime i prezime"
+                                   required="required">
                         </div>
                         <div class="form-group">
-{{--                            <label>Telefon</label>--}}
-                            <input type="tel" name="phone" class="form-control" placeholder="Telefon" required="required">
+                            {{--                            <label>Telefon</label>--}}
+                            <input type="tel" name="phone" class="form-control" placeholder="Telefon"
+                                   required="required">
                         </div>
                         <div class="form-group">
-{{--                            <label>Adresa</label>--}}
-                            <input type="text" name="shipping_address" class="form-control" placeholder="Adresa" required="required">
+                            {{--                            <label>Adresa</label>--}}
+                            <input type="text" name="shipping_address" class="form-control" placeholder="Adresa"
+                                   required="required">
                         </div>
                         <div class="form-group">
-{{--                            <label>Grad</label>--}}
-                            <input type="text" name="shipping_city" class="form-control" placeholder="Grad" required="required">
+                            {{--                            <label>Grad</label>--}}
+                            <input type="text" name="shipping_city" class="form-control" placeholder="Grad"
+                                   required="required">
                         </div>
                         <center>
-                            <button id="submit-button" class="btn btn-lg btn-warning new-sbm-btn" type="submit">PORUČI</button>
+                            <button id="submit-button" class="btn btn-lg btn-warning new-sbm-btn" type="submit">PORUČI
+                            </button>
                         </center>
                     </div>
                 </form>
@@ -446,7 +426,8 @@
         <div class="container row col-xs-12 center-xs">
             <div class="content">
                 <h1 class="title">Kupovina bez rizika 100%</h1>
-                <p class="subtitle">Kupite originalni proizvod na našem sajtu da biste izbegli <br/> loše kopije ovog proizvoda koje su se pojavile na tržištu.</p>
+                <p class="subtitle">Kupite originalni proizvod na našem sajtu da biste izbegli <br/> loše kopije ovog
+                    proizvoda koje su se pojavile na tržištu.</p>
                 <div class="list">
                     <ul>
                         <li class="row col-xs-12 middle-xs start-md center-xs">
