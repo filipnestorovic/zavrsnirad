@@ -183,32 +183,32 @@
         </div>
     </div>
 </div>
-<div class="order">
-    <div class="container">
-        <div class="order-top"> POŽURITE DA PORUČITE PEGLU SA 40% POPUSTA</div>
-        <div class="row">
-            <form class="form mid-form" method="POST" action="{{$orderRoute}}">
-                {{ csrf_field() }}
-                @include('lander.naturapharm.components.form_hidden_fields')
-                <div class="col-sm-4">
-                    <input name="name" class="order-name" placeholder="Ime i prezime" type="text" required>
-                </div>
-                <div class="col-sm-4">
-                    <input name="phone" class="order-tell" placeholder="Telefon" type="tel" required>
-                </div>
-                <div class="col-sm-4">
-                    <input name="shipping_address" class="main-name" placeholder="Adresa" type="text" required>
-                </div>
-                <div class="col-sm-4">
-                    <input name="shipping_city" class="main-name" placeholder="Grad" type="text" required>
-                </div>
-                <div class="col-sm-4">
-                    <button type="submit" class="order-button" data-ordersubmit>PORUČITE SA 40% POPUSTA</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
+{{--<div class="order">--}}
+{{--    <div class="container">--}}
+{{--        <div class="order-top"> POŽURITE DA PORUČITE PEGLU SA 40% POPUSTA</div>--}}
+{{--        <div class="row">--}}
+{{--            <form class="form mid-form" method="POST" action="{{$orderRoute}}">--}}
+{{--                {{ csrf_field() }}--}}
+{{--                @include('lander.naturapharm.components.form_hidden_fields')--}}
+{{--                <div class="col-sm-4">--}}
+{{--                    <input name="name" class="order-name" placeholder="Ime i prezime" type="text" required>--}}
+{{--                </div>--}}
+{{--                <div class="col-sm-4">--}}
+{{--                    <input name="phone" class="order-tell" placeholder="Telefon" type="tel" required>--}}
+{{--                </div>--}}
+{{--                <div class="col-sm-4">--}}
+{{--                    <input name="shipping_address" class="main-name" placeholder="Adresa" type="text" required>--}}
+{{--                </div>--}}
+{{--                <div class="col-sm-4">--}}
+{{--                    <input name="shipping_city" class="main-name" placeholder="Grad" type="text" required>--}}
+{{--                </div>--}}
+{{--                <div class="col-sm-4">--}}
+{{--                    <button type="submit" class="order-button" data-ordersubmit>PORUČITE SA 40% POPUSTA</button>--}}
+{{--                </div>--}}
+{{--            </form>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</div>--}}
 <div class="expert">
     <div class="container">
         <div class="expert-top">MIŠLJENJE NAŠIH KUPACA</div>
