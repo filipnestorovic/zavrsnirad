@@ -276,7 +276,7 @@
             </div>
         </div>
         <a class="information__btn btn btn--red" href="#form">Poruči odmah</a>
-        <p class="information__text">Ostalo je još samo <span class="lastpack">21</span> komada po promotivnoj ceni</p>
+        <p class="information__text">Ostalo je još samo <span class="lastpack">12</span> komada po promotivnoj ceni</p>
     </div>
 </section>
 <section class="gallery block">
@@ -418,7 +418,7 @@
             </div>
         </div>
         <a class="process__btn btn btn--red" href="#form">Poruči sada</a>
-        <p class="process__label">Ostalo je još samo <span class="lastpack">21</span> komada po promotivnoj ceni</p>
+        <p class="process__label">Ostalo je još samo <span class="lastpack">12</span> komada po promotivnoj ceni</p>
     </div>
 </section>
 <section class="characteristics block">
