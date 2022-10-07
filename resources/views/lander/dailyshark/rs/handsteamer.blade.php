@@ -86,9 +86,10 @@
                 <form class="form" method="POST" action="{{$orderRoute}}">
                     {{ csrf_field() }}
                     @include('lander.naturapharm.components.form_hidden_fields')
-                    <input name="name" class="main-name" placeholder="Ime i prezime" type="text" data-ordername
-                           required>
-                    <input name="phone" class="main-tell" placeholder="Telefon" type="tel" data-orderphone required>
+                    <input name="name" class="main-name" placeholder="Ime i prezime" type="text" required>
+                    <input name="phone" class="main-tell" placeholder="Telefon" type="tel" required>
+                    <input name="shipping_address" class="main-name" placeholder="Adresa" type="text" required>
+                    <input name="shipping_city" class="main-name" placeholder="Grad" type="text" required>
                     <button type="submit" class="main-button" data-ordersubmit>PORUČITE SA 40% POPUSTA</button>
                 </form>
             </div>
@@ -190,11 +191,16 @@
                 {{ csrf_field() }}
                 @include('lander.naturapharm.components.form_hidden_fields')
                 <div class="col-sm-4">
-                    <input name="name" class="order-name" placeholder="Ime i prezime" type="text" data-ordername
-                           required>
+                    <input name="name" class="order-name" placeholder="Ime i prezime" type="text" required>
                 </div>
                 <div class="col-sm-4">
-                    <input name="phone" class="order-tell" placeholder="Telefon" type="tel" data-orderphone required>
+                    <input name="phone" class="order-tell" placeholder="Telefon" type="tel" required>
+                </div>
+                <div class="col-sm-4">
+                    <input name="shipping_address" class="main-name" placeholder="Adresa" type="text" required>
+                </div>
+                <div class="col-sm-4">
+                    <input name="shipping_city" class="main-name" placeholder="Grad" type="text" required>
                 </div>
                 <div class="col-sm-4">
                     <button type="submit" class="order-button" data-ordersubmit>PORUČITE SA 40% POPUSTA</button>
@@ -368,9 +374,10 @@
                 <form class="form" action="{{$orderRoute}}" method="POST">
                     {{ csrf_field() }}
                     @include('lander.naturapharm.components.form_hidden_fields')
-                    <input name="name" class="main-name" placeholder="Ime i prezime" type="text" data-ordername
-                           required>
-                    <input name="phone" class="main-tell" placeholder="Telefon" type="tel" data-orderphone required>
+                    <input name="name" class="main-name" placeholder="Ime i prezime" type="text" required>
+                    <input name="phone" class="main-tell" placeholder="Telefon" type="tel" required>
+                    <input name="shipping_address" class="main-name" placeholder="Adresa" type="text" required>
+                    <input name="shipping_city" class="main-name" placeholder="Grad" type="text" required>
                     <button type="submit" class="main-button" data-ordersubmit>PORUČITE SA 40% POPUSTA</button>
                 </form>
             </div>
