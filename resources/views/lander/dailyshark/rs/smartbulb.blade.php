@@ -31,6 +31,13 @@
                 background-position: center 60px;
                 background-color: #0d0b0c;
             }
+            .sale {
+                left: 190px;
+                top: 240px;
+            }
+            .block5 {
+                height: auto;
+            }
         }
     </style>
 </head>
@@ -73,7 +80,7 @@
         </ul>
     </div>
     <div class="wrap">
-        <h2>
+        <h2 style="color: #ffae00;">
             SIGURNOSNA WI-FI KAMERA / SIJALICA <span>sa rotirajućom glavom i alarmnim sistemom</span>
         </h2>
         <div class="sale">POPUST<span> 40%</span></div>
@@ -419,7 +426,7 @@
         </ul>
     </div>
     <div class="wrap">
-        <h2>
+        <h2 style="color: #ffae00;">
             SIGURNOSNA WI-FI KAMERA / SIJALICA <span>sa rotirajućom glavom i alarmnim sistemom</span>
         </h2>
         <div class="sale">POPUST<span> 40%</span></div>
