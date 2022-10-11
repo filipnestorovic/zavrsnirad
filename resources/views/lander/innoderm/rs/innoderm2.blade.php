@@ -367,25 +367,25 @@
             </div>
         </div>
     </section>
-    <section class="related">
-        <div class="limit">
-            <div class="decor">
-                <div class="decor__element decor--5 parallax" data-rellax-speed="2">
-                    <span></span>
-                </div>
-                <div class="decor__element decor--1 parallax" data-rellax-speed="-3">
-                    <span></span>
-                </div>
-                <div class="decor__element decor--2 parallax" data-rellax-speed="1">
-                    <span></span>
-                </div>
-                <div class="decor__element decor--3 parallax" data-rellax-speed="2">
-                    <span></span>
-                </div>
-                <div class="decor__element decor--4 parallax" data-rellax-speed="-2">
-                    <span></span>
-                </div>
-            </div>
+{{--    <section class="related">--}}
+{{--        <div class="limit">--}}
+{{--            <div class="decor">--}}
+{{--                <div class="decor__element decor--5 parallax" data-rellax-speed="2">--}}
+{{--                    <span></span>--}}
+{{--                </div>--}}
+{{--                <div class="decor__element decor--1 parallax" data-rellax-speed="-3">--}}
+{{--                    <span></span>--}}
+{{--                </div>--}}
+{{--                <div class="decor__element decor--2 parallax" data-rellax-speed="1">--}}
+{{--                    <span></span>--}}
+{{--                </div>--}}
+{{--                <div class="decor__element decor--3 parallax" data-rellax-speed="2">--}}
+{{--                    <span></span>--}}
+{{--                </div>--}}
+{{--                <div class="decor__element decor--4 parallax" data-rellax-speed="-2">--}}
+{{--                    <span></span>--}}
+{{--                </div>--}}
+{{--            </div>--}}
 {{--            <div class="related__content">--}}
 {{--                <h2 class="s-title">Za maksimalan efekat uz svaku kremu poklanjamo JADE ROLLER</h2>--}}
 {{--                <ul class="related__list">--}}
@@ -418,8 +418,8 @@
 {{--                    *Proizvodi se mogu koristiti zajedno ili odvojeno--}}
 {{--                </p>--}}
 {{--            </div>--}}
-        </div>
-    </section>
+{{--        </div>--}}
+{{--    </section>--}}
     <section class="banner">
         <div class="limit">
             <div class="decor">
