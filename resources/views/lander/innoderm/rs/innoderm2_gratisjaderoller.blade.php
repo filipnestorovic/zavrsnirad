@@ -128,6 +128,7 @@
                         <form action="{{$orderRoute}}" class="form" method="POST">
                             {{ csrf_field() }}
                             @include('lander.naturapharm.components.form_hidden_fields')
+                            <input type="hidden" name="gpid" value="55"/>
                             <div class="form-inner">
                                 <div class="price-wrapper">
                                     <div class="new-price">
@@ -386,38 +387,38 @@
                     <span></span>
                 </div>
             </div>
-{{--            <div class="related__content">--}}
-{{--                <h2 class="s-title">Za maksimalan efekat uz svaku kremu poklanjamo JADE ROLLER</h2>--}}
-{{--                <ul class="related__list">--}}
-{{--                    <li>--}}
-{{--                        <div class="list-description">--}}
-{{--                            <div class="list__caption">--}}
-{{--                                <span>Potpuno</span>--}}
-{{--                            </div>--}}
-{{--                            <div class="list__caption">--}}
-{{--                                <span>  besplatno  </span>--}}
-{{--                            </div>--}}
-{{--                            <p>Jade Roller je najnoviji hit na svetskom tržištu, namenjen damama koje žele da zategnu, podmlade I isčiste kožu lica. Napravljen od žada – poludragog kamena,  ne oštećuje vašu kožu, nema neželjena dejstva.</p>--}}
-{{--                        </div>--}}
-{{--                        <img alt="" class="list-img" src="{{ asset('/') }}innodermFiles/innoderm2/related-product1.png"/>--}}
-{{--                    </li>--}}
-{{--                    <li>--}}
-{{--                        <div class="list-description">--}}
-{{--                            <div class="list__caption">--}}
-{{--                                <span>Najnoviji hit</span>--}}
-{{--                            </div>--}}
-{{--                            <div class="list__caption">--}}
-{{--                                <span>na svetskom tržištu</span>--}}
-{{--                            </div>--}}
-{{--                            <p>Sastoji se od drške na koju su pričvršćena dva kamena u obliku valjka različite veličine, od kojih se jedan koristi za čelo i obraze, a drugi, manji za predeo oko očiju.</p>--}}
-{{--                        </div>--}}
-{{--                        --}}{{--<img alt="" class="list-img" src="{{ asset('/') }}innodermFiles/innoderm2/related-product2.png"/>--}}
-{{--                    </li>--}}
-{{--                </ul>--}}
-{{--                <p class="related__footnote">--}}
-{{--                    *Proizvodi se mogu koristiti zajedno ili odvojeno--}}
-{{--                </p>--}}
-{{--            </div>--}}
+            <div class="related__content">
+                <h2 class="s-title">Za maksimalan efekat uz svaku kremu poklanjamo JADE ROLLER</h2>
+                <ul class="related__list">
+                    <li>
+                        <div class="list-description">
+                            <div class="list__caption">
+                                <span>Potpuno</span>
+                            </div>
+                            <div class="list__caption">
+                                <span>  besplatno  </span>
+                            </div>
+                            <p>Jade Roller je najnoviji hit na svetskom tržištu, namenjen damama koje žele da zategnu, podmlade I isčiste kožu lica. Napravljen od žada – poludragog kamena,  ne oštećuje vašu kožu, nema neželjena dejstva.</p>
+                        </div>
+                        <img alt="" class="list-img" src="{{ asset('/') }}innodermFiles/innoderm2/related-product1.png"/>
+                    </li>
+                    <li>
+                        <div class="list-description">
+                            <div class="list__caption">
+                                <span>Najnoviji hit</span>
+                            </div>
+                            <div class="list__caption">
+                                <span>na svetskom tržištu</span>
+                            </div>
+                            <p>Sastoji se od drške na koju su pričvršćena dva kamena u obliku valjka različite veličine, od kojih se jedan koristi za čelo i obraze, a drugi, manji za predeo oko očiju.</p>
+                        </div>
+                        {{--<img alt="" class="list-img" src="{{ asset('/') }}innodermFiles/innoderm2/related-product2.png"/>--}}
+                    </li>
+                </ul>
+                <p class="related__footnote">
+                    *Proizvodi se mogu koristiti zajedno ili odvojeno
+                </p>
+            </div>
         </div>
     </section>
     <section class="banner">
@@ -953,6 +954,7 @@
                         <form action="{{$orderRoute}}" class="form" id="order_form" method="POST">
                             {{ csrf_field() }}
                             @include('lander.naturapharm.components.form_hidden_fields')
+                            <input type="hidden" name="gpid" value="55"/>
                             <div class="form-inner">
                                 <div class="price-wrapper">
                                     <div class="new-price">
