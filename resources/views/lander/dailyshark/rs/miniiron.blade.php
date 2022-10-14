@@ -41,14 +41,14 @@
         }
     </style>
 </head>
-<body class="lang-ro">
+<body>
 <!-- Modal -->
 @include('components.display_errors')
 <div class="top">
     <div class="container">
         <div class="row">
             <div class="col-md-2 col-sm-3 col-xs-8">
-                <div class="top-logo">Hand Steamer</div>
+                <div class="top-logo">MINI IRON</div>
             </div>
             <div class="col-md-3 col-md-push-7 col-sm-6 mobile-section">
                 <div class="top-button"><a href="#order">Poručite odmah</a></div>
@@ -56,7 +56,7 @@
             <div class="col-md-7 col-md-pull-3 col-sm-9 col-xs-4">
                 <ul class="top-menu">
                     <li><a href="#ex1"> 8 razloga da kupite</a></li>
-                    <li><a href="#ex2"> ZAŠTO <span>HAND STEAMER</span></a></li>
+                    <li><a href="#ex2"> ZAŠTO <span>MINI IRON</span></a></li>
                     <li><a href="#ex4"> Preporuke</a></li>
                     <li><a href="#ex5"> Kako poručiti</a></li>
                 </ul>
@@ -65,7 +65,7 @@
                 </a>
                 <ul id="menu-mobile-menu" class="menu">
                     <li><a href="#ex1"> 8 razloga da kupite</a></li>
-                    <li><a href="#ex2"> ZAŠTO <span>HAND STEAMER</span></a></li>
+                    <li><a href="#ex2"> ZAŠTO <span>MINI IRON</span></a></li>
                     <li><a href="#ex4"> Preporuke</a></li>
                     <li><a href="#ex5"> Kako poručiti</a></li>
                     <li class="call-modal"><a href="#order">Poručite odmah</a></li>
@@ -77,7 +77,7 @@
 <div class="main">
     <div class="container">
         <div class="main-top">
-            PEGLANJE STVARI NA OFINGERU ZA POLA MINUTA?<br>
+            PEGLANJE STVARI ZA POLA MINUTA<br>
             <p>DA MOGUĆE JE SA OVOM MOĆNOM PEGLOM</p>
         </div>
         <div class="row">
@@ -115,22 +115,21 @@
                 </div>
             </div>
             <div class="col-md-5 col-sm-12">
-                <img class="main-img" src="{{ asset('/') }}dailysharkFiles/handsteamer/body-brush.png">
+                <img class="main-img" src="{{ asset('/') }}dailysharkFiles/miniiron/body-brush.png">
             </div>
         </div>
     </div>
 </div>
 <div class="reason" id="#ex1">
     <div class="container">
-        <div id="ex1" class="reason-top">8 RAZLOGA DA KUPITE HAND STEAMER</div>
+        <div id="ex1" class="reason-top">8 RAZLOGA DA KUPITE MINI IRON</div>
         <div class="row">
             <div class="col-md-4">
-                <img class="reason-img" src="{{ asset('/') }}dailysharkFiles/handsteamer/reason-img.png">
+                <img class="reason-img" src="{{ asset('/') }}dailysharkFiles/miniiron/reason-img.png">
             </div>
             <div class="col-md-8">
                 <div class="reason-list">
-                    <p><span> 1.</span> MOŽETE DA PEGLATE KOŠULJE, HALJINE I DRUGU ODEĆU DOK SU JOŠ NA OFINGERU. VRLO
-                        LAKO I JEDNOSTAVNO PEGLANJE</p>
+                    <p><span> 1.</span> MOŽETE DA PEGLATE KOŠULJE, HALJINE I DRUGU ODEĆU. VRLO LAKO I JEDNOSTAVNO PEGLANJE</p>
                     <p><span> 2.</span> NE OŠTEĆUJE TKANINU, NE RASTEŽE JE I NE UNIŠTAVA VLAKNA. DAJE VOLUMEN,
                         ELASTIČNOST I SJAJ ODEĆI</p>
                     <p><span> 3.</span> PARNA PEGLA ZA VERTIKALNO PEGLANJE IDEALNA JE ZA PEGLANJE KOŽNE ODEĆE, KRZNA
@@ -139,13 +138,8 @@
                         SE PEGLA ODEĆA KOJA NE SEBI IMA NAKIT, METALNE DELOVE, ŠLJOKICE I DRUGO.</p>
                     <p><span> 5.</span> DEZINFEKCIJA DONJEG VEŠA BEZ KORIŠĆENJA DEZINFEKCIONIH SREDSTAVA. OVO JE IDEALNO
                         UKOLIKO IMATE MALU DECU</p>
-                    <p><span> 6.</span> ZAHVALJUJUĆI JAKOJ PARI, OVA PEGLA POMAŽE U EFIKASNOM UKLANJANJU KRPELJA, UBIJA
-                        KLICE I BAKTERIJE</p>
-                    <p><span> 7.</span> PARA PRODIRE KROZ TKANINU BEZ KONTAKTA PLOČE ZA PEGLANJE, TE NA TAJ NAČIN
-                        IZBEGAVATE DA PROGORITE OSETLJIVE MATERIJALE</p>
-                    <p><span> 8.</span> KORISTEĆI OVU PEGLU, MOŽETE LAKO ISPEGLATI ZAVESE, TAKO ŠTO ĆETE IH ODMAH POSLE
-                        PRANJA OKAČITI NA GARNIŠNU
-                    </p>
+                    <p><span> 6.</span> OVA PEGLA POMAŽE U EFIKASNOM UKLANJANJU KRPELJA, UBIJA KLICE I BAKTERIJE</p>
+                    <p><span> 7.</span> PLOČA IMA ZAŠTITNI PREMAZ, TE NA TAJ NAČIN IZBEGAVATE DA PROGORITE OSETLJIVE MATERIJALE</p>
                 </div>
             </div>
         </div>
@@ -154,7 +148,7 @@
 </div>
 <div class="why" id="ex2">
     <div class="container">
-        <div class="why-top">ZAŠTO HAND STEAMER?</div>
+        <div class="why-top">ZAŠTO MINI IRON?</div>
         <div class="row">
             <div class="col-sm-6">
                 <div class="why-name">OBIČNE PEGLE</div>
@@ -169,46 +163,20 @@
                 </div>
             </div>
             <div class="col-sm-6">
-                <div class="why-name">HAND STEAMER</div>
-                <img class="why-img" src="{{ asset('/') }}dailysharkFiles/handsteamer/why2.jpg">
+                <div class="why-name">MINI IRON</div>
+                <img class="why-img" src="{{ asset('/') }}dailysharkFiles/miniiron/why2.jpg">
                 <div class="why-list2">
                     <p>NE OSTAVLJA TRAG NA TKANINI</p>
-                    <p>SNAŽAN MLAZ PARE ISPRAVLJA ČAK I TEŠKO DOSTUPNA MESTA NA ODEĆI</p>
+                    <p>ISPRAVLJA ČAK I TEŠKO DOSTUPNA MESTA NA ODEĆI</p>
                     <p>KOMPAKTNA I JEDNOSTAVNA ZA UPOTREBU</p>
                     <p>PEGLA I NAJDEBLJU I NAJTVRĐU TKANINU</p>
                     <p>NE OŠTEĆUJE OSETLJIVE TKANINE</p>
-                    <p>UZ SIGURNOSNI NASTAVAK NEMA ŠANSE DA SE PROGORI TKANINA</p>
+                    <p>UZ SIGURNOSNI PREMAZ NEMA ŠANSE DA SE PROGORI TKANINA</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
-{{--<div class="order">--}}
-{{--    <div class="container">--}}
-{{--        <div class="order-top"> POŽURITE DA PORUČITE PEGLU SA 40% POPUSTA</div>--}}
-{{--        <div class="row">--}}
-{{--            <form class="form mid-form" method="POST" action="{{$orderRoute}}">--}}
-{{--                {{ csrf_field() }}--}}
-{{--                @include('lander.naturapharm.components.form_hidden_fields')--}}
-{{--                <div class="col-sm-4">--}}
-{{--                    <input name="name" class="order-name" placeholder="Ime i prezime" type="text" required>--}}
-{{--                </div>--}}
-{{--                <div class="col-sm-4">--}}
-{{--                    <input name="phone" class="order-tell" placeholder="Telefon" type="tel" required>--}}
-{{--                </div>--}}
-{{--                <div class="col-sm-4">--}}
-{{--                    <input name="shipping_address" class="main-name" placeholder="Adresa" type="text" required>--}}
-{{--                </div>--}}
-{{--                <div class="col-sm-4">--}}
-{{--                    <input name="shipping_city" class="main-name" placeholder="Grad" type="text" required>--}}
-{{--                </div>--}}
-{{--                <div class="col-sm-4">--}}
-{{--                    <button type="submit" class="order-button" data-ordersubmit>PORUČITE SA 40% POPUSTA</button>--}}
-{{--                </div>--}}
-{{--            </form>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</div>--}}
 <div class="expert">
     <div class="container">
         <div class="expert-top">MIŠLJENJE NAŠIH KUPACA</div>
@@ -221,13 +189,10 @@
                     <span>"</span>Da li protraćite dosta vremena na peglanje?<br><br>
                     Ukoliko vodite računa o domaćinstvu, onda sigurno da da.<br><br>
                     Sa ovom peglom nije potrebno mnogo vremena i novca.
-                    Hand Steamer radi na principu jake pare. Voda se sipa u rezervoar i zagreva do tačke
-                    ključanja.
-                    Kao rezultat se formira para koja izlazi pod jakim pritskom.<br><br>
-                    Hand Steamer ne ostavlja tragove na tretiranim površinama, efikasno pegla stvari dok su
-                    još na ofingeru. Nikada lakše nisam peglala haljinu.<br><br>
-                    Ova pegla mi je od pomoći pri peglanju zavesa, a i pri dezinfekciji nameštaja, jastuka i dečijih
-                    igračaka. Savršen proizvod.<span>"</span>
+                    Mini Iron radi na principu jake temperature i bočice za sprejno ovlaživanje tkanine.
+                    Pegla je mala i ima oštre uglove, tako da konačno možete da doprete do svake ivice tkanine koju peglate.<br><br>
+                    Mini Iron ne ostavlja tragove na tretiranim površinama i efikasno pegla stvari. Nikada lakše nisam peglala haljinu.<br><br>
+                    Ova pegla mi je od pomoći pri peglanju zavesa, a i pri dezinfekciji nameštaja, jastuka i dečijih igračaka. Savršen proizvod.<span>"</span>
                 </div>
                 <div class="expert-name"> Marija Gvozdić<br><span>Obrenovac</span></div>
             </div>
@@ -254,13 +219,13 @@
                         <div class="item-body match_height">
                             <div class="thumb-wrap">
                                 <span class="span"> 2 slike</span>
-                                <a href="{{ asset('/') }}dailysharkFiles/handsteamer/1a.jpg"
+                                <a href="{{ asset('/') }}dailysharkFiles/miniiron/1a.jpg"
                                    data-lightbox="first"><img
-                                        src="{{ asset('/') }}dailysharkFiles/handsteamer/1a_thumb.jpg" alt="thumb"
+                                        src="{{ asset('/') }}dailysharkFiles/miniiron/1a_thumb.jpg" alt="thumb"
                                         class="thumb"></a>
-                                <a href="{{ asset('/') }}dailysharkFiles/handsteamer/1b.jpg"
+                                <a href="{{ asset('/') }}dailysharkFiles/miniiron/1b.jpg"
                                    data-lightbox="first"><img
-                                        src="{{ asset('/') }}dailysharkFiles/handsteamer/1b_thumb.jpg" alt="thumb"
+                                        src="{{ asset('/') }}dailysharkFiles/miniiron/1b_thumb.jpg" alt="thumb"
                                         class="thumb"></a>
                             </div>
                             <div class="item-body-text">Često idem na poslovna putovanja. Nemam vremena da se peglam
@@ -284,17 +249,17 @@
                         <div class="item-body match_height">
                             <div class="thumb-wrap">
                                 <span class="span"> 3 slike</span>
-                                <a href="{{ asset('/') }}dailysharkFiles/handsteamer/2a.jpg"
+                                <a href="{{ asset('/') }}dailysharkFiles/miniiron/2a.jpg"
                                    data-lightbox="second"><img
-                                        src="{{ asset('/') }}dailysharkFiles/handsteamer/2a_thumb.jpg" alt="thumb"
+                                        src="{{ asset('/') }}dailysharkFiles/miniiron/2a_thumb.jpg" alt="thumb"
                                         class="thumb"></a>
-                                <a href="{{ asset('/') }}dailysharkFiles/handsteamer/2b.jpg"
+                                <a href="{{ asset('/') }}dailysharkFiles/miniiron/2b.jpg"
                                    data-lightbox="second"><img
-                                        src="{{ asset('/') }}dailysharkFiles/handsteamer/2b_thumb.jpg" alt="thumb"
+                                        src="{{ asset('/') }}dailysharkFiles/miniiron/2b_thumb.jpg" alt="thumb"
                                         class="thumb"></a>
-                                <a href="{{ asset('/') }}dailysharkFiles/handsteamer/2c.jpg"
+                                <a href="{{ asset('/') }}dailysharkFiles/miniiron/2c.jpg"
                                    data-lightbox="second"><img
-                                        src="{{ asset('/') }}dailysharkFiles/handsteamer/2c_thumb.jpg" alt="thumb"
+                                        src="{{ asset('/') }}dailysharkFiles/miniiron/2c_thumb.jpg" alt="thumb"
                                         class="thumb"></a>
                             </div>
                             <div class="item-body-text">Nedavno sam kupila ovu peglu i mogu vam reći da sam prilično
@@ -319,13 +284,13 @@
                         <div class="item-body match_height">
                             <div class="thumb-wrap">
                                 <span class="span"> 2 slike</span>
-                                <a href="{{ asset('/') }}dailysharkFiles/handsteamer/3a.jpg"
+                                <a href="{{ asset('/') }}dailysharkFiles/miniiron/3a.jpg"
                                    data-lightbox="third"><img
-                                        src="{{ asset('/') }}dailysharkFiles/handsteamer/3a_thumb.jpg" alt="thumb"
+                                        src="{{ asset('/') }}dailysharkFiles/miniiron/3a_thumb.jpg" alt="thumb"
                                         class="thumb"></a>
-                                <a href="{{ asset('/') }}dailysharkFiles/handsteamer/3b.jpg"
+                                <a href="{{ asset('/') }}dailysharkFiles/miniiron/3b.jpg"
                                    data-lightbox="third"><img
-                                        src="{{ asset('/') }}dailysharkFiles/handsteamer/3b_thumb.jpg" alt="thumb"
+                                        src="{{ asset('/') }}dailysharkFiles/miniiron/3b_thumb.jpg" alt="thumb"
                                         class="thumb"></a>
                             </div>
                             <div class="item-body-text">
@@ -366,7 +331,7 @@
     <div class="container">
         <div class="main-top">
             PEGLANJE STVARI NA OFINGERU ZA POLA MINUTA?<br>
-            <p>DA MOGUĆE JE SA OVOM MOĆNOM PEGL</p>
+            <p>DA MOGUĆE JE SA OVOM MOĆNOM PEGLOM</p>
         </div>
         <div class="row">
             <div class="col-md-4 col-sm-6 main-form">
@@ -403,7 +368,7 @@
                 </div>
             </div>
             <div class="col-md-5 col-sm-12">
-                <img class="main-img" src="{{ asset('/') }}dailysharkFiles/handsteamer/body2-brush.png">
+                <img class="main-img" src="{{ asset('/') }}dailysharkFiles/miniiron/body2-brush.png">
             </div>
         </div>
     </div>
