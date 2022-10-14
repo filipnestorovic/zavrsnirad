@@ -323,10 +323,10 @@
                     {{ csrf_field() }}
                     @include('lander.naturapharm.components.form_hidden_fields')
                     <div>
-                        <input type="text" name="name" placeholder="Ime i prezime" class="-metrika-nokeys" autocomplete="name">
+                        <input type="text" name="name" placeholder="Ime i prezime" class="-metrika-nokeys" required>
                     </div>
                     <div>
-                        <input type="tel" name="phone" id="phone1" placeholder="Telefon" class="input-phone" autocomplete="tel">
+                        <input type="tel" name="phone" id="phone1" placeholder="Telefon" class="input-phone" required>
                     </div>
                     <div class="footxt">
                         <p>  </p>
