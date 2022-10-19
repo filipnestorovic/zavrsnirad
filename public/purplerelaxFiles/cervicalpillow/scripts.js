@@ -73,7 +73,7 @@ $(window).on("load", function(){
 	$('.reviews').owlCarousel({
 		loop:true,
 		margin:10,
-		autoHeight: true,
+		// autoHeight: true,
 		navText: "",
 		dots: false,
 		responsive:{

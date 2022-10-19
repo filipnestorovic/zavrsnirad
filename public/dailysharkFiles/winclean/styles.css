@@ -87,14 +87,15 @@ b {
 	color: #333;
 	border-radius: 40px;
 	margin-bottom: 10px;
-	text-indent: 78px;
+	/*text-indent: 78px;*/
+    text-align: center;
 }
-.m1-form input[name="name"]{
-	background: #fff url(inpt_name.png) 35px 50% no-repeat;
-}
-.m1-form input[name="phone"]{
-	background: #fff url(inpt_phone.png) 33px 50% no-repeat;
-}
+/*.m1-form input[name="name"]{*/
+/*	background: #fff url(inpt_name.png) 35px 50% no-repeat;*/
+/*}*/
+/*.m1-form input[name="phone"]{*/
+/*	background: #fff url(inpt_phone.png) 33px 50% no-repeat;*/
+/*}*/
 .m1-form ::-webkit-input-placeholder {
 	color: #333;
 }

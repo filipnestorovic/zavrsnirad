@@ -10,34 +10,34 @@
     <link rel="stylesheet" href="{{ asset('/') }}purplerelaxFiles/cervicalpillow/styles.css">
 </head>
 <body>
+@include('components.display_errors')
 <section class="top_line">
     <div class="wrapper">
         <ul class="clearfix">
-            <li>ხარისხის 100%-იანი გარანტია</li>
-            <li>სწრაფი მიწოდება კურიერის მეშვეობით</li>
-            <li>ეფექტურობა კლინიკურად დადასტურებულია</li>
+            <li>100% garancija kvaliteta</li>
+            <li>Brza dostava kurirskom službom</li>
+            <li>Povrat novca u roku od 14 dana</li>
         </ul>
     </div>
 </section>
 <section class="offer_section">
     <div class="wrapper">
-        <h1 class="main_title"><span><img src="{{ asset('/') }}purplerelaxFiles/cervicalpillow/logo.png" alt=""></span> <b>-</b> წელვადი ორთოპედიული ბალიში
-        </h1>
-        <p class="main_subtitle"><span>კისრის ოსტეოხონდროზის უსაფრთხო აღდგენა ძვირადღირებული ოპერაციების გარეშე</span></p>
+        <h1 class="main_title"><span style="color: #1caae3;">Cervical Pillow</span> <b>-</b> ortopedski jastuk</h1>
+        <p class="main_subtitle"><span>Siguran oporavak vrata i oslobađanje od bola</span></p>
         <div class="sale">
-            <p>აქცია!<br><span>-53%</span></p>
+            <p>popust<br><span>-40%</span></p>
         </div>
         <ul class="ofr_bull">
-            <li>აქრობს თავის ტკივილს</li>
-            <li>ასწორებს ხერხემლის ხაზს</li>
-            <li>აძლიერებს ზურგისა და კისრის კუნთებს</li>
+            <li>Eliminiše glavobolju</li>
+            <li>Ispravlja kičmu</li>
+            <li>Jača mišiće leđa i vrata</li>
         </ul>
         <div class="pulse">
             <img src="{{ asset('/') }}purplerelaxFiles/cervicalpillow/pulse.png" alt="">
         </div>
         <div class="action_block">
             <div class="price clearfix">
-                <p>ფასი :</p>
+                <p>Cena:</p>
                 <div class="nubmer">
                     <div class="old">
                         <span>
@@ -57,69 +57,70 @@
                     </div>
                 </div>
             </div>
-            <a href="#order_form" class="button-m">შეუკვეთეთ ფასდაკლებით</a>
-            <div class="prod_count">დარჩა<span>12 ცალი</span>აქციით</div>
+            <a href="#order_form" class="button-m">Poručite sada</a>
+            <div class="prod_count">Ostalo još <span>12 komada</span> na akciji</div>
         </div>
     </div>
 </section>
 <section class="sect2">
     <div class="wrapper">
-        <h2 class="title">პრობლემები , რომლებიც სრულყოფილად ცხოვრებაში ხელს გიშლიან</h2>
+        <h2 class="title">Problemi koji vas sprečavaju da živite punim plućima</h2>
         <div class="subtitle">
-            <span>78 წლის ადამიანებს</span> აქვთ პრობლემები კისრის ნაწილში, ასევე სიმპტომები, რომელსაც ის იწვევს :
+            <span>60% ljudi ima probleme</span> sa vratom, kao i simptome koji taj problem izaziva:
         </div>
         <ul class="benef1">
             <li>
-                <p>ტკივილი კისრის არეში</p>
+                <p>Dosadan bol</p>
             </li>
             <li>
-                <p>დისკომფორტი მოძრაობისას</p>
+                <p>Neudobnost</p>
             </li>
             <li>
-                <p>დაღლილობა</p>
+                <p>Umor</p>
             </li>
             <li>
-                <p>უძილობა და გამოუძინებლობა</p>
+                <p>Nesanica</p>
             </li>
         </ul>
         <div class="first_use">
             <img src="{{ asset('/') }}purplerelaxFiles/cervicalpillow/product-c.png" alt="">
-            <p>პირველადი გამოყენების დროს, სამმაგი გასაბერი ბალიში ათავისუფლებს ტკივილის სიმპტომების გამოვლინებებს, ხოლო მუდმივი გამოყენებით იგი მთლიანად გამორიცხავს მათი წარმოქმნის რისკს.</p>
+            <p>Prilikom inicijalne upotrebe, trostruki jastuk na naduvavanje ublažava manifestacije simptoma bola, a uz stalnu upotrebu potpuno
+                eliminiše rizik od njihovog nastanka</p>
         </div>
     </div>
 </section>
 <section class="sect3">
     <div class="wrapper">
-        <h2 class="title">დაივიწყეთ ოსტეოხონდროზისგან გამოწვეული დისკომფორტი<span>უზრუნველყავით თქვენი ჯანმრთელი ძილი</span></h2>
-        <p class="subtitle">ორთოპედიული ბალიში Ostio - მარტივი და ეფექტური საშუალებაა დაიბრუნოთ ჯანმრთელობა და დაივიწყოთ ტკივილი წელის არეში.</p>
+        <h2 class="title">Zaboravite na nelagodnost izazvanu problemima sa vratom i <span> osigurajte zdrav san</span></h2>
+        <p class="subtitle">Ortopedski jastuk Cervical Pillow - jednostavan i efikasan način da povratite lagodan život i zaboravite na bolove u leđima i vratu.</p>
         <div class="content clearfix">
             <div class="text">
-                <h4>მისი მოქმედების პრინციპი საკმაოდ მარტივია :</h4>
+                <h4>Princip njegovog rada je prilično jednostavan</h4>
                 <ul class="list1">
                     <li>
-                        <p>ჭიმავს კისრისა და ხერხემლის განყოფილებას</p>
+                        <p>Isteže vrat i kičmu</p>
                     </li>
                     <li>
-                        <p>ათავისუფლებს დატვირთვას კისრის მალებზე</p>
+                        <p>Smanjuje opterećenje na vratu</p>
                     </li>
                     <li>
-                        <p>აქრობს შაკიკის შეტევებსა და თავის ტკივილებს</p>
+                        <p>Eliminiše napade migrene i glavobolje</p>
                     </li>
                     <li>
-                        <p>აუმჯობესებს სისხლის მიმოქცევას კისრის განყოფილებაში</p>
+                        <p>Poboljšava cirkulaciju</p>
                     </li>
                     <li>
-                        <p>აძლიერებს ზურგიდა და მხრების კუნთებს</p>
+                        <p>Jača mišiće leđa i ramena</p>
                     </li>
                     <li>
-                        <p>აფიქსირებს კისრის მალებს სწორ მდგომარეობაში</p>
+                        <p>Vraća vrat u pravilan položaj</p>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="action">
-            <p>ხერხემლის ჯანმრთელობის აღდგენის ყველაზე ეფექტური მეთოდი, ასევე მშვენიერ ფორმაში ჩადგომის საუკეთესო საშუალება</p>
-            <a href="#order_form" class="button-m">შეუკვეთეთ ფასდაკლებით</a>
+            <p>Najefikasniji način za buđenje bez bolova, kao i najbolji način da dođete u odličnu formu</p>
+            <a href="#order_form" class="button-m">Poručite sada</a>
         </div>
     </div>
 </section>
@@ -131,34 +132,35 @@
                     <img src="{{ asset('/') }}purplerelaxFiles/cervicalpillow/magnet.png" alt="">
                 </div>
             </div>
-            <p>ახალი თაობის გაჭიმული ორთოპედიული ბალიში, რომელიც იდეალურია კისრის ოსტეოქონდროზიით დაავადებული ადამიანებისთვის. გვეხმარება კისრის მალების პრობლემის მოგვარებაში და ჯანსაღი ძილის აღდგენაში. მას აქვს გამოხატული თერაპიული ეფექტი.</p>
+            <p>Rastezljivi ortopedski jastuk nove generacije, idealan je za osobe koje pate od bolova u vratu i leđima. Pomaže u rešavanju
+                problema ukočenosti vrata i vraćanju zdravog sna. Ima izražen terapeutski efekat.</p>
             <img src="{{ asset('/') }}purplerelaxFiles/cervicalpillow/s4_img.png" alt="">
         </div>
     </div>
 </section>
 <section class="sect5">
     <div class="wrapper">
-        <h2 class="title"><span>100% -იანი შედეგი , რომელიც არ დაგაყოვნებთ!</span></h2>
-        <div class="subtitle">ჯანმრთელი წელი და სწორი ხერხემალი!</div>
+        <h2 class="title"><span>100% rezultat koji vas neće razočarati!</span></h2>
+        <div class="subtitle">Pravilan stav i ravna kičma!</div>
         <ul class="benef2">
             <li>
                 <img src="{{ asset('/') }}purplerelaxFiles/cervicalpillow/s5_img1.jpg" alt="">
-                <p>სრულად გათავისუფლება თავისა და კისრის ტკივილისაგან</p>
+                <p>Potpuno oslobađanje od bolova u glavi i vratu</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}purplerelaxFiles/cervicalpillow/s5_img2.jpg" alt="">
-                <p>ერთობლივი სტრესის გაუწონასწორებელი აღმოფხვრა</p>
+                <p>Uklanjanje neuravnoteženog pritiska u zglobovima</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}purplerelaxFiles/cervicalpillow/s5_img3.jpg" alt="">
-                <p>ლამაზი და სწორი ხერხემალი დაღლილობის გარეშე</p>
+                <p>Lepa i ravna kičma bez umora</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}purplerelaxFiles/cervicalpillow/s5_img4.jpg" alt="">
-                <p>მყარი კორსეტი წელისა და მხრებისათვის</p>
+                <p>Čvrsta leđa i ramena</p>
             </li>
         </ul>
-        <a href="#order_form" class="button-m">შეუკვეთეთ ფასდაკლებით</a>
+        <a href="#order_form" class="button-m">Poručite sada</a>
     </div>
     <div class="gallery owl-carousel">
         <div class="item">
@@ -177,7 +179,7 @@
 </section>
 <section class="sect6">
     <div class="wrapper">
-        <h2 class="title"><span>3 მარტივი ნაბიჯი</span>ტკივილისა და გადაღლილობის მოსაშორებლად კისრისგან</h2>
+        <h2 class="title"><span>3 jednostavna koraka</span> za ublažavanje bolova u vratu i umora</h2>
         <div class="how_use clearfix">
             <ul class="benef3">
                 <li>
@@ -185,8 +187,8 @@
                         <img src="{{ asset('/') }}purplerelaxFiles/cervicalpillow/use1.jpg" alt="">
                     </div>
                     <div class="text">
-                        <span>ნაბიჯი 1</span>
-                        <p>მოთავსდით კომფორტულ მდგომარეობაში და განათავსეთ ბალიში კისერზე</p>
+                        <span>Korak 1</span>
+                        <p>Sedite u udoban položaj i stavite jastuk oko vrata</p>
                     </div>
                 </li>
                 <li>
@@ -194,8 +196,8 @@
                         <img src="{{ asset('/') }}purplerelaxFiles/cervicalpillow/use2.jpg" alt="">
                     </div>
                     <div class="text">
-                        <span>ნაბიჯი 2</span>
-                        <p>დაიყენეთ თქვენთვის სასურველ ზომაზე და დაიფიქსირეთ მისაწებებლებით</p>
+                        <span>Korak 2</span>
+                        <p>Podesite željenu veličinu</p>
                     </div>
                 </li>
                 <li>
@@ -203,106 +205,88 @@
                         <img src="{{ asset('/') }}purplerelaxFiles/cervicalpillow/use3.jpg" alt="">
                     </div>
                     <div class="text">
-                        <span>ნაბიჯი 3</span>
-                        <p>ერთგარი "მსხლის" დახმარებით გაბერეთ ჰაერით თქვენთვის კომფორტულ მდგომარეობაში</p>
+                        <span>Korak 3</span>
+                        <p>Uz pomoć sprave za naduvavanje napumpajte vazduh do položaja koji vam je udoban</p>
                     </div>
                 </li>
             </ul>
             <div class="left">
                 <div class="text">
-                    <p>OSTIO-ს ორთოპედიული ბალიშის გამოყენების პირველი 7 დღის განმავლობაში განახორციელეთ პროცედურები 5 წუთის განმავლობაში დღეში ორჯერ. თანდათანობით, თქვენ შეგიძლიათ გაზარდოთ დატვირთვა, გაიზარდოს გაჭიმვა და დრო 20-25 წუთამდე.</p>
-                    <p>გაითვალისწინეთ, რომ პროცედურამ არ უნდა გამოიწვიოს დისკომფორტი ან ტკივილი.</p>
-                    <a href="#order_form" class="button-m">ტკივილისგან თავის დაღწევა!</a>
+                    <p>Tokom prvih 7 dana korišćenja ortopedskog jastuka Cervical Pillow, ponavljajte proceduru po 5 minuta dva puta dnevno.
+                        Postepeno možete povećati opterećenje i povećati vreme istezanja do 20-25 minuta.</p>
+                    <p>Imajte na umu da postupak ne bi trebalo da izaziva nelagodnost ili bol.</p>
+                    <a href="#order_form" class="button-m">Poručite odmah</a>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-<section class="sect7">
-    <div class="wrapper">
-        <div class="spec_block">
-            <h2 class="title">სპეციალისტების მოსაზრებები</h2>
-            <img src="{{ asset('/') }}purplerelaxFiles/cervicalpillow/spec_mob.jpg" alt="">
-            <p>მთელი წლების მუშაობის განმავლობაში მე შევხვდი უამრავ ადამიანს, რომლებსაც ზურგის სხვადასხვა პრობლემა აქვთ. როგორც წესი, ზურგის ტკივილი ხდება ზუსტად არასწორი წოლისა და კუნთების კორსეტის შესუსტების გამო</p>
-            <p>გაჭიმვის საყელო ეფექტურად ავსებს ოსტეოქონდროზის სტანდარტულ მკურნალობას. ის დელიკატურად და ფრთხილად ეხმარება ცვლილების საწყის ეტაპზე. ზურგის სვეტსა და არტიკულალურ სახსრებში დაძაბულობის ცენტრები ამოღებულია. ეს საშუალებას იძლევა დროულად აღმოფხვრას პრობლემები, რომლებმაც შემდგომში შეიძლება გამოიწვიოს სერიოზული ქირურგიული ჩარევა</p>
-            <p>ალბათ, ეს არის ზურგის აღდგენის ყველაზე ეფექტური მეთოდი, რომელსაც ჩემს პრაქტიკაში შევხვდი. დარწმუნდით,  გამოიყენეთ იგი, თუ თქვენ განიცდით წელის ტკივილს ან უბრალოდ გინდათ ძლიერი და ჯანმრთელი პოზა.</p>
-            <div class="info">
-                <img src="{{ asset('/') }}purplerelaxFiles/cervicalpillow/spec_img.jpg" alt="">
-                <div class="text">
-                    <span>დემეტრე</span>
-                    <p>მაღალკვალიფიციური მასაჟისტი, სამუშაო გამოცდილება 19 წელი</p>
-                </div>
-            </div>
-        </div>
-        <div class="fake_block">
-            <h2 class="title">ფრთხილად იყავით,არის ყალბებიც!</h2>
-            <img src="{{ asset('/') }}purplerelaxFiles/cervicalpillow/fake_img.png" alt="">
-            <p>ჩვენს ვებგვერდზე შეკვეთისას, თქვენ იღებთ ორიგინალურ Ostio- ს ორთოპედიულ ბალიშს, რომელმაც გაიარა ყველა კლინიკური ტესტირება, ასევე გააჩნია ყველა საჭირო ხარისხის სერთიფიკატი.</p>
-            <a href="#order_form" class="button-m">შეუკვეთეთ ფასდაკლებით</a>
         </div>
     </div>
 </section>
 <section class="sect8">
     <div class="wrapper">
-        <h2 class="title">მათი კომენტარები,<span>ვისაც უკვე დაეხმარა</span>სამმაგი გასაბერი ბალიში </h2>
+        <h2 class="title">Komentari kupaca <span>kojima je pomogao</span> Cervical Pillow</h2>
         <div class="reviews owl-carousel">
             <div class="rev_item">
                 <img src="{{ asset('/') }}purplerelaxFiles/cervicalpillow/rev1.jpg" alt="">
-                <span>”ტკივილი მთლიანად ქრება, სიმსუბუქის შეგრძნებაა.”</span>
-                <p>კისერი დიდი ხნის განმავლობაში მტკიოდა, ზოგჯერ ტკივილები დიდხანს არ მაძლევდა დასვენებას. სამსახურიდან დაბრუნებულს, ღამით გამეღვიძა. ექიმების დიაგნოზი ხერხემლის დისკის დეგენერაციაა. მეგობრებმა მირჩიეს Ostio ბალიშის ყიდვა. ამას უკვე ერთ წელზე მეტია ვიყენებ.</p>
-                <div class="info">მაია</div>
+                <span>"Bol potpuno nestaje, postoji osećaj lakoće"</span>
+                <p>Vrat me je dugo boleo, ponekad mi bolovi nisu dugo davali da se odmorim. Budila sam se noću i to me je stalno mučilo.
+                    Doktor mi je rekao da imam degeneraciju kičmenog stuba. Prijatelji su mi preporučili da kupim ovaj jastuk, i od kada ga koristim
+                    osećam se preporođeno.</p>
+                <div class="info">Mia</div>
             </div>
             <div class="rev_item">
                 <img src="{{ asset('/') }}purplerelaxFiles/cervicalpillow/rev2.jpg" alt="">
-                <span>”შიშის გარეშე ვმოძრაობ, დისკომფორტი გამივიდა"</span>
-                <p>ეს არის მეორე ორთოპედიული ბალიში. პირველი ანალოგი ვიყიდე ექვსი თვის წინ. ეს დიდად არ განსხვავდებოდა ჩვეულებრივი ბალიშისგან. შემდეგ გადავწყვიტე OSTIO- ს შეკვეთა. ბევრ დროს ვხარჯავდი საჭესთან. დაღლილობა და თავის ტკივილი ბოლო დრომდე ჩემი მუდმივი თანამგზავრი იყო. ახლა მართლა შეიცვალა ყველაფერი. </p>
-                <div class="info">გიორგი</div>
+                <span>"Krećem se bez straha, nelagoda je nestala"</span>
+                <p>Ovo je drugi ortopedski jastuk koji koristim. Kupio sam prvi pre 6 meseci i nije se mnogo razlikovao oko običnog jastuka.
+                    Onda sam odlučio da kupim Cervical Pillow. Kako sam provodio dosta vremena za volanom, glavobolja i bol u vratu su mi bili
+                    stalni saputnici. Sada, sa ovim jastukom to je nestalo. Više nemam glavobolje i ne boli me vrat. Sve preporuke za ovaj proizvod.</p>
+                <div class="info">Saša</div>
             </div>
             <div class="rev_item">
                 <img src="{{ asset('/') }}purplerelaxFiles/cervicalpillow/rev3.jpg" alt="">
-                <span>”საშუალებას გაძლევთ შეამციროთ სტრესის დონე სამუშაო დღის განმავლობაში!”.</span>
-                <p>სამსახურში თაყვანისმცემლების მთელი საზოგადოება გვყავს. სასაცილოა იმ შეხვედრების მონაწილეების ყურება, რომლებიც წინა დღეს სამ ფენაზე ბალიშებს იდებენ. ლიდერი მხარს უჭერს ინიციატივას. ბალიში ხელს არ უშლის მას წარმოების საკითხების გადაჭრაში. ყველას ძალიან კმაყოფილია შენაძენით.</p>
-                <div class="info">ელენე</div>
+                <span>"Omogućava vam da smanjite nivo stresa tokom radnog dana"</span>
+                <p>Imamo čitavu grupu ljudi na poslu koji imaju probleme u leđima i vratu. Dugo sedimo, imamo višečasovne sastanke, i to je vremenom uzelo danak.
+                    Firma nam je kupila nekoliko ovih jastuka i moram da vam priznam da se manje više svi osećamo preporođeno. Svi su veoma zadovoljni!</p>
+                <div class="info">Mladen</div>
             </div>
         </div>
-        <a href="#order_form" class="button-m">შეუკვეთეთ ახლავე</a>
+        <a href="#order_form" class="button-m">Poručite sada</a>
     </div>
 </section>
 <section class="sect9">
     <div class="wrapper">
-        <h2 class="title">როგორ შევუკვეთო<span>სამმაგი ბალიში?</span></h2>
+        <h2 class="title">Kako da poručim <span>Cervical Pillow?</span></h2>
         <ul class="order_list">
             <li>
                 <img src="{{ asset('/') }}purplerelaxFiles/cervicalpillow/order1.png" alt="">
-                <span><span>01</span>განაცხადი</span>
-                <p>შეავსეთ შეკვეთის ფორმა  ჩვენს საიტზე</p>
+                <span><span>01</span>Poručite</span>
+                <p>Popunite formular na našoj web stranici</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}purplerelaxFiles/cervicalpillow/order2.png" alt="">
-                <span><span>02</span>დადასტურება</span>
-                <p>დაელოდეტ ოპერატორის ზარს შეკვეთის გასაფორმებლად</p>
+                <span><span>02</span>Potvrda</span>
+                <p>Kontaktiraćemo vas da povrdimo porudžbinu</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}purplerelaxFiles/cervicalpillow/order3.png" alt="">
-                <span><span>03</span>მიღება</span>
-                <p>იხდის ნივთის მიღებისთანავე</p>
+                <span><span>03</span>Prijem</span>
+                <p>Dostavljamo brzom poštom i plaćate po pouzeću</p>
             </li>
         </ul>
     </div>
 </section>
 <section class="offer_section bottom">
     <div class="wrapper">
-        <h1 class="main_title"><span><img src="{{ asset('/') }}purplerelaxFiles/cervicalpillow/logo.png" alt=""></span> <b>-</b>წელვადი ორთოპედიული ბალიში</h1>
-        <p class="main_subtitle"><span>კისრის ოსტეოხონდროზის უსაფრთხო აღდგენა ძვირადღირებული ოპერაციების გარეშე</span></p>
+        <h1 class="main_title"><span style="color: #1caae3;">Cervical Pillow</span> <b>-</b> ortopedski jastuk</h1>
+        <p class="main_subtitle"><span>Siguran oporavak vrata i oslobađanje od bola</span></p>
         <div class="sale">
-            <p>აქცია!<br><span>-53%</span></p>
+            <p>popust<br><span>-40%</span></p>
         </div>
         <div class="pulse">
             <img src="{{ asset('/') }}purplerelaxFiles/cervicalpillow/pulse.png" alt="">
         </div>
         <div id="order_form" class="formbox">
             <div class="price clearfix">
-                <p>ფასი :</p>
+                <p>Cena:</p>
                 <div class="nubmer">
                     <div class="old">
                         <span>
@@ -322,16 +306,19 @@
                     </div>
                 </div>
             </div>
-            <form class="main-order-form m1-form" action="#" method="post" id="forma">
-                <input type="text" name="name" placeholder="შენი სახელი" required="">
-                <input type="tel" name="phone" placeholder="თქვენი ტელეფონი" required="">
-                <button class="button-m">შეუკვეთეთ ფასდაკლებით</button>
+            <form class="main-order-form m1-form" action="{{$orderRoute}}" method="post" id="forma">
+                {{ csrf_field() }}
+                @include('lander.naturapharm.components.form_hidden_fields')
+                <input type="text" name="name" placeholder="Ime i prezime" required="">
+                <input type="tel" name="phone" placeholder="Telefon" required="">
+                <button class="button-m">Poručite sada</button>
             </form>
-            <div class="prod_count">დარჩა<span>12 ცალი</span>აქციით</div>
+            <div class="prod_count">Ostalo još <span>12 komada</span> na akciji</div>
         </div>
     </div>
 </section>
 <script src="{{ asset('/') }}shared_files/owl.carousel.min.js"></script>
 <script src="{{ asset('/') }}purplerelaxFiles/cervicalpillow/scripts.js"></script>
+@include('components.pixel_footer')
 </body>
 </html>

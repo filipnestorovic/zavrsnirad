@@ -6,32 +6,73 @@
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <link rel="icon" type="image/png" href="{{ asset('/') }}dailysharkFiles/winclean/favicon.ico">
-{{--    <link rel="stylesheet" href="assets_pages/land/fonts/Intro/Intro.css">--}}
-{{--    <link rel="stylesheet" href="assets_pages/land/fonts/GothamPro/GothamPro.css">--}}
     <link rel="stylesheet" href="{{ asset('/') }}dailysharkFiles/winclean/styles.css">
+    <style>
+        @font-face {
+            font-family: 'Intro';
+            src: url('{{ asset('/') }}fonts/subset-Intro.woff2') format('woff2'),
+            url('{{ asset('/') }}fonts/subset-Intro.woff') format('woff'),
+            url('{{ asset('/') }}fonts/subset-Intro.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Gotham Pro';
+            src: url('{{ asset('/') }}fonts/GothamPro-Light.woff2') format('woff2'),
+            url('{{ asset('/') }}fonts/GothamPro-Light.woff') format('woff'),
+            url('{{ asset('/') }}fonts/GothamPro-Light.ttf') format('truetype');
+            font-weight: 300;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Gotham Pro';
+            src: url('{{ asset('/') }}fonts/GothamPro.woff2') format('woff2'),
+            url('{{ asset('/') }}fonts/GothamPro.woff') format('woff'),
+            url('{{ asset('/') }}fonts/GothamPro.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Gotham Pro';
+            src: url('{{ asset('/') }}fonts/GothamPro-Medium.woff2') format('woff2'),
+            url('{{ asset('/') }}fonts/GothamPro-Medium.woff') format('woff'),
+            url('{{ asset('/') }}fonts/GothamPro-Medium.ttf') format('truetype');
+            font-weight: 500;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Gotham Pro';
+            src: url('{{ asset('/') }}fonts/GothamPro-Bold.woff2') format('woff2'),
+            url('{{ asset('/') }}fonts/GothamPro-Bold.woff') format('woff'),
+            url('{{ asset('/') }}fonts/GothamPro-Bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+    </style>
 </head>
 <body>
+@include('components.display_errors')
 <header class="offer_section">
     <div class="wrapper">
         <div class="container clearfix">
             <div class="title">
                 <h1 class="main_title">WinClean</h1>
-                <h2 class="main_subtitle">ЧИСТЫЕ ОКНА СРАЗУ С ОБЕИХ СТОРОН!</h2>
+                <h2 class="main_subtitle">INOVATIVNI BRISAČ ZA PROZORE</h2>
             </div>
             <ul class="top_bull">
-                <li>Уменьшение расхода моющего средства</li>
-                <li>Экономия на клининговых услугах</li>
+                <li><b>Višestruko smanjenje potrošnju deterdženta</b></li>
+                <li><b>Znatna ušteda novca i vremena</b></li>
             </ul>
         </div>
-        <div class="sale">скидка <span>-50%</span></div>
+        <div class="sale">popust <span>-40%</span></div>
         <ul class="ofr_bull">
-            <li>Моет окна в 2 раза быстрее</li>
-            <li>Не оставляет следов и&nbsp;разводов</li>
-            <li>Экономит силы и моющие средства</li>
+            <li>Čisti prozore <br/> 2 puta brže</li>
+            <li>Ne ostavlja <br/> tragove ni pruge</li>
+            <li>Štedi vreme <br/> i deterdžent</li>
         </ul>
         <div class="price clearfix">
             <div class="old">
-                Старая цена:
+                Redovna cena:
                 <p>
                      <span>
                         {{ $prices[1]['originalPrice'] }}
@@ -42,7 +83,7 @@
                 </p>
             </div>
             <div class="new">
-                Цена сегодня:
+                Cena sada:
                 <p>
                      <span>
                         {{ $prices[1]['amount'] }}
@@ -55,30 +96,30 @@
         </div>
         <div class="action_block clearfix">
             <div class="left">
-                <div class="prod_count">* Успейте заказать по акции! <span>Осталось 16 щеток</span></div>
+                <div class="prod_count">AKCIJA je samo danas i do kraja dana možete poručiti po <span>sniženoj ceni od 40%</span></div>
             </div>
-            <a href="#order_form" class="button-m">Заказать со скидкой</a>
+            <a href="#order_form" class="button-m">Poručite sada</a>
         </div>
     </div>
 </header>
 <section class="sect2">
     <div class="wrapper">
-        <h2 class="title">Почему магнитная щетка Winclean <span>так популярна среди домохозяек</span></h2>
+        <h2 class="title">Zašto je WinClean <span>toliko popularan?</span></h2>
         <ul class="benef1">
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/winclean/s2_img1.png" alt="">
-                <span>Качественное мытье окон</span>
-                <p>Одновременно моет, вытирает и полирует стеклянную поверхность окна. Все сделает одна щетка!</p>
+                <span>Kvalitetno čišćenje prozora</span>
+                <p>Istovremeno pere, briše i polira staklene površine prozora. Jedan brisač radi sve!</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/winclean/s2_img2.png" alt="">
-                <span>Безопасность мойки на верхних этажах</span>
-                <p> Вы моете окно изнутри, а снаружи — щетка.</p>
+                <span>Sigurnost pranja na gornjim spratovima</span>
+                <p>Prozor perete iznutra, a magnetni brisač ide sa spoljašne strane.</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/winclean/s2_img3.png" alt="">
-                <span>Экономия на клининговых услугах</span>
-                <p>Вы теперь сами сможете помыть любые окна, даже на последнем этаже многоэтажного дома.</p>
+                <span>Ušteda novca na uslugama čišćenja</span>
+                <p>Sada možete i sami da operete prozore sa spoljašne strane, čak i na poslednjem spratu solitera.</p>
             </li>
         </ul>
     </div>
@@ -87,47 +128,47 @@
     <div class="wrapper">
         <div class="gif_block">
             <h3>
-                <small>Посмотрите</small>
-                <span>как легко и просто</span>
-                мыть стекла магнитной щёткой
+                <small>POGLEDAJ KAKO JE</small>
+                <span>LAKO I JEDNOSTAVNO</span>
+                ČIŠĆENJE STAKLA MAGNETNIM BRISAČIMA
             </h3>
             <img src="{{ asset('/') }}dailysharkFiles/winclean/gif.gif" alt="">
             <ul>
-                <li>Магнитные пластины фиксируют щетки с двух сторон окна</li>
-                <li>Удобная ручка из качественного пластика</li>
-                <li>Шнур и кольцо на руку для контроля за щеткой</li>
-                <li>Специальные полимерные вставки вытирают и полируют стекло</li>
+                <li>Magnetne ploče fiksiraju brisače sa obe strane prozora</li>
+                <li>Udobna ručka od kvalitetne plastike</li>
+                <li>Konopac i ručni prsten za kontrolu brisača</li>
+                <li>Specijalni polimerni umetci brišu i poliraju staklo</li>
             </ul>
-            <a href="#order_form" class="button-m">Заказать сейчас</a>
+            <a href="#order_form" class="button-m">Poručite sada</a>
         </div>
-        <h2 class="title"><span>Как устроена</span> магнитная щетка для мытья окон</h2>
+        <h2 class="title"><span>KAKO RADI</span> MAGNETNI BRISAČ ZA ČIŠĆENJE PROZORA</h2>
         <div class="product_list">
             <div class="plus clearfix">
-                <div class="strength">25 <small>кг</small></div>
-                <p>Сила сцепления магнита</p>
+                <div class="strength">25 <small>KG</small></div>
+                <p>Sila prianjanja magneta</p>
             </div>
             <img src="{{ asset('/') }}dailysharkFiles/winclean/product.jpg" alt="">
             <img src="{{ asset('/') }}dailysharkFiles/winclean/product2.jpg" alt="" class="tab_v">
             <ul>
                 <li>
                     <span>01</span>
-                    <p>Удобная ручка из качественного пластика</p>
+                    <p>Udobna ručka od visokokvalitetne plastike</p>
                 </li>
                 <li>
                     <span>02</span>
-                    <p>Магнитные пластины внутри фиксируют щетки с двух сторон окна</p>
+                    <p>Magnetne ploče iznutra pričvršćuju brisače sa obe strane</p>
                 </li>
                 <li>
                     <span>03</span>
-                    <p>Мягкие тканевые поверхности равномерно распределяют пену по окну</p>
+                    <p>Površine od meke tkanine ravnomerno raspoređuju penu po prozoru</p>
                 </li>
                 <li>
                     <span>04</span>
-                    <p>Шнур на руку для контроля за щеткой</p>
+                    <p>Kabl za kontrolu četke</p>
                 </li>
                 <li>
                     <span>05</span>
-                    <p>Специальные полимерные вставки вытирают и полируют стекло</p>
+                    <p>Specijalni polimerni umetci brišu i poliraju staklo</p>
                 </li>
             </ul>
         </div>
@@ -135,39 +176,39 @@
 </section>
 <section class="sect5">
     <div class="wrapper">
-        <h2 class="title"><span>Чистые окна</span> всего за 4 шага</h2>
-        <p class="subtitle">Быстрое, но в то же время и качественное мытьё окон теперь реальность!</p>
+        <h2 class="title"><span>OČISTITE PROZORE</span> U SAMO 4 KORAKA</h2>
+        <p class="subtitle">Brzo, ali u isto vreme kvalitetno čišćenje prozora je sada realnost!</p>
         <ul class="benef3 clearfix">
             <li>
                 <div class="img"><img src="{{ asset('/') }}dailysharkFiles/winclean/s5_img1.jpg" alt=""></div>
                 <span>01</span>
                 <div class="text">
-                    <span>Шаг №1</span>
-                    <p>Нанесите на окно чистую воду или специальный раствор, используя распылитель.</p>
+                    <span>Korak 1</span>
+                    <p>Nanesite čisto vodu <br>ili poseban rastvor na prozor pomoću boce sa raspršivačem.</p>
                 </div>
             </li>
             <li>
                 <div class="img"><img src="{{ asset('/') }}dailysharkFiles/winclean/s5_img2.jpg" alt=""></div>
                 <span>02</span>
                 <div class="text">
-                    <span>Шаг №2</span>
-                    <p>Смочите щетки в моющем средстве и установите их на обе стороны стекла (предварительно зафиксировав шнур на руке)</p>
+                    <span>Korak 2</span>
+                    <p>Potopite četke u deterdžent<br> i postavite ih na obe strane stakla (nakon što pričvrstite gajtan na ruci)</p>
                 </div>
             </li>
             <li>
                 <div class="img"><img src="{{ asset('/') }}dailysharkFiles/winclean/s5_img3.jpg" alt=""></div>
                 <span>03</span>
                 <div class="text">
-                    <span>Шаг №3</span>
-                    <p>Аккуратно и плавно распределите средство по всей поверхности окон с помощью магнитной щетки.</p>
+                    <span>Korak 3</span>
+                    <p>Magnetgnom četkom nežno i glatko rasporedite proizvod po celoj površini prozora</p>
                 </div>
             </li>
             <li>
                 <div class="img"><img src="{{ asset('/') }}dailysharkFiles/winclean/s5_img4.jpg" alt=""></div>
                 <span>04</span>
                 <div class="text">
-                    <span>Шаг №4</span>
-                    <p>После того как вы помоете <br>окна, снимите щетку со стекла, промойте губки щетки простой водой</p>
+                    <span>Korak 4</span>
+                    <p>Nakon što operete prozore,<br> uklonite četku sa stakla, isperite sunđere za četkice običnom vodom.</p>
                 </div>
             </li>
         </ul>
@@ -175,17 +216,19 @@
 </section>
 <section class="sect7 color_theme">
     <div class="wrapper">
-        <h2 class="title"><span>Довольные покупатели,</span> которые оценили WinClean</h2>
+        <h2 class="title"><span>ZADOVOLJNI KUPCI</span> KOJI SU OCENILI WINCLEAN</h2>
         <div class="reviews">
             <div class="rev_item">
                 <img src="{{ asset('/') }}dailysharkFiles/winclean/rev1.jpg" alt="">
                 <div class="text">
                     <div class="name clearfix">
                         <img src="{{ asset('/') }}dailysharkFiles/winclean/ava1.jpg" alt="">
-                        <p><span>Валерий Куликов</span> 34 года</p>
+                        <p><span>Vanja Jović</span> 34 godine</p>
                     </div>
-                    <span>“Практичный инструмент для уборки!”</span>
-                    <p>Вчера забрал свою магнитную щетку с почты и уже успел опробовать её в полной мере. Сегодня делали с женой генеральную уборку. Я мыл окна и скажу вам, что щетка действительно стоит своих денег. На все окна в нашей трешке у меня ушло минут 20, не больше. Окна кристально чистые, как с внешней стороны, так и с внутренней. Однозначно рекомендую, такой инструмент в быту всем пригодится.</p>
+                    <span>"Praktičan alat za čišćenje!"</span>
+                    <p>Juče mi je kurir doneo magnetnu četku i već danas sam je isprobao. Supruga i ja smo uradili generalno čišćenje stana.
+                        Oprao sam prozore i mogu vam reći da je četka zaista vredna novca. Trebalo mi je oko 20 minuta da operem sve prozore, ne više.
+                        Prozori su kristalno čisti, kako spolja tako i iznutra. Definitivno preporučujem takav alat svima!</p>
                 </div>
             </div>
             <div class="rev_item">
@@ -193,10 +236,13 @@
                 <div class="text">
                     <div class="name clearfix">
                         <img src="{{ asset('/') }}dailysharkFiles/winclean/ava2.jpg" alt="">
-                        <p><span>Оксана Федорова</span> 29 лет</p>
+                        <p><span>Olivera Jakšić</span> 29 godina</p>
                     </div>
-                    <span>“Больше не боюсь самостоятельно мыть окна)”</span>
-                    <p>Я страшно боюсь высоты и поэтому никогда не мою окна, всегда прошу мужа. Увидела магнитную щетку на вашем сайте и решила заказать. Доставили, кстати, всего за 4 дня. Уже попробовала попользоваться. Отличное решение для людей, которые боятся вылезать за пределы окна, чтобы помыть внешнюю сторону. Теперь я спокойно могу делать всю уборку самостоятельно) Муж покупку тоже одобрил)</p>
+                    <span>"Više se ne plašim da perem prozore"</span>
+                    <p>Užasno se plašim visine i zato nikada ne perem prozore, uvek zovem muža.
+                        Videla sam magnetnu četku na vašoj web stranici i odlučila sam da je poručim. Isporučeno je za 2 dana.
+                        Prvog sunčanog dana sam je upotrebila i mogu vam reći da sam prezadovoljna. Ovo je odlično rešenje za sve koji se plaše visine.
+                        Sada mogu vrlo lako da perem svoje prozore. Toplo preporučujem ovu četku svima.</p>
                 </div>
             </div>
             <div class="rev_item">
@@ -204,39 +250,42 @@
                 <div class="text">
                     <div class="name clearfix">
                         <img src="{{ asset('/') }}dailysharkFiles/winclean/ava3.jpg" alt="">
-                        <p><span>Екатерина Золотова</span> 40 лет</p>
+                        <p><span>Katarina Zakić</span> 40 godina</p>
                     </div>
-                    <span>“Проблема с грязными окнами решена!”</span>
-                    <p>У меня в доме очень высокие окна, которые просто невозможно вымыть с обеих сторон самостоятельно. Увидев такую магнитную щетку, очень обрадовалась. Ведь ей можно находясь внутри помыть и наружную сторону. У нас сейчас весь дом скидывается на промышленных альпинистов, чтобы нам помыли окна. Очень рада, что у меня получилось на них сэкономить)</p>
+                    <span>"Problem sa prljavim prozorima je rešen"</span>
+                    <p>Imam veoma visoke prozore u kući, jednostavno ih je nemoguće oprati sa obe strane.
+                        Kada sam videla ovu magnetnu četku, rekoh hajde zašto da ne probam.
+                        WOW - ne mogu vam opisati koliko ovo dobro radi. Istovremeno pere spolja i iznutra i ne ostavlja tragove.
+                        Konačno više ne moramo da plaćamo perače prozora 2 puta godišnje. Drago mi je što sam uspela da pronađem ovu četku.</p>
                 </div>
             </div>
         </div>
-        <a href="#order_form" class="button-m">Заказать со скидкой</a>
+        <a href="#order_form" class="button-m">Poručite sada</a>
     </div>
 </section>
 <section class="sect8">
     <div class="wrapper">
-        <h2 class="title"><span>Как заказать</span> winclean</h2>
+        <h2 class="title"><span>KAKO PORUČITI</span> WinClean</h2>
         <ul class="order_list">
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/winclean/order1.png" alt="">
                 <span>1</span>
-                <p><b>Заявка</b> Оставляете заявку на&nbsp;сайте</p>
+                <p><b>Porudžbina</b> Ostavite podatke za dostavu na našem sajtu</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/winclean/order2.png" alt="">
                 <span>2</span>
-                <p><b>Звонок</b> Наш менеджер уточняет детали заказа</p>
+                <p><b>Potvrda</b> Kontaktiraćemo vas da potvrdimo porudžbinu</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/winclean/order3.png" alt="">
                 <span>3</span>
-                <p><b>Отправка</b> Доставляем ваш товар в течение 3-10 дней</p>
+                <p><b>Slanje</b> Šaljemo brzom poštom u roku od 1-2 radna dana</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/winclean/order4.png" alt="">
                 <span>4</span>
-                <p><b>Получение</b> Оплачиваете при получении на почте</p>
+                <p><b>Plaćanje</b> Plaćate kuriru po prijemu pošiljke</p>
             </li>
         </ul>
     </div>
@@ -245,17 +294,17 @@
     <div class="wrapper">
         <div class="container clearfix">
             <div class="title">
-                <h3 class="main_subtitle"><span>Чистые окна</span> СРАЗУ С ОБЕИХ СТОРОН! </h3>
+                <h3 class="main_subtitle"><span>ODMAH OČISTITE</span><br/> PROZORE SA OBA STRANE! </h3>
             </div>
             <ul class="top_bull">
-                <li>Уменьшение расхода моющего средства</b></li>
-                <li>Экономия на клининговых услугах</b></li>
+                <li><b>Višestruko smanjenje potrošnju deterdženta</b></li>
+                <li><b>Znatna ušteda novca i vremena</b></li>
             </ul>
         </div>
-        <div class="sale">скидка <span>-50%</span></div>
+        <div class="sale">popust <span>-40%</span></div>
         <div class="price clearfix">
             <div class="old">
-                Старая цена:
+                Redovna cena:
                 <p>
                      <span>
                         {{ $prices[1]['originalPrice'] }}
@@ -266,7 +315,7 @@
                 </p>
             </div>
             <div class="new">
-                Цена сегодня:
+                Cena sada:
                 <p>
                      <span>
                         {{ $prices[1]['amount'] }}
@@ -278,12 +327,15 @@
             </div>
         </div>
         <div class="formbox" id="order_form">
-            <h4>Оставьте заявку сейчас</h4>
-            <p>и успейте сэкономить! <span></span></p>
-            <form class="main-order-form m1-form" action="#" method="post" >
-                <input type="text" name="name" placeholder="Введите ваше имя" required="" autocomplete="off">
-                <input type="tel" name="phone" placeholder="Введите ваш телефон" required="" autocomplete="off">
-                <button class="button-m" type="submit">Заказать со скидкой</button>
+            <h4>Podaci za dostavu</h4><br>
+            <form class="main-order-form m1-form" action="{{$orderRoute}}" method="post" >
+                {{ csrf_field() }}
+                @include('lander.naturapharm.components.form_hidden_fields')
+                <input type="text" name="name" placeholder="Ime i prezime" required="">
+                <input type="tel" name="phone" placeholder="Telefon" required="">
+                <input type="text" name="shipping_address" placeholder="Adresa" required="">
+                <input type="text" name="shipping_city" placeholder="Grad" required="">
+                <button class="button-m" type="submit">Poručite sada</button>
             </form>
         </div>
     </div>
@@ -303,5 +355,6 @@
         height: 50px !important;
     }
 </style>
+@include('components.pixel_footer')
 </body>
 </html>

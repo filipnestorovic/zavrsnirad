@@ -175,7 +175,7 @@ section {
   border-bottom: 1px solid #e9eaea;
 }
 .top_line ul {
-  background: url(top_ul.png) 100% 50% no-repeat;
+  /*background: url(top_ul.png) 100% 50% no-repeat;*/
   padding: 15px 0;
 }
 .top_line ul > li {
@@ -240,6 +240,7 @@ section {
 
 .main_subtitle > span {
   background: url(main_subtitle_border.png) 0% 100% repeat-x;
+    font-size: 20px;
 }
 
 @-webkit-keyframes offer_pulse {
@@ -299,7 +300,7 @@ section {
   border-radius: 50%;
   margin: 5px 0 0 5px;
   color: #fff;
-  padding-top: 12px;
+  padding-top: 24px;
 }
 .sale > p > span {
   font-size: 29px;
@@ -311,9 +312,9 @@ section {
 }
 .ofr_bull > li {
   color: #81b70d;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 700;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   padding-left: 32px;
   background: url(check1.png) 0% 5px no-repeat;
 }
@@ -382,7 +383,7 @@ section {
 }
 .price > p {
   float: left;
-  font-size: 15px;
+  font-size: 20px;
   padding: 18px 0 0 15px;
 }
 .price .nubmer {
@@ -396,7 +397,7 @@ section {
   font-size: 0.4em;
 }
 .price .nubmer .old {
-  font-size: 20px;
+  font-size: 24px;
   line-height: 36px;
   margin-top: 8px;
 }
@@ -1775,6 +1776,6 @@ section {
 
   .formbox {
     width: 300px;
-    margin: 390px auto 0;
+    margin: 440px auto 0;
   }
 }
