@@ -506,4 +506,3 @@
     </div>
 </div>
 @include('lander.flexoval.components.footer')
-{{--@include('components.company_footer')--}}

@@ -219,11 +219,13 @@ class OrderController extends Controller
                         $orderDetails->sku = $orderDetails->sku.$orderDetails->note;
                     }
 
+                    $utm_medium = $request->get('utm_medium') ?? null;
+
                     try {
                         //webhooks
                         if($orderDetails->woocommerce_product_id === null) {
                             try {
-                                $webhookResult = $this->sendWebhook($orderDetails, $brandUrl, $gratisProduct, $customerNote, $size);
+                                $webhookResult = $this->sendWebhook($orderDetails, $brandUrl, $gratisProduct, $customerNote, $size, $utm_medium);
                             } catch(\Exception $exception){
                                 Log::error("Error: ServerWombat Webhook \nMessage: " . $exception->getMessage() . "\nDetails: ". json_encode($orderDetails, JSON_PRETTY_PRINT));
                                 return redirect()->back()->withErrors([$this->customerErrorMessage]);
@@ -262,7 +264,7 @@ class OrderController extends Controller
         }
     }
 
-    public function sendWebhook($orderDetails, $brandUrl, $gratisProduct = null, $customerNote = null, $size = null){
+    public function sendWebhook($orderDetails, $brandUrl, $gratisProduct = null, $customerNote = null, $size = null, $utm_medium = null){
 
         $client = new GuzzleHttp\Client([
             'headers' => [ 'Content-Type' => 'application/json' ]
@@ -299,7 +301,8 @@ class OrderController extends Controller
         $jsonArray['network_id'] = $_COOKIE['netid'] ?? null;
         $jsonArray['click_id'] = $_COOKIE['clid'] ?? null;
         $jsonArray['offer_id'] = $_COOKIE['offid'] ?? null;
-        $jsonArray['utm_medium'] = $_COOKIE['utm_medium'] ?? null;
+
+        $jsonArray['utm_medium'] = $_COOKIE['utm_medium'] ?? $utm_medium;
 
         if($orderDetails->is_free_shipping===1) {
             $jsonArray['shipping_lines'] = array([
