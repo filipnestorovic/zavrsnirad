@@ -50,7 +50,7 @@
     <div class="header">
         <h1 class="uppercase center white b green_bg">ERGONOMIC CUSHION</h1>
         <h2 class="uppercase center white">ANATOMSKI JASTUK ZA SEDENJE</h2>
-        <img alt="Egg Sitter" title="Ergonomic Cushion" src="{{ asset('/') }}purplerelaxFiles/ergonomiccushion/7.jpg">
+        <img alt="Egg Sitter" title="Ergonomic Cushion" src="{{ asset('/') }}purplerelaxFiles/ergonomiccushion/header.jpg">
         <div class="reyt">
             <div class="stars"><b>4.9</b> (glasova: 526)</div>
         </div>
@@ -92,7 +92,7 @@
         <p class="justify">Veoma je udoban, napravljen je od bambusnog poliestera i viskoze. Jako je mekan i kroz njega vazduh cirkuliše.
             Zahvaljujući tome ne dolazi do znojenja i stvaranja nelagodnog osećaja pri dugom sedenju.</p>
         <div class="header">
-            <img alt="Egg SitterEgg Sitter" title="Egg SitterEgg Sitter" src="{{ asset('/') }}purplerelaxFiles/ergonomiccushion/7.jpg">
+            <img alt="Ergonomic Cushion" title="Ergonomic Cushion" src="{{ asset('/') }}purplerelaxFiles/ergonomiccushion/7.jpg">
             <div class="timer_price">
                 <div class="timer_block clearfix">
                     <p>ISKORISTITE</p>
@@ -233,7 +233,7 @@
     <div class="header footer">
         <h1 class="uppercase center white b green_bg">ERGONOMIC CUSHION</h1>
         <h2 class="uppercase center white">ANATOMSKI JASTUK ZA SEDENJE</h2>
-        <img alt="Egg Sitter" title="Ergonomic Cushion" src="{{ asset('/') }}purplerelaxFiles/ergonomiccushion/7.jpg">
+        <img alt="Egg Sitter" title="Ergonomic Cushion" src="{{ asset('/') }}purplerelaxFiles/ergonomiccushion/header.jpg">
         <div class="reyt">
             <div class="stars"><b>4.9</b> (glasova: 526)</div>
         </div>
