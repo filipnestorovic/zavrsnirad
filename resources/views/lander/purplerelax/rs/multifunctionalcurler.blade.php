@@ -158,18 +158,18 @@
 </section>
 <!-- /use -->
 <!-- video -->
-{{--<section class="video_section" id="video_section">--}}
-{{--    <div class="wrapper">--}}
-{{--        <h2 style="text-shadow: #d98945 0 0 10px;">Посмотрите сами как легко пользоваться плойкой с мультистержнем</h2>--}}
-{{--        <div class="video_wrapper">--}}
-{{--            <div class="video_block">--}}
-{{--                <video width="100%" height="100%" controls="controls" controls poster="{{ asset('/') }}purplerelaxFiles/multifunctionalcurler/poster.jpg" >--}}
-{{--                    <source src="{{ asset('/') }}purplerelaxFiles/multifunctionalcurler/1.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>--}}
-{{--                </video>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</section>--}}
+<section class="video_section" id="video_section">
+    <div class="wrapper">
+        <h2 style="text-shadow: #d98945 0 0 10px;">Uverite se i sami koliko je lako koristiti Multifunctional Hair Curler</h2>
+        <div class="video_wrapper">
+            <div class="video_block">
+                <video width="100%" height="100%" controls="controls" controls poster="{{ asset('/') }}purplerelaxFiles/multifunctionalcurler/poster.jpg" >
+                    <source src="{{ asset('/') }}purplerelaxFiles/multifunctionalcurler/1.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                </video>
+            </div>
+        </div>
+    </div>
+</section>
 <section id="about">
     <div class="box-osob">
         <div class="img-toptop">

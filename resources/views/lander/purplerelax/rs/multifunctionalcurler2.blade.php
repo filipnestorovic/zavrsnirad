@@ -38,12 +38,12 @@
             .offer_section {
                 padding: 20px 0 25px;
                 height: auto;
-                background-image: url({{ asset('/') }}purplerelaxFiles/multifunctionalcurler/mobile__offer_bg.jpg);
+                background-image: url({{ asset('/') }}purplerelaxFiles/multifunctionalcurler2/mobile__offer_bg.jpg);
             }
             .order_section .content_block {
                 padding: 20px 0 25px;
                 height: auto;
-                background-image: url({{ asset('/') }}purplerelaxFiles/multifunctionalcurler/mobile__offer_bg.jpg);
+                background-image: url({{ asset('/') }}purplerelaxFiles/multifunctionalcurler2/mobile__offer_bg.jpg);
             }
         }
     </style>
