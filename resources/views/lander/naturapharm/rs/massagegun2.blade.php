@@ -146,7 +146,7 @@
                     <li><b>Sila pritiska:</b> 0 - 5.1 kg/cm;</li>
                     <li><b>Amplituda:</b> 11 mm;</li>
                     <li><b>Maksimalni nivo buke:</b> 45dB;</li>
-                    <li>Pištolj za masažu ima 6 brzina</li>
+                    <li>Pištolj za masažu ima 32 brzine</li>
                     <li>4 nastavka</li>
                 </ul>
             </div>
