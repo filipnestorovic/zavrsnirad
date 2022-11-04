@@ -9,6 +9,9 @@
     <link href="{{ asset('/') }}dailysharkFiles/thermostaticcoaster/owl.carousel.min.css" rel="stylesheet">
     <link href="{{ asset('/') }}dailysharkFiles/thermostaticcoaster/styles.css" rel="stylesheet">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         @font-face {
             font-family: 'Open Sans';
             src: local('Open Sans'), local('OpenSans'), url('{{ asset('/') }}fonts/opensans.woff2') format('woff2'),
