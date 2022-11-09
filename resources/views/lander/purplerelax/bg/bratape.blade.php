@@ -95,7 +95,7 @@
         <div class="text">КАТО ЗА ВСЯКА ДРУГА ДРЕХА</div>
     </section>
     <section class="block-4">
-        <h2 class="title">ПРЕДИМСТВА НА ЛЕНТАТА ЗА СУТИЕН</h2>
+        <h2 class="title">ПРЕДИМСТВА НА BRA TAPE</h2>
         <ul class="advant clearfix">
             <li>Забравете за масивните и тежки сутиени</li>
             <li>Носете любимите си рокли и топове без презрамки</li>
@@ -123,19 +123,18 @@
         <div class="rev-slider clearfix">
             <div class="rev-item">
                 <img src="{{ asset('/') }}purplerelaxFiles/bratape/rev-1.jpg" alt="отзывы fly bra">
-                <h4>Gabriela Jovanov, 28 godina</h4>
-                <p>Volim da izgledam impresivno u svakoj prilici, zato imam puno haljina bez bretela. Sviđaju mi se ove trake jer prave savršen dekolte i čine grudi bujnijim. Sve kolege na poslu me gledaju, svakoj ženi imponuje tako nešto :)</p>
+                <h4>Габриела, 28 години</h4>
+                <p>Обичам да изглеждам впечатляващо във всеки повод, затова имам много рокли без презрамки. Обичам тези презрамки, защото създават перфектното деколте и правят бюста да изглежда по-пълен. Всички колеги в работата ме гледат, всяка жена се впечатлява от нещо такова :)</p>
             </div>
             <div class="rev-item">
                 <img src="{{ asset('/') }}purplerelaxFiles/bratape/rev-2.jpg" alt="отзывы fly bra">
-                <h4>Pavelina Mirković, 20 godina</h4>
-                <p>Skoro sam bila deveruša na svadbi i nosila sam haljinu sa otvorenim leđima. Nisam želela da nosim grudnjak koji se vidi, pa sam pronašla ove trake kao idealno rešenje. Nosila sam ih celog dana i jako sam zadovoljna. Nastaviću da ih koristim kada god nosim otvorenu odeću i javljam rezultate. </p>
+                <h4>Паулина, 20 години</h4>
+                <p>Бях почти шаферка на една сватба и бях с рокля с отворен гръб. Не исках да нося сутиен, който се вижда, затова намерих тези презрамки за идеалното решение. Носих ги цял ден и съм много доволна. Ще продължа да ги използвам винаги, когато нося разголени дрехи и ще докладвам резултатите.</p>
             </div>
             <div class="rev-item">
                 <img src="{{ asset('/') }}purplerelaxFiles/bratape/rev-3.jpg" alt="отзывы fly bra">
-                <h4>Marija Mikuljević, 36 godina</h4>
-                <p>Tražila sam dugo ovakav proizvod i konačno sam ga pronašla. Wow - moje grudi stoje čvrste kao stena. Počela sam da mamim poglede muškaraca iz okruženja koji me ranije nisu primećivali.
-                    Sve preporuke za ovaj proizvod, vrh je!</p>
+                <h4>Анастасия, 24 години</h4>
+                <p>Търсих такъв продукт дълго време и най-накрая го намерих. Леле - гърдите ми са твърди като скала. Започнах да привличам погледите на мъже от обкръжението, които не ме бяха забелязвали преди. Всички препоръки за този продукт, топ е!</p>
             </div>
         </div>
     </section>
