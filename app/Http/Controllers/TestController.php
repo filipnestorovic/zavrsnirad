@@ -97,36 +97,42 @@ class TestController extends Controller
                         $checkIfTrafficSumIsGood += $variation['traffic_percentage'];
 
                         $testVariationId = $variation['id_tests_variations'];
-                        $testStatistic = $this->modelStatistic->getSingleTestStatistic($testVariationId, $id, null);
 
-                        $newArray = [];
-                        foreach ($testStatistic as $key => $value) {
-                            $newArray['VariationName'] = $value->variation_name;
-                            if(isset($value->TestVariationVisits)) {
-                                $newArray[$value->event_name] = $value->TestVariationVisits;
+                        if(is_null($testVariationId)) {
+                            
+                        } else {
+
+                            $testStatistic = $this->modelStatistic->getSingleTestStatistic($testVariationId, $id, null);
+
+                            $newArray = [];
+                            foreach ($testStatistic as $key => $value) {
+                                $newArray['VariationName'] = $value->variation_name;
+                                if (isset($value->TestVariationVisits)) {
+                                    $newArray[$value->event_name] = $value->TestVariationVisits;
+                                }
                             }
-                        }
 
-                        $array[$testVariationId] = $newArray;
-                        $testOrders = $this->modelStatistic->getOrdersForVariationInActiveTest($testVariationId);
-                        $countOrders = 0;
-                        $revenueOrders = 0;
-                        foreach ($testOrders as $singleOrder) {
-                            $countOrders++;
-                            $revenueOrders += $singleOrder->price;
-                        }
-                        $totalVariationOrders[$testVariationId]['orders'] = $countOrders;
-                        $totalVariationOrders[$testVariationId]['revenue'] = $revenueOrders;
+                            $array[$testVariationId] = $newArray;
+                            $testOrders = $this->modelStatistic->getOrdersForVariationInActiveTest($testVariationId);
+                            $countOrders = 0;
+                            $revenueOrders = 0;
+                            foreach ($testOrders as $singleOrder) {
+                                $countOrders++;
+                                $revenueOrders += $singleOrder->price;
+                            }
+                            $totalVariationOrders[$testVariationId]['orders'] = $countOrders;
+                            $totalVariationOrders[$testVariationId]['revenue'] = $revenueOrders;
 
-                        $upcrossSells = $this->modelOrder->getUpCrossSellByVariationOrTest(null, $testVariationId, null, null);
-                        $countupcrossSells = 0;
-                        $revenueupcrossSells = 0;
-                        foreach ($upcrossSells as $singleOrder) {
-                            $countupcrossSells++;
-                            $revenueupcrossSells += $singleOrder->price;
+                            $upcrossSells = $this->modelOrder->getUpCrossSellByVariationOrTest(null, $testVariationId, null, null);
+                            $countupcrossSells = 0;
+                            $revenueupcrossSells = 0;
+                            foreach ($upcrossSells as $singleOrder) {
+                                $countupcrossSells++;
+                                $revenueupcrossSells += $singleOrder->price;
+                            }
+                            $totalVariationOrders[$testVariationId]['UpCrossSells'] = $countupcrossSells;
+                            $totalVariationOrders[$testVariationId]['RevenueUpCrossSells'] = $revenueupcrossSells;
                         }
-                        $totalVariationOrders[$testVariationId]['UpCrossSells'] = $countupcrossSells;
-                        $totalVariationOrders[$testVariationId]['RevenueUpCrossSells'] = $revenueupcrossSells;
                     }
                 }
             }
