@@ -422,9 +422,13 @@
                                     {{-->{{ $singlePrice['quantity'] }} x {{ $product->product_name }} ({{ $singlePrice['amount'] }} RSD)</option>--}}
                                 {{--@endforeach--}}
                             {{--</select>--}}
-                            {{--@foreach($prices as $singlePrice)--}}
-                                {{--<div class="{{ $singlePrice['quantity'] }}_pack item-gift" id="{{ $singlePrice['quantity'] }}" @if($singlePrice['quantity'] === 1) style="display: block" @endif> {{ $singlePrice['quantity'] }} x {{ $product->product_name }} <br><strike class="old"> {{ $prices[$singlePrice['quantity']]['originalPrice'] }} RSD </strike> {{ $prices[$singlePrice['quantity']]['amount'] }} RSD <br> @if($singlePrice['is_free_shipping']) + BESPLATNA DOSTAVA @endif</div>--}}
-                            {{--@endforeach--}}
+{{--                            @foreach($prices as $singlePrice)--}}
+{{--                                <div class="{{ $singlePrice['quantity'] }}_pack item-gift" id="{{ $singlePrice['quantity'] }}" @if($singlePrice['quantity'] === 1) style="display: block" @endif> {{ $singlePrice['quantity'] }} x {{ $product->product_name }} <br><strike class="old"> {{ $prices[$singlePrice['quantity']]['originalPrice'] }} RSD </strike> {{ $prices[$singlePrice['quantity']]['amount'] }} RSD <br> @if($singlePrice['is_free_shipping']) + BESPLATNA DOSTAVA @endif</div>--}}
+{{--                            @endforeach--}}
+                            <div class="1_pack item-gift" id="1" style="display: block; font-size: 32px; line-height: 30px;">
+                                <strike class="old" style="font-size: 24px;"> {{ $prices[1]['originalPrice'] }} RSD </strike><br>
+                                {{ $prices[1]['amount'] }} {{ $prices[1]['currency'] }}
+                            </div>
                             <button class="btn js_submit button__text"> NARUČITE SADA </button>
                             <div class></div>
                             <div class="iva-wrap"> PDV uključen </div>
