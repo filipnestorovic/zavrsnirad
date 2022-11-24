@@ -39,7 +39,7 @@
 </head>
 <body>
 <div class="overflow">
-    @include('components.display_errors')s
+    @include('components.display_errors')
     <div class="block1">
         <div class="container">
             <div class="block1-header">

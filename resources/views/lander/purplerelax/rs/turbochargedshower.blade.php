@@ -220,6 +220,7 @@
 </head>
 <body>
 <div class="wrap">
+    @include('components.display_errors')
     <header class="main_block">
         <div class="header_bottom">
             <div class="container">
