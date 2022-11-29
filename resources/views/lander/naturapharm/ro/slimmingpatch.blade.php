@@ -85,7 +85,7 @@
             <span class="h2 blue font-mons" data-xd="t2">Începe-ți ziua cu energia oferită</span>
             <div class="h1 blue font-mons" data-xd="t2">PLASTURII DE SLĂBIT</div>
             <span class="h2 blue font-mons" data-xd="t2"></span>
-            <div class="h2 pink font-mons" data-xd="t2">În doar câteva zile, corpul tău va fi purificat, <b>plin de energie</b>, iar greutatea va fi redusă vizibil.</div>
+            <div class="h2 pink font-mons" data-xd="t2">În doar câteva zile, corpul tău va fi purificat, <b>plin de energie</b>, iar greutatea va fi <br> redusă vizibil.</div>
             <div class="sec3__grid" dir="rtl">
                 <div class="sec3__part" dir="ltr">
                     <div class="only-web"><img alt class="prod" src="{{ asset('/') }}naturapharmFiles/slimmingpatch/prod.png"></div>
@@ -266,8 +266,8 @@
     </section>
     <section class="sec11">
         <div class="sec11__container">
-            <div class="h1 blue font-mons" data-xd="t2">Какво казват</div>
-            <div class="h2 green font-mons" data-xd="t2"> клиенти </div>
+            <div class="h1 blue font-mons" data-xd="t2">Ce spun</div>
+            <div class="h2 green font-mons" data-xd="t2"> clienții </div>
             <div class="comment">
                 <div class="star5"></div>
                 <p class="font-PT">Ura! Plasturii de slăbit sunt ceva uimitor! Am pierdut 7 kg fără niciun efort în doar o lună. Acum lucrez la abdomenul meu.</p>
