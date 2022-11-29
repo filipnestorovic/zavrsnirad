@@ -21,8 +21,8 @@
     <div class="wrapper clearfix">
         <ul>
             <li style="color: #fff;"><b style="color: #fff;">Se îmbunătățește </b><br>circulaţie</li>
-            <li><b>Reduce </b><br>inflamație și umflare</li>
-            <li><b>Fără </b><br>efecte secundare</li>
+            <li><b>Reduce </b><br>inflamație <br>și umflare</li>
+            <li style="color: #8a705a;"><b>Fără </b><br>efecte <br>secundare</li>
         </ul>
         <div class="info">
             <div class="title_block">

@@ -232,7 +232,7 @@
 </section>
 <section class="reviews_section">
     <div class="wrapper">
-        <h2>Utisci <span>kupaca</span></h2>
+        <h2>ОТЗИВИ НА <span>КЛИЕНТИ</span></h2>
         <div class="reviews_list">
             <div class="review_item clearfix">
                 <img src="{{asset('/')}}flexovalFiles/carapa/reviews__review1_photo.jpg" alt="" title="">

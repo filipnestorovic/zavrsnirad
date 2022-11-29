@@ -21,8 +21,8 @@
     <div class="wrapper clearfix">
         <ul>
             <li style="color: #fff;"><b style="color: #fff;">Βελτιώνει </b><br>κυκλοφορία</li>
-            <li><b>Μειώνει </b><br>φλεγμονή και πρήξιμο</li>
-            <li><b>Χωρίς </b><br>παρενέργειες</li>
+            <li><b>Μειώνει </b><br>φλεγμονή <br>και πρήξιμο</li>
+            <li style="color: #8a705a;"><b>Χωρίς </b><br>παρενέργειες</li>
         </ul>
         <div class="info">
             <div class="title_block">
@@ -90,7 +90,7 @@
             <li>Χάρη στη <b>δράση συμπίεσης</b>, το αίμα στις φλέβες κυλάει πιο γρήγορα. </li>
             <li>Παρέχουν την απαραίτητη <b>προφύλαξη από θρομβώσεις</b>, προστατεύοντας ενάντια σε ατυχήματα.</li>
         </ul>
-        <a href="#order_form" class="button">ΕΚΜΕΤΑΛΛΕΥΤΕΙΤΕ ΤΗΝ ΠΡΟΣΦΟΡΑ</a>
+        <a href="#order_form" class="button">ΠΑΡΑΓΓΕΙΛΤΕ ΤΩΡΑ</a>
     </div>
 </section>
 <section class="components_section">
