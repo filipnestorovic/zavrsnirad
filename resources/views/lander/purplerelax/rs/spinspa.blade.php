@@ -13,7 +13,7 @@
     <style>
         .header_bottom {
             padding-top: 55px;
-            background: url("{{ asset('/') }}purplerelaxFiles/turbochargedshower/main_bg.jpg") no-repeat top center;
+            background: url("{{ asset('/') }}purplerelaxFiles/spinspa/main_bg.jpg") no-repeat top center;
             height: 720px;
             position: relative;
             z-index: 2
@@ -47,12 +47,12 @@
         }
 
         .diff {
-            background: url("{{ asset('/') }}purplerelaxFiles/turbochargedshower/diff_bg.jpg") no-repeat top center;
+            background: url("{{ asset('/') }}purplerelaxFiles/spinspa/diff_bg.jpg") no-repeat top center;
             height: 493px
         }
 
         .use {
-            background: url("{{ asset('/') }}neoshowerFiles/jonskitus/use_bg.jpg") no-repeat top center;
+            background: url("{{ asset('/') }}purplerelaxFiles/spinspa/use_bg.jpg") no-repeat top center;
             height: 435px;
             padding-top: 75px
         }
@@ -140,12 +140,12 @@
             margin-bottom: 0;
         }
         .list {
-            margin: 0 0 0 295px;
+            margin: 5em 0 0 295px;
         }
 
         @media (max-width: 980px) {
             .header_bottom {
-                background: url("{{ asset('/') }}purplerelaxFiles/turbochargedshower/main_bg.jpg") no-repeat top center;
+                background: url("{{ asset('/') }}purplerelaxFiles/spinspa/main_bg.jpg") no-repeat top center;
                 height: 775px;
                 padding-top: 60px
             }
@@ -157,7 +157,7 @@
             }
 
             .use {
-                background: url("{{ asset('/') }}neoshowerFiles/jonskitus/use_bg.jpg") no-repeat top center;
+                background: url("{{ asset('/') }}purplerelaxFiles/spinspa/use_bg.jpg") no-repeat top center;
                 height: 435px;
                 padding-top: 45px
             }
@@ -190,7 +190,7 @@
             }
 
             .use {
-                background: url("{{ asset('/') }}neoshowerFiles/jonskitus/use_bg_m.jpg") no-repeat top center;
+                background: url("{{ asset('/') }}purplerelaxFiles/spinspa/use_bg_m.jpg") no-repeat top center;
                 height: 710px;
                 padding-top: 45px
             }
@@ -225,17 +225,17 @@
         <div class="header_bottom">
             <div class="container">
                 <div class="main_title">
-                    <h1>TUŠ <br> <span>«TURBOCHARGED»</span></h1>
+                    <h1><span>«SPIN SPA»</span></h1>
                     <div class="subtitle">
-                        Inovativni tuš za zdravije
-                        <nobr>tuširanje</nobr>
+                        INOVATIVNA ROTIRAJUĆA ČETKA ZA
+                        <nobr>TUŠIRANJE</nobr>
                     </div>
                 </div>
                 <ul class="list">
-                    <li>ODSTRANJUJE TEŠKE METALE</li>
-                    <li>ŠTEDI DO 35% VODE</li>
-                    <li>POJAČAVA MLAZ ZA 200%</li>
-                    <li>PREČIŠĆAVA I OMEKŠAVA VODU</li>
+                    <li>PRUŽA MASAŽNI EFEKAT</li>
+                    <li>ČINI KOŽU MEKOM I SJAJNOM</li>
+                    <li>POMAŽE U ELIMINISANJU CELULITA</li>
+                    <li>UKLANJA MRTVE ĆELIJE SA KOŽE</li>
                 </ul>
                 <div class="discont">
                     Akcija
@@ -277,22 +277,22 @@
                 <div class="container">
                     <div class="nature_slider">
                         <div class="ns_item"><img alt=""
-                                                  src="{{ asset('/') }}purplerelaxFiles/turbochargedshower/ns1.jpg">
+                                                  src="{{ asset('/') }}purplerelaxFiles/spinspa/ns1.jpg">
                         </div>
                         <div class="ns_item"><img alt=""
-                                                  src="{{ asset('/') }}purplerelaxFiles/turbochargedshower/ns2.jpg">
+                                                  src="{{ asset('/') }}purplerelaxFiles/spinspa/ns2.jpg">
                         </div>
                         <div class="ns_item"><img alt=""
-                                                  src="{{ asset('/') }}purplerelaxFiles/turbochargedshower/ns3.jpg">
+                                                  src="{{ asset('/') }}purplerelaxFiles/spinspa/ns3.jpg">
                         </div>
                         <div class="ns_item"><img alt=""
-                                                  src="{{ asset('/') }}purplerelaxFiles/turbochargedshower/ns4.jpg">
+                                                  src="{{ asset('/') }}purplerelaxFiles/spinspa/ns4.jpg">
                         </div>
                         <div class="ns_item"><img alt=""
-                                                  src="{{ asset('/') }}purplerelaxFiles/turbochargedshower/ns5.jpg">
+                                                  src="{{ asset('/') }}purplerelaxFiles/spinspa/ns5.jpg">
                         </div>
                         <div class="ns_item"><img alt=""
-                                                  src="{{ asset('/') }}purplerelaxFiles/turbochargedshower/ns6.jpg">
+                                                  src="{{ asset('/') }}purplerelaxFiles/spinspa/ns6.jpg">
                         </div>
                     </div>
                 </div>
@@ -302,27 +302,23 @@
             <div class="container">
                 <div class="stitle grey">
                     <h2>
-                        Zašto tuš
-                        <nobr>«Turbocharged»?</nobr>
+                        Zašto <nobr>«Spin Spa»?</nobr> četka?
                     </h2>
                 </div>
                 <div class="leika_block">
-                    <img src="{{ asset('/') }}purplerelaxFiles/turbochargedshower/leika_img2.png" class="leika_img2"
+                    <img src="{{ asset('/') }}purplerelaxFiles/spinspa/leika_img2.png" class="leika_img2"
                          alt="">
-                    <img src="{{ asset('/') }}purplerelaxFiles/turbochargedshower/leika_img3.png" class="leika_img3"
+                    <img src="{{ asset('/') }}purplerelaxFiles/spinspa/leika_img3.png" class="leika_img3"
                          alt="">
                     <div class="text">
-                        <p>Da li su vam koža i kosa previše suvi? Stižu vam veliki računi za vodu? Ovi problemi mogu da
-                            imaju isti uzrok i vreme je da učinite nešto po tom pitanju.
-                            <b>Inovativna tuš baterija pomoći će vam u prečišćavanju vode, brizi o zdravlju
-                                kože i uštedi novca.</b></p>
-                        <p class="white"><b>Zahvaljujući posebnom filteru i 340 sićušnih rupica, </b> glava tuša
-                            <b>uklanja teške metale, hrđu i hlor iz vode.</b> Deluje antibakterijski.</p>
-                        <p><b>Jednostavno zavrnite Turbocharged tuš bateriju i zauvek ćete zaboraviti na suvu kožu,
-                                neugodan miris vode i zastrašujuće račune za vodu!</b></p>
+                        <p>U današnje vreme opuštanje i zdrav način života su postali čisti luksuz.
+                            <b>Nakon napornog radnog dana, tuširanje uz masažu i temeljno čišćenje kože uz omiljenu kupku može kao rukom da odnese
+                                sav umor koji se akumulira u telu tokom dana.</b></p>
+                        <p class="white">Zahvaljujući posebnom sistemu nežne rotacije, vaše telo će se opustiti a <b>koža biti glatka, mekana i sjajna.</b></p>
+                        <p>Ova četka je u Evropi neizostavna u svakom kupatilu, a u Srbiji je već došla do skoro 5000 kupaca.</p>
                         <a href="{{$checkoutView}}" class="btn">Poruči odmah</a>
                     </div>
-                    <img src="{{ asset('/') }}purplerelaxFiles/turbochargedshower/leika_img.png" class="leika_img"
+                    <img src="{{ asset('/') }}purplerelaxFiles/spinspa/leika_img.png" class="leika_img"
                          alt="">
                 </div>
             </div>
@@ -331,28 +327,27 @@
             <div class="container">
                 <div class="stitle blue">
                     <h2>
-                        Prednosti "Turbocharged" tuš baterije
+                        Prednosti «Spin Spa» četke
                     </h2>
                 </div>
                 <div class="preim_block">
                     <div class="preim_item">
                         <div class="image">
-                            <img src="{{ asset('/') }}purplerelaxFiles/turbochargedshower/preim1.png" alt="">
+                            <img src="{{ asset('/') }}purplerelaxFiles/spinspa/preim1.png" alt="">
                         </div>
                         <div class="text">
-                            <b>UŠTEDITE DO 35% VODE</b>
-                            <p>Idealno za uštedu vode. Pritisak je jači za 200% zahvaljujući inovativnoj strukturi tuš
-                                baterije koja poseduje 2 moćna filtera za prečišćavanje vode.</p>
+                            <b>ELIMINACIJA CELULITA</b>
+                            <p>Invazivna masaža koja prodire u dubinske mišiće pokreće metabolizam i oslobađanje masnih ćelija koje čine celulit i izbacuje ih na površinu.
+                                To je tradicionalno i najbolje rešenje za eliminisanje celulita.</p>
                         </div>
                     </div>
                     <div class="preim_item preim_item2">
                         <div class="image">
-                            <img src="{{ asset('/') }}purplerelaxFiles/turbochargedshower/preim2.png" alt="">
+                            <img src="{{ asset('/') }}purplerelaxFiles/spinspa/preim2.png" alt="">
                         </div>
                         <div class="text">
-                            <b>NEGUJTE ZDRAVLJE</b>
-                            <p>Čini kožu mekšom, smanjuje lučenje sebuma, povećava aktivnost ćelija i sprečava gubitak
-                                kose.</p>
+                            <b>NEGUJTE KOŽU</b>
+                            <p>Specijalni nastaak za mikrodermoabraziju nežno skida mrtve slojeve kože, podstiče oslobađanje kolagena i tako postiže efekat slajne i glatke kože.</p>
                         </div>
                     </div>
                 </div>
@@ -362,26 +357,25 @@
             <div class="container">
                 <div class="stitle">
                     <h2>
-                        Savremena tuš baterija <span>«Turbocharged»</span>
+                        Savremena četka <span>«Spin Spa»</span>
                     </h2>
                 </div>
                 <div class="diff_block">
                     <div class="diff_item diff_item1">
                         <b>PRUŽA UŽITAK</b>
-                        <p>Snažan protok vode <br>ne iritira kožu i <br> deluje kao masažer</p>
+                        <p>Nastavak za masažu <br> idealno će opustiti <br> vaše telo u svim zonama</p>
                     </div>
                     <div class="diff_item diff_item2">
                         <b>STIMULIŠE KOŽU</b>
-                        <p>Posebno ciljani mlazovi vode <br>stimulišu kožu, čine je čvršćom, <br>mekšom i elastičnijom
-                        </p>
+                        <p>Zahvaljujući ovom tretmanu <br> koža će započeti proces regeneracije i <br> biće čvrsta i elastična</p>
                     </div>
                     <div class="diff_item diff_item3">
-                        <b>TEHNOLOGIJA NEGATIVNIH JONA</b>
-                        <p>Uklanja štetne materije i <br>neugodan miris iz vode</p>
+                        <b>NASTAVAK ZA PETE</b>
+                        <p>U paketu dobijate <br> nastavak za glačanje peta</p>
                     </div>
                     <div class="diff_item diff_item4">
-                        <b>MOĆNA DVOSTRUKA <br> FILTRACIJA</b>
-                        <p>Čiste vodu za tuširanje i ostavljaju <br>kosu mekom i svilenkastom</p>
+                        <b>ČIŠĆENJE LICA</b>
+                        <p>Mekani nastavak za lice <br> očistiće vaše pore od masnoće <br> koja je uzročnik stvaranja akni</p>
                     </div>
                 </div>
             </div>
@@ -390,42 +384,12 @@
             <div class="container">
                 <div class="stitle white">
                     <h2>
-                        Štetne materije u vodi
+                        NAJBOLJI DODATAK <br> ZA TUŠIRANJE
                     </h2>
                 </div>
                 <div class="use_item imgItem">
                     <img src="{{ asset('/') }}neoshowerFiles/jonskitus/use1.png" alt="">
-                    <p>Ovakav sadržaj ispada iz creva starog samo dve godine.</p>
-                </div>
-            </div>
-        </section>
-        <section class="expert">
-            <div class="container">
-                <div class="stitle">
-                    <h2>Mišljenje stručnjaka</h2>
-                </div>
-                <div class="expert_block">
-                    <div class="text">
-                        <p style="line-height: 26px;">Lična higijena nam omogućava ne samo da budemo urednije osobe, već
-                            utiče i na stanje unutrašnjih organa i kože.
-                            Voda koja se koristi u kućama i stanovima je u većini gradova lošijeg kvaliteta, tvrda, puna
-                            kamenca i teških metala.</p>
-                        <p style="line-height: 26px;">Voda u bojleru vrlo često dugo stoji i pod visokom temperaturom
-                            sklona je izuzetno velikom taloženju teških metala i kamenca,
-                            kojih svakako ima u visokom procentu u gradskim cevovodima.
-                            Za sve koji nisu sigurni u kvalitet vode iz slavine, preporučujem tuš "Turbocharged".</p>
-                        <p style="line-height: 30px; padding-top: 10px;">Rešava problem preteranog hlorisanja vode,
-                            uklanja ostatke rđe iz cevi i teške metale koji se nalaze u vodi.
-                            Pored toga, poseban raspored rupica na tuš bateriji omogućava mlazovima vode da obavljaju
-                            masažnu funkciju i na taj način pored prečišćavanja vode, opuštaju i telo.</p>
-                    </div>
-                    <div class="name">
-                        <div class="text">
-                            <b>Valerija Savić</b>
-                            Vodeći specijalista Centra za higijenu i epidemiologiju
-                        </div>
-                        <img src="{{ asset('/') }}neoshowerFiles/jonskitus/sign.png" alt="">
-                    </div>
+                    <p>Kada probate ovu četku nećete moći zamisliti tuširanje bez nje.</p>
                 </div>
             </div>
         </section>
@@ -443,10 +407,8 @@
                             <div class="name">
                                 Mirjana
                             </div>
-                            <p>Godinama imam dermatitis. Probala sam kreme za kožu, menjala način ishrane, pa čak sam
-                                probala i istočnu medicinu, ali pomogao mi je samo ovaj tuš.
-                                Sada moja koža nije toliko suva i ne svrbi me, sem kada je izuzetno vruće napolju. I
-                                konačno mogu ponovo da trčim!</p>
+                            <p>Godinama imam problem sa celulitom. Nema šta nisam probala, razne kreme, meleme i gelove, ali ništa nije imalo efekta.
+                                Pomogla mi je jedino ova četka. Moja koža je sada mekana, nemam celulit i konačno mogu da obučem kupaći bez imalo stida.</p>
                         </div>
                     </div>
                     <div class="rev_item">
@@ -457,10 +419,8 @@
                             <div class="name">
                                 Marko
                             </div>
-                            <p>Kupio sam ovaj tuš jer mi je neko rekao da će mi dosta uštedeti na računu za vodu.
-                                Bio sam malo skeptičan na početku, ali od kada ga koristimo naš račun za vodu je manji
-                                za skoro 40%,
-                                tako da se tuš isplatio posle jednog meseca.</p>
+                            <p>Imao sam akne po licu i ramenima, išao deramtolozima, probao razna sredstva ali su akne bile jako uporne.
+                                Kada sam kupio ovu četku bio sam skeptičan, ali evo koristim je već neko vremene i skoro da nemam više akni. Samo neka potraje!</p>
                         </div>
                     </div>
                     <div class="rev_item">
@@ -471,8 +431,7 @@
                             <div class="name">
                                 Sonja
                             </div>
-                            <p>Nikada nisam imala bolji tuš od ovog! Moja deca obožavaju da se tuširaju njime, a ja sam
-                                primetila da mi je kosa mekša, kao i koža.</p>
+                            <p>Nikada nisam imala bolju četku od ove. Moja deca je obožavaju, a ja sam primetila da mi je koža jako mekana.</p>
                         </div>
                     </div>
                 </div>
@@ -483,7 +442,7 @@
                 <div class="container">
                     <div class="stitle">
                         <h2><span>3 jednostavna koraka</span> za kupovinu <br>
-                            tuša <span>«Turbocharged»</span>
+                            tuša <span>«Spin Spa»</span>
                         </h2>
                     </div>
                     <div class="order_block rel">
@@ -533,17 +492,17 @@
             <div class="header_bottom">
                 <div class="container">
                     <div class="main_title">
-                        <h1>JONSKI TUŠ <span>«Turbocharged»</span></h1>
+                        <h1><span>«SPIN SPA»</span></h1>
                         <div class="subtitle">
-                            Inovativni tuš za zdravije
-                            <nobr>tuširanje</nobr>
+                            INOVATIVNA ROTIRAJUĆA ČETKA ZA
+                            <nobr>TUŠIRANJE</nobr>
                         </div>
                     </div>
                     <ul class="list">
-                        <li>ODSTRANJUJE TEŠKE METALE</li>
-                        <li>ŠTEDI DO 35% VODE</li>
-                        <li>POJAČAVA MLAZ ZA 200%</li>
-                        <li>PREČIŠĆAVA I OMEKŠAVA VODU</li>
+                        <li>PRUŽA MASAŽNI EFEKAT</li>
+                        <li>ČINI KOŽU MEKOM I SJAJNOM</li>
+                        <li>POMAŽE U ELIMINISANJU CELULITA</li>
+                        <li>UKLANJA MRTVE ĆELIJE SA KOŽE</li>
                     </ul>
                     <div class="discont">
                         Akcija
