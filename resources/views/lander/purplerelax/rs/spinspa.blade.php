@@ -178,13 +178,13 @@
 
         @media (max-width: 665px) {
             .header_bottom {
-                background: url("{{ asset('/') }}purplerelaxFiles/turbochargedshower/main_bg_m.jpg") no-repeat top center;
+                background: url("{{ asset('/') }}purplerelaxFiles/spinspa/main_bg_m.jpg") no-repeat top center;
                 height: 1116px;
                 padding-top: 20px
             }
 
             .diff {
-                background: url("{{ asset('/') }}purplerelaxFiles/turbochargedshower/diff_bg_m.jpg") no-repeat top center;
+                background: url("{{ asset('/') }}purplerelaxFiles/spinspa/diff_bg_m.jpg") no-repeat top center;
                 height: 820px;
                 padding-top: 40px
             }
