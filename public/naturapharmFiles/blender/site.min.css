@@ -18,15 +18,15 @@ a,
 ins {
     text-decoration: none;
 }
-@font-face {
-    font-family: icomoon;
-    font-display: auto;
-    src: url(/pub-assets/fonts/icomoon-f.eot?4eenn0);
-    src: url(/pub-assets/fonts/icomoon-f.eot?4eenn0#iefix) format("embedded-opentype"), url(/pub-assets/fonts/icomoon-f.ttf?4eenn0) format("truetype"), url(/pub-assets/fonts/icomoon-f.woff?4eenn0) format("woff"),
-    url(/pub-assets/fonts/icomoon-f.svg?4eenn0#icomoon) format("svg");
-    font-weight: 400;
-    font-style: normal;
-}
+/*@font-face {*/
+/*    font-family: icomoon;*/
+/*    font-display: auto;*/
+/*    src: url(/pub-assets/fonts/icomoon-f.eot?4eenn0);*/
+/*    src: url(/pub-assets/fonts/icomoon-f.eot?4eenn0#iefix) format("embedded-opentype"), url(/pub-assets/fonts/icomoon-f.ttf?4eenn0) format("truetype"), url(/pub-assets/fonts/icomoon-f.woff?4eenn0) format("woff"),*/
+/*    url(/pub-assets/fonts/icomoon-f.svg?4eenn0#icomoon) format("svg");*/
+/*    font-weight: 400;*/
+/*    font-style: normal;*/
+/*}*/
 [class*=" icon-"],
 [class^="icon-"] {
     font-family: icomoon !important;
