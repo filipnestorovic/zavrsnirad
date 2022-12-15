@@ -10,7 +10,6 @@
     <link rel="shortcut icon" href="{{ asset('/') }}naturapharmFiles/snailcream/4647.png" type="image/png">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="{{ asset('/') }}naturapharmFiles/snailcream/timeTo.css"/>
     <link type="text/css" rel="stylesheet" href="{{ asset('/') }}naturapharmFiles/snailcream/style.css"/>
     <link type="text/css" rel="stylesheet" href="{{ asset('/') }}naturapharmFiles/snailcream/bootstrap.min.css"/>
     <link type="text/css" rel="stylesheet" href="{{ asset('/') }}naturapharmFiles/snailcream/owl.carousel.min.css"/>
@@ -452,7 +451,6 @@
     </div>
 </footer>
 <script type="text/javascript" src="{{ asset('/') }}naturapharmFiles/snailcream/owl.carousel.min.js"></script>
-<script type="text/javascript" src="{{ asset('/') }}naturapharmFiles/snailcream/jquery.time-to.min.js"></script>
 <script type="text/javascript" src="{{ asset('/') }}naturapharmFiles/snailcream/script.js"></script>
 @include('components.pixel_footer')
 </body>
