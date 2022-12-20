@@ -34,7 +34,11 @@ class CountryCheck
 
         $countryModel = new Country();
         $countryShortcode = strtolower($request->route('country')); // get country from url
-        $result = $countryModel->getActiveCountryByShortcode($countryShortcode);
+        if($countryShortcode != null && $countryShortcode != "") {
+            $result = $countryModel->getActiveCountryByShortcode($countryShortcode);
+        } else {
+            $result = null;
+        }
 
         if($result === null) { //if country is not set in url
             $checkCountryIp = $countryModel->getActiveCountryByShortcode($countryCodeFromIp);
