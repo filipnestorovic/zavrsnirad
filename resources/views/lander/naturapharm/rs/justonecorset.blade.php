@@ -246,6 +246,8 @@
                 @include('lander.naturapharm.components.form_hidden_fields')
                 <div><input type="text" name="name" placeholder="Ime i prezime" required></div>
                 <div><input type="tel" name="phone" placeholder="Telefon" required></div>
+                <div><input type="text" name="shipping_address" placeholder="Adresa" required></div>
+                <div><input type="text" name="shipping_city" placeholder="Grad" required></div>
                 <div>
                     <button class="button-m">PORUČITE SADA</button>
                 </div>

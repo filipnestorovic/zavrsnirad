@@ -164,6 +164,8 @@ Route::group(['middleware' => ['guest']], function () {
     Route::post('/insertSessionAjax', [App\Http\Controllers\HomeController::class, 'insertEventDbAjax'])->name('insertEventDbAjax');
     Route::post('/validatePhoneNumber', [App\Http\Controllers\HomeController::class, 'validatePhoneNumber'])->name('validatePhoneNumber');
 
+    Route::post('/api/stripePay', [App\Http\Controllers\ApiController::class, 'stripePay'])->name('stripePay');
+
     Route::post('/selectCountry', [App\Http\Controllers\HomeController::class, 'selectCountry'])->name('selectCountry');
 
     Route::domain('{country?}.{site?}.{domain?}')->middleware('countryCheck')->group($webRoutes);

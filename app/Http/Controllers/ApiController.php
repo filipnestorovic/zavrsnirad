@@ -61,4 +61,9 @@ class ApiController extends Controller
             return Response::make(json_encode(null, JSON_PRETTY_PRINT))->header('Content-Type', "application/json");
         }
     }
+
+    public function stripePay()
+    {
+        
+    }
 }
