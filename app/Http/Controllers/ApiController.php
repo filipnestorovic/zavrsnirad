@@ -62,8 +62,24 @@ class ApiController extends Controller
         }
     }
 
-    public function stripePay()
+    public function stripePay(Request $request)
     {
-        
+
+        dd($request->all());
+
+        Stripe\Stripe::setApiKey(config('services.stripe.secret_key'));
+
+        Stripe\Charge::create ([
+            "amount" => 100 * 100,
+            "currency" => "usd",
+            "source" => $request->stripeToken,
+            "description" => "Test payment from localhost"
+        ]);
+
+        Session::flash('success', 'Payment successful!');
+
+        return back();
     }
+
+
 }
