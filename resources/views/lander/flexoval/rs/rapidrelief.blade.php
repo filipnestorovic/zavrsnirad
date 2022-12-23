@@ -97,7 +97,7 @@
             <div class="innerContent col_left ui-resizable col-md-6" style="outline: none;">
                 <div class="col-inner bgCover noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin">
                     <div class="de elImageWrapper de-image-block elMargin0 elAlign_center ui-droppable de-editable" style="margin-top: 0px; outline: none; cursor: pointer;" data-hide-on="desktop">
-                        <img src="{{ asset('/') }}flexovalFiles/rapidrelief/paincake1.png" class="elIMG ximg" height="400" width="" alt="" style="" tabindex="0">
+                        <img src="{{ asset('/') }}flexovalFiles/rapidrelief/paincake1.jpg" class="elIMG ximg" height="400" width="" alt="" style="" tabindex="0">
                     </div>
                 </div>
             </div>
@@ -209,7 +209,7 @@
                         <img src="{{ asset('/') }}flexovalFiles/rapidrelief/paincake2.png" class="elIMG ximg" alt="" height="" width="" tabindex="0">
                     </div>
                     <div class="de elImageWrapper de-image-block elAlign_center elMargin0 ui-droppable de-editable" style="margin-top: 30px; outline: none; cursor: pointer;">
-                        <img src="{{ asset('/') }}flexovalFiles/rapidrelief/paincake4.png" class="elIMG ximg" alt="" height="290" width="" tabindex="0">
+                        <img src="{{ asset('/') }}flexovalFiles/rapidrelief/paincake4.jpg" class="elIMG ximg" alt="" height="290" width="" tabindex="0">
                     </div>
                 </div>
             </div>
@@ -245,7 +245,7 @@
             <div class="col-md-12 innerContent col_left" style="outline: none;">
                 <div class="col-inner bgCover noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin" style="padding: 0 10px">
                     <div class="de elImageWrapper de-image-block elAlign_center elMargin0 ui-droppable de-editable" style="margin-top: 20px; outline: none; cursor: pointer;">
-                        <img src="{{ asset('/') }}flexovalFiles/rapidrelief/paincake1.png" class="elIMG ximg" alt="" height="300" tabindex="0">
+                        <img src="{{ asset('/') }}flexovalFiles/rapidrelief/paincake1.jpg" class="elIMG ximg" alt="" height="300" tabindex="0">
                     </div>
                     <div class="de elImageWrapper de-image-block elAlign_center elMargin0 ui-droppable de-editable" style="margin-top: 20px; outline: none; cursor: pointer;">
                         <img src="{{ asset('/') }}flexovalFiles/shared_files/stars_rs.jpg" class="elIMG ximg" alt="" height="60" tabindex="0">
