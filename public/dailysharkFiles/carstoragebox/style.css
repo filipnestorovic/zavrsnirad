@@ -440,14 +440,14 @@ h2.title:after {
 .old-cost {
     text-decoration: line-through;
     float: left;
-    font-size: 28px;
+    font-size: 26px;
     font-weight: 400;
 }
 
 .new-cost {
     font-weight: 700;
     color: #ff0000;
-    font-size: 36px;
+    font-size: 29px;
     float: right;
 }
 
@@ -1147,7 +1147,7 @@ h2.title:after {
 .block9 .recom {
     width: 520px;
     position: absolute;
-    top: 86px;
+    top: 136px;
     left: 31px;
     margin: 0;
 }
@@ -1207,12 +1207,12 @@ h2.title:after {
 /*-------------------------------------- Media Queries ----959---------------------------------*/
 
 @media screen and (max-width: 976px) {
-    .rewiew-desktop {
-        display: none;
-    }
-    .rewiew-tablet {
-        display: block;
-    }
+    /*.rewiew-desktop {*/
+    /*    display: none;*/
+    /*}*/
+    /*.rewiew-tablet {*/
+    /*    display: block;*/
+    /*}*/
     .block1 {
         background: url("b1m.jpg") no-repeat center top;
     }
@@ -1411,15 +1411,15 @@ h2.title:after {
 /* after_qbici */
 
 @media screen and (max-width: 675px) {
-    .rewiew-desktop {
-        display: none;
-    }
-    .rewiew-tablet {
-        display: none;
-    }
-    .rewiew-mobile {
-        display: block;
-    }
+    /*.rewiew-desktop {*/
+    /*    display: none;*/
+    /*}*/
+    /*.rewiew-tablet {*/
+    /*    display: none;*/
+    /*}*/
+    /*.rewiew-mobile {*/
+    /*    display: block;*/
+    /*}*/
     .table-striped tbody tr:nth-of-type(odd) {
         width: 100%;
         display: inline-block;
@@ -1485,8 +1485,8 @@ h2.title:after {
         top: 0;
     }
     .block1 .sale {
-        top: 88px;
-        left: 100px;
+        top: 50px;
+        left: 200px;
     }
     .block5 h2.title {
         font-size: 22px;
@@ -1549,7 +1549,7 @@ h2.title:after {
         width: 320px;
     }
     .rev {
-        height: 606px;
+        /*height: 606px;*/
         width: 300px;
     }
     .prim {
@@ -1601,8 +1601,8 @@ h2.title:after {
         margin: 9px auto 0;
     }
     .sale {
-        top: 258px;
-        left: 94px;
+        top: 150px;
+        left: 210px;
         z-index: 2;
     }
 }

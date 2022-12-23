@@ -21,21 +21,7 @@ $(document).ready(function() {
         fade: true,
         cssEase: 'linear'
     });
-    $('.rewiew-desktop').slick({
-        dots: false,
-        infinite: true,
-        speed: 200,
-        fade: true,
-        cssEase: 'linear'
-    });
-    $('.rewiew-mobile').slick({
-        dots: false,
-        infinite: true,
-        speed: 200,
-        fade: true,
-        cssEase: 'linear'
-    });
-    $('.rewiew-tablet').slick({
+    $('.rewiews').slick({
         dots: false,
         infinite: true,
         speed: 200,
@@ -43,12 +29,28 @@ $(document).ready(function() {
         cssEase: 'linear'
     });
 
-    $('.reviews').slick({
-        dots: true,
-        infinite: true,
-        speed: 500,
-        fade: false,
-        cssEase: 'linear'
-    });
+    // $('.rewiew-mobile').slick({
+    //     dots: false,
+    //     infinite: true,
+    //     speed: 200,
+    //     fade: true,
+    //     cssEase: 'linear',
+    //     autoHeight: false,
+    // });
+    // $('.rewiew-tablet').slick({
+    //     dots: false,
+    //     infinite: true,
+    //     speed: 200,
+    //     fade: true,
+    //     cssEase: 'linear'
+    // });
+
+    // $('.reviews').slick({
+    //     dots: true,
+    //     infinite: true,
+    //     speed: 500,
+    //     fade: false,
+    //     cssEase: 'linear'
+    // });
 
 });
