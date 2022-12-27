@@ -12,15 +12,51 @@
     <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css?family=Big+Shoulders+Display:400,700&amp;display=swap">
     <link rel="stylesheet" href="{{ asset('/') }}purplerelaxFiles/aircleaner/index-v1.css?v=1635494907499">
     <style>@font-face{font-family:Avenir Next Regular;font-stretch:normal;font-style:normal;unicode-range:U+0-10FFFF;src:url({{asset('/')}}fonts/avenirnextltpro-regular.otf);font-weight:400;font-display:swap}</style><style>@font-face{font-family:Avenir Next Bold;font-stretch:normal;font-style:normal;unicode-range:U+0-10FFFF;src:url({{asset('/')}}fonts/avenirnextltpro-bold.otf);font-weight:400;font-display:swap}</style><style>b,strong{font-family:Avenir Next Bold!important}@media (max-width:767px){#ipyroh{padding:0!important;background:none!important}#ih1pz6{padding:0!important;background:none!important}#ixxh7{padding:0!important;background:none!important}}@media (max-width:480px){.w-step{max-width:240px}}</style><style>@font-face{font-family:Avenir-next-medium;font-stretch:normal;font-style:normal;unicode-range:U+0-10FFFF;src:url({{asset('/')}}fonts/avenirnextltpro-medium.otf);font-weight:400;font-display:swap}</style><style>@font-face{font-family:Avenir Next Ultra Light;font-stretch:normal;font-style:normal;unicode-range:U+0-10FFFF;src:url({{asset('/')}}fonts/avenirnext-ultralight.ttf);font-weight:400;font-display:swap}</style><style>@font-face{font-family:AvenirNext-Bold;font-stretch:normal;font-style:normal;unicode-range:U+0-10FFFF;src:url({{asset('/')}}fonts/avenir-next-bold.ttf);font-display:swap;font-weight:400}</style><style>@font-face{font-family:Avenir Next Medium;font-stretch:normal;font-style:normal;unicode-range:U+0-10FFFF;src:url({{asset('/')}}fonts/avenirnext-medium.ttf);font-weight:400;font-display:swap}</style><style>video{max-width:100%}picture.ctr-generated{display:contents}.component-hidden{display:none}.ctr-lazy-image{-webkit-transition:opacity 50ms ease-in-out;-moz-transition:opacity 50ms ease-in-out;-o-transition:opacity 50ms ease-in-out;transition:opacity 50ms ease-in-out;max-width:100%;opacity:0}.ctr-lazy-image.b-loaded{opacity:1}h1{font-size:2em}ul{padding:0;padding-inline-start:0;list-style-position:inside}.ctr_wow_body iframe{width:100%}img{max-width:100%;width:auto;height:auto}button:focus,input:focus,textarea:focus,select:focus{outline:none}.click-map-container:hover{opacity:1!important}</style>
+    <style>
+        .price {
+            margin-bottom: 15px;
+            color: #000;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            width: 60%;
+            margin-left: 10%;
+        }
+        @media (max-width: 480px) {
+            .price {
+                width: 80%;
+            }
+        }
+        .price_old_div {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+        }
+        .price_new_div {
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+        }
+        .price_old {
+            color: #000;
+            text-decoration: line-through;
+            font-size: 24px;
+        }
+        .price_new {
+            color: #00aeef;
+            font-weight: bold;
+            font-size: 30px;
+        }
+    </style>
 <body>
 <div data-hidden id="iz1tl9" url="" box-title="Blast Auxiliary" class="sticky-bar sticky-top iz1tl9_global hidden">
     <div id="iq0xht" class="iq0xht_global">
         <div id="iv4fqe" class="gjs-row">
-            <picture class="ctr-generated">
-                <source srcset="{{ asset('/') }}myairlabFiles/shared_files/airlab_logo.png" type="image/webp">
-                <source srcset="{{ asset('/') }}myairlabFiles/shared_files/airlab_logo.png" type="image/png">
-                <img data-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}myairlabFiles/shared_files/airlab_logo.png" id="isc5n" data-lazy-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}myairlabFiles/shared_files/airlab_logo.png" src="{{ asset('/') }}myairlabFiles/shared_files/airlab_logo.png" width="378" height="56">
-            </picture>
+{{--            <picture class="ctr-generated">--}}
+{{--                <source srcset="{{ asset('/') }}myairlabFiles/shared_files/airlab_logo.png" type="image/webp">--}}
+{{--                <source srcset="{{ asset('/') }}myairlabFiles/shared_files/airlab_logo.png" type="image/png">--}}
+{{--                <img data-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}myairlabFiles/shared_files/airlab_logo.png" id="isc5n" data-lazy-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}myairlabFiles/shared_files/airlab_logo.png" src="{{ asset('/') }}myairlabFiles/shared_files/airlab_logo.png" width="378" height="56">--}}
+{{--            </picture>--}}
             <div id="i4gz85" class="i4gz85_global">
                 <div id="i298zd">Očistite vazduh od štetnih alergena, prašine, bakterija i mirisa!</div>
             </div>
@@ -41,11 +77,11 @@
         <div id="i1ulr9" class="container i1ulr9_global">
             <div id="i2vbvm" class="col i2vbvm_global">
                 <div title="Header" id="iiu7cg" class="gjs-row">
-                    <picture class="ctr-generated">
-                        <source srcset="{{ asset('/') }}myairlabFiles/shared_files/airlab_logo.png" type="image/webp">
-                        <source srcset="{{ asset('/') }}myairlabFiles/shared_files/airlab_logo.png" type="image/png">
-                        <img data-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}myairlabFiles/shared_files/airlab_logo.png" id="i02b57" data-lazy-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}myairlabFiles/shared_files/airlab_logo.png" src="{{ asset('/') }}myairlabFiles/shared_files/airlab_logo.png" width="378" height="56">
-                    </picture>
+{{--                    <picture class="ctr-generated">--}}
+{{--                        <source srcset="{{ asset('/') }}myairlabFiles/shared_files/airlab_logo.png" type="image/webp">--}}
+{{--                        <source srcset="{{ asset('/') }}myairlabFiles/shared_files/airlab_logo.png" type="image/png">--}}
+{{--                        <img data-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}myairlabFiles/shared_files/airlab_logo.png" id="i02b57" data-lazy-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}myairlabFiles/shared_files/airlab_logo.png" src="{{ asset('/') }}myairlabFiles/shared_files/airlab_logo.png" width="378" height="56">--}}
+{{--                    </picture>--}}
                     <div id="ivq6yl">Očistite vazduh od štetnih alergena, prašine, bakterija i mirisa!</div>
                     <div id="illync" class="illync_global"><a href="{{$checkoutView}}" ctr-type-link="external" id="i7cqnm" target="_blank" class="navbar-menu-link">Poručite sada</a></div>
                 </div>
@@ -69,7 +105,7 @@
                                 </picture>
                             </div>
                             <div id="i68eqt" class="col i68eqt_global">
-                                <div id="iznn5p">Particle Filter uklanja i najsitnije čestice iz vazduha koji udišete.</div>
+                                <div id="iznn5p">HEPA Filter uklanja i najsitnije čestice iz vazduha koji udišete.</div>
                             </div>
                         </div>
                         <div id="ij9leh" class="container ij9leh_global">
@@ -110,6 +146,16 @@
                         </div>
                         <div id="it3iik" class="it3iik_global">
                             <div id="iy068y">Iskoristsite svoj specijalni popust od <span id="i175nf">40%</span> ukoliko poručite odmah!</div>
+                        </div>
+                        <div class="price">
+                            <div class="price_old_div">
+                                <span class="price_old_p">Redovna cena:</span>
+                                <span class="price_old">{{$prices[1]['originalPrice']}} {{$prices[1]['currency']}}</span>
+                            </div>
+                            <div class="price_new_div">
+                                <span class="price_new_p">Cena sa popustom:</span>
+                                <span class="price_new">{{$prices[1]['amount']}} {{$prices[1]['currency']}}</span>
+                            </div>
                         </div>
                         <a ctr-type-link="external" call-to-action cta-id="i4m4nw" href="{{$checkoutView}}" id="i4m4nw" data-anim-repeat title="Blast Auxiliary" class="animated--hover infinite">
                             <div id="i42wie">PORUČITE SVOJ ČISTAČ VAZDUHA ODMAH</div>
@@ -204,7 +250,7 @@
                         <div id="ixpd3f">Najnoviji izveštaj govori da je zagađenje vazduha <span id="i6n5df">jedan od deset glavnih globalnih faktora rizika po zdravlje.</span>. Smatra se da je širom sveta oko 7 miliona ljudi umrlo ranije zbog zagađenja. A u Srbiji čak <span id="inooqd">10 000 godišnje</span> umre od posledica zagađenog vazduha.  Ako vam je stalo do svog zdravlja ili zdravlja vaše porodice, morate početi sa prečišćavanjem vazduha koji udišete!</div>
                         <div id="i57ikm">
                             <div id="i202vg"></div>
-                            <div id="itzd4j">Tu dolazi prenosni čistač vazduha! Korišćenjem kombinacije filtriranja, aktivnog uglja i tehnologije negativnih jona, Blast Air Cleaner prečišćivač uklanja mirise i najmanje 99,97% štetnih čestica u vazduhu iz vazduha koji udišete.</div>
+                            <div id="itzd4j">Tu dolazi prenosni čistač vazduha <b>AIR LAB</b>! Korišćenjem kombinacije filtriranja, aktivnog uglja i tehnologije negativnih jona, Air Lab prečišćivač uklanja mirise i najmanje 99,97% štetnih čestica u vazduhu iz vazduha koji udišete.</div>
                         </div>
                     </div>
                 </div>
@@ -225,12 +271,12 @@
                             <div id="ihhl8n" class="ihhl8n_global">
                                 <div id="ihyhtx">RGB svetlo</div>
                                 <div id="iyajar" class="iyajar_global"></div>
-                                <div id="i2wadd">Blast Air Cleaner prenosni prečišćivač ima svetlo za raspoloženje koje postavlja ton i odgovara svakom dekoru, da li u vašem autu, kancelariji ili spavaćoj sobi. </div>
+                                <div id="i2wadd">Air Lab prenosni prečišćivač ima svetlo za raspoloženje koje postavlja ton i odgovara svakom dekoru, da li u vašem autu, kancelariji ili spavaćoj sobi. </div>
                             </div>
                             <div id="ipzjnu" class="ipzjnu_global">
                                 <div id="igxd3v">Lagan i prenosiv</div>
                                 <div id="i7c46l" class="i7c46l_global"></div>
-                                <div id="ib7aue">Blast Air Cleaner prenosni prečišćivač ide sa vama gde god vam je potreban. Njegova mala težina i prenosiva veličina čine savršenog pratioca gde god želite da udišete čist, svež vazduh.</div>
+                                <div id="ib7aue">Air Lab prenosni prečišćivač ide sa vama gde god vam je potreban. Njegova mala težina i prenosiva veličina čine savršenog pratioca gde god želite da udišete čist, svež vazduh.</div>
                             </div>
                         </div>
                     </div>
@@ -242,7 +288,7 @@
                             <div id="izo982">Pored jednostavnih problema kao što su kašalj, iritacija oka, glavobolja i alergijske reakcije, studije su povezale brojne zdravstvene probleme sa zagađenjem česticama, uključujući nepravilan rad srca, astmu, smanjenu funkciju pluća i druge ozbiljne respiratorne probleme.</div>
                             <div id="iu8cti">
                                 <div id="i0l10l"></div>
-                                <div id="ivjejs">HEPA filter uklanja do 99,97% čestica u vazduhu iz vazduha koji udišete. I svaki zamenljivi filter će vam trajati i do šest meseci. Zbog toga pametni potrošači danas biraju Blast Air Cleaner prenosni čistač vazduha!</div>
+                                <div id="ivjejs">HEPA filter uklanja do 99,97% čestica u vazduhu iz vazduha koji udišete. I svaki zamenljivi filter će vam trajati i do šest meseci. Zbog toga pametni potrošači danas biraju Air Lab prenosni čistač vazduha!</div>
                             </div>
                             <a href="{{$checkoutView}}" ctr-type-link="external" call-to-action id="i4qq2e" cta-id="i4qq2e">
                                 <div id="iopx5l">PORUČITE SADA</div>
@@ -261,7 +307,7 @@
     <section id="iptkha" class="iptkha_global">
         <div id="i0ozu8" class="container i0ozu8_global">
             <div id="ic675z" class="col ic675z_global">
-                <h1 id="i1r3io">BLAST AIR CLEANER ČISTI VAŠ VAZDUH TRI NAČINA</h1>
+                <h1 id="i1r3io">AIR LAB ČISTI VAŠ VAZDUH TRI NAČINA</h1>
                 <div id="i1txao" class="i1txao_global w-step">
                     <div id="iqgj6i" class="iqgj6i_global">
                         <picture class="ctr-generated">
@@ -309,7 +355,7 @@
     <section id="iqeriz" class="iqeriz_global section-9">
         <div id="ierdyz" class="container ierdyz_global">
             <div id="iz0jga" class="col iz0jga_global">
-                <div id="iyjwj9">ŠTA NAŠI KLIJENT IMAJU DA KAŽU O BLAST AIR CLEANER PRENOSNOM PREČIŠĆIVAČU VAZDUHA</div>
+                <div id="iyjwj9">ŠTA NAŠI KLIJENT IMAJU DA KAŽU O AIR LAB PRENOSNOM PREČIŠĆIVAČU VAZDUHA</div>
                 <div id="i0oqfp" class="i0oqfp_global">
                     <picture class="ctr-generated">
                         <source srcset="{{ asset('/') }}purplerelaxFiles/aircleaner/right-quote-mb.png.webp" type="image/webp">
@@ -318,7 +364,7 @@
                     </picture>
                     <div id="i4fu46" class="i4fu46_global">
                         <div id="iiib6x">MOJE ALERGIJE SU NESTALE!</div>
-                        <div id="ipbxi4">Ovaj neverovatan mali uređaj je rešio moje alergije! Stalno sam imala crvenilo, svrbež u očima i začepljene sinuse, ali prenosivi čistač vazduha je stao na kraj svemu tome. VOLIM ovu stvar, potpuno mi je promenila život i jedva čekam da kažem svojim sestrama o tome. Cela moja porodica pati od problema sa alergijama, i oni su uradili da imaju nešto što ovako dobro funkcioniše.</div>
+                        <div id="ipbxi4">Ovaj neverovatan mali uređaj je rešio moje alergije! Stalno sam imala crvenilo, svrab u očima i začepljene sinuse, ali prenosivi čistač vazduha je stao na kraj svemu tome. VOLIM ovu stvar, potpuno mi je promenila život i jedva čekam da kažem svojim sestrama o tome. Cela moja porodica pati od problema sa alergijama, i oni su uradili da imaju nešto što ovako dobro funkcioniše.</div>
                         <div id="icerkf"><span id="irzn3y">Maša F. – Novi Sad</span></div>
                     </div>
                     <picture class="ctr-generated">
@@ -421,7 +467,7 @@
                                 <img id="iu2di4" data-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/5-stars.png?t=20210408T074805963" data-lazy-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/5-stars.png?t=20210408T074805963" src="{{ asset('/') }}purplerelaxFiles/aircleaner/5-stars.png?t=20210408T074805963" width="224" height="40">
                             </picture>
                             <div id="imhpc9"></div>
-                            <div id="isbuh">Nekada sam se budila više puta tokom noći, uvek kašljajući. Ali nakon što sam nekoliko dana koristila BLAST AIR CLEANER prenosni prečišćivač , moj kašalj je potpuno prestao! Ne mogu vam reći kako je konačno ponovo dobro odspavati! Sve što mogu da kažem je, nabavite sebi jedan prenosni prečišćivač vazduha dok možete – sa zadovoljstvom bih platila duplu cenu ako bih ponovo kupovao.</div>
+                            <div id="isbuh">Nekada sam se budila više puta tokom noći, uvek kašljajući. Ali nakon što sam nekoliko dana koristila AIR LAB prenosni prečišćivač , moj kašalj je potpuno prestao! Ne mogu vam reći kako je konačno ponovo dobro odspavati! Sve što mogu da kažem je, nabavite sebi jedan prenosni prečišćivač vazduha dok možete – sa zadovoljstvom bih platila duplu cenu ako bih ponovo kupovala.</div>
                         </div>
                         <div id="iu6do5" class="iu6do5_global">
                             <div id="ii825r"><font face="Avenir Next Bold" id="iju52j"><b id="icz1mg">Dragoslav K. </b></font>— Niš</div>
@@ -431,7 +477,7 @@
                                 <img data-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/5-stars.png?t=20210408T074805963" data-lazy-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/5-stars.png?t=20210408T074805963" id="itntbg" src="{{ asset('/') }}purplerelaxFiles/aircleaner/5-stars.png?t=20210408T074805963" width="224" height="40">
                             </picture>
                             <div id="ijcfkv"></div>
-                            <div id="idsa5f">Žena i ja smo od skoro postali roditelji i nismo želeli da izlažemo bebu prljavom i štetnom vazduhu. Videli smo reklamu za Blast Air Cleaner, i nismo mnogo razmišljali – uzeli smo 2, jedan za dnevnu sobu, a jedan za spavaću sobu koji ja u toku dana nosim sa sobom na posao. Prezadovoljni smo jednostavnošću proizvoda i učinkom, pošto dugo nismo ovako lepo spavali. </div>
+                            <div id="idsa5f">Žena i ja smo od skoro postali roditelji i nismo želeli da izlažemo bebu prljavom i štetnom vazduhu. Videli smo reklamu za Air Lab, i nismo mnogo razmišljali – uzeli smo 2, jedan za dnevnu sobu, a jedan za spavaću sobu koji ja u toku dana nosim sa sobom na posao. Prezadovoljni smo jednostavnošću proizvoda i učinkom.</div>
                         </div>
                         <div id="ib4p7c" class="ib4p7c_global">
                             <div id="io07dy"><font face="Avenir Next Bold" id="ib3co9"><b id="ivki99">Ranko P. </b></font> — Beograd</div>
@@ -441,7 +487,7 @@
                                 <img data-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/5-stars.png?t=20210408T074805963" data-lazy-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/5-stars.png?t=20210408T074805963" id="iq97ip" src="{{ asset('/') }}purplerelaxFiles/aircleaner/5-stars.png?t=20210408T074805963" width="224" height="40">
                             </picture>
                             <div id="itpmra"></div>
-                            <div id="iwyecg">Pošto sam taksista primetio sam da sve zagađeniji vazduh u saobraćaju utiče na moje zdravlje. Odlučio sam da uzmem stvar u svoje ruke i kupio BLAST AIR CLEANER prenosni prećišćivač vazduha. Posle samo nekoliko dana počeo sam bolje da spavam i da imam daleko veću koncentraciju u vožnji, a i moji klijenti su prijatno iznenađeni svežinom vazduha i time što brinem i o njima u vreme ove pandemije. </div>
+                            <div id="iwyecg">Kao taksista sam primetio da sve zagađeniji vazduh u saobraćaju utiče na moje zdravlje. Odlučio sam da uzmem stvar u svoje ruke i kupio AIR LAB prenosni prećišćivač vazduha. Posle samo nekoliko dana počeo sam da imam osetno bolju koncentraciju u vožnji. A i moji klijenti su bili prijatno iznenađeni svežinom vazduha i time što sam brinuo i o njima u vreme pandemije, koja se, nadam se, neće više nikada vratiti.</div>
                         </div>
                     </div>
                 </div>
@@ -454,7 +500,17 @@
                 <div id="iedsdb" class="gjs-cell">
                     <div id="iowl5a">POSEBNA PONUDA SAMO DANAS!</div>
                     <p id="i11x08">PORUČITE DANAS I DOBIĆETE POPUST
-                    <div id="ixwwus">Ne postoji NIŠTA više osvežavajuće od dubokog udisanja lepog, čistog vazduha! Prestanite da se gušite isparenjima, dimom i prašinom! Nabavite svoj BLAST AIR CLEANER sada i počnite da uživate u osećaju udisanja svežeg, čistog vazduha!</div>
+                    <div id="ixwwus">Ne postoji NIŠTA više osvežavajuće od dubokog udisanja lepog, čistog vazduha! Prestanite da se gušite isparenjima, dimom i prašinom! Nabavite svoj AIR LAB sada i počnite da uživate u osećaju udisanja svežeg, čistog vazduha!</div>
+                    <div class="price">
+                        <div class="price_old_div">
+                            <span class="price_old_p">Redovna cena:</span>
+                            <span class="price_old">{{$prices[1]['originalPrice']}} {{$prices[1]['currency']}}</span>
+                        </div>
+                        <div class="price_new_div">
+                            <span class="price_new_p">Cena sa popustom:</span>
+                            <span class="price_new">{{$prices[1]['amount']}} {{$prices[1]['currency']}}</span>
+                        </div>
+                    </div>
                     <a ctr-type-link="external" id="izorm8" data-anim-repeat call-to-action cta-id="izorm8" href="{{$checkoutView}}" title="Blast Auxiliary" class="animated--hover infinite">
                         <div id="izx1qk">PORUČITE SVOJ ČISTAČ VAZDUHA ODMAH</div>
                     </a>
@@ -482,7 +538,7 @@
                             <source srcset="{{ asset('/') }}purplerelaxFiles/aircleaner/symbol-2x.png" type="image/png">
                             <img data-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/symbol-2x.png?t=20210408T065348661" id="ihlcw5" data-lazy-srcsets="&lt;767:,&lt;1023:,>1023:{{ asset('/') }}purplerelaxFiles/aircleaner/symbol-2x.png?t=20210408T065348661" src="{{ asset('/') }}purplerelaxFiles/aircleaner/symbol-2x.png?t=20210408T065348661" width="34" height="34">
                         </picture>
-                        <div id="iqq45c">Particle Filter uklanja i najsitnije čestice iz vazduha koji udišete.</div>
+                        <div id="iqq45c">HEPA Filter uklanja i najsitnije čestice iz vazduha koji udišete.</div>
                     </div>
                     <div id="iish8n" class="iish8n_global">
                         <picture class="ctr-generated">
@@ -510,6 +566,16 @@
                     </div>
                     <div id="isyapy" class="isyapy_global">
                         <div id="igynlo">Iskoristsite svoj specijalni popust od <span id="i175nf">40%</span> ukoliko poručite odmah!</div>
+                    </div>
+                    <div class="price">
+                        <div class="price_old_div">
+                            <span class="price_old_p">Redovna cena:</span>
+                            <span class="price_old">{{$prices[1]['originalPrice']}} {{$prices[1]['currency']}}</span>
+                        </div>
+                        <div class="price_new_div">
+                            <span class="price_new_p">Cena sa popustom:</span>
+                            <span class="price_new">{{$prices[1]['amount']}} {{$prices[1]['currency']}}</span>
+                        </div>
                     </div>
                     <a ctr-type-link="external" data-anim-repeat call-to-action cta-id="inc7rm" href="{{$checkoutView}}" id="inc7rm" title="Blast Auxiliary" class="animated--hover infinite">
                         <div id="iz7084">PORUČITE SVOJ ČISTAČ VAZDUHA ODMAH</div>
