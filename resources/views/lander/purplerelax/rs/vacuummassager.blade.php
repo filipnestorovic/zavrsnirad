@@ -12,26 +12,33 @@
     <style>
         .b1 {
             padding: 0 0 10px;
-            background: #f8faf5 url({{ asset('/') }}purplerelaxFiles/cuppinginstrument/offer.jpg) no-repeat center 139px;
+            background: #f8faf5 url({{ asset('/') }}purplerelaxFiles/vacuummassager/offer.jpg) no-repeat center 139px;
             position: relative;
         }
         .use li:nth-child(1) {
-            background: #fff url({{ asset('/') }}purplerelaxFiles/cuppinginstrument/use1.jpg) no-repeat 0 -5px;
+            background: #fff url({{ asset('/') }}purplerelaxFiles/vacuummassager/use1.jpg) no-repeat 0 -5px;
             padding: 30px 0px 30px 240px;
         }
 
         .use li:nth-child(2) {
-            background: #fff url({{ asset('/') }}purplerelaxFiles/cuppinginstrument/use2.jpg) no-repeat right -10px;
+            background: #fff url({{ asset('/') }}purplerelaxFiles/vacuummassager/use2.jpg) no-repeat right -10px;
             padding: 15px 240px 13px 0;
         }
 
         .use li:nth-child(3) {
-            background: #fff url({{ asset('/') }}purplerelaxFiles/cuppinginstrument/use3.jpg) no-repeat 0 0;
+            background: #fff url({{ asset('/') }}purplerelaxFiles/vacuummassager/use3.jpg) no-repeat 0 0;
             padding: 30px 0px 21px 240px;
         }
         .use li:nth-child(4) {
-            background: #fff url({{ asset('/') }}purplerelaxFiles/cuppinginstrument/use4.jpg) no-repeat right -10px;
+            background: #fff url({{ asset('/') }}purplerelaxFiles/vacuummassager/use4.jpg) no-repeat right -10px;
             padding: 9px 240px 8px 0;
+        }
+        .b1 .pulse {
+            top: 457px;
+            left: 375px;
+        }
+        .sale {
+            padding: 450px 236px 10px 0;
         }
     </style>
 </head>
@@ -40,7 +47,7 @@
     @include('components.display_errors')
     <section class="b1">
         <h1> PURPLE <span>RELAX</span></h1>
-        <h2 class="gradient">3 u 1 CUPPING INSTRUMENT</h2>
+        <h2 class="gradient">VACUUM MASSAGER</h2>
         <div class="sale"> SAMO DANAS! <span> -40%</span> <b> POPUSTA</b></div>
         <div class="effect">NAJBOLJI PROIZVOD ZA DETOKSIKACIJU
             I IZVLAČENJE CELULITA</div>
@@ -75,8 +82,8 @@
     </section>
     <section class="b2">
         <h2 class="title"><span>Dovedite svoje telo u balans </span> za samo pola sata tretmana dnevno</h2>
-        <img src="{{ asset('/') }}purplerelaxFiles/cuppinginstrument/b2.jpg" alt>
-        <p>Cupping Instrument je 3 u 1 proizvod, koji služi za masažu, hidžamu i razbijanje i izvlačenje celulita.
+        <img src="{{ asset('/') }}purplerelaxFiles/vacuummassager/b2.jpg" alt>
+        <p>Vacuum Massager služi za masažu, hidžamu i razbijanje i izvlačenje celulita.
             <b>U kombinaciji sa eteričnim uljem deluje prijatno i opuštajuće na mišiće i kožu.</b></p>
         <p>Ublažava napetost i bolove u leđima, odličan je za detoksikaciju tela, izvlači višak vode iz tela i uklanja celulit.</b> Proizvod koji na zapadu koriste svi prestižniji kozmetički saloni sada se pojavio na našem tržištu.</p>
         <span>PRAKTIČNI UREĐAJ KOJI IMA <br> VIŠE EFEKATA:</span>
@@ -105,30 +112,30 @@
     <section class="b3 gradient">
         <h2 class="title">Jedan od najboljih i najefikasnijih proizvoda u svojoj klasi</h2>
         <div class="best__item">
-            <img src="{{ asset('/') }}purplerelaxFiles/cuppinginstrument/best1.jpg" alt>
-            <p><b>Cupping Instrument zagreva kožu i vakumski izvlači toksine. Toksini koji se talože ispod kože i stvaraju pritisak i bolove u leđima.</b>
+            <img src="{{ asset('/') }}purplerelaxFiles/vacuummassager/best1.jpg" alt>
+            <p><b>Vacuum Massager zagreva kožu i vakumski izvlači toksine. Toksini koji se talože ispod kože i stvaraju pritisak i bolove u leđima.</b>
             </p>
         </div>
         <div class="best__item">
-            <img src="{{ asset('/') }}purplerelaxFiles/cuppinginstrument/best2.jpg" alt>
+            <img src="{{ asset('/') }}purplerelaxFiles/vacuummassager/best2.jpg" alt>
             <p><b>Fizioterapeutski masažer za poboljšanje protoka krvi. Aktivira limfnu drenažu i opušta mišiće.</b>
             </p>
         </div>
         <div class="best__item">
-            <img src="{{ asset('/') }}purplerelaxFiles/cuppinginstrument/best3.jpg" alt>
+            <img src="{{ asset('/') }}purplerelaxFiles/vacuummassager/best3.jpg" alt>
             <p><b>Odlično sredstvo u borbi protiv celulita. Izvlači višak vode iz tela i celulit na površinu.</b>
             </p>
         </div>
         <div class="best__item">
-            <img src="{{ asset('/') }}purplerelaxFiles/cuppinginstrument/best4.jpg" alt>
-            <p><b>Ne zauzima mnogo prostora i napajaju ga 2 AAA baterije. Možete ga poneti sa sobom gde god da krenete.</b>
+            <img src="{{ asset('/') }}purplerelaxFiles/vacuummassager/best4.jpg" alt>
+            <p><b>Ne zauzima mnogo prostora i možete ga poneti sa sobom gde god da krenete.</b>
             </p>
         </div>
         <a href="#order_form" class="btn">PORUČITE ODMAH</a>
     </section>
     <section class="b4">
-        <h2 class="title"><span>Kome treba</span><br> Cupping Instrument?</h2>
-        <p>Zahvaljujući svojoj svestranosti, Cupping Instrument preporučuje se svima ali je posebno koristan za sledeće kategorije ljudi:</p>
+        <h2 class="title"><span>Kome treba</span><br> Vacuum Massager?</h2>
+        <p>Zahvaljujući svojoj svestranosti, Vacuum Massager preporučuje se svima ali je posebno koristan za sledeće kategorije ljudi:</p>
         <div class="body">
             <div class="body__item">
                 <img src="{{ asset('/') }}purplerelax2Files/scrapinginstrument/body1.jpg" alt>
@@ -159,31 +166,29 @@
     </section>
     <section class="b5 gradient">
         <h2 class="title">Uživajte u masaži bilo kog dela tela na veoma jednostavan način</h2>
-        <img src="{{ asset('/') }}purplerelaxFiles/cuppinginstrument/body_grad.jpg" alt>
-        <p>Scaraping Instrument ima 10 čvorova za masažu, <b>6 nivoa usisnog pritiska i temperature od 30 do 50 stepeni.</b>
-            Možete odabrati odgovarajući intenzitet i temperaturu prema vašim potrebama.
-        </p>
+        <img src="{{ asset('/') }}purplerelaxFiles/vacuummassager/body_grad.jpg" alt>
+        <p>Vacuum Massager ima <b>12 vakumskih nastavaka</b> na kojima se mogu podešavati različiti nivoi usisnog pritiska.</p>
     </section>
     <section class="b6">
         <h2 class="title"><span> Profesionalni uređaj </span><br> u vašem domu!</h2>
         <ul class="use">
-            <li><span>1</span> Uključite uređaj<br> pritiskom na dugme za paljenje</li>
-            <li><span>2</span> Podesite odgovarajući<br> pritisak i temperaturu</li>
-            <li><span>3</span> Stavite <br> uređaj na željeni <br> deo tela</li>
-            <li><span>4</span> Uživajte u zdravom<br> i korisnom efektu</li>
+            <li><span>1</span> Odaberite željeni nastavak i stavite na uređaj za izvlačenje vazduha</li>
+            <li><span>2</span> Naslonite ga na kožu i napravite vakum</li>
+            <li><span>3</span> Kada ste postavili sve čašice, ostavite ih nekoliko minuta da deluju</li>
+            <li><span>4</span> Skinite polako jednu po jednu čašicu otpuštajući vakum</li>
         </ul>
         <a href="#order_form" class="btn">PORUČITE MASAŽER</a>
     </section>
     <section class="b7">
         <h2 class="title"><span>SPECIFIKACIJA</span> PROIZVODA</h2>
-        <img src="{{ asset('/') }}purplerelaxFiles/cuppinginstrument/char.jpg" alt>
+        <img src="{{ asset('/') }}purplerelaxFiles/vacuummassager/char.jpg" alt>
 
         <a href="#order_form" class="btn">PORUČITE ODMAH</a>
     </section>
     <section class="b8 gradient">
-        <h2 class="title">Utisci kupaca <br> kojima je <br> Cupping Instrument pomogao</h2>
+        <h2 class="title">Utisci kupaca <br> kojima je <br> Vacuum Massager pomogao</h2>
         <div class="reviews__item">
-            <img src="{{ asset('/') }}purplerelaxFiles/cuppinginstrument/rev1.jpg" alt>
+            <img src="{{ asset('/') }}purplerelaxFiles/vacuummassager/rev1.jpg" alt>
             <p><b>Imala sam dosta celulit i nisam znala kako da ga se rešim.</b>
                 Raznim tretmanima sam uspevala da ga izbacim na površinu ali ne i da ga uklonim.
                 Preporučili su mi kupovinu ove spravice, prvo sam bila skeptična ali rekoh hajde da probam. Za 20 dana sam uklonila sav celulit sa površine kože. Sve preporuke!</p>
@@ -193,7 +198,7 @@
             </div>
         </div>
         <div class="reviews__item">
-            <img src="{{ asset('/') }}purplerelaxFiles/cuppinginstrument/rev2.jpg" alt>
+            <img src="{{ asset('/') }}purplerelaxFiles/vacuummassager/rev2.jpg" alt>
             <p><b>Ovaj uređaj je jeftin a donosi mnogo zadovoljstva.</b> Često sam patio od bolova u leđima, ali od kako koristim ovo čudo bolovi su nestali. Pre kupovine sam sumnjao, ali sada vidim da je u pitanju jedan odličan proizvod.
                 Opušta i ne stvara neprijatnosti. Ovo svakome preporučujem!</p>
             <div class="person">
@@ -229,7 +234,7 @@
     </section>
     <section class="b1 end">
         <h1>PURPLE <span>RELAX</span></h1>
-        <h2 class="gradient">3 u 1 CUPPING INSTRUMENT</h2>
+        <h2 class="gradient">VACUUM MASSAGER</h2>
         <div class="sale"> SAMO DANAS! <span> -40%</span> <b> POPUSTA</b></div>
         <div class="effect">NAJBOLJI PROIZVOD ZA DETOKSIKACIJU
             I IZVLAČENJE CELULITA</div>
@@ -239,7 +244,7 @@
             <div></div>
         </div>
         <div class="formbox">
-            <h3>PORUČITE ODMAH!</h3>
+            <h3>UNESITE PODATKE ZA DOSTAVU</h3>
             <p>A mi ćemo vas u najkraćem roku kontaktirati da potvrdimo porudžbinu.</p>
             <ul class="price">
                 <li>
