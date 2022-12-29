@@ -159,7 +159,7 @@ class OrderController extends Controller
                 if($discount) {
                     $couponCode = $request->get('couponCode');
                     $this->modelOrder->coupon_used = $couponCode;
-                    if($couponCode === "blackfriday") {
+                    if($couponCode === "blackfriday" || $couponCode === "newyear") {
                         $originalPriceMultiply = 0.6;
                         $totalPrice = round(($variation->amount/$originalPriceMultiply), 0);
                         $originalPrice = (ceil($totalPrice/100))*100-10;
