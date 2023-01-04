@@ -49,6 +49,11 @@ class ApiController extends Controller
                                 $returnData[$singlePrice['id_variation']][$singlePrice['quantity']]['amount'] = $singlePrice['amount'];
                                 $returnData[$singlePrice['id_variation']][$singlePrice['quantity']]['currency_symbol'] = $singlePrice['currency_symbol'];
                                 $returnData[$singlePrice['id_variation']][$singlePrice['quantity']]['is_free_shipping'] = $singlePrice['is_free_shipping'];
+
+                                $originalPriceMultiply = 0.6;
+                                $totalPrice = round(($singlePrice['amount']/$originalPriceMultiply));
+                                $originalPrice = (ceil($totalPrice/100))*100-10;
+                                $returnData[$singlePrice['id_variation']][$singlePrice['quantity']]['originalPrice'] = $originalPrice;
                             }
                         }
                     }
