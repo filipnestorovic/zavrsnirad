@@ -62,7 +62,7 @@
     <input type="hidden" name="discount" value="{{$discount}}">
     <input type="hidden" name="variation_id" value="{{$variation_id}}">
     <input type="hidden" name="session_id" value="{{$session_id}}">
-
+    <input type="hidden" name="couponCode" id="" value="{{(isset($couponCode)) ? $couponCode : ''}}">
     <div class="dropZoneForSections ui-droppable" style="display: none;"><div class="dropIconr"><i class="fa fa-plus"></i></div></div>
     <div class="container noTopMargin padding40-top padding40-bottom padding40H noBorder borderSolid cornersAll shadow0 bgNoRepeat activeSection_topBorder0 activeSection_bottomBorder0 emptySection activeSection_topBorder activeSection_bottomBorder fullContainer nosticky radius0 border3px containerWithVisibleOverflow" data-title="order area" data-block-color="0074C7" style="padding-top: 0px; padding-bottom: 0px; outline: none; background-color: rgba(255, 255, 255, 0);" data-trigger="none" data-animate="fade" data-delay="500">
         <div class="containerInner ui-sortable" style="padding-left: 0px; padding-right: 0px;">

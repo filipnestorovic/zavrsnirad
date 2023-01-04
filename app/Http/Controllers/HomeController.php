@@ -252,7 +252,7 @@ class HomeController extends Controller
                 Log::error("Error: Insert customer in session | Exception: " . $exception->getMessage());
             }
 
-            if($this->data['discount'] != 0) {
+            if($this->data['discount'] != 0 && !isset($this->data['couponCode'])) {
                 $this->data['couponCode'] = $coupon;
             }
 
@@ -321,6 +321,7 @@ class HomeController extends Controller
             }
         }
 //        Log::info('Test - Checkout view - '.$this->customerData['session_id']);
+
         return view($this->returnedData['checkoutView'], $this->data);
     }
 
@@ -567,6 +568,8 @@ class HomeController extends Controller
                }
             }
         }
+
+        $this->data['couponCode'] = $coupon;
 
         return $discountPercent;
     }
