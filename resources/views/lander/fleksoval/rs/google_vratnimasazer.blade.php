@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    @include('components.pixel_init')
+    <script src="{{ asset('/') }}shared_files/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <meta property="og:title" content="{{ $product->product_name }} | {{ $product->brand_name }}">
+    <meta property="og:description" content="{{ $product->product_name }}">
+    <meta property="og:image" content="{{ asset('/').$product->product_image }}">
+    <meta property="og:url" content="{{ $product->domain_url }}/{{ $product->slug }}">
+    <title>{{ $product->product_name }} | {{ $product->brand_name }}</title>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
@@ -11,8 +17,19 @@
     <link rel="stylesheet" href="{{ asset('/') }}purplerelaxFiles/vratnimasazer/styles.css">
     <script src="{{ asset('/') }}purplerelaxFiles/vratnimasazer/jquery.min.js"></script>
     <style>@font-face{font-family:'Proxima Nova';src:url('{{ asset('/') }}fonts/subset-ProximaNova-Light.woff2') format('woff2'),url('{{ asset('/') }}fonts/subset-ProximaNova-Light.woff') format('woff'),url('{{ asset('/') }}fonts/subset-ProximaNova-Light.ttf') format('truetype');font-weight:300;font-style:normal}@font-face{font-family:'Proxima Nova';src:url('{{ asset('/') }}fonts/subset-ProximaNova-Regular.woff2') format('woff2'),url('{{ asset('/') }}fonts/subset-ProximaNova-Regular.woff') format('woff'),url('{{ asset('/') }}fonts/subset-ProximaNova-Regular.ttf') format('truetype');font-weight:400;font-style:normal}@font-face{font-family:'Proxima Nova';src:url('{{ asset('/') }}fonts/subset-ProximaNova-Semibold.woff2') format('woff2'),url('{{ asset('/') }}fonts/subset-ProximaNova-Semibold.woff') format('woff'),url('{{ asset('/') }}fonts/subset-ProximaNova-Semibold.ttf') format('truetype');font-weight:600;font-style:normal}@font-face{font-family:'Proxima Nova';src:url('{{ asset('/') }}fonts/subset-ProximaNova-Bold.woff2') format('woff2'),url('{{ asset('/') }}fonts/subset-ProximaNova-Bold.woff') format('woff'),url('{{ asset('/') }}fonts/subset-ProximaNova-Bold.ttf') format('truetype');font-weight:700;font-style:normal}.form-control,.m1-form input{text-align-last:center;border:none;background:#fafafa;width:100%;height:55px;line-height:55px;font-size:18px;font-family:"Proxima Nova",Arial,helvetica,sans-serif;text-align:center;color:#333;border-radius:33px;margin-bottom:10px;box-shadow:0 3px 12px 0 rgba(0,0,0,.1)}.top_line ul{background:url({{asset('/')}}purplerelaxFiles/vratnimasazer/top_ul.png) 100% 50% no-repeat;padding:15px 0}.top_line ul>li:nth-child(1):before{width:24px;height:28px;background:url({{asset('/')}}purplerelaxFiles/vratnimasazer/top_ul1.png) 50% 50% no-repeat}.top_line ul>li:nth-child(2):before{width:32px;height:23px;background:url({{asset('/')}}purplerelaxFiles/vratnimasazer/top_ul2.png) 50% 50% no-repeat}.top_line ul>li:nth-child(3):before{width:31px;height:31px;background:url({{asset('/')}}purplerelaxFiles/vratnimasazer/top_ul3.png) 50% 50% no-repeat}.offer_section{background:url({{asset('/')}}purplerelaxFiles/vratnimasazer/offer.jpg) 50% 0% no-repeat;min-height:705px;padding:25px 0 0}.main_subtitle>span{background:url({{asset('/')}}purplerelaxFiles/vratnimasazer/main_subtitle_border.png) 0% 100% repeat-x}.ofr_bull>li{color:#81b70d;font-size:19px;font-weight:700;margin-bottom:25px;padding-left:32px;background:url({{asset('/')}}purplerelaxFiles/vratnimasazer/check1.png) 0% 5px no-repeat}.sect2{background:url({{asset('/')}}purplerelaxFiles/vratnimasazer/s2_bg.jpg) 50% 0% no-repeat;min-height:595px;padding:50px 0 0}.benef1>li:before{content:"";width:62px;height:62px;border-radius:50%;background:url({{asset('/')}}purplerelaxFiles/vratnimasazer/x_icon.png) 50% 50% no-repeat;display:block;box-shadow:0 4px 8px 0 rgba(0,0,0,.2);display:block;margin:0 auto 15px}.first_use{position:relative;padding:40px 25px 40px 250px;border-radius:12px;background:url({{asset('/')}}purplerelaxFiles/vratnimasazer/warn_block_bg.png) -75px center no-repeat #239be3;background-size:40%;margin-top:80px}.list1>li:before{width:30px;height:30px;border-radius:50%;border:1px solid #b4b4b4;background:url({{asset('/')}}purplerelaxFiles/vratnimasazer/check1.png) 50% 50% no-repeat;line-height:42px;color:#8ebf27;font-weight:700;font-size:36px;text-align:center;margin-top:-2px;float:left;content:""}.sect4{background:url({{asset('/')}}purplerelaxFiles/vratnimasazer/s4_bg.jpg) 50% 0% no-repeat;padding-top:110px;min-height:535px}.magnet_icon:before,.magnet_icon:after{content:"";width:92px;height:28px;background:url({{asset('/')}}purplerelaxFiles/vratnimasazer/magnet_arrow.png) 50% 50% no-repeat;position:absolute;top:80px}.magnet_icon:before{left:50px}.magnet_icon:after{right:50px}.magnet_icon .magnet{width:146px;height:165px;margin:0 auto;position:relative;top:25px}.sect5{background:url({{asset('/')}}purplerelaxFiles/vratnimasazer/s5_bg.jpg) 50% 0% no-repeat;padding-bottom:0}.benef2>li>p:before{content:"";width:62px;height:62px;background:url({{asset('/')}}purplerelaxFiles/vratnimasazer/check2.png) 50% 50% no-repeat;border-radius:50%;display:block;margin:-32px auto 15px;box-shadow:0 0 16px 0 rgba(0,0,0,.2);position:relative}.sect5 .gallery .item .text{display:table;width:108px;height:50px;background:url({{asset('/')}}purplerelaxFiles/vratnimasazer/gallery_arrow.png) 50% 50% no-repeat;position:absolute;top:50%;left:50%;margin:-25px 0 0 -54px}.sect6{background:url({{asset('/')}}purplerelaxFiles/vratnimasazer/s6_bg.jpg) 50% 0% no-repeat;padding-top:180px;min-height:1040px}.how_use .left ul li:before{content:"";position:absolute;left:0;top:7px;width:20px;height:15px;background:url({{asset('/')}}purplerelaxFiles/vratnimasazer/check-icon1.png) center center no-repeat;background-size:90%}.how_use .left .text>p:first-child:before{content:"";width:33px;height:33px;background:url({{asset('/')}}purplerelaxFiles/vratnimasazer/use_icon.png) 50% 50% no-repeat;display:block;margin:0 auto 20px}.size_table>h5:before{content:"";width:24px;height:24px;background:url({{asset('/')}}purplerelaxFiles/vratnimasazer/size_icon.png) 50% 50% no-repeat;display:inline-block;vertical-align:middle;margin:-2px 12px 0 0}.sect7{background:#52afe8 url({{asset('/')}}purplerelaxFiles/vratnimasazer/s7_bg.jpg) 50% 0% no-repeat;padding:1px 0 90px}.spec_block .info .text{padding:22px 150px 22px 22px;background:url({{asset('/')}}purplerelaxFiles/vratnimasazer/pechat.png) 210px 50% no-repeat}.spec_block .info .text>span:before{content:"";width:32px;height:27px;background:url({{asset('/')}}purplerelaxFiles/vratnimasazer/rev_q.png) 50% 50% no-repeat;display:block;margin:0 0 10px}.sect8{background:#e3e6ea url({{asset('/')}}purplerelaxFiles/vratnimasazer/s8_bg.jpg) 50% 0% no-repeat}.rev_item .info:before{content:"";width:32px;height:27px;background:url({{asset('/')}}purplerelaxFiles/vratnimasazer/rev_q.png) 50% 50% no-repeat;display:inline-block;vertical-align:middle;margin:-2px 14px 0 0}.reviews .owl-prev,.reviews .owl-next{width:48px;height:48px;background:#239be3 url({{asset('/')}}purplerelaxFiles/vratnimasazer/rev_arrows.png);border-radius:50%;box-shadow:0 2px 10px 0 rgba(0,0,0,.1);position:absolute;top:100px}.reviews .owl-prev{background-position:0 50%;left:0}.reviews .owl-next{background-position:100% 50%;right:0}.order_list>li:not(:last-child):after{content:"";width:86px;height:20px;background:url({{asset('/')}}purplerelaxFiles/vratnimasazer/order_arrow.png) 50% 50% no-repeat;position:absolute;top:50px;right:-40px}@media screen and (max-width:959px){.offer_section{background:url({{asset('/')}}purplerelaxFiles/vratnimasazer/offer_tab.jpg) 50% 0% no-repeat}.sect2{background:#e3edf7;background:-moz-linear-gradient(-45deg,#e3edf7 0%,#ecf3fb 100%);background:-webkit-linear-gradient(-45deg,#e3edf7 0%,#ecf3fb 100%);background:linear-gradient(135deg,#e3edf7 0%,#ecf3fb 100%);min-height:auto;padding:35px 0}.sect4{padding-top:40px;background:#53b0e7;background:-moz-linear-gradient(-45deg,#53b0e7 0%,#44a5df 100%);background:-webkit-linear-gradient(-45deg,#53b0e7 0%,#44a5df 100%);background:linear-gradient(135deg,#53b0e7 0%,#44a5df 100%);min-height:auto;padding-bottom:0}.sect6{padding-top:140px;background:#e3e5e8;background:-moz-linear-gradient(45deg,#e3e5e8 0%,#f8f9fa 100%);background:-webkit-linear-gradient(45deg,#e3e5e8 0%,#f8f9fa 100%);background:linear-gradient(45deg,#e3e5e8 0%,#f8f9fa 100%)}.sect7{padding:35px 0;background:#53afe7;background:-moz-linear-gradient(-45deg,#53afe7 0%,#3fa1dc 100%);background:-webkit-linear-gradient(-45deg,#53afe7 0%,#3fa1dc 100%);background:linear-gradient(135deg,#53afe7 0%,#3fa1dc 100%)}.sect8{background:#e3e5e8;background:-moz-linear-gradient(45deg,#e3e5e8 0%,#f8f9fa 100%);background:-webkit-linear-gradient(45deg,#e3e5e8 0%,#f8f9fa 100%);background:linear-gradient(45deg,#e3e5e8 0%,#f8f9fa 100%);padding-bottom:50px}}@media screen and (max-width:659px){.wrapper{width:320px}.offer_section{background:#f1f1f1 url({{asset('/')}}purplerelaxFiles/vratnimasazer/offer_mob.jpg) 50% 0% no-repeat;min-height:auto;padding-bottom:25px;overflow:hidden}.offer_section .wrapper{padding:0 10px}.benef1>li{width:50%;margin-bottom:30px}.first_use{margin-top:30px;background-image:none}.first_use{padding:25px 10px 25px;text-align:center}.first_use>img{position:static;display:block;margin:-20px auto 5px}.first_use>p{font-size:18px;line-height:26px}.priceBottom{padding-top:60px!important}}</style>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NQ9BCN8');</script>
+    <!-- End Google Tag Manager -->
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQ9BCN8"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <section class="offer_section">
     <div class="wrapper">
         <h1 class="main_title">
@@ -337,6 +354,122 @@
 </section>
 <script src="{{ asset('/') }}purplerelaxFiles/vratnimasazer/owl.carousel.min.js"></script>
 <script src="{{ asset('/') }}purplerelaxFiles/vratnimasazer/scripts.js"></script>
-@include('components.pixel_footer')
+
+@if(isset($product->country_code) && $product->country_code === "rs")
+    @include('components.company_footer')
+@endif
+<input type="hidden" id="currencyHidden" value="{{ $prices[1]['currency']}}"/>
+<style>
+    .phoneErrorInput {
+        border: 2px solid #FF0000;
+        background-color: #FF7F7F !important;
+    }
+    .phoneErrorText {
+        color: #FF0000;
+        text-align: center;
+        margin: 10px 0;
+    }
+</style>
+<script>
+    $(document).ready(function () {
+
+        const baseURL = "{{ asset('/') }}";
+        const csrf_token = "{{ csrf_token() }}";
+
+        $('form').submit(function(e){
+            if($(this).attr('action')==='/order'){
+                $phone_input = $(this).closest('form').find('input[name=phone]');
+                let phone = $phone_input.val();
+                let country = '{{strtoupper($product->country_code)}}';
+                let validationResult = validatePhoneNumber(phone, country);
+                let errorText = "";
+                switch (country) {
+                    case 'RS':
+                        errorText = 'Pogrešan format telefona';
+                        break;
+                    case 'BG':
+                        errorText = 'Грешен формат на телефона';
+                        break;
+                    case 'RO':
+                        errorText = 'Format de telefon greșit';
+                        break;
+                    case 'GR':
+                        errorText = 'Λάθος μορφή τηλεφώνου';
+                        break;
+                    case 'PL':
+                        errorText = 'Nieprawidłowy format telefonu';
+                        break;
+                    case 'SK':
+                        errorText = 'Nesprávny formát telefónu';
+                        break;
+                    case 'CZ':
+                        errorText = 'Špatný formát telefonu';
+                        break;
+                    case 'SI':
+                        errorText = 'Napačen format telefonske številke';
+                        break;
+                    case 'HU':
+                        errorText = 'Hibás telefonszám-formátum';
+                        break;
+                    default:
+                        errorText = "Wrong phone number format";
+                }
+
+                if(validationResult === "1") {
+                    $phone_input.removeClass('phoneErrorInput');
+                    $('.phoneErrorText').hide();
+                    $(this).closest('form').find(':submit').attr('disabled','disabled');
+                } else {
+                    e.preventDefault();
+                    $phone_input.addClass('phoneErrorInput');
+                    $phone_input.after("<div class='phoneErrorText'>" + errorText + "</div>");
+                }
+            } else {
+                $(this).find(':submit').attr('disabled','disabled');
+            }
+        });
+
+
+        function validatePhoneNumber(phone, country) {
+            let returnResponse = 0;
+            let name = $('input[name=name]').val();
+            let email = $('input[name=email]').val();
+            let address = $('input[name=shipping_address]').val();
+            let city = $('input[name=shipping_city]').val();
+            let zip = $('input[name=shipping_zip]').val();
+            let quantity = $('input[name=quantity]').val();
+            let variation_id = $('input[name=variation_id]').val();
+            $.ajax({
+                url: baseURL + "validatePhoneNumber",
+                type:"POST",
+                async: false,
+                data:{
+                    phone:phone,
+                    country:country,
+                    name:name,
+                    email:email,
+                    address:address,
+                    city:city,
+                    zip:zip,
+                    quantity:quantity,
+                    variation_id:variation_id,
+                    _token: csrf_token
+                },
+                success:function(response){
+                    returnResponse = response;
+                },
+                error: function (req, err) {
+                    console.log(req);
+                }
+            });
+            return returnResponse;
+        }
+
+        $("#shipping_zip").keyup(function() {
+            $("#shipping_zip").val(this.value.match(/[0-9]*/));
+        });
+
+    });
+</script>
 </body>
 </html>
