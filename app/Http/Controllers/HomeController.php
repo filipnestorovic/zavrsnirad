@@ -476,7 +476,7 @@ class HomeController extends Controller
             $prices = [];
             foreach($singleVariation as $singlePrice) {
                 $i = $singlePrice['quantity'];
-                if($singlePrice['variation_price_deleted'] === null) {
+                if ($singlePrice['variation_price_deleted'] === null) {
                     $prices[$i]['id_variations_prices'] = $singlePrice['id_variations_prices'];
                     $prices[$i]['quantity'] = $singlePrice['quantity'];
                     $prices[$i]['amount'] = $singlePrice['amount'];
@@ -484,10 +484,17 @@ class HomeController extends Controller
                     $prices[$i]['is_free_shipping'] = $singlePrice['is_free_shipping'];
                     $prices[$i]['currency'] = $singlePrice['currency_symbol'];
 
-                    $originalPriceMultiply = 0.6;
-                    $totalPrice = round(($singlePrice['amount']/$originalPriceMultiply), 0);
-                    $originalPrice = (ceil($totalPrice/100))*100-10;
+                    if ($singlePrice['currency_code'] === "RSD") {
+                        $originalPriceMultiply = 0.6;
+                        $totalPrice = round(($singlePrice['amount'] / $originalPriceMultiply));
+                        $originalPrice = (ceil($totalPrice / 100)) * 100 - 10;
+                    } else {
+                        $originalPriceMultiply = 0.6;
+                        $originalPrice = round(($singlePrice['amount'] / $originalPriceMultiply));
+                    }
+
                     $prices[$i]['originalPrice'] = $originalPrice;
+
                 }
             }
             $returnData['prices'] = $prices;
