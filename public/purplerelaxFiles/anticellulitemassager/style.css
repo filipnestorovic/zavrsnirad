@@ -424,7 +424,7 @@
     }
 
     .fas {
-        font-family: 'FontAwesome';
+        font-family: 'FontAwesome','sans-serif';
         font-weight: 900
     }
 
@@ -1681,7 +1681,7 @@
     }
 
     .fas {
-        font-family: "FontAwesome";
+        font-family: "FontAwesome",'sans-serif';
         font-weight: 900
     }
 

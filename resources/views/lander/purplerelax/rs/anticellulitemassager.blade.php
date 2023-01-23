@@ -136,8 +136,8 @@
                                                  itemtype="http://schema.org/Rating" itemscope="" itemprop=reviewRating>
                                                 <i class=elementor-star-full>&#xE934;</i><i class=elementor-star-full>&#xE934;</i><i
                                                     class=elementor-star-full>&#xE934;</i><i class=elementor-star-full>&#xE934;</i><i
-                                                    class=elementor-star-8>&#xE934;</i> <span itemprop=ratingValue
-                                                                                              class=elementor-screen-only>4.7/5</span>
+                                                    class=elementor-star-8>&#xE934;</i>
+                                                <span itemprop=ratingValue class=elementor-screen-only>4.7/5</span>
                                             </div>
                                         </div>
                                     </div>
@@ -341,19 +341,19 @@
                                                                         <li class=elementor-icon-list-item> <span
                                                                                 class=elementor-icon-list-icon> <i
                                                                                     aria-hidden=true
-                                                                                    class="fas fa-chevron-right"></i>
-                                                               </span> <span class=elementor-icon-list-text><b>Anti Cellulite Massager ima savremeni sistema masaže zahvaljujući kome se na moćan način razbija celulit i dovodi telo do savršenstva.</b></span>
+                                                                                    class="fa fa-chevron-right"></i>
+                                                               </span> <span class=elementor-icon-list-text><b>Anti Cellulite Massager ima savremeni sistem masaže zahvaljujući kome se na moćan način razbija celulit i dovodi telo do savršenstva.</b></span>
                                                                         </li>
                                                                         <li class=elementor-icon-list-item> <span
                                                                                 class=elementor-icon-list-icon> <i
                                                                                     aria-hidden=true
-                                                                                    class="fas fa-chevron-right"></i>
+                                                                                    class="fa fa-chevron-right"></i>
                                                                </span> <span class=elementor-icon-list-text>Jaka masaža povećava protok krvi, eliminiše toksine i reguliše višak tečnosti u oblastima koji su podložni celulitu.</span>
                                                                         </li>
                                                                         <li class=elementor-icon-list-item> <span
                                                                                 class=elementor-icon-list-icon> <i
                                                                                     aria-hidden=true
-                                                                                    class="fas fa-chevron-right"></i>
+                                                                                    class="fa fa-chevron-right"></i>
                                                                </span> <span class=elementor-icon-list-text>Zateže, tonira, obnavlja i jača strukturu kože. Najefikasnija masaža protiv celulita koja će ukloniti sve nepravilnosti.</span>
                                                                         </li>
                                                                     </ul>
@@ -399,7 +399,7 @@
                                                                         <li class=elementor-icon-list-item> <span
                                                                                 class=elementor-icon-list-icon> <i
                                                                                     aria-hidden=true
-                                                                                    class="fas fa-chevron-right"></i>
+                                                                                    class="fa fa-chevron-right"></i>
                                                                </span> <span class=elementor-icon-list-text><b>Više ne morate da trošite novac po masažnim salonima i nisu vam potrebni skupi suplementi kako biste skinuli celulit i doveli u liniju u perfektno stanje. Poručite Anti Cellulite Massager i posvetite se ulepšavanju svog tela.</b></span>
                                                                         </li>
                                                                     </ul>
@@ -409,7 +409,7 @@
                                                     </div>
                                                 </div>
                                                 <img
-                                                    src="{{ asset('/') }}purplerelaxFiles/anticellulitemassager/application.jpg"
+                                                    src="{{ asset('/') }}purplerelaxFiles/anticellulitemassager/application.png"
                                                     alt=""
                                                     data-pagespeed-url-hash=3200764515>
                                             </div>
@@ -473,7 +473,7 @@
                                                 <a class="eael-creative-button eael-creative-button--ujarak"
                                                    href="#formular_comanda" data-text="">
                                                     <div class=creative-button-inner><i
-                                                            class="fas fa-shopping-cart eael-creative-button-icon-left"
+                                                            class="fa fa-shopping-cart eael-creative-button-icon-left"
                                                             aria-hidden=true></i> <span class=cretive-button-text>Poruči odmah</span>
                                                     </div>
                                                 </a>
@@ -537,25 +537,25 @@
                                                                         <li class=elementor-icon-list-item> <span
                                                                                 class=elementor-icon-list-icon> <i
                                                                                     aria-hidden=true
-                                                                                    class="fas fa-chevron-right"></i>
+                                                                                    class="fa fa-chevron-right"></i>
                                                                </span> <span class=elementor-icon-list-text>Posebno dizajnirana guma koja je istovremeno čvrsta i fleksibilna pobrinuće se za pojačanu cirkulaciju.</span>
                                                                         </li>
                                                                         <li class=elementor-icon-list-item> <span
                                                                                 class=elementor-icon-list-icon> <i
                                                                                     aria-hidden=true
-                                                                                    class="fas fa-chevron-right"></i>
+                                                                                    class="fa fa-chevron-right"></i>
                                                                </span> <span class=elementor-icon-list-text>Kvalitetna ručka omogućava razne položaje ruku, bez klizanja ili ispadanja.</span>
                                                                         </li>
                                                                         <li class=elementor-icon-list-item> <span
                                                                                 class=elementor-icon-list-icon> <i
                                                                                     aria-hidden=true
-                                                                                    class="fas fa-chevron-right"></i>
+                                                                                    class="fa fa-chevron-right"></i>
                                                                </span> <span class=elementor-icon-list-text><b>Dva nivoa intenziteta masaža.</b></span>
                                                                         </li>
                                                                         <li class=elementor-icon-list-item> <span
                                                                                 class=elementor-icon-list-icon> <i
                                                                                     aria-hidden=true
-                                                                                    class="fas fa-chevron-right"></i>
+                                                                                    class="fa fa-chevron-right"></i>
                                                                </span> <span class=elementor-icon-list-text>Uređaj je mali, kompaktan i lako se prenosi.</span>
                                                                         </li>
                                                                     </ul>
@@ -664,12 +664,12 @@
                                                                             <div
                                                                                 class="jet-carousel__prev-arrow-113bc318 jet-arrow prev-arrow">
                                                                                 <i aria-hidden=true
-                                                                                   class="fas fa-angle-left"></i>
+                                                                                   class="fa fa-angle-left"></i>
                                                                             </div>
                                                                             <div
                                                                                 class="jet-carousel__next-arrow-113bc318 jet-arrow next-arrow">
                                                                                 <i aria-hidden=true
-                                                                                   class="fas fa-angle-right"></i>
+                                                                                   class="fa fa-angle-right"></i>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -713,19 +713,19 @@
                                                                         <li class=elementor-icon-list-item> <span
                                                                                 class=elementor-icon-list-icon> <i
                                                                                     aria-hidden=true
-                                                                                    class="fas fa-chevron-right"></i>
+                                                                                    class="fa fa-chevron-right"></i>
                                                                </span> <span class=elementor-icon-list-text>Masaža zadnjice, butina, stomaka, ruku i bilo kog drugog dela tela.</span>
                                                                         </li>
                                                                         <li class=elementor-icon-list-item> <span
                                                                                 class=elementor-icon-list-icon> <i
                                                                                     aria-hidden=true
-                                                                                    class="fas fa-chevron-right"></i>
+                                                                                    class="fa fa-chevron-right"></i>
                                                                </span> <span class=elementor-icon-list-text><b>Možete ga koristiti sa uljem za mršavljenje ili nekim drugim kozmetičkim proizvodom.</b></span>
                                                                         </li>
                                                                         <li class=elementor-icon-list-item> <span
                                                                                 class=elementor-icon-list-icon> <i
                                                                                     aria-hidden=true
-                                                                                    class="fas fa-chevron-right"></i>
+                                                                                    class="fa fa-chevron-right"></i>
                                                                </span> <span class=elementor-icon-list-text><b>Takođe se može koristiti u svrhe opuštajuće masaže ili zagrevanja mišića.</b></span>
                                                                         </li>
                                                                     </ul>
@@ -1753,19 +1753,19 @@
                                                                         <li class=elementor-icon-list-item> <span
                                                                                 class=elementor-icon-list-icon> <i
                                                                                     aria-hidden=true
-                                                                                    class="fas fa-shield-alt"></i>
+                                                                                    class="fa fa-shield-alt"></i>
                                                                </span> <span class=elementor-icon-list-text>100% sigurna kupovina</span>
                                                                         </li>
                                                                         <li class=elementor-icon-list-item> <span
                                                                                 class=elementor-icon-list-icon> <i
                                                                                     aria-hidden=true
-                                                                                    class="fas fa-shipping-fast"></i>
+                                                                                    class="fa fa-shipping-fast"></i>
                                                                </span> <span class=elementor-icon-list-text>Brza dostava</span>
                                                                         </li>
                                                                         <li class=elementor-icon-list-item> <span
                                                                                 class=elementor-icon-list-icon> <i
                                                                                     aria-hidden=true
-                                                                                    class="fas fa-percent"></i>
+                                                                                    class="fa fa-percent"></i>
                                                                </span> <span class=elementor-icon-list-text>Plaćanje pouzećem</span>
                                                                         </li>
                                                                     </ul>
