@@ -38,6 +38,7 @@
      data-elementor-settings="[]">
     <div class=elementor-inner>
         <div class=elementor-section-wrap>
+            @include('components.display_errors')
             <section
                 class="elementor-element elementor-element-4785b5e0 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section">
                 <div class="elementor-container elementor-column-gap-default">
@@ -1886,5 +1887,6 @@
     }
 </style>
 <link href="{{ asset('/') }}purplerelaxFiles/anticellulitemassager/A.custom-styles2.min.css%2cq6.pagespeed.cf.NytKlidF_7.css" type="text/css" rel=stylesheet/>
+@include('components.pixel_footer')
 </body>
 </html>
