@@ -90,13 +90,6 @@
             vodom ili mlekom za skidanje šminke.
         </p>
     </section>
-    <div class="video-container">
-        <video class="youtube" width="100%" height="auto" controls
-               poster="{{ asset('/') }}purplerelaxFiles/3secondbrow/pocter.png">
-            <source src="{{ asset('/') }}purplerelaxFiles/3secondbrow/video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
     <section class="colors_section">
         <div class="info">
             <h2>DOSTUPNE BOJE</h2>
