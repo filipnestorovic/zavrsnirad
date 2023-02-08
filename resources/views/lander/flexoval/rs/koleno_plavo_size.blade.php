@@ -263,14 +263,14 @@
                     <input type="tel" name="phone" placeholder="Telefon" required="">
                     <input type="text" name="shipping_address" placeholder="Adresa" required="">
                     <input type="text" name="shipping_city" placeholder="Grad" required="">
-                    <label>Veličina *</label>
-                    <select name="size" class="size" required>
-                        <option value="0">Izaberite veličinu</option>
-                        <option value="S">S (Ženski model)</option>
-                        <option value="M">M (Muškarci do 90kg)</option>
-                        <option value="L">L (Muškarci od 90kg do 115kg)</option>
-                        <option value="XL">XL (Muškarci od 115kg)</option>
-                    </select>
+                    @isset($productSizes)
+                        <label>Veličina *</label>
+                        <select name="size" class="size" required>
+                            @foreach($productSizes as $singleSize)
+                                <option value="{{$singleSize->product_size}}">{{$singleSize->product_size}} ({{$singleSize->description}})</option>
+                            @endforeach
+                        </select>
+                    @endisset
                     <label>Količina</label>
                     <select name="quantity" class="quantity" required>
                         @foreach($prices as $singlePrice)
