@@ -264,7 +264,7 @@
                     <input type="text" name="shipping_address" placeholder="Adresa" required="">
                     <input type="text" name="shipping_city" placeholder="Grad" required="">
                     @isset($productSizes)
-                        <label>Veličina *</label>
+                        <label>Veličina (Obim kolena) *</label>
                         <select name="size" class="size" required>
                             @foreach($productSizes as $singleSize)
                                 <option value="{{$singleSize->product_size}}">{{$singleSize->product_size}} ({{$singleSize->description}})</option>
