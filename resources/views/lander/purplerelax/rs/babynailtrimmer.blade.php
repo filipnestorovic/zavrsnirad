@@ -105,7 +105,7 @@
             </div>
         </div>
         <p class="choice__text">Jedan od većih strahova svakog roditelja je da ne povredi prstić svog deteta pri sređivanju noktića.</p>
-        <p class="choice__text">Dečji nokti su jako nežni i osetljivi i potrebna je velika preciznost ukoliko ih sečete grickalicom ili makazicama, posebno ukoliko dete ne miruju.</p>
+        <p class="choice__text">Dečji nokti su jako nežni i osetljivi i potrebna je velika preciznost ukoliko ih sečete grickalicom ili makazicama, posebno ukoliko dete ne miruje.</p>
         <p class="choice__text">Sada postoji savršeno rešenje, a to je <span class="flawless">Baby Nail Trimmer</span>. Deca će uživati u sređivanju noktića, a vi ćete biti opušteni i potrošićete duplo manje vremena.</p>
     </section>
     <section class="description">
