@@ -63,29 +63,33 @@
         <div class="container">
             <div class="left_form_block_title">
                 <p class="block1_title">
-                    EFIKASNA I BEZBOLNA EPILACIJA CAK I U NAJOSETLJIVIJIM PODRUCJIMA
+                    LEPA, NEŽNA STOPALA I PETE
                     <span>BEZ IRITACIJE I CRVENILA</span>
                 </p>
             </div>
             <div class="left_form_block_info_first_hiddrn">
-                <span>WIPSTER</span> KAMEN EPILATOR
+                FOOT <span>WIPSTER</span>
+                <br/> Za ženstvene i blistave pete
             </div>
             <div class="left_img">
-                <img src="{{ asset('/') }}purplerelaxFiles/wipster/block02.png" alt="">
+                <img src="{{ asset('/') }}purplerelaxFiles/footwipster/block02.png" alt="">
             </div>
             <div class="left_form_block">
                 <div class="left_form_block_info">
                     <div class="left_form_block_info_first">
-                        <span>WIPSTER</span> <br/> Kamen <br/> epilator
+                        FOOT <br/> <span>WIPSTER</span>
+                        <br/> Za ženstvene
+                        <br/> i blistave
+                        <br/> pete
                     </div>
                     <div class="left_form_block_info_price">
-                        Cena sada
+                        Cena na akciji
                         <span class="num_price">
                            <span class="price_land_s1">
                               {{ $prices[1]['amount'] }}
                            </span>
                            <span class="price_land_curr">
-                              RSD
+                              {{ $prices[1]['currency'] }}
                            </span>
                         </span>
                         <span class="num_price_old">
@@ -93,7 +97,7 @@
                               {{ $prices[1]['originalPrice'] }}
                            </span>
                            <span class="price_land_curr">
-                              RSD
+                              {{ $prices[1]['currency'] }}
                            </span>
                         </span>
                     </div>
@@ -128,50 +132,50 @@
     </div>
     <div class="block2">
         <div class="container">
-            <div class="block_title">ZABORAVITE NEZELJENE DLACICE</div>
+            <div class="block_title">ZABORAVITE NEŽELJENA DEJSTVA</div>
             <ul class="block2_list">
                 <li class="hair_item">
-                    <img src="{{ asset('/') }}purplerelaxFiles/finishingtouch/hair1.png" alt="">
-                    <span class="hair_item_text">na listovima</span>
+                    <img src="{{ asset('/') }}purplerelaxFiles/footwipster/hair1.png" alt="">
+                    <span class="hair_item_text">Nema <br> grubih peta</span>
                 </li>
                 <li class="hair_item">
-                    <img src="{{ asset('/') }}purplerelaxFiles/finishingtouch/hair2.png" alt="">
-                    <span class="hair_item_text">na rukama</span>
+                    <img src="{{ asset('/') }}purplerelaxFiles/footwipster/hair2.png" alt="">
+                    <span class="hair_item_text">Nema žutih <br> i ispucalih peta</span>
                 </li>
                 <li class="separator"></li>
                 <li class="hair_item">
-                    <img src="{{ asset('/') }}purplerelaxFiles/finishingtouch/hair3.png" alt="">
-                    <span class="hair_item_text">u bikini zoni</span>
+                    <img src="{{ asset('/') }}purplerelaxFiles/footwipster/hair3.png" alt="">
+                    <span class="hair_item_text">Ženstvena <br> i privlačna stopala</span>
                 </li>
                 <li class="hair_item">
-                    <img src="{{ asset('/') }}purplerelaxFiles/finishingtouch/hair4.png" alt="">
-                    <span class="hair_item_text">ispod pazuha</span>
+                    <img src="{{ asset('/') }}purplerelaxFiles/footwipster/hair4.png" alt="">
+                    <span class="hair_item_text">Samouvereno <br> u letnjoj obući</span>
                 </li>
             </ul>
         </div>
     </div>
     <div class="block3">
         <div class="container">
-            <div class="block_title">BUDITE NEZNE I ZAVODLJIVE!</div>
-            <div class="block3_intro">NIŠTA NE DAJE ŽENI TOLIKO ŠARMA KAO MEKA I BARŠUNASTA KOŽA. MUŠKARCI SE JEDNOSTAVNO ZALJUBE KADA JE DODIRNU.</div>
-            <div class="red_title">Zene cine sve kako bi bar na neko vreme uspele da imaju glatku kozu:</div>
+            <div class="block_title">BUDITE NEŽNE I ZADOVOLJNE</div>
+            <div class="block3_intro">NIŠTA NE DAJE ŽENI TOLIKO SAMOPOUZDANJA I ŽENSTVENOSTI KAO NEŽNA I LEPA STOPALA U LETNJOJ OBUĆI.</div>
+            <div class="red_title">Kako do lepih i nežnih stopala? </div>
             <ul class="block3_list">
                 <li class="block3_item">
-                    <img src="{{ asset('/') }}purplerelaxFiles/finishingtouch/item1.png" alt="">
+                    <img src="{{ asset('/') }}purplerelaxFiles/footwipster/item1.png" alt="">
                     <p class="block3_item_info">
-                        <span>brijanje</span> — iritacija i bubuljice nakon nekoliko sati, urasle dlake i suva koža
+                        Nakvašena stopala nežno trljajte <span>Foot Wipsterom</span>
                     </p>
                 </li>
                 <li class="block3_item">
                     <img src="{{ asset('/') }}purplerelaxFiles/finishingtouch/item2.png" alt="">
                     <p class="block3_item_info">
-                        <span>kreme za depilaciju</span> — neujednačeno uklanjanje dlaka, iritacija, upala i gnojenje folikula dlake
+                        Istrljajte stopala kupkom i isperite <span>toplom vodom</span>
                     </p>
                 </li>
                 <li class="block3_item">
                     <img src="{{ asset('/') }}purplerelaxFiles/finishingtouch/item3.png" alt="">
                     <p class="block3_item_info">
-                        <span>depilacija voskom</span> (na intimnim mestima) — bol uporediv sa mučenjem
+                        Namažite svoje nežne noge željenom kremom i <span>uživajte u nežnosti</span>
                     </p>
                 </li>
             </ul>
@@ -184,18 +188,18 @@
     </div>
     <div class="block6">
         <div class="container">
-            <div class="block_title">WIPSTER KAMEN EPILATOR</div>
+            <div class="block_title">FOOT WIPSTER - ZA ŽENSTVENA I NEŽNA STOPALA</div>
             <div class="oh">
                 <div class="block6_left">
                     <div class="order_form_two">
-                        <div class="grin_form_title">Iskoristi ponudu</div>
+                        <div class="grin_form_title">Iskoristite ponudu</div>
                         <span class="grin_form_subtitle"></span>
                         <span class="grin_form_price">
                            <span class="price_land_s1">
                               {{ $prices[1]['amount'] }}
                            </span>
                            <span class="price_land_curr">
-                              RSD
+                              {{ $prices[1]['currency'] }}
                            </span>
                         </span>
                         <span class="grin_form_price_old">
@@ -203,7 +207,7 @@
                               {{ $prices[1]['originalPrice'] }}
                            </span>
                            <span class="price_land_curr">
-                              RSD
+                              {{ $prices[1]['currency'] }}
                            </span>
                         </span>
                         <div class="jSale">
@@ -230,12 +234,12 @@
                 </div>
                 <div class="block6_right">
                     <ul class="garant_list">
-                        <li class="garant_item">uklanja čak i najkraće dlačice</li>
-                        <li class="garant_item">zaboravićete na sve bolne metode uklanjanja dlačica</li>
-                        <li class="garant_item">pogodan za bilo koje mesto</li>
-                        <li class="garant_item">nema više ogrebotina, posekotina i opekotina</li>
-                        <li class="garant_item">prijatan za korišćenje</li>
-                        <li class="garant_item">siguran i pogodan za sve tipove kože, čak i one najosetljivije</li>
+                        <li class="garant_item">Uklanja sve mrtve ćelije sa kože</li>
+                        <li class="garant_item">Zaboravićete na bolne metode čišćenja stopala i peta</li>
+                        <li class="garant_item">Sjajna i menaka stopala za 5 minuta</li>
+                        <li class="garant_item">Podarite nekome nežne dodire svojim stopalima</li>
+                        <li class="garant_item">Koristi ga većina influenserki</li>
+                        <li class="garant_item">Najprodavaniji proizvod za negu stopala u Evropi</li>
                     </ul>
                 </div>
             </div>
@@ -246,18 +250,18 @@
 <footer class="footer">
     <div class="container">
         <div class="left_footer">
-            <div class="footer_line1">WIPSTER KAMEN EPILATOR</div>
-            <div class="footer_line2">NEZNA I GLATKA KOZA BEZ DLACICA</div>
+            <div class="footer_line1">FOOT WIPSTER</div>
+            <div class="footer_line2">Nežne, glatke i ženstvene pete i stopala</div>
             <div class="footer_line3">OSECAJTE SE PREFINJENO I ZAVODLJIVO</div>
-            <div class="footer_line4">Porucite epilator odmah<br>sa popustom od 40%</div>
+            <div class="footer_line4">Poručite Foot Wipster odmah <br> sa 40% popusta</div>
             <div class="footer_line5">
-                Cena sada
+                Cena na akciji
                 <span class="footer_line5_1">
                      <span class="price_land_s1">
                         {{ $prices[1]['amount'] }}
                      </span>
                      <span class="price_land_curr">
-                        RSD
+                        {{ $prices[1]['currency'] }}
                      </span>
                   </span>
                 <span class="footer_line5_1_old">
@@ -265,7 +269,7 @@
                         {{ $prices[1]['originalPrice'] }}
                      </span>
                      <span class="price_land_curr">
-                        RSD
+                        {{ $prices[1]['currency'] }}
                      </span>
                   </span>
             </div>
