@@ -13,6 +13,9 @@ class Variation extends Model
 {
     use HasFactory;
 
+    protected $table = 'variation';
+    protected $primaryKey = 'id_variation';
+
     public $variation_name;
     public $variation_description;
     public $lander_id;

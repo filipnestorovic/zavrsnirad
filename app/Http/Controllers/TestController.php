@@ -25,6 +25,16 @@ class TestController extends Controller
 
     public function testsIndex() {
         $this->data['products'] = $this->modelProduct->getAllProduct();
+
+        $products = $this->modelProduct->getAllProduct();
+
+        foreach($products as $product) {
+            $variations = Variation::where('product_id',$product->id_product)->get()->pluck('id_variation')->toArray();
+            $product->availableVariations = $variations;
+        }
+
+        $this->data['products'] = $products;
+
         return view('admin.tests', $this->data);
     }
 
@@ -99,7 +109,7 @@ class TestController extends Controller
                         $testVariationId = $variation['id_tests_variations'];
 
                         if(is_null($testVariationId)) {
-                            
+
                         } else {
 
                             $testStatistic = $this->modelStatistic->getSingleTestStatistic($testVariationId, $id, null);

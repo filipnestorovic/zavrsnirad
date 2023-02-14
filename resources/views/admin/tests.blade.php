@@ -1,6 +1,5 @@
 @extends('admin.adminTemplate')
 @section('content')
-
     <nav class="breadcrumb" aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{ route('adminDashboard') }}">Home</a></li>
@@ -80,7 +79,19 @@
                             </div>
                             <select name="productIdTestCreate" id="productIdTestCreate" data-toggle="dropdown" required data-live-search="true">
                                 @foreach($products as $product)
-                                    <option value="{{ $product->id_product }}">{{ $product->product_name }}</option>
+                                    @php
+                                        $availableVariationsText = '';
+                                        if(isset($product->availableVariations)) {
+                                            $availableVariationsText .= '[';
+                                            foreach($product->availableVariations as $availableVariationId) {
+                                                $availableVariationsText .= $availableVariationId.', ';
+                                            }
+                                            $availableVariationsText .= ']';
+                                        }
+                                    @endphp
+                                    <option value="{{ $product->id_product }}">
+                                        {{ $product->product_name }} {{$availableVariationsText}}
+                                    </option>
                                 @endforeach
                             </select>
                         </div>
