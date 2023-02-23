@@ -295,7 +295,7 @@
                                     <div class=new>
                                     <span class="">
                                        <b class="price_only15058">
-                                          {{ $prices[1]['originalPrice'] }}
+                                          {{ $prices[1]['amount'] }}
                                           {{ $prices[1]['currency'] }}
                                        </b>
                                     </span>
@@ -304,7 +304,7 @@
                                     <div class=old style="font-size: 45px;">
                                     <span>
                                        <b class="price_old15058">
-                                          {{ $prices[1]['amount'] }}
+                                          {{ $prices[1]['originalPrice'] }}
                                           {{ $prices[1]['currency'] }}
                                        </b>
                                     </span>
