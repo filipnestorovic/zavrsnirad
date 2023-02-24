@@ -901,10 +901,10 @@ h2 span {
 
     /* offer */
 
-    .offer_section {
-        padding: 16px 0 0;
-        background-image: url(tablet__offer_bg.jpg);
-    }
+    /*.offer_section {*/
+    /*    padding: 16px 0 0;*/
+    /*    background-image: url(tablet__offer_bg.jpg);*/
+    /*}*/
 
     .offer_section .subtitle {
         font-size: 26px;
@@ -1086,10 +1086,10 @@ h2 span {
 
     /* order */
 
-    .order_section {
-        padding: 16px 0 0;
-        background-image: url(tablet__offer_bg.jpg);
-    }
+    /*.order_section {*/
+    /*    padding: 16px 0 0;*/
+    /*    background-image: url(tablet__offer_bg.jpg);*/
+    /*}*/
 
     .order_section .subtitle {
         font-size: 26px;
