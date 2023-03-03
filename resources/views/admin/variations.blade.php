@@ -30,7 +30,7 @@
                                 <select id="productFilter"  name="productFilter" data-live-search="true">
                                     <option value="" data-width="auto" selected>Product</option>
                                     @foreach($products as $product)
-                                        <option value="{{ $product->id_product }}">{{ $product->product_name }} ({{ $product->country_name }})</option>
+                                        <option value="{{ $product->id_product }}">{{ $product->product_name }} [{{ $product->id_product }}] ({{ $product->country_name }})</option>
                                     @endforeach
                                 </select>
                                 <script>
@@ -111,7 +111,7 @@
                             </div>
                             <select name="productDdlModal" id="productDdlModal" data-toggle="dropdown" required data-live-search="true">
                                 @foreach($products as $product)
-                                    <option value="{{ $product->id_product }}">{{ $product->product_name }} ({{ $product->country_name }})</option>
+                                    <option value="{{ $product->id_product }}">{{ $product->product_name }} [{{ $product->id_product }}] ({{ $product->country_name }})</option>
                                 @endforeach
                             </select>
                         </div>
