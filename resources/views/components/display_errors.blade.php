@@ -64,6 +64,10 @@
     @php $discountText = "PRIMENJEN SPECIJALNI NOVOGODIŠNJI POPUST OD"; @endphp
 @endif
 
+@if(isset($couponCode) && $couponCode === "popust50")
+    @php $discountText = "PRIMENJEN SPECIJALNI POPUST OD"; @endphp
+@endif
+
 @if($discount)
     <div class="alert alert-success" role="alert" style="">
         <h3 class="alert-heading">{{ $discountText }} {{$discount}}%!</h3>

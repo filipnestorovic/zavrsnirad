@@ -558,7 +558,7 @@ class HomeController extends Controller
                    $discountMultiply = (100 - $singleCoupon->discount) / 100;
                    if($this->returnedData['prices'] != null) {
                        foreach($this->returnedData['prices'] as $price) {
-                           if($coupon === "blackfriday" || $coupon === "newyear") {
+                           if($coupon === "blackfriday" || $coupon === "newyear" || $coupon === "popust50") {
                                $i = $price['quantity'];
                                $this->returnedData['prices'][$i]['amount'] = round($price['originalPrice'] * $discountMultiply);
                                $this->returnedData['prices'][$i]['amountBeforeDiscount'] = $price['originalPrice'];
