@@ -26,37 +26,38 @@
             src: url('{{ asset('/') }}fonts/GothamPro-Bold.woff2') format('woff2'), url('{{ asset('/') }}fonts/GothamPro-Bold.woff') format('woff'), url('{{ asset('/') }}fonts/GothamPro-Bold.ttf') format('truetype');
             font-weight: 700;
             font-style: normal
-        }</style>
+        }
+    </style>
     <link rel="stylesheet" href="{{ asset('/') }}purplerelaxFiles/vratnimasazermobile/style.css">
     <style>
         .b1 {
             padding: 0 0 10px;
-            background: #f8faf5 url({{ asset('/') }}purplerelaxFiles/electricmassager/offer.jpg) no-repeat center 139px;
+            background: #f8faf5 url({{ asset('/') }}dailysharkFiles/travelmate/offer.png) no-repeat center 139px;
             position: relative;
         }
 
         .b1 .pulse {
-            top: 360px;
-            left: 220px;
+            top: 430px;
+            left: 380px;
         }
 
         .use li:nth-child(1) {
-            background: #fff url({{ asset('/') }}purplerelaxFiles/electricmassager/use1.jpg) no-repeat 0 -5px;
+            background: #fff url({{ asset('/') }}dailysharkFiles/travelmate/use1.png) no-repeat 0 -5px;
             padding: 30px 0px 30px 240px;
         }
 
         .use li:nth-child(2) {
-            background: #fff url({{ asset('/') }}purplerelaxFiles/electricmassager/use2.jpg) no-repeat right -10px;
+            background: #fff url({{ asset('/') }}dailysharkFiles/travelmate/use2.png) no-repeat right -10px;
             padding: 15px 240px 13px 0;
         }
 
         .use li:nth-child(3) {
-            background: #fff url({{ asset('/') }}purplerelaxFiles/electricmassager/use3.jpg) no-repeat 0 0;
+            background: #fff url({{ asset('/') }}dailysharkFiles/travelmate/use3.png) no-repeat 0 0;
             padding: 30px 0px 21px 240px;
         }
 
         .use li:nth-child(4) {
-            background: #fff url({{ asset('/') }}purplerelaxFiles/electricmassager/use4.jpg) no-repeat right -10px;
+            background: #fff url({{ asset('/') }}dailysharkFiles/travelmate/use4.png) no-repeat right -10px;
             padding: 9px 240px 8px 0;
         }
         .b1 h1 {
@@ -103,7 +104,7 @@
     </section>
     <section class="b2">
         <h2 class="title"><span>Oslobodite se bola u leđima i vratu</span> čak i kada putujete</h2>
-        <img src="{{ asset('/') }}purplerelaxFiles/electricmassager/b2.jpg" alt>
+        <img src="{{ asset('/') }}dailysharkFiles/travelmate/b2.png" alt>
         <p>Travel Mate je dizajniran da vam pruži savršenu udobnost tokom dugih putovanja.
             Zahvaljujući njegovoj sposobnosti da se prilagodi vašem vratu i podesi tvrdoću,
             ovaj jastuk će vam omogućiti da se opustite i udobno zaspite, čak i tokom najdužih putovanja.
@@ -134,95 +135,45 @@
     <section class="b3 gradient">
         <h2 class="title">Travel Mate će postati vaš najbolji saputnik</h2>
         <div class="best__item">
-            <img src="{{ asset('/') }}purplerelaxFiles/electricmassager/best1.jpg" alt>
+            <img src="{{ asset('/') }}dailysharkFiles/travelmate/best1.png" alt>
             <p><b>Pruža podršku vratu</b>
                 Ovaj jastuk pruža savršenu podršku vratu tokom putovanja, čime se sprečava bol i nelagoda u vratu.
             </p>
         </div>
         <div class="best__item">
-            <img src="{{ asset('/') }}purplerelaxFiles/electricmassager/best2.jpg" alt>
+            <img src="{{ asset('/') }}dailysharkFiles/travelmate/best2.png" alt>
             <p><b>Podesiva tvrdoća</b>
                 Možete podesiti tvrdoću jastuka prema vašoj želji, što vam omogućava da prilagodite jastuk vašoj udobnosti.
             </p>
         </div>
         <div class="best__item">
-            <img src="{{ asset('/') }}purplerelaxFiles/electricmassager/best3.jpg" alt>
+            <img src="{{ asset('/') }}dailysharkFiles/travelmate/best4.png" alt>
             <p><b>Kompaktan dizajn</b>
                 Sa svojim kompaktnim dizajnom, ovaj putni jastuk je idealan za nošenje u torbi za putovanja.
             </p>
         </div>
         <div class="best__item">
-            <img src="{{ asset('/') }}purplerelaxFiles/electricmassager/best4.jpg" alt>
+            <img src="{{ asset('/') }}dailysharkFiles/travelmate/best3.png" alt>
             <p><b>Pomaže u prevenciji glavobolja</b>
-                Ovaj jastuk može pomoći u prevenciji glavobolja tokom putovanja, jer pruža podršku vratu i sprečava napetost mišića.
+                Ovaj jastuk može pomoći u prevenciji glavobolja tokom putovanja, jer sprečava napetost mišića i opušta ih.
             </p>
         </div>
         <a href="#order_form" class="btn">PORUČITE ODMAH</a>
     </section>
-{{--    <section class="b4">--}}
-{{--        <h2 class="title"><span>Kome treba</span><br> Electric Massager?</h2>--}}
-{{--        <p>Zahvaljujući svojoj svestranosti, Electric Massager preporučuje se svima ali je posebno koristan za sledeće--}}
-{{--            kategorije ljudi:</p>--}}
-{{--        <div class="body">--}}
-{{--            <div class="body__item">--}}
-{{--                <img src="{{ asset('/') }}purplerelaxFiles/vratnimasazermobile/body1.jpg" alt>--}}
-{{--                <p> Zaposleni</p>--}}
-{{--            </div>--}}
-{{--            <div class="body__item">--}}
-{{--                <img src="{{ asset('/') }}purplerelaxFiles/joyout/body2.jpg" alt>--}}
-{{--                <p>Dame koje žele da se opuste</p>--}}
-{{--            </div>--}}
-{{--            <div class="body__item">--}}
-{{--                <img src="{{ asset('/') }}purplerelaxFiles/vratnimasazermobile/body3.jpg" alt>--}}
-{{--                <p> Sportisti</p>--}}
-{{--            </div>--}}
-{{--            <div class="body__item">--}}
-{{--                <img src="{{ asset('/') }}purplerelaxFiles/vratnimasazermobile/body4.jpg" alt>--}}
-{{--                <p> Svako ko pati od bolova u vratu i migrene</p>--}}
-{{--            </div>--}}
-{{--            <div class="body__item">--}}
-{{--                <img src="{{ asset('/') }}purplerelaxFiles/vratnimasazermobile/body5.jpg" alt>--}}
-{{--                <p> One koji imaju probleme sa snom</p>--}}
-{{--            </div>--}}
-{{--            <div class="body__item">--}}
-{{--                <img src="{{ asset('/') }}purplerelaxFiles/vratnimasazermobile/body6.jpg" alt>--}}
-{{--                <p> One koji vode sedeći način života</p>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--        <a href="#order_form" class="btn">PORUČITE SA POPUSTOM</a>--}}
-{{--    </section>--}}
-{{--    <section class="b5 gradient">--}}
-{{--        <h2 class="title">Uživajte u masaži bilo kog dela tela jednostavnim pokretima</h2>--}}
-{{--        <img src="{{ asset('/') }}purplerelaxFiles/electricmassager/body_grad.jpg" alt>--}}
-{{--        <p>Electric Massager efikasno ublažava bol u mišićima: <b>kod modrica, grčeva, uganuća, a doprinose i njihovom jačanju.</b>--}}
-{{--            Ima mekanu zaobljenu glavu koja savršeno leže na svaki deo tela.</p>--}}
-{{--    </section>--}}
     <section class="b6">
-        <h2 class="title"><span> Profesionalni masažer </span><br> u vašem domu!</h2>
+        <h2 class="title"><span>Travel Mate</span><br> ima višestruku namenu!</h2>
         <ul class="use">
-            <li><span>1</span> Možete ga uključiti <br> na usb napajanje</li>
-            <li><span>2</span> Možete u njega <br> staviti baterije</li>
-            <li><span>3</span> Naslonite masažnu glavu <br> na željeni deo tela <br> i prepustite se užitku</li>
-            <li><span>4</span> Dovodi do brzog opuštanja <br> i lepog osećaja</li>
+            <li><span>1</span> Stavite ga oko vrata za maksimalnu udobnost u toku vožnje</li>
+            <li><span>2</span> Možete ga razvući pa <br> presaviti oko ruke za kratki odmor</li>
+            <li><span>3</span> Može služiti i kao dodatan jastuk u vašem krevetu</li>
+            <li><span>4</span> Idealan za <br> putovanja avionom i <br> čekanja na aerodromima </li>
         </ul>
         <a href="#order_form" class="btn">PORUČITE ODMAH</a>
     </section>
-{{--    <section class="b7">--}}
-{{--        <h2 class="title"><span>SPECIFIKACIJA</span> PROIZVODA</h2>--}}
-{{--        <img src="{{ asset('/') }}purplerelaxFiles/electricmassager/char.jpg" alt>--}}
-{{--        <ul class="char">--}}
-{{--            <li><b> Electric Massager </b> <span> 1 komad</span></li>--}}
-{{--            <li><b> Kabl za napajanje </b> <span> 1 komad</span></li>--}}
-{{--            <li><b> Uputstvo </b> <span> 1 komad</span></li>--}}
-{{--            <li><b> Način masaže </b> <span> Vibracija</span></li>--}}
-{{--            <li><b> Nivoi brzina </b> <span> 1</span></li>--}}
-{{--        </ul>--}}
-{{--        <a href="#order_form" class="btn">PORUČITE ODMAH</a>--}}
-{{--    </section>--}}
     <section class="b8 gradient">
-        <h2 class="title">Utisci kupaca <br> kojima je <br> Travel Mate pomogao</h2>
+        <h2 class="title">Utisci kupaca <br> kojima je <br> Travel Mate olakšao putovanja</h2>
         <div class="reviews__item">
-            <img src="{{ asset('/') }}purplerelaxFiles/electricmassager/rev1.jpg" alt>
+            <img src="{{ asset('/') }}dailysharkFiles/travelmate/rev1.png" alt>
             <p><b>Ovaj jastuk je neverovatan!</b>
                 Koristim ga na svim mojim putovanjima i ne mogu zamisliti da putujem bez njega.
                 Pruža mi savršenu podršku za vrat i sprečava bol u vratu i ramenima.
@@ -233,7 +184,7 @@
             </div>
         </div>
         <div class="reviews__item">
-            <img src="{{ asset('/') }}purplerelaxFiles/electricmassager/rev2.jpg" alt>
+            <img src="{{ asset('/') }}dailysharkFiles/travelmate/rev2.png" alt>
             <p>
                 Zbog prirode posla često putujem kolima, i po pravilu sam se sa tih putovanja uvek vraćao
                 sa bolovima u leđima i vratu. Od kada sam kupio ovaj jastuk više ništa nije isto kao pre.
@@ -245,13 +196,14 @@
             </div>
         </div>
         <div class="reviews__item">
+            <img src="{{ asset('/') }}dailysharkFiles/travelmate/body_grad.png" alt>
             <p>
                 Dečko i ja smo poručili ove jastuke pred prošlo letovanje, jer smo bili prinuđeni na putujemo autobusom.
                 Ne samo da nam je olakšao to putovanje, kao i svako naredno, već ih koristimo i kod kuće za svakodnevni odmor.
                 Sreća je da smo odmah poručili dva komada, kako se ne bi otimali :)
             </p>
             <div class="person">
-                <img src="{{ asset('/') }}purplerelaxFiles/vratnimasazermobile/ava1.jpg" alt>
+                <img src="" alt>
                 <p>Anđela<br> Kragujevac</p>
             </div>
         </div>
