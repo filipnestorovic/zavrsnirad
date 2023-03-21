@@ -1055,8 +1055,7 @@
                                                                   document.write(p.getDate() + '.' + monthA[p.getMonth()] + '.' + p.getFullYear());
                                                                </script>
                                                             </span>
-                                                                        <span style="color:#222" class=qt-comm>:
-                                                            1</span>
+
                                                                     </h2>
                                                                 </div>
                                                             </div>
@@ -1146,8 +1145,7 @@
                                                                   document.write(p.getDate() + '.' + monthA[p.getMonth()] + '.' + p.getFullYear());
                                                                </script>
                                                             </span>
-                                                                        <span style="color:#222" class=qt-comm>:
-                                                            1</span>
+
                                                                     </h2>
                                                                 </div>
                                                             </div>
@@ -1237,8 +1235,7 @@
                                                                   document.write(p.getDate() + '.' + monthA[p.getMonth()] + '.' + p.getFullYear());
                                                                </script>
                                                             </span>
-                                                                        <span style="color:#222" class=qt-comm>:
-                                                            1</span>
+
                                                                     </h2>
                                                                 </div>
                                                             </div>
@@ -1321,8 +1318,7 @@
                                                                   document.write(p.getDate() + '.' + monthA[p.getMonth()] + '.' + p.getFullYear());
                                                                </script>
                                                             </span>
-                                                                        <span style="color:#222" class=qt-comm>:
-                                                            1</span>
+
                                                                     </h2>
                                                                 </div>
                                                             </div>
@@ -1413,8 +1409,7 @@
                                                                   document.write(p.getDate() + '.' + monthA[p.getMonth()] + '.' + p.getFullYear());
                                                                </script>
                                                             </span>
-                                                                        <span style="color:#222" class=qt-comm>:
-                                                            1</span>
+
                                                                     </h2>
                                                                 </div>
                                                             </div>
@@ -1496,8 +1491,7 @@
                                                                   document.write(p.getDate() + '.' + monthA[p.getMonth()] + '.' + p.getFullYear());
                                                                </script>
                                                             </span>
-                                                                        <span style="color:#222" class=qt-comm>:
-                                                            1</span>
+
                                                                     </h2>
                                                                 </div>
                                                             </div>

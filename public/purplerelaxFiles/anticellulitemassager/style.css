@@ -1957,10 +1957,6 @@
         position: relative
     }
 
-    .qt-comm:before {
-        content: 'Cantitate'
-    }
-
     .e-gallery-container {
         position: relative;
         display: flex;
