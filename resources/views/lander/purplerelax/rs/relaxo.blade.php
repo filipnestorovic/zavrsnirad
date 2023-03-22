@@ -1795,7 +1795,7 @@ Možete ga koristiti sa uljem za mršavljenje ili drugim uljem za masažu.</span
 <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&amp;display=swap" rel=stylesheet>
 
 <script src="{{ asset('/') }}shared_files/slick.min.js"></script>
-<script src="{{ asset('/') }}purplerelaxFiles/relaxo/main.js"></script>
+<script src="{{ asset('/') }}purplerelaxFiles/anticellulitemassager/main.js"></script>
 <style>
     #countdown {
         text-align: center;

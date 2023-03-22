@@ -18,11 +18,12 @@
         <div class="wrap">
             <div class="head-top right">
                 <h1>Inovativno rešenje za bol u peti, sprečavanje žuljeva i dodatnu podršku pri svakom koraku!</h1>
-                <h3>PORUČITE BUNION CORRECTOR I ZAUVEK ZABORAVITE NA ČUKLJEVE</h3>
+                <h3>Postignite vrhunsku udobnost i podršku za vaša stopala</h3>
                 <img src="{{ asset('/') }}naturapharmFiles/footcushion/longetaProduct.png"/>
                 <br/>
-                <span>ZAUSTAVLJA BOL I UPALU ZA 10 DANA</span>
-                <span>EFIKASNO SPREČAVA DEFORMITET U ROKU OD 10 DANA</span>
+                <span>UBLAŽAVA BOLOVE U PETI</span>
+                <span>SPREČAVA NASTANAK ŽULJEVA</span>
+                <span>PODRŠKA I UDOBNOST</span>
             </div>
             <div class="clear">
             </div>
@@ -52,40 +53,35 @@
     <div class="textinfo">
         <div class="wrap">
             <div class="item">
-                Više od 30% žena
-                <br/> ne može da nosi
-                <br/> cipele sa potpeticom
+                Oko 75% ljudi <br>doživljava bol u stopalima <br>u nekom trenutku svog života.
             </div>
             <div class="item">
-                Mnogima je neprijatno
-                <br/> zbog vidljivog
-                <br/> deformiteta stopala
+                Žene češće od muškaraca <br>doživljavaju bolove u stopalima
             </div>
             <div class="item last">
-                Dan započinje nelagodom,
-                <br/> a završava se bolom
+                Pravilna podrška svodu <br>stopala može eliminisati bol
             </div>
             <p>
                 <br/>
-                To su problemi koji nastaju deformitetom kostiju stopala – nepravilnim oblikom nožnog palca
+                Ne čekajte da bolovi i neudobnost pokvare vaš dan - naručite Foot Cushion odmah
                 <span></span>
             </p>
         </div>
     </div>
     <div class="textinfo2">
         <div class="wrap">
-            <h2>BUNION CORRECTOR POZITIVNO UTIČE NA SLEDEĆE NAČINE</h2>
+            <h2>Foot cushion pozitivno utiče na sledeće načine</h2>
             <div class="item">
                 <img src="{{ asset('/') }}naturapharmFiles/footcushion/longeta4.png"/>
-                <p>Nežno postavlja prste u njihov prirodan položaj i uklanja deformacije</p>
+                <p>Ublažava bolove u peti pružajući trenutno olakšanje</p>
             </div>
             <div class="item">
                 <img src="{{ asset('/') }}naturapharmFiles/longeta/02.jpg"/>
-                <p>Sprečava stvaranje dosadnih žuljeva i bolova u stopalima</p>
+                <p>Sprečava stvaranje dosadnih žuljeva</p>
             </div>
             <div class="item last">
                 <img src="{{ asset('/') }}naturapharmFiles/longeta/03.jpg"/>
-                <p>Uklanja čukljeve i pozitivno utiče na lečenje artritisa</p>
+                <p>Pruža podršku i udobnost, pogotovo kod nošenja visokih štikli</p>
             </div>
             {{--<p></p>--}}
         </div>
@@ -93,9 +89,9 @@
     <div class="order">
         <div class="wrap">
             <div class="form-wrp-sec ">
-                <h3> Bunion Corrector
+                <h3> Foot Cushion
                     <br/>
-                    <span> "KAŽITE NE BOLNIM I RUŽNIM PRSTIMA NA NOGAMA!"
+                    <span> "Kažite NE bolu i žuljevima!"
                 </span>
                 </h3>
                 <div class="count-wrp ">
@@ -117,35 +113,35 @@
     </div>
     <div class="textinfo3">
         <div class="wrap">
-            <h2>ŠTA JE BUNION CORRECTOR?</h2>
+            <h2>ŠTA JE FOOT CUSHION?</h2>
             <div class="item">
                 <img src="{{ asset('/') }}naturapharmFiles/longeta/img-1.jpg"/>
-                <p>Na zdravom stopalu palac ima normalan položaj i i prsti su ravnomerno raspoređeni. Stopalo ima normalnu funkciju i daje potpotu celom telu.</p>
+                <p>Foot cushion su silikonski ulošci za stopala koji su dizajnirani kako bi pružili dodatnu podršku, udobnost i olakšanje od bolova prilikom hodanja ili stajanja</p>
             </div>
             <div class="item">
                 <img src="{{ asset('/') }}naturapharmFiles/longeta/img-2.jpg"/>
-                <p>Bunion Corrector ispravlja kost nožnog palca i drži ga u ravni sa stopalom.</p>
+                <p>Ulošci se postavljaju unutar obuće i prilagođavaju se obliku i veličini vašeg stopala. Pomažu u ublažavanju bolova u peti, sprečavanju nastanka žuljeva i pružanju potrebne podrške svodu stopala</p>
             </div>
             <div class="item last">
                 <img src="{{ asset('/') }}naturapharmFiles/longeta/img-3.jpg"/>
-                <p>Na slici iznad je prikazan deformitet palca trećeg stepena. Palac je jako savijen u odnosu na ostale prste, a funkcija stopala je značajno oslabljena. Javlja se veliki bol i nelagoda, što značajno narušava kvalitet života.</p>
+                <p>Tako poboljšavaju kvalitet hoda i smanjuju umor u stopalima. Silikonski ulošci su univerzalne veličine i pogodni za upotrebu sa različitim vrstama obuće.</p>
             </div>
         </div>
     </div>
     <div class="textinfo4">
         <div class="wrap">
-            <h2>KADA JE POTREBNO DA KORISTITE BUNION CORRECTOR?</h2>
+            <h2>Kada je potrebno da koristite Foot Cushion?</h2>
             <div class="item">
-                <h4>Želite da napravite prevenciju od nastanka čukljeva</h4>
-                <p>Imate ravna stopala, nosite uske cipele, neko u vašoj porodici ima čukljeve. Bunion Corrector sprečava nastanak čukljeva, a vaša stopala ostaju zdrava i lepa.</p>
+                <h4>Bolovi u stopalima</h4>
+                <p>Ako doživljavate bolove u stopalima usled dugotrajnog stajanja, hodanja ili nošenja obuće sa visokom petom, silikonski ulošci mogu pružiti olakšanje i smanjiti pritisak na osetljive delove stopala.</p>
             </div>
             <div class="item">
-                <h4>Imate početne simptome</h4>
-                <p>Stalno nošenje longete u trajanju od 3 do 6 meseci učiniće da čukljevi nestanu. Rezultat je dokazan, a deformiteti se ne vraćaju.</p>
+                <h4>Žuljevi i kurje oči</h4>
+                <p>Ulošci mogu pomoći u sprečavanju nastanka žuljeva i kurjih očiju tako što smanjuju trenje i iritaciju kože prilikom nošenja obuće.</p>
             </div>
             <div class="item">
-                <h4>Imate tešku deformaciju palca</h4>
-                <p>Bunion Corrector vraća nožni prst u ispravan pložaj, čak i ako su nožni prsti ukršteni i zbijeni. Sprečava razvoj bolesti i komplikacija kao što su upale zglobova i žuljevi. Opterećenje na stopalima tokom hodanja je ravnomerno raspoređeno, tako da bol nestaje ne samo u prstima nego i u stopalima, a noge se mnogo manje umaraju. </p>
+                <h4>Ravan svod stopala</h4>
+                <p>Ako imate ravan svod stopala ili druge probleme sa stopalima, silikonski ulošci mogu pružiti dodatnu podršku i smanjiti bolove i nelagodnosti povezane sa tim stanjima.</p>
             </div>
         </div>
     </div>
@@ -155,36 +151,36 @@
             </h2>
             <div class="item">
                 <img src="{{ asset('/') }}naturapharmFiles/footcushion/longeta1.png"/>
-                <p>Izrađen od čistih, kvalitetnih i veoma sigurnih materijala, koji nemaju štetna dejstva na kožu.</p>
+                <p>Silikonski materijal služi kao mekani sloj koji apsorbuje udarce prilikom hodanja ili stajanja. </p>
             </div>
             <div class="item">
                 <img src="{{ asset('/') }}naturapharmFiles/footcushion/longeta2.png"/>
-                <p>Bunion Corrector se prilagođava anatomiji vašeg stopala, i nećete osetiti da je nosite. Pažljivo i sigurno će držati vaš prst u pravilnom položaju.</p>
+                <p>Silikonski ulošci smanjuju trenje između stopala i obuće, što pomaže u sprečavanju nastanka žuljeva, kurjih očiju i drugih iritacija kože.</p>
             </div>
             <div class="item">
                 <img src="{{ asset('/') }}naturapharmFiles/longeta/longeta3.png"/>
-                <p>Pod pritiskom, kost se vraća u normalan položaj, a palac ostaje paralelan s ostalim prstima. Bol u hodu nestaje, a vaše omiljene cipele ćete moći da nosite ponovo.</p>
+                <p>Silikonski materijal se prilagođava obliku i veličini vašeg stopala, osiguravajući udoban i siguran položaj unutar obuće. Oni su univerzalne veličine i laki za upotrebu.</p>
             </div>
             <div class="clear">
             </div>
             <div class="info-block">
                 <img src="{{ asset('/') }}naturapharmFiles/footcushion/longetaProduct.png"/>
                 <div class="text-info">
-                    <h2>KAKO KORISTITI BUNION CORRECTOR?</h2>
+                    <h2>KAKO KORISTITI FOOT CUSHION? </h2>
                     <p>Jednostavno ga stavite na stopalo, a zatim obujte vaše cipele. Nevidljiv je u zatvorenim cipelama i sportskim patikama.</p>
                     <p>
                         <b>
-                            <i>Što više vremena nosite Bunion Correct, korekcija deformacije će biti brža.</i>
+                            <i>Što više vremena nosite Foot Cushion, efekat će biti bolji.</i>
                         </b>
                     </p>
                     <p>
-                        <span>Jedan Bunion Corrector dovoljan je za najmanje godinu dana korišćenja.</span>
+                        <span>Jedan Foot Cushion dovoljan je za najmanje godinu dana korišćenja.</span>
                     </p>
                 </div>
                 <div class="clear">
                 </div>
             </div>
-            <h2>RAZLIKA U DELOVANJU BUNION CORRECTORA
+            <h2>RAZLIKA U DELOVANJU FOOT CUSHION
                 <br/>
                 U ODNOSU NA DRUGE METODE LEČENJA
             </h2>
@@ -196,7 +192,7 @@
                 <img src="{{ asset('/') }}naturapharmFiles/longeta/07.jpg"/>
                 <div class="r-text">
                     <h5>Ortopedski ulošci</h5>
-                    <p>Glomazna konstrukcija uloška ne dozvoljava korišćenje čarapa i obuće, pa se ti ulošci nose uglavnom noću, što nije dovoljno jer deformisani nožni prst i dalje većinu vremena ostaju u nepravilnom položaju.</p>
+                    <p>Silikonski ulošci su često jeftiniji od drugih tretmana, kao što su ortopedski ulošci ili fizioterapija. To ih čini dostupnijim za širi spektar ljudi koji traže rešenje za bolove i neudobnosti u stopalima.</p>
                 </div>
                 <div class="clear">
                 </div>
@@ -205,7 +201,7 @@
                 <img src="{{ asset('/') }}naturapharmFiles/longeta/08.jpg"/>
                 <div class="r-text">
                     <h5>Protivupalne i analgetske masti i kreme</h5>
-                    <p>Imaju mogućnost da privremeno otklone upalu i bol u razvoju artritisa, ali suštinski ne rešavaju problem čukljeva i napredovanja bolesti.</p>
+                    <p>Upotreba silikonskih uložaka je neinvazivna opcija, što znači da ne zahteva medicinske zahvate ili lekove koji mogu imati neželjene efekte. To ih čini sigurnom alternativom za one koji traže rešenje za probleme sa stopalima.</p>
                 </div>
                 <div class="clear">
                 </div>
@@ -214,7 +210,7 @@
                 <img src="{{ asset('/') }}naturapharmFiles/longeta/09.jpg"/>
                 <div class="r-text">
                     <h5>Masaža i rehabilitacija</h5>
-                    <p>One nemaju nikakav uticaj i dejstvo u lečenju čukljeva. Primenjuju se isključivo za ublažavanje bolova i upale zglobova.</p>
+                    <p>Silikonski ulošci su jednostavni za upotrebu i ne zahtevaju posebne veštine ili obuku. Samo ih postavite unutar cipela i prilagodite obliku i veličini vašeg stopala.</p>
                 </div>
                 <div class="clear">
                 </div>
@@ -223,7 +219,7 @@
                 <img src="{{ asset('/') }}naturapharmFiles/longeta/10.jpg"/>
                 <div class="r-text">
                     <h5>Hirurgija</h5>
-                    <p>Nažalost, dugo je to bila jedina učinkovita metoda lečenja čukljeva u bilo kojoj fazi. Operacijom se uklanja izbočeni deo kosti, ali to ne sprečava da se bolest ponovi u budućnosti. Ova metoda lečenja vrlo je traumatična, bolna i dugo je vreme oporavka. Nakon operacije ostaju neugodni ožiljci na stopalima.</p>
+                    <p>Za razliku od ortopedskih uložaka, koji se često prave po meri, silikonski ulošci su univerzalne veličine i mogu se prilagoditi različitim oblicima i veličinama stopala</p>
                 </div>
                 <div class="clear">
                 </div>
@@ -234,11 +230,9 @@
                 <div class="item">
                     <img src="{{ asset('/') }}naturapharmFiles/footcushion/longeta5.jpg"/>
                     <div class="r-text">
-                        <h5>Bunion Corrector</h5>
+                        <h5>Foot Cushion</h5>
                         <p>
-                            Postavlja prst u ispravan položaj i drži ga 24 sata dnevno, pružajući značajan terapeutski učinak.
-                            <br/>
-                            Bolest više ne napreduje jer se telesna težina pravilno raspoređuje na stopalima, a zatvorene cipele više ne uzrokuju pomeranje palca u nepravilan položaj.
+                            Silikonski ulošci mogu pružiti trenutno olakšanje od bolova u stopalima i neudobnosti, dok neke druge opcije lečenja, kao što su fizioterapija ili lekovi, mogu zahtevati duže vreme da bi pokazali rezultate.
                         </p>
                     </div>
                     <div class="clear">
@@ -258,9 +252,7 @@
                     <h4>
                         <strong>Dragana, 30 godina</strong>
                     </h4>
-                    <p>Problem se pojavio pre 10 godina na fakultetu, i od tada nisam nosila cipele s visokom potpeticom jer mi se činilo kao da svi gledaju u moje ružne noge. Uz to, plašila sam se posledica i potencijalne operacije. Onda sam naišla na ovaj proizvod i kupila sam ga odmah. Nakon 4 meseca nožni prsti su mi se vratili u normalu! Sada bez problema nosim otvorene cipele sa potpeticom i uživam u tome.
-                        <br/>Toplo preporučujem svima!
-                    </p>
+                    <p>Kupila sam Foot Cushion jer sam imala bolove u stopalima zbog dugotrajnog stajanja na poslu. Nakon što sam ih počela koristiti, primetila sam značajno olakšanje. Bolovi su se smanjili, a i stopala mi se manje umaraju. Nisu čudo, ali definitivno mi pomažu da se osećam ugodnije tokom dana.</p>
                 </blockquote>
                 <div class="clear">
                 </div>
@@ -271,11 +263,9 @@
                 </div>
                 <blockquote>
                     <h4>
-                        <strong>Marina, 74 godine</strong>
+                        <strong>Marina, 29 godina</strong>
                     </h4>
-                    <p>Bunion Corrector me je spasio! Bolovi u nogama bili su užasni, nosila sam veći broj cipela i jedva sam se kretala. Čim sam počela da ga koristim, osećala sam se puno bolje. Sada opet nosim normalne cipele i čizme.
-                        <br/>Vratila sam se u život i jako sam zahvalna onima koji su smislili ovako neverovatnu stvar.
-                    </p>
+                    <p>Počela sam koristiti Foot cushion uloške jer mi je ortoped preporučio nešto da mi pomogne s bolovima zbog ravne noge. Ulošci su mi pomogli da hodam udobnije, ali ipak nisu potpuno rešenje za moj problem. Sve u svemu, za ovu cenu, mislim da vrede, iako ću možda morati da razmotrim i druge opcije.</p>
                 </blockquote>
                 <div class="clear">
                 </div>
@@ -288,7 +278,7 @@
                     <h4>
                         <strong>Marija, 47 godina</strong>
                     </h4>
-                    <p>U ranom detinjstvu lekar mi je ustanovio da imam ravna stopala. Prošle godine jednostavno nisam mogla da nosim normalne cipele i bila sam iskrivljena. Dok sam tražila rešenje, naišla sam na ortopeda koji mi preporučio Bunion Corrector. Koristim ga već dva meseca i zaboravila sam na probleme sa čukljevima. Osećam se sjajno! </p>
+                    <p>Nosim visoke potpetice zbog posla i često imam bolove u stopalima. Ovi silikonski ulošci pružaju dodatnu podršku i ublažavaju pritisak na pete i prste. Nisu savršeni i ne rešavaju sve probleme, ali mi definitivno pružaju veću udobnost i olakšanje. Preporučila bih ih svima koji traže dodatnu podršku u obući.</p>
                 </blockquote>
                 <div class="clear">
                 </div>
@@ -298,12 +288,13 @@
     <footer>
         <div class="wrap">
             <div class="head-top right">
-                <h2>KAŽITE „NE“ BOLNIM I RUŽNIM PRSTIMA NA NOGAMA!</h2>
-                <h3>VRATITE IM LEPOTU I ZDRAVLJE</h3>
+                <h2>Inovativno rešenje za bol u peti, sprečavanje žuljeva i dodatnu podršku pri svakom koraku!</h2>
+                <h3>Postignite vrhunsku udobnost i podršku za vaša stopala</h3>
                 <img src="{{ asset('/') }}naturapharmFiles/footcushion/longetaProduct.png"/>
                 <br/>
-                <span>ZAUSTAVLJA BOL I UPALU ZA 10 DANA</span>
-                <span>EFIKASNO SPREČAVA DEFORMITET U ROKU OD 10 DANA</span>
+                <span>UBLAŽAVA BOLOVE U PETI</span>
+                <span>SPREČAVA NASTANAK ŽULJEVA</span>
+                <span>PODRŠKA I UDOBNOST</span>
             </div>
             <div class="clear">
             </div>
@@ -340,7 +331,6 @@
         <div class="inner">
             <div class="floating-desc">
                 <div class="logo">
-                    {{--<img src="{{ $product->logo_url }}" alt="Logo" class="no-lazy">--}}
                 </div>
                 <div class="right-ft">Nabavi <b>Bunion Corrector</b> već danas!<a href="{{$checkoutView}}">KUPI ODMAH</a></div>
             </div>
