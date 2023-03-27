@@ -146,7 +146,8 @@ class ApiController extends Controller
 
         if(!isset($_SERVER['HTTP_STRIPE_SIGNATURE'])) {
             \Log::error('Stripe - Signature not found');
-            abort('404');
+            http_response_code(400);
+            exit();
         }
 
         $payload = $request->getContent();
