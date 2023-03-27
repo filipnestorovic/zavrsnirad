@@ -163,14 +163,14 @@
                     <div class="form__row">
                         <div class="label">Ime i prezime</div>
                         <div class="input-wrapper">
-                            <input name="name" id="name" placeholder="Ime i prezime" type="text">
+                            <input name="name" id="name" placeholder="Ime i prezime" type="text" required>
                             <label for="name"></label>
                         </div>
                     </div>
                     <div class="form__row">
                         <div class="label">Telefon</div>
                         <div class="input-wrapper">
-                            <input name="phone" id="phone" placeholder="Telefon" type="tel">
+                            <input name="phone" id="phone" placeholder="Telefon" type="tel" required>
                             <label for="phone"></label>
                         </div>
                     </div>
