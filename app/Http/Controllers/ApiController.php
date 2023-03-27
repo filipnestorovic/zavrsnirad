@@ -170,13 +170,13 @@ class ApiController extends Controller
                 $paymentIntent = $event->data->object;
 
 //                $encodedJson = json_decode($metadata);
-//                $arrayOrderData = json_decode($encodedJson['orderData'], true);
+                $arrayOrderData = json_decode($paymentIntent->metadata['orderData'], true);
 
                 $request = new \Illuminate\Http\Request();
 
                 $request->merge(['countryShortcode' => $paymentIntent->metadata['countryShortcode']]);
                 $request->merge(['countryId' => $paymentIntent->metadata['countryId']]);
-                $request->merge($paymentIntent->metadata['orderData']);
+                $request->merge($arrayOrderData);
 
                 $domainArray = explode('.',$paymentIntent->metadata['domain']);
 
