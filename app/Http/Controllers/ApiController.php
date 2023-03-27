@@ -144,12 +144,6 @@ class ApiController extends Controller
     {
         $stripe = new StripeClient(config('services.stripe.secret_key'));
 
-        if(!isset($_SERVER['HTTP_STRIPE_SIGNATURE'])) {
-            \Log::error('Stripe - Signature not found');
-            http_response_code(400);
-            exit();
-        }
-
         $payload = $request->getContent();
         $sig_header = $request->header('Stripe-Signature');
         $event = null;
