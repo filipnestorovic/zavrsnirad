@@ -167,7 +167,7 @@ Route::group(['middleware' => ['guest']], function () {
     Route::post('/api/stripe/updatePaymentIntent', [App\Http\Controllers\ApiController::class, 'updatePaymentIntent'])->name('updatePaymentIntent');
 
     Route::get('/api/stripe/completedStripePayment', [App\Http\Controllers\HomeController::class, 'completedStripePayment'])->name('completedStripePayment');
-    Route::get('/api/stripe/webhookAfterPayment', [App\Http\Controllers\ApiController::class, 'stripeAfterPaymentWebhook'])->name('stripeAfterPaymentWebhook');
+    Route::post('/api/stripe/webhookAfterPayment', [App\Http\Controllers\ApiController::class, 'stripeAfterPaymentWebhook'])->name('stripeAfterPaymentWebhook');
 
     Route::get('/ajax/sendConversionApiFB', [App\Http\Controllers\HomeController::class, 'sendConversionApiFB'])->name('sendConversionApiFB');
     Route::post('/insertSessionAjax', [App\Http\Controllers\HomeController::class, 'insertEventDbAjax'])->name('insertEventDbAjax');

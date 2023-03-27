@@ -151,7 +151,7 @@ class ApiController extends Controller
         }
 
         $payload = $request->getContent();
-        $sig_header = $_SERVER['HTTP_STRIPE_SIGNATURE'];
+        $sig_header = $request->header('Stripe-Signature');
         $event = null;
 
         try {
@@ -161,37 +161,51 @@ class ApiController extends Controller
         } catch (\UnexpectedValueException $e) {
             // Invalid payload
             \Log::error('Stripe - Invalid payload: '.$e->getMessage());
-            http_response_code(400);
-            exit();
+            return response()->json(['error' => 'Invalid payload'], 400);
         } catch (\Stripe\Exception\SignatureVerificationException $e) {
             // Invalid signature
             \Log::error('Stripe - Invalid signature: '.$e->getMessage());
-            http_response_code(400);
-            exit();
+            return response()->json(['error' => 'Invalid signature'], 400);
         }
 
         // Handle the event
-        if ($event->type === 'payment_intent.succeeded') {
-
-            //dodaj indikator da je u pitanju stripe payment (zbog kreiranja placenog ordera)
-
-            $paymentIntent = $event->data->object;
-
-            \Log::debug('Stripe - Payment intent: '.$paymentIntent);
-
-            $metadata = $paymentIntent->metadata;
-
-            \Log::debug('Stripe - Metadata: '.$metadata);
-
-            if (isset($metadata['orderData'])) {
-                $orderData = $metadata['orderData'];
-                \Log::debug('Stripe - OrderData: '.$orderData);
-            }
-        } elseif($event->type === 'payment_intent.processing') {
-            \Log::debug('Stripe - Event type processing');
-        } elseif($event->type === 'payment_intent.payment_failed') {
-            \Log::debug('Stripe - Event type payment_failed');
+        switch ($event->type) {
+            case 'payment_intent.succeeded':
+                $paymentIntent = $event->data->object;
+                // Handle successful payment
+                break;
+            case 'payment_intent.payment_failed':
+                $paymentIntent = $event->data->object;
+                // Handle failed payment
+                break;
+            // Handle other event types as needed
+            default:
+                // Unexpected event type
+                return response()->json(['error' => 'Unexpected event type'], 400);
         }
+
+//        // Handle the event
+//        if ($event->type === 'payment_intent.succeeded') {
+//
+//            //dodaj indikator da je u pitanju stripe payment (zbog kreiranja placenog ordera)
+//
+//            $paymentIntent = $event->data->object;
+//
+//            \Log::debug('Stripe - Payment intent: '.$paymentIntent);
+//
+//            $metadata = $paymentIntent->metadata;
+//
+//            \Log::debug('Stripe - Metadata: '.$metadata);
+//
+//            if (isset($metadata['orderData'])) {
+//                $orderData = $metadata['orderData'];
+//                \Log::debug('Stripe - OrderData: '.$orderData);
+//            }
+//        } elseif($event->type === 'payment_intent.processing') {
+//            \Log::debug('Stripe - Event type processing');
+//        } elseif($event->type === 'payment_intent.payment_failed') {
+//            \Log::debug('Stripe - Event type payment_failed');
+//        }
 
         return response()->json(['success' => true]);
     }
