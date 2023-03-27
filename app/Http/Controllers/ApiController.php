@@ -10,6 +10,7 @@ use App\Models\VariationPrice;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Validator;
+use Stripe\Event;
 use Stripe\Stripe;
 use Stripe\StripeClient;
 
@@ -142,25 +143,45 @@ class ApiController extends Controller
 
     public function stripeAfterPaymentWebhook(Request $request)
     {
-        $stripe = new StripeClient(config('services.stripe.secret_key'));
-
         $payload = $request->getContent();
         $sig_header = $request->header('Stripe-Signature');
         $event = null;
 
         try {
-            $event = $stripe->webhooks->constructEvent(
-                $payload, $sig_header, config('services.stripe.webhook_key')
+            $event = Event::constructFrom(
+                json_decode($payload, true),
+                $sig_header,
+                config('services.stripe.webhook_key')
             );
-        } catch (\UnexpectedValueException $e) {
+        } catch(\UnexpectedValueException $e) {
             // Invalid payload
             \Log::error('Stripe - Invalid payload: '.$e->getMessage());
             return response()->json(['error' => 'Invalid payload'], 400);
-        } catch (\Stripe\Exception\SignatureVerificationException $e) {
+        } catch(\Stripe\Exception\SignatureVerificationException $e) {
             // Invalid signature
             \Log::error('Stripe - Invalid signature: '.$e->getMessage());
             return response()->json(['error' => 'Invalid signature'], 400);
         }
+
+//        $stripe = new StripeClient(config('services.stripe.secret_key'));
+//
+//        $payload = $request->getContent();
+//        $sig_header = $request->header('Stripe-Signature');
+//        $event = null;
+//
+//        try {
+//            $event = $stripe->webhooks->constructEvent(
+//                $payload, $sig_header, config('services.stripe.webhook_key')
+//            );
+//        } catch (\UnexpectedValueException $e) {
+//            // Invalid payload
+//            \Log::error('Stripe - Invalid payload: '.$e->getMessage());
+//            return response()->json(['error' => 'Invalid payload'], 400);
+//        } catch (\Stripe\Exception\SignatureVerificationException $e) {
+//            // Invalid signature
+//            \Log::error('Stripe - Invalid signature: '.$e->getMessage());
+//            return response()->json(['error' => 'Invalid signature'], 400);
+//        }
 
         // Handle the event
         switch ($event->type) {
@@ -177,29 +198,6 @@ class ApiController extends Controller
                 // Unexpected event type
                 return response()->json(['error' => 'Unexpected event type'], 400);
         }
-
-//        // Handle the event
-//        if ($event->type === 'payment_intent.succeeded') {
-//
-//            //dodaj indikator da je u pitanju stripe payment (zbog kreiranja placenog ordera)
-//
-//            $paymentIntent = $event->data->object;
-//
-//            \Log::debug('Stripe - Payment intent: '.$paymentIntent);
-//
-//            $metadata = $paymentIntent->metadata;
-//
-//            \Log::debug('Stripe - Metadata: '.$metadata);
-//
-//            if (isset($metadata['orderData'])) {
-//                $orderData = $metadata['orderData'];
-//                \Log::debug('Stripe - OrderData: '.$orderData);
-//            }
-//        } elseif($event->type === 'payment_intent.processing') {
-//            \Log::debug('Stripe - Event type processing');
-//        } elseif($event->type === 'payment_intent.payment_failed') {
-//            \Log::debug('Stripe - Event type payment_failed');
-//        }
 
         return response()->json(['success' => true]);
     }
