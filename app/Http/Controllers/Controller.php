@@ -49,7 +49,7 @@ class Controller extends BaseController
         }
 
         $itemCollection = collect($orderedList);
-        $currentPageItems = $itemCollection->slice(($currentPage * $perPage) - $perPage, $perPage)->all();
+        $currentPageItems = $itemCollection->slice(((int)$currentPage * $perPage) - $perPage, $perPage)->all();
         $paginatedItems = new LengthAwarePaginator($currentPageItems , count($itemCollection), $perPage);
 
         $paginatedItems->setPath('');

@@ -11,6 +11,10 @@ use Illuminate\Support\Facades\Log;
 
 class Price extends Model
 {
+
+    protected $table = 'price';
+    protected $primaryKey = 'id_price';
+
     use HasFactory;
 
     public $amount;

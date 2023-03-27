@@ -6,8 +6,12 @@ use App\Models\Domain;
 use App\Models\Order;
 use App\Models\Product;
 use App\Models\Variation;
+use App\Models\VariationPrice;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Validator;
+use Stripe\Stripe;
+use Stripe\StripeClient;
 
 class ApiController extends Controller
 {
@@ -46,6 +50,7 @@ class ApiController extends Controller
                                 $returnData[$singlePrice['id_variation']][0]['variation_name'] = $singlePrice['variation_name'];
                                 $returnData[$singlePrice['id_variation']][0]['is_variation_default'] = $singlePrice['is_variation_default'];
                                 $returnData[$singlePrice['id_variation']][0]['product_url'] = $product_lander;
+
                                 $returnData[$singlePrice['id_variation']][$singlePrice['quantity']]['amount'] = $singlePrice['amount'];
                                 $returnData[$singlePrice['id_variation']][$singlePrice['quantity']]['currency_symbol'] = $singlePrice['currency_symbol'];
                                 $returnData[$singlePrice['id_variation']][$singlePrice['quantity']]['is_free_shipping'] = $singlePrice['is_free_shipping'];
@@ -67,24 +72,144 @@ class ApiController extends Controller
         }
     }
 
-    public function stripePay(Request $request)
+    public function createPaymentIntent(Request $request, $site, $domain, $variation_id, $selectedQuantity)
     {
+        $variation = $this->modelVariation->getVariationByIdAndQuantity($variation_id, $selectedQuantity);
 
-        dd($request->all());
+        if(!$variation) {
+            return abort('404');
+        }
 
-        Stripe\Stripe::setApiKey(config('services.stripe.secret_key'));
+        $amountToPay = $variation->amount*100; //moze biti drugacije u zavisnosti od zemlje
 
-        Stripe\Charge::create ([
-            "amount" => 100 * 100,
-            "currency" => "usd",
-            "source" => $request->stripeToken,
-            "description" => "Test payment from localhost"
+        $stripe = new \Stripe\StripeClient(config('services.stripe.secret_key'));
+
+        $paymentIntent = $stripe->paymentIntents->create([
+            'amount' => $amountToPay,
+            'currency' => $variation->currency_code,
+            'payment_method_types' => [
+                'card',
+            ],
+            'metadata' => [
+                'countryShortcode' => $request->get('countryShortcode'),
+                'countryId' => $request->get('countryId'),
+                'domain' => $site.'.'.$domain,
+            ]
         ]);
 
-        Session::flash('success', 'Payment successful!');
-
-        return back();
+        return $paymentIntent;
     }
 
+    public function updatePaymentIntent(Request $request)
+    {
+        $rules = [
+            'name' => ['required'],
+            'phone' => ['required'],
+        ];
 
+        $validator = Validator::make($request->all(), $rules);
+
+        if ($validator->fails()) {
+            return response()->json(['error' => 'Missing required fields']);
+        }
+
+        $paymentIntentId = $request->get('paymentIntentId');
+
+        $variation_id = $request->get('variation_id');
+        $selectedQuantity = $request->get('quantity');
+        $variation = $this->modelVariation->getVariationByIdAndQuantity($variation_id, $selectedQuantity);
+        $amountToPay = $variation->amount*100; //moze biti drugacije u zavisnosti od zemlje
+
+        $stripe = new \Stripe\StripeClient(config('services.stripe.secret_key'));
+
+        try {
+            $paymentIntentUpdated = $stripe->paymentIntents->update(
+                $paymentIntentId,
+                [
+                    'amount' => $amountToPay,
+                    'currency' => $variation->currency_code,
+                    'metadata' => [
+                        'orderData' => json_encode($request->all()),
+                    ],
+                ]
+            );
+
+            return response()->json(['success' => true]);
+        } catch (\Exception $e) {
+            return response()->json(['error' => $e->getMessage()]);
+        }
+    }
+
+    public function stripeAfterPaymentWebhook(Request $request)
+    {
+        $stripe = new StripeClient(config('services.stripe.secret_key'));
+
+        $payload = $request->getContent();
+        $sig_header = $_SERVER['HTTP_STRIPE_SIGNATURE'];
+        $event = null;
+
+        try {
+            $event = $stripe->webhooks->constructEvent(
+                $payload, $sig_header, config('services.stripe.webhook_key')
+            );
+        } catch (\UnexpectedValueException $e) {
+            // Invalid payload
+            \Log::error('Stripe - Invalid payload: '.$e->getMessage());
+            http_response_code(400);
+            exit();
+        } catch (\Stripe\Exception\SignatureVerificationException $e) {
+            // Invalid signature
+            \Log::error('Stripe - Invalid signature: '.$e->getMessage());
+            http_response_code(400);
+            exit();
+        }
+
+        // Handle the event
+        if ($event->type === 'payment_intent.succeeded') {
+
+            //dodaj indikator da je u pitanju stripe payment (zbog kreiranja placenog ordera)
+
+            $paymentIntent = $event->data->object;
+
+            \Log::debug('Stripe - Payment intent: '.$paymentIntent);
+
+            $metadata = $paymentIntent->metadata;
+
+            \Log::debug('Stripe - Metadata: '.$metadata);
+
+            if (isset($metadata['orderData'])) {
+                $orderData = $metadata['orderData'];
+                \Log::debug('Stripe - OrderData: '.$orderData);
+            }
+        } elseif($event->type === 'payment_intent.processing') {
+            \Log::debug('Stripe - Event type processing');
+        } elseif($event->type === 'payment_intent.payment_failed') {
+            \Log::debug('Stripe - Event type payment_failed');
+        }
+
+        return response()->json(['success' => true]);
+    }
+
+    public function testRoute()
+    {
+        $metadata = '{
+          "countryId": "1",
+          "countryShortcode": "rs",
+          "domain": "flexoval.com",
+          "orderData": "{\"_token\":\"hD0pa9ESdym2ZpGDjDEgvgz3xSjUkU2asXl7L4Eh\",\"discount\":\"0\",\"variation_id\":\"1\",\"session_id\":\"0\",\"quantity\":\"2\",\"totalPrice\":null,\"name\":\"TEST FILIP\",\"email\":null,\"phone\":\"0692833503\",\"shipping_address\":\"Zivka Davidovica 13g\",\"shipping_city\":\"Beograd\",\"shipping_zip\":\"11000\",\"id_product\":\"1\",\"country_id\":\"1\",\"paymentIntentId\":\"pi_3MqFFyCEzic3CBJL14iB0YKv\"}"
+        }';
+
+        $encodedJson = json_decode($metadata);
+        $arrayOrderData = json_decode($encodedJson->orderData, true);
+
+        $request = new \Illuminate\Http\Request();
+
+        $request->merge(['countryShortcode' => $encodedJson->countryShortcode]);
+        $request->merge(['countryId' => $encodedJson->countryId]);
+        $request->merge($arrayOrderData);
+
+        $domainArray = explode('.',$encodedJson->domain);
+
+        return (new OrderController)->order($request, $domainArray[0],$domainArray[1]);
+    }
 }

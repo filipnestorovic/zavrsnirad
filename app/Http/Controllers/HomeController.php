@@ -880,7 +880,7 @@ class HomeController extends Controller
                         } else {
                             $productUpdated = $singleProduct->product_updated;
                         }
-                        $products[$singleProduct->sku]['slug'] = $productSlug;
+                        $products[$singleProduct->sku]['slug'] = 'https://'.$productSlug;
                         $products[$singleProduct->sku]['date'] = date('Y-m-d',strtotime($productUpdated));
                     }
                 }
@@ -896,5 +896,4 @@ class HomeController extends Controller
     {
         return view('checkout.rs.completedStripePayment');
     }
-
 }
