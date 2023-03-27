@@ -168,18 +168,17 @@ class ApiController extends Controller
         switch ($event->type) {
             case 'payment_intent.succeeded':
                 $paymentIntent = $event->data->object;
-                $metadata = $paymentIntent->metadata;
 
-                $encodedJson = json_decode($metadata);
-                $arrayOrderData = json_decode($encodedJson['orderData'], true);
+//                $encodedJson = json_decode($metadata);
+//                $arrayOrderData = json_decode($encodedJson['orderData'], true);
 
                 $request = new \Illuminate\Http\Request();
 
-                $request->merge(['countryShortcode' => $encodedJson['countryShortcode']]);
-                $request->merge(['countryId' => $encodedJson['countryId']]);
-                $request->merge($arrayOrderData);
+                $request->merge(['countryShortcode' => $paymentIntent->metadata['countryShortcode']]);
+                $request->merge(['countryId' => $paymentIntent->metadata['countryId']]);
+                $request->merge($paymentIntent->metadata['orderData']);
 
-                $domainArray = explode('.',$encodedJson['domain']);
+                $domainArray = explode('.',$paymentIntent->metadata['domain']);
 
                 return (new OrderController)->order($request, $domainArray[0],$domainArray[1]);
 
