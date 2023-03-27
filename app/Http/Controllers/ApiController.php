@@ -10,6 +10,7 @@ use App\Models\VariationPrice;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Validator;
+use Log;
 use Stripe\Event;
 use Stripe\Stripe;
 use Stripe\StripeClient;
@@ -163,30 +164,25 @@ class ApiController extends Controller
             return response()->json(['error' => 'Invalid signature'], 400);
         }
 
-//        $stripe = new StripeClient(config('services.stripe.secret_key'));
-//
-//        $payload = $request->getContent();
-//        $sig_header = $request->header('Stripe-Signature');
-//        $event = null;
-//
-//        try {
-//            $event = $stripe->webhooks->constructEvent(
-//                $payload, $sig_header, config('services.stripe.webhook_key')
-//            );
-//        } catch (\UnexpectedValueException $e) {
-//            // Invalid payload
-//            \Log::error('Stripe - Invalid payload: '.$e->getMessage());
-//            return response()->json(['error' => 'Invalid payload'], 400);
-//        } catch (\Stripe\Exception\SignatureVerificationException $e) {
-//            // Invalid signature
-//            \Log::error('Stripe - Invalid signature: '.$e->getMessage());
-//            return response()->json(['error' => 'Invalid signature'], 400);
-//        }
-
         // Handle the event
         switch ($event->type) {
             case 'payment_intent.succeeded':
                 $paymentIntent = $event->data->object;
+                $metadata = $paymentIntent->metadata;
+
+                $encodedJson = json_decode($metadata);
+                $arrayOrderData = json_decode($encodedJson->orderData, true);
+
+                $request = new \Illuminate\Http\Request();
+
+                $request->merge(['countryShortcode' => $encodedJson->countryShortcode]);
+                $request->merge(['countryId' => $encodedJson->countryId]);
+                $request->merge($arrayOrderData);
+
+                $domainArray = explode('.',$encodedJson->domain);
+
+                return (new OrderController)->order($request, $domainArray[0],$domainArray[1]);
+
                 // Handle successful payment
                 break;
             case 'payment_intent.payment_failed':
@@ -202,26 +198,26 @@ class ApiController extends Controller
         return response()->json(['success' => true]);
     }
 
-    public function testRoute()
-    {
-        $metadata = '{
-          "countryId": "1",
-          "countryShortcode": "rs",
-          "domain": "flexoval.com",
-          "orderData": "{\"_token\":\"hD0pa9ESdym2ZpGDjDEgvgz3xSjUkU2asXl7L4Eh\",\"discount\":\"0\",\"variation_id\":\"1\",\"session_id\":\"0\",\"quantity\":\"2\",\"totalPrice\":null,\"name\":\"TEST FILIP\",\"email\":null,\"phone\":\"0692833503\",\"shipping_address\":\"Zivka Davidovica 13g\",\"shipping_city\":\"Beograd\",\"shipping_zip\":\"11000\",\"id_product\":\"1\",\"country_id\":\"1\",\"paymentIntentId\":\"pi_3MqFFyCEzic3CBJL14iB0YKv\"}"
-        }';
-
-        $encodedJson = json_decode($metadata);
-        $arrayOrderData = json_decode($encodedJson->orderData, true);
-
-        $request = new \Illuminate\Http\Request();
-
-        $request->merge(['countryShortcode' => $encodedJson->countryShortcode]);
-        $request->merge(['countryId' => $encodedJson->countryId]);
-        $request->merge($arrayOrderData);
-
-        $domainArray = explode('.',$encodedJson->domain);
-
-        return (new OrderController)->order($request, $domainArray[0],$domainArray[1]);
-    }
+//    public function testRoute()
+//    {
+//        $metadata = '{
+//          "countryId": "1",
+//          "countryShortcode": "rs",
+//          "domain": "flexoval.com",
+//          "orderData": "{\"_token\":\"hD0pa9ESdym2ZpGDjDEgvgz3xSjUkU2asXl7L4Eh\",\"discount\":\"0\",\"variation_id\":\"1\",\"session_id\":\"0\",\"quantity\":\"2\",\"totalPrice\":null,\"name\":\"TEST FILIP\",\"email\":null,\"phone\":\"0692833503\",\"shipping_address\":\"Zivka Davidovica 13g\",\"shipping_city\":\"Beograd\",\"shipping_zip\":\"11000\",\"id_product\":\"1\",\"country_id\":\"1\",\"paymentIntentId\":\"pi_3MqFFyCEzic3CBJL14iB0YKv\"}"
+//        }';
+//
+//        $encodedJson = json_decode($metadata);
+//        $arrayOrderData = json_decode($encodedJson->orderData, true);
+//
+//        $request = new \Illuminate\Http\Request();
+//
+//        $request->merge(['countryShortcode' => $encodedJson->countryShortcode]);
+//        $request->merge(['countryId' => $encodedJson->countryId]);
+//        $request->merge($arrayOrderData);
+//
+//        $domainArray = explode('.',$encodedJson->domain);
+//
+//        return (new OrderController)->order($request, $domainArray[0],$domainArray[1]);
+//    }
 }
