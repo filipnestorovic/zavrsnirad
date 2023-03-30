@@ -82,7 +82,7 @@
                 </div>
                 <div class="right_block">
                     <h1 class="hidden-xs hidden-sm">
-                        Smanjite pritisak na pete i oslobodite se bola u nogama i leđima
+                        Smanjite pritisak na stopala i oslobodite se bola u nogama i leđima
                     </h1>
                     <div class="text hidden-xs hidden-sm">
                         Ovo je savršeno rešenje za ublažavanje bolnih problema sa stopala i nelagodnosti izazvanih dugim stanjanjem i nošenjem štikli.
@@ -450,7 +450,7 @@
                     <div class="text">
                         Oduševljena sam kupovinom ovog proizvoda! Ispunio je sva moja očekivanja. Gledala sam recenzije
                         drugih brednova, i ni jedan me nije potpuno
-                        ubedio da poručim. Porudžbina ovog proizvoda za pete je pun pogodan, i nisam pogrešila ni
+                        ubedio da poručim. Porudžbina ovog proizvoda za stopala je pun pogodan, i nisam pogrešila ni
                         najmanje!
                     </div>
                 </div>

@@ -40,6 +40,32 @@
             font-weight: 900;
             font-style: normal;
         }
+        .top-title {
+            line-height: 0.8em;
+        }
+        .top-title p {
+            font-size: 46px;
+        }
+        .block7 h2 {
+            line-height: 0.8em;
+        }
+        .block7 p {
+            font-size: 46px;
+        }
+        @media screen and (max-width: 779px) {
+            .block1   {
+                background: url({{ asset('/') }}dailysharkFiles/cleanballz/block1_small.jpg) no-repeat center 130px;
+            }
+            .top-title {
+                line-height: 1.2em;
+            }
+            .top-title p {
+                font-size: 30px;
+            }
+            .block7 p {
+                font-size: 30px;
+            }
+        }
     </style>
 </head>
 <body>
