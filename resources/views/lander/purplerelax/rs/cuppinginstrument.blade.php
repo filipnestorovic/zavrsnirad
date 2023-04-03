@@ -121,7 +121,7 @@
         </div>
         <div class="best__item">
             <img src="{{ asset('/') }}purplerelaxFiles/cuppinginstrument/best4.jpg" alt>
-            <p><b>Ne zauzima mnogo prostora i napajaju ga 2 AAA baterije. Možete ga poneti sa sobom gde god da krenete.</b>
+            <p><b>Ne zauzima mnogo prostora i možete ga poneti sa sobom gde god da krenete.</b>
             </p>
         </div>
         <a href="#order_form" class="btn">PORUČITE ODMAH</a>
