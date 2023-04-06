@@ -26,6 +26,8 @@ class Order
     public $is_cross_sell;
     public $product_id;
 
+    public $isPaidWithStripe;
+
     public function insertOrder(){
         $result = DB::table('order')
             ->insertGetId([
@@ -43,6 +45,7 @@ class Order
                 'variation_id' => $this->variation_id,
                 'test_variation_id' => $this->test_variation_id,
                 'country_id' => $this->country_id,
+                'isPaidWithStripe' => $this->isPaidWithStripe,
                 'session_id' => $this->session_id,
             ]);
 

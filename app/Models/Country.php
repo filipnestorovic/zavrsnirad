@@ -13,6 +13,7 @@ class Country extends Model
     use HasFactory;
 
     protected $table = 'country';
+    protected $primaryKey = 'id_country';
 
     public $country_name;
     public $country_code;

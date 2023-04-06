@@ -322,6 +322,9 @@ class HomeController extends Controller
         }
 //        Log::info('Test - Checkout view - '.$this->customerData['session_id']);
 
+        $this->data['site'] = $site;
+        $this->data['domain'] = $domain;
+
         return view($this->returnedData['checkoutView'], $this->data);
     }
 
@@ -892,8 +895,10 @@ class HomeController extends Controller
         ])->header('Content-Type', 'text/xml');
     }
 
-    public function completedStripePayment()
+    public function completedStripePayment(Request $request, $site = null, $domain = null, $product_id)
     {
-        return view('checkout.rs.completedStripePayment');
+        $product = Product::findOrFail($product_id);
+        $this->data['thankyouUrl'] = 'https://'.$site.'.'.$domain.'/'.$product->slug.'/thankyou';
+        return view('checkout.rs.completedStripePayment', $this->data);
     }
 }

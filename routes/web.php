@@ -151,6 +151,7 @@ Route::group([ 'middleware' => ['admin']], function() {
 Route::group(['middleware' => ['guest']], function () {
     $webRoutes = function() {
         Route::get('/api/stripe/createPaymentIntent/{variation_id}/{selectedQuantity}', [App\Http\Controllers\ApiController::class, 'createPaymentIntent'])->name('createPaymentIntent');
+        Route::get('/api/stripe/completedStripePayment/{product_id}', [App\Http\Controllers\HomeController::class, 'completedStripePayment'])->name('completedStripePayment');
 
         Route::get('/sitemap.xml', [App\Http\Controllers\HomeController::class, 'siteMap'])->name('siteMap');
         Route::get('/{slug}/thankyou', [App\Http\Controllers\HomeController::class, 'thankyou'])->name('thankyou');
@@ -165,8 +166,6 @@ Route::group(['middleware' => ['guest']], function () {
 //    Route::get('/testRoute', [App\Http\Controllers\ApiController::class, 'testRoute'])->name('testRoute');
 
     Route::post('/api/stripe/updatePaymentIntent', [App\Http\Controllers\ApiController::class, 'updatePaymentIntent'])->name('updatePaymentIntent');
-
-    Route::get('/api/stripe/completedStripePayment', [App\Http\Controllers\HomeController::class, 'completedStripePayment'])->name('completedStripePayment');
     Route::post('/api/stripe/webhookAfterPayment', [App\Http\Controllers\ApiController::class, 'stripeAfterPaymentWebhook'])->name('stripeAfterPaymentWebhook');
 
     Route::get('/ajax/sendConversionApiFB', [App\Http\Controllers\HomeController::class, 'sendConversionApiFB'])->name('sendConversionApiFB');

@@ -1,6 +1,6 @@
 @include('components.pixel_footer')
 <script type="text/javascript">
-    function getSelectedValues(){
+    function getSelectedValues() {
         let selectedRadioButton = $('input[name="quantity"]:checked');
         let amount = parseFloat($(selectedRadioButton).attr('data-product-amount'));
         let quantity = $(selectedRadioButton).attr('data-product-quantity');

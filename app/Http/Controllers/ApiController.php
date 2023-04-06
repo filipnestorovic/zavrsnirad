@@ -74,8 +74,7 @@ class ApiController extends Controller
         }
     }
 
-    public function createPaymentIntent(Request $request, $site, $domain, $variation_id, $selectedQuantity)
-    {
+    public function createPaymentIntent(Request $request, $site, $domain, $variation_id, $selectedQuantity) {
         $variation = $this->modelVariation->getVariationByIdAndQuantity($variation_id, $selectedQuantity);
 
         if(!$variation) {
@@ -83,6 +82,10 @@ class ApiController extends Controller
         }
 
         $amountToPay = $variation->amount*100; //moze biti drugacije u zavisnosti od zemlje
+
+        if(!$variation->is_free_shipping) {
+            $amountToPay += $variation->shipping_cost*100;
+        }
 
         $stripe = new \Stripe\StripeClient(config('services.stripe.secret_key'));
 
@@ -102,8 +105,7 @@ class ApiController extends Controller
         return $paymentIntent;
     }
 
-    public function updatePaymentIntent(Request $request)
-    {
+    public function updatePaymentIntent(Request $request) {
         $rules = [
             'name' => ['required'],
             'phone' => ['required'],
@@ -121,6 +123,9 @@ class ApiController extends Controller
         $selectedQuantity = $request->get('quantity');
         $variation = $this->modelVariation->getVariationByIdAndQuantity($variation_id, $selectedQuantity);
         $amountToPay = $variation->amount*100; //moze biti drugacije u zavisnosti od zemlje
+        if(!$variation->is_free_shipping) {
+            $amountToPay += $variation->shipping_cost*100;
+        }
 
         $stripe = new \Stripe\StripeClient(config('services.stripe.secret_key'));
 
@@ -142,8 +147,7 @@ class ApiController extends Controller
         }
     }
 
-    public function stripeAfterPaymentWebhook(Request $request)
-    {
+    public function stripeAfterPaymentWebhook(Request $request) {
         $payload = $request->getContent();
         $sig_header = $request->header('Stripe-Signature');
         $event = null;
@@ -169,7 +173,6 @@ class ApiController extends Controller
             case 'payment_intent.succeeded':
                 $paymentIntent = $event->data->object;
 
-//                $encodedJson = json_decode($metadata);
                 $arrayOrderData = json_decode($paymentIntent->metadata['orderData'], true);
 
                 $request = new \Illuminate\Http\Request();
@@ -180,17 +183,13 @@ class ApiController extends Controller
 
                 $domainArray = explode('.',$paymentIntent->metadata['domain']);
 
-                return (new OrderController)->order($request, $domainArray[0],$domainArray[1]);
+                return (new OrderController)->order($request, $domainArray[0],$domainArray[1], 1);
 
-                // Handle successful payment
-                break;
             case 'payment_intent.payment_failed':
                 $paymentIntent = $event->data->object;
-                // Handle failed payment
+                Log::info('Stripe payment failed - '.json_encode($paymentIntent));
                 break;
-            // Handle other event types as needed
             default:
-                // Unexpected event type
                 return response()->json(['error' => 'Unexpected event type'], 400);
         }
 
@@ -200,10 +199,10 @@ class ApiController extends Controller
 //    public function testRoute()
 //    {
 //        $metadata = '{
-//          "countryId": "1",
-//          "countryShortcode": "rs",
-//          "domain": "flexoval.com",
-//          "orderData": "{\"_token\":\"hD0pa9ESdym2ZpGDjDEgvgz3xSjUkU2asXl7L4Eh\",\"discount\":\"0\",\"variation_id\":\"1\",\"session_id\":\"0\",\"quantity\":\"2\",\"totalPrice\":null,\"name\":\"TEST FILIP\",\"email\":null,\"phone\":\"0692833503\",\"shipping_address\":\"Zivka Davidovica 13g\",\"shipping_city\":\"Beograd\",\"shipping_zip\":\"11000\",\"id_product\":\"1\",\"country_id\":\"1\",\"paymentIntentId\":\"pi_3MqFFyCEzic3CBJL14iB0YKv\"}"
+//          "countryId": "2",
+//          "countryShortcode": "bg",
+//          "domain": "testflexoval.com",
+//          "orderData": "{\"_token\":\"3YbRxBhddXuLrSxQrb96S2h7bVOKr9Tbdz7Ymyz9\",\"discount\":\"0\",\"variation_id\":\"56\",\"session_id\":\"0\",\"quantity\":\"1\",\"totalPrice\":null,\"name\":\"TEST FILIP\",\"email\":null,\"phone\":\"0692833503\",\"shipping_address\":null,\"shipping_city\":null,\"shipping_zip\":null,\"id_product\":\"12\",\"country_id\":\"2\",\"paymentIntentId\":\"pi_3MtpIHCEzic3CBJL1X6ks51E\"}"
 //        }';
 //
 //        $encodedJson = json_decode($metadata);
@@ -217,6 +216,8 @@ class ApiController extends Controller
 //
 //        $domainArray = explode('.',$encodedJson->domain);
 //
-//        return (new OrderController)->order($request, $domainArray[0],$domainArray[1]);
+//        $response =  (new OrderController)->order($request, $domainArray[0],$domainArray[1], 1);
+//        dd($response);
 //    }
+
 }

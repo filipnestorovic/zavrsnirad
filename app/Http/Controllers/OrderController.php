@@ -36,7 +36,7 @@ class OrderController extends Controller
         $this->modelSession = new UserSession();
     }
 
-    public function order(Request $request, $site = null, $domain = null){
+    public function order(Request $request, $site = null, $domain = null, $isPaidWithStripe = 0){
 
 //        dd($request->all());
 
@@ -184,6 +184,8 @@ class OrderController extends Controller
                     $this->modelOrder->order_note = "Veličina: ".$size;
                 }
 
+                $this->modelOrder->isPaidWithStripe = $isPaidWithStripe;
+
                 try {
                     $orderId = $this->modelOrder->insertOrder();
                 } catch (\Exception $exception) {
@@ -249,14 +251,25 @@ class OrderController extends Controller
                                     Log::error("Error: Session - Purchase - DB | Exception: " . $exception->getMessage());
                                 }
                             }
-                            return redirect()->to('/'.$orderDetails->slug.'/thankyou')->with('data', $orderDetails);
+                            if($orderDetails->isPaidWithStripe) {
+                                return response()->json(['success' => true]);
+                            } else {
+                                return redirect()->to('/'.$orderDetails->slug.'/thankyou')->with('data', $orderDetails);
+                            }
                         } else {
-//                            Log::error("Error: Empty webhook result \nResult: " . $webhookResult . "\nDetails: ". json_encode($orderDetails, JSON_PRETTY_PRINT));
-                            return redirect()->back()->withErrors([$this->customerErrorMessage]);
+                            if($orderDetails->isPaidWithStripe) {
+                                return response()->json(['error' => [$this->customerErrorMessage]], 400);
+                            } else {
+                                return redirect()->back()->withErrors([$this->customerErrorMessage]);
+                            }
                         }
                     } catch(\Exception $exception) {
                         Log::error("Error: Triggering new order -  Webhook \nMessage: " . $exception->getMessage() . "\nDetails: ". json_encode($orderDetails, JSON_PRETTY_PRINT));
-                        return redirect()->back()->withErrors([$this->customerErrorMessage]);
+                        if($orderDetails->isPaidWithStripe) {
+                            return response()->json(['error' => [$this->customerErrorMessage]], 400);
+                        } else {
+                            return redirect()->back()->withErrors([$this->customerErrorMessage]);
+                        }
                     }
                 }
             }
@@ -452,7 +465,9 @@ class OrderController extends Controller
         );
 
         $data = [
-            "payment_method"=> "cod",
+            "payment_method"=> $orderDetails->isPaidWithStripe ? "stripe" : "cod",
+            "payment_method_title" => $orderDetails->isPaidWithStripe ? "Credit Card (Stripe)" : "Cash on Delivery",
+            "set_paid" => (bool)$orderDetails->isPaidWithStripe,
             "status" => "processing",
             "billing" => [
                 "first_name"=> (string)$orderDetails->name,

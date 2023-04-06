@@ -1,4 +1,4 @@
-<html lang="en">
+\<html lang="en">
 <head>
     @include('components.pixel_init')
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -652,7 +652,7 @@
             return stripe.confirmPayment({
                 elements,
                 confirmParams: {
-                    return_url: '{{route('completedStripePayment')}}',
+                    return_url: '{{route('completedStripePayment', ['product_id' => $product->id_product, 'site' => $site, 'domain' => $domain])}}',
                 },
             })
         }).then((result) => {

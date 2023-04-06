@@ -27,7 +27,7 @@
         let redirectUrl = '';
         switch (paymentIntent.status) {
             case "succeeded":
-                redirectUrl = '{{ url()->previous() }}';//process order
+                redirectUrl = '{{$thankyouUrl}}';//thankyouUrl
                 showMessage("Payment succeeded!");
                 break;
             case "processing":
