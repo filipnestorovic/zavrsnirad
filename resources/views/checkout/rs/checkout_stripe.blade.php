@@ -652,7 +652,7 @@
             return stripe.confirmPayment({
                 elements,
                 confirmParams: {
-                    return_url: '{{route('completedStripePayment', ['product_id' => $product->id_product, 'site' => $site, 'domain' => $domain])}}',
+                    return_url: '{{$stripeReturnUrl}}',
                 },
             })
         }).then((result) => {
