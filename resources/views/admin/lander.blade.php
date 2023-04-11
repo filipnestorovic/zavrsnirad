@@ -37,7 +37,7 @@
                             </div>
                             <select name="productIdLander" id="productIdLander" data-toggle="dropdown" required data-live-search="true">
                                 @foreach($products as $product)
-                                    <option label="{{ $product->id_brand }}" value="{{ $product->id_product }}">{{ $product->product_name }} ({{ $product->country_name }})</option>
+                                    <option label="{{ $product->id_brand }}" value="{{ $product->id_product }}">{{ $product->product_name }} ({{ $product->country_name }}) [{{ $product->brand_name }}]</option>
                                 @endforeach
                             </select>
                         </div>
