@@ -73,7 +73,8 @@
             src: url('{{ asset('/') }}fonts/subset-OpenSans-Extrabold.woff2') format('woff2'), url('{{ asset('/') }}fonts/subset-OpenSans-Extrabold.woff') format('woff'), url('{{ asset('/') }}fonts/subset-OpenSans-Extrabold.ttf') format('truetype');
             font-weight: 800;
             font-style: normal
-        }</style>
+        }
+    </style>
 </head>
 <body>
 @include('components.display_errors')
