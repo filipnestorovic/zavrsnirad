@@ -56,8 +56,8 @@
                 @include('lander.naturapharm.components.form_hidden_fields')
                 <input class="input" type="text" name="name" placeholder="Ime i prezime" required>
                 <input class="input" type="tel" name="phone" placeholder="Telefon" required>
-                <input class="input" type="text" name="shipping_address" placeholder="Adresa" required>
-                <input class="input" type="text" name="shipping_city" placeholder="Grad" required>
+{{--                <input class="input" type="text" name="shipping_address" placeholder="Adresa" required>--}}
+{{--                <input class="input" type="text" name="shipping_city" placeholder="Grad" required>--}}
                 <button class="button">PORUČI SADA</button>
             </form>
         </div>
@@ -316,8 +316,8 @@
                 @include('lander.naturapharm.components.form_hidden_fields')
                 <input class="input" type="text" name="name" placeholder="Ime i prezime" required>
                 <input class="input" type="tel" name="phone" placeholder="Telefon" required>
-                <input class="input" type="text" name="shipping_address" placeholder="Adresa" required>
-                <input class="input" type="text" name="shipping_city" placeholder="Grad" required>
+{{--                <input class="input" type="text" name="shipping_address" placeholder="Adresa" required>--}}
+{{--                <input class="input" type="text" name="shipping_city" placeholder="Grad" required>--}}
                 <button class="button">PORUČI SADA</button>
             </form>
         </div>

@@ -290,8 +290,8 @@
                         @include('lander.naturapharm.components.form_hidden_fields')
                         <input type="text" placeholder="Ime i prezime" id="name" name="name" required>
                         <input type="tel" name="phone" id="phone" placeholder="Telefon" required>
-                        <input type="text" placeholder="Adresa" id="shipping_address" name="shipping_address" required>
-                        <input type="text" placeholder="Grad" id="shipping_city" name="shipping_city" required>
+{{--                        <input type="text" placeholder="Adresa" id="shipping_address" name="shipping_address" required>--}}
+{{--                        <input type="text" placeholder="Grad" id="shipping_city" name="shipping_city" required>--}}
                         <button type=submit data-ordersubmit>Poručite sada</button>
                     </form>
                     <p class=products_count>Na akciji ostalo još <span>18</span> komada</p>
