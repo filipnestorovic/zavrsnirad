@@ -3,7 +3,7 @@
         <p>Wombat Media d.o.o.</p>
         <p>Živka Davidovića 13G, Beograd</p>
         <p>PIB: 112115089 | MB: 21610283</p>
-        <p><a target="_blank" href="http://forma.wombatsbrand.com/">Obrazac za odustanak od ugovora na daljinu</a></p>
+{{--        <p><a target="_blank" href="http://forma.wombatsbrand.com/">Obrazac za odustanak od ugovora na daljinu</a></p>--}}
         <p><a id="terms">Opšti uslovi</a> | <a id="policy">Politika privatnosti</a> | <a id="refund">Reklamacije</a></p>
     </div>
 </div>
