@@ -195,8 +195,8 @@
                 <form action="{{$orderRoute}}" method="post">
                     {{csrf_field()}}
                     @include('lander.naturapharm.components.form_hidden_fields')
-                    <input class="order__field" name="name" placeholder="Ime i prezime" type="text" />
-                    <input class="order__field only_number" name="phone" placeholder="Telefon" type="tel" />
+                    <input class="order__field" name="name" placeholder="Ime i prezime" type="text" required/>
+                    <input class="order__field only_number" name="phone" placeholder="Telefon" type="tel" required/>
                     <button class="button form__button">PORUČITE SADA</button>
                 </form>
             </div>
