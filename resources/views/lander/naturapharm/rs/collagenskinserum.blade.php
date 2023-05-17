@@ -390,7 +390,7 @@
             </div>
             <div class="header-girl"><img src="{{ asset('/') }}naturapharmFiles/snailcream/girl.png" alt=""/></div>
             <div class="header-pack-mobile">
-                <div class="header-pack-body"><img src="{{ asset('/') }}naturapharmFiles/collagenboost`/header-pack.png"
+                <div class="header-pack-body"><img src="{{ asset('/') }}naturapharmFiles/collagenboost/header-pack.png"
                                                    alt=""/></div>
                 <div class="header-pack-sale">
                     <p>

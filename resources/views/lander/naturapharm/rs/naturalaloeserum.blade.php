@@ -35,7 +35,7 @@
 <header>
     <div class="header-body">
         <div class="header-pack">
-            <div class="header-pack-body"><img src="{{ asset('/') }}naturapharmFiles/collagenboost/header-pack.png"
+            <div class="header-pack-body"><img src="{{ asset('/') }}naturapharmFiles/naturalaloeserum/header-pack.png"
                                                alt=""/></div>
             <div class="header-pack-sale">
                 <p>
@@ -54,7 +54,7 @@
                     <h2>PODMLADI SE <span>ZA SAMO 5 DANA</span></h2>
                 </div>
                 <div class="header-text">
-                    <p><span>COLLAGEN BOOST <br>ZA VEČNU MLADOST </span>
+                    <p><span>NATURAL ALOE SERUM <br>ZA VEČNU MLADOST </span>
                         <br>
                         I DO 4 PUTA EFIKASNIJE OD OSTALIH SREDSTAVA ZA PODMLAĐIVANJE!
                     </p>
@@ -62,7 +62,7 @@
             </div>
             <div class="header-girl"><img src="{{ asset('/') }}naturapharmFiles/snailcream/girl.png" alt=""/></div>
             <div class="header-pack-mobile">
-                <div class="header-pack-body"><img src="{{ asset('/') }}naturapharmFiles/collagenboost/header-pack.png"
+                <div class="header-pack-body"><img src="{{ asset('/') }}naturapharmFiles/naturalaloeserum/header-pack.png"
                                                    alt=""/></div>
                 <div class="header-pack-sale">
                     <p>
@@ -130,7 +130,7 @@
     <div class="strong-block">
         <div class="strong-block-note">
             <div class="sbn-name">
-                <h2><span>U ČEMU JE TAJNA</span> COLLAGEN BOOST ULJA?</h2>
+                <h2><span>U ČEMU JE TAJNA</span> NATURAL ALOE SERUMA?</h2>
             </div>
             <div class="sbn-img">
                 <img src="{{ asset('/') }}naturapharmFiles/snailcream/strong1.jpg" alt=""/>
@@ -142,25 +142,25 @@
             </div>
         </div>
         <div class="strong-block-text">
-            <img src="{{ asset('/') }}naturapharmFiles/collagenboost/header-pack.png" alt=""/>
+            <img src="{{ asset('/') }}naturapharmFiles/naturalaloeserum/header-pack.png" alt=""/>
             <p>Inovativna formula i jedinstveni sastojci ispravljaju bore iznutra, opuštajući mišićna vlakna bez promene izraza lica.
                 Hijaluronska kiselina niske molekularne težine i morski
                 kolagen stimulišu ćelije kože da proizvode sopstveni kolagen i elastin!</p>
-            <p>COLLAGEN BOOST ULJE ne samo da će momentalno izgladiti mimičke bore, već će i sprečiti pojavu novih zbog kumulativnog
+            <p>NATURAL ALOE SERUM ne samo da će momentalno izgladiti mimičke bore, već će i sprečiti pojavu novih zbog kumulativnog
                 efekta.
-                Nanesite COLLAGEN BOOST ULJE na problematična područja i ostvarite vidljive rezultate za samo 5 dana!</p>
+                Nanesite NATURAL ALOE SERUM na problematična područja i ostvarite vidljive rezultate za samo 5 dana!</p>
         </div>
     </div>
     <div class="pay-block">
         <div class="pay-block-name">
             <h2>
                 <span>FILERI I INJEKCIJE SU PROŠLOST!</span>
-                <p>Instant COLLAGEN BOOST ULJE brzo i bezbolno uklanja bore sa lica!</p>
+                <p>Instant NATURAL ALOE SERUM brzo i bezbolno uklanja bore sa lica!</p>
             </h2>
         </div>
         <div class="pay-block-info">
             <div class="pay-block-video"><img style="max-width: 100%"
-                                              src="{{ asset('/') }}naturapharmFiles/collagenboost/header-pack.png" alt=""/>
+                                              src="{{ asset('/') }}naturapharmFiles/naturalaloeserum/header-pack.png" alt=""/>
             </div>
             <div class="pay-block-text">
                 <div class="pay-block__item1">
@@ -190,13 +190,13 @@
     <div class="contrast-block">
         <div class="contrast-block-body">
             <div class="contrast-block-name">
-                <h2>PO ČEMU SE <span>RAZLIKUJE</span> COLLAGEN BOOST ULJE OD DRUGIH PROIZVODA?</h2>
+                <h2>PO ČEMU SE <span>RAZLIKUJE</span> NATURAL ALOE SERUM OD DRUGIH PROIZVODA?</h2>
             </div>
             <div class="contrast-block-info">
                 <div class="contrast-block-text">
                     <p>
-                        Formula inovativnog COLLAGEN BOOST ulja zasnovana je na <span>potpuno prirodnim sastojcima i vitaminima.</span>
-                        Zahvaljujući tome COLLAGEN BOOST ULJE <span>zaglađuje bore i trajno eliminiše uzrok starenja kože preokretom autoimunih procesa.</span>
+                        Formula inovativnog NATURAL ALOE SERUMA zasnovana je na <span>potpuno prirodnim sastojcima i vitaminima.</span>
+                        Zahvaljujući tome NATURAL ALOE SERUM <span>zaglađuje bore i trajno eliminiše uzrok starenja kože preokretom autoimunih procesa.</span>
                     </p>
                     <p>
                         Naučnici već nekoliko godina testiraju različite prirodne sastojke, kombinuju i proveravaju
@@ -204,7 +204,7 @@
                             super-formulu, jedinu u celom svetu.</span>
                     </p>
                 </div>
-                <div class="contrast-block-img"><img src="{{ asset('/') }}naturapharmFiles/collagenboost/header-pack.png"
+                <div class="contrast-block-img"><img src="{{ asset('/') }}naturapharmFiles/naturalaloeserum/header-pack.png"
                                                      alt=""/></div>
             </div>
             <div class="contrast-btn">
@@ -214,18 +214,18 @@
     </div>
     <div class="feedback">
         <div class="feedback-name">
-            <h2><span>Utisci žena</span> koje su već koristile COLLAGEN BOOST ulje</h2>
+            <h2><span>Utisci žena</span> koje su već koristile NATURAL ALOE SERUM</h2>
         </div>
         <div class="owl-carousel owl-theme">
             <div class="item">
                 <div class="feed-img"><img src="{{ asset('/') }}innodermFiles/innoderm4/slide-1.jpg" alt=""></div>
                 <div class="feed-text">
                     <p><span>Prosto sam zadivljena!</span></p>
-                    <p>COLLAGEN BOOST ulje je fenomenalno, prosto sam zadivljena!
-                        Nikada nisam probala ovako nešto. Ulje hidrira i zateže kožu. Ujutru sam se probula i nanela
+                    <p>NATURAL ALOE SERUM je fenomenalno, prosto sam zadivljena!
+                        Nikada nisam probala ovako nešto. Serum hidrira i zateže kožu. Ujutru sam se probula i nanela
                         je, pa mi je lice bilo sveže celi dan. Koristim ga već dve nedelje
                         i bore oko očiju mi polako nestaju. Srećna sam kada se gledam u ogledalo, popravilo mi se i
-                        raspoloženje! Hvala vam za ovo divno ulje, preporučila sam je svim
+                        raspoloženje! Hvala vam za ovo divno serum, preporučila sam je svim
                         svojim prijateljicama.</p>
                     <p><b>Suzana, 50 godina</b></p>
                 </div>
@@ -234,9 +234,9 @@
                 <div class="feed-img"><img src="{{ asset('/') }}innodermFiles/innoderm4/slide-2.jpg" alt=""></div>
                 <div class="feed-text">
                     <p><span>Nema više injekcija!</span></p>
-                    <p>Volim kada kozmetika ne samo obećava već i radi! COLLAGEN BOOST ULJE vidno zaglađuje bore, eliminiše tamne
+                    <p>Volim kada kozmetika ne samo obećava već i radi! NATURAL ALOE SERUM vidno zaglađuje bore, eliminiše tamne
                         kolutove oko očiju i osvežava ten za 5 minuta!
-                        Čudesno ulje, ovo je čista magija! Koža je elastična, glatka i svilenkasta! Nanosim je na vrat
+                        Čudesno serum, ovo je čista magija! Koža je elastična, glatka i svilenkasta! Nanosim je na vrat
                         i dekolte, prezadovoljna sam! Čista petica! Mnogo vam hvala!</p>
                     <p><b>Katarina, 52 godine</b></p>
                 </div>
@@ -257,7 +257,7 @@
     </div>
     <div class="take-block">
         <div class="take-block-name">
-            <h2><span>Kako naneti</span> COLLAGEN BOOST ulje?</h2>
+            <h2><span>Kako naneti</span> NATURAL ALOE SERUM?</h2>
         </div>
         <div class="take-block-list">
             <ul>
@@ -273,8 +273,8 @@
                     <div class="tbl-img"><img src="{{ asset('/') }}naturapharmFiles/snailcream/take2.png" alt=" "/>
                     </div>
                     <div class="tbl-info">
-                        <h3>NANETI ULJE</h3>
-                        <p>Nanesite COLLAGEN BOOST ulje po celom licu i dekolteu</p>
+                        <h3>NANETI SERUM</h3>
+                        <p>Nanesite NATURAL ALOE SERUM po celom licu i dekolteu</p>
                     </div>
                 </li>
                 <li id="t3">
@@ -282,7 +282,7 @@
                     </div>
                     <div class="tbl-info">
                         <h3>UŽIVAJTE U REZULTATU</h3>
-                        <p>Koristite ulje 28 dana dok se koža potpuno ne obnovi</p>
+                        <p>Koristite serum 28 dana dok se koža potpuno ne obnovi</p>
                     </div>
                 </li>
             </ul>
@@ -298,22 +298,22 @@
             <div class="item">
                 <div class="tbl-img"><img src="{{ asset('/') }}naturapharmFiles/snailcream/take2.png" alt=" "/></div>
                 <div class="tbl-info">
-                    <h3>NANETI ULJE</h3>
-                    <p>Nanesite COLLAGEN BOOST ulje po celom licu i dekolteu</p>
+                    <h3>NANETI SERUM</h3>
+                    <p>Nanesite NATURAL ALOE SERUM po celom licu i dekolteu</p>
                 </div>
             </div>
             <div class="item">
                 <div class="tbl-img"><img src="{{ asset('/') }}naturapharmFiles/snailcream/take3.png" alt=" "/></div>
                 <div class="tbl-info">
                     <h3>UŽIVAJTE U REZULTATU</h3>
-                    <p>Koristite ulje 28 dana dok se koža potpuno ne obnovi</p>
+                    <p>Koristite serum 28 dana dok se koža potpuno ne obnovi</p>
                 </div>
             </div>
         </div>
     </div>
     <div class="order-block">
         <div class="order-block-name">
-            <h2><span>Kako poručiti</span> COLLAGEN BOOST ulje?</h2>
+            <h2><span>Kako poručiti</span> NATURAL ALOE SERUM?</h2>
         </div>
         <div class="order-block-list">
             <ul>
@@ -364,7 +364,7 @@
 <footer>
     <div class="header-body">
         <div class="header-pack">
-            <div class="header-pack-body"><img src="{{ asset('/') }}naturapharmFiles/collagenboost/header-pack.png"
+            <div class="header-pack-body"><img src="{{ asset('/') }}naturapharmFiles/naturalaloeserum/header-pack.png"
                                                alt=""/></div>
             <div class="header-pack-sale">
                 <p>
@@ -383,14 +383,14 @@
                     <h2>PODMLADI SE <span>ZA SAMO 5 DANA</span></h2>
                 </div>
                 <div class="header-text">
-                    <p><span>COLLAGEN BOOST ZA VEČNU MLADOST</span>
+                    <p><span>NATURAL ALOE SERUM ZA VEČNU MLADOST</span>
                         <br>
                         I DO 4 PUTA EFIKASNIJE OD OSTALIH SREDSTAVA ZA PODMLAĐIVANJE!</p>
                 </div>
             </div>
             <div class="header-girl"><img src="{{ asset('/') }}naturapharmFiles/snailcream/girl.png" alt=""/></div>
             <div class="header-pack-mobile">
-                <div class="header-pack-body"><img src="{{ asset('/') }}naturapharmFiles/collagenboost/header-pack.png"
+                <div class="header-pack-body"><img src="{{ asset('/') }}naturapharmFiles/naturalaloeserum/header-pack.png"
                                                    alt=""/></div>
                 <div class="header-pack-sale">
                     <p>
