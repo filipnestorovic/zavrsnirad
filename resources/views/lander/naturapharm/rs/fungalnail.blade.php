@@ -537,6 +537,23 @@ Jednostavan način da pobedite gljivice, žute i ispucale nokte!
     </div>
 </div>
 <!--body-wrap-->
+<link rel="stylesheet" href="{{ asset('/') }}naturapharmFiles/nailrepair/owl.carousel.min.css"/>
+<script src="{{ asset('/') }}shared_files/owl.carousel.min.js"></script>
+<script>
+    $(window).on("load", function () {
+        $('#slider').owlCarousel({
+            items: 1,
+            loop: true,
+            margin: 10,
+            autoHeight: true,
+            nav: false,
+            dots: true,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true
+        });
+    });
+</script>
 @include('components.pixel_footer')
 </body>
 </html>
