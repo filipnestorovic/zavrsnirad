@@ -44,81 +44,82 @@
     </style>
 </head>
 <body>
+@include('components.display_errors')
 <section class="offer_section">
     <div class="wrapper clearfix">
-        <h1 class="main_title"><span>Беслопастной</span></h1>
-        <h2 class="main_subtitle">шейный вентилятор</h2>
+        <h1 class="main_title"><span>SELF COOLER</span></h1>
+        <h2 class="main_subtitle">VRATNI VENTILATOR</h2>
         <ul class="ofr_bull">
-            <li>Прохлада в одно касание</li>
-            <li>Стильный аксессуар</li>
-            <li>Легкий и компактный</li>
-            <li>Охлаждения на 360°</li>
+            <li>Prijatna svežina oko vas</li>
+            <li>Nema više zagušljivosti</li>
+            <li>Lagan i kompaktan</li>
+            <li>360° hlađenje</li>
         </ul>
         <div class="sale">
-                    <span>
-                        Скидка <b>50<small>%</small></b>
-                    </span>
+            <span>
+                Popust <b>40<small>%</small></b>
+            </span>
         </div>
         <div class="formbox">
             <div class="prod_count">
-                <span>15<small>шт.</small></span> осталось по акции!
+                <span>15</span> komada ostalo na akciji!
             </div>
             <div class="price clearfix">
                 <div class="old">
-                    Обычная цена:
+                    Redovna cena:
                     <p>
                         <span>{{ $prices[1]['originalPrice'] }} </span><small> {{ $prices[1]['currency'] }}</small>
                     </p>
                 </div>
                 <div class="new">
-                    Цена по акции:
+                    Cena na akciji:
                     <p>
                         <span>{{ $prices[1]['amount'] }}</span><small> {{ $prices[1]['currency'] }}</small>
                     </p>
                 </div>
             </div>
 
-            <a href="#order_form" class="button-m">Заказать со скидкой</a>
+            <a href="#order_form" class="button-m">Poručite sada</a>
         </div>
     </div>
 </section>
 
 <section class="sect2">
     <div class="wrapper">
-        <h2 class="title">Преимущества<span> вентилятора</span></h2>
+        <h2 class="title">Prednosti<span> Self Cooler uređaja</span></h2>
         <div class="content">
             <ul class="benef1">
                 <li>
                     <img src="{{ asset('/') }}dailysharkFiles/selfcooler/ben1_img1.jpg" alt="" />
-                    <p>3 режима работы</p>
+                    <p>3 režima rada</p>
                 </li>
                 <li>
                     <img src="{{ asset('/') }}dailysharkFiles/selfcooler/ben1_img2.jpg" alt="" />
-                    <p>Тихая работа</p>
+                    <p>Tih rad</p>
                 </li>
                 <li>
                     <img src="{{ asset('/') }}dailysharkFiles/selfcooler/ben1_img3.jpg" alt="" />
-                    <p>Регулируемый угол наклона</p>
+                    <p>Podesiv ugao nagiba</p>
                 </li>
                 <li>
                     <img src="{{ asset('/') }}dailysharkFiles/selfcooler/ben1_img4.jpg" alt="" />
-                    <p>Долговечный аккумулятор</p>
+                    <p>Dugotrajna baterija</p>
                 </li>
                 <li>
                     <img src="{{ asset('/') }}dailysharkFiles/selfcooler/ben1_img5.jpg" alt="" />
-                    <p>48 отверстий для воздуха</p>
+                    <p>48 otvora za vazduh</p>
                 </li>
                 <li>
                     <img src="{{ asset('/') }}dailysharkFiles/selfcooler/ben1_img6.jpg" alt="" />
-                    <p>Всегда свободные руки</p>
+                    <p>Uvek slobodne ruke</p>
                 </li>
                 <li>
                     <img src="{{ asset('/') }}dailysharkFiles/selfcooler/ben1_img7.jpg" alt="" />
-                    <p>Зарядка от USB</p>
+                    <p>USB punjenje</p>
                 </li>
                 <li>
                     <img src="{{ asset('/') }}dailysharkFiles/selfcooler/ben1_img8.jpg" alt="" />
-                    <p>Мощный турбинный двигатель</p>
+                    <p>Snažan turbinski motor</p>
                 </li>
             </ul>
         </div>
@@ -126,7 +127,7 @@
 </section>
 <section class="video">
     <div class="wrapper">
-        <h2 class="title"><span> Видеообзор</span></h2>
+        <h2 class="title"><span> Pogledajte video</span></h2>
 
         <video src="{{ asset('/') }}dailysharkFiles/selfcooler/vid.mp4" width="100%" height="auto" preload="auto" playsinline="" webkit-playsinline="" controls="" draggable="true" poster="{{ asset('/') }}dailysharkFiles/selfcooler/poster.jpg" style="border-radius: 40px; margin-bottom: 30px;"></video>
     </div>
@@ -134,63 +135,62 @@
 <section class="sect2">
     <div class="wrapper">
         <h2 class="title">
-            <span>Надоела жара?</span><br />
-            Перестаньте ее терпеть!
+            <span>Umorni ste od vrućine?</span><br />
+            Prestani da je trpiš!
         </h2>
         <div class="content2">
             <img src="{{ asset('/') }}dailysharkFiles/selfcooler/sec.jpg" alt="" />
             <p>
-                Теперь у вас появится персональная защита против нее - безлопастный портативный вентилятор, предназначен для ношения на шее, он станет настоящей находкой в душном офисе, метро, улице. Воздушный поток, создаваемый
-                устройством, позволит с легкостью охладить лицо и затылок.
+                Sada ćete imati ličnu zaštitu od toga - prenosivi ventilator dizajniran za nošenje oko vrata, postaće vaš najbolji prijatelj u zagušljivoj kancelariji, metrou, na ulici...
+                Protok vazduha koji stvara uređaj će vam omogućiti da lako hladite lice i potiljak.
             </p>
             <p>
-                Вы можете использовать вентилятор независимо от того, где вы находитесь, в парке, путешествуя на открытом воздухе, будучи на учебе в школе. Тихая работа портативного вентилятора не будет раздражать, и отвлекать даже
-                во время работы.
+                Možete koristiti ventilator gde god se nalazite, u parku, na putovanju ili dok čekate u redu u pošti. Tihi rad ventilatora vas neće iritirati niti ometati tokom svakodnevnih aktivnosti.
             </p>
-            <p>Его можно безопасно использовать детям и взрослым.</p>
+            <p>Mogu ga bezbedno koristiti i deca i odrasli.</p>
         </div>
     </div>
 </section>
 <section class="sect3">
     <div class="wrapper">
-        <h2 class="title">Особенности</h2>
+        <h2 class="title">Pogodnosti</h2>
         <ul class="benef2">
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/selfcooler/accept.png" alt="" />
-                <span>Дизайн продуман таким образом, что лопасти не захватывают волосы.</span>
+                <span>Dizajn je osmišljen na takav način da ne hvata i ne mrsi kosu.</span>
             </li>
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/selfcooler/accept.png" alt="" />
-                <span>3 скорости вращения вентиляторов – настраивайте охлаждение в зависимости от предпочтений</span>
+                <span>3 brzine ventilatora - prilagodite hlađenje svojim potrebama.</span>
             </li>
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/selfcooler/accept.png" alt="" />
-                <span>Продукт разработан с учетом шумоподавления, поэтому вам не нужно беспокоиться о шуме вентилятора</span>
+                <span>Proizvod je usavršene do te mere da ne stvara buku i da je skroz nečujan.</span>
             </li>
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/selfcooler/accept.png" alt="" />
-                <span>Современный стильный уникальный дизайн</span>
+                <span>Moderan, jedinstven i atraktivan dizajn.</span>
             </li>
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/selfcooler/accept.png" alt="" />
-                <span>Мягкий силикон гнётся, вы можете отрегулировать угол, как вам удобно</span>
+                <span>Savija se i možete podesiti ugao kakav želite.</span>
             </li>
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/selfcooler/accept.png" alt="" />
-                <span>Легкий и портативный, вы можете носить его с собой </span>
+                <span>Lagan i prenosiv, možete ga nositi svuda sa sobom.</span>
             </li>
         </ul>
         <div class="action_block">
             <div class="timer">
-                <p>Успейте заказать со <b>скидкой -50%!</b></p>
+                <p>Iskoristite akciju i <b>poručite sa 40% popusta</b></p>
             </div>
-            <a href="#order_form" class="button-m">Заказать со скидкой</a>
+            <a href="#order_form" class="button-m">Poručite sada</a>
         </div>
     </div>
 </section>
 <section class="sect4">
     <div class="wrapper">
-        <h2 class="title"><small style="color: #ff8d03;">Ветер никогда ещё не был таким приятным!</small> <span></span></h2>
+        <h2 class="title"><small style="color: #ff8d03;">Nikada nisam osetila tako prijatnu svežinu!</small> <span></span></h2>
         <div class="gallery owl-carousel">
             <img src="{{ asset('/') }}dailysharkFiles/selfcooler/gal1.jpg" alt="" />
             <img src="{{ asset('/') }}dailysharkFiles/selfcooler/gal2.jpg" alt="" />
@@ -198,58 +198,58 @@
             <img src="{{ asset('/') }}dailysharkFiles/selfcooler/gal4.jpg" alt="" />
         </div>
         <p>
-            Турбинный двусторонний двигатель позволяет увеличить объем воздушного потока. Он втягивает воздух из окружающей атмосферы вверх, затем вокруг основного корпуса, пока не будет вытеснен через 48 крошечных отверстий вокруг
-            шейного обода.
-        </p>
-        <p>
-            <br />
-            Еще одним преимуществом вентилятора есть наличие 3-х режимов обдува, что позволить использовать его как ребенку, так и взрослым. А дизайн продуман таким образом, что лопасти не захватывают волосы.
+            Turbinski dvosmerni motor vam omogućava da povećate količinu protoka vazduha. Uvlači vazduh iz okolne atsmofere, hladi ga i izbacuje kroz 48 sitnih rupa.
         </p>
         <br />
         <p>
-            Вы сможете использовать его даже во время пробежек, и он не доставит вам никакого неудобства. Вы сможете носить его целый день, не снимая. Корпус вентилятора изготовлен из специального приятного на ощупь гипоаллергенного
-            пластика, который не способен вызвать раздражений на коже.
+            Još jedna prednost ventilatora je mogućnost 3 režima protoka vazduha, što omogućava da ga koriste i deca i odrasli. Dizajn je osmišljen na takav način da ne hvata i ne mrsi kosu.
         </p>
         <br />
-        <p>Дизайн вентилятора в виде наушников, освобождающий ваши руки.</p>
+        <p>
+            Moći ćete da ga koristite čak i dok džogirate i neće vam stvarati neprijatnosti. Možete ga nositi ceo dan bez skidanja. Kućište ventilatora je napravljano od specijalne hipoalergene
+            plastike koja je prijatna na dodir i koja ne iritira kožu.
+        </p>
+        <br />
+        <p>
+            Dizajn ventilatora je takav da će vam ruke biti potpuno slobodne.
+        </p>
     </div>
 </section>
 
 <section class="sect6">
     <div class="wrapper">
-        <h2 class="title">Отзывы тех, кто уже заказал <span>Беслопастной шейный вентилятор</span></h2>
+        <h2 class="title"><br/><span>Utisci naših kupaca</span></h2>
         <div class="reviews owl-carousel">
             <div class="rev_item">
                 <div class="img">
                     <img src="{{ asset('/') }}dailysharkFiles/selfcooler/rev1.jpg" alt="" />
                 </div>
                 <span>
-                            <p><b>Виктория Долматова</b></p>
+                            <p><b>Valerija Perić</b></p>
                         </span>
                 <p>
-                    Полезное устройство, спасает, когда в помещении нет кондиционера или когда на улице и листик с дерева не шелохнётся. Это устройство полезно, когда нет движения воздуха или в закрытом пространстве, или на улице
-                    до/после обеда при спокойной ходьбе. Волосы в лопасти не попадают и я боялась, что шею может продуть))), но об этом можно не беспокоиться. Все в порядке!
+                    Koristan uređaj koji života znači kada ste u prostoriji koja nema klimu ili kada je velika sparina napolju. Self Cooler je koristan tokom celog leta jer ga bukvalno svuda možete nositi.
+                    Plašila sam se da ne uvlači i ne mrsi kosu ali to se nije događalo i ne moram više da brinem o tome. Sve preporuke!
                 </p>
             </div>
             <div class="rev_item">
                 <div class="img">
                     <img src="{{ asset('/') }}dailysharkFiles/selfcooler/rev2.jpg" alt="" />
                 </div>
-                <p><b>Виктор Осипов</b></p>
+                <p><b>Vojin Otašević</b></p>
                 <p>
-                    Отличное устройство. Приятно удивлен. Обдув хороший, удобно, работает долго. У меня нет кондиционера дома и иногда днем прямо невыносимо от жары сидеть за компьютером. Купил такой вентилятор, проблема решена.
-                    Понравилось в нем все. От дизайна до работы. Стильный аксессуар, который, думаю, понравится многим.
+                    Odličan uređaj, prijatno sam iznenađen. Protok vazduha je odličan, ugodan je i baterija dugo drži. Radim od kuće i nemam klima uređaj pa mi je ovo spas. Od kada sam uzeo ovo čudo, rešio sam problem sa vrućinom.
+                    Mislim da ovo svako treba da kupi sebi.
                 </p>
             </div>
             <div class="rev_item">
                 <div class="img">
                     <img src="{{ asset('/') }}dailysharkFiles/selfcooler/rev3.jpg" alt="" />
                 </div>
-                <p><b>Снежана Волкова</b></p>
+                <p><b>Snežana Jarić</b></p>
                 <p>
-                    Часто беру с собой на улицу. Надел на шею, включил и идешь с удовольствием. Меньше потеешь, всегда прохладно. Удобно, что скорости можно регулировать. Одного заряда хватает на целый день. Можно заряжать от
-                    повербанка. Перед заказом были опасения, что будет неудобно на шее болтаться. Но нет. Можно очень хорошо закрепить благодаря тому, что душки вентиляторов можно загибать как угодно. В целом, покупкой очень
-                    доволен. Вентилятор супер! Советую всем.
+                    Često ga nosim napolje sa sobom. Stavim ga na vrat, uključim ga i uživam. Manje se znojim i vrlo mi je prijatno. Super mi je što se brzina može podešavati i što se može puniti iz eksterne baterije.
+                    Veoma sam zadovoljna ovom kupovinom. Sve preporuke!
                 </p>
             </div>
         </div>
@@ -257,69 +257,74 @@
 </section>
 <section class="sect7">
     <div class="wrapper">
-        <h2 class="title"><b>Доставка</b> и оплата</h2>
+        <h2 class="title"><b>Dostava</b> i plaćanje</h2>
         <ul class="order_list">
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/selfcooler/order1.png" alt="" />
-                <h4>Быстрая доставка</h4>
-                <p>Почтой в течение 14 дней. Оставьте заявку и вам перезвонят для оформления заказа.</p>
+                <h4>Brza dostava</h4>
+                <p>Šaljemo brzom poštom u roku od 1-2 radna dana. Ostavite svoje podatke i kontaktiraćemo vas da potvrdimo porudžbinu.</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/selfcooler/order2.png" alt="" />
-                <h4>Оплата при получении</h4>
-                <p>Мы не принимаем предоплат. Оплата производится только при получении заказа на руки.</p>
+                <h4>Plaćanje po prijemu</h4>
+                <p>Nema potrebe da uplaćujete unapred. Plaćanje se vrši po prijemu porudžbine.</p>
             </li>
             <li>
                 <img src="{{ asset('/') }}dailysharkFiles/selfcooler/order3.png" alt="" />
-                <h4>Гарантии</h4>
-                <p>Перед отправкой все товары проходят тщательную проверку на предмет брака.</p>
+                <h4>Garancija</h4>
+                <p>Dajemo garanciju na sve naše proizvode.</p>
             </li>
         </ul>
     </div>
 </section>
 <section class="offer_section ofr_bottom">
     <div class="wrapper clearfix">
-        <h1 class="main_title"><span>Беслопастной</span></h1>
-        <h2 class="main_subtitle">шейный вентилятор</h2>
+        <h1 class="main_title"><span>SELF COOLER</span></h1>
+        <h2 class="main_subtitle">VRATNI VENTILATOR</h2>
         <ul class="ofr_bull">
-            <li>Прохлада в одно касание</li>
-            <li>Стильный аксессуар</li>
-            <li>Легкий и компактный</li>
-            <li>Охлаждения на 360°</li>
+            <li>Prijatna svežina oko vas</li>
+            <li>Nema više zagušljivosti</li>
+            <li>Lagan i kompaktan</li>
+            <li>360° hlađenje</li>
         </ul>
         <div class="sale">
-                    <span>
-                        Скидка <b>50<small>%</small></b>
-                    </span>
+            <span>
+                Popust <b>40<small>%</small></b>
+            </span>
         </div>
         <div class="formbox">
             <div class="prod_count">
-                <span>15<small>шт.</small></span> осталось по акции!
+                <span>15</span> komada ostalo na akciji!
             </div>
             <div class="price clearfix">
                 <div class="old">
-                    Обычная цена:
+                    Redovna cena:
                     <p>
                         <span>{{ $prices[1]['originalPrice'] }} </span><small> {{ $prices[1]['currency'] }}</small>
                     </p>
                 </div>
                 <div class="new">
-                    Цена по акции:
+                    Cena na akciji:
                     <p>
                         <span>{{ $prices[1]['amount'] }}</span><small> {{ $prices[1]['currency'] }}</small>
                     </p>
                 </div>
             </div>
 
-            <form id="order_form" class="m1-form" action="#" method="post">
-                <input type="text" name="name" placeholder="Введите ваше имя" required="" />
-                <input type="tel" name="phone" placeholder="Введите ваш телефон" required="" />
-                <button class="button-m" type="submit">Заказать со скидкой</button>
+            <form id="order_form" class="m1-form" action="{{$orderRoute}}" method="post">
+                {{ csrf_field() }}
+                @include('lander.naturapharm.components.form_hidden_fields')
+                <input type="text" name="name" placeholder="Ime i prezime" required="" />
+                <input type="tel" name="phone" placeholder="Telefon" required="" />
+                <input type="text" name="shipping_address" placeholder="Adresa" required="" />
+                <input type="text" name="shipping_city" placeholder="Grad" required="" />
+                <button class="button-m" type="submit">Poručite sada</button>
             </form>
         </div>
     </div>
 </section>
 <script src="{{ asset('/') }}shared_files/owl.carousel.min.js"></script>
 <script src="{{ asset('/') }}dailysharkFiles/selfcooler/scripts.js"></script>
+@include('components.pixel_footer')
 </body>
 </html>

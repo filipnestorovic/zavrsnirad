@@ -87,7 +87,7 @@ b {
 	color: #888888;
 	border-radius: 30px;
 	margin-bottom: 10px;
-	text-align: left;
+	text-align: center;
 }
 .m1-form ::-webkit-input-placeholder {
 	color: #888888;
@@ -664,8 +664,8 @@ section{
 .sect4 .gallery{
 	width: 460px;
 	position: absolute;
-	right: 10px;
-	top: -10px;
+	right: -40px;
+	top: -60px;
 	box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
 	border-radius: 8px;
 	overflow: hidden;
