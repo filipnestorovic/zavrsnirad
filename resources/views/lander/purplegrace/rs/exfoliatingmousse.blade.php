@@ -35,7 +35,7 @@
 <header>
     <div class="header-body">
         <div class="header-pack">
-            <div class="header-pack-body"><img src="{{ asset('/') }}naturapharmFiles/collagenskinserum/header-pack.png"
+            <div class="header-pack-body"><img src="{{ asset('/') }}purplegraceFiles/exfoliatingmousse/header-pack.png"
                                                alt=""/></div>
             <div class="header-pack-sale">
                 <p>
@@ -54,7 +54,7 @@
                     <h2>PODMLADI SE <span>ZA SAMO 5 DANA</span></h2>
                 </div>
                 <div class="header-text">
-                    <p><span>COLLAGEN SKIN SERUM <br>ZA VEČNU MLADOST </span>
+                    <p><span>EXFOLIATING MOUSSE <br>ZA VEČNU MLADOST </span>
                         <br>
                         I DO 4 PUTA EFIKASNIJE OD OSTALIH SREDSTAVA ZA PODMLAĐIVANJE!
                     </p>
@@ -62,7 +62,7 @@
             </div>
             <div class="header-girl"><img src="{{ asset('/') }}naturapharmFiles/snailcream/girl.png" alt=""/></div>
             <div class="header-pack-mobile">
-                <div class="header-pack-body"><img src="{{ asset('/') }}naturapharmFiles/collagenskinserum/header-pack.png"
+                <div class="header-pack-body"><img src="{{ asset('/') }}purplegraceFiles/exfoliatingmousse/header-pack.png"
                                                    alt=""/></div>
                 <div class="header-pack-sale">
                     <p>
@@ -79,7 +79,7 @@
                 <ul>
                     <li> Izgleđuje bore <br><span>za 83%</span></li>
                     <li><span>Pospešuje proces</span> obnavljanja ćelija</li>
-                    <li> Zateže <span>konture lica</span></li>
+                    <li>Čisti kožu i <span>izbacuje nečistoće</span></li>
                     <li> Potpuno transformiše kožu <span>za 5 dana</span></li>
                 </ul>
             </div>
@@ -130,7 +130,7 @@
     <div class="strong-block">
         <div class="strong-block-note">
             <div class="sbn-name">
-                <h2><span>U ČEMU JE TAJNA</span> COLLAGEN SKIN SERUMA?</h2>
+                <h2><span>U ČEMU JE TAJNA</span> EXFOLIATING MOUSSE KREME?</h2>
             </div>
             <div class="sbn-img">
                 <img src="{{ asset('/') }}naturapharmFiles/snailcream/strong1.jpg" alt=""/>
@@ -142,25 +142,25 @@
             </div>
         </div>
         <div class="strong-block-text">
-            <img src="{{ asset('/') }}naturapharmFiles/collagenskinserum/header-pack.png" alt=""/>
+            <img src="{{ asset('/') }}purplegraceFiles/exfoliatingmousse/header-pack.png" alt=""/>
             <p>Inovativna formula i jedinstveni sastojci ispravljaju bore iznutra, opuštajući mišićna vlakna bez promene izraza lica.
                 Hijaluronska kiselina niske molekularne težine i morski
                 kolagen stimulišu ćelije kože da proizvode sopstveni kolagen i elastin!</p>
-            <p>COLLAGEN SKIN SERUM ne samo da će momentalno izgladiti mimičke bore, već će i sprečiti pojavu novih zbog kumulativnog
+            <p>EXFOLIATING MOUSSE ne samo da će momentalno izgladiti mimičke bore, već će i sprečiti pojavu novih zbog kumulativnog
                 efekta.
-                Nanesite COLLAGEN SKIN SERUM na problematična područja i ostvarite vidljive rezultate za samo 5 dana!</p>
+                Nanesite EXFOLIATING MOUSSE na problematična područja i ostvarite vidljive rezultate za samo 5 dana!</p>
         </div>
     </div>
     <div class="pay-block">
         <div class="pay-block-name">
             <h2>
                 <span>FILERI I INJEKCIJE SU PROŠLOST!</span>
-                <p>Instant COLLAGEN SKIN SERUM brzo i bezbolno uklanja bore sa lica!</p>
+                <p>Instant EXFOLIATING MOUSSE brzo i bezbolno uklanja bore sa lica!</p>
             </h2>
         </div>
         <div class="pay-block-info">
             <div class="pay-block-video"><img style="max-width: 100%"
-                                              src="{{ asset('/') }}naturapharmFiles/collagenskinserum/header-pack.png" alt=""/>
+                                              src="{{ asset('/') }}purplegraceFiles/exfoliatingmousse/header-pack.png" alt=""/>
             </div>
             <div class="pay-block-text">
                 <div class="pay-block__item1">
@@ -190,13 +190,13 @@
     <div class="contrast-block">
         <div class="contrast-block-body">
             <div class="contrast-block-name">
-                <h2>PO ČEMU SE <span>RAZLIKUJE</span> COLLAGEN SKIN SERUM OD DRUGIH PROIZVODA?</h2>
+                <h2>PO ČEMU SE <span>RAZLIKUJE</span> EXFOLIATING MOUSSE OD DRUGIH PROIZVODA?</h2>
             </div>
             <div class="contrast-block-info">
                 <div class="contrast-block-text">
                     <p>
-                        Formula inovativnog COLLAGEN SKIN SERUMA zasnovana je na <span>potpuno prirodnim sastojcima i vitaminima.</span>
-                        Zahvaljujući tome COLLAGEN SKIN SERUM <span>zaglađuje bore i trajno eliminiše uzrok starenja kože preokretom autoimunih procesa.</span>
+                        Formula inovativne EXFOLIATING MOUSSE kreme zasnovana je na <span>potpuno prirodnim sastojcima i vitaminima.</span>
+                        Zahvaljujući tome EXFOLIATING MOUSSE <span>zaglađuje bore i trajno eliminiše uzrok starenja kože preokretom autoimunih procesa.</span>
                     </p>
                     <p>
                         Naučnici već nekoliko godina testiraju različite prirodne sastojke, kombinuju i proveravaju
@@ -204,7 +204,7 @@
                             super-formulu, jedinu u celom svetu.</span>
                     </p>
                 </div>
-                <div class="contrast-block-img"><img src="{{ asset('/') }}naturapharmFiles/collagenskinserum/header-pack.png"
+                <div class="contrast-block-img"><img src="{{ asset('/') }}purplegraceFiles/exfoliatingmousse/header-pack.png"
                                                      alt=""/></div>
             </div>
             <div class="contrast-btn">
@@ -214,19 +214,18 @@
     </div>
     <div class="feedback">
         <div class="feedback-name">
-            <h2><span>Utisci žena</span> koje su već koristile COLLAGEN SKIN SERUM</h2>
+            <h2><span>Utisci žena</span> koje su već koristile EXFOLIATING MOUSSE</h2>
         </div>
         <div class="owl-carousel owl-theme">
             <div class="item">
                 <div class="feed-img"><img src="{{ asset('/') }}innodermFiles/innoderm4/slide-1.jpg" alt=""></div>
                 <div class="feed-text">
                     <p><span>Prosto sam zadivljena!</span></p>
-                    <p>COLLAGEN SKIN SERUM je fenomenalno, prosto sam zadivljena!
-                        Nikada nisam probala ovako nešto. Serum hidrira i zateže kožu. Ujutru sam se probula i nanela
-                        je, pa mi je lice bilo sveže celi dan. Koristim ga već dve nedelje
+                    <p>EXFOLIATING MOUSSE krema je fenomenalna, prosto sam zadivljena!
+                        Nikada nisam probala ovako nešto. Krema hidrira i zateže kožu. Ujutru sam se probula i očistila lice,
+                        pa mi je lice bilo sveže celi dan. Koristim je već dve nedelje
                         i bore oko očiju mi polako nestaju. Srećna sam kada se gledam u ogledalo, popravilo mi se i
-                        raspoloženje! Hvala vam za ovo divno serum, preporučila sam je svim
-                        svojim prijateljicama.</p>
+                        raspoloženje! Hvala vam za ovu divnu kremu, preporučila sam je svim svojim prijateljicama.</p>
                     <p><b>Suzana, 50 godina</b></p>
                 </div>
             </div>
@@ -234,10 +233,10 @@
                 <div class="feed-img"><img src="{{ asset('/') }}innodermFiles/innoderm4/slide-2.jpg" alt=""></div>
                 <div class="feed-text">
                     <p><span>Nema više injekcija!</span></p>
-                    <p>Volim kada kozmetika ne samo obećava već i radi! COLLAGEN SKIN SERUM vidno zaglađuje bore, eliminiše tamne
+                    <p>Volim kada kozmetika ne samo obećava već i radi! EXFOLIATING MOUSSE vidno zaglađuje bore, eliminiše tamne
                         kolutove oko očiju i osvežava ten za 5 minuta!
-                        Čudesno serum, ovo je čista magija! Koža je elastična, glatka i svilenkasta! Nanosim je na vrat
-                        i dekolte, prezadovoljna sam! Čista petica! Mnogo vam hvala!</p>
+                        Čudesna krema, ovo je čista magija! Koža je elastična, glatka i svilenkasta!
+                        Čistim vrat i dekolte, prezadovoljna sam! Čista petica! Mnogo vam hvala!</p>
                     <p><b>Katarina, 52 godine</b></p>
                 </div>
             </div>
@@ -245,10 +244,10 @@
                 <div class="feed-img"><img src="{{ asset('/') }}innodermFiles/innoderm4/slide-3.jpg" alt=""></div>
                 <div class="feed-text">
                     <p><span>Najbolje što sam ikada probala!</span></p>
-                    <p>Idealna stvar, nanesite tanak sloj i lice se menja pred vašim očima! Koža postaje zategnuta a
+                    <p>Idealna stvar, očistite lice penom i lice se menja pred vašim očima! Koža postaje zategnuta a
                         bore izglađene. Konačno sam našla savršen proizvod za negu mog lica!
                         Svaki dan dobijam komplimente od kolega na poslu, a prijatelji su me pitali da li sam radila
-                        filere. Svi su u šoku kada kažem da je to rezultat ovog ulja!
+                        filere. Svi su u šoku kada kažem da je to rezultat ove kreme!
                         Zaista je super, ja sam kupila 4 komada putem njihovog call centra!</p>
                     <p><b>Natalija, 46 godina</b></p>
                 </div>
@@ -257,7 +256,7 @@
     </div>
     <div class="take-block">
         <div class="take-block-name">
-            <h2><span>Kako naneti</span> COLLAGEN SKIN SERUM?</h2>
+            <h2><span>Kako naneti</span> EXFOLIATING MOUSSE?</h2>
         </div>
         <div class="take-block-list">
             <ul>
@@ -273,8 +272,8 @@
                     <div class="tbl-img"><img src="{{ asset('/') }}naturapharmFiles/snailcream/take2.png" alt=" "/>
                     </div>
                     <div class="tbl-info">
-                        <h3>NANETI SERUM</h3>
-                        <p>Nanesite COLLAGEN SKIN SERUM po celom licu i dekolteu</p>
+                        <h3>NANETI KREMU</h3>
+                        <p>Nanesite EXFOLIATING MOUSSE po celom licu i dekolteu</p>
                     </div>
                 </li>
                 <li id="t3">
@@ -282,7 +281,7 @@
                     </div>
                     <div class="tbl-info">
                         <h3>UŽIVAJTE U REZULTATU</h3>
-                        <p>Koristite serum 28 dana dok se koža potpuno ne obnovi</p>
+                        <p>Koristite kremu 28 dana dok se koža potpuno ne obnovi</p>
                     </div>
                 </li>
             </ul>
@@ -298,22 +297,22 @@
             <div class="item">
                 <div class="tbl-img"><img src="{{ asset('/') }}naturapharmFiles/snailcream/take2.png" alt=" "/></div>
                 <div class="tbl-info">
-                    <h3>NANETI SERUM</h3>
-                    <p>Nanesite COLLAGEN SKIN SERUM po celom licu i dekolteu</p>
+                    <h3>NANETI ULJE</h3>
+                    <p>Nanesite EXFOLIATING MOUSSE po celom licu i dekolteu</p>
                 </div>
             </div>
             <div class="item">
                 <div class="tbl-img"><img src="{{ asset('/') }}naturapharmFiles/snailcream/take3.png" alt=" "/></div>
                 <div class="tbl-info">
                     <h3>UŽIVAJTE U REZULTATU</h3>
-                    <p>Koristite serum 28 dana dok se koža potpuno ne obnovi</p>
+                    <p>Koristite ulje 28 dana dok se koža potpuno ne obnovi</p>
                 </div>
             </div>
         </div>
     </div>
     <div class="order-block">
         <div class="order-block-name">
-            <h2><span>Kako poručiti</span> COLLAGEN SKIN SERUM?</h2>
+            <h2><span>Kako poručiti</span> EXFOLIATING MOUSSE?</h2>
         </div>
         <div class="order-block-list">
             <ul>
@@ -364,7 +363,7 @@
 <footer>
     <div class="header-body">
         <div class="header-pack">
-            <div class="header-pack-body"><img src="{{ asset('/') }}naturapharmFiles/collagenskinserum/header-pack.png"
+            <div class="header-pack-body"><img src="{{ asset('/') }}purplegraceFiles/exfoliatingmousse/header-pack.png"
                                                alt=""/></div>
             <div class="header-pack-sale">
                 <p>
@@ -383,14 +382,14 @@
                     <h2>PODMLADI SE <span>ZA SAMO 5 DANA</span></h2>
                 </div>
                 <div class="header-text">
-                    <p><span>COLLAGEN SKIN SERUM ZA VEČNU MLADOST</span>
+                    <p><span>EXFOLIATING MOUSSE ZA VEČNU MLADOST</span>
                         <br>
                         I DO 4 PUTA EFIKASNIJE OD OSTALIH SREDSTAVA ZA PODMLAĐIVANJE!</p>
                 </div>
             </div>
             <div class="header-girl"><img src="{{ asset('/') }}naturapharmFiles/snailcream/girl.png" alt=""/></div>
             <div class="header-pack-mobile">
-                <div class="header-pack-body"><img src="{{ asset('/') }}naturapharmFiles/collagenskinserum/header-pack.png"
+                <div class="header-pack-body"><img src="{{ asset('/') }}purplegraceFiles/exfoliatingmousse/header-pack.png"
                                                    alt=""/></div>
                 <div class="header-pack-sale">
                     <p>
@@ -407,7 +406,7 @@
                 <ul>
                     <li> Izgleđuje bore <br><span>za 83%</span></li>
                     <li><span>Pospešuje proces</span> obnavljanja ćelija</li>
-                    <li> Zateže <span>konture lica</span></li>
+                    <li>Čisti kožu i <span>izbacuje nečistoće</span></li>
                     <li> Potpuno transformiše kožu <span>za 5 dana</span></li>
                 </ul>
             </div>
