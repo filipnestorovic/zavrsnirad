@@ -526,7 +526,7 @@
                 </div>
             </div>
         </section>
-        <div class="header_bottom">
+        <div id="footer" class="header_bottom">
             <div class="container">
                 <div class="main_title">
                     <h1><b>HAIR REMOVAL</b></h1>
