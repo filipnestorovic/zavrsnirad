@@ -239,10 +239,10 @@
             <form action="{{$orderRoute}}" class="m1-form" id="buy" method="post">
                 {{csrf_field()}}
                 @include('lander.naturapharm.components.form_hidden_fields')
-                <input class="field" name="name" placeholder="Ime i prezime" type="text"/>
-                <input class="field only_number" name="phone" placeholder="Telefon" type="text"/>
-                <input class="field" name="shipping_address" placeholder="Adresa" type="text"/>
-                <input class="field" name="shipping_city" placeholder="Grad" type="text"/>
+                <input class="field" name="name" placeholder="Ime i prezime" type="text" required/>
+                <input class="field only_number" name="phone" placeholder="Telefon" type="text" required/>
+                <input class="field" name="shipping_address" placeholder="Adresa" type="text" required/>
+                <input class="field" name="shipping_city" placeholder="Grad" type="text" required/>
                 <button type="submit" class="button-m js_pre_toform button__text">Naruči odmah</button>
                 <div id="toform"></div>
             </form>
