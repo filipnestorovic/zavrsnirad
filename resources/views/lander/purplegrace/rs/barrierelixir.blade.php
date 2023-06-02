@@ -35,7 +35,7 @@
 <header>
     <div class="header-body">
         <div class="header-pack">
-            <div class="header-pack-body"><img src="{{ asset('/') }}naturapharmFiles/barrierelixir/header-pack.png" alt=""/></div>
+            <div class="header-pack-body"><img src="{{ asset('/') }}purplegraceFiles/barrierelixir/header-pack.png" alt=""/></div>
             <div class="header-pack-sale">
                 <p>
                      <span class="price_land_s1">
@@ -61,7 +61,7 @@
             </div>
             <div class="header-girl"><img src="{{ asset('/') }}naturapharmFiles/snailcream/girl.png" alt=""/></div>
             <div class="header-pack-mobile">
-                <div class="header-pack-body"><img src="{{ asset('/') }}naturapharmFiles/barrierelixir/header-pack.png"
+                <div class="header-pack-body"><img src="{{ asset('/') }}purplegraceFiles/barrierelixir/header-pack.png"
                                                    alt=""/></div>
                 <div class="header-pack-sale">
                     <p>
@@ -141,7 +141,7 @@
             </div>
         </div>
         <div class="strong-block-text">
-            <img src="{{ asset('/') }}naturapharmFiles/barrierelixir/header-pack.png" alt=""/>
+            <img src="{{ asset('/') }}purplegraceFiles/barrierelixir/header-pack.png" alt=""/>
             <p>Inovativna formula i jedinstveni sastojci ispravljaju bore iznutra, opuštajući mišićna vlakna bez promene izraza lica.
                 Hijaluronska kiselina niske molekularne težine i morski
                 kolagen stimulišu ćelije kože da proizvode sopstveni kolagen i elastin!</p>
@@ -159,7 +159,7 @@
         </div>
         <div class="pay-block-info">
             <div class="pay-block-video"><img style="max-width: 100%"
-                                              src="{{ asset('/') }}naturapharmFiles/barrierelixir/header-pack.png" alt=""/>
+                                              src="{{ asset('/') }}purplegraceFiles/barrierelixir/header-pack.png" alt=""/>
             </div>
             <div class="pay-block-text">
                 <div class="pay-block__item1">
@@ -203,7 +203,7 @@
                             super-formulu, jedinu u celom svetu.</span>
                     </p>
                 </div>
-                <div class="contrast-block-img"><img src="{{ asset('/') }}naturapharmFiles/barrierelixir/header-pack.png"
+                <div class="contrast-block-img"><img src="{{ asset('/') }}purplegraceFiles/barrierelixir/header-pack.png"
                                                      alt=""/></div>
             </div>
             <div class="contrast-btn">
@@ -363,7 +363,7 @@
 <footer>
     <div class="header-body">
         <div class="header-pack">
-            <div class="header-pack-body"><img src="{{ asset('/') }}naturapharmFiles/barrierelixir/header-pack.png"
+            <div class="header-pack-body"><img src="{{ asset('/') }}purplegraceFiles/barrierelixir/header-pack.png"
                                                alt=""/></div>
             <div class="header-pack-sale">
                 <p>
@@ -389,7 +389,7 @@
             </div>
             <div class="header-girl"><img src="{{ asset('/') }}naturapharmFiles/snailcream/girl.png" alt=""/></div>
             <div class="header-pack-mobile">
-                <div class="header-pack-body"><img src="{{ asset('/') }}naturapharmFiles/barrierelixir/header-pack.png"
+                <div class="header-pack-body"><img src="{{ asset('/') }}purplegraceFiles/barrierelixir/header-pack.png"
                                                    alt=""/></div>
                 <div class="header-pack-sale">
                     <p>
