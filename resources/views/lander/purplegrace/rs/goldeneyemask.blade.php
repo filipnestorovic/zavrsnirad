@@ -282,7 +282,7 @@
     <div class="home__discount">Ne propustite priliku da iskoristite <span class="home__discount-item">40% popusta</span></div>
     <section class="home">
         <div class="container">
-            <h1 class="home__title">GOLDEN EYE MASKEN</h1>
+            <h1 class="home__title">GOLDEN EYE MASK</h1>
             <div class="home__subtitle">Specijalna formula za podmlađivanje lica</div>
             <div class="home__images">
                 <img src="{{ asset('/') }}purplegraceFiles/goldeneyemask/product.png" alt="" />
