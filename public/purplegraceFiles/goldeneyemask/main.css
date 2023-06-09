@@ -981,9 +981,9 @@ div.video_block .play {
     bottom: 190px;
   }
 
-  .home {
-    background: url("home__bg-tablet.jpg") center top no-repeat;
-  }
+  /*.home {*/
+  /*  background: url("home__bg-tablet.jpg") center top no-repeat;*/
+  /*}*/
 
   .info-1 {
     background: linear-gradient(to top, #fff 0, #f8f3e0 100%);
