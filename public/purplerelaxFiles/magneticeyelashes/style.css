@@ -1871,7 +1871,7 @@ h2.title span {
 
 @media screen and (max-width: 639px) {
     .offer {
-        background: url("offer-mobile.jpg") 50% -20% no-repeat #ffd4ca;
+        background: url("offer-mobile.jpg") 50% -50% no-repeat #ffd4ca;
         padding: 20px 0 25px;
         height: auto;
         overflow: hidden;
@@ -1890,11 +1890,11 @@ h2.title span {
         font-size: 18px;
         line-height: 28px;
         float: none;
-        margin-bottom: 450px;
+        margin-bottom: 320px;
     }
     .offer .sale {
         left: 5px;
-        top: 392px;
+        top: 320px;
     }
     .offer .bullet {
         position: relative;
