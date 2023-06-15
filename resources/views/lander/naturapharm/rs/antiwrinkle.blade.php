@@ -195,7 +195,8 @@
             <div class="contrast-block-info">
                 <div class="contrast-block-text">
                     <p>
-                        Formula inovativne kreme ANTI WRINKLE rezultat je dugogodišnjeg istraživanja. Zasnovana je na <span>potpuno prirodnim sastojcima i vitaminima.</span>
+                        Formula inovativne kreme ANTI WRINKLE rezultat je dugogodišnjeg istraživanja.
+                        Zasnovana je na <span>potpuno prirodnim sastojcima i vitaminima.</span>
                         Zahvaljujući tome ANTI WRINKLE <span>zaglađuje bore i trajno eliminiše uzrok starenja kože preokretom autoimunih procesa.</span>
                     </p>
                     <p>
@@ -236,8 +237,8 @@
                     <p><span>Nema više injekcija!</span></p>
                     <p>Volim kada kozmetika ne samo obećava već i radi! ANTI WRINKLE vidno zaglađuje bore, eliminiše tamne
                         kolutove oko očiju i osvežava ten za 5 minuta!
-                        Čudesna krema, ovo je čista magija! Koža je elastična, glatka i svilenkasta! Nanosim je na vrat
-                        i dekolte, prezadovoljna sam! Čista petica! Mnogo vam hvala!</p>
+                        Čudesna krema, ovo je čista magija! Koža je elastična, glatka i svilenkasta! Nanosim je na po celom licu,
+                        prezadovoljna sam! Čista petica! Mnogo vam hvala!</p>
                     <p><b>Katarina, 52 godine</b></p>
                 </div>
             </div>
@@ -257,7 +258,7 @@
     </div>
     <div class="take-block">
         <div class="take-block-name">
-            <h2><span>Kako naneti</span> ANTI WRINKLE kremu?</h2>
+            <h2><span>Kako naneti</span> ANTI WRINKLE?</h2>
         </div>
         <div class="take-block-list">
             <ul>
@@ -274,7 +275,7 @@
                     </div>
                     <div class="tbl-info">
                         <h3>NANETI KREMU</h3>
-                        <p>Nanesite ANTI WRINKLE po celom licu i dekolteu</p>
+                        <p>Nanesite ANTI WRINKLE po celom licu</p>
                     </div>
                 </li>
                 <li id="t3">
@@ -299,7 +300,7 @@
                 <div class="tbl-img"><img src="{{ asset('/') }}naturapharmFiles/snailcream/take2.png" alt=" "/></div>
                 <div class="tbl-info">
                     <h3>NANETI KREMU</h3>
-                    <p>Nanesite ANTI WRINKLE po celom licu i dekolteu</p>
+                    <p>Nanesite ANTI WRINKLE po celom licu</p>
                 </div>
             </div>
             <div class="item">
