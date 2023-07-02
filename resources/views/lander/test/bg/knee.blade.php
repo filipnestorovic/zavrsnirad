@@ -1,6 +1,22 @@
-
-@include('lander.flexoval.components.head')
-
+<!DOCTYPE html>
+<html
+    class="clickfunnels-com bgCover wf-proximanova-i4-active wf-proximanova-i7-active wf-proximanova-n4-active wf-proximanova-n7-active wf-active wf-proximanova-i3-active wf-proximanova-n3-active elFont_helvectica wf-proximanovasoft-n4-active wf-proximanovasoft-n7-active wf-proximasoft-n4-active wf-proximasoft-i4-active wf-proximasoft-i6-active wf-proximasoft-n6-active wf-proximasoft-i7-active wf-proximasoft-n7-active avcHn2VQJenBvoR5hilPG "
+    style="overflow: initial; background-color: rgb(45, 45, 45);">
+<head>
+    @include('components.front_header')
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="utf-8" http-equiv="encoding">
+    <meta name="viewport" content="initial-scale=1">
+    <link rel="stylesheet" media="screen" href="{{ asset('/') }}testFiles/koleno/lander.css">
+    <link rel='icon' type='image/png' href='{{ asset('/') }}testFiles/koleno/favicon.png'>
+    <link href="{{ asset('/') }}shared_files/font-awesome-420.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,700%7COswald:400,700%7CDroid+Sans:400,700%7CRoboto:400,700%7CLato:400,700%7CPT+Sans:400,700%7CSource+Sans+Pro:400,600,700%7CNoto+Sans:400,700%7CPT+Sans:400,700%7CUbuntu:400,700%7CBitter:400,700%7CPT+Serif:400,700%7CRokkitt:400,700%7CDroid+Serif:400,700%7CRaleway:400,700%7CInconsolata:400,700"
+        rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{{ asset('/') }}checkoutFiles/shared_files/order-cvr.min.css">
+</head>
+<body>
+@include('components.display_errors')
 <!-- display:mobile -->
 <div class="dropZoneForSections ui-droppable" style="display: none;"><div class="dropIconr"><i class="fa fa-plus"></i></div></div>
 <div class="container noTopMargin padding40-top padding40-bottom padding40H borderSolid cornersAll radius0 shadow0 bgNoRepeat activeSection_topBorder0 activeSection_bottomBorder0 emptySection midWideContainer borderLightTop border10px addBonusBottomSpacing activeSection innerToolsTop" id="section--76595" data-title="Section - Clone" data-block-color="0074C7" style="padding-top: 10px; padding-bottom: 15px; outline: none; background-color: rgb(255, 255, 255); border-color: rgb(0, 70, 129); margin-top: 0px;" data-trigger="none" data-animate="fade" data-delay="500" data-hide-on="mobile">
@@ -11,7 +27,7 @@
             <div id="scroll-Section" class="col-md-12 innerContent col_left" data-col="full" data-trigger="none" data-animate="fade" data-delay="500" data-title="full column" style="outline: none;">
                 <div class="col-inner bgCover  noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin">
                     <div class="de elImageWrapper de-image-block elAlign_center elMargin0 ui-droppable de-editable" id="img-83313-155" data-de-type="img" data-de-editing="false" data-title="image" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 0px; outline: none; cursor: pointer;" data-imagelink="" aria-disabled="false">
-                        <a href=""><img src="{{ asset('/') }}kyrokFiles/shared_files/logo.png" class="elIMG ximg" width="125" height="" data-imagelink=""></a>
+                        <a href=""><img src="{{ asset('/') }}testFiles/shared_files/logo.jpg" class="elIMG ximg" width="125" height="" data-imagelink=""></a>
                     </div>
                     <div class="de elSeperator elMargin0 ui-droppable de-editable" id="divider-69237-155-106" data-de-type="divider" data-de-editing="false" data-title="Divider" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 0px; outline: none; cursor: pointer;" aria-disabled="false">
                         <div class="elDivider elDividerStyle1 padding10-top padding10-bottom">
@@ -62,7 +78,7 @@
             <div id="col-full-116" class="col-md-12 innerContent col_left" data-col="full" data-trigger="none" data-animate="fade" data-delay="500" data-title="full column" style="outline: none;">
                 <div class="col-inner bgCover  noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin">
                     <div class="de elImageWrapper de-image-block elAlign_center elMargin0 ui-droppable de-editable" id="tmp_image-12478" data-de-type="img" data-de-editing="false" data-title="image" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 0px; outline: none; cursor: pointer;" data-imagelink="" aria-disabled="false">
-                        <a href=""><img src="{{ asset('/') }}kyrokFiles/shared_files/logo.png" class="elIMG ximg" width="200" height="" data-imagelink=""></a>
+                        <a href=""><img src="{{ asset('/') }}testFiles/shared_files/logo.jpg" class="elIMG ximg" width="200" height="" data-imagelink=""></a>
                     </div>
                     <div class="de elSeperator elMargin0 ui-droppable de-editable" id="tmp_divider-89280" data-de-type="divider" data-de-editing="false" data-title="Divider" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 10px; outline: none; cursor: pointer;" aria-disabled="false">
                         <div class="elDivider elDividerStyle1 padding10-top padding10-bottom">
@@ -100,7 +116,7 @@
             <div id="col-left-128" class="innerContent col_left ui-resizable col-md-6" data-col="left" data-trigger="none" data-animate="fade" data-delay="500" data-title="Left column" style="outline: none;">
                 <div class="col-inner bgCover  noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin">
                     <div class="de elImageWrapper de-image-block elMargin0 elAlign_center ui-droppable de-editable" id="tmp_image-83798" data-de-type="img" data-de-editing="false" data-title="image" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 0px; outline: none; cursor: pointer;" data-hide-on="desktop" aria-disabled="false" data-element-theme="customized">
-                        <img src="{{ asset('/') }}kyrokFiles/koleno/kolenoPack.png" class="elIMG ximg" height="400" width="" alt="" style="" tabindex="0">
+                        <img src="{{ asset('/') }}testFiles/koleno/kolenoProduct.png" class="elIMG ximg" height="400" width="" alt="" style="" tabindex="0">
                     </div>
                 </div>
             </div>
@@ -126,7 +142,7 @@
                     </div>
 
                     <div class="de elImageWrapper de-image-block elAlign_center elMargin0 ui-droppable de-editable" id="tmp_image-40188" data-de-type="img" data-de-editing="false" data-title="image" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 20px; outline: none; cursor: pointer;" aria-disabled="false">
-                        <img src="{{ asset('/') }}flexovalFiles/shared_files/stars_bg.png" class="elIMG ximg" alt="" height="60" tabindex="0">
+                        <img src="{{ asset('/') }}testFiles/secondproduct/stars_bg.png" class="elIMG ximg" alt="" height="60" tabindex="0">
                     </div>
                 </div>
             </div>
@@ -141,7 +157,7 @@
             <div id="col-left-103" class="innerContent col_left ui-resizable col-md-4" data-col="left" data-trigger="none" data-animate="fade" data-delay="500" data-title="1st column" style="outline: none;">
                 <div class="col-inner bgCover  noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin" style="padding: 0 10px">
                     <div class="de elImageWrapper de-image-block elAlign_center elMargin0 ui-droppable de-editable" id="tmp_image-86996" data-de-type="img" data-de-editing="false" data-title="image" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 3px; outline: none; cursor: pointer;" aria-disabled="false">
-                        <img src="{{ asset('/') }}flexovalFiles/shared_files/harvard.png" class="elIMG ximg" alt="" tabindex="0">
+                        <img src="{{ asset('/') }}testFiles/koleno/harvard.png" class="elIMG ximg" alt="" tabindex="0">
                     </div>
                 </div>
             </div>
@@ -168,7 +184,7 @@
             <div id="col-full-139-103" class="col-md-12 innerContent col_left" data-col="full" data-trigger="none" data-animate="fade" data-delay="500" data-title="1st column" style="outline: none;">
                 <div class="col-inner bgCover  noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin" style="padding: 0 10px">
                     <div class="de elImageWrapper de-image-block elAlign_center elMargin0 ui-droppable de-editable" id="tmp_image-97705" data-de-type="img" data-de-editing="false" data-title="image" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 0px; outline: none; cursor: pointer;" aria-disabled="false">
-                        <img src="{{ asset('/') }}flexovalFiles/shared_files/harvard.png" class="elIMG ximg" alt="" width="200" tabindex="0">
+                        <img src="{{ asset('/') }}testFiles/koleno/harvard.png" class="elIMG ximg" alt="" width="200" tabindex="0">
                     </div>
                     <div class="de elHeadlineWrapper ui-droppable de-editable" id="tmp_headline1-81396" data-de-type="headline" data-de-editing="false" data-title="headline" data-ce="true" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 30px; outline: none; cursor: pointer;" aria-disabled="false">
                         <div class="ne elHeadline hsSize3 lh4 elMargin0 elBGStyle0 hsTextShadow0" style="text-align: center; font-size: 16px; color: rgb(0, 0, 0);" data-bold="inherit" data-gramm="false" contenteditable="false">
@@ -208,10 +224,10 @@
             <div id="col-left-164" class="col-md-6 innerContent col_left ui-resizable" data-col="left" data-trigger="none" data-animate="fade" data-delay="500" data-title="1st column" style="outline: none;">
                 <div class="col-inner bgCover  noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin" style="padding: 0 10px">
                     <div class="de elImageWrapper de-image-block elAlign_center elMargin0 ui-droppable de-editable hiddenElementTools" id="tmp_image-97295" data-de-type="img" data-de-editing="false" data-title="image" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 10px; outline: none; cursor: pointer;" aria-disabled="false">
-                        <img src="{{ asset('/') }}flexovalFiles/koleno/koleno2.png" class="elIMG ximg" alt="" height="" width="" tabindex="0">
+                        <img src="{{ asset('/') }}testFiles/koleno/koleno2.png" class="elIMG ximg" alt="" height="" width="" tabindex="0">
                     </div>
                     <div class="de elImageWrapper de-image-block elAlign_center elMargin0 ui-droppable de-editable" id="img-20609" data-de-type="img" data-de-editing="false" data-title="image" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 30px; outline: none; cursor: pointer;" aria-disabled="false">
-                        <img src="{{ asset('/') }}flexovalFiles/koleno/koleno3.png" class="elIMG ximg" alt="" height="290" width="" tabindex="0">
+                        <img src="{{ asset('/') }}testFiles/koleno/koleno3.png" class="elIMG ximg" alt="" height="290" width="" tabindex="0">
                     </div>
                 </div>
             </div>
@@ -249,10 +265,10 @@
             <div id="col-full-107-121" class="col-md-12 innerContent col_left" data-col="full" data-trigger="none" data-animate="fade" data-delay="500" data-title="1st column" style="outline: none;">
                 <div class="col-inner bgCover  noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin" style="padding: 0 10px">
                     <div class="de elImageWrapper de-image-block elAlign_center elMargin0 ui-droppable de-editable" id="tmp_image-87389" data-de-type="img" data-de-editing="false" data-title="image" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 20px; outline: none; cursor: pointer;" aria-disabled="false" data-imagelink="">
-                        <img src="{{ asset('/') }}kyrokFiles/koleno/kolenoPack.png" class="elIMG ximg" alt="" height="300" data-imagelink="" tabindex="0">
+                        <img src="{{ asset('/') }}testFiles/koleno/kolenoProduct.png" class="elIMG ximg" alt="" height="300" data-imagelink="" tabindex="0">
                     </div>
                     <div class="de elImageWrapper de-image-block elAlign_center elMargin0 ui-droppable de-editable" id="tmp_image-40188-156" data-de-type="img" data-de-editing="false" data-title="image" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 20px; outline: none; cursor: pointer;" aria-disabled="false">
-                        <img src="{{ asset('/') }}flexovalFiles/shared_files/stars_bg.png" class="elIMG ximg" alt="" height="60" tabindex="0">
+                        <img src="{{ asset('/') }}testFiles/secondproduct/stars_bg.png" class="elIMG ximg" alt="" height="60" tabindex="0">
                     </div>
                     <div class="de elHeadlineWrapper ui-droppable de-editable" id="tmp_headline1-56400-144" data-de-type="headline" data-de-editing="false" data-title="headline" data-ce="true" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 30px; outline: none; cursor: pointer; font-family: 'Open Sans', Helvetica, sans-serif !important;" aria-disabled="false" data-google-font="Open+Sans">
                         <div class="ne elHeadline hsSize3 lh4 elMargin0 elBGStyle0 hsTextShadow0" style="text-align: center;font-size: 32px" data-bold="inherit" data-gramm="false" contenteditable="false">
@@ -508,5 +524,164 @@
         </div>
     </div>
 </div>
+<!-- display:desktop -->
+<div
+    class="container midWideContainer noTopMargin padding20-top padding20-bottom padding40H noBorder borderSolid border3px cornersAll radius0 shadow0 bgNoRepeat emptySection"
+    id="section--50510" data-title="Section" data-block-color="0074C7"
+    style="padding-top: 20px; padding-bottom: 20px; outline: none;" data-trigger="none" data-animate="fade"
+    data-delay="500" data-hide-on="desktop">
+    <div class="containerInner ui-sortable">
+        <div
+            class="row bgCover noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin"
+            id="row--32160" data-trigger="none" data-animate="fade" data-delay="500" data-title="1 column row"
+            style="padding-top: 20px; padding-bottom: 20px; margin: 0px; outline: none;">
+            <div id="col-full-172" class="col-md-12 innerContent col_left" data-col="full" data-trigger="none"
+                 data-animate="fade" data-delay="500" data-title="1st column" style="outline: none;">
+                <div
+                    class="col-inner bgCover  noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin"
+                    style="padding: 0 10px">
+                    <div class="de elHeadlineWrapper ui-droppable de-editable" id="tmp_headline1-59821"
+                         data-de-type="headline" data-de-editing="false" data-title="headline" data-ce="true"
+                         data-trigger="none" data-animate="fade" data-delay="500"
+                         style="margin-top: 0px; outline: none; cursor: pointer;" data-google-font=""
+                         aria-disabled="false">
+                        <div class="ne elHeadline hsSize3 lh4 elMargin0 elBGStyle0 hsTextShadow0"
+                             style="text-align: center; font-size: 12px; color: rgb(136, 136, 136);" data-bold="inherit"
+                             data-gramm="false" contenteditable="false">
+                            <div>Copyright © {{ now()->year }}</div>
+                            <br>
+                                <div>{{ $product->brand->getAttribute('brand_name') }}</div>
+                            <div><br></div>
+                        </div>
+                    </div>
+                    <div class="de elNavWrapper de-nav elAlign_center elMargin0 ui-droppable de-editable"
+                         id="tmp_nav-49174" data-de-type="nav" data-de-editing="false" data-title="navigation"
+                         data-ce="false" data-trigger="none" data-animate="fade" data-delay="500"
+                         style="margin-top: 0px; outline: none; cursor: pointer;" aria-disabled="false">
+                        <nav class="nodoNav elLinks3 elLinkSize1 slide elLinkNormal">
 
-@include('lander.flexoval.components.footer')
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- display:mobile -->
+<div class="dropZoneForSections ui-droppable" style="display: none;">
+    <div class="dropIconr"><i class="fa fa-plus"></i></div>
+</div>
+<div
+    class="container midWideContainer noTopMargin padding20-top padding20-bottom padding40H noBorder borderSolid border3px cornersAll radius0 shadow0 bgNoRepeat emptySection"
+    id="section--50510-164" data-title="Section - Clone" data-block-color="0074C7"
+    style="padding-top: 20px; padding-bottom: 20px; outline: none;" data-trigger="none" data-animate="fade"
+    data-delay="500" data-hide-on="mobile">
+    <div class="containerInner ui-sortable">
+        <div
+            class="row bgCover noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin"
+            id="row--32160-104" data-trigger="none" data-animate="fade" data-delay="500" data-title="1 column row"
+            style="padding-top: 20px; padding-bottom: 20px; margin: 0px; outline: none;">
+            <div id="col-full-172-178" class="col-md-12 innerContent col_left" data-col="full" data-trigger="none"
+                 data-animate="fade" data-delay="500" data-title="1st column" style="outline: none;">
+                <div
+                    class="col-inner bgCover  noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin"
+                    style="padding: 0 10px">
+                    <div class="de elHeadlineWrapper ui-droppable de-editable" id="tmp_headline1-59821-147"
+                         data-de-type="headline" data-de-editing="false" data-title="headline" data-ce="true"
+                         data-trigger="none" data-animate="fade" data-delay="500"
+                         style="margin-top: 0px; outline: none; cursor: pointer;" data-google-font=""
+                         aria-disabled="false">
+                        <div class="ne elHeadline hsSize3 lh4 elMargin0 elBGStyle0 hsTextShadow0"
+                             style="text-align: center; font-size: 12px; color: rgb(136, 136, 136);" data-bold="inherit"
+                             data-gramm="false" contenteditable="false">
+                            <div>Copyright © {{ now()->year }}</div>
+                            <br>
+                            <span
+                                style="background-color: initial;">{{ $product->brand->getAttribute('brand_name') }}</span>
+                        </div>
+                        <div>
+                            <span style="background-color: initial;"><br></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="de elNavWrapper de-nav elAlign_center elMargin0 ui-droppable de-editable"
+                     id="tmp_nav-49174-128" data-de-type="nav" data-de-editing="false" data-title="navigation"
+                     data-ce="false" data-trigger="none" data-animate="fade" data-delay="500"
+                     style="margin-top: 0px; outline: none; cursor: pointer;" aria-disabled="false">
+                    <nav class="nodoNav elLinks3 elLinkSize1 slide elLinkNormal">
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<script type="text/javascript">
+
+    $(function () {
+        $("#accordion").accordion();
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    });
+
+</script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<style>
+
+    #accordion h3::before {
+        content: "\f0da";
+        font-family: "FontAwesome";
+        font-weight: normal;
+        margin: 0 10px 0 0;
+    }
+
+    .listIcon6 li::before {
+        content: "\f00c";
+        font-family: "FontAwesome";
+        font-weight: normal;
+        margin: 0 10px 0 0;
+        color: rgb(30, 201, 1) !important;
+    }
+
+    #accordion {
+        margin: 0 auto;
+        width: 80%;
+        font-size: 16px;
+    }
+
+    #accordion h3 {
+        text-align: left;
+        color: #000000;
+        background-color: #F5F5F5;
+        font-family: Open Sans;
+        font-size: 18px;
+        padding: 19.96px;
+        border-radius: 2px 2px 0 0;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    #accordion p {
+        margin-bottom: 8px;
+    }
+
+    #accordion div p {
+        padding: 20px;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+</style>
+@include('components.front_footer')
+</body>
+</html>

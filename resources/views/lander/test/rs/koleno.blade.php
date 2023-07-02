@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html
-    class="clickfunnels-com bgCover wf-proximanova-i4-active wf-proximanova-i7-active wf-proximanova-n4-active wf-proximanova-n7-active wf-active wf-proximanova-i3-active wf-proximanova-n3-active elFont_helvectica wf-proximanovasoft-n4-active wf-proximanovasoft-n7-active wf-proximasoft-n4-active wf-proximasoft-i4-active wf-proximasoft-i6-active wf-proximasoft-n6-active wf-proximasoft-i7-active wf-proximasoft-n7-active avcHn2VQJenBvoR5hilPG " style="overflow: initial; background-color: rgb(45, 45, 45);">
+    class="clickfunnels-com bgCover wf-proximanova-i4-active wf-proximanova-i7-active wf-proximanova-n4-active wf-proximanova-n7-active wf-active wf-proximanova-i3-active wf-proximanova-n3-active elFont_helvectica wf-proximanovasoft-n4-active wf-proximanovasoft-n7-active wf-proximasoft-n4-active wf-proximasoft-i4-active wf-proximasoft-i6-active wf-proximasoft-n6-active wf-proximasoft-i7-active wf-proximasoft-n7-active avcHn2VQJenBvoR5hilPG "
+    style="overflow: initial; background-color: rgb(45, 45, 45);">
 <head>
-    <script src="{{ asset('/') }}shared_files/jquery-1.12.4.min.js" type="text/javascript"></script>
-    <meta property="og:title" content="{{ $product->product_name }} | {{ $product->brand_name }}">
-    <meta property="og:description" content="{{ $product->product_name }}">
-    <meta property="og:image" content="{{ asset('/').$product->product_image }}">
-    <meta property="og:url" content="{{ $product->domain_url }}/{{ $product->slug }}">
-    <title>{{ $product->product_name }} | {{ $product->brand_name }}</title>
+    @include('components.front_header')
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta content="utf-8" http-equiv="encoding">
     <meta name="viewport" content="initial-scale=1">
-    <link rel="stylesheet" media="screen" href="{{ asset('/') }}flexovalFiles/shared_files/lander.css">
-    <link rel='icon' type='image/png' href='{{ asset('/') }}flexovalFiles/shared_files/favicon.png'>
+    <link rel="stylesheet" media="screen" href="{{ asset('/') }}testFiles/koleno/lander.css">
+    <link rel='icon' type='image/png' href='{{ asset('/') }}testFiles/koleno/favicon.png'>
     <link href="{{ asset('/') }}shared_files/font-awesome-420.css" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:400,700%7COswald:400,700%7CDroid+Sans:400,700%7CRoboto:400,700%7CLato:400,700%7CPT+Sans:400,700%7CSource+Sans+Pro:400,600,700%7CNoto+Sans:400,700%7CPT+Sans:400,700%7CUbuntu:400,700%7CBitter:400,700%7CPT+Serif:400,700%7CRokkitt:400,700%7CDroid+Serif:400,700%7CRaleway:400,700%7CInconsolata:400,700"
@@ -20,6 +16,7 @@
     <link rel="stylesheet" href="{{ asset('/') }}checkoutFiles/shared_files/order-cvr.min.css">
 </head>
 <body>
+@include('components.display_errors')
 <!-- display:mobile -->
 <div class="dropZoneForSections ui-droppable" style="display: none;">
     <div class="dropIconr"><i class="fa fa-plus"></i></div>
@@ -45,8 +42,8 @@
                          data-ce="false" data-trigger="none" data-animate="fade" data-delay="500"
                          style="margin-top: 0px; outline: none; cursor: pointer;" data-imagelink=""
                          aria-disabled="false">
-                        <a href=""><img src="{{ asset('/') }}flexovalFiles/shared_files/logo.jpg" class="elIMG ximg"
-                                        width="125" height="" data-imagelink=""></a>
+                        <a href=""><img src="{{ asset('/') }}testFiles/shared_files/logo.jpg" class="elIMG ximg" width="125"
+                                        height="" data-imagelink=""></a>
                     </div>
                     <div class="de elSeperator elMargin0 ui-droppable de-editable" id="divider-69237-155-106"
                          data-de-type="divider" data-de-editing="false" data-title="Divider" data-ce="false"
@@ -137,8 +134,8 @@
                          data-ce="false" data-trigger="none" data-animate="fade" data-delay="500"
                          style="margin-top: 0px; outline: none; cursor: pointer;" data-imagelink=""
                          aria-disabled="false">
-                        <a href=""><img src="{{ asset('/') }}flexovalFiles/shared_files/logo.jpg" class="elIMG ximg"
-                                        width="200" height="" data-imagelink=""></a>
+                        <a href=""><img src="{{ asset('/') }}testFiles/shared_files/logo.jpg" class="elIMG ximg" width="200"
+                                        height="" data-imagelink=""></a>
                     </div>
                     <div class="de elSeperator elMargin0 ui-droppable de-editable" id="tmp_divider-89280"
                          data-de-type="divider" data-de-editing="false" data-title="Divider" data-ce="false"
@@ -212,8 +209,8 @@
                          data-ce="false" data-trigger="none" data-animate="fade" data-delay="500"
                          style="margin-top: 0px; outline: none; cursor: pointer;" data-hide-on="desktop"
                          aria-disabled="false" data-element-theme="customized">
-                        <img src="{{ asset('/') }}flexovalFiles/koleno/kolenoProduct.png" class="elIMG ximg"
-                             height="400" width="" alt="" style="" tabindex="0">
+                        <img src="{{ asset('/') }}testFiles/koleno/kolenoProduct.png" class="elIMG ximg" height="400"
+                             width="" alt="" style="" tabindex="0">
                     </div>
                 </div>
             </div>
@@ -262,8 +259,8 @@
                          id="tmp_image-40188" data-de-type="img" data-de-editing="false" data-title="image"
                          data-ce="false" data-trigger="none" data-animate="fade" data-delay="500"
                          style="margin-top: 20px; outline: none; cursor: pointer;" aria-disabled="false">
-                        <img src="{{ asset('/') }}flexovalFiles/shared_files/stars_rs.jpg" class="elIMG ximg" alt=""
-                             height="60" tabindex="0">
+                        <img src="{{ asset('/') }}testFiles/koleno/stars_rs.jpg" class="elIMG ximg" alt="" height="60"
+                             tabindex="0">
                     </div>
                 </div>
             </div>
@@ -294,8 +291,7 @@
                          id="tmp_image-86996" data-de-type="img" data-de-editing="false" data-title="image"
                          data-ce="false" data-trigger="none" data-animate="fade" data-delay="500"
                          style="margin-top: 3px; outline: none; cursor: pointer;" aria-disabled="false">
-                        <img src="{{ asset('/') }}flexovalFiles/shared_files/harvard.png" class="elIMG ximg" alt=""
-                             tabindex="0">
+                        <img src="{{ asset('/') }}testFiles/koleno/harvard.png" class="elIMG ximg" alt="" tabindex="0">
                     </div>
                 </div>
             </div>
@@ -347,8 +343,8 @@
                          id="tmp_image-97705" data-de-type="img" data-de-editing="false" data-title="image"
                          data-ce="false" data-trigger="none" data-animate="fade" data-delay="500"
                          style="margin-top: 0px; outline: none; cursor: pointer;" aria-disabled="false">
-                        <img src="{{ asset('/') }}flexovalFiles/shared_files/harvard.png" class="elIMG ximg" alt=""
-                             width="200" tabindex="0">
+                        <img src="{{ asset('/') }}testFiles/koleno/harvard.png" class="elIMG ximg" alt="" width="200"
+                             tabindex="0">
                     </div>
                     <div class="de elHeadlineWrapper ui-droppable de-editable" id="tmp_headline1-81396"
                          data-de-type="headline" data-de-editing="false" data-title="headline" data-ce="true"
@@ -430,15 +426,15 @@
                         id="tmp_image-97295" data-de-type="img" data-de-editing="false" data-title="image"
                         data-ce="false" data-trigger="none" data-animate="fade" data-delay="500"
                         style="margin-top: 10px; outline: none; cursor: pointer;" aria-disabled="false">
-                        <img src="{{ asset('/') }}flexovalFiles/koleno/koleno2.png" class="elIMG ximg" alt="" height=""
+                        <img src="{{ asset('/') }}testFiles/koleno/koleno2.png" class="elIMG ximg" alt="" height=""
                              width="" tabindex="0">
                     </div>
                     <div class="de elImageWrapper de-image-block elAlign_center elMargin0 ui-droppable de-editable"
                          id="img-20609" data-de-type="img" data-de-editing="false" data-title="image" data-ce="false"
                          data-trigger="none" data-animate="fade" data-delay="500"
                          style="margin-top: 30px; outline: none; cursor: pointer;" aria-disabled="false">
-                        <img src="{{ asset('/') }}flexovalFiles/koleno/koleno3.png" class="elIMG ximg" alt=""
-                             height="290" width="" tabindex="0">
+                        <img src="{{ asset('/') }}testFiles/koleno/koleno3.png" class="elIMG ximg" alt="" height="290"
+                             width="" tabindex="0">
                     </div>
                 </div>
             </div>
@@ -523,15 +519,15 @@
                          data-ce="false" data-trigger="none" data-animate="fade" data-delay="500"
                          style="margin-top: 20px; outline: none; cursor: pointer;" aria-disabled="false"
                          data-imagelink="">
-                        <img src="{{ asset('/') }}flexovalFiles/koleno/kolenoProduct.png" class="elIMG ximg" alt=""
+                        <img src="{{ asset('/') }}testFiles/koleno/kolenoProduct.png" class="elIMG ximg" alt=""
                              height="300" data-imagelink="" tabindex="0">
                     </div>
                     <div class="de elImageWrapper de-image-block elAlign_center elMargin0 ui-droppable de-editable"
                          id="tmp_image-40188-156" data-de-type="img" data-de-editing="false" data-title="image"
                          data-ce="false" data-trigger="none" data-animate="fade" data-delay="500"
                          style="margin-top: 20px; outline: none; cursor: pointer;" aria-disabled="false">
-                        <img src="{{ asset('/') }}flexovalFiles/shared_files/stars_rs.jpg" class="elIMG ximg" alt=""
-                             height="60" tabindex="0">
+                        <img src="{{ asset('/') }}testFiles/koleno/stars_rs.jpg" class="elIMG ximg" alt="" height="60"
+                             tabindex="0">
                     </div>
                     <div class="de elHeadlineWrapper ui-droppable de-editable" id="tmp_headline1-56400-144"
                          data-de-type="headline" data-de-editing="false" data-title="headline" data-ce="true"
@@ -1091,21 +1087,6 @@
 
                         </nav>
                     </div>
-                    <div class="de elCustomJs elMargin0 ui-droppable de-editable" id="tmp_customjs-56964"
-                         data-de-type="customjs" data-de-editing="false" data-title="Custom JS / HTML" data-ce="false"
-                         data-trigger="none" data-animate="fade" data-delay="500"
-                         style="margin-top: 20px; outline: none; cursor: pointer;" aria-disabled="false">
-                        <div class="elCustomJSBg">CUSTOM JAVASCRIPT / HTML</div>
-                        <div class="elCustomJS_code"
-                             data-custom-js="&lt;center&gt;&lt;a href=&quot;//&quot; title=&quot;DMCA.com Protection Status&quot; class=&quot;dmca-badge&quot;&gt; &lt;img src =&quot;//&quot;  alt=&quot;DMCA.com Protection Status&quot; /&gt;&lt;/a&gt;  &lt;script src=&quot;//&quot;&gt; &lt;/script&gt;&lt;/center&gt;"
-                             data-displaytype="htmlregular">
-                            <center>
-                                <a href="#" title="DMCA.com Protection Status" class="dmca-badge">
-                                    <img src="{{ asset('/') }}shared_files/dmca.png" alt="DMCA Protection Status">
-                                </a>
-                            </center>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1155,21 +1136,6 @@
                      style="margin-top: 0px; outline: none; cursor: pointer;" aria-disabled="false">
                     <nav class="nodoNav elLinks3 elLinkSize1 slide elLinkNormal">
                     </nav>
-                </div>
-                <div class="de elCustomJs elMargin0 ui-droppable de-editable" id="tmp_customjs-15969"
-                     data-de-type="customjs" data-de-editing="false" data-title="Custom JS / HTML" data-ce="false"
-                     data-trigger="none" data-animate="fade" data-delay="500"
-                     style="margin-top: 20px; outline: none; cursor: pointer;" aria-disabled="false">
-                    <div class="elCustomJSBg">CUSTOM JAVASCRIPT / HTML</div>
-                    <div class="elCustomJS_code"
-                         data-custom-js="&lt;center&gt;&lt;a href=&quot;//&quot; title=&quot;DMCA.com Protection Status&quot; class=&quot;dmca-badge&quot;&gt; &lt;img src =&quot;//&quot;  alt=&quot;DMCA.com Protection Status&quot; /&gt;&lt;/a&gt;  &lt;script src=&quot;//&quot;&gt; &lt;/script&gt;&lt;/center&gt;"
-                         data-displaytype="htmlregular">
-                        <center>
-                            <a href="#" title="DMCA.com Protection Status" class="dmca-badge">
-                                <img src="{{ asset('/') }}shared_files/dmca.png" alt="DMCA Protection Status">
-                            </a>
-                        </center>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1241,122 +1207,7 @@
     }
 
 </style>
-@if(isset($product->country_code) && $product->country_code === "rs")
-    @include('components.company_footer')
-@endif
-<input type="hidden" id="currencyHidden" value="{{ $prices[1]['currency']}}"/>
-<style>
-    .phoneErrorInput {
-        border: 2px solid #FF0000;
-        background-color: #FF7F7F !important;
-    }
-    .phoneErrorText {
-        color: #FF0000;
-        text-align: center;
-        margin: 10px 0;
-    }
-</style>
-<script>
-    $(document).ready(function () {
-
-        const baseURL = "{{ asset('/') }}";
-        const csrf_token = "{{ csrf_token() }}";
-
-        $('form').submit(function(e){
-            if($(this).attr('action')==='/order'){
-                $phone_input = $(this).closest('form').find('input[name=phone]');
-                let phone = $phone_input.val();
-                let country = '{{strtoupper($product->country_code)}}';
-                let validationResult = validatePhoneNumber(phone, country);
-                let errorText = "";
-                switch (country) {
-                    case 'RS':
-                        errorText = 'Pogrešan format telefona';
-                        break;
-                    case 'BG':
-                        errorText = 'Грешен формат на телефона';
-                        break;
-                    case 'RO':
-                        errorText = 'Format de telefon greșit';
-                        break;
-                    case 'GR':
-                        errorText = 'Λάθος μορφή τηλεφώνου';
-                        break;
-                    case 'PL':
-                        errorText = 'Nieprawidłowy format telefonu';
-                        break;
-                    case 'SK':
-                        errorText = 'Nesprávny formát telefónu';
-                        break;
-                    case 'CZ':
-                        errorText = 'Špatný formát telefonu';
-                        break;
-                    case 'SI':
-                        errorText = 'Napačen format telefonske številke';
-                        break;
-                    case 'HU':
-                        errorText = 'Hibás telefonszám-formátum';
-                        break;
-                    default:
-                        errorText = "Wrong phone number format";
-                }
-
-                if(validationResult === "1") {
-                    $phone_input.removeClass('phoneErrorInput');
-                    $('.phoneErrorText').hide();
-                    $(this).closest('form').find(':submit').attr('disabled','disabled');
-                } else {
-                    e.preventDefault();
-                    $phone_input.addClass('phoneErrorInput');
-                    $phone_input.after("<div class='phoneErrorText'>" + errorText + "</div>");
-                }
-            } else {
-                $(this).find(':submit').attr('disabled','disabled');
-            }
-        });
-
-
-        function validatePhoneNumber(phone, country) {
-            let returnResponse = 0;
-            let name = $('input[name=name]').val();
-            let email = $('input[name=email]').val();
-            let address = $('input[name=shipping_address]').val();
-            let city = $('input[name=shipping_city]').val();
-            let zip = $('input[name=shipping_zip]').val();
-            let quantity = $('input[name=quantity]').val();
-            let variation_id = $('input[name=variation_id]').val();
-            $.ajax({
-                url: baseURL + "validatePhoneNumber",
-                type:"POST",
-                async: false,
-                data:{
-                    phone:phone,
-                    country:country,
-                    name:name,
-                    email:email,
-                    address:address,
-                    city:city,
-                    zip:zip,
-                    quantity:quantity,
-                    variation_id:variation_id,
-                    _token: csrf_token
-                },
-                success:function(response){
-                    returnResponse = response;
-                },
-                error: function (req, err) {
-                    console.log(req);
-                }
-            });
-            return returnResponse;
-        }
-
-        $("#shipping_zip").keyup(function() {
-            $("#shipping_zip").val(this.value.match(/[0-9]*/));
-        });
-
-    });
-</script>
+@include('components.front_footer')
 </body>
 </html>
 
