@@ -15,31 +15,24 @@
     </caption>
     <tbody style="vertical-align: middle;">
     @foreach($paginatedItems as $singleTest)
-
         <tr style="padding-top: 0px;"
-            @if($singleTest[0]["is_test_active"] === 1)
+            @if($singleTest->getAttribute('is_active') === 1)
             class="table-success"
             @endif
-            @if($singleTest[0]["ended_at"] != null)
+            @if($singleTest->getAttribute('ended_at'))
             class="table-danger"
             @endif
         >
-            @php
-                $countVariations = 0;
-                foreach($singleTest as $singleTestVariations) {
-                    if($singleTestVariations['variation_name'] != null) {
-                        $countVariations++;
-                    }
-                }
-            @endphp
-
-            <td>{{ $singleTest[0]["id_test"] }}</td>
-            <td>{{ $singleTest[0]["product_name"] }} ({{ $singleTest[0]["country_name"] }})</td>
-            <td>{{ $singleTest[0]["created_at"] }}</td>
-            <td>{{ $singleTest[0]["started_at"] }}<br/>{{ $singleTest[0]["ended_at"] }}</td>
-            <td>{{ $countVariations }}</td>
+            <td>{{ $singleTest->getAttribute('id_test') }}</td>
+            <td>{{ $singleTest->product->getAttribute('product_name') }} ({{  $singleTest->product->country->getAttribute('country_name') }})</td>
+            <td>{{ $singleTest->getAttribute('created_at') }}</td>
             <td>
-                <span class="table-edit"><a href="{{ route('singleTest',['id' => $singleTest[0]["id_test"]]) }}"><button type="button" class="btn btn-primary btn-rounded btn-sm my-0 detailsTestButton">DETAILS</button></a></span>
+                {{ $singleTest->getAttribute('started_at') }}<br/>
+                {{ $singleTest->getAttribute('ended_at') }}
+            </td>
+            <td>{{ $singleTest->testVariations->count() }}</td>
+            <td>
+                <span class="table-edit"><a href="{{ route('singleTest',['id' => $singleTest->getAttribute('id_test')]) }}"><button type="button" class="btn btn-primary btn-rounded btn-sm my-0 detailsTestButton">DETAILS</button></a></span>
             </td>
         </tr>
     @endforeach

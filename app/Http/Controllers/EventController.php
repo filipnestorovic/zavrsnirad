@@ -23,7 +23,6 @@ class EventController extends Controller
 
         $rules = [
             'event_name' => ['required', 'max:50'],
-            'isFbEvent' => ['required'],
         ];
 
         $messages = [
@@ -41,7 +40,6 @@ class EventController extends Controller
 
         try {
             $this->modelEvent->event_name = $request->get('event_name');
-            $this->modelEvent->is_fb_event = $request->get('isFbEvent');
 
             $insertResult = $this->modelEvent->insertEvent();
 
@@ -68,7 +66,6 @@ class EventController extends Controller
         $rules = [
             'eventIdModal' => ['required'],
             'eventNameModal' => ['required', 'max:50'],
-            'isFbEventModal' => ['required'],
         ];
 
         $messages = [
@@ -87,7 +84,6 @@ class EventController extends Controller
         try {
             $id = $request->get('eventIdModal');
             $this->modelEvent->event_name = $request->get('eventNameModal');
-            $this->modelEvent->is_fb_event = $request->get('isFbEventModal');
 
             $updateResult = $this->modelEvent->editEvent($id);
 
@@ -115,6 +111,17 @@ class EventController extends Controller
         } catch (\Exception $exception) {
             Log::error("Error: Deleting event | Exception: " . $exception->getMessage());
             return redirect()->back()->with('error', 'Error on deleting event!');
+        }
+    }
+
+    public function insertEventDbAjax(Request $request) {
+        try {
+            $session_id = $request->get('session_id');
+            $event_id = $request->get('event_id');
+
+            $insertResult = $this->modelEvent->insertSessionEvent($session_id, $event_id);
+        } catch (\Exception $exception) {
+            Log::error("Error: Inserting session event with Ajax | Session: ".$session_id." Event: ".$event_id." Exception: " . $exception->getMessage());
         }
     }
 }

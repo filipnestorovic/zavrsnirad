@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Brand;
 use App\Models\Country;
 use App\Models\Domain;
-use App\Models\Pixel;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Traits\UploadTrait;
@@ -23,48 +22,20 @@ class BrandController extends Controller
     {
         $this->modelBrand = new Brand();
         $this->modelCountry = new Country();
-        $this->modelPixel = new Pixel();
         $this->modelProduct = new Product();
         $this->modelDomain = new Domain();
     }
 
-    public function brandIndex(Request $request) {
-
-        $brandsList = json_decode($this->modelBrand->getAllBrandsWithPixels(), true);
-
-
-        foreach($brandsList as $key => $value) {
-            $criticals = [];
-            $errors = [];
-            $brandDomains = $this->modelDomain->getBrandDomains($value['id_brand'], null);
-            if(count($brandDomains)>0) {
-                foreach($brandDomains as $singleDomain) {
-                    if(!isset($singleDomain->fb_pixel)) {
-                        array_push($errors, 'Domain: '.$singleDomain->domain_url.' is not connected with pixel!');
-                    }
-                }
-            } else {
-                array_push($criticals, 'Brand must have at least one domain!');
-            }
-            $brandsList[$key]['criticals'] = $criticals;
-            $brandsList[$key]['errors'] = $errors;
-        }
-
-        $groupedBrands = $this->getMultipleItemsFromQuery($brandsList,'id_brand');
-
-        $this->data['pixelsDdl'] = $this->modelPixel->getAllPixels();
+    public function brandIndex() {
         $this->data['countriesDdl'] = $this->modelCountry->getAllCountries();
         $this->data['brands'] = $this->modelBrand->getAllBrands();
-        $this->data['brandsPixels'] = $groupedBrands;
         $this->data['domains'] = $this->modelDomain->getAllDomains();
+
         return view('admin.brand',$this->data);
     }
 
     public function getBrand($id) {
         $singleBrand = $this->modelBrand->getBrand($id);
-
-        $products = $this->modelProduct->getAllProductsAjax(null,$id,null);
-        $singleBrand->products = $products;
         if($singleBrand != null) {
             return json_encode($singleBrand, true);
         }
@@ -74,7 +45,6 @@ class BrandController extends Controller
 
         $rules = [
             'brand_name' => ['required','max:30'],
-//            'brand_url' => ['required','unique:brand,brand_url'],
             'brand_logo' => ['required','image'],
         ];
 
@@ -98,17 +68,11 @@ class BrandController extends Controller
             $filePath = null;
 
             try {
-                // Check if a profile image has been uploaded
                 if ($request->hasFile('brand_logo')) {
-                    // Get image file
                     $image = $request->file('brand_logo');
-                    // Make a image name based on user name and current timestamp
                     $name = $request->get('brand_name').'_logo';
-                    // Define folder path
                     $folder = strtolower($request->get('brand_name')).'Files/shared_files/';
-                    // Make a file path where image will be stored [ folder path + file name + file extension]
                     $filePath = $folder . $name. '.' . $image->getClientOriginalExtension();
-                    // Upload image
                     $uploadResult = $this->uploadOne($image, $folder, 'logo', $name);
                 }
             } catch (\Exception $exception) {
@@ -118,7 +82,6 @@ class BrandController extends Controller
 
             if($uploadResult != null) {
                 $this->modelBrand->brand_name = $request->get('brand_name');
-//                $this->modelBrand->brand_url = $request->get('brand_url');
                 $this->modelBrand->logo_url = $filePath;
 
                 $insertResult = $this->modelBrand->insertBrand();
@@ -138,7 +101,6 @@ class BrandController extends Controller
 
         $rules = [
             'brandNameModal' => ['required','max:30'],
-//            'brandUrlModal' => ['required'],
             'brandLogoModal' => ['image','nullable'],
         ];
 
@@ -161,17 +123,11 @@ class BrandController extends Controller
             $filePath = null;
 
             try {
-                // Check if a profile image has been uploaded
                 if ($request->hasFile('brandLogoModal')) {
-                    // Get image file
                     $image = $request->file('brandLogoModal');
-                    // Make a image name based on user name and current timestamp
                     $name = $request->get('brandNameModal').'_logo';
-                    // Define folder path
                     $folder = strtolower($request->get('brandNameModal')).'Files/shared_files/';
-                    // Make a file path where image will be stored [ folder path + file name + file extension]
                     $filePath = $folder . $name. '.' . $image->getClientOriginalExtension();
-                    // Upload image
                     $uploadResult = $this->uploadOne($image, $folder, 'logo', $name);
 
                     if($uploadResult != null) {
@@ -187,7 +143,6 @@ class BrandController extends Controller
 
             $id = $request->get('brandIdModal');
             $this->modelBrand->brand_name = $request->get('brandNameModal');
-//            $this->modelBrand->brand_url = $request->get('brandUrlModal');
 
             $updateResult = $this->modelBrand->editBrand($id);
 
@@ -217,7 +172,5 @@ class BrandController extends Controller
             return redirect()->back()->with('error','Error on deleting brand!');
         }
     }
-
-
 
 }

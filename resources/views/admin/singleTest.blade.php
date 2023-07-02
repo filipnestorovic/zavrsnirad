@@ -5,7 +5,7 @@
             <li class="breadcrumb-item"><a href="{{ route('adminDashboard') }}">Home</a></li>
             <li class="breadcrumb-item"><a href="{{ route('testsIndex') }}">Tests</a></li>
             <li class="breadcrumb-item active" aria-current="page">Test</li>
-            <li class="breadcrumb-item" aria-current="page">Product:&nbsp;<strong>{{ $product->product_name }} ({{ $product->country_name }})</strong></li>
+            <li class="breadcrumb-item" aria-current="page">Product:&nbsp;<strong>{{ $product->getAttribute('product_name') }} ({{ $product->country->getAttribute('country_name') }})</strong></li>
         </ol>
     </nav>
     <div class="mb-4 wow fadeIn">
@@ -57,33 +57,35 @@
                                 </tr>
                                 </thead>
                                 <tbody id="tableTestVariationsBody">
-                                <input type="hidden" id="wrongSum" value="@isset($wrongSum) {{ $wrongSum }} @endisset"/>
+                                <input type="hidden" id="wrongSum" value="{{ $wrongSum ?? '' }}"/>
                                 @isset($testVariations)
-                                    @foreach($testVariations as $variations)
-                                        @foreach($variations as $singleVariation)
-                                            @if($singleVariation['id_tests_variations'] != null)
+                                    @foreach($testVariations as $testVariation)
+                                            @if($testVariation->getAttribute('id_tests_variations'))
                                                 <tr
-                                                    @if($singleVariation['removed_at'] != null)
+                                                    @if($testVariation->getAttribute('removed_at'))
                                                         class="table-danger"
                                                     @endif
                                                 >
-                                                <td class="pt-3-half">{{ $singleVariation['id_tests_variations'] }}</td>
+                                                <td class="pt-3-half">{{ $testVariation->getAttribute('id_tests_variations') }}</td>
                                                 <td class="pt-3-half">
-                                                    <a class="text-primary" href="{{ route('variation',['id' => $singleVariation['id_variation']]) }}">
-                                                        {{ $singleVariation['variation_name'] }}
+                                                    <a class="text-primary" href="{{ route('variation',['id' => $testVariation->getAttribute('variation_id')]) }}" target="_blank">
+                                                        {{ $testVariation->variation->getAttribute('variation_name') }}
                                                     </a>
                                                 </td>
                                                 <td class="pt-3-half
-                                                @if((isset($wrongSum) && $wrongSum===1) && ($singleVariation['removed_at'] === null)) bg-warning @endif
-                                                ">{{$singleVariation['traffic_percentage']}}</td>
-                                                <td class="pt-3-half">{{$singleVariation['added_at']}}<br/>{{$singleVariation['removed_at']}}</td>
+                                                @if((isset($wrongSum) && $wrongSum===1) && ($testVariation->getAttribute('removed_at') === null)) bg-warning @endif
+                                                ">{{$testVariation->getAttribute('traffic_percentage')}}</td>
+                                                <td class="pt-3-half">
+                                                    {{$testVariation->getAttribute('added_at')}}<br/>
+                                                    {{$testVariation->getAttribute('removed_at')}}
+                                                </td>
                                                 <td>
-                                                    <span class="table-details"><button type="button" class="btn btn-secondary btn-rounded btn-sm my-0 viewVariationDetailsBtn" data-toggle="modal" data-target="#viewVariationDetails" value="{{ $singleVariation['id_variation'] }}">DETAILS</button></span>
-                                                    @if(($singleVariation['removed_at'] === null))
-                                                        <span class="table-edit"><button type="button" class="btn btn-primary btn-rounded btn-sm my-0 editTestVariationBtn testOperations" data-toggle="modal" data-target="#editTestVariation" value="{{ $singleVariation['id_tests_variations'] }}">EDIT</button></span>
-                                                        <span class="table-remove"><a class="testOperations" href="{{ route('removeVariationFromTest',['id' => $singleVariation['id_tests_variations']]) }}"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0 deleteTestVariationBtn testOperations">DELETE</button></a></span>
+                                                    <span class="table-details"><button type="button" class="btn btn-secondary btn-rounded btn-sm my-0 viewVariationDetailsBtn" data-toggle="modal" data-target="#viewVariationDetails" value="{{ $testVariation->getAttribute('variation_id') }}">DETAILS</button></span>
+                                                    @if(!$testVariation->getAttribute('removed_at'))
+                                                        <span class="table-edit"><button type="button" class="btn btn-primary btn-rounded btn-sm my-0 editTestVariationBtn testOperations" data-toggle="modal" data-target="#editTestVariation" value="{{ $testVariation->getAttribute('id_tests_variations') }}">EDIT</button></span>
+                                                        <span class="table-remove"><a class="testOperations" href="{{ route('removeVariationFromTest',['id' => $testVariation->getAttribute('id_tests_variations')]) }}"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0 deleteTestVariationBtn testOperations">DELETE</button></a></span>
                                                     @else
-                                                        <span class="table-remove"><a class="testOperations" href="{{ route('restoreVariationTest',['id' => $singleVariation['id_tests_variations']]) }}"><button type="button" class="btn btn-success btn-rounded btn-sm my-0 restoreTestVariation testOperations">RESTORE</button></a></span>
+                                                        <span class="table-remove"><a class="testOperations" href="{{ route('restoreVariationTest',['id' => $testVariation->getAttribute('id_tests_variations')]) }}"><button type="button" class="btn btn-success btn-rounded btn-sm my-0 restoreTestVariation testOperations">RESTORE</button></a></span>
                                                     @endif
 
                                                 </td>
@@ -91,7 +93,6 @@
                                             @else
                                                 <tr><td colspan="6">No variations in this test!</td></tr>
                                             @endif
-                                        @endforeach
                                     @endforeach
                                 @endisset
                                 </tbody>
@@ -108,20 +109,20 @@
             <div class="col-xl-12 col-md-12">
                 <div class="card">
                     <div class="card-body">
-                        @if($singleTest->is_active === 0 && $singleTest->ended_at === null)
-                            <a href="{{ route('startTest',['id' => $testId, 'wrongSum' => isset($wrongSum) === true ? $wrongSum : 0, 'pricesNotSet' => isset($pricesNotSet) === true ? $pricesNotSet : 0]) }}"><button type="button" class="btn btn-success btn-rounded btn-lg startTestBtn">Start test</button></a>
+                        @if($singleTest->getAttribute('is_active') === 0 && $singleTest->getAttribute('ended_at') === null)
+                            <a href="{{ route('startTest',['id' => $testId, 'wrongSum' => $wrongSum ?? 0, 'pricesNotSet' => $pricesNotSet ?? 0]) }}"><button type="button" class="btn btn-success btn-rounded btn-lg startTestBtn">Start test</button></a>
                         @endif
-                        @if($singleTest->ended_at === null && $singleTest->started_at != null && $singleTest->is_active === 1 )
+                        @if($singleTest->getAttribute('ended_at') === null && $singleTest->getAttribute('started_at') != null && $singleTest->getAttribute('is_active') === 1 )
                             <a href="{{ route('pauseTest',['id' => $testId]) }}"><button type="button" class="btn btn-primary btn-rounded btn-lg pauseTestBtn">Pause test</button></a>
                         @endif
-                        @if($singleTest->started_at != null && $singleTest->ended_at === null)
+                        @if($singleTest->getAttribute('is_active') === 1 && $singleTest->getAttribute('ended_at') === null)
                             <a href="{{ route('endTest',['id' => $testId]) }}"><button type="button" class="btn btn-danger btn-rounded btn-lg endTestBtn">End test</button></a>
                         @endif
-                        @if($singleTest->ended_at != null)
+                        @if($singleTest->getAttribute('ended_at') != null)
                             This test has been ended, you can create another one!
                         @endif
-                        <p style="display: inline-block; margin-left: 20px;">Started at: {{ $singleTest->started_at }}</p>
-                        <p style="display: inline-block; margin-left: 20px;">Ended at: {{ $singleTest->ended_at }}</p>
+                        <p style="display: inline-block; margin-left: 20px;">Started at: {{ $singleTest->getAttribute('started_at') }}</p>
+                        <p style="display: inline-block; margin-left: 20px;">Ended at: {{ $singleTest->getAttribute('ended_at') }}</p>
                     </div>
                 </div>
             </div>
@@ -157,10 +158,10 @@
                                 @isset($singleVariation['VariationName'])
                                 <tr>
                                     <td>{{ $key }}</td>
-                                    <th>{{ isset($singleVariation['VariationName']) ? $singleVariation['VariationName'] : "" }}</th>
-                                    <td class="landerViews">{{ isset($singleVariation['LanderView']) ? $singleVariation['LanderView'] : 0 }}</td>
-                                    <td class="checkoutViews">{{ isset($singleVariation['CheckoutView']) ? $singleVariation['CheckoutView'] : 0 }}</td>
-                                    <td class="thankyouViews">{{ isset($singleVariation['Purchase']) ? $singleVariation['Purchase'] : 0 }}</td>
+                                    <th>{{ $singleVariation['VariationName'] ?? '' }}</th>
+                                    <td class="landerViews">{{ $singleVariation['LanderView'] ?? 0 }}</td>
+                                    <td class="checkoutViews">{{ $singleVariation['CheckoutView'] ?? 0 }}</td>
+                                    <td class="thankyouViews">{{ $singleVariation['Purchase'] ?? 0 }}</td>
                                     <td>
                                         @if(isset($singleVariation['CheckoutView']) && isset($singleVariation['LanderView']))
                                             {{ number_format(($singleVariation['CheckoutView']/$singleVariation['LanderView'])*100, 2) }}%
@@ -178,8 +179,8 @@
                                             {{ number_format(($testOrders[$key]['revenue']/$testOrders[$key]['orders']), 2) }} RSD
                                         @endif
                                     </td>
-                                    <td class="upCrossSellViews">{{ isset($singleVariation['UpCrossSellShown']) ? $singleVariation['UpCrossSellShown'] : 0 }}</td>
-                                    <td class="upCrossSellPurchases">{{ isset($singleVariation['Purchase2']) ? $singleVariation['Purchase2'] : 0 }}</td>
+                                    <td class="upCrossSellViews">{{ $singleVariation['UpCrossSellShown'] ?? 0 }}</td>
+                                    <td class="upCrossSellPurchases">{{ $singleVariation['Purchase2'] ?? 0 }}</td>
                                     <td>
                                         @if(isset($singleVariation['Purchase2']) && isset($singleVariation['UpCrossSellShown']))
                                             {{ number_format(($singleVariation['Purchase2']/$singleVariation['UpCrossSellShown'])*100, 2) }}%
@@ -270,9 +271,6 @@
         #tableCouponBody td {
             vertical-align: middle;
         }
-        .variationDetailsLink {
-
-        }
     </style>
 @endsection
 
@@ -280,66 +278,66 @@
     <script>
         $(document).ready(function () {
 
-            $landerSum = 0;
-            $checkoutSum = 0;
-            $thankyouSum = 0;
-            $orderSum = 0;
-            $revenueSum = 0;
+            let landerSum = 0;
+            let checkoutSum = 0;
+            let thankyouSum = 0;
+            let orderSum = 0;
+            let revenueSum = 0;
 
-            $upCrossViewsSum = 0;
-            $upCrossPurchaseSum = 0;
-            $upCrossRevenueSum = 0;
+            let upCrossViewsSum = 0;
+            let upCrossPurchaseSum = 0;
+            let upCrossRevenueSum = 0;
 
             $('.landerViews').each(function() {
-                $landerSum += parseInt($(this).html());
+                landerSum += parseInt($(this).html());
             });
             $('.checkoutViews').each(function() {
-                $checkoutSum += parseInt($(this).html());
+                checkoutSum += parseInt($(this).html());
             });
             $('.thankyouViews').each(function() {
-                $thankyouSum += parseInt($(this).html());
+                thankyouSum += parseInt($(this).html());
             });
             $('.ordersColumn').each(function() {
-                $orderSum += parseInt($(this).html());
+                orderSum += parseInt($(this).html());
             });
             $('.revenueColumn').each(function() {
                 $singleField = $(this).html();
-                $slicedField = $singleField.slice(0, -4);
-                $revenueSum += parseInt($slicedField);
+                let slicedField = $singleField.slice(0, -4);
+                revenueSum += parseInt(slicedField);
             });
 
             $('.upCrossSellViews').each(function() {
-                $upCrossViewsSum += parseInt($(this).html());
+                upCrossViewsSum += parseInt($(this).html());
             });
             $('.upCrossSellPurchases').each(function() {
-                $upCrossPurchaseSum += parseInt($(this).html());
+                upCrossPurchaseSum += parseInt($(this).html());
             });
             $('.upCrossSellRevenue').each(function() {
                 $singleField = $(this).html();
-                $slicedField = $singleField.slice(0, -4);
-                $upCrossRevenueSum += parseInt($slicedField);
+                slicedField = $singleField.slice(0, -4);
+                upCrossRevenueSum += parseInt(slicedField);
             });
 
-            $ctrTotal = ($checkoutSum/$landerSum)*100;
-            $conversionTotal = ($thankyouSum/$landerSum)*100;
-            $aovTotal = $revenueSum/$orderSum;
-            $upCrossSellCrTotal = ($upCrossPurchaseSum/$upCrossViewsSum)*100;
-            $upCrossSellAovTotal = $upCrossRevenueSum/$upCrossPurchaseSum;
+            let ctrTotal = (checkoutSum/landerSum)*100;
+            let conversionTotal = (thankyouSum/landerSum)*100;
+            let aovTotal = revenueSum/orderSum;
+            let upCrossSellCrTotal = (upCrossPurchaseSum/upCrossViewsSum)*100;
+            let upCrossSellAovTotal = upCrossRevenueSum/upCrossPurchaseSum;
 
-            $('#landerTotal').html($landerSum);
-            $('#checkoutTotal').html($checkoutSum);
-            $('#thankyouTotal').html($thankyouSum);
-            $('#ctrTotal').html($ctrTotal.toFixed(2) + "%");
-            $('#conversionTotal').html($conversionTotal.toFixed(2) + "%");
-            $('#ordersTotal').html($orderSum);
-            $('#revenueTotal').html($revenueSum + " RSD");
-            $('#aovTotal').html($aovTotal.toLocaleString('rs', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + " RSD");
+            $('#landerTotal').html(landerSum);
+            $('#checkoutTotal').html(checkoutSum);
+            $('#thankyouTotal').html(thankyouSum);
+            $('#ctrTotal').html(ctrTotal.toFixed(2) + "%");
+            $('#conversionTotal').html(conversionTotal.toFixed(2) + "%");
+            $('#ordersTotal').html(orderSum);
+            $('#revenueTotal').html(revenueSum + " RSD");
+            $('#aovTotal').html(aovTotal.toLocaleString('rs', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + " RSD");
 
-            $('#upSellViewsTotal').html($upCrossViewsSum);
-            $('#upSellPurchasesTotal').html($upCrossPurchaseSum);
-            $('#upSellCrTotal').html($upCrossSellCrTotal.toFixed(2) + "%");
-            $('#upSellRevenueTotal').html($upCrossRevenueSum + " RSD");
-            $('#upSellAovTotal').html($upCrossSellAovTotal.toLocaleString('rs', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + " RSD");
+            $('#upSellViewsTotal').html(upCrossViewsSum);
+            $('#upSellPurchasesTotal').html(upCrossPurchaseSum);
+            $('#upSellCrTotal').html(upCrossSellCrTotal.toFixed(2) + "%");
+            $('#upSellRevenueTotal').html(upCrossRevenueSum + " RSD");
+            $('#upSellAovTotal').html(upCrossSellAovTotal.toLocaleString('rs', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + " RSD");
 
             let max = 0;
             let maxIndex = 0;
@@ -355,7 +353,7 @@
 
             $(maxIndex).addClass("table-success");
 
-            @if($singleTest->is_active ===1)
+            @if($singleTest->getAttribute('is_active') === 1)
                 $('.testOperations').prop('disabled', true);
                 $('.testOperations').click(function (e) {
                     e.preventDefault();
@@ -386,7 +384,6 @@
                     url: baseURL + "getTestVariation/" + parseInt(id),
                     dataType: 'json',
                     success: function (data) {
-                        // console.log(data);
                         $('#trafficModal').val(data.traffic_percentage);
                         $('#testVariationIdModal').val(data.id_tests_variations);
                     },
@@ -404,31 +401,28 @@
                     dataType: 'json',
                     success: function (data) {
                         let text = "";
-                        for (const [key, value] of Object.entries(data)) {
-                            let variations = data[key];
-                            let firstVariation = variations[0];
-                            text += "<table class='table table-bordered table-responsive-sm table-striped text-center tableVariationDetails'>";
-                            text += "<tr><th>Name</th><td>" + firstVariation['variation_name'] + "</td></tr>";
-                            text += "<tr><th>Description</th><td>" + firstVariation['variation_description'] + "</td></tr>";
-                            text += "<tr><th>Lander</th><td>" + firstVariation['lander_name'] + "</td></tr>";
-                            text += "<tr><th>Checkout</th><td>" + firstVariation['checkout_name'] + "</td></tr>";
-                            text += "<tr><th>Thankyou</th><td>" + firstVariation['thankyou_name'] + "</td></tr>";
-                            for (let i = 0; i < variations.length; i++) {
-                                if(variations[i]['quantity'] != null) {
-                                    text += "<tr><th>Price for " + variations[i]['quantity'] + "</th><td>" + variations[i]['amount'] + " " + variations[i]['currency_symbol'] + "</td></tr>";
-                                } else {
-                                    text += "<tr><td colspan='2'>Prices not set yet</td></tr>"
-                                }
-                            }
-                            text += "</table>";
-                            $('#modalBodyVariationDetails').html(text);
+                        text += "<table class='table table-bordered table-responsive-sm table-striped text-center tableVariationDetails'>";
+                        text += "<tr><th>Name</th><td>" + data.variation_name + "</td></tr>";
+                        text += "<tr><th>Description</th><td>" + data.variation_description + "</td></tr>";
+                        text += "<tr><th>Lander</th><td>" + data.lander.lander_name + "</td></tr>";
+                        text += "<tr><th>Checkout</th><td>" +  data.checkout.checkout_name + "</td></tr>";
+                        text += "<tr><th>Thankyou</th><td>" + data.thankyou.thankyou_name + "</td></tr>";
+                        if(data.prices.length > 0) {
+                            data.prices.forEach(async (price) => {
+                                text += "<tr><th>Price for " + price.quantity + "</th><td>" + price.price + " " + data.product.country.currency.currency_symbol + "</td></tr>";
+                            });
+                        } else {
+                            text += "<tr><td colspan='2'>Prices not set yet</td></tr>"
                         }
+                        text += "</table>";
+                        $('#modalBodyVariationDetails').html(text);
                     },
                     error: function (req, err) {
-                        console.log(req);
+                        console.log(err);
                     }
                 })
             });
+
             $('.deleteTestVariationBtn').click(function () {
                 return confirm('Are you sure that you want to delete this variation from the test?');
             });

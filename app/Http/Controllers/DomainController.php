@@ -90,16 +90,19 @@ class DomainController extends Controller
         }
     }
 
-    public function getBrandDomains($id) {
-        $brandDomains = $this->modelDomain->getBrandDomains($id, null);
+    public function getBrandDomains($brand_id) {
+        $brandDomains = $this->modelDomain->getBrandDomains($brand_id, null);
         $groupedDomains = $this->getMultipleItemsFromQuery(json_decode($brandDomains, true),'id_domain');
-        if($brandDomains) {
+
+        if(count($brandDomains)) {
             return json_encode($groupedDomains, true);
+        } else {
+            return response("No domains found", 503);
         }
     }
 
-    public function getDomain($id) {
-        $domains = $this->modelDomain->getBrandDomains(null, $id);
+    public function getDomain($domain_id) {
+        $domains = $this->modelDomain->getBrandDomains(null, $domain_id);
         if($domains) {
             return json_encode($domains, true);
         }

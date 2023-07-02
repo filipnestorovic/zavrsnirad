@@ -35,8 +35,6 @@ class CountryController extends Controller
             'country_name' => ['required','max:30'],
             'country_shortcode' => ['required','max:3','unique:country,country_code'],
             'currencyIdCountry' => ['required'],
-            'enabledCOD' => ['required'],
-            'enabledStripe' => ['required'],
             'isCountryActive' => ['required'],
             'shipping_cost' => ['required']
         ];
@@ -58,8 +56,6 @@ class CountryController extends Controller
             $this->modelCountry->country_name = $request->get('country_name');
             $this->modelCountry->country_code = $request->get('country_shortcode');
             $this->modelCountry->currency_id = $request->get('currencyIdCountry');
-            $this->modelCountry->enabledCOD = $request->get('enabledCOD');
-            $this->modelCountry->enabledStripe = $request->get('enabledStripe');
             $this->modelCountry->is_active = $request->get('isCountryActive');
             $this->modelCountry->shipping_cost = $request->get('shipping_cost');
 
@@ -82,8 +78,6 @@ class CountryController extends Controller
             'countryNameModal' => ['required','max:30'],
             'countryShortcodeModal' => ['required','max:3'],
             'currencyIdCountryModal' => ['required'],
-            'enabledCODModal' => ['required'],
-            'enabledStripeModal' => ['required'],
             'isCountryActiveModal' => ['required'],
             'shippingCostModal' => ['required'],
         ];
@@ -106,8 +100,6 @@ class CountryController extends Controller
             $this->modelCountry->country_name = $request->get('countryNameModal');
             $this->modelCountry->country_code = $request->get('countryShortcodeModal');
             $this->modelCountry->currency_id = $request->get('currencyIdCountryModal');
-            $this->modelCountry->enabledCOD = $request->get('enabledCODModal');
-            $this->modelCountry->enabledStripe = $request->get('enabledStripeModal');
             $this->modelCountry->is_active = $request->get('isCountryActiveModal');
             $this->modelCountry->shipping_cost = $request->get('shippingCostModal');
 

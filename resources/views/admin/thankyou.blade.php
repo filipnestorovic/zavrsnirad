@@ -131,8 +131,7 @@
                     success: function (data) {
                         $('#thankyouIdModal').val(data.id_thankyou);
                         $('#thankyouNameModal').val(data.thankyou_name);
-                        $('#countryIdModal').val(data.country_id);
-                        $('#countryIdModal').selectpicker('refresh');
+                        $('#countryIdModal').val(data.country_id).selectpicker('refresh');
                     },
                     error: function (req, err) {
                         console.log(req);

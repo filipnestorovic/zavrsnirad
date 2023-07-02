@@ -7,6 +7,7 @@ use App\Models\Price;
 use App\Models\Product;
 use App\Models\Statistic;
 use App\Models\Test;
+use App\Models\TestVariation;
 use App\Models\Variation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
@@ -19,18 +20,15 @@ class TestController extends Controller
         $this->modelProduct = new Product();
         $this->modelVariation = new Variation();
         $this->modelStatistic = new Statistic();
-        $this->modelPrice = new Price();
         $this->modelOrder = new Order();
     }
 
     public function testsIndex() {
-        $this->data['products'] = $this->modelProduct->getAllProduct();
-
         $products = $this->modelProduct->getAllProduct();
 
         foreach($products as $product) {
-            $variations = Variation::where('product_id',$product->id_product)->get()->pluck('id_variation')->toArray();
-            $product->availableVariations = $variations;
+            $variation_ids = Variation::where('product_id',$product->id_product)->get()->pluck('id_variation')->toArray();
+            $product->availableVariations = $variation_ids;
         }
 
         $this->data['products'] = $products;
@@ -51,9 +49,8 @@ class TestController extends Controller
 
         $perPage = 10;
 
-        $testsList = json_decode($this->modelTest->getAllTests($searchFilter, $productFilter, $activeFilter, $test_id), true);
-
-        $paginatedData = $this->prepareDataForTableAjax($request, $testsList,'id_test', true, $perPage, $currentPage, 'testTable');
+        $tests = $this->modelTest->allTests($searchFilter, $productFilter, $activeFilter, $test_id);
+        $paginatedData = $this->paginateDataWithTable($request, $tests,$perPage, $currentPage, 'testTable');
 
         if(!$request->ajax()) {
             dd($paginatedData);
@@ -65,14 +62,13 @@ class TestController extends Controller
     public function createTest(Request $request) {
         $product_id = $request->get('productIdTestCreate');
 
-        $activeTestForProduct = $this->modelTest->getAllTests(null, $product_id, 1, null);
+        $activeTestForProduct = $this->modelTest->allTests(null, $product_id, 1, null);
 
         if(count($activeTestForProduct)>0) {
             return redirect()->route('testsIndex')->with('error','On going test with this product!');
         } else {
             try {
-                $this->modelTest->product_id = $product_id;
-                $insertedTestId = $this->modelTest->insertTest();
+                $insertedTestId = $this->modelTest->insertTest($product_id);
                 if($insertedTestId) {
                     return redirect()->route('singleTest',['id' => $insertedTestId])->with('success','Test has been created successfully, you can add variations now!');
                 } else {
@@ -86,63 +82,55 @@ class TestController extends Controller
     }
 
     public function singleTest($id = null, Request $request) {
-        $singleTest = $this->modelTest->getSingleTest($id);
+        $singleTest = Test::with('testVariations')->findOrFail($id);
 
         if($singleTest) {
             $this->data['testId'] = $id;
             $this->data['singleTest'] = $singleTest;
-            $this->data['product'] = $this->modelProduct->getProduct($singleTest->product_id);
-            $this->data['availableVariationsForProduct'] = $this->modelVariation->getAvailableVariationsByProductId($singleTest->product_id, $id);
-
-            $unformattedTest = json_decode($this->modelTest->getAllTests($id), true);
-            $formattedTest = $this->getMultipleItemsFromQuery($unformattedTest, 'id_test');
+            $this->data['product'] = Product::with('country')->find($singleTest->getAttribute('product_id'));
+            $this->data['availableVariationsForProduct'] = $this->modelVariation->getAvailableVariationsByProductId($singleTest->getAttribute('product_id'), $id);
 
             $checkIfTrafficSumIsGood = 0;
             $array = [];
             $totalVariationOrders = [];
-//            $pricesNotSet = 0;
-            foreach($formattedTest as $variations) {
-                foreach($variations as $variation) {
-                    if($variation['removed_at'] === null) {
-                        $checkIfTrafficSumIsGood += $variation['traffic_percentage'];
 
-                        $testVariationId = $variation['id_tests_variations'];
+            foreach ($singleTest->testVariations as $testVariation) {
+                if ($testVariation->removed_at === null) {
+                    $checkIfTrafficSumIsGood += $testVariation->traffic_percentage;
 
-                        if(is_null($testVariationId)) {
+                    $testVariationId = $testVariation->id_tests_variations;
 
-                        } else {
+                    if (!is_null($testVariationId)) {
+                        $testStatistic = $this->modelStatistic->getSingleTestStatistic($testVariationId, $id, null);
 
-                            $testStatistic = $this->modelStatistic->getSingleTestStatistic($testVariationId, $id, null);
-
-                            $newArray = [];
-                            foreach ($testStatistic as $key => $value) {
-                                $newArray['VariationName'] = $value->variation_name;
-                                if (isset($value->TestVariationVisits)) {
-                                    $newArray[$value->event_name] = $value->TestVariationVisits;
-                                }
+                        $newArray = [];
+                        foreach ($testStatistic as $key => $value) {
+                            $newArray['VariationName'] = $value->variation_name;
+                            if (isset($value->TestVariationVisits)) {
+                                $newArray[$value->event_name] = $value->TestVariationVisits;
                             }
-
-                            $array[$testVariationId] = $newArray;
-                            $testOrders = $this->modelStatistic->getOrdersForVariationInActiveTest($testVariationId);
-                            $countOrders = 0;
-                            $revenueOrders = 0;
-                            foreach ($testOrders as $singleOrder) {
-                                $countOrders++;
-                                $revenueOrders += $singleOrder->price;
-                            }
-                            $totalVariationOrders[$testVariationId]['orders'] = $countOrders;
-                            $totalVariationOrders[$testVariationId]['revenue'] = $revenueOrders;
-
-                            $upcrossSells = $this->modelOrder->getUpCrossSellByVariationOrTest(null, $testVariationId, null, null);
-                            $countupcrossSells = 0;
-                            $revenueupcrossSells = 0;
-                            foreach ($upcrossSells as $singleOrder) {
-                                $countupcrossSells++;
-                                $revenueupcrossSells += $singleOrder->price;
-                            }
-                            $totalVariationOrders[$testVariationId]['UpCrossSells'] = $countupcrossSells;
-                            $totalVariationOrders[$testVariationId]['RevenueUpCrossSells'] = $revenueupcrossSells;
                         }
+
+                        $array[$testVariationId] = $newArray;
+                        $testOrders = $this->modelStatistic->getOrdersForVariationInActiveTest($testVariationId);
+                        $countOrders = 0;
+                        $revenueOrders = 0;
+                        foreach ($testOrders as $singleOrder) {
+                            $countOrders++;
+                            $revenueOrders += $singleOrder->price;
+                        }
+                        $totalVariationOrders[$testVariationId]['orders'] = $countOrders;
+                        $totalVariationOrders[$testVariationId]['revenue'] = $revenueOrders;
+
+                        $upcrossSells = $this->modelOrder->getUpCrossSellByVariationOrTest(null, $testVariationId, null, null);
+                        $countupcrossSells = 0;
+                        $revenueupcrossSells = 0;
+                        foreach ($upcrossSells as $singleOrder) {
+                            $countupcrossSells++;
+                            $revenueupcrossSells += $singleOrder->price;
+                        }
+                        $totalVariationOrders[$testVariationId]['UpCrossSells'] = $countupcrossSells;
+                        $totalVariationOrders[$testVariationId]['RevenueUpCrossSells'] = $revenueupcrossSells;
                     }
                 }
             }
@@ -151,15 +139,11 @@ class TestController extends Controller
                 $this->data['wrongSum'] = 1;
             }
 
-//            if($pricesNotSet > 0) {
-//                $this->data['pricesNotSet'] = 1;
-//            }
-
             iF($request->ajax()) {
                 return $singleTest;
             }
 
-            $this->data['testVariations'] = $formattedTest;
+            $this->data['testVariations'] = $singleTest->testVariations;
             $this->data['singleVariationStatistic'] = $array;
             $this->data['testOrders'] = $totalVariationOrders;
 
@@ -191,11 +175,11 @@ class TestController extends Controller
         }
 
         try {
-            $this->modelTest->test_id = $request->get('testIdHidden');
-            $this->modelTest->variation_id = $request->get('variationIdTest');
+            $test_id = $request->get('testIdHidden');
+            $variation_id = $request->get('variationIdTest');
             $this->modelTest->traffic_percentage = $request->get('trafficPercentage');
 
-            $insertResult = $this->modelTest->addVariationToTest();
+            $insertResult = $this->modelTest->addVariationToTest($test_id,$variation_id);
 
             if($insertResult) {
                 return redirect()->back()->with('success','Variation has been added to the test successfully!');
@@ -209,10 +193,8 @@ class TestController extends Controller
     }
 
     public function getTestVariation($id) {
-        $singleTestVariation = $this->modelTest->getSingleTestVariation($id);
-        if($singleTestVariation) {
-            return json_encode($singleTestVariation, true);
-        }
+        $singleTestVariation = TestVariation::findOrFail($id);
+        return json_encode($singleTestVariation, true);
     }
 
     public function editTestVariationTraffic(Request $request) {
@@ -288,7 +270,7 @@ class TestController extends Controller
             if($pricesNotSet === "1") {
                 return redirect()->back()->with('error','One or more variations have no prices!');
             }
-            $singleTest = $this->modelTest->getSingleTest($id);
+            $singleTest = Test::findOrFail($id);
             if($singleTest) {
                 if($singleTest->started_at === null && $singleTest->is_active === 0) {
                     $start = 1;
@@ -314,7 +296,7 @@ class TestController extends Controller
 
     public function pauseTest($id) {
         try {
-            $singleTest = $this->modelTest->getSingleTest($id);
+            $singleTest = Test::findOrFail($id);
             if($singleTest) {
                 if($singleTest->started_at != null && $singleTest->is_active === 1) {
                     $updateResult = $this->modelTest->pauseTest($id);
@@ -339,7 +321,7 @@ class TestController extends Controller
 
     public function endTest($id) {
         try {
-            $singleTest = $this->modelTest->getSingleTest($id);
+            $singleTest = Test::findOrFail($id);
             if($singleTest) {
                 if($singleTest->started_at != null && $singleTest->is_active === 1) {
                     $updateResult = $this->modelTest->endTest($id);

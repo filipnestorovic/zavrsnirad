@@ -19,19 +19,19 @@
                     <div class="card">
                         <div class="card-header">Edit variation</div>
                         <div class="card-body">
-                            <input type="hidden" name="variationIdEdit" id="variationIdEdit" value="{{ $variation->id_variation }}"/>
-                            <input type="hidden" name="productIdVariationEdit" id="productIdVariationEdit" value="{{ $variation->product_id }}"/>
+                            <input type="hidden" name="variationIdEdit" id="variationIdEdit" value="{{ $variation->getAttribute('id_variation') }}"/>
+                            <input type="hidden" name="productIdVariationEdit" id="productIdVariationEdit" value="{{ $variation->getAttribute('product_id') }}"/>
                             <div class="md-form input-group input-group-sm mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm">Variation name</span>
                                 </div>
-                                <input type="text" name="variationNameEdit" id="variationNameEdit" class="form-control" data-value="variationNameEdit" value="{{ $variation->variation_name }}" required="">
+                                <input type="text" name="variationNameEdit" id="variationNameEdit" class="form-control" data-value="variationNameEdit" value="{{ $variation->getAttribute('variation_name') }}" required="">
                             </div>
                             <div class="md-form input-group input-group-sm mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm">Variation description</span>
                                 </div>
-                                <textarea name="variationDescriptionEdit" id="variationDescriptionEdit" class="form-control" data-value="variationDescriptionEdit" cols="10" rows="3">{{ $variation->variation_description }}</textarea>
+                                <textarea name="variationDescriptionEdit" id="variationDescriptionEdit" class="form-control" data-value="variationDescriptionEdit" cols="10" rows="3">{{ $variation->getAttribute('variation_description') }}</textarea>
                             </div>
                             <div class="md-form input-group input-group-sm mb-3">
                                 <div class="input-group-prepend">
@@ -39,9 +39,9 @@
                                 </div>
                                 <select name="landerIdVariationEdit" id="landerIdVariationEdit" data-toggle="dropdown" required>
                                     @foreach($landers as $lander)
-                                        <option value="{{ $lander->id_lander }}"
-                                        @if($lander->id_lander === $variation->lander_id) selected @endif
-                                        >{{ $lander->lander_name }}</option>
+                                        <option value="{{ $lander->getAttribute('id_lander') }}"
+                                        @if($lander->getAttribute('id_lander') === $variation->lander_id) selected @endif
+                                        >{{ $lander->getAttribute('lander_name') }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -51,9 +51,9 @@
                                 </div>
                                 <select name="checkoutIdVariationEdit" id="checkoutIdVariationEdit" data-toggle="dropdown" required>
                                     @foreach($checkouts as $checkout)
-                                        <option value="{{ $checkout->id_checkout }}"
-                                        @if($checkout->id_checkout === $variation->checkout_id) selected @endif
-                                        >{{ $checkout->checkout_name }}</option>
+                                        <option value="{{ $checkout->getAttribute('id_checkout') }}"
+                                        @if($checkout->getAttribute('id_checkout') === $variation->checkout_id) selected @endif
+                                        >{{ $checkout->getAttribute('checkout_name') }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -63,9 +63,9 @@
                                 </div>
                                 <select name="thankyouIdVariationEdit" id="thankyouIdVariationEdit" data-toggle="dropdown" required>
                                     @foreach($thankyous as $thankyou)
-                                        <option value="{{ $thankyou->id_thankyou }}"
-                                        @if($thankyou->id_thankyou === $variation->thankyou_id) selected @endif
-                                        >{{ $thankyou->thankyou_name }}</option>
+                                        <option value="{{ $thankyou->getAttribute('id_thankyou') }}"
+                                        @if($thankyou->getAttribute('id_thankyou') === $variation->thankyou_id) selected @endif
+                                        >{{ $thankyou->getAttribute('thankyou_name') }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -75,10 +75,10 @@
                                 </div>
                                 <select name="defaultVariationEdit" id="defaultVariationEdit" data-toggle="dropdown" required>
                                     <option value="0"
-                                    @if($variation->is_variation_default === 0) selected @endif
+                                        {{$variation->getAttribute('is_variation_default') == 0 ? 'selected' : ''}}
                                     >No</option>
                                     <option value="1"
-                                            @if($variation->is_variation_default === 1) selected @endif
+                                        {{$variation->getAttribute('is_variation_default') == 1 ? 'selected' : ''}}
                                     >Yes</option>
                                 </select>
                             </div>
@@ -88,17 +88,17 @@
                                 </div>
                                 <select name="isVariationActiveEdit" id="isVariationActiveEdit" data-toggle="dropdown" required>
                                     <option value="1"
-                                    @if($variation->is_active === 1) selected @endif
+                                        {{$variation->getAttribute('is_active') == 1 ? 'selected' : ''}}
                                     >Yes</option>
                                     <option value="0"
-                                    @if($variation->is_active === 0) selected @endif
+                                        {{$variation->getAttribute('is_active') == 0 ? 'selected' : ''}}
                                     >No</option>
                                 </select>
                             </div>
                             <div class="md-form input-group input-group-sm mb-3">
-                                <button type="submit" id="editVariationBtn" class="btn btn-primary btn-lg btn-block" @if($disableButtons === 1) disabled @endif>Edit variation</button>
+                                <button type="submit" id="editVariationBtn" class="btn btn-primary btn-lg btn-block" {{ $disableButtons ? 'disabled' : 0 }}>Edit variation</button>
                                 @if($variation->deleted_at == null)
-                                    <a style="width: 100% !important;" class="deleteVariationBtn" href="{{ route('deleteVariation',['id' => $variation->id_variation]) }}"><button type="button" id="deleteVariationBtn" class="btn btn-danger btn-lg btn-block deleteVariationBtn" @if($disableButtons === 1) disabled @endif>Delete variation</button></a>
+                                    <a style="width: 100% !important;" class="deleteVariationBtn" href="{{ route('deleteVariation',['id' => $variation->id_variation]) }}"><button type="button" id="deleteVariationBtn" class="btn btn-danger btn-lg btn-block deleteVariationBtn" {{ $disableButtons ? 'disabled' : 0 }}>Delete variation</button></a>
                                 @else
                                     <a style="width: 100% !important;" href="{{ route('restoreVariation',['id' => $variation->id_variation]) }}"><button type="button" id="restoreVariationBtn" class="btn btn-success btn-lg btn-block restoreVariationBtn">Restore variation</button></a>
                                 @endif
@@ -156,7 +156,7 @@
                                                     <td>{{ $i }}</td>
                                                     <td>
                                                         <span>
-                                                             <input type="text" value="@if(isset($prices[$i])){{ $prices[$i]['amount'] }}@endif" tabindex="{{ $i }}" class="form-control priceInput" id="priceFor{{ $i }}" name="priceFor{{ $i }}" style="width: 100px !important; display: inline-block !important;"/>
+                                                             <input type="text" value="@if(isset($prices[$i])){{ $prices[$i]['price'] }}@endif" tabindex="{{ $i }}" class="form-control priceInput" id="priceFor{{ $i }}" name="priceFor{{ $i }}" style="width: 100px !important; display: inline-block !important;"/>
                                                         </span>
                                                     </td>
                                                     <td>
@@ -189,32 +189,32 @@
                         </form>
                     </div>
                 </div>
-                <div class="card mt-5">
-                    <div class="card-body">
-                        <form action="{{ route('addCouponsToVariation') }}" id="formVariationCoupon" method="post">
-                            {{ csrf_field() }}
-                            <input type="hidden" name="variationIdCoupons" id="variationIdCoupons" value="{{ $variation->id_variation }}"/>
-                            <div class="card">
-                                <h5 class="card-header text-center font-weight-bold text-uppercase py-3">Coupons</h5>
-                                <div class="card-body">
-                                    <div id="couponsDiv">
-                                        @isset($coupons)
-                                            @foreach($coupons as $coupon)
-                                                <span class="spanCoupon">
-                                                <input type="checkbox" class="couponCheckbox" name="variation_coupons[]" id="coupon{{ $coupon->id_coupon }}" value="{{ $coupon->id_coupon }}"
-                                                @if(in_array($coupon->id_coupon,$variationCoupons)) checked @endif
-                                                />
-                                                <label class="couponLabel" for="coupon{{ $coupon->id_coupon }}">{{ $coupon->coupon }} ({{ $coupon->discount }}%)</label>
-                                                </span>
-                                            @endforeach
-                                        @endisset
-                                    </div>
-                                    <button type="submit" id="addCouponsBtn" class="btn btn-primary btn-lg btn-block">Add coupons</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+{{--                <div class="card mt-5">--}}
+{{--                    <div class="card-body">--}}
+{{--                        <form action="{{ route('addCouponsToVariation') }}" id="formVariationCoupon" method="post">--}}
+{{--                            {{ csrf_field() }}--}}
+{{--                            <input type="hidden" name="variationIdCoupons" id="variationIdCoupons" value="{{ $variation->id_variation }}"/>--}}
+{{--                            <div class="card">--}}
+{{--                                <h5 class="card-header text-center font-weight-bold text-uppercase py-3">Coupons</h5>--}}
+{{--                                <div class="card-body">--}}
+{{--                                    <div id="couponsDiv">--}}
+{{--                                        @isset($coupons)--}}
+{{--                                            @foreach($coupons as $coupon)--}}
+{{--                                                <span class="spanCoupon">--}}
+{{--                                                <input type="checkbox" class="couponCheckbox" name="variation_coupons[]" id="coupon{{ $coupon->id_coupon }}" value="{{ $coupon->id_coupon }}"--}}
+{{--                                                @if(in_array($coupon->id_coupon,$variationCoupons)) checked @endif--}}
+{{--                                                />--}}
+{{--                                                <label class="couponLabel" for="coupon{{ $coupon->id_coupon }}">{{ $coupon->coupon }} ({{ $coupon->discount }}%)</label>--}}
+{{--                                                </span>--}}
+{{--                                            @endforeach--}}
+{{--                                        @endisset--}}
+{{--                                    </div>--}}
+{{--                                    <button type="submit" id="addCouponsBtn" class="btn btn-primary btn-lg btn-block">Add coupons</button>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </form>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
                 {{--<div class="card mt-5">--}}
                     {{--<div class="card-header">Statistic for this variation (including tests)</div>--}}
                     {{--<div class="card-body">--}}

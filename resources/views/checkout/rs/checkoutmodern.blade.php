@@ -1,10 +1,11 @@
 <html lang="en">
 <head>
-    @include('components.pixel_init')
+    @include('components.front_header')
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta charset="UTF-8">
     <link rel="icon" href="{{ asset('/') }}checkoutFiles/shared_files/favicon.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css?family=Arimo:400,700|Montserrat:400,500,700|Oswald:400,500,600,700|Lato:300,400,700,900|Open+Sans:300,400,600,700,800|Roboto:300,400,500,700,900|Noto+Serif:700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arimo:400,700|Montserrat:400,500,700|Oswald:400,500,600,700|Lato:300,400,700,900|Open+Sans:300,400,600,700,800|Roboto:300,400,500,700,900|Noto+Serif:700i"
+          rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('/') }}checkoutFiles/shared_files/site.min.css">
     <link rel="stylesheet" href="{{ asset('/') }}checkoutFiles/shared_files/order-cvr.min.css">
     <link rel="stylesheet" href="{{ asset('/') }}checkoutFiles/shared_files/font-awesome.min.css">
@@ -12,53 +13,51 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <style>
         @font-face {
-            font-family:icomoon;
-            font-display:auto;
-            src:url({{ asset('/') }}fonts/icomoon.eot);
-            src:url({{ asset('/') }}fonts/icomoon.eot)
-            format('embedded-opentype'), url({{ asset('/') }}fonts/icomoon.ttf)
-            format('truetype'),url({{ asset('/') }}fonts/icomoon.woff)
-            format('woff'),url({{ asset('/') }}fonts/icomoon.svg)
-            format('svg');
-            font-weight:400;
-            font-style:normal;
+            font-family: icomoon;
+            font-display: auto;
+            src: url({{ asset('/') }}fonts/icomoon.eot);
+            src: url({{ asset('/') }}fonts/icomoon.eot) format('embedded-opentype'), url({{ asset('/') }}fonts/icomoon.ttf) format('truetype'), url({{ asset('/') }}fonts/icomoon.woff) format('woff'), url({{ asset('/') }}fonts/icomoon.svg) format('svg');
+            font-weight: 400;
+            font-style: normal;
         }
+
         @font-face {
-            font-family:Helvetica;
-            font-display:auto;
-            src:url({{ asset('/') }}fonts/helvetica.eot);
-            src:url({{ asset('/') }}fonts/helvetica.eot)
-            format('embedded-opentype'), url({{ asset('/') }}fonts/helvetica.ttf)
-            format('truetype'), url({{ asset('/') }}fonts/helvetica.woff)
-            format('woff'), url({{ asset('/') }}fonts/helvetica.svg)
-            format('svg');
-            font-weight:400;
-            font-style:normal
+            font-family: Helvetica;
+            font-display: auto;
+            src: url({{ asset('/') }}fonts/helvetica.eot);
+            src: url({{ asset('/') }}fonts/helvetica.eot) format('embedded-opentype'), url({{ asset('/') }}fonts/helvetica.ttf) format('truetype'), url({{ asset('/') }}fonts/helvetica.woff) format('woff'), url({{ asset('/') }}fonts/helvetica.svg) format('svg');
+            font-weight: 400;
+            font-style: normal
         }
+
         .img-thumb {
-            position:relative;
-            display:inline-block;
+            position: relative;
+            display: inline-block;
         }
+
         .quantity-badge {
             position: absolute;
-            bottom:2px;
-            left:64px;
-            background-color:rgba(242,242,242,0.7);
+            bottom: 2px;
+            left: 64px;
+            background-color: rgba(242, 242, 242, 0.7);
             text-align: center;
             border-radius: 30px 30px 30px 30px;
             border: 1px solid grey;
-            padding:10px 15px;
-            font-size:20px;
+            padding: 10px 15px;
+            font-size: 20px;
         }
-        @media (max-width:767px) {
+
+        @media (max-width: 767px) {
             .quantity-badge {
-                bottom:-10px;
-                left:24px;
+                bottom: -10px;
+                left: 24px;
             }
+
             .gratisProduct {
                 display: none;
             }
         }
+
         #accordion h3::before {
             content: url('https://api.iconify.design/icomoon-free:arrow-down.svg?height=16');
             vertical-align: -0.125em;
@@ -77,7 +76,7 @@
         #accordion {
             margin: 0 auto;
             width: 80%;
-            font-size:16px;
+            font-size: 16px;
         }
 
         #accordion h3 {
@@ -88,12 +87,12 @@
             font-size: 18px;
             padding: 19.96px;
             border-radius: 2px 2px 0 0;
-            font-weight:600;
+            font-weight: 600;
             cursor: pointer;
         }
 
         #accordion p {
-            margin-bottom:8px;
+            margin-bottom: 8px;
         }
 
         #accordion div p {
@@ -103,6 +102,7 @@
         html {
             scroll-behavior: smooth;
         }
+
         #showReviews {
             cursor: pointer;
             text-decoration: underline;
@@ -141,8 +141,10 @@
                     </div>
                     <div class="wysiwyg-content steps timeline ">
                         <div class="secure-checkout">
-                            <p class="top-img"><img src="{{ asset('/') }}checkoutFiles/shared_files/paypal-v2.png" class="no-lazy"></p>
-                            <p><img src="{{ asset('/') }}checkoutFiles/shared_files/creditcard_images.png" class="no-lazy"></p>
+                            <p class="top-img"><img src="{{ asset('/') }}checkoutFiles/shared_files/paypal-v2.png"
+                                                    class="no-lazy"></p>
+                            <p><img src="{{ asset('/') }}checkoutFiles/shared_files/creditcard_images.png"
+                                    class="no-lazy"></p>
                         </div>
                         <ul>
                             <li>
@@ -164,29 +166,29 @@
         </section> <!-- /row-wrapper-->
 
         {{--<section>--}}
-            {{--<div class="container">--}}
-                {{--<div class="row">--}}
-                    {{--<div class="col-md-12">--}}
-                        {{--@if($errors->list->any())--}}
-                            {{--<div class="alert alert-danger" role="alert" >--}}
-                                {{--{{ $errors->list->first('name') }}<br/>--}}
-                                {{--{{ $errors->list->first('email') }}<br/>--}}
-                                {{--{{ $errors->list->first('phone') }}<br/>--}}
-                                {{--{{ $errors->list->first('shipping_address') }}<br/>--}}
-                                {{--{{ $errors->list->first('shipping_city') }}<br/>--}}
-                                {{--{{ $errors->list->first('shipping_zip') }}--}}
-                            {{--</div>--}}
-                        {{--@endif--}}
+        {{--<div class="container">--}}
+        {{--<div class="row">--}}
+        {{--<div class="col-md-12">--}}
+        {{--@if($errors->list->any())--}}
+        {{--<div class="alert alert-danger" role="alert" >--}}
+        {{--{{ $errors->list->first('name') }}<br/>--}}
+        {{--{{ $errors->list->first('email') }}<br/>--}}
+        {{--{{ $errors->list->first('phone') }}<br/>--}}
+        {{--{{ $errors->list->first('shipping_address') }}<br/>--}}
+        {{--{{ $errors->list->first('shipping_city') }}<br/>--}}
+        {{--{{ $errors->list->first('shipping_zip') }}--}}
+        {{--</div>--}}
+        {{--@endif--}}
 
-                        {{--@if($errors->any())--}}
-                            {{--<div class="alert alert-danger" role="alert" >--}}
-                                {{--<b>{{$errors->first()}}</b>--}}
-                            {{--</div>--}}
-                        {{--@endif--}}
+        {{--@if($errors->any())--}}
+        {{--<div class="alert alert-danger" role="alert" >--}}
+        {{--<b>{{$errors->first()}}</b>--}}
+        {{--</div>--}}
+        {{--@endif--}}
 
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
+        {{--</div>--}}
+        {{--</div>--}}
+        {{--</div>--}}
         {{--</section>--}}
 
         <form action="{{$orderRoute}}" method="POST">
@@ -204,7 +206,8 @@
                                     Step 1: <strong>Izaberite količinu</strong>
                                 </h2>
                             </div>
-                            <div id="js-widget-products" class="product-list products-widget golden-border" data-options="{ }" data-activeclass="">
+                            <div id="js-widget-products" class="product-list products-widget golden-border"
+                                 data-options="{ }" data-activeclass="">
                                 <div class="product-heading">
                                     <div>Proizvod</div>
                                     <div>Cene</div>
@@ -215,12 +218,27 @@
                                     @endphp
                                     <div class="productRadioListItem item-{{$singlePrice['quantity']}} @if($singlePrice['is_default']) checked-item @endif ">
                                         <div class="w_radio">
-                                            <input type="radio" id="product{{$singlePrice['quantity']}}" name="quantity" class="quantity" value="{{$singlePrice['quantity']}}" data-product-name="{{$singlePrice['quantity']}} x {{ $product->product_name }}" data-product-amount="{{ $singlePrice['amount'] }}" is-free-shipping="{{$singlePrice['is_free_shipping']}}" data-product-quantity="{{$singlePrice['quantity']}}" data-product-currency-code="{{ $singlePrice['currency'] }}" @if($singlePrice['is_default']) checked @endif @if(old('quantity') == $singlePrice['quantity']) checked @endif>
+                                            <input type="radio" id="product{{$singlePrice['quantity']}}" name="quantity"
+                                                   class="quantity" value="{{$singlePrice['quantity']}}"
+                                                   data-product-name="{{$singlePrice['quantity']}} x {{ $product->product_name }}"
+                                                   data-product-amount="{{ $singlePrice['amount'] }}"
+                                                   is-free-shipping="{{$singlePrice['is_free_shipping']}}"
+                                                   data-product-quantity="{{$singlePrice['quantity']}}"
+                                                   data-product-currency-code="{{ $singlePrice['currency'] }}"
+                                                   @if($singlePrice['is_default']) checked
+                                                   @endif @if(old('quantity') == $singlePrice['quantity']) checked @endif>
                                             <i class="icon-check"></i>
-                                            <label class="js-unitDiscountRate" for="product{{$singlePrice['quantity']}}">
+                                            <label class="js-unitDiscountRate"
+                                                   for="product{{$singlePrice['quantity']}}">
                                                 <div class="product-name">
-                                                    <p>{{$singlePrice['quantity']}} x {{ $product->product_name }} <strong> @if($singlePrice['is_default']) Ušteda 40% @endif&nbsp;<br></strong>
-                                                        <span class="img-thumb"><img src="{{asset('/').$product->product_image}}" data-src=""><span class="quantity-badge">{{$singlePrice['quantity']}}</span></span>
+                                                    <p>{{$singlePrice['quantity']}} x {{ $product->product_name }}
+                                                        <strong> @if($singlePrice['is_default'])
+                                                                Ušteda 40%
+                                                            @endif&nbsp;<br></strong>
+                                                        <span class="img-thumb"><img
+                                                                    src="{{asset('/').$product->product_image}}"
+                                                                    data-src=""><span
+                                                                    class="quantity-badge">{{$singlePrice['quantity']}}</span></span>
                                                     </p>
                                                     <p>
                                                         @if($singlePrice['is_default'])
@@ -234,7 +252,7 @@
                                                         </del>
                                                         <strong>Nova cena:
                                                             @if($discount)
-                                                            <span style='color:red;text-decoration:line-through'>
+                                                                <span style='color:red;text-decoration:line-through'>
                                                               <span style='color:black'>{{$singlePrice['amountBeforeDiscount']}} {{ $singlePrice['currency'] }}</span><br>
                                                             </span>
                                                                 {{$singlePrice['amount']}} {{ $singlePrice['currency'] }}
@@ -242,7 +260,8 @@
                                                                 <span class="discountedPrice">{{$singlePrice['amount']}} {{ $singlePrice['currency'] }}</span>
                                                             @endif
                                                         </strong>
-                                                            Ušteda: <span class="savePrice">{{ $savings }} </span>{{ $singlePrice['currency'] }}
+                                                        Ušteda: <span
+                                                                class="savePrice">{{ $savings }} </span>{{ $singlePrice['currency'] }}
                                                     </p>
                                                 </div>
                                             </label>
@@ -266,9 +285,10 @@
                                     </tr>
                                     <tr>
                                         <td class="td-shipping-text">Dostava:</td>
-                                        <td class="td-shipping" >
+                                        <td class="td-shipping">
                                             <span id="noFreeShippingDisplay">+ {{ $product->shipping_cost }} {{ $singlePrice['currency'] }}</span>
-                                            <span id="freeShippingDisplay" style='color:#29AF5C;'>BESPLATNA DOSTAVA</span>
+                                            <span id="freeShippingDisplay"
+                                                  style='color:#29AF5C;'>BESPLATNA DOSTAVA</span>
                                         </td>
                                     </tr>
                                     </tbody>
@@ -283,8 +303,10 @@
                                             <p class="your-save">popust</p>
                                         </td>
                                         <td style="padding-bottom: 20px;">
-                                            <p style="color: red; font-size: 18px; line-height: 22px; margin-right: 10px">Ušteda: <span class="discount-total" id="youSaveDownDisplay"></span></p>
-                                            <p style="font-size: 18px; line-height: 22px; margin-right: 10px">UKUPNO: <span class="grand-total" id="totalDownDisplay"></span></p>
+                                            <p style="color: red; font-size: 18px; line-height: 22px; margin-right: 10px">
+                                                Ušteda: <span class="discount-total" id="youSaveDownDisplay"></span></p>
+                                            <p style="font-size: 18px; line-height: 22px; margin-right: 10px">UKUPNO:
+                                                <span class="grand-total" id="totalDownDisplay"></span></p>
                                         </td>
                                     </tr>
                                     </tfoot>
@@ -311,19 +333,25 @@
 
                                     <div class="full-name">
                                         <div class="form-group">
-                                            <input id="customer_firstname" value="{{ old('name') }}" name="name" class="shipping-firstname" type="text" maxlength="30" placeholder="Ime i prezime" required="">
+                                            <input id="customer_firstname" value="{{ old('name') }}" name="name"
+                                                   class="shipping-firstname" type="text" maxlength="30"
+                                                   placeholder="Ime i prezime" required="">
                                             <span class="error-message hidden">Ovo polje je obavezno.</span>
                                         </div>
                                     </div>
 
                                     <div class="form-group form-group--email">
-                                        <input id="customer_email" value="{{ old('email') }}" name="email" class="customer-email" type="email" maxlength="200" placeholder="Email adresa (opciono)" type="email">
+                                        <input id="customer_email" value="{{ old('email') }}" name="email"
+                                               class="customer-email" type="email" maxlength="200"
+                                               placeholder="Email adresa (opciono)" type="email">
                                         <span class="error-message hidden">Molimo unesite validnu email adresu.</span>
                                     </div>
 
                                     <!-- End -->
                                     <div class="form-group form-group--phone">
-                                        <input id="customer_phone" value="{{ old('phone') }}" name="phone" class="customer-phone" type="tel" maxlength="20" placeholder="Broj telefona" required="">
+                                        <input id="customer_phone" value="{{ old('phone') }}" name="phone"
+                                               class="customer-phone" type="tel" maxlength="20"
+                                               placeholder="Broj telefona" required="">
                                         <span class="error-message hidden">Molimo unesite validan broj telefona.</span>
                                     </div>
 
@@ -332,17 +360,23 @@
 
                                     <div class="form-group">
                                         <!-- <label for="shipping_address1">Address Line 1</label> -->
-                                        <input id="shipping_address" value="{{ old('shipping_address') }}" name="shipping_address" class="shipping-address" type="text" maxlength="80" placeholder="Ulica i broj" required="">
+                                        <input id="shipping_address" value="{{ old('shipping_address') }}"
+                                               name="shipping_address" class="shipping-address" type="text"
+                                               maxlength="80" placeholder="Ulica i broj" required="">
                                         <span class="error-message hidden">Ovo polje je obavezno.</span>
                                     </div>
                                     <div class="form-group">
                                         <!-- <label for="shipping_city">City</label> -->
-                                        <input id="shipping_city" value="{{ old('shipping_city') }}" name="shipping_city" class="shipping-city" type="text" maxlength="30" placeholder="Grad" required="">
+                                        <input id="shipping_city" value="{{ old('shipping_city') }}"
+                                               name="shipping_city" class="shipping-city" type="text" maxlength="30"
+                                               placeholder="Grad" required="">
                                         <span class="error-message hidden">Ovo polje je obavezno.</span>
                                     </div>
                                     <div class="form-group">
                                         <!-- <label for="shipping_postal">Zip/Postcode</label> -->
-                                        <input id="shipping_zip" value="{{ old('shipping_zip') }}" name="shipping_zip" class="shipping-postal" type="text" placeholder="Postanski broj" required="" pattern="\d*" maxlength="5">
+                                        <input id="shipping_zip" value="{{ old('shipping_zip') }}" name="shipping_zip"
+                                               class="shipping-postal" type="text" placeholder="Postanski broj"
+                                               required="" pattern="\d*" maxlength="5">
                                         {{--<span class="error-message hidden">Ovo polje je obavezno.</span>--}}
                                     </div>
 
@@ -359,7 +393,7 @@
                             <input type="hidden" name="country_id" value="{{ $product->country_id }}"/>
 
                             <script>
-                                $('#showForm').click(function() {
+                                $('#showForm').click(function () {
                                     $('.orderst-form').removeClass('hidden');
                                     $('#showForm').hide();
                                 })
@@ -375,10 +409,13 @@
                                     <div class="w_inner">
                                         <div class="w_item ">
                                             <div class="w_thumb">
-                                                <img src="{{ asset('/') }}checkoutFiles/shared_files/thegadgetreview_guarantee.png" data-src="" alt="" class="img-view">
+                                                <img src="{{ asset('/') }}checkoutFiles/shared_files/thegadgetreview_guarantee.png"
+                                                     data-src="" alt="" class="img-view">
                                             </div>
                                             <div class="w_desc">
-                                                <p>{{ $product->brand_name }} daje rok od 14 dana za vraćanje neiskorišćenih paketa. Samo nam pošaljite proizvod nazad i dobićete zamenu ili potpuni povraćaj novca.</p>
+                                                <p>{{ $product->brand_name }} daje rok od 14 dana za vraćanje
+                                                    neiskorišćenih paketa. Samo nam pošaljite proizvod nazad i dobićete
+                                                    zamenu ili potpuni povraćaj novca.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -396,24 +433,30 @@
             <div class="container">
                 <div class="">
                     <div class="comments ">
-                        <h2 class="w_main_title"><span class="text">Želite da znate šta drugi kažu o nama? <br> <span id="showReviews">Pogledaj utiske kupaca</span></span></h2>
+                        <h2 class="w_main_title"><span class="text">Želite da znate šta drugi kažu o nama? <br> <span
+                                        id="showReviews">Pogledaj utiske kupaca</span></span></h2>
                         <div class="w_outer" id="divReviews">
                             <div class="w_inner">
                                 @isset($productReviews)
                                     @foreach($productReviews as $review)
-                                    <div class="w_item ">
-                                        <div class="w_thumb">
-                                            <img src="{{asset('/').$review->review_image}}" data-src="" alt="customer1" class="img-view">
-                                        </div>
-                                        <div class="w_content_wrap">
-                                            <div class="w_desc">
-                                                <p><span class="star" style="color: #993300;">Star</span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></p>
-                                                <p><strong>Verifikovana kupovina</strong></p>
-                                                <p style="color: #5b5b5b;">{{$review->review_text}}</p>
-                                                <p style="text-align: right;"><strong>{{$review->review_name}}</strong></p>
+                                        <div class="w_item ">
+                                            <div class="w_thumb">
+                                                <img src="{{asset('/').$review->review_image}}" data-src=""
+                                                     alt="customer1" class="img-view">
+                                            </div>
+                                            <div class="w_content_wrap">
+                                                <div class="w_desc">
+                                                    <p><span class="star" style="color: #993300;">Star</span><i
+                                                                class="icon-star"></i><i class="icon-star"></i><i
+                                                                class="icon-star"></i><i class="icon-star"></i><i
+                                                                class="icon-star"></i></p>
+                                                    <p><strong>Verifikovana kupovina</strong></p>
+                                                    <p style="color: #5b5b5b;">{{$review->review_text}}</p>
+                                                    <p style="text-align: right;">
+                                                        <strong>{{$review->review_name}}</strong></p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
                                     @endforeach
                                 @endisset
                             </div>
@@ -426,25 +469,35 @@
             <div class="container">
                 <div class="">
                     <div class="faq ">
-                        <h2 class="w_main_title"><span class="text">Imate pitanje?  <span id="showFaq">Pogledaj Najčešće postavljena pitanja<span></span></span></span></h2>
+                        <h2 class="w_main_title"><span class="text">Imate pitanje?  <span id="showFaq">Pogledaj Najčešće postavljena pitanja<span></span></span></span>
+                        </h2>
                         <div id="accordion">
                             <h3>Da li mogu da otkažem narudžbinu nakon kupovine sa sajta? - Možete.</h3>
                             <div>
-                                <p>Nudimo otkazivanje narudžbina u roku od 24 sata nakon kupovine. Ukoliko se predomislite u tom roku - pošaljite nam poruku i mi ćemo otkazati porudžbinu.</p>
+                                <p>Nudimo otkazivanje narudžbina u roku od 24 sata nakon kupovine. Ukoliko se
+                                    predomislite u tom roku - pošaljite nam poruku i mi ćemo otkazati porudžbinu.</p>
                             </div>
                             <h3>Kako da vratim ili zamenim proizvod? - Naša garancija.</h3>
                             <div>
-                                <p>Naša politika vraćanja traje <strong>30 dana</strong>&nbsp;počevši od dana kada se naš paket isporuči na Vašu adresu.<br><br>
-                                    Prihvatamo povrate svih neoštećenih predmeta u roku od 30 dana kako bismo ispunili očekivanja kupaca i osigurali Vaše zadovoljstvo kupovinom.<br><br>
-                                    Uvereni smo da će naša ponuda proizvoda ispuniti ili premašiti Vaša očekivanja, ali ukoliko ipak želite da vratite proizvod - obratite se našem timu za podršku na <strong>info@wombatsbrand.com</strong> i mi ćemo odgovoriti na Vaš zahtev u roku od 24h.<br><br></p>
+                                <p>Naša politika vraćanja traje <strong>30 dana</strong>&nbsp;počevši od dana kada se
+                                    naš paket isporuči na Vašu adresu.<br><br>
+                                    Prihvatamo povrate svih neoštećenih predmeta u roku od 30 dana kako bismo ispunili
+                                    očekivanja kupaca i osigurali Vaše zadovoljstvo kupovinom.<br><br>
+                                    Uvereni smo da će naša ponuda proizvoda ispuniti ili premašiti Vaša očekivanja, ali
+                                    ukoliko ipak želite da vratite proizvod - obratite se našem timu za podršku na
+                                    <strong>info@wombatsbrand.com</strong> i mi ćemo odgovoriti na Vaš zahtev u roku od
+                                    24h.<br><br></p>
                             </div>
                             <h3>Koje su mogućnosti isporuke?</h3>
                             <div>
-                                <p>Sve porudžbine koje primimo u toku jednog dana, šaljemo narednog radnog dana. Nakon toga, kurirska služba u najvećem brojem slučaja dostavlja Vam paket narednog dana. Vikendom ne šaljemo pošiljke.</p>
+                                <p>Sve porudžbine koje primimo u toku jednog dana, šaljemo narednog radnog dana. Nakon
+                                    toga, kurirska služba u najvećem brojem slučaja dostavlja Vam paket narednog dana.
+                                    Vikendom ne šaljemo pošiljke.</p>
                             </div>
                             <h3>Šta ako predmet koji sam naručio stigne slomljen ili oštećen?</h3>
                             <div>
-                                <p>Ukoliko je proizvod pokvaren ili vam ne odgovara, možemo ga zameniti i u tom slučaju ne snosite troškove poštarine.</p>
+                                <p>Ukoliko je proizvod pokvaren ili vam ne odgovara, možemo ga zameniti i u tom slučaju
+                                    ne snosite troškove poštarine.</p>
                             </div>
                         </div>
                     </div>
@@ -454,8 +507,8 @@
 
         <script type="text/javascript">
 
-            $( function() {
-                $( "#accordion" ).accordion();
+            $(function () {
+                $("#accordion").accordion();
                 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                     anchor.addEventListener('click', function (e) {
                         e.preventDefault();
@@ -466,17 +519,17 @@
                 });
             });
 
-            $('#showFaq').click(function() {
+            $('#showFaq').click(function () {
                 $('#accordion').toggle("slow");
             });
 
-            $('#showReviews').click(function() {
+            $('#showReviews').click(function () {
                 $('#divReviews').toggle("slow");
             });
 
-            $( function() {
-                $( "#divFaq" ).accordion();
-            } );
+            $(function () {
+                $("#divFaq").accordion();
+            });
 
             $('.quantity').click(function () {
                 $('.productRadioListItem').removeClass('checked-item');
@@ -494,7 +547,8 @@
     <footer>
         <div class="container">
             <div class="footer-inner">
-                <p class="copyright"> ©{{ now()->year }} - {{ isset($product->brand_name) ? $product->brand_name : ''}}</p><br>
+                <p class="copyright"> ©{{ now()->year }}
+                    - {{ isset($product->brand_name) ? $product->brand_name : ''}}</p><br>
                 <div class="nav-footer">
 
                     <div class="nav clearfix">
@@ -505,7 +559,8 @@
                 </div>
                 <div class="DMCA_Logo">
                     <a class="no-tracking" href="" title="DMCA Protection Status" target="_blank">
-                        <img src="{{ asset('/') }}checkoutFiles/shared_files/dmcaBadge.png" data-src="" alt="DMCA Protection Status">
+                        <img src="{{ asset('/') }}checkoutFiles/shared_files/dmcaBadge.png" data-src=""
+                             alt="DMCA Protection Status">
                     </a>
                 </div>
 
@@ -513,7 +568,7 @@
         </div>
     </footer>
     @if($product->brand_name === "Flexonik")
-{{--        @include('components.company_footer')--}}
+        {{--        @include('components.company_footer')--}}
     @endif
 </div>
 

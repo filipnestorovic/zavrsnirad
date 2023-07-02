@@ -3,21 +3,28 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 
-class Order
+class Order extends Model
 {
+
+    protected $table = 'order';
+    protected $primaryKey = 'id_order';
+
+    use HasFactory;
+
     public $name;
     public $email;
     public $phone;
-    public $street;
+    public $address;
     public $city;
     public $zip;
     public $quantity;
     public $price;
     public $is_order_with_free_shipping;
     public $order_note;
-    public $coupon_used;
     public $variation_id;
     public $test_variation_id;
     public $country_id;
@@ -26,7 +33,16 @@ class Order
     public $is_cross_sell;
     public $product_id;
 
-    public $isPaidWithStripe;
+    public function variation()
+    {
+        return $this->hasOne(Variation::class,'id_variation','variation_id');
+    }
+
+    public function userSession()
+    {
+        return $this->hasOne(UserSession::class,'id_session','session_id');
+    }
+
 
     public function insertOrder(){
         $result = DB::table('order')
@@ -34,18 +50,16 @@ class Order
                 'name' => $this->name,
                 'email' => $this->email,
                 'phone' => $this->phone,
-                'street' => $this->street,
+                'address' => $this->address,
                 'city' => $this->city,
                 'zip' => $this->zip,
                 'quantity' => $this->quantity,
                 'price' => $this->price,
                 'is_free_shipping' => $this->is_order_with_free_shipping,
                 'note' => $this->order_note,
-                'coupon_used' => $this->coupon_used,
                 'variation_id' => $this->variation_id,
                 'test_variation_id' => $this->test_variation_id,
                 'country_id' => $this->country_id,
-                'isPaidWithStripe' => $this->isPaidWithStripe,
                 'session_id' => $this->session_id,
             ]);
 

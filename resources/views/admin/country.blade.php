@@ -46,24 +46,6 @@
                             </div>
                             <div class="md-form input-group input-group-sm mb-3">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm">Cash on delivery</span>
-                                </div>
-                                <select name="enabledCOD" id="enabledCOD" data-toggle="dropdown" required>
-                                    <option value="1" selected>Yes</option>
-                                    <option value="0">No</option>
-                                </select>
-                            </div>
-                            <div class="md-form input-group input-group-sm mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm">Stripe</span>
-                                </div>
-                                <select name="enabledStripe" id="enabledStripe" data-toggle="dropdown" required>
-                                    <option value="1">Yes</option>
-                                    <option value="0" selected>No</option>
-                                </select>
-                            </div>
-                            <div class="md-form input-group input-group-sm mb-3">
-                                <div class="input-group-prepend">
                                     <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm">Active</span>
                                 </div>
                                 <select name="isCountryActive" id="isCountryActive" data-toggle="dropdown" required>
@@ -90,8 +72,6 @@
                                         <th class="text-center">Country shortcode</th>
                                         <th class="text-center">Shipping cost</th>
                                         <th class="text-center">Currency</th>
-                                        <th class="text-center">COD</th>
-                                        <th class="text-center">Stripe</th>
                                         <th class="text-center">Active</th>
                                         <th class="text-center"></th>
                                     </tr>
@@ -105,12 +85,6 @@
                                                 <td class="pt-3-half">{{$country->country_code}}</td>
                                                 <td class="pt-3-half">{{$country->shipping_cost}}</td>
                                                 <td class="pt-3-half">{{$country->currency_symbol}}</td>
-                                                <td class="pt-3-half">
-                                                    {{ ($country->enabledCOD == 1) ? "Yes" : "No" }}
-                                                </td>
-                                                <td class="pt-3-half">
-                                                    {{ ($country->enabledStripe == 1) ? "Yes" : "No" }}
-                                                </td>
                                                 <td class="pt-3-half">
                                                     {{ ($country->is_active == 1) ? "Yes" : "No" }}
                                                 </td>
@@ -247,24 +221,6 @@
                         </div>
                         <div class="md-form input-group input-group-sm mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm">Cash on delivery</span>
-                            </div>
-                            <select name="enabledCODModal" id="enabledCODModal" data-toggle="dropdown" required>
-                                <option value="1">Yes</option>
-                                <option value="0">No</option>
-                            </select>
-                        </div>
-                        <div class="md-form input-group input-group-sm mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm">Stripe</span>
-                            </div>
-                            <select name="enabledStripeModal" id="enabledStripeModal" data-toggle="dropdown" required>
-                                <option value="1">Yes</option>
-                                <option value="0">No</option>
-                            </select>
-                        </div>
-                        <div class="md-form input-group input-group-sm mb-3">
-                            <div class="input-group-prepend">
                                 <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm">Active</span>
                             </div>
                             <select name="isCountryActiveModal" id="isCountryActiveModal" data-toggle="dropdown" required>
@@ -339,12 +295,8 @@
                         $('#countryNameModal').val(data.country_name);
                         $('#countryShortcodeModal').val(data.country_code);
                         $('#shippingCostModal').val(data.shipping_cost);
-                        $('#currencyIdCountryModal').val(data.currency_id);
-                        $('#currencyIdCountryModal').selectpicker('refresh');
-                        $('#enabledCODModal').val(data.enabledCOD).selectpicker('refresh');
-                        $('#enabledStripeModal').val(data.enabledStripe).selectpicker('refresh');
-                        $('#isCountryActiveModal').val(data.is_active);
-                        $('#isCountryActiveModal').selectpicker('refresh');
+                        $('#currencyIdCountryModal').val(data.currency_id).selectpicker('refresh');
+                        $('#isCountryActiveModal').val(data.is_active).selectpicker('refresh');
                     },
                     error: function (req, err) {
                         console.log(req);

@@ -12,8 +12,11 @@ class Checkout extends Model
 {
     use HasFactory;
 
+    protected $table = 'checkout';
+    protected $primaryKey = 'id_checkout';
+
     public $checkout_name;
-    public $checkout_url;
+    public $checkout_path;
     public $country_id;
 
     public function getAllCheckouts(){
@@ -45,7 +48,7 @@ class Checkout extends Model
         $result = DB::table('checkout')
             ->insertGetId([
                 'checkout_name' => $this->checkout_name,
-                'checkout_url' => $this->checkout_url,
+                'checkout_path' => $this->checkout_path,
                 'country_id' => $this->country_id,
             ]);
         return $result;
@@ -56,7 +59,7 @@ class Checkout extends Model
             ->where('id_checkout', '=',$id)
             ->update([
                 'checkout_name' => $this->checkout_name,
-                'checkout_url' => $this->checkout_url,
+                'checkout_path' => $this->checkout_path,
                 'country_id' => $this->country_id,
                 'updated_at' => Carbon::now(),
             ]);

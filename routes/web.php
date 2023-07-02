@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::group([ 'middleware' => ['admin']], function() {
-    Route::domain('new.wombatsbrand.com')->middleware(['auth'])->group(function () {
+    Route::domain('ict.wombatsbrand.com')->middleware(['auth'])->group(function () {
         Route::get('/', [App\Http\Controllers\AdminController::class, 'admin'])->name('adminDashboard');
         Route::get('/logout', [App\Http\Controllers\AdminController::class, 'logout'])->name('logoutAdmin');
 
@@ -51,33 +51,6 @@ Route::group([ 'middleware' => ['admin']], function() {
         Route::get('/deleteProduct/{id}', [App\Http\Controllers\ProductController::class, 'deleteProduct'])->name('deleteProduct');
         Route::get('/restoreProduct/{id}', [App\Http\Controllers\ProductController::class, 'restoreProduct'])->name('restoreProduct');
 
-        Route::get('/productReviews/{id}', [App\Http\Controllers\ProductController::class, 'productReviews'])->name('productReviews');
-        Route::post('/addReview', [App\Http\Controllers\ProductController::class, 'addReview'])->name('addReview');
-        Route::get('/getReview/{id}', [App\Http\Controllers\ProductController::class, 'getReview'])->name('getReview');
-        Route::post('/editReview', [App\Http\Controllers\ProductController::class, 'editReview'])->name('editReview');
-        Route::get('/deleteReview/{id}', [App\Http\Controllers\ProductController::class, 'deleteReview'])->name('deleteReview');
-
-        Route::get('/productSizes/{id}', [App\Http\Controllers\ProductController::class, 'getAllProductSizes'])->name('getAllProductSizes');
-        Route::post('/addProductSize', [App\Http\Controllers\ProductController::class, 'addProductSize'])->name('addProductSize');
-        Route::get('/deleteProductSize/{id}', [App\Http\Controllers\ProductController::class, 'deleteProductSize'])->name('deleteProductSize');
-
-        Route::get('/getPixels', [App\Http\Controllers\PixelController::class, 'getPixels'])->name('getPixels');
-        Route::get('/getPixel/{id}', [App\Http\Controllers\PixelController::class, 'getPixel'])->name('getPixel');
-        Route::post('/addPixel', [App\Http\Controllers\PixelController::class, 'addPixel'])->name('addPixel');
-        Route::post('/editPixel', [App\Http\Controllers\PixelController::class, 'editPixel'])->name('editPixel');
-        Route::post('/deletePixel', [App\Http\Controllers\PixelController::class, 'deletePixel'])->name('deletePixel');
-
-        Route::post('/connectBrandPixel', [App\Http\Controllers\PixelController::class, 'connectBrandPixel'])->name('connectBrandPixel');
-        Route::post('/connectProductPixel', [App\Http\Controllers\PixelController::class, 'connectProductPixel'])->name('connectProductPixel');
-        Route::post('/connectDomainPixel', [App\Http\Controllers\PixelController::class, 'connectDomainPixel'])->name('connectDomainPixel');
-
-        Route::get('/getBrandPixelForSingleProduct/{id}', [App\Http\Controllers\PixelController::class, 'getBrandPixelForSingleProduct'])->name('getBrandPixelForSingleProduct');
-        Route::get('/getProductPixel/{id}', [App\Http\Controllers\PixelController::class, 'getProductPixel'])->name('getProductPixel');
-
-        Route::get('/disconnectBrandPixel/{id}', [App\Http\Controllers\PixelController::class, 'disconnectBrandPixel'])->name('disconnectBrandPixel');
-        Route::get('/disconnectProductPixel/{id}', [App\Http\Controllers\PixelController::class, 'disconnectProductPixel'])->name('disconnectProductPixel');
-        Route::get('/disconnectDomainPixel/{id}', [App\Http\Controllers\PixelController::class, 'disconnectDomainPixel'])->name('disconnectDomainPixel');
-
         Route::get('/lander', [App\Http\Controllers\PageController::class, 'landerIndex'])->name('landerIndex');
         Route::post('/addLander', [App\Http\Controllers\PageController::class, 'addLander'])->name('addLander');
         Route::get('/getLander/{id}', [App\Http\Controllers\PageController::class, 'getLander'])->name('getLander');
@@ -97,12 +70,6 @@ Route::group([ 'middleware' => ['admin']], function() {
         Route::post('/editThankyou', [App\Http\Controllers\PageController::class, 'editThankyou'])->name('editThankyou');
         Route::get('/deleteThankyou/{id}', [App\Http\Controllers\PageController::class, 'deleteThankyou'])->name('deleteThankyou');
 
-        Route::get('/coupon', [App\Http\Controllers\CouponController::class, 'couponIndex'])->name('couponIndex');
-        Route::post('/addCoupon', [App\Http\Controllers\CouponController::class, 'addCoupon'])->name('addCoupon');
-        Route::get('/getCoupon/{id}', [App\Http\Controllers\CouponController::class, 'getCoupon'])->name('getCoupon');
-        Route::post('/editCoupon', [App\Http\Controllers\CouponController::class, 'editCoupon'])->name('editCoupon');
-        Route::get('/deleteCoupon/{id}', [App\Http\Controllers\CouponController::class, 'deleteCoupon'])->name('deleteCoupon');
-
         Route::get('/variations', [App\Http\Controllers\VariationController::class, 'variationsIndex'])->name('variationsIndex');
         Route::post('/newVariation', [App\Http\Controllers\VariationController::class, 'newVariation'])->name('newVariation');
         Route::get('/variation/{id?}', [App\Http\Controllers\VariationController::class, 'variation'])->name('variation');
@@ -113,7 +80,6 @@ Route::group([ 'middleware' => ['admin']], function() {
         Route::get('/restoreVariation/{id?}', [App\Http\Controllers\VariationController::class, 'restoreVariation'])->name('restoreVariation');
         Route::post('/addCouponsToVariation', [App\Http\Controllers\VariationController::class, 'addCouponsToVariation'])->name('addCouponsToVariation');
         Route::post('/addPricesToVariation', [App\Http\Controllers\VariationController::class, 'addPricesToVariation'])->name('addPricesToVariation');
-        Route::get('/copyVariation/{id?}', [App\Http\Controllers\VariationController::class, 'copyVariation'])->name('copyVariation');
 
         Route::get('/ajaxData/getVariationsAjax', [App\Http\Controllers\VariationController::class, 'getVariationsAjax'])->name('getVariationsAjax');
         Route::get('/ajaxData/getProductsAjax', [App\Http\Controllers\ProductController::class, 'getProductsAjax'])->name('getProductsAjax');
@@ -143,37 +109,24 @@ Route::group([ 'middleware' => ['admin']], function() {
 
         Route::get('/api/getProductPrices/{country}/{sku}', [App\Http\Controllers\ApiController::class, 'getProductPrices'])->name('getProductPrices')->withoutMiddleware(['admin', 'auth']);
 
-        require __DIR__.'/auth.php';
+//        require __DIR__.'/auth.php';
 
     });
 });
 
 Route::group(['middleware' => ['guest']], function () {
     $webRoutes = function() {
-        Route::get('/api/stripe/createPaymentIntent/{variation_id}/{selectedQuantity}', [App\Http\Controllers\ApiController::class, 'createPaymentIntent'])->name('createPaymentIntent');
-        Route::get('/api/stripe/completedStripePayment/{product_id}', [App\Http\Controllers\HomeController::class, 'completedStripePayment'])->name('completedStripePayment');
-
-        Route::get('/sitemap.xml', [App\Http\Controllers\HomeController::class, 'siteMap'])->name('siteMap');
         Route::get('/{slug}/thankyou', [App\Http\Controllers\HomeController::class, 'thankyou'])->name('thankyou');
         Route::get('/{slug}/checkout/{coupon?}', [App\Http\Controllers\HomeController::class, 'checkout'])->name('checkout');
         Route::get('/{slug?}/{coupon?}', [App\Http\Controllers\HomeController::class, 'lander'])->name('lander');
 
         Route::post('/order', [App\Http\Controllers\OrderController::class, 'order'])->name('order');
         Route::post('/upCrossSellOrder', [App\Http\Controllers\OrderController::class, 'upCrossSellOrder'])->name('upCrossSellOrder');
-        Route::post('/selectProductSize', [App\Http\Controllers\OrderController::class, 'selectProductSize'])->name('selectProductSize');
     };
 
-//    Route::get('/testRoute', [App\Http\Controllers\ApiController::class, 'testRoute'])->name('testRoute');
-
-    Route::post('/api/stripe/updatePaymentIntent', [App\Http\Controllers\ApiController::class, 'updatePaymentIntent'])->name('updatePaymentIntent');
-    Route::post('/api/stripe/webhookAfterPayment', [App\Http\Controllers\ApiController::class, 'stripeAfterPaymentWebhook'])->name('stripeAfterPaymentWebhook');
-
-    Route::get('/ajax/sendConversionApiFB', [App\Http\Controllers\HomeController::class, 'sendConversionApiFB'])->name('sendConversionApiFB');
-    Route::post('/insertSessionAjax', [App\Http\Controllers\HomeController::class, 'insertEventDbAjax'])->name('insertEventDbAjax');
-    Route::post('/validatePhoneNumber', [App\Http\Controllers\HomeController::class, 'validatePhoneNumber'])->name('validatePhoneNumber');
-
-    Route::post('/selectCountry', [App\Http\Controllers\HomeController::class, 'selectCountry'])->name('selectCountry');
+    Route::post('/insertSessionAjax', [App\Http\Controllers\EventController::class, 'insertEventDbAjax'])->name('insertEventDbAjax');
+    Route::post('/validatePhoneNumber', [App\Http\Controllers\ApiController::class, 'validatePhoneNumber'])->name('validatePhoneNumber');
 
     Route::domain('{country?}.{site?}.{domain?}')->middleware('countryCheck')->group($webRoutes);
-    Route::domain('{site?}.{domain?}')->middleware('countryCheck')->group($webRoutes);
+//    Route::domain('{site?}.{domain?}')->middleware('countryCheck')->group($webRoutes);
 });

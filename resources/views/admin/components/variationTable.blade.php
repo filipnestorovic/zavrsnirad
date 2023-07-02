@@ -17,43 +17,26 @@
     </caption>
     <tbody style="vertical-align: middle;">
     @foreach($paginatedItems as $singleVariation)
-        @php
-            $variationPrices = "";
-            foreach($singleVariation as $singleVariationPrices) {
-                if($singleVariationPrices['variation_price_deleted'] === null) {
-                    $variationPrices .= "Price for ".$singleVariationPrices['quantity'].": ".$singleVariationPrices['amount']." ".$singleVariationPrices['currency_symbol']." <br/>";
-                }
-            }
-        @endphp
         <tr style="padding-top: 0px;"
-            @if($singleVariation[0]["variation_deleted"])
+            @if($singleVariation->getAttribute('deleted_at'))
                 class="table-danger"
             @endif
-            @if($singleVariation[0]["is_variation_default"])
+            @if($singleVariation->getAttribute('is_variation_default'))
                 class="table-primary"
             @endif
-            @if($singleVariation[0]["is_active"] == 0)
+            @if(!$singleVariation->getAttribute('is_active'))
                 class="table-danger"
             @endif
         >
-            <td>{{ $singleVariation[0]["id_variation"] }}</td>
-            <td>{{ $singleVariation[0]["variation_name"] }}&nbsp;
-                @if(!$singleVariation[0]["variation_deleted"])
-                    @if($variationPrices != "")
-                        <a data-toggle="popover" data-placement="right" title="Prices" data-content="{{ $variationPrices }}"><i class="fas fa-comments-dollar fa-lg"></i></a>
-                    @else
-                        <a data-toggle="tooltip" title="Prices are not entered"><i  style="color: #F93154;" class="fas fa-exclamation-circle fa-lg"></i></a>
-                    @endif
-                @endif
-            </td>
-            <td>{{ $singleVariation[0]["variation_description"] }}</td>
-            <td>{{ $singleVariation[0]["product_name"] }} ({{ $singleVariation[0]["country_name"] }})</td>
-            <td>{{ $singleVariation[0]["lander_name"] }}</td>
-            <td>{{ $singleVariation[0]["checkout_name"] }}</td>
-            <td>{{ $singleVariation[0]["thankyou_name"] }}</td>
+            <td>{{ $singleVariation->getAttribute('id_variation') }}</td>
+            <td>{{ $singleVariation->getAttribute('variation_name') }}</td>
+            <td>{{ $singleVariation->getAttribute('variation_description') }}</td>
+            <td>{{ $singleVariation->product->getAttribute('product_name') }} ({{ $singleVariation->product->country->getAttribute('country_name') }})</td>
+            <td>{{ $singleVariation->lander->getAttribute('lander_name') }}</td>
+            <td>{{ $singleVariation->checkout->getAttribute('checkout_name') }}</td>
+            <td>{{ $singleVariation->thankyou->getAttribute('thankyou_name') }}</td>
             <td>
-                <span class="table-edit"><a href="{{ route('variation',['id' => $singleVariation[0]["id_variation"]]) }}"><button type="button" class="btn btn-success btn-rounded btn-sm my-0 editVariationButton">DETAILS</button></a></span>
-                <span class="table-copy"><a href="{{ route('copyVariation',['id' => $singleVariation[0]["id_variation"]]) }}"><button type="button" class="btn btn-primary btn-rounded btn-sm my-0 copyVariationButton">COPY</button></a></span>
+                <span class="table-edit"><a href="{{ route('variation',['id' => $singleVariation->getAttribute('id_variation')]) }}"><button type="button" class="btn btn-success btn-rounded btn-sm my-0 editVariationButton">DETAILS</button></a></span>
             </td>
         </tr>
     @endforeach

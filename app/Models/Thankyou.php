@@ -12,8 +12,11 @@ class Thankyou extends Model
 {
     use HasFactory;
 
+    protected $table = 'thankyou';
+    protected $primaryKey = 'id_thankyou';
+
     public $thankyou_name;
-    public $thankyou_url;
+    public $thankyou_path;
     public $country_id;
 
     public function getAllThankyous(){
@@ -44,7 +47,7 @@ class Thankyou extends Model
         $result = DB::table('thankyou')
             ->insertGetId([
                 'thankyou_name' => $this->thankyou_name,
-                'thankyou_url' => $this->thankyou_url,
+                'thankyou_path' => $this->thankyou_path,
                 'country_id' => $this->country_id,
             ]);
         return $result;
@@ -55,7 +58,7 @@ class Thankyou extends Model
             ->where('id_thankyou', '=',$id)
             ->update([
                 'thankyou_name' => $this->thankyou_name,
-                'thankyou_url' => $this->thankyou_url,
+                'thankyou_path' => $this->thankyou_path,
                 'country_id' => $this->country_id,
                 'updated_at' => Carbon::now(),
             ]);

@@ -24,6 +24,16 @@ class Product extends Model
     public $country_id;
     public $woocommerce_id;
 
+    public function country()
+    {
+        return $this->hasOne(Country::class,'id_country','country_id');
+    }
+
+    public function brand()
+    {
+        return $this->hasOne(Brand::class,'id_brand','brand_id');
+    }
+
     public function getAllProduct() {
         $result = DB::table('product')
             ->leftJoin('country', 'product.country_id', '=', 'country.id_country')
@@ -110,15 +120,6 @@ class Product extends Model
         return $result;
     }
 
-    public function getProductBrand($id) {
-        $result = DB::table('product')
-            ->leftJoin('brand', 'product.brand_id', '=', 'brand.id_brand')
-            ->where('id_product','=',$id)
-            ->whereNull('product.deleted_at')
-            ->first();
-        return $result;
-    }
-
     public function restoreProduct($id) {
         $result = DB::table('product')
             ->where('id_product', '=', $id)
@@ -154,43 +155,61 @@ class Product extends Model
         }
     }
 
-    public function getProductBySlugBrandAndCountry($slug = null, $brand_id, $country_id) {
+    public function findProduct($slug = null, $brand_id = null, $country_id = null)
+    {
+        $result = Product::with('country','brand')
+                ->whereNull('deleted_at')
+                ->where('country_id',$country_id)
+                ->where('brand_id',$brand_id);
 
-        $result = DB::table('product')
-            ->leftJoin('country', 'product.country_id', '=', 'country.id_country')
-            ->leftJoin('lander', 'product.id_product', '=', 'lander.product_id')
-            ->leftJoin('brand', 'lander.brand_id', '=', 'brand.id_brand')
-            ->leftJoin('domain', 'domain.brand_id', '=', 'brand.id_brand')
-            ->whereNull('brand.deleted_at')
-            ->whereNull('product.deleted_at')
-            ->where([
-                ['lander.brand_id',$brand_id],
-            ]);
-
-        if(empty($slug)){ //find default if slug is null
-            $tempResult = $result->get();
-            foreach($tempResult as $temp) {
-                if($country_id != null) {
-                    if($temp->is_default_product === 1 && $temp->country_id === $country_id) {
-                        $result->where('product.id_product','=',$temp->id_product);
-                        break;
-                    }
-                } else {
-                    if($temp->is_default_product === 1) {
-                        $result->where('product.id_product','=',$temp->id_product);
-                        break;
-                    }
-                }
-            }
+        if(empty($slug)) {
+            $result->where('is_default_product',1);
         } else {
-            $result->where('product.slug', '=', $slug);
-            if($country_id != null) {
-                $result->where('product.country_id', '=', $country_id); //ne pusti ga
-            }
+            $result->where('slug','LIKE',$slug);
+        }
+
+        if(!$result->exists()) {
+            return $this->findProduct(null,$brand_id,$country_id);
         }
 
         return $result->first();
     }
+
+//    public function getProductBySlugBrandAndCountry($slug = null, $brand_id, $country_id) {
+//
+//        $result = DB::table('product')
+//            ->join('country', 'product.country_id', '=', 'country.id_country')
+//            ->join('lander', 'product.id_product', '=', 'lander.product_id')
+//            ->join('brand', 'lander.brand_id', '=', 'brand.id_brand')
+//            ->join('domain', 'domain.brand_id', '=', 'brand.id_brand')
+//            ->whereNull('brand.deleted_at')
+//            ->whereNull('product.deleted_at');
+//
+//        if(empty($slug)){ //find default if slug is null
+//            $tempResult = $result->get();
+//            foreach($tempResult as $temp) {
+//                if($country_id != null) {
+//                    if($temp->is_default_product === 1 && $temp->country_id === $country_id) {
+//                        $result->where('product.id_product','=',$temp->id_product);
+//                        break;
+//                    }
+//                } else {
+//                    if($temp->is_default_product === 1) {
+//                        $result->where('product.id_product','=',$temp->id_product);
+//                        break;
+//                    }
+//                }
+//            }
+//        } else {
+//
+//            $result->where('slug', 'LIKE', '%'.$slug.'%');
+//            if($country_id != null) {
+//                $result->where('product.country_id', '=', $country_id); //ne pusti ga
+//            }
+//        }
+//
+//        return $result->first();
+//    }
 
     public function groupProductBySku($sku, $country_code = null, $country_id = null) {
         $result = DB::table('product')

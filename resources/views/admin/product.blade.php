@@ -12,7 +12,6 @@
             <div class="col-xl-4 col-md-12">
             <form action="{{ route('addProduct') }}" id="formProduct" method="post" enctype="multipart/form-data">
                 {{ csrf_field() }}
-
                     <div class="card">
                         <div class="card-body">
                             <div class="md-form input-group input-group-sm mb-3">
@@ -119,7 +118,7 @@
                     <div class="card-body">
                         <div class="table-editable">
                             <table class="table table-bordered table-responsive-sm table-striped text-center" id="productTableAjax">
-                                
+
                             </table>
                         </div>
                     </div>
@@ -210,61 +209,12 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="productPixel" tabindex="-1" role="dialog" aria-labelledby="invoiceFormTitle" aria-hidden="true">
-        <!-- Change class .modal-sm to change the size of the modal -->
-        <div class="modal-dialog modal-sm" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title w-100" id="invoiceFormTitle">Pixel</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div id="successAjaxMessage" class="note note-success" style="display: none"></div>
-                    <div id="errorAjaxMessage" class="note note-danger" style="display: none"></div>
-                    <form id="productPixelForm" action="{{ route('connectProductPixel') }}" method="POST" enctype="multipart/form-data" autocomplete="off">
-                        {{ csrf_field() }}
-                         <input type="hidden" name="productIdHidden" id="productIdHidden"/>
-                        <div class="md-form input-group input-group-sm mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm">Brand pixels (already connected)</span>
-                            </div>
-                            <div id="listBrandPixelsForProduct">
-
-                            </div>
-                        </div>
-                        <div id="pixelSectionModal">
-                            <div class="md-form input-group input-group-sm mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm">Want different product pixel?</span>
-                                </div>
-                                <select name="pixelDdlModal" id="pixelDdlModal" data-toggle="dropdown">
-                                    @foreach($pixels as $pixel)
-                                        <option value="{{ $pixel->id_pixel }}">{{ $pixel->fb_pixel }} - {{ $pixel->pixel_name }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="md-form input-group input-group-sm mb-3">
-                                <button type="submit" class="btn btn-primary btn-sm waves-effect">Connect product</button>
-                            </div>
-                        </div>
-                        <div id="pixelForSingleProduct"></div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
     <style>
         #productTableAjax td {
             vertical-align: middle;
         }
     </style>
 @endsection
-
 @section('scripts')
     <script>
 
@@ -304,26 +254,14 @@
                     success: function (data) {
                         $('#productTableAjax').html('');
                         $('#productTableAjax').html(data);
-                        $('[data-toggle="tooltip"]').tooltip();
-                        $('[data-toggle="popover"]').popover({
-                            html: true
-                        });
+
                         afterInitialAjax();
                     },
                     error: function (req, err) {
-                        $('#errorMessageHeader').html('Error on getting products list');
-                        $('#errorMessageHeader').slideDown();
+                        $('#errorMessageHeader').html('Error on getting products list').slideDown();
                     }
                 });
             }
-
-            $('body').on('click', function (e) {
-                $('[data-toggle=popover]').each(function () {
-                    if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-                        $(this).popover('hide');
-                    }
-                });
-            });
 
             fetch_data();
 
@@ -335,75 +273,6 @@
                     } else {
                         $('#wooId').slideDown();
                     }
-                });
-
-                $('.showProductPixel').click(function () {
-                    let id = $(this).val();
-                    $.ajax({
-                        type: "GET",
-                        url: baseURL + "getBrandPixelForSingleProduct/" + parseInt(id),
-                        dataType: 'json',
-                        success: function (data) {
-                            let text = "";
-                            for (let i = 0; i < data.length; i++) {
-                                if(data[i].id_pixel != null) {
-                                    text += '<input type="hidden" name="brandHiddenPixel' + i + '" id="brandHiddenPixel" class="form-control" value="' + data[i].id_pixel + '"/>';
-                                    text += '<input type="text" name="productBrandPixel' + i + '" id="productBrandPixel" class="form-control" data-value="productBrandPixel" value="' + data[i].fb_pixel + ' - ' + data[i].pixel_name + '" autocomplete="off" readonly>';
-                                } else {
-                                    text += '<span style="color:red;">Please connect brand with pixel first!</span>'
-                                }
-                            }
-                            $('#listBrandPixelsForProduct').html(text);
-                            $('#productIdHidden').val(id);
-                        },
-                        error: function (req, err) {
-                            console.log(req);
-                        }
-                    });
-                    $.ajax({
-                        type: "GET",
-                        url: baseURL + "getProductPixel/" + parseInt(id),
-                        dataType: 'json',
-                        success: function (data) {
-                            if(data.id_pixel != "undefined") {
-                                $('#pixelSectionModal').hide();
-                                $('#pixelForSingleProduct').show();
-                                let text = '';
-                                text += '<span><strong>Product pixel</strong></span>';
-                                text += '<input type="text" name="productPixel" id="productPixel" class="form-control" data-value="productPixel" value="' + data[0].fb_pixel + ' - ' + data[0].pixel_name + '" autocomplete="off" readonly style="margin-top: 10px;">';
-                                text += '<button type="button" class="btn btn-danger btn-sm waves-effect disconnectProductPixelBtn" style="margin-top: 15px;" value="' + data[0].id_pixel_products + '">DISCONNECT</button>';
-                                $('#pixelForSingleProduct').html(text);
-
-                                $('.disconnectProductPixelBtn').click(function () {
-                                    $confirm = confirm('Are you sure that you want to disconnect pixel?');
-                                    if($confirm) {
-                                        let id = $(this).val();
-                                        $.ajax({
-                                            type: "GET",
-                                            url: baseURL + "disconnectProductPixel/" + parseInt(id),
-                                            dataType: 'json',
-                                            success: function (data) {
-                                                $('#successAjaxMessage').text("Pixel has been disconnected successfully!");
-                                                $('#successAjaxMessage').show();
-                                                $('#errorAjaxMessage').hide();
-                                            },
-                                            error: function (req, err) {
-                                                console.log(req);
-                                                $('#errorAjaxMessage').text("Error with disconnecting pixel!");
-                                                $('#errorAjaxMessage').show();
-                                                $('#successAjaxMessage').hide();
-                                            }
-                                        })
-                                    }
-                                });
-                            }
-                        },
-                        error: function (req, err) {
-                            $('#pixelSectionModal').show();
-                            $('#pixelForSingleProduct').hide();
-                            console.log(req);
-                        }
-                    });
                 });
 
                 $('.editProductBtn').click(function(){
@@ -420,10 +289,8 @@
                             $('#productSlugModal').val(data.slug);
                             $('#imageHiddenModal').val(data.product_image);
                             $('#productImgModal').attr('src','{{ asset('/') }}' + data.product_image);
-                            $('#countryDdlModal').val(data.country_id);
-                            $('#countryDdlModal').selectpicker('refresh');
-                            $('#brandDdlModal').val(data.brand_id);
-                            $('#brandDdlModal').selectpicker('refresh');
+                            $('#countryDdlModal').val(data.country_id).selectpicker('refresh');
+                            $('#brandDdlModal').val(data.brand_id).selectpicker('refresh');
                             $('#defaultProductModal').val(data.is_default_product).selectpicker('refresh');
                             if(data.country_id != "1") {
                                 $('#woocommerceIdModal').val(data.woocommerce_product_id);

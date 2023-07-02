@@ -12,6 +12,9 @@ class Currency extends Model
 {
     use HasFactory;
 
+    protected $table = 'currency';
+    protected $primaryKey = 'id_currency';
+
     public $currency;
     public $currency_symbol;
     public $currency_code;

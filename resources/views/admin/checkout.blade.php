@@ -131,8 +131,7 @@
                     success: function (data) {
                         $('#checkoutIdModal').val(data.id_checkout);
                         $('#checkoutNameModal').val(data.checkout_name);
-                        $('#countryIdModal').val(data.country_id);
-                        $('#countryIdModal').selectpicker('refresh');
+                        $('#countryIdModal').val(data.country_id).selectpicker('refresh');
                     },
                     error: function (req, err) {
                         console.log(req);

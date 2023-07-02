@@ -81,7 +81,7 @@
                                 @foreach($products as $product)
                                     @php
                                         $availableVariationsText = '';
-                                        if(isset($product->availableVariations)) {
+                                        if(isset($product->availableVariations) && $product->availableVariations != []) {
                                             $availableVariationsText .= '[';
                                             foreach($product->availableVariations as $availableVariationId) {
                                                 $availableVariationsText .= $availableVariationId.', ';
@@ -148,8 +148,7 @@
                         $('#testTableAjax').html(data);
                     },
                     error: function (req, err) {
-                        $('#errorMessageHeader').html('Error on getting tests list');
-                        $('#errorMessageHeader').slideDown();
+                        $('#errorMessageHeader').html('Error on getting tests list').slideDown();
                     }
                 });
             }

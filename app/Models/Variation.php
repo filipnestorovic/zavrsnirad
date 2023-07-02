@@ -16,6 +16,8 @@ class Variation extends Model
     protected $table = 'variation';
     protected $primaryKey = 'id_variation';
 
+    protected $guarded = ['id_variation'];
+
     public $variation_name;
     public $variation_description;
     public $lander_id;
@@ -25,14 +27,78 @@ class Variation extends Model
     public $default;
     public $active;
 
+    public function prices()
+    {
+        return $this->hasMany(VariationPrice::class, 'variation_id','id_variation');
+    }
+
+    public function product()
+    {
+        return $this->hasOne(Product::class,'id_product','product_id');
+    }
+
+    public function lander()
+    {
+        return $this->hasOne(Lander::class,'id_lander','lander_id');
+    }
+
+    public function checkout()
+    {
+        return $this->hasOne(Checkout::class,'id_checkout','checkout_id');
+    }
+
+    public function thankyou()
+    {
+        return $this->hasOne(Thankyou::class,'id_thankyou','thankyou_id');
+    }
+
+    public function userSessions()
+    {
+        return $this->hasMany(UserSession::class,'variation_id','id_variation');
+    }
+
+    public function allVariations($searchFilter, $landerFilter, $checkoutFilter, $thankyouFilter, $productFilter, $brandFilter)
+    {
+        return Variation::with('prices','product.country')
+            ->when($landerFilter, function ($q) use ($landerFilter) {
+                return $q->where('lander_id', $landerFilter);
+            })
+            ->when($checkoutFilter, function ($q) use ($checkoutFilter) {
+                return $q->where('checkout_id', $checkoutFilter);
+            })
+            ->when($thankyouFilter, function ($q) use ($thankyouFilter) {
+                return $q->where('thankyou_id', $thankyouFilter);
+            })
+            ->when($productFilter, function ($q) use ($productFilter) {
+                return $q->where('product_id', $productFilter);
+            })
+            ->when($brandFilter, function ($q) use ($brandFilter) {
+                return $q->whereHas('product', function ($productQuery) use ($brandFilter) {
+                    $productQuery->where('brand_id', $brandFilter);
+                })->orWhereHas('lander', function ($landerQuery) use ($brandFilter) {
+                    $landerQuery->where('brand_id', $brandFilter);
+                });
+            })
+            ->when($searchFilter, function ($q) use ($searchFilter) {
+                return $q->where(function ($query) use ($searchFilter) {
+                    $query->where('variation_name', 'LIKE', '%' . $searchFilter . '%')
+                        ->orWhere('variation_description', 'LIKE', '%' . $searchFilter . '%')
+                        ->orWhere('id_variation', '=', $searchFilter);
+                })->orWhereHas('product', function ($productQuery) use ($searchFilter) {
+                    $productQuery->where('product_name', 'LIKE', '%' . $searchFilter . '%');
+                });
+            })
+            ->get();
+    }
+
     public function getAllVariations($searchFilter, $landerFilter, $checkoutFilter, $thankyouFilter, $productFilter, $brandFilter, $variation_id = null) {
         $result = DB::table('variation')
             ->leftJoin('variations_prices', function($query) {
                 $query->on('variation.id_variation','=','variations_prices.variation_id')
                     ->whereRaw('variations_prices.id_variations_prices IN (select vp.id_variations_prices from variations_prices as vp join `variation` v on v.id_variation = vp.variation_id)');
             })
-            ->leftJoin('price', 'variations_prices.price_id', '=', 'price.id_price')
-            ->leftJoin('currency', 'price.currency_id', '=', 'currency.id_currency')
+//            ->leftJoin('price', 'variations_prices.price_id', '=', 'price.id_price')
+            ->leftJoin('currency', 'variations_prices.currency_id', '=', 'currency.id_currency')
             ->leftJoin('product', 'variation.product_id', '=', 'product.id_product')
             ->leftJoin('country', 'product.country_id', '=', 'country.id_country')
             ->leftJoin('lander', 'variation.lander_id', '=', 'lander.id_lander')

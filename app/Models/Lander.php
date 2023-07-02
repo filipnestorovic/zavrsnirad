@@ -12,11 +12,13 @@ class Lander extends Model
 {
     use HasFactory;
 
+    protected $table = 'lander';
+    protected $primaryKey = 'id_lander';
+
     public $lander_name;
     public $brand_id;
     public $product_id;
-    public $lander_url;
-    public $mobile_version;
+    public $lander_path;
 
     public function getAllLanders(){
         $result = DB::table('lander')
@@ -74,10 +76,9 @@ class Lander extends Model
         $result = DB::table('lander')
             ->insertGetId([
                 'lander_name' => $this->lander_name,
-                'lander_url' => $this->lander_url,
+                'lander_path' => $this->lander_path,
                 'brand_id' => $this->brand_id,
                 'product_id' => $this->product_id,
-                'mobile_version' => $this->mobile_version,
             ]);
         return $result;
     }
@@ -87,10 +88,9 @@ class Lander extends Model
             ->where('id_lander', '=',$id)
             ->update([
                 'lander_name' => $this->lander_name,
-                'lander_url' => $this->lander_url,
+                'lander_path' => $this->lander_path,
                 'brand_id' => $this->brand_id,
                 'product_id' => $this->product_id,
-                'mobile_version' => $this->mobile_version,
                 'updated_at' => Carbon::now(),
             ]);
         return $result;
@@ -118,9 +118,9 @@ class Lander extends Model
         return $result;
     }
 
-    public function checkIfLanderAlreadyExist($lander_url) {
+    public function checkIfLanderAlreadyExist($lander_path) {
         $result = DB::table('lander')
-            ->where('lander_url','=',$lander_url)
+            ->where('lander_path','=',$lander_path)
             ->whereNull('lander.deleted_at')
             ->first();
         return $result;

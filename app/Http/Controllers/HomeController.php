@@ -2,42 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Jobs\SendEmail;
-use App\Mail\NewOrderEmail;
-use App\Models\AbandonedCart;
 use App\Models\Brand;
-use App\Models\Coupon;
 use App\Models\Event;
 use App\Models\Order;
 use App\Models\Country;
-use App\Models\Pixel;
-use App\Models\ProductSizes;
-use App\Models\Review;
 use App\Models\Test;
 use App\Models\Variation;
 use App\Models\UserSession;
-use GeoIp2\Database\Reader;
 use Illuminate\Http\Request;
 use App\Models\Product;
-use GuzzleHttp;
-use Illuminate\Http\Response;
-use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
-use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Session;
-use Illuminate\Support\Facades\View;
-use Illuminate\Support\Str;
 use Jenssegers\Agent\Agent;
-use PragmaRX\Countries\Package\Countries;
-use Propaganistas\LaravelPhone\PhoneNumber;
-use function Sodium\add;
-use Stevebauman\Location\Facades\Location;
 
 use FacebookAds\Api;
 use FacebookAds\Logger\CurlLogger;
-use FacebookAds\Object\ServerSide\ActionSource;
 use FacebookAds\Object\ServerSide\CustomData;
 use FacebookAds\Object\ServerSide\Event as FBEvent;
 use FacebookAds\Object\ServerSide\EventRequest;
@@ -48,8 +27,10 @@ class HomeController extends Controller
 
     private $returnedData = [];
     private $customerData = [];
-    private $testId;
+    private $variation;
     private $variationField;
+    private $api;
+
     /**
      * Create a new controller instance.
      *
@@ -61,13 +42,11 @@ class HomeController extends Controller
         $this->modelProduct = new Product();
         $this->modelTest = new Test();
         $this->modelVariation = new Variation();
-        $this->modelPixel = new Pixel();
-        $this->modelCoupon = new Coupon();
-        $this->modelReview = new Review();
         $this->modelSession = new UserSession();
         $this->modelEvent = new Event();
         $this->modelCountry = new Country();
         $this->modelBrand = new Brand();
+        $this->api = new ApiController();
     }
 
     /**
@@ -81,167 +60,71 @@ class HomeController extends Controller
         $brandUrl = 'https://'.$site.'.'.$domain;
         $country_id = $request->get('countryId');
 
-        if($slug === "ba" && $coupon === "koljeno" || $slug === "koljeno") {
-            $country_id = 4;
-            $slug = "koljeno";
-        }
-
         $brand = $this->modelBrand->getBrandByUrl($brandUrl);
 
-        if($brand === null) {
-            return abort('404');
-        }
+        if($brand === null) return abort('404');
 
         $brand_id = $brand->id_brand;
         $domain_id = $brand->id_domain;
 
-        switch ($slug) {
-            case "purplerelax":
-            case "pulsirajucimasazer":
-                $slug = "vratnimasazer";
-                break;
-            case "masazer":
-                $slug = "multifunkcionalnimasazer";
-                break;
-            case "akupunkturnaolovka1":
-                $slug = "akupunkturnaolovka";
-                break;
-            case "jastukzanoge":
-                $slug = "ortopedskijastuk";
-                break;
-            case "dailysharkpena":
-            case "penadailyshark":
-                $slug = "dailyshark";
-                break;
-            case "carluxe1":
-                $slug = "carluxe";
-                break;
-            case "retrovizorkamera":
-                $slug = "retrovizor";
-                break;
-            case "flextraka":
-                $slug = "flextape";
-                break;
-            case "cleanmastermop":
-            case "mopcleanmaster":
-                $slug = "cleanmaster";
-                break;
-            case "carfix1":
-                $slug = "carfix";
-                break;
-            case "trapmosquito":
-            case "mosquitotrap":
-                $slug = "mosquito";
-                break;
-        }
-
-        if($brand_id === null) {
-            return abort('404');
-        } else {
-            $product = $this->modelProduct->getProductBySlugBrandAndCountry($slug, $brand_id, $country_id);
-        }
-
-        if($product === null && $slug != null) { //proveri da li postoji proizvod sa tim slugom za zemlju iz koje dolazi
-            $product = $this->modelProduct->getProductBySlugBrandAndCountry($slug, $brand_id, null);
-            if($product != null) {
-                if($product->country_id != $country_id) {
-                    $productGroup = $this->modelProduct->groupProductBySku($product->sku);
-                    foreach($productGroup as $singleProduct) {
-                        if($singleProduct->id_country === $country_id) {
-                            $product = $this->modelProduct->getProductBySlugBrandAndCountry($singleProduct->slug, $brand_id, $country_id);
-                        }
-                    }
-                }
-            }
-        }
-
-        if($product === null) { //ukoliko ne postoji, posalji ga na default proizvod za tu zemlju
-            $product = $this->modelProduct->getProductBySlugBrandAndCountry(null, $brand_id, $country_id);
-        }
-
+        $product = $this->modelProduct->findProduct($slug, $brand_id, $country_id);
+        $product_id = $product->id_product;
         $this->data['product'] = $product;
 
-        if($request->get('unexistingCountry') != null) {
-            return $this->resolveCountry($request);
-        }
+        if($product === null) return abort('404');
 
-        $product_id = $product->id_product;
-        $variation = null;
+        $this->variation = null;
 
-        $customerResponse = $this->getCustomerDetails($request);
-        $this->customerData['country_id'] = $product->country_id;
+        $request->request->add(['product_id' => $product_id]);
+        $cookieResponse = $this->checkCustomerCookies($request);
 
-        $cookieResponse = $this->checkCustomerCookies($request, $product_id);
+        if($cookieResponse) {
+            $this->variation = $this->variationField;
+        } else {
+            $activeTest = $this->modelTest->testForProduct($product_id);
 
-        if($cookieResponse === 1) {
-            $variation = $this->variationField;
-        }
+            if($activeTest) {
+                $testVisits = 1;
 
-        if($cookieResponse === 0) {
-            $getTests = json_decode($this->modelTest->getAllTests(null, $product_id, 1, null), true);
-            $activeTests = $this->getMultipleItemsFromQuery($getTests, 'id_test');
-            if (count($activeTests) === 0) {
-//                    Log::info('Test - Default variation - '. $product->product_name);
-                $variation = $this->modelVariation->getDefaultVariationByProductId($product_id);
+                $activeTest->testVariations->each(function ($testVariation) use(&$testVisits) {
+                    $testVisits += $testVariation->loadCount('userSessions')->getAttribute('user_sessions_count');
+                });
+
+                $activeTest->testVariations->each(function ($testVariation) use($testVisits) {
+                    $percentage = $testVariation->traffic_percentage / 100;
+                    $variationVisits = $testVariation->loadCount('userSessions')->getAttribute('user_sessions_count');
+                    $currentPercentage = $variationVisits / $testVisits;
+                    if($currentPercentage <= $percentage) {
+                        $this->variation = Variation::with('prices.currency','product.country','lander','checkout','thankyou')->find($testVariation->getAttribute('variation_id'));
+                        $this->customerData['test_variation_id'] = $testVariation->getAttribute('id_tests_variations');
+                    }
+                });
+
             } else {
-                $visitsTotal = 1;
-                $variationVisits = 1;
-                foreach ($activeTests as $test) {
-                    foreach ($test as $singleTestVariation) {
-                        $test_variation_id = $singleTestVariation['id_tests_variations'];
-                        $visits = $this->modelSession->getVariationVisits($test_variation_id);
-                        foreach($visits as $visit) {
-                            $visitsTotal += $visit->VariationVisits;
-                        }
-                    }
-                    foreach ($test as $singleTestVariation) {
-                        $this->testId = $singleTestVariation['id_test'];
-                        $percentage = (int)$singleTestVariation['traffic_percentage'] / 100;
-                        $variationVisitsCollection = $this->modelSession->getVariationVisits($singleTestVariation['id_tests_variations']);
-                        foreach($variationVisitsCollection as $visit) {
-                            $variationVisits = $visit->VariationVisits;
-                        }
-                        $currentPercentage = $variationVisits / $visitsTotal;
-                        if ($currentPercentage <= $percentage) {
-                            $variation = $this->modelVariation->getAllVariations(null, null, null, null, null, null, $singleTestVariation['id_variation']);
-                            $this->customerData['test_variation_id'] = $singleTestVariation['id_tests_variations'];
-//                                Log::info('Test - Test variation - '.$singleTestVariation['id_tests_variations'].' - '. $product->product_name);
-                            break;
-                        }
-                    }
-                }
+                $this->variation = Variation::with('prices.currency','product.country','lander','checkout','thankyou')
+                    ->where([
+                        ['product_id',$product_id],
+                        ['is_variation_default',1]
+                    ])
+                    ->first();
             }
         }
 
-        if($variation != null && count($variation)>0) {
-            $this->returnedData = $this->prepareVariationForView($variation);
+        if($this->variation) {
+            $this->returnedData = $this->prepareVariationForView($this->variation);
 
-            $countryCode = $request->get('countryShortcode');
-            $host = $request->getHost();
-
-            $this->data['discount'] = $this->checkCouponForVariation($request, $this->returnedData['variationId'], $coupon);
-            $this->data['pixels'] = $this->getPixelsForView($product->id_product, $product->id_brand, $domain_id);
             $this->data['prices'] = $this->returnedData['prices'];
-            $this->data['productReviews'] = $this->getProductReviews($product_id);
             $this->data['variation_id'] = $this->returnedData['variationId'];
-//                $this->data['checkoutView'] = route('checkout',['slug' => $product->slug, 'site' => $site, 'domain' => $domain, 'coupon' => $coupon]);
-            $this->data['checkoutView'] = '/'.$product->slug.'/checkout';
-//                $this->data['orderRoute'] = route('order',['site' => $site, 'domain' => $domain]);
+            $this->data['checkoutView'] = '/'.$product->slug.'/checkout';;
             $this->data['orderRoute'] = '/order';
+
             $this->customerData['variation_id'] = $this->returnedData['variationId'];
 
-            $productSizes = response()->json(ProductSizes::where('product_id','=',$product_id)->with('product')->orderBy('priority')->get())->getData();
-            if(count($productSizes)>0) $this->data['productSizes'] = $productSizes;
-
-            $this->data['upCrossSells'] = $this->getProductUpAndCrossSells($product->sku, $country_id);
+            $this->data['upCrossSells'] = $this->api->getProductUpAndCrossSells('GP-ST-STEZNIKKOLENO', $country_id);
 
             $this->customerData['uuid'] = $request->session()->get('uuid');
 
-            if(isset($this->customerData['test_variation_id'])) $this->data['test_variation_id'] = $this->customerData['test_variation_id'];
-
-            $this->customerData['wb_campaign'] = $request->get('wb_campaign');
-            $this->customerData['wb_adset'] = $request->get('wb_adset');
-            $this->customerData['wb_ad'] = $request->get('wb_ad');
+            $this->data['test_variation_id'] = $this->customerData['test_variation_id'] ?? null;
 
             $this->data['brandUrl'] = $brandUrl;
 
@@ -252,32 +135,10 @@ class HomeController extends Controller
                 Log::error("Error: Insert customer in session | Exception: " . $exception->getMessage());
             }
 
-            if($this->data['discount'] != 0 && !isset($this->data['couponCode'])) {
-                $this->data['couponCode'] = $coupon;
-            }
-
-            if(isset($this->customerData['session_id']) && isset($this->data['couponCode'])) {
-                try {
-                    $this->modelEvent->insertSessionEvent($this->customerData['session_id'], 8);
-                } catch (\Exception $exception) {
-                    Log::error("Error: Session - Coupon entered - DB | Exception: " . $exception->getMessage());
-                }
-            }
-
             $this->data['session_id'] = $this->customerData['session_id'];
 
-            $singleSession = $this->modelSession->getSingleSession($this->data['session_id']);
+            $singleSession = UserSession::find($this->data['session_id']);
             $this->data['test_variation_id'] = $singleSession->test_variation_id;
-
-            if(isset($gratisProducts)) {
-                $gratisProductsArray = [];
-                foreach($gratisProducts as $key => $value) {
-                    if($value['product_id'] === $product_id) {
-                        $gratisProductsArray[$value['quantity']] = $this->modelProduct->getProduct($value['gratis_product_id']);
-                    }
-                }
-                $this->data['gratisProduct'] = $gratisProductsArray;
-            }
 
         } else {
             Log::error("Error: No active variation for this product - Product: ".$product_id);
@@ -287,12 +148,9 @@ class HomeController extends Controller
 
     public function lander(Request $request, $site = null, $domain = null, $slug = null, $coupon = null) {
 
-        $index = $this->index($request, $site, $domain, $slug, $coupon);
-        if($request->get('unexistingCountry') != null || $request->get('redirectToCountry') != null) {
-            return $index;
-        }
+        $this->index($request, $site, $domain, $slug, $coupon);
 
-        $this->data['fb_event'] = "ViewContent";
+        $this->data['event'] = "ViewContent";
 
         if(isset($this->customerData['session_id'])) {
             try {
@@ -301,17 +159,14 @@ class HomeController extends Controller
                 Log::error("Error: Session - Lander view - DB | Exception: " . $exception->getMessage());
             }
         }
-//        Log::info('Test - Lander view - '.$this->customerData['session_id']);
+
         return view($this->returnedData['landerView'], $this->data);
     }
 
     public function checkout(Request $request, $site = null, $domain = null, $slug = null, $coupon = null) {
-        $index = $this->index($request, $site, $domain, $slug, $coupon);
-        if($request->get('unexistingCountry') != null || $request->get('redirectToCountry') != null) {
-            return $index;
-        }
+        $this->index($request, $site, $domain, $slug, $coupon);
 
-        $this->data['fb_event'] = "AddToCart";
+        $this->data['event'] = "AddToCart";
 
         if(isset($this->customerData['session_id'])) {
             try {
@@ -320,14 +175,6 @@ class HomeController extends Controller
                 Log::error("Error: Session - Checkout view - DB | Exception: " . $exception->getMessage());
             }
         }
-
-        $this->data['stripeReturnUrl'] =
-            'https://'.$request->get('countryShortcode').'.'. $site.'.'.$domain.
-            '/api/stripe/completedStripePayment/'.$this->data['product']->id_product;
-
-//        $this->data['country'] = $request->get('countryShortcode');
-//        $this->data['site'] = $site;
-//        $this->data['domain'] = $domain;
 
         return view($this->returnedData['checkoutView'], $this->data);
     }
@@ -340,10 +187,10 @@ class HomeController extends Controller
         }
 
         if(isset($this->data['order']->id_up_cross_sell)) {
-            $this->data['fb_event'] = "Purchase2";
+            $this->data['event'] = "Purchase2";
             $this->data['successUpCrossSell'] = $this->data['order'];
         } else {
-            $this->data['fb_event'] = "Purchase";
+            $this->data['event'] = "Purchase";
         }
 
         switch ($this->returnedData['thankyouView']) {
@@ -363,51 +210,29 @@ class HomeController extends Controller
         return view($this->returnedData['thankyouView'], $this->data);
     }
 
-    public function checkCustomerCookies(Request $request, $product_id) {
+    public function checkCustomerCookies(Request $request) {
+
+        $product_id = $request->get('product_id');
+
+        $this->getCustomerDetails($request);
+
         $response = 0;
-        $generate = 0;
+        $generate = 1;
         if(isset($_COOKIE['uuid'])) {
             $cookieUuid = $_COOKIE['uuid'];
-            $sessionUuid = $this->modelSession->checkSessionUuid($cookieUuid);
-            if(count($sessionUuid)>0) {
-                foreach($sessionUuid as $singleSession) {
-                    $variation = $this->modelVariation->getAllVariations(null,null,null,null,null, null, $singleSession->variation_id);
-                    if(count($variation)>0) {
-                        $variation_product_id = $variation[0]->id_product;
-                        if($variation_product_id === $product_id) {
-                            $this->variationField = $variation;
-                            $response = 1;
-                        }
-                        $uuid = $_COOKIE['uuid'];
-                    }
+            $sessionUuid = UserSession::whereHas('variation',function($query) use($product_id){
+                $query->where('product_id','=',$product_id);
+            })->where('uuid',$cookieUuid)->first();
+
+            if($sessionUuid) {
+                $variation = Variation::with('prices.currency','product.country','lander','checkout','thankyou')->find($sessionUuid->getAttribute('variation_id'));
+                if($variation) {
+                    $this->variationField = $variation;
+                    $generate = 0;
+                    $response = 1;
+                    $uuid = $_COOKIE['uuid'];
                 }
-            } else {
-                $generate = 1;
             }
-        }
-        else {
-            $generate = 1;
-//            $ipUuid = $this->modelSession->checkSessionIp(request()->ip());
-//            $i = 0;
-//            if(count($ipUuid)>0) {
-//                foreach($ipUuid as $singleSession) {
-//                    $variation = $this->modelVariation->getAllVariations(null,null,null,null,null, null, $singleSession->variation_id);
-//                    if(count($variation)>0) {
-//                        $variation_product_id = $variation[0]->id_product;
-//                        if($variation_product_id === $product_id) {
-//                            $this->variationField = $variation;
-//                            $response = 1;
-//                            $uuid = $ipUuid[$i]->uuid;
-//                            $generate = 0;
-//                        } else {
-//                            $generate = 1;
-//                        }
-//                    }
-//                    $i++;
-//                }
-//            } else {
-//                $generate = 1;
-//            }
         }
 
         if($generate === 1) {
@@ -428,29 +253,21 @@ class HomeController extends Controller
         $this->modelSession->customer_ip = $sessionData['ip'];
         $this->modelSession->user_agent = $sessionData['user_agent'];
         $this->modelSession->country_id = $sessionData['country_id'];
-        $this->modelSession->variation_id = $sessionData['variation_id'];
+        $variation_id = $sessionData['variation_id'];
         if(isset($sessionData['test_variation_id'])) {
-            $this->modelSession->test_variation_id = $sessionData['test_variation_id'];
-        }
-        if(isset($sessionData['wb_campaign'])) {
-            $this->modelSession->wb_campaign = $sessionData['wb_campaign'];
-        }
-        if(isset($sessionData['wb_adset'])) {
-            $this->modelSession->wb_adset = $sessionData['wb_adset'];
-        }
-        if(isset($sessionData['wb_ad'])) {
-            $this->modelSession->wb_ad = $sessionData['wb_ad'];
+            $test_variation_id = $sessionData['test_variation_id'];
         }
 
         try {
 
-            $checkUuid = $this->modelSession->checkSessionUuid($this->modelSession->uuid, $this->modelSession->variation_id);
+            $checkUuid = UserSession::where('uuid',$this->modelSession->uuid)->where('variation_id',$variation_id)->first();
 
-            if(count($checkUuid)>0) {
-                $sessionId = $checkUuid[0]->id_session;
+            if($checkUuid) {
+                $sessionId = $checkUuid->id_session;
             } else {
-                $sessionId = $this->modelSession->insertSession();
+                $sessionId = $this->modelSession->insertSession($variation_id,$test_variation_id ?? null);
             }
+
 
             return $sessionId;
         } catch (\Exception $exception) {
@@ -459,451 +276,44 @@ class HomeController extends Controller
 
     }
 
-    public function prepareVariationForView($variation){
+    public function prepareVariationForView($variation)
+    {
         $returnData = [];
-        $variationJson = json_decode($variation, true);
-        $variationResult = $this->getMultipleItemsFromQuery($variationJson,'id_variation');
-        foreach($variationResult as $singleVariation) {
 
-            $lander_view = $singleVariation[0]['lander_url'];
+        $returnData['variationId'] = $variation->getAttribute('id_variation');
+        $returnData['landerView'] =  $variation->lander->getAttribute('lander_path');
+        $returnData['checkoutView'] = $variation->checkout->getAttribute('checkout_path');
+        $returnData['thankyouView'] = $variation->thankyou->getAttribute('thankyou_path');
 
-            $agent = new Agent();
-
-            if($agent->isMobile()) {
-                if($singleVariation[0]['mobile_version']) {
-                    $lander_view = $singleVariation[0]['lander_url']."_m";
-                }
-            }
-
-            $returnData['variationId'] = $singleVariation[0]['id_variation'];
-            $returnData['landerView'] = $lander_view;
-            $returnData['checkoutView'] = $singleVariation[0]['checkout_url'];
-            $returnData['thankyouView'] = $singleVariation[0]['thankyou_url'];
-
-            $prices = [];
-            foreach($singleVariation as $singlePrice) {
-                $i = $singlePrice['quantity'];
-                if ($singlePrice['variation_price_deleted'] === null) {
-                    $prices[$i]['id_variations_prices'] = $singlePrice['id_variations_prices'];
-                    $prices[$i]['quantity'] = $singlePrice['quantity'];
-                    $prices[$i]['amount'] = $singlePrice['amount'];
-                    $prices[$i]['is_default'] = $singlePrice['is_default'];
-                    $prices[$i]['is_free_shipping'] = $singlePrice['is_free_shipping'];
-                    $prices[$i]['currency'] = $singlePrice['currency_symbol'];
-
-                    if ($singlePrice['currency_code'] === "RSD") {
-                        $originalPriceMultiply = 0.6;
-                        $totalPrice = round(($singlePrice['amount'] / $originalPriceMultiply));
-                        $originalPrice = (ceil($totalPrice / 100)) * 100 - 10;
-                    } else {
-                        $originalPriceMultiply = 0.6;
-                        $originalPrice = round(($singlePrice['amount'] / $originalPriceMultiply));
-                    }
-
-                    $prices[$i]['originalPrice'] = $originalPrice;
-
-                }
-            }
-            $returnData['prices'] = $prices;
+        $prices = [];
+        foreach($variation->prices as $price) {
+            if($price->getAttribute('deleted_at') === null) $prices[$price->getAttribute('quantity')] = $price->toArray();
         }
+
+        $returnData['prices'] = $prices;
         return $returnData;
     }
 
-    public function getPixelsForView($product_id, $brand_id, $domain_id = null) {
-        $productPixels = $this->modelPixel->getProductPixel($product_id);
-        $brandPixels = $this->modelPixel->getBrandPixel($brand_id);
-
-        $pixels = array();
-
-        if($domain_id != null) {
-            $domainPixels = $this->modelPixel->getDomainPixel($domain_id);
-            if(count($domainPixels) > 0) {
-                foreach($domainPixels as $domainPixel) {
-                    array_push($pixels,$domainPixel->fb_pixel);
-                }
-            } else {
-                if(count($brandPixels) > 0) {
-                    foreach($brandPixels as $brandPixel) {
-                        array_push($pixels,$brandPixel->fb_pixel);
-                    }
-                } else {
-                    if(count($productPixels) > 0) {
-                        foreach($productPixels as $productPixel) {
-                            array_push($pixels,$productPixel->fb_pixel);
-                        }
-                    }
-                }
-            }
-        } else {
-            if(count($brandPixels) > 0) {
-                foreach($brandPixels as $brandPixel) {
-                    array_push($pixels,$brandPixel->fb_pixel);
-                }
-            } else {
-                if(count($productPixels) > 0) {
-                    foreach($productPixels as $productPixel) {
-                        array_push($pixels,$productPixel->fb_pixel);
-                    }
-                }
-            }
-        }
-
-        return $pixels;
-    }
-
-    public function checkCouponForVariation(Request $request, $variation_id, $coupon) {
-        if($coupon === null && $request->session()->has('coupon')) {
-            $coupons = $request->session()->pull('coupon');
-            $session_coupon = end($coupons);
-            $coupon = $session_coupon;
-        }
-        $discountPercent = 0;
-        $allVariationCoupons = $this->modelCoupon->getAllCouponsForVariation($variation_id);
-        if(!empty($allVariationCoupons)) {
-            foreach($allVariationCoupons as $singleCoupon) {
-               if(strtolower($singleCoupon->coupon) === strtolower($coupon)) {
-                   $discountMultiply = (100 - $singleCoupon->discount) / 100;
-                   if($this->returnedData['prices'] != null) {
-                       foreach($this->returnedData['prices'] as $price) {
-                           if($coupon === "blackfriday" || $coupon === "newyear" || $coupon === "popust50") {
-                               $i = $price['quantity'];
-                               $this->returnedData['prices'][$i]['amount'] = round($price['originalPrice'] * $discountMultiply);
-                               $this->returnedData['prices'][$i]['amountBeforeDiscount'] = $price['originalPrice'];
-                               $discountPercent = $singleCoupon->discount;
-                           } else {
-                               $i = $price['quantity'];
-                               $this->returnedData['prices'][$i]['amount'] = round($price['amount'] * $discountMultiply);
-                               $this->returnedData['prices'][$i]['amountBeforeDiscount'] = $price['amount'];
-                               $discountPercent = $singleCoupon->discount;
-                           }
-                       }
-                   }
-                   $request->session()->push('coupon', $coupon);
-               }
-            }
-        }
-
-        $this->data['couponCode'] = $coupon;
-
-        return $discountPercent;
-    }
-
-    public function getProductReviews($product_id) {
-        $productReviews = $this->modelReview->getProductReviews($product_id);
-        if(count($productReviews) > 0) {
-            return $productReviews;
-        }
-    }
-
-    public function resolveCountry(Request $request) {
-        if($request->get('unexistingCountry') != null) {
-            $productList = $this->modelProduct->groupProductBySku($this->data['product']->sku);
-
-            $this->data['availableProductCountries'] = $productList;
-            $this->data['currentCountryName'] = $request->get('unexistingCountryName');
-
-            if(isset($this->customerData['session_id'])) {
-                try {
-                    $this->modelEvent->insertSessionEvent($this->customerData['session_id'], 7);
-                } catch (\Exception $exception) {
-                    Log::error("Error: Session - Unexisting country - DB | Exception: " . $exception->getMessage());
-                }
-            }
-
-            return view('unexisting_country',$this->data);
-        }
-    }
-
-    public function selectCountry(Request $request) {
-        $selectedCountry = $request->get('countryCodeDdl');
-        $productSku = $request->get('skuHidden');
-        $host = $request->getHost();
-
-        $product = $this->modelProduct->groupProductBySku($productSku, $selectedCountry);
-
-        $productSlug = $product[0]->slug;
-
-        $redirectUrl = 'https://'.$selectedCountry.'.'.$host.'/'.$productSlug;
-        return redirect($redirectUrl);
-    }
-
-    public function getCustomerDetails($request) {
+    public function getCustomerDetails($request) : void {
         $agent = new Agent();
 
         $this->customerData['ip'] = $request->ip();
         $this->customerData['user_agent'] = $agent->getUserAgent();
-
-        return $this->customerData;
+        $this->customerData['country_id'] = $request->get('countryId');
     }
 
-    public function insertEventDbAjax(Request $request) {
-        try {
-            $session_id = $request->get('session_id');
-            $event_id = $request->get('event_id');
-
-            $insertResult = $this->modelEvent->insertSessionEvent($session_id, $event_id);
-        } catch (\Exception $exception) {
-            Log::error("Error: Inserting session event with Ajax | Session: ".$session_id." Event: ".$event_id." Exception: " . $exception->getMessage());
-        }
-    }
-
-    public function generateUuid($onlyNumbers = null) {
+    public function generateUuid() {
         $l=10;
         $str = "";
 
         for ($x=0;$x<$l;$x++) {
-            if($onlyNumbers === null) {
-                $str .= substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, 1);
-            } else {
-                $str .= substr(str_shuffle("0123456789"), 0, 1);
-            }
+            $str .= substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, 1);
         }
 
-        if($onlyNumbers != null) {
-            $resultUuid = $this->modelSession->checkSessionUuid($str);
+        $resultUuid = UserSession::where('uuid',$str)->first();
+        if($resultUuid) $this->generateUuid();
 
-            if (count($resultUuid) > 0) {
-                $this->generateUuid();
-            }
-        }
         return $str;
     }
 
-    public function sendConversionApiFB(Request $request) {
-
-        return $request->get('fb_event');
-
-        $session_id = $request->get('session_id');
-        $pixel_id = $request->get('pixel_id');
-        $fb_event = $request->get('fb_event');
-
-        $domain = $request->getHost();
-        if($domain === "dailysharkpena.com"||$domain === "myairlab.com") {
-            $token = 'EAACkTAiEwt0BAJ5scyudCeixFDDP7KSvmnjoBlZAnfeQdY2LPTviCEMbU1csadl9MZBv6LfzVmtIiXQpaPJBh8zRfUOK75QqKwEwfUMkWdzIo1oLew3BIGqjE9PIQZCGmwLQCO5cBjvmvx9uTLyZByCBgqseoz5w4WnPxNeIbjQbFe6rDrgQ';
-        } else {
-            $token = 'EAACkTAiEwt0BAAB6UuOToDz8hwYouVR9OkroOk6JZAGfmLdFYGmzyI4RyCuVQ9GRfPaC8LoSyOXsaiZCtYqRYZAOIw3ixQlTW8SJd4ZCsZBEk51E7aw2gwjrdV0vcI6oqHXxGgMjOGminrWIYT2qGAsQf4aMNnGYnF0yAnIE2R5jNF6zHY7We';
-        }
-
-        $excludeCApi = ["937389627038619", "324231612589924","171186311596788","228655165563052","486215135791311", "587201949053897"];
-        if(!in_array($pixel_id, $excludeCApi)) {
-            $current_timestamp = Carbon::now()->unix();
-            $random_number = $this->generateUuid(1);
-            if(isset($_COOKIE['_fbp'])) {
-                $cookie_fbp = $_COOKIE['_fbp'];
-            } else {
-                $cookie_fbp = "fb.1.".$current_timestamp.".".$random_number;
-            }
-            if(isset($_COOKIE['_fbc'])) {
-                $cookie_fbc = $_COOKIE['_fbc'];
-            } else {
-                $cookie_fbc = null;
-            }
-
-            $access_token = $token;
-            $api = Api::init(null, null, $access_token);
-            $api->setLogger(new CurlLogger());
-            if($fb_event === "Purchase") {
-                $user_data = (new UserData())
-                    ->setFirstName($request->get('name'))
-                    ->setEmail($request->get('email'))
-                    ->setPhone($request->get('phone'))
-                    ->setCity($request->get('city'))
-                    ->setZipCode($request->get('zip'))
-                    ->setCountryCode($request->get('country_code'))
-                    ->setClientIpAddress($_SERVER['REMOTE_ADDR'])
-                    ->setClientUserAgent($_SERVER['HTTP_USER_AGENT'])
-                    ->setFbc($cookie_fbc)
-                    ->setFbp($cookie_fbp);
-                $custom_data = (new CustomData())
-                    ->setCurrency($request->get('currency_code'))
-                    ->setValue($request->get('amount'));
-            } else {
-                $user_data = (new UserData())
-                    ->setClientIpAddress($_SERVER['REMOTE_ADDR'])
-                    ->setClientUserAgent($_SERVER['HTTP_USER_AGENT'])
-                    ->setFbc($cookie_fbc)
-                    ->setFbp($cookie_fbp);
-                $client = $user_data->getFbp();
-                $custom_data = (new CustomData());
-            }
-            $event = (new FBEvent())
-                ->setEventName($fb_event)
-                ->setEventId($fb_event.'.'.$session_id)
-                ->setActionSource('website')
-                ->setEventTime(time())
-                ->setEventSourceUrl($request->getHost())
-                ->setUserData($user_data)
-                ->setCustomData($custom_data);
-            $events = array();
-            array_push($events, $event);
-            $api_request = (new EventRequest($pixel_id))
-//                ->setTestEventCode('TEST82498')
-                ->setEvents($events);
-
-            try {
-                $response = $api_request->execute();
-            } catch (\Exception $exception) {
-                Log::error("Error: CApi Error | Exception: " . $exception->getMessage());
-            }
-
-            if(isset($response) && !empty(json_decode($response, true))) {
-                return $response;
-            } else {
-                return $fb_event;
-            }
-        }
-    }
-
-    public function getProductUpAndCrossSells($sku, $country_id) {
-        if($country_id === 1) { //trenutno radimo samo RS, da ne vraca gresku za BA
-            $client = new GuzzleHttp\Client([
-                'headers' => [ 'Content-Type' => 'application/json' ]
-            ]);
-            try {
-                $response = $client->get('https://new.serverwombat.com/api/getProductCrossUpSellData?SKU='.$sku);
-                $upCrossSellData = array();
-                $productUpCrossResponse = json_decode($response->getBody());
-            } catch(\Exception $exception) {
-                Log::critical("Connection error: " . $exception->getMessage());
-            }
-            try {
-                if($productUpCrossResponse->code === 200) {
-                    if(isset($productUpCrossResponse->up) || isset($productUpCrossResponse->cross)) {
-                        $productUpSells = $productUpCrossResponse->up;
-                        $productCrossSells = $productUpCrossResponse->cross;
-                        $i = 1;
-                        $upSellCount = 0;
-                        $crossSellCount = 0;
-                        if (count($productUpSells) > 0) {
-                            foreach ($productUpSells as $Singlesell) {
-                                if($Singlesell->isActive) {
-                                    $upSellProduct = $this->modelProduct->groupProductBySku($Singlesell->SKU, null, $country_id);
-                                    if(count($upSellProduct)>0) {
-                                        $upCrossSellData[$i]['sku'] = $Singlesell->SKU;
-                                        $upCrossSellData[$i]['product_name'] = $upSellProduct[0]->product_name;
-                                        $upCrossSellData[$i]['upcrosssell_product_id'] = $upSellProduct[0]->id_product;
-                                        $upCrossSellData[$i]['product_image'] = $upSellProduct[0]->product_image;
-                                        $upCrossSellData[$i]['id_upcrosssell'] = $Singlesell->id_product_crossupsell;
-                                        $upCrossSellData[$i]['quantity'] = $Singlesell->quantity;
-                                        $upCrossSellData[$i]['pricePerPiece'] = $Singlesell->price;
-                                        $upCrossSellData[$i]['isBestOption'] = $Singlesell->isBestOption;
-                                        $upCrossSellData[$i]['description'] = $Singlesell->description;
-                                        $upCrossSellData[$i]['is_upSell'] = $Singlesell->is_upSell;
-                                        $upCrossSellData[$i]['is_crossSell'] = $Singlesell->is_crossSell;
-                                        $upCrossSellData[$i]['isFreeShipping'] = $Singlesell->isFreeShippingClaimed;
-                                        $i++;
-                                        $upSellCount++;
-                                    } else {
-                                        Log::error("Error: DB - Unexisting UpSell Product - SKU: ".$Singlesell->SKU);
-                                    }
-                                }
-                            }
-                        }
-                        if (count($productCrossSells) > 0) {
-                            foreach ($productCrossSells as $Singlesell) {
-                                if($Singlesell->isActive) {
-                                    $crossSellProduct = $this->modelProduct->groupProductBySku($Singlesell->SKU, null, $country_id);
-                                    if (count($crossSellProduct) > 0) {
-                                        $upCrossSellData[$i]['sku'] = $Singlesell->SKU;
-                                        $upCrossSellData[$i]['product_name'] = $crossSellProduct[0]->product_name;
-                                        $upCrossSellData[$i]['upcrosssell_product_id'] = $crossSellProduct[0]->id_product;
-                                        $upCrossSellData[$i]['product_image'] = $crossSellProduct[0]->product_image;
-                                        $upCrossSellData[$i]['id_upcrosssell'] = $Singlesell->id_product_crossupsell;
-                                        $upCrossSellData[$i]['quantity'] = $Singlesell->quantity;
-                                        $upCrossSellData[$i]['pricePerPiece'] = $Singlesell->price;
-                                        $upCrossSellData[$i]['isBestOption'] = $Singlesell->isBestOption;
-                                        $upCrossSellData[$i]['description'] = $Singlesell->description;
-                                        $upCrossSellData[$i]['is_upSell'] = $Singlesell->is_upSell;
-                                        $upCrossSellData[$i]['is_crossSell'] = $Singlesell->is_crossSell;
-                                        $upCrossSellData[$i]['isFreeShipping'] = $Singlesell->isFreeShippingClaimed;
-                                        $i++;
-                                        $crossSellCount++;
-                                    } else {
-                                        Log::error("Error: DB - Unexisting CrossSell Product - SKU: " . $Singlesell->SKU);
-                                    }
-                                }
-                            }
-                        }
-                        $upCrossSellData[0]['upSellCount'] = $upSellCount;
-                        $upCrossSellData[0]['crossSellCount'] = $crossSellCount;
-                        return $upCrossSellData;
-                    }
-                }
-            } catch (\Exception $exception) {
-                Log::error("Error: Gettings Up/Cross Sells | Exception: " . $exception->getMessage());
-            }
-        }
-    }
-
-    public function validatePhoneNumber(Request $request){
-
-        $number = $request->get('phone');
-        $countryCode =  $request->get('country');
-
-        $name = $request->get('name');
-        $email = $request->get('email');
-        $address = $request->get('address');
-        $city = $request->get('city');
-        $zip = $request->get('zip');
-        $quantity = $request->get('quantity');
-        $variation_id = $request->get('variation_id');
-
-        try {
-            if($number != null) {
-                $result = PhoneNumber::make($number, $countryCode)->isOfCountry($countryCode);
-                if($result){
-                    return 1;
-                } else {
-                    return 0;
-                }
-            } else {
-                Log::warning("Validation - Phone is null - Request: ".$request);
-            }
-        } catch (\Exception $exception){
-            $customer_data = "Phone: ".$number."\nName: ".$name."\nEmail: ".$email."\nAddress: ".$address."\nCity: ".$city."\nZip: ".$zip."\nQuantity: ".$quantity."\nVariation: ".$variation_id;
-            Log::warning("Validation - Country: ".$countryCode."\nError: ".$exception->getMessage()."\n".$customer_data);
-            return 0;
-        }
-    }
-
-    public function siteMap(Request $request, $site = null, $domain = null) {
-        $brandUrl = 'https://'.$site.'.'.$domain;
-        $country_id = $request->get('countryId');
-        $products = [];
-
-        $brand = $this->modelBrand->getBrandByUrl($brandUrl);
-        if($brand != null) {
-            $allProducts = $this->modelProduct->getAllProductsAjax(null,$brand->brand_id,$country_id);
-            if(count($allProducts)>0) {
-                foreach($allProducts as $singleProduct) {
-                    if(!array_key_exists($singleProduct->sku, $products)) {
-                        if($country_id === 1) {
-                            $productSlug = $site.'.'.$domain.'/'.$singleProduct->slug;
-                        } else {
-                            $productSlug = $singleProduct->country_code.'.'.$site.'.'.$domain.'/'.$singleProduct->slug;
-                        }
-                        if($singleProduct->product_updated === null) {
-                            $productUpdated = Carbon::now()->subMonths(rand(1, 12))->subDays(rand(1, 30));
-                        } else {
-                            $productUpdated = $singleProduct->product_updated;
-                        }
-                        $products[$singleProduct->sku]['slug'] = 'https://'.$productSlug;
-                        $products[$singleProduct->sku]['date'] = date('Y-m-d',strtotime($productUpdated));
-                    }
-                }
-            }
-        }
-
-        return response()->view('sitemap', [
-            'products' => $products
-        ])->header('Content-Type', 'text/xml');
-    }
-
-    public function completedStripePayment(Request $request, $site = null, $domain = null, $product_id)
-    {
-        $product = Product::findOrFail($product_id);
-
-        $this->data['thankyouUrl'] = 'https://'.$request->get('countryShortcode').'.'.$site.'.'.$domain.'/'.$product->slug.'/thankyou';
-        return view('checkout.rs.completedStripePayment', $this->data);
-    }
 }

@@ -5,14 +5,13 @@ namespace App\Http\Controllers;
 use App\Models\Brand;
 use App\Models\Checkout;
 use App\Models\Country;
-use App\Models\Coupon;
 use App\Models\Lander;
 use App\Models\Order;
-use App\Models\Price;
 use App\Models\Product;
 use App\Models\Statistic;
 use App\Models\Thankyou;
 use App\Models\Variation;
+use App\Models\VariationPrice;
 use DateTime;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
@@ -28,10 +27,9 @@ class VariationController extends Controller
         $this->modelCheckout = new Checkout();
         $this->modelThankyou = new Thankyou();
         $this->modelCountry = new Country();
-        $this->modelPrice = new Price();
-        $this->modelCoupon = new Coupon();
         $this->modelStatistic = new Statistic();
         $this->modelOrder = new Order();
+        $this->modelVariationPrice = new VariationPrice();
     }
 
     public function variationsIndex() {
@@ -59,12 +57,12 @@ class VariationController extends Controller
 
         $perPage = 10;
 
-        $variationList = json_decode($this->modelVariation->getAllVariations($searchFilter,$landerFilter,$checkoutFilter,$thankyouFilter,$productFilter,$brandFilter), true);
+        $variations = $this->modelVariation->allVariations($searchFilter, $landerFilter, $checkoutFilter, $thankyouFilter, $productFilter, $brandFilter);
 
-        $paginatedData = $this->prepareDataForTableAjax($request, $variationList,'id_variation', true, $perPage, $currentPage, 'variationTable');
+        $paginatedData = $this->paginateDataWithTable($request, $variations,$perPage, $currentPage, 'variationTable');
 
         if(!$request->ajax()) {
-//            dd($paginatedData);
+            dd($paginatedData);
         }
 
         return $paginatedData;
@@ -77,8 +75,6 @@ class VariationController extends Controller
         $singleProduct = $this->modelProduct->getProduct($product_id);
         $country_id = $singleProduct->country_id;
 
-        $country = $this->modelCountry->getCountry($country_id);
-
         $this->data['product_id'] = $product_id;
         $this->data['landers'] = $this->modelLander->getLandersByProduct($product_id);
         $this->data['checkouts'] = $this->modelCheckout->getCheckoutsByCountry($country_id);
@@ -89,34 +85,13 @@ class VariationController extends Controller
 
     public function variation($id = null, Request $request) {
 
-        $singleVariation = $this->modelVariation->getVariation($id);
-
-        $prices = $this->modelPrice->getPricesForVariation($id);
-        $pricesList = json_decode($prices, true);
-        $groupedPrices = $this->getMultipleItemsFromQuery($pricesList,'id_variation');
-
-        $prices = [];
-        $i = 0;
-        foreach($groupedPrices as $price) {
-            foreach($price as $p) {
-                $i++;
-                $prices[$i]['id_variations_prices'] = $p['id_variations_prices'];
-                $prices[$i]['quantity'] = $p['quantity'];
-                $prices[$i]['amount'] = $p['amount'];
-                $prices[$i]['is_default'] = $p['is_default'];
-                $prices[$i]['is_free_shipping'] = $p['is_free_shipping'];
-            }
-        }
+        $singleVariation = Variation::with('prices','product.country.currency','lander','checkout','thankyou')->findOrFail($id);
+        $product_id = $singleVariation->getAttribute('product_id');
+        $country_id = $singleVariation->product->getAttribute('country_id');
 
         if($request->ajax()) {
-            return json_decode($groupedPrices, true);
+            return json_decode($singleVariation, true);
         }
-
-        $product_id = $singleVariation->product_id;
-        $singleProduct = $this->modelProduct->getProduct($product_id);
-        $country_id = $singleProduct->country_id;
-
-        $country = $this->modelCountry->getCountry($country_id);
 
         $groupedOrders = $this->modelVariation->countOrdersForVariation($id);
         $allOrders = $this->modelVariation->getAllOrdersForVariation($id);
@@ -134,34 +109,31 @@ class VariationController extends Controller
             $newArray[$value->event_name] = $value->VariationVisits;
         }
 
-        $this->data['landerVisits'] = isset($newArray['LanderView']) ? $newArray['LanderView'] : 0;
-        $this->data['checkoutVisits'] = isset($newArray['CheckoutView']) ? $newArray['CheckoutView'] : 0;
-        $this->data['thankyouVisits'] = isset($newArray['Purchase']) ? $newArray['Purchase'] : 0;
+        $prices = [];
+        foreach($singleVariation->prices as $price) {
+            if($price->getAttribute('deleted_at') === null) $prices[$price->getAttribute('quantity')] = $price->toArray();
+        }
+
+        $this->data['landerVisits'] = $newArray['LanderView'] ?? 0;
+        $this->data['checkoutVisits'] = $newArray['CheckoutView'] ?? 0;
+        $this->data['thankyouVisits'] = $newArray['Purchase'] ?? 0;
 
         $this->data['product_id'] = $product_id;
-        $this->data['landers'] = $this->modelLander->getLandersByProduct($product_id);
-        $this->data['checkouts'] = $this->modelCheckout->getCheckoutsByCountry($country_id);
-        $this->data['thankyous'] = $this->modelThankyou->getThankyousByCountry($country_id);
-        $this->data['currency_symbol'] = $country->currency_symbol;
-        $this->data['currency_id'] = $country->id_currency;
+        $this->data['landers'] = Lander::where('product_id',$product_id)->get();
+        $this->data['checkouts'] = Checkout::where('country_id',$country_id)->get();
+        $this->data['thankyous'] = Thankyou::where('country_id',$country_id)->get();
+
+        $this->data['currency_symbol'] = $singleVariation->product->country->currency->getAttribute('currency_symbol');
+        $this->data['currency_id'] = $singleVariation->product->country->getAttribute('currency_id');
         $this->data['variation'] = $singleVariation;
         $this->data['prices'] = $prices;
-        $this->data['coupons'] = $this->modelCoupon->getAllActiveCoupons();
+
         $this->data['groupedOrders'] = $groupedOrders;
         $this->data['allOrders'] = $allOrdersCount;
         $this->data['totalRevenue'] = $revenueTotal;
 
-        $couponIds = array();
-        $existingCoupons = $this->modelCoupon->getAllCouponsForVariation($id);
-
-        foreach($existingCoupons as $coupon) {
-            array_push($couponIds,$coupon->coupon_id);
-        }
-
-        $this->data['variationCoupons'] = $couponIds;
-
         $disableButtons = 0;
-        if($singleVariation->deleted_at != null) {
+        if($singleVariation->getAttribute('deleted_at')) {
             $disableButtons = 1;
         }
         $activeVariation = $this->modelVariation->checkIfVariationIsInActiveTest($id);
@@ -420,8 +392,8 @@ class VariationController extends Controller
 
         try {
 
-            $this->modelPrice->variation_id = $request->get('variationIdPrices');
-            $this->modelPrice->currency_id = $request->get('currencyIdPrices');
+            $variation_id = $request->get('variationIdPrices');
+            $currency_id = $request->get('currencyIdPrices');
 
             $data = $request->except('_token','variationIdPrices','currencyIdPrices');
 
@@ -433,36 +405,26 @@ class VariationController extends Controller
                 if(str_contains($key, 'priceFor') && $value != null) {
                     $i++;
                     $singlePrice = $request->get($key);
-                    $this->modelPrice->amount = $singlePrice;
+                    $this->modelVariationPrice->price = $singlePrice;
                     $quantity = substr($key, -1);
-                    $this->modelPrice->quantity = $quantity;
-                    if($request->get('isPriceDefault') === $this->modelPrice->quantity) {
-                        $this->modelPrice->is_default = 1;
+                    $this->modelVariationPrice->quantity = $quantity;
+
+                    if($request->get('isPriceDefault') === $this->modelVariationPrice->quantity) {
+                        $this->modelVariationPrice->is_default = 1;
                     } else {
-                        $this->modelPrice->is_default = 0;
+                        $this->modelVariationPrice->is_default = 0;
                     }
-                    if(isset($request->get('isFreeShipping')[$i]) && ($request->get('isFreeShipping')[$i] === $this->modelPrice->quantity)) {
-                        $this->modelPrice->is_free_shipping = 1;
+                    if(isset($request->get('isFreeShipping')[$i]) && ($request->get('isFreeShipping')[$i] === $this->modelVariationPrice->quantity)) {
+                        $this->modelVariationPrice->is_free_shipping = 1;
                     } else {
-                        $this->modelPrice->is_free_shipping = 0;
+                        $this->modelVariationPrice->is_free_shipping = 0;
                     }
-                    $priceExists = $this->modelPrice->checkIfPriceExists($this->modelPrice->amount,$this->modelPrice->currency_id);
-                    if($priceExists) {
-                        $price_id = $priceExists->id_price;
-                    } else {
-                        $insertResult = $this->modelPrice->insertPrice();
-                        if($insertResult) {
-                            $price_id = $insertResult;
-                        } else {
-                            return redirect()->back()->with('error','Error on inserting new price!');
-                        }
-                    }
-                    $this->modelPrice->price_id = $price_id;
-                    $variationPriceExists = $this->modelPrice->checkVariationQuantity($this->modelPrice->variation_id,$this->modelPrice->quantity);
+
+                    $variationPriceExists = $this->modelVariationPrice->checkVariationQuantity($variation_id,$this->modelVariationPrice->quantity);
                     if($variationPriceExists) {
-                        if($variationPriceExists->quantity === (int)$this->modelPrice->quantity) {
-                            if($variationPriceExists->is_default != $this->modelPrice->is_default || $variationPriceExists->is_free_shipping != $this->modelPrice->is_free_shipping || $variationPriceExists->price_id != $this->modelPrice->price_id) {
-                                $updateResult = $this->modelPrice->editVariationPrice($variationPriceExists->id_variations_prices);
+                        if($variationPriceExists->quantity === (int)$this->modelVariationPrice->quantity) {
+                            if($variationPriceExists->is_default != $this->modelVariationPrice->is_default || $variationPriceExists->is_free_shipping != $this->modelVariationPrice->is_free_shipping || $variationPriceExists->price != $this->modelVariationPrice->price) {
+                                $updateResult = $this->modelVariationPrice->editVariationPrice($variationPriceExists->id_variations_prices, $currency_id);
                                 if($updateResult) {
                                     $result[$i] = 2;
                                 } else {
@@ -473,11 +435,11 @@ class VariationController extends Controller
                             }
                         }
                     } else {
-                        $connectVariationPrice = $this->modelPrice->insertPriceVariation();
-                        if($connectVariationPrice) {
+                        $insertPriceForVariation = $this->modelVariationPrice->insertPriceVariation($variation_id, $currency_id);
+                        if($insertPriceForVariation) {
                             $result[$i] = 1;
                         } else {
-                            return redirect()->back()->with('error','Error on connecting price with variation!');
+                            return redirect()->back()->with('error','Error on inserting price for variation!');
                         }
                     }
                 }
@@ -501,12 +463,12 @@ class VariationController extends Controller
         }
     }
 
-    public function deleteVariation($id) {
+    public function deleteVariation($variation_id) {
         try {
-            $deleteVariationsPrices = $this->modelPrice->deleteAllPricesForVariation($id);
+            $deleteVariationsPrices = $this->modelVariationPrice->deleteAllPricesForVariation($variation_id);
 
             if($deleteVariationsPrices >= 0) {
-                $deleteResult = $this->modelVariation->deleteVariation($id);
+                $deleteResult = $this->modelVariation->deleteVariation($variation_id);
             }
 
             if($deleteResult === 1) {
@@ -522,14 +484,10 @@ class VariationController extends Controller
         }
     }
 
-    public function deleteVariationPrice($id = null) {
-
-        if($id === null) {
-            return redirect()->back()->with('error','Variation Id is not available!');
-        }
-
+    public function deleteVariationPrice($variation_price_id = null) {
         try {
-            $deleteResult = $this->modelPrice->deletePriceVariation($id);
+            $deleteResult = $this->modelVariationPrice->deleteVariationPrice($variation_price_id);
+
             if($deleteResult) {
                 return redirect()->back()->with('success','Price variation has been deleted successfully!');
             } else {
@@ -558,181 +516,5 @@ class VariationController extends Controller
             Log::error("Error: Restoring variation | Exception: " . $exception->getMessage());
             return redirect()->back()->with('error','Error with restoring variation!');
         }
-    }
-
-    public function addCouponsToVariation(Request $request) {
-
-        $rules = [
-            'variationIdCoupons' => ['required'],
-            'variation_coupons' => ['nullable','array'],
-        ];
-
-        $messages = [
-            'required' => 'Field :attribute is required!',
-        ];
-
-        $validator = Validator::make($request->all(), $rules, $messages);
-
-        if ($validator->fails()) {
-            return redirect()
-                ->back()
-                ->withErrors($validator)
-                ->withInput();
-        }
-
-        $existingCoupons = array();
-        $deleted = 0;
-        $existing = 0;
-        $inserted = 0;
-        try {
-            $this->modelCoupon->variation_id = $request->get('variationIdCoupons');
-            $selectedCoupons = $request->get('variation_coupons');
-
-            $existingVariationCoupons = $this->modelCoupon->getAllCouponsForVariation($this->modelCoupon->variation_id);
-
-
-            if($selectedCoupons === null) {
-                foreach($existingVariationCoupons as $singleRaw) {
-                    try {
-                        $deleteResult = $this->modelCoupon->deleteVariationCoupon($singleRaw->id_variations_coupons);
-                        if($deleteResult) {
-                            $deleted++;
-                        } else {
-                            return redirect()->back()->with('error','Error on deleting existing variation coupon!');
-                        }
-                    } catch (\Exception $exception) {
-                        Log::error("Error: Deleting all variation coupons | Exception: " . $exception->getMessage());
-                        return redirect()->back()->with('error','Error on deleting all variation coupons!');
-                    }
-                }
-            } else {
-                foreach($existingVariationCoupons as $singleRaw) {
-                    foreach($singleRaw as $key => $value) {
-                        if($key === "coupon_id") {
-                            if(in_array($value,$selectedCoupons)) {
-                                $existing++;
-                            } else {
-                                try {
-                                    $deleteResult = $this->modelCoupon->deleteVariationCoupon($singleRaw->id_variations_coupons);
-                                    if($deleteResult) {
-                                        $deleted++;
-                                    } else {
-                                        return redirect()->back()->with('error','Error on deleting existing variation coupon!');
-                                    }
-                                } catch (\Exception $exception) {
-                                    Log::error("Error: Deleting existing variation coupon | Exception: " . $exception->getMessage());
-                                    return redirect()->back()->with('error','Error on deleting existing variation coupon!');
-                                }
-                            }
-                            array_push($existingCoupons,$value);
-                        }
-                    }
-                }
-
-                foreach($selectedCoupons as $singleCoupon) {
-                    if(!in_array((int)$singleCoupon,$existingCoupons)) {
-                        $this->modelCoupon->coupon_id = $singleCoupon;
-                        try {
-                            $insertResult = $this->modelCoupon->addVariationCoupon();
-                            if($insertResult) {
-                                $inserted++;
-                            } else {
-                                return redirect()->back()->with('error','Error on inserting new variation coupon!');
-                            }
-                        } catch (\Exception $exception) {
-                            Log::error("Error: Inserting new variation coupon | Exception: " . $exception->getMessage());
-                            return redirect()->back()->with('error','Error on inserting new variation coupon!');
-                        }
-                    }
-                }
-            }
-
-            return redirect()->back()->with('success',"Coupons - Inserted: " . $inserted . " Existing: " . $existing . " Deleted: " . $deleted);
-
-        } catch (\Exception $exception) {
-            Log::error("Error: Inserting coupons to variation | Exception: " . $exception->getMessage());
-            return redirect()->back()->with('error','Error on inserting coupons to variation!');
-        }
-
-    }
-
-    public function copyVariation($variation_id = null) {
-        $singleVariation = $this->modelVariation->getVariation($variation_id);
-        $coupons = $this->modelCoupon->getAllCouponsForVariation($variation_id);
-        $prices = $this->modelPrice->getPricesForVariation($variation_id);
-        $pricesList = json_decode($prices, true);
-        $groupedPrices = $this->getMultipleItemsFromQuery($pricesList,'id_variation');
-
-        $prices = [];
-        $i = 0;
-        $j = 0;
-        foreach($groupedPrices as $price) {
-            foreach($price as $p) {
-                $i++;
-                $prices[$i]['quantity'] = $p['quantity'];
-                $prices[$i]['price_id'] = $p['price_id'];
-                $prices[$i]['is_default'] = $p['is_default'];
-                $prices[$i]['is_free_shipping'] = $p['is_free_shipping'];
-            }
-        }
-
-        try {
-            $this->modelVariation->product_id = $singleVariation->product_id;
-            $this->modelVariation->variation_name = $singleVariation->variation_name . " - Copy";
-            $this->modelVariation->variation_description = $singleVariation->variation_description . " - Copy";
-            $this->modelVariation->lander_id = $singleVariation->lander_id;
-            $this->modelVariation->checkout_id = $singleVariation->checkout_id;
-            $this->modelVariation->thankyou_id = $singleVariation->thankyou_id;
-            $this->modelVariation->default = 0;
-            $this->modelVariation->active = $singleVariation->is_active;
-
-            $insertIdVariation = $this->modelVariation->insertVariations();
-        } catch (\Exception $exception) {
-            Log::error("Error: Copying variation | Exception: " . $exception->getMessage());
-            return redirect()->back()->with('error','Error on copying variation!');
-        }
-
-        if($insertIdVariation) {
-            try {
-                foreach($prices as $price) {
-                    $this->modelPrice->variation_id = $insertIdVariation;
-                    $this->modelPrice->quantity = $price['quantity'];
-                    $this->modelPrice->is_default = $price['is_default'];
-                    $this->modelPrice->is_free_shipping = $price['is_free_shipping'];
-                    $this->modelPrice->price_id = $price['price_id'];
-
-                    $insertPrice = $this->modelPrice->insertPriceVariation();
-                    if($insertPrice) $j++;
-                }
-            } catch (\Exception $exception) {
-                Log::error("Error: Adding prices to copied variation | Exception: " . $exception->getMessage());
-                return redirect()->back()->with('error','Error on adding prices to copied variation!');
-            }
-        }
-
-        $k = 0;
-        $l = 0;
-        if($i === $j) {
-            try {
-                foreach($coupons as $coupon) {
-                    $k++;
-                    $this->modelCoupon->variation_id = $insertIdVariation;
-                    $this->modelCoupon->coupon_id = $coupon->id_coupon;
-
-                    $insertCoupon = $this->modelCoupon->addVariationCoupon();
-                    if($insertCoupon) $l++;
-                }
-            } catch (\Exception $exception) {
-                Log::error("Error: Adding coupons to copied variation | Exception: " . $exception->getMessage());
-                return redirect()->back()->with('error','Error on adding coupons to copied variation!');
-            }
-        }
-
-        if($k === $l) {
-            return redirect()->route('variation',['id' => $insertIdVariation])->with('success','Variation copied successfully!');
-        } else {
-            return redirect()->back()->with('error','Error on copying variation!');
-        }
-
     }
 }

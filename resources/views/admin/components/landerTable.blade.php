@@ -9,17 +9,11 @@
     </tr>
     </thead>
     <tbody style="vertical-align: middle;">
-    <caption>
-        <span class="badge bg-warning">Have mobile version</span>
-    </caption>
     @foreach($paginatedItems as $singleLander)
         <tr style="padding-top: 0px;"
             @if($singleLander[0]["lander_deleted"])
             class="table-danger"
             @endif
-            @if($singleLander[0]["mobile_version"])
-            class="table-warning"
-                @endif
         >
             <td>{{ $singleLander[0]["id_lander"] }}</td>
             <td>{{ $singleLander[0]["lander_name"] }}</td>

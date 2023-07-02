@@ -22,15 +22,6 @@
                                 <input type="text" name="event_name" id="event_name" class="form-control" data-value="event_name" value="" required="">
                             </div>
                             <div class="md-form input-group input-group-sm mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm">FB Event</span>
-                                </div>
-                                <select name="isFbEvent" id="isFbEvent" data-toggle="dropdown" required>
-                                    <option value="1" selected>Yes</option>
-                                    <option value="0">No</option>
-                                </select>
-                            </div>
-                            <div class="md-form input-group input-group-sm mb-3">
                                 <button type="submit" id="addBrandButton" class="btn btn-primary btn-lg btn-block">Add event</button>
                             </div>
                         </div>
@@ -48,7 +39,6 @@
                                 <tr>
                                     <th class="text-center">#</th>
                                     <th class="text-center">Event</th>
-                                    <th class="text-center">FB Event</th>
                                     <th class="text-center"></th>
                                 </tr>
                                 </thead>
@@ -58,7 +48,6 @@
                                         <tr>
                                             <td class="pt-3-half">{{$event->id_event}}</td>
                                             <td class="pt-3-half">{{$event->event_name}}</td>
-                                            <td class="pt-3-half">{{ ($event->is_fb_event === 1) ? "Yes" : "No" }}</td>
                                             <td>
                                                 <span class="table-edit"><button type="button" class="btn btn-primary btn-rounded btn-sm my-0 editEventBtn" data-toggle="modal" data-target="#editEvent" value="{{$event->id_event}}">EDIT</button></span>
                                                 <span class="table-remove"><a href="{{ route('deleteEvent',['id' => $event->id_event]) }}"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0 deleteEventBtn">DELETE</button></a></span>
@@ -94,15 +83,6 @@
                             </div>
                             <input type="text" name="eventNameModal" id="eventNameModal" class="form-control" data-value="eventNameModal" value="" autocomplete="off">
                         </div>
-                        <div class="md-form input-group input-group-sm mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm">FB Event</span>
-                            </div>
-                            <select name="isFbEventModal" id="isFbEventModal" data-toggle="dropdown" required>
-                                <option value="1">Yes</option>
-                                <option value="0">No</option>
-                            </select>
-                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-primary btn-sm waves-effect">Edit event</button>
@@ -131,7 +111,6 @@
                     success: function (data) {
                         $('#eventIdModal').val(data.id_event);
                         $('#eventNameModal').val(data.event_name);
-                        $('#isFbEventModal').val(data.is_fb_event).selectpicker('refresh');
                     },
                     error: function (req, err) {
                         console.log(req);

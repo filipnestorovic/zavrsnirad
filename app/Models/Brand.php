@@ -17,24 +17,11 @@ class Brand extends Model
     protected $table = 'brand';
 
     public $brand_name;
-    public $brand_url;
     public $logo_url;
     public $country_id;
 
     public function getAllBrands() {
         $result = DB::table('brand')
-            ->whereNull('brand.deleted_at')
-            ->get();
-        return $result;
-    }
-
-    public function getAllBrandsWithPixels() {
-        $result = DB::table('brand')
-            ->leftJoin('pixel_brands', function($query) {
-                $query->on('brand.id_brand','=','pixel_brands.brand_id')
-                    ->whereRaw('pixel_brands.id_pixel_brands IN (select pb.id_pixel_brands from pixel_brands as pb join `brand` b on b.id_brand = pb.brand_id)');
-            })
-            ->leftJoin('pixel', 'pixel_brands.pixel_id', '=', 'pixel.id_pixel')
             ->whereNull('brand.deleted_at')
             ->get();
         return $result;

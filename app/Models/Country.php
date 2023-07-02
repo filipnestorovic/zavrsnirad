@@ -18,10 +18,13 @@ class Country extends Model
     public $country_name;
     public $country_code;
     public $currency_id;
-    public $enabledCOD;
-    public $enabledStripe;
     public $is_active;
     public $shipping_cost;
+
+    public function currency()
+    {
+        return $this->hasOne(Currency::class, 'id_currency', 'currency_id');
+    }
 
     public function getAllCountries(){
         $result = DB::table('country')
@@ -47,8 +50,6 @@ class Country extends Model
                 'country_code' => $this->country_code,
                 'shipping_cost' => $this->shipping_cost,
                 'currency_id' => $this->currency_id,
-                'enabledCOD' => $this->enabledCOD,
-                'enabledStripe' => $this->enabledStripe,
                 'is_active' => $this->is_active,
             ]);
         return $result;
@@ -62,8 +63,6 @@ class Country extends Model
                 'country_code' => $this->country_code,
                 'shipping_cost' => $this->shipping_cost,
                 'currency_id' => $this->currency_id,
-                'enabledCOD' => $this->enabledCOD,
-                'enabledStripe' => $this->enabledStripe,
                 'is_active' => $this->is_active,
                 'updated_at' => Carbon::now(),
             ]);

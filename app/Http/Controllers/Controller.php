@@ -17,14 +17,12 @@ class Controller extends BaseController
     protected $modelCountry;
     protected $modelBrand;
     protected $modelProduct;
-    protected $modelReview;
-    protected $modelPixel;
     protected $modelLander;
     protected $modelCheckout;
     protected $modelThankyou;
     protected $modelVariation;
+    protected $modelVariationPrice;
     protected $modelCurrency;
-    protected $modelPrice;
     protected $modelCoupon;
     protected $modelTest;
     protected $modelSession;
@@ -35,11 +33,12 @@ class Controller extends BaseController
 
     public function getMultipleItemsFromQuery($data, $keyForGroup) {
         $orderedList = array();
+
         foreach($data as $val) {
             $orderedList[$val[$keyForGroup]][] = $val;
         }
-        $itemCollection = collect($orderedList);
-        return $itemCollection;
+
+        return collect($orderedList);
     }
 
     public function prepareDataForTableAjax(Request $request, $data, $keyForGroup, $isForRender = false, $perPage = 10, $currentPage = 1, $tableViewName){
@@ -53,6 +52,22 @@ class Controller extends BaseController
         $paginatedItems = new LengthAwarePaginator($currentPageItems , count($itemCollection), $perPage);
 
         $paginatedItems->setPath('');
+        if($request->ajax()){
+            return view('admin.components.'.$tableViewName, compact(array('paginatedItems')))->render();
+        }
+        else{
+            return $paginatedItems;
+        }
+    }
+
+    public function paginateDataWithTable(Request $request, $data, $perPage = 10, $currentPage = 1, $tableViewName)
+    {
+        $itemCollection = $data;
+        $currentPageItems = $itemCollection->slice(((int)$currentPage * $perPage) - $perPage, $perPage)->all();
+        $paginatedItems = new LengthAwarePaginator($currentPageItems, count($itemCollection), $perPage);
+
+        $paginatedItems->setPath('');
+
         if($request->ajax()){
             return view('admin.components.'.$tableViewName, compact(array('paginatedItems')))->render();
         }

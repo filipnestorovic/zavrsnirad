@@ -46,11 +46,6 @@ class Domain extends Model
     public function getBrandDomains($brand_id, $domain_id) {
         $result = DB::table('domain')
             ->leftJoin('brand', 'domain.brand_id', '=', 'brand.id_brand')
-            ->leftJoin('pixel_domains', function($query) {
-                $query->on('domain.id_domain','=','pixel_domains.domain_id')
-                    ->whereRaw('pixel_domains.id_pixel_domains IN (select pd.id_pixel_domains from pixel_domains as pd join `domain` d on d.id_domain = pd.domain_id)');
-            })
-            ->leftJoin('pixel', 'pixel_domains.pixel_id', '=', 'pixel.id_pixel')
             ->whereNull('domain.deleted_at');
 
         if(!empty($brand_id)){

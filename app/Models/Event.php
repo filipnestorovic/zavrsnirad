@@ -13,7 +13,6 @@ class Event extends Model
     use HasFactory;
 
     public $event_name;
-    public $is_fb_event;
 
     public function getAllEvents(){
         $result = DB::table('event')
@@ -34,7 +33,6 @@ class Event extends Model
         $result = DB::table('event')
             ->insertGetId([
                 'event_name' => $this->event_name,
-                'is_fb_event' => $this->is_fb_event,
             ]);
         return $result;
     }
@@ -44,7 +42,6 @@ class Event extends Model
             ->where('id_event', '=',$id)
             ->update([
                 'event_name' => $this->event_name,
-                'is_fb_event' => $this->is_fb_event,
                 'updated_at' => Carbon::now(),
             ]);
         return $result;

@@ -32,16 +32,12 @@
                                 <i class="fa fa-certificate mr-3"></i>Brands/Domains</a>
                             <a href="{{ route('productIndex') }}" class="list-group-item list-group-item-action waves-effect">
                                 <i class="fab fa-product-hunt mr-3"></i>Products</a>
-                            <a href="" class="list-group-item list-group-item-action waves-effect pixelMenu" data-toggle="modal" data-target="#pixelModal">
-                                <i class="fab fa-facebook mr-3"></i>Pixels</a>
                             <a href="{{ route('landerIndex') }}" class="list-group-item list-group-item-action waves-effect">
                                 <i class="fa fa-file-import mr-3"></i>Landers</a>
                             <a href="{{ route('checkoutIndex') }}" class="list-group-item list-group-item-action waves-effect">
                                 <i class="fa fa-receipt mr-3"></i>Checkouts</a>
                             <a href="{{ route('thankyouIndex') }}" class="list-group-item list-group-item-action waves-effect">
                                 <i class="fa fa-money-bill mr-3"></i>Thankyous</a>
-                            <a href="{{ route('couponIndex') }}" class="list-group-item list-group-item-action waves-effect">
-                                <i class="fas fa-tags mr-3"></i>Coupons</a>
                             <a href="{{ route('eventIndex') }}" class="list-group-item list-group-item-action waves-effect">
                                 <i class="fas fa-user-clock mr-3"></i>Events</a>
                             <a href="{{ route('variationsIndex') }}" class="list-group-item list-group-item-action waves-effect">
@@ -77,6 +73,7 @@
                                         </ul>
                                     </div>
                                 @endif
+                                <span id="errorMessage" class="note note-danger d-none"></span>
                             </div>
                         </li>
                     </ul>
@@ -105,16 +102,12 @@
                     <i class="fa fa-certificate mr-3"></i>Brands/Domains</a>
                 <a href="{{ route('productIndex') }}" class="list-group-item list-group-item-action waves-effect">
                     <i class="fab fa-product-hunt mr-3"></i>Products</a>
-                <a href="" class="list-group-item list-group-item-action waves-effect pixelMenu" data-toggle="modal" data-target="#pixelModal">
-                    <i class="fab fa-facebook mr-3"></i>Pixels</a>
                 <a href="{{ route('landerIndex') }}" class="list-group-item list-group-item-action waves-effect">
                     <i class="fa fa-file-import mr-3"></i>Landers</a>
                 <a href="{{ route('checkoutIndex') }}" class="list-group-item list-group-item-action waves-effect">
                     <i class="fa fa-receipt mr-3"></i>Checkouts</a>
                 <a href="{{ route('thankyouIndex') }}" class="list-group-item list-group-item-action waves-effect">
                     <i class="fa fa-money-bill mr-3"></i>Thankyous</a>
-                <a href="{{ route('couponIndex') }}" class="list-group-item list-group-item-action waves-effect">
-                    <i class="fas fa-tags mr-3"></i>Coupons</a>
                 <a href="{{ route('eventIndex') }}" class="list-group-item list-group-item-action waves-effect">
                     <i class="fas fa-user-clock mr-3"></i>Events</a>
                 <a href="{{ route('variationsIndex') }}" class="list-group-item list-group-item-action waves-effect">

@@ -5,8 +5,6 @@ namespace App\Http\Middleware;
 use App\Models\Country;
 use Closure;
 use Illuminate\Http\Request;
-use App\Models;
-use Illuminate\Support\Facades\Log;
 use Stevebauman\Location\Facades\Location;
 
 class CountryCheck
@@ -19,52 +17,29 @@ class CountryCheck
      * @return mixed
      */
 
-    private $unexistingCountryName;
-
     public function handle(Request $request, Closure $next)
     {
-//        if(request()->ip() === "127.0.0.1") {
-//            $countryCodeFromIp = "rs";
-//            $this->unexistingCountryName = "Localhost";
-//        } else {
-//            $countryCodeFromIp = $this->getLocationByIp($request); // get country from customer ip
-//        }
-
-        $countryCodeFromIp = "rs";
-
         $countryModel = new Country();
         $countryShortcode = strtolower($request->route('country')); // get country from url
+
         if($countryShortcode != null && $countryShortcode != "") {
             $result = $countryModel->getActiveCountryByShortcode($countryShortcode);
         } else {
             $result = null;
         }
 
-        if($result === null) { //if country is not set in url
+        if($result === null) {
+            $countryCodeFromIp = $this->getLocationByIp($request);
             $checkCountryIp = $countryModel->getActiveCountryByShortcode($countryCodeFromIp);
             if($checkCountryIp === null) {
                 $request->request->add(['countryShortcode' => "rs"]);
                 $request->request->add(['countryId' => 1]);
-//                Log::info('Redirect to rs from: '.$countryCodeFromIp);
             } else {
                 $request->request->add(['countryShortcode' => $checkCountryIp->country_code]);
                 $request->request->add(['countryId' => $checkCountryIp->id_country]);
             }
-//            $host = $request->getHost();
-//            $whitelist = ["cleanmaster.rs"];
-//            if(in_array($host, $whitelist)) {
-//                $request->request->add(['countryShortcode' => "rs"]);
-//                $request->request->add(['countryId' => 1]);
-//            } else {
-//                if($checkCountryIp === null) {
-//                    $request->request->add(['unexistingCountry' => $countryCodeFromIp]);
-//                    $request->request->add(['unexistingCountryName' => $this->unexistingCountryName]);
-//                } else {
-//                    $request->request->add(['countryShortcode' => $checkCountryIp->country_code]);
-//                    $request->request->add(['countryId' => $checkCountryIp->id_country]);
-//                }
-//            }
-        } else { //if country is set in url
+
+        } else {
             $request->request->add(['countryShortcode' => $result->country_code]);
             $request->request->add(['countryId' => $result->id_country]);
         }
@@ -80,13 +55,7 @@ class CountryCheck
             return 'rs';
         } else {
             $position = Location::get($request_ip);
-            if($position != null) {
-                $countryCode = strtolower($position->countryCode);
-                $this->unexistingCountryName = $position->countryName;
-                return $countryCode;
-            } else {
-                return 'rs';
-            }
+            return $position != null ? strtolower($position->countryCode) : 'rs';
         }
     }
 }

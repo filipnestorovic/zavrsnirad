@@ -86,7 +86,6 @@ class PageController extends Controller
             $brand_id = $request->get('brandIdLander');
             $product_id = $request->get('productIdLander');
             $lander_name = $request->get('lander_name');
-            $mobile_version = $request->get('differentMobileVersion');
 
             $lander_name = preg_replace('/\s*/', '', $lander_name);
             $lander_name = strtolower($lander_name);
@@ -95,7 +94,6 @@ class PageController extends Controller
             $singleProduct = $this->modelProduct->getProduct($product_id);
 
             $brand_name = strtolower(preg_replace('/\s*/', '', $singleBrand->brand_name));
-            $product_slug = $singleProduct->slug;
             $country = $singleProduct->country_code;
 
             $view = 'lander.'.$brand_name.'.'.$country.'.'.$lander_name;
@@ -110,13 +108,6 @@ class PageController extends Controller
                 return redirect()->back()->with('error','This view does not exists, please create it first!');
             }
 
-            if($mobile_version) {
-                $mobile_view = $view.'_m';
-                if (!View::exists($mobile_view)) {
-                    return redirect()->back()->with('error','Mobile view does not exists, please create it first!');
-                }
-            }
-
         } catch (\Exception $exception) {
             Log::error("Error: Checking if lander view exists | Exception: " . $exception->getMessage());
             return redirect()->back()->with('error','Error on checking if lander view exists!');
@@ -124,10 +115,9 @@ class PageController extends Controller
 
         try {
             $this->modelLander->lander_name = $request->get('lander_name');
-            $this->modelLander->lander_url = $view;
+            $this->modelLander->lander_path = $view;
             $this->modelLander->brand_id = $brand_id;
             $this->modelLander->product_id = $product_id;
-            $this->modelLander->mobile_version = $mobile_version;
 
             $insertResult = $this->modelLander->insertLander();
 
@@ -148,7 +138,6 @@ class PageController extends Controller
             'landerNameModal' => ['required','max:50'],
             'brandIdModal' => ['required'],
             'productIdModal' => ['required'],
-            'differentMobileVersionModal' => ['required'],
         ];
         $messages = [
             'required' => 'Field :attribute is required!',
@@ -166,17 +155,14 @@ class PageController extends Controller
             $brand_id = $request->get('brandIdModal');
             $product_id = $request->get('productIdModal');
             $lander_name = $request->get('landerNameModal');
-            $mobile_version = $request->get('differentMobileVersionModal');
 
             $singleBrand = $this->modelBrand->getBrand($brand_id);
             $singleProduct = $this->modelProduct->getProduct($product_id);
 
             $brand_name = strtolower(preg_replace('/\s*/', '', $singleBrand->brand_name));
-            $product_slug = $singleProduct->slug;
             $country = $singleProduct->country_code;
 
             $view = 'lander.'.$brand_name.'.'.$country.'.'.$lander_name;
-
 
             $checkUrl = $this->modelLander->checkIfLanderAlreadyExist($view);
 
@@ -190,13 +176,6 @@ class PageController extends Controller
                 return redirect()->back()->with('error','This view does not exists, please create it first!');
             }
 
-            if($mobile_version) {
-                $mobile_view = $view.'_m';
-                if (!View::exists($mobile_view)) {
-                    return redirect()->back()->with('error','Mobile view does not exists, please create it first!');
-                }
-            }
-
         } catch (\Exception $exception) {
             Log::error("Error: Checking if lander view exists | Exception: " . $exception->getMessage());
             return redirect()->back()->with('error','Error on checking if lander view exists!');
@@ -204,10 +183,9 @@ class PageController extends Controller
 
         try {
             $this->modelLander->lander_name = $request->get('landerNameModal');
-            $this->modelLander->lander_url = $view;
+            $this->modelLander->lander_path = $view;
             $this->modelLander->brand_id = $brand_id;
             $this->modelLander->product_id = $product_id;
-            $this->modelLander->mobile_version = $mobile_version;
 
             $updateResult = $this->modelLander->editLander($id);
 
@@ -292,9 +270,8 @@ class PageController extends Controller
             $country_code = $singleCountry->country_code;
 
             $checkout_slug = strtolower(preg_replace('/\s*/', '', $checkout_name));
-
             $view = 'checkout.'.$country_code.'.'.$checkout_slug;
-            
+
             if (!View::exists($view)) {
                 return redirect()->back()->with('error','This view does not exists, please create it first!');
             }
@@ -306,7 +283,7 @@ class PageController extends Controller
 
         try {
             $this->modelCheckout->checkout_name = $checkout_name;
-            $this->modelCheckout->checkout_url = $view;
+            $this->modelCheckout->checkout_path = $view;
             $this->modelCheckout->country_id = $country_id;
 
             $insertResult = $this->modelCheckout->insertCheckout();
@@ -347,7 +324,6 @@ class PageController extends Controller
             $country_code = $singleCountry->country_code;
 
             $checkout_slug = strtolower(preg_replace('/\s*/', '', $checkout_name));
-
             $view = 'checkout.'.$country_code.'.'.$checkout_slug;
 
             if (!View::exists($view)) {
@@ -362,7 +338,7 @@ class PageController extends Controller
         try {
             $id = $request->get('checkoutIdModal');
             $this->modelCheckout->checkout_name = $checkout_name;
-            $this->modelCheckout->checkout_url = $view;
+            $this->modelCheckout->checkout_path = $view;
             $this->modelCheckout->country_id = $country_id;
 
             $updateResult = $this->modelCheckout->editCheckout($id);
@@ -448,7 +424,7 @@ class PageController extends Controller
 
         try {
             $this->modelThankyou->thankyou_name = $thankyou_name;
-            $this->modelThankyou->thankyou_url = $view;
+            $this->modelThankyou->thankyou_path = $view;
             $this->modelThankyou->country_id = $country_id;
 
             $insertResult = $this->modelThankyou->insertThankyou();
@@ -470,9 +446,11 @@ class PageController extends Controller
             'thankyouNameModal' => ['required','max:50'],
             'countryIdModal' => ['required'],
         ];
+
         $messages = [
             'required' => 'Field :attribute is required!',
         ];
+
         $validator = Validator::make($request->all(), $rules, $messages);
         if ($validator->fails()) {
             return redirect()
@@ -504,7 +482,7 @@ class PageController extends Controller
         try {
             $id = $request->get('thankyouIdModal');
             $this->modelThankyou->thankyou_name = $thankyou_name;
-            $this->modelThankyou->thankyou_url = $view;
+            $this->modelThankyou->thankyou_path = $view;
             $this->modelThankyou->country_id = $country_id;
 
             $updateResult = $this->modelThankyou->editThankyou($id);

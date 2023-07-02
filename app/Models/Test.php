@@ -12,11 +12,60 @@ class Test extends Model
 {
     use HasFactory;
 
-    public $test_id;
-    public $product_id;
-    public $is_test_active;
-    public $variation_id;
+    protected $table = 'test';
+    protected $primaryKey = 'id_test';
+
+    protected $guarded = ['id_test'];
+
     public $traffic_percentage;
+
+    public function testVariations()
+    {
+        return $this->hasMany(TestVariation::class, "test_id", "id_test")->with('variation');
+    }
+
+    public function product()
+    {
+        return $this->belongsTo(Product::class,'product_id','id_product')->with('country');
+    }
+
+    public function testForProduct($product_id)
+    {
+        return Test::with('testVariations.variation','product')
+                ->where('product_id',$product_id)
+                ->where('is_active',1)
+                ->first();
+    }
+
+    public function allTests($searchFilter = null, $productFilter = null, $activeFilter = null, $test_id = null) {
+        return Test::with('testVariations.variation','product')
+            ->when($productFilter, function ($q) use ($productFilter) {
+                return $q->where('product_id', $productFilter);
+            })
+            ->when($test_id, function ($q) use ($test_id) {
+                return $q->where('test_id', $test_id);
+            })
+            ->when($activeFilter, function ($q) use (&$activeFilter) {
+                $activeFilter = (int)$activeFilter;
+                if($activeFilter === 1) {
+                    return $q->where('is_active', 1);
+                } elseif($activeFilter === 2) {
+                    return $q->where('is_active', 0)->whereNull('ended_at');
+                } elseif($activeFilter === 3) {
+                    return $q->where('is_active', 0)->whereNotNull('ended_at');
+                }
+            })
+            ->when($searchFilter, function ($q) use ($searchFilter) {
+                return $q->where(function ($query) use ($searchFilter) {
+                    $query->where('id_test', '=', $searchFilter);
+                })->orWhereHas('variations.product', function ($productQuery) use ($searchFilter) {
+                    $productQuery->where('product_name', 'LIKE', '%' . $searchFilter . '%');
+                });
+            })
+            ->orderBy('is_active', 'desc')
+            ->orderBy('created_at', 'desc')
+            ->get();
+    }
 
     public function getAllTests($searchFilter = null, $productFilter = null, $activeFilter = null, $test_id = null) {
         $result = DB::table('test')
@@ -67,21 +116,21 @@ class Test extends Model
         return $result;
     }
 
-    public function insertTest() {
+    public function insertTest($product_id) {
         $result = DB::table('test')
             ->insertGetId([
-                'product_id' => $this->product_id,
+                'product_id' => $product_id,
                 'is_active' => 0,
                 'created_at' => Carbon::now(),
             ]);
         return $result;
     }
 
-    public function addVariationToTest() {
+    public function addVariationToTest($test_id, $variation_id) {
         $result = DB::table('tests_variations')
             ->insertGetId([
-                'test_id' => $this->test_id,
-                'variation_id' => $this->variation_id,
+                'test_id' => $test_id,
+                'variation_id' => $variation_id,
                 'traffic_percentage' => $this->traffic_percentage,
                 'added_at' => Carbon::now(),
             ]);

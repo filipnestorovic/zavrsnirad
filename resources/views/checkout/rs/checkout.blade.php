@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="clickfunnels-com bgCover wf-proximanova-i4-active wf-proximanova-i7-active wf-proximanova-n4-active wf-proximanova-n7-active wf-active wf-proximanova-i3-active wf-proximanova-n3-active wf-proximanovasoft-n4-active wf-proximanovasoft-n7-active wf-proximasoft-n4-active wf-proximasoft-i4-active wf-proximasoft-i6-active wf-proximasoft-n6-active wf-proximasoft-i7-active wf-proximasoft-n7-active avcHn2VQJenBvoR5hilPG " style="overflow: initial; background-color: rgba(241, 244, 248, 0);">
 <head>
-    @include('components.pixel_init')
+    @include('components.front_header')
     <meta charset="UTF-8">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
@@ -22,7 +22,7 @@
             <div class="col-md-12 innerContent col_left" data-col="full" data-trigger="none" data-animate="fade" data-delay="500" data-title="full column" style="outline: none;">
                 <div class="col-inner bgCover  noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin">
                     <div class="de elImageWrapper de-image-block elAlign_center elMargin0 ui-droppable de-editable" data-de-type="img" data-de-editing="false" data-title="image" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 10px; outline: none; cursor: pointer;" aria-disabled="false">
-                        <a href=""><img src="{{ asset('/').$product->logo_url }}" class="elIMG ximg" width="250"></a>
+                        <a href=""><img src="{{ asset('/').$product->brand->getAttribute('logo_url') }}" class="elIMG ximg" width="250"></a>
                     </div>
                 </div>
             </div>
@@ -36,7 +36,7 @@
             <div class="col-md-12 innerContent col_left" data-col="full" data-trigger="none" data-animate="fade" data-delay="500" data-title="full column" style="outline: none;">
                 <div class="col-inner bgCover  noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin">
                     <div class="de elImageWrapper de-image-block elAlign_center elMargin0 ui-droppable de-editable" data-de-type="img" data-de-editing="false" data-title="image" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 0px; outline: none; cursor: pointer;" aria-disabled="false">
-                        <a href=""><img src="{{ asset('/').$product->logo_url }}" class="elIMG ximg" width="150"></a>
+                        <a href=""><img src="{{ asset('/').$product->brand->getAttribute('logo_url') }}" class="elIMG ximg" width="150"></a>
                     </div>
                 </div>
             </div>
@@ -59,10 +59,8 @@
 </div>
 <form action="{{$orderRoute}}" method="post" id="formCheckout">
     {{csrf_field()}}
-    <input type="hidden" name="discount" value="{{$discount}}">
     <input type="hidden" name="variation_id" value="{{$variation_id}}">
     <input type="hidden" name="session_id" value="{{$session_id}}">
-    <input type="hidden" name="couponCode" id="" value="{{(isset($couponCode)) ? $couponCode : ''}}">
     <div class="dropZoneForSections ui-droppable" style="display: none;"><div class="dropIconr"><i class="fa fa-plus"></i></div></div>
     <div class="container noTopMargin padding40-top padding40-bottom padding40H noBorder borderSolid cornersAll shadow0 bgNoRepeat activeSection_topBorder0 activeSection_bottomBorder0 emptySection activeSection_topBorder activeSection_bottomBorder fullContainer nosticky radius0 border3px containerWithVisibleOverflow" data-title="order area" data-block-color="0074C7" style="padding-top: 0px; padding-bottom: 0px; outline: none; background-color: rgba(255, 255, 255, 0);" data-trigger="none" data-animate="fade" data-delay="500">
         <div class="containerInner ui-sortable" style="padding-left: 0px; padding-right: 0px;">
@@ -88,23 +86,18 @@
                                     <label data-cf-product-name="true" style="display:block; font-weight: normal;">
                                     <div class="clearfix elOrderProductOptinProducts @if($singlePrice['is_default']) best-seller @endif" data-cf-product-template="true">
                                         <div class="pull-left elOrderProductOptinProductName activeRadioProduct">
-                                            <input type="radio" name="quantity" value="{{$singlePrice['quantity']}}" data-product-amount="{{ $singlePrice['amount'] }}" is-free-shipping="{{$singlePrice['is_free_shipping']}}" data-product-quantity="{{$singlePrice['quantity']}}" data-product-currency-code="{{$singlePrice['currency']}}" data-product-name="{{$singlePrice['quantity']}} x {{ $product->product_name }}"
+                                            <input type="radio" name="quantity" value="{{$singlePrice['quantity']}}" data-product-amount="{{ $singlePrice['price'] }}" is-free-shipping="{{$singlePrice['is_free_shipping']}}" data-product-quantity="{{$singlePrice['quantity']}}" data-product-currency-code="{{$singlePrice['currency']['currency_code']}}" data-product-name="{{$singlePrice['quantity']}} x {{ $product->getAttribute('product_name') }}"
                                                    @if($singlePrice['is_default']) checked @endif
                                                     @if(old('quantity') == $singlePrice['quantity']) checked @endif
                                             >
-                                            <div class="pull-right elOrderProductOptinPrice" data-cf-product-price="true" taxamo-currency="{{$singlePrice['currency']}}">
-                                                @if($discount)
-                                                    <span style='color:red;text-decoration:line-through'>
-                                                      <span style='color:black'>{{$singlePrice['amountBeforeDiscount']}} {{$singlePrice['currency']}}</span><br>
-                                                    </span>
-                                                @endif
-                                                {{ $singlePrice['amount'] }} {{$singlePrice['currency']}}
+                                            <div class="pull-right elOrderProductOptinPrice" data-cf-product-price="true" taxamo-currency="{{$singlePrice['currency']['currency_code']}}">
+                                                {{ $singlePrice['price'] }} {{$singlePrice['currency']['currency_code']}}
                                             </div>
                                             @if($singlePrice['is_default'])
                                                 <span class="best-seller-head">NAJBOLJA PONUDA!</span><br>
-                                                    {{$singlePrice['quantity']}} {{ $product->product_name }} - 40% POPUSTA
+                                                    {{$singlePrice['quantity']}} {{ $product->getAttribute('product_name') }} - 40% POPUSTA
                                                 @else
-                                                    {{$singlePrice['quantity']}} {{ $product->product_name }}
+                                                    {{$singlePrice['quantity']}} {{ $product->getAttribute('product_name') }}
                                             @endif
                                             @if($singlePrice['is_free_shipping'])<br>
                                                 <span class="free-shiping">BESPLATNA DOSTAVA!</span>
@@ -115,8 +108,8 @@
                                 @endforeach
                                 <div class="clearfix elOrderProductOptinProducts" data-cf-product-template="true" style="display: none;">
                                     <div class="pull-left elOrderProductOptinProductName">
-                                        <input type="radio" id="shipingJS" name="deliveryradio" value="1" data-product-payment-type="onetime" data-product-amount="{{ $product->shipping_cost }}" data-product-currency-code="{{$singlePrice['currency']}}" data-business-name="" data-product-name="Shipping">
-                                        <div class="pull-right elOrderProductOptinPrice" data-cf-product-price="true" taxamo-currency="{{$singlePrice['currency']}}">+ {{ $product->shipping_cost }} {{$singlePrice['currency']}}</div>
+                                        <input type="radio" id="shipingJS" name="deliveryradio" value="1" data-product-payment-type="onetime" data-product-amount="{{ $product->country->getAttribute('shipping_cost') }}" data-product-currency-code="{{$singlePrice['currency']['currency_code']}}" data-business-name="" data-product-name="Shipping">
+                                        <div class="pull-right elOrderProductOptinPrice" data-cf-product-price="true" taxamo-currency="{{$singlePrice['currency']['currency_code']}}">+ {{ $product->country->getAttribute('shipping_cost') }} {{$singlePrice['currency']['currency_code']}}</div>
                                         <label for="pid-3060412-0" data-cf-product-name="true">Dostava</label>
                                     </div>
                                 </div>
@@ -133,30 +126,20 @@
 
                                 <tr class="clearfix elOrderProductOptinProducts" data-quantity="1" data-subtotal="">
                                     <td id="productName" class="pull-left elOrderProductOptinProductName product-name" style="width: inherit;"></td>
-                                    <td id="productPrice" class="pull-right elOrderProductOptinPrice product-price" taxamo-currency="{{$singlePrice['currency']}}"></td>
+                                    <td id="productPrice" class="pull-right elOrderProductOptinPrice product-price" taxamo-currency="{{$singlePrice['currency']['currency_code']}}"></td>
                                 </tr>
-                                <tr class="clearfix elOrderProductOptinProducts" id="noFreeShippingDisplay" data-quantity="1" data-subtotal="{{ $product->shipping_cost }}">
+                                <tr class="clearfix elOrderProductOptinProducts" id="noFreeShippingDisplay" data-quantity="1" data-subtotal="{{ $product->country->getAttribute('shipping_cost') }}">
                                     <td class="pull-left elOrderProductOptinProductName product-name" style="width: inherit;">Dostava</td>
-                                    <td class="pull-right elOrderProductOptinPrice product-price" taxamo-currency="{{$singlePrice['currency']}}">+ {{ $product->shipping_cost }} {{$singlePrice['currency']}}</td>
+                                    <td class="pull-right elOrderProductOptinPrice product-price" taxamo-currency="{{$singlePrice['currency']['currency_code']}}">+ {{ $product->country->getAttribute('shipping_cost') }} {{$singlePrice['currency']['currency_code']}}</td>
                                 </tr>
-                                <tr class="clearfix elOrderProductOptinProducts" id="freeShippingDisplay" data-subtotal="{{ $product->shipping_cost }}">
+                                <tr class="clearfix elOrderProductOptinProducts" id="freeShippingDisplay" data-subtotal="{{ $product->country->getAttribute('shipping_cost') }}">
                                     <td class="pull-left elOrderProductOptinProductName product-name" colspan="2" style="width: inherit;">
                                         <span class="free-shiping" style="font-size:16px;">BESPLATNA DOSTAVA!</span>
                                     </td>
                                 </tr>
-                                @if($discount)
-                                    <tr class="clearfix elOrderProductOptinProducts"  id="discount" data-quantity="" data-subtotal="" style="
-                                        {{ isset($discount) ? 'display:inline' : 'display:none' }}
-                                            ">
-                                        <td class="pull-left elOrderProductOptinProductName product-name" style="">
-                                            <span class="best-seller-head">SPECIJALNI POPUST</span>
-                                        </td>
-                                        <td class="pull-right elOrderProductOptinPrice product-price" id="discountDisplay" >{{ $discount }}%</td>
-                                    </tr>
-                                @endif
                                 <tr class="clearfix elOrderProductOptinProducts cf-order-total-row"  data-quantity="1" data-subtotal="1490" style="border-top: 1px solid rgb(221, 221, 221); margin-top: 0.5em;">
                                     <td class="pull-left elOrderProductOptinProductName product-name" style="width: inherit;">Ukupno:</td>
-                                    <td id="totalPriceDisplay" class="pull-right elOrderProductOptinPrice product-price" taxamo-currency="{{$singlePrice['currency']}}">
+                                    <td id="totalPriceDisplay" class="pull-right elOrderProductOptinPrice product-price" taxamo-currency="{{$singlePrice['currency']['currency_code']}}">
                                     </td>
                                 </tr>
                                 </tbody>
@@ -167,7 +150,7 @@
                 <div class="innerContent col_right ui-resizable col-md-5" data-col="right" data-trigger="none" data-animate="fade" data-delay="500" data-title="Right column" style="outline: none;">
                     <div class="col-inner  borderSolid cornersAll shadow0 P0-top P0-bottom P0H noTopMargin borderLight bgCover radius0 border1px" style='padding: 20px; border-color: rgba(47, 47, 47, 0.137255); background-color: rgba(255, 255, 255, 0);'>
                         <div class="de elImageWrapper de-image-block elAlign_center elMargin0 ui-droppable de-editable" data-de-type="img" data-de-editing="false" data-title="image" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 0px; outline: none; display: block; cursor: pointer;" aria-disabled="false" data-hide-on="desktop">
-                            <img src="{{ asset('/').$product->logo_url }}" class="elIMG ximg" width="" height="100">
+                            <img src="{{ asset('/').$product->brand->getAttribute('logo_url') }}" class="elIMG ximg" width="" height="100">
                         </div>
                         <div class="de elHeadlineWrapper ui-droppable de-editable" data-de-type="headline" data-de-editing="false" data-title="headline" data-ce="true" data-trigger="none" data-animate="fade" data-delay="500" style="outline: none; cursor: pointer; margin-top: 20px;" aria-disabled="false" data-hide-on="desktop">
                             <div class="ne elHeadline lh3 elMargin0 elBGStyle0 hsTextShadow0 hsSize18" style="text-align: left;" data-bold="inherit" contenteditable="false"><b>Korak #2: Kontakt informacije</b></div>
@@ -178,9 +161,9 @@
                         <div class="de elInputWrapper de-input-block elAlign_center elMargin0 ui-droppable de-editable" data-de-type="input" data-de-editing="false" data-title="input form" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 10px; outline: none; cursor: pointer;" type="name" aria-disabled="false">
                             <input required value="{{ old('name') }}" placeholder="Ime i prezime" name="name" class="elInput elInput100 elAlign_left elInputBG1 elInputI0 elInputIBlack elInputIRight elInputSmall required1 elInputBR0 elInputStyl0" data-type="extra" type="text">
                         </div>
-                        <div class="de elInputWrapper de-input-block elAlign_center elMargin0 ui-droppable de-editable" data-de-type="input" data-de-editing="false" data-title="input form" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 20px; outline: none; cursor: pointer;" type="email" aria-disabled="false">
-                            <input required value="{{ old('email') }}" id="email" placeholder="Email adresa" name="email" class="elInput elInput100 elAlign_left elInputBG1 elInputI0 elInputIBlack elInputIRight elInputSmall required1 elInputStyl0 elInputBR0" data-type="extra" type="email">
-                        </div>
+{{--                        <div class="de elInputWrapper de-input-block elAlign_center elMargin0 ui-droppable de-editable" data-de-type="input" data-de-editing="false" data-title="input form" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 20px; outline: none; cursor: pointer;" type="email" aria-disabled="false">--}}
+{{--                            <input required value="{{ old('email') }}" id="email" placeholder="Email adresa" name="email" class="elInput elInput100 elAlign_left elInputBG1 elInputI0 elInputIBlack elInputIRight elInputSmall required1 elInputStyl0 elInputBR0" data-type="extra" type="email">--}}
+{{--                        </div>--}}
                         <div class="de elInputWrapper de-input-block elAlign_center elMargin0 ui-droppable de-editable" data-de-type="input" data-de-editing="false" data-title="input form" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 20px; outline: none; cursor: pointer;" type="phone" aria-disabled="false">
                             <input required value="{{ old('phone') }}" placeholder="Broj telefona" name="phone" class="elInput elInput100 elAlign_left elInputBG1 elInputI0 elInputIBlack elInputIRight elInputSmall required1 elInputBR0 elInputStyl0" data-type="extra" type="text">
                         </div>
@@ -190,13 +173,13 @@
                         <div class="de elHeadlineWrapper ui-droppable de-editable" data-de-type="headline" data-de-editing="false" data-title="headline" data-ce="true" data-trigger="none" data-animate="fade" data-delay="500" style="display: block; margin-top: 20px; outline: none; cursor: pointer;" aria-disabled="false" data-hide-on="mobile">
                             <div class="ne elHeadline lh3 elMargin0 elBGStyle0 hsTextShadow0 hsSize18" style="text-align: left;" data-bold="inherit" contenteditable="false"><b>Korak #3: Adresa za dostavu</b></div>
                         </div>
-                        <div class="de elInputWrapper elShippingForm de-input-block elAlign_center elMargin0 ui-droppable de-editable" data-de-type="address" data-de-editing="false" data-title="Shipping Address" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 10px; outline: none; cursor: pointer; display: block;" type="shipping_address" aria-disabled="false">
-                            <div class="togglerTopShipping">
-                                <input required value="{{ old('shipping_address') }}" type="text" placeholder="Ulica i broj" name="shipping_address" class="elS1Address elInput elInput100 elAlign_left elInputSmall elInputI0 elInputIBlack elInputIRight required1 elInputSmall elInputBG1 elInputStyl0 elInputBR0" data-type="extra" style="margin-top: 0px;">
-                                <input required value="{{ old('shipping_city') }}" type="text" placeholder="Grad" name="shipping_city" class="elInput elS1City elInput100 elAlign_left elInputSmall elInputI0 elInputIBlack elInputIRight required1 elInputSmall elInputBG1 elInputStyl0 elInputBR0" data-type="extra" style="margin-top: 20px;">
-                                <input required value="{{ old('shipping_zip') }}" id="shipping_zip" type="text" placeholder="Postanski broj" name="shipping_zip" class="elInput elS1City elInput100 elAlign_left elInputSmall elInputI0 elInputIBlack elInputIRight required1 elInputSmall elInputBG1 elInputStyl0 elInputBR0" data-type="extra" style="margin-top: 20px;" pattern="\d*" maxlength="5">
-                            </div>
-                        </div>
+{{--                        <div class="de elInputWrapper elShippingForm de-input-block elAlign_center elMargin0 ui-droppable de-editable" data-de-type="address" data-de-editing="false" data-title="Shipping Address" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 10px; outline: none; cursor: pointer; display: block;" type="shipping_address" aria-disabled="false">--}}
+{{--                            <div class="togglerTopShipping">--}}
+{{--                                <input required value="{{ old('shipping_address') }}" type="text" placeholder="Ulica i broj" name="shipping_address" class="elS1Address elInput elInput100 elAlign_left elInputSmall elInputI0 elInputIBlack elInputIRight required1 elInputSmall elInputBG1 elInputStyl0 elInputBR0" data-type="extra" style="margin-top: 0px;">--}}
+{{--                                <input required value="{{ old('shipping_city') }}" type="text" placeholder="Grad" name="shipping_city" class="elInput elS1City elInput100 elAlign_left elInputSmall elInputI0 elInputIBlack elInputIRight required1 elInputSmall elInputBG1 elInputStyl0 elInputBR0" data-type="extra" style="margin-top: 20px;">--}}
+{{--                                <input required value="{{ old('shipping_zip') }}" id="shipping_zip" type="text" placeholder="Postanski broj" name="shipping_zip" class="elInput elS1City elInput100 elAlign_left elInputSmall elInputI0 elInputIBlack elInputIRight required1 elInputSmall elInputBG1 elInputStyl0 elInputBR0" data-type="extra" style="margin-top: 20px;" pattern="\d*" maxlength="5">--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
 
                         <div class="de elBTN elAlign_center elMargin0 ui-droppable elButtonBlock de-editable" data-de-type="button" data-de-editing="false" data-title="button" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 20px; outline: none; cursor: pointer;" aria-disabled="false" data-hide-on="desktop">
                             <button type="submit" class="elButton elButtonSize1 elButtonColor1 elButtonFull elButtonBottomBorder elButtonNoShadow elButtonPadding1" style="color: rgb(255, 255, 255); background-color: rgb(12, 166, 0); font-size: 18px;">
@@ -232,32 +215,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="banner banner-v1 comments ">
-                <div class="w_outer">
-                    <div class="w_inner">
-                        @isset($productReviews)
-                            @foreach($productReviews as $review)
-                                <div class="w_item ">
-                                    <div class="w_thumb">
-                                        <img src="{{asset('/').$review->review_image}}" alt="" class="img-view b-loaded">
-                                    </div>
-                                    <div class="w_content_wrap">
-                                        <img src="{{ asset('/') }}checkoutFiles/shared_files/stars.png" alt="">
-                                        <h4 class="w_title">{{$review->review_name}} <span></span></h4>
-                                        <div class="w_desc">
-                                            <p>{{$review->review_text}}</p>
-                                            <ul class="comment-like">
-                                                <li>Like</li>
-                                                <li>· Reply</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
-                        @endisset
                     </div>
                 </div>
             </div>
@@ -316,9 +273,6 @@
             </div>
         </div>
     </div>
-    @if($product->slug === "koleno" || $product->slug === "jonskitus")
-{{--        @include('components.company_footer')--}}
-    @endif
 </form>
 @include('components.change_quantity_script')
 </body>

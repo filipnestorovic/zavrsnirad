@@ -2,14 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Jobs\SendEmail;
-use App\Mail\NewOrderEmail;
-use App\Models\AbandonedCart;
 use App\Models\Event;
 use App\Models\Order;
-use App\Models\ProductSizes;
 use App\Models\UserSession;
 use App\Models\Variation;
+use App\Models\VariationPrice;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Models\Product;
@@ -36,7 +33,7 @@ class OrderController extends Controller
         $this->modelSession = new UserSession();
     }
 
-    public function order(Request $request, $site = null, $domain = null, $isPaidWithStripe = 0){
+    public function order(Request $request, $site = null, $domain = null){
 
 //        dd($request->all());
 
@@ -94,7 +91,7 @@ class OrderController extends Controller
             $this->modelOrder->name = $request->get('name');
             $this->modelOrder->phone = $request->get('phone');
             $this->modelOrder->email = $request->get('email');
-            $this->modelOrder->street = $request->get('shipping_address');
+            $this->modelOrder->address = $request->get('shipping_address');
             $this->modelOrder->city = $request->get('shipping_city');
             $this->modelOrder->zip = $request->get('shipping_zip');
             $this->modelOrder->quantity = (int)$request->get('quantity');
@@ -103,8 +100,8 @@ class OrderController extends Controller
             if($this->modelOrder->email == null) {
                 $this->modelOrder->email = "nemaemail@gmail.com";
             }
-            if($this->modelOrder->street == null) {
-                $this->modelOrder->street = "Uneti rucno";
+            if($this->modelOrder->address == null) {
+                $this->modelOrder->address = "Uneti rucno";
             }
             if($this->modelOrder->city == null) {
                 $this->modelOrder->city = "Uneti rucno";
@@ -118,73 +115,32 @@ class OrderController extends Controller
                 return redirect()->back()->withErrors([$this->customerErrorMessage]);
             }
 
-            $variation = $this->modelVariation->getVariationByIdAndQuantity($variation_id, $this->modelOrder->quantity);
+//            $variation = $this->modelVariation->getVariationByIdAndQuantity($variation_id, $this->modelOrder->quantity);
 
-            if($variation === null) {
+            $variationPrice = VariationPrice::with('variation.product.country')
+                        ->where('quantity',$this->modelOrder->quantity)
+                        ->where('variation_id',$variation_id)
+                        ->first();
+
+            if($variationPrice === null) {
                 Log::error("Error: Variation with this quantity not found - DB");
                 return redirect()->back()->withErrors([$this->customerErrorMessage]);
             } else {
-
-                if($variation->sku === "RB-ST-BASTENSKOCREVO" && $request->get('length')) {
-                    $lengthArray = explode(":",$request->get('length'));
-                    $quantityIndex = $lengthArray[0];
-                    $length = $lengthArray[1];
-
-                    $variation = $this->modelVariation->getVariationByIdAndQuantity($variation_id, $quantityIndex);
-                    $this->modelOrder->order_note = $length;
-                    $variation->quantity = 1;
-                }
-
                 $session_id = $request->get('session_id');
-                $userSession = $this->modelSession->getSingleSession($session_id);
-                if(isset($userSession->test_variation_id)) {
-                   $test_variation_id = $userSession->test_variation_id;
-                } else {
-                    $test_variation_id = null;
-                }
-
-                $this->modelOrder->is_order_with_free_shipping = (int)$variation->is_free_shipping;
-                $this->modelOrder->country_id = $variation->country_id;
-                $this->modelOrder->test_variation_id = $test_variation_id;
-
+                $userSession = UserSession::find($session_id);
                 if($session_id != null) {
                     $this->modelOrder->session_id = $session_id;
                 } else {
                     Log::error("Error: Order without session_id!");
                 }
 
-                $discount = $request->get('discount');
-                $multiplyDiscount = (100 - $discount) / 100;
+                $test_variation_id = $userSession->test_variation_id ?? null;;
 
-                if($discount) {
-                    $couponCode = $request->get('couponCode');
-                    $this->modelOrder->coupon_used = $couponCode;
-                    if($couponCode === "blackfriday" || $couponCode === "newyear" || $couponCode === "popust50") {
-                        $originalPriceMultiply = 0.6;
-                        $totalPrice = round(($variation->amount/$originalPriceMultiply), 0);
-                        $originalPrice = (ceil($totalPrice/100))*100-10;
-                        $price = $originalPrice * $multiplyDiscount;
-                    } else {
-                        $price =  $variation->amount * $multiplyDiscount;
-                    }
-                } else {
-                    $price =  $variation->amount;
-                }
+                $this->modelOrder->is_order_with_free_shipping = $variationPrice->getAttribute('is_free_shipping');
+                $this->modelOrder->country_id = $variationPrice->variation->product->getAttribute('country_id');
+                $this->modelOrder->test_variation_id = $test_variation_id;
 
-                if($variation->currency_symbol === "RSD") {
-                    $price = round($price,0);
-                }
-
-                $this->modelOrder->price = $price;
-
-                $customerNote = null;
-
-                $size = $request->get('size');
-                if($size != null && $size != "0") {
-                    $this->modelOrder->order_note = "Veličina: ".$size;
-                }
-
-                $this->modelOrder->isPaidWithStripe = $isPaidWithStripe;
+                $this->modelOrder->price = $variationPrice->getAttribute('price');
 
                 try {
                     $orderId = $this->modelOrder->insertOrder();
@@ -194,49 +150,24 @@ class OrderController extends Controller
                 }
 
                 if($orderId) {
-                    $orderDetails = $this->modelOrder->getOrderById($orderId, $this->modelOrder->quantity);
+
+                    $orderDetails = Order::with('variation.prices','variation.product.brand','variation.product.country','userSession')
+                        ->find($orderId);
+
                     $brandUrl = 'https://'.$site.'.'.$domain;
-                    //delete from abandoned if exist
-//                    try {
-//                        $resultAbandonDelete = $this->checkAndDeleteAbandonedIfOrderExists($orderDetails->email, $orderDetails->product_id);
-//                    }
-//                    catch(\Exception $exception){
-//                        Log::error('Error: Deleting from abandoned cart \n Message: ' . $exception->getMessage() . '\n Details:'. json_encode($modelOrders, JSON_PRETTY_PRINT) . '\n orderDetails'. json_encode($orderDetails, JSON_PRETTY_PRINT));
-//                    }
-
-                    $gratisProduct = null;
-                    if($request->get('gpid') != null) {
-                        $gpid = $request->get('gpid');
-                        $gratisProduct = $this->modelProduct->getProduct($gpid);
-                    } else {
-                        foreach($request->all() as $key => $value) {
-                            if(str_contains($key, 'gpid') && $value != null) {
-                                $gpid_quantity = substr($key, strpos($key, "-") + 1);
-                                if($gpid_quantity === $request->get('quantity')) {
-                                    $gratisProduct = $this->modelProduct->getProduct($value);
-                                }
-                            }
-                        }
-                    }
-
-                    if($orderDetails->sku === "RB-ST-BASTENSKOCREVO" && $orderDetails->note) {
-                        $orderDetails->sku = $orderDetails->sku.$orderDetails->note;
-                    }
-
-                    $utm_medium = $request->get('utm_medium') ?? null;
 
                     try {
                         //webhooks
-                        if($orderDetails->woocommerce_product_id === null) {
+                        if($orderDetails->variation->product->getAttribute('woocommerce_product_id') === null) {
                             try {
-                                $webhookResult = $this->sendWebhook($orderDetails, $brandUrl, $gratisProduct, $customerNote, $size, $utm_medium);
+                                $webhookResult = $this->sendWebhook($orderDetails, $brandUrl);
                             } catch(\Exception $exception){
                                 Log::error("Error: ServerWombat Webhook \nMessage: " . $exception->getMessage() . "\nDetails: ". json_encode($orderDetails, JSON_PRETTY_PRINT));
                                 return redirect()->back()->withErrors([$this->customerErrorMessage]);
                             }
                         } else {
                             try {
-                                $webhookResult = $this->createNewOrderWoocommerce($orderDetails, $size);
+                                $webhookResult = $this->createNewOrderWoocommerce($orderDetails);
                             } catch(\Exception $exception){
                                 Log::error("Error: Woocommerce Webhook \nMessage: " . $exception->getMessage() . "\nDetails: ". json_encode($orderDetails, JSON_PRETTY_PRINT));
                                 return redirect()->back()->withErrors([$this->customerErrorMessage]);
@@ -251,25 +182,13 @@ class OrderController extends Controller
                                     Log::error("Error: Session - Purchase - DB | Exception: " . $exception->getMessage());
                                 }
                             }
-                            if($orderDetails->isPaidWithStripe) {
-                                return response()->json(['success' => true]);
-                            } else {
-                                return redirect()->to('/'.$orderDetails->slug.'/thankyou')->with('data', $orderDetails);
-                            }
-                        } else {
-                            if($orderDetails->isPaidWithStripe) {
-                                return response()->json(['error' => [$this->customerErrorMessage]], 400);
-                            } else {
-                                return redirect()->back()->withErrors([$this->customerErrorMessage]);
-                            }
-                        }
-                    } catch(\Exception $exception) {
-                        Log::error("Error: Triggering new order -  Webhook \nMessage: " . $exception->getMessage() . "\nDetails: ". json_encode($orderDetails, JSON_PRETTY_PRINT));
-                        if($orderDetails->isPaidWithStripe) {
-                            return response()->json(['error' => [$this->customerErrorMessage]], 400);
+                            return redirect()->to('/'.$orderDetails->variation->product->getAttribute('slug').'/thankyou')->with('data', $orderDetails);
                         } else {
                             return redirect()->back()->withErrors([$this->customerErrorMessage]);
                         }
+                    } catch(\Exception $exception) {
+                        Log::error("Error: Triggering new order -  Webhook \nMessage: " . $exception->getMessage() . "\nDetails: ". json_encode($orderDetails, JSON_PRETTY_PRINT));
+                        return redirect()->back()->withErrors([$this->customerErrorMessage]);
                     }
                 }
             }
@@ -279,7 +198,7 @@ class OrderController extends Controller
         }
     }
 
-    public function sendWebhook($orderDetails, $brandUrl, $gratisProduct = null, $customerNote = null, $size = null, $utm_medium = null){
+    public function sendWebhook($orderDetails, $brandUrl){
 
         $client = new GuzzleHttp\Client([
             'headers' => [ 'Content-Type' => 'application/json' ]
@@ -289,37 +208,28 @@ class OrderController extends Controller
 
         $jsonArray['site'] = $brandUrl;
 
-        $jsonArray['number'] = $orderDetails->id_order;
-        $jsonArray['date_created'] = $orderDetails->created_at;
-        $jsonArray['total'] = $orderDetails->price;
-        $jsonArray['shipping']['first_name'] = $orderDetails->name;
+//        dd($orderDetails);
+
+        $jsonArray['number'] = $orderDetails->getAttribute('id_order');
+        $jsonArray['date_created'] = $orderDetails->getAttribute('created_at');
+        $jsonArray['total'] = $orderDetails->getAttribute('price');
+        $jsonArray['shipping']['first_name'] = $orderDetails->getAttribute('name');
         $jsonArray['shipping']['last_name'] = "";
-        $jsonArray['shipping']['address_1'] =  $orderDetails->street;
+        $jsonArray['shipping']['address_1'] =  $orderDetails->getAttribute('address');
         $jsonArray['shipping']['address_2'] =  "";
-        $jsonArray['shipping']['city'] = $orderDetails->city;
-        $jsonArray['shipping']['postcode'] = $orderDetails->zip;
-        $jsonArray['billing']['email'] = $orderDetails->email;
-        $jsonArray['billing']['phone'] = $orderDetails->phone;
+        $jsonArray['shipping']['city'] = $orderDetails->getAttribute('city');
+        $jsonArray['shipping']['postcode'] = $orderDetails->getAttribute('zip');
+        $jsonArray['billing']['email'] = $orderDetails->getAttribute('email');
+        $jsonArray['billing']['phone'] = $orderDetails->getAttribute('phone');
 
-        $jsonArray['countryCode'] = strtoupper($orderDetails->country_code);
-        $jsonArray['currency'] = strtoupper($orderDetails->currency_code);
+        $jsonArray['countryCode'] = strtoupper($orderDetails->variation->product->country->getAttribute('country_code'));
+        $jsonArray['currency'] = strtoupper($orderDetails->variation->product->country->currency->getAttribute('currency_code'));
 
-        $jsonArray['wb_campaign'] = $orderDetails->wb_campaign;
-        $jsonArray['wb_adset'] = $orderDetails->wb_adset;
-        $jsonArray['wb_ad'] = $orderDetails->wb_ad;
+        $jsonArray['session_id'] = $orderDetails->getAttribute('session_id') ?? $_COOKIE['wbSessionId'] ?? null;
 
-        $jsonArray['session_id'] = $_COOKIE['wbSessionId'] ?? null;
+        $jsonArray['variation_id'] = $orderDetails->getAttribute('variation_id') ?? null;
 
-        $jsonArray['variation_id'] = $orderDetails->variation_id ?? null;
-
-        $jsonArray['affiliate_id'] = $_COOKIE['affid'] ?? null;
-        $jsonArray['network_id'] = $_COOKIE['netid'] ?? null;
-        $jsonArray['click_id'] = $_COOKIE['clid'] ?? null;
-        $jsonArray['offer_id'] = $_COOKIE['offid'] ?? null;
-
-        $jsonArray['utm_medium'] = $_COOKIE['utm_medium'] ?? $utm_medium;
-
-        if($orderDetails->is_free_shipping===1) {
+        if($orderDetails->getAttribute('is_free_shipping')===1) {
             $jsonArray['shipping_lines'] = array([
                 "method_id" => "free_shipping"
             ]);
@@ -329,74 +239,32 @@ class OrderController extends Controller
             ]);
         }
 
-        if($orderDetails->coupon_used != null) {
-            $jsonArray['coupon_used'] = 'Kupon: '.$orderDetails->coupon_used;
-        }
-
-        $meta_size = [];
-        if($size != null && $size != "0") {
-            $meta_size = [
-                [
-                    "key" => "velicina",
-                    "value" => $size,
-                ],
-            ];
-//            $customerNote = $customerNote.' '.$size;
-        }
-
-        $jsonArray['customer_note'] = $customerNote;
+        $jsonArray['customer_note'] = $orderDetails->getAttribute('note');
 
         $jsonArray['line_items'] = array([
-            'sku' => $orderDetails->sku,
-            'quantity' => $orderDetails->quantity,
-            'subtotal' => $orderDetails->price,
-            'total' =>  $orderDetails->price,
-            'meta_data' => $meta_size,
+            'sku' => $orderDetails->variation->product->getAttribute('sku'),
+            'quantity' => $orderDetails->getAttribute('quantity'),
+            'subtotal' => $orderDetails->getAttribute('price'),
+            'total' =>  $orderDetails->getAttribute('price'),
         ]);
-
-        if($gratisProduct != null) {
-            array_push($jsonArray['line_items'],[
-                'sku' => $gratisProduct->sku,
-                'quantity' => 1,
-                'subtotal' => 0,
-                'total' =>  0,
-                'meta_data' => []
-            ]);
-        }
 
         $webhookUrl = "";
 //        $webhookBackupUrl = "https://webhook.site/433c4a77-cc04-4130-8ca5-0a6d56dd3ec9";
 
-        switch($orderDetails->country_code) {
-            case "rs":
-                $webhookUrl = "https://new.serverwombat.com/api/orderWebhook";
-                break;
-            case "ba":
-                $webhookUrl = "https://ba.serverwombat.com/api/orderWebhook";
-                break;
-            default:
-                $webhookUrl = "https://new.serverwombat.com/api/orderWebhook";
-        }
-
-//        try {
-//            $client->post($webhookBackupUrl, ['body' => json_encode($jsonArray)]);
-//        } catch(\Exception $exception) {
-//            Log::critical("Error: Webhook accepting BACKUP route error \nServer message: " . $exception->getMessage() . "\nJSON: " . json_encode($jsonArray, JSON_PRETTY_PRINT));
-//        }
+        $webhookUrl = "https://new.serverwombat.com/api/orderWebhook";
 
         try {
-            $response = $client->post($webhookUrl, ['body' => json_encode($jsonArray)]);
-            return $response;
+            return $client->post($webhookUrl, ['body' => json_encode($jsonArray)]);
         } catch(\Exception $exception) {
             Log::critical("Error: Webhook accepting error \nServer message: " . $exception->getMessage() . "\nJSON: " . json_encode($jsonArray, JSON_PRETTY_PRINT));
         }
 
     }
 
-    public function createNewOrderWoocommerce($orderDetails, $size = null) {
+    public function createNewOrderWoocommerce($orderDetails) {
 
         $language = "";
-        switch ($orderDetails->country_code) {
+        switch ($orderDetails->variation->product->country->getAttribute('country_code')) {
             case "bg":
                 $language = "bg_BG";
                 break;
@@ -426,12 +294,12 @@ class OrderController extends Controller
                 break;
         }
 
-        if($orderDetails->is_free_shipping == 0) {
+        if($orderDetails->getAttribute('is_free_shipping') == 0) {
             $shipping = [
                 [
                     "method_title" => "Flat rate",
                     "method_id" => "flat_rate",
-                    "total"=> (string)$orderDetails->shipping_cost,
+                    "total"=> (string)$orderDetails->variation->product->country->getAttribute('shipping_cost'),
                 ],
             ];
         } else {
@@ -442,15 +310,6 @@ class OrderController extends Controller
                     "total"=> "0.00"
                 ],
             ];
-        }
-
-        if($size != null) {
-            try {
-                $productSize = ProductSizes::where([['product_size', $size], ['product_id', $orderDetails->product_id]])->first();
-            } catch(\Exception $exception){
-                Log::error("Error: Woocommerce Webhook - Product Size - \nMessage: " . $exception->getMessage() . "\nSize: ".$size."\nDetails: ". json_encode($orderDetails, JSON_PRETTY_PRINT));
-                return redirect()->back()->withErrors([$this->customerErrorMessage]);
-            }
         }
 
         $woocommerce = new WooClient(
@@ -465,43 +324,41 @@ class OrderController extends Controller
         );
 
         $data = [
-            "payment_method"=> $orderDetails->isPaidWithStripe ? "stripe" : "cod",
-            "payment_method_title" => $orderDetails->isPaidWithStripe ? "Credit Card (Stripe)" : "Cash on Delivery",
-            "set_paid" => (bool)$orderDetails->isPaidWithStripe,
+            "payment_method"=> "cod",
+            "payment_method_title" => "Cash on Delivery",
             "status" => "processing",
             "billing" => [
-                "first_name"=> (string)$orderDetails->name,
+                "first_name"=> (string)$orderDetails->getAttribute('name'),
                 "last_name"=> "",
-                "address_1"=> (string)$orderDetails->street,
+                "address_1"=> (string)$orderDetails->getAttribute('address'),
                 "address_2"=> "",
-                "city"=> (string)$orderDetails->city,
+                "city"=> (string)$orderDetails->getAttribute('city'),
                 "state"=> "",
-                "postcode"=> (string)$orderDetails->zip,
-                "country"=> strtoupper((string)$orderDetails->country_code),
-                "email"=> (string)$orderDetails->email,
-                "phone"=> (string)$orderDetails->phone
+                "postcode"=> (string)$orderDetails->getAttribute('zip'),
+                "country"=> strtoupper((string)$orderDetails->variation->product->country->getAttribute('country_code')),
+                "email"=> (string)$orderDetails->getAttribute('email'),
+                "phone"=> (string)$orderDetails->getAttribute('phone')
             ],
             "shipping" => [
-                "first_name"=> (string)$orderDetails->name,
+                "first_name"=> (string)$orderDetails->getAttribute('name'),
                 "last_name"=> "",
-                "address_1"=> (string)$orderDetails->street,
+                "address_1"=> (string)$orderDetails->getAttribute('address'),
                 "address_2"=> "",
-                "city"=> (string)$orderDetails->city,
+                "city"=> (string)$orderDetails->getAttribute('city'),
                 "state"=>"",
-                "postcode"=> (string)$orderDetails->zip,
-                "country"=> strtoupper((string)$orderDetails->country_code)
+                "postcode"=> (string)$orderDetails->getAttribute('zip'),
+                "country"=> strtoupper((string)$orderDetails->variation->product->country->getAttribute('country_code'))
             ],
             "line_items" => [
                 [
-                    "product_id"=> (string)$orderDetails->woocommerce_product_id,
-                    "quantity"=> (string)$orderDetails->quantity,
-                    "total" => (string)$orderDetails->price,
-                    "variation_id" => $productSize->woo_variation_id ?? '0',
+                    "product_id"=> (string)$orderDetails->variation->product->getAttribute('woocommerce_product_id'),
+                    "quantity"=> (string)$orderDetails->getAttribute('quantity'),
+                    "total" => (string)$orderDetails->getAttribute('price'),
                 ]
             ],
             "lang" => $language,
             "shipping_lines" => $shipping,
-            "currency" => $orderDetails->currency_code,
+            "currency" => $orderDetails->variation->product->country->currency->getAttribute('currency_code'),
         ];
 
 //        Log::debug("WooOrder: ".json_encode($data));
@@ -642,9 +499,6 @@ class OrderController extends Controller
     }
 
     public function sendWebhookUpCrossSell($upCrossSellDetails){
-//        $client = new GuzzleHttp\Client([
-////            'headers' => [ 'Content-Type' => 'application/json' ]
-//        ]);
 
         $client = new \GuzzleHttp\Client();
         $url = "https://new.serverwombat.com/api/insertOrderCrossUpSellData";
@@ -669,87 +523,6 @@ class OrderController extends Controller
             }
         } catch(\Exception $exception) {
             Log::critical("Error: UpCrossSell Webhook error \nServer message: " . $exception->getMessage() . "\nDETAILS: " .$upCrossSellDetails);
-        }
-    }
-
-    public function selectProductSize(Request $request) {
-
-        $rules = [
-            'orderId' => ['required'],
-            'productQuantity' => ['required'],
-            'productSku' => ['required'],
-            'size' => ['required'],
-        ];
-
-        $messages = [
-//            'required' => 'Polje :attribute je obavezno!',
-        ];
-
-        $validator = Validator::make($request->all(), $rules, $messages);
-
-        if ($validator->fails()) {
-            return redirect()
-                ->back()
-                ->withErrors($validator)
-                ->withInput();
-        }
-
-        try {
-            $orderId = $request->get('orderId');
-            $quantity = $request->get('productQuantity');
-            $sku = $request->get('productSku');
-            $size = $request->get('size');
-
-            if($size != null && $size != "0") {
-                $this->modelOrder->order_note = "Veličina: ".$size;
-                $updateResult = $this->modelOrder->updateOrderNote($orderId);
-
-                if($updateResult === 1) {
-                    try {
-                        return $this->webhookSelectProductSize($orderId,$quantity,$sku,$size);
-                    } catch (\Exception $exception) {
-                        Log::error("InsertProductSize Webhook Error - " . $exception->getMessage());
-                        return 0;
-                    }
-                } else {
-                    Log::error("InsertProductSize Error - " . $updateResult);
-                    return 0;
-                }
-            }
-        } catch (\Exception $exception) {
-            Log::error("InsertProductSize Error - " . $exception->getMessage());
-            return 0;
-        }
-    }
-
-    public function webhookSelectProductSize($orderId,$quantity,$sku,$size) {
-        $client = new \GuzzleHttp\Client();
-        $url = "https://new.serverwombat.com/api/selectProductSize";
-
-        $data = [
-            'wToken' => 'AlI5hHY4Y4FaUgIDoMMSubRBCvlLCNQyJVfmHfMG',
-            'orderId' => $orderId,
-            'quantity' => $quantity,
-            'sku' => $sku,
-            'key' => 'velicina',
-            'size' => $size,
-        ];
-
-        try {
-            $response = $client->post($url, [
-                'form_params' => $data,
-            ]);
-
-            $responseJson = json_decode((string) $response->getBody());
-
-            if($responseJson->code === 200) {
-                return 1;
-            } else {
-                Log::critical("Error: Product size Webhook error \nServer response: " . $responseJson->status . "\nData: " .json_encode($data, JSON_PRETTY_PRINT));
-                return 0;
-            }
-        } catch(\Exception $exception) {
-            Log::critical("Error: Product size Webhook error \nServer message: " . $exception->getMessage() . "\nDETAILS: " .json_encode($data, true));
         }
     }
 

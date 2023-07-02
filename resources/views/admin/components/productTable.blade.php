@@ -19,26 +19,6 @@
         <span class="badge bg-danger">Deleted product</span>
     </caption>
     @foreach($paginatedItems as $singleProduct)
-        @php
-            $criticalsText = "";
-            $errorsText = "";
-            $warningsText = "";
-            if(count($singleProduct[0]['criticals']) > 0) {
-                foreach($singleProduct[0]['criticals'] as $critical) {
-                    $criticalsText .= $critical."<br/>";
-                }
-            }
-            if(count($singleProduct[0]['errors']) > 0) {
-                foreach($singleProduct[0]['errors'] as $error) {
-                    $errorsText .= $error."<br/>";
-                }
-            }
-            if(count($singleProduct[0]['warnings']) > 0) {
-                foreach($singleProduct[0]['warnings'] as $warning) {
-                    $warningsText .= $warning."<br/>";
-                }
-            }
-        @endphp
         <tr style="padding-top: 0px;"
             @if($singleProduct[0]["product_deleted"])
                 class="table-danger"
@@ -48,20 +28,7 @@
             @endif
         >
             <td>{{ $singleProduct[0]["id_product"] }}</td>
-            <td>
-                {{ $singleProduct[0]["product_name"] }}&nbsp;
-                @if(!$singleProduct[0]["product_deleted"])
-                    @if($criticalsText != "")
-                        <a data-toggle="popover" data-placement="right" title="Critical" data-content="{{ $criticalsText }}"><i  style="color: #F93154;" class="fas fa-exclamation-triangle fa-lg"></i></a>
-                    @endif
-                    @if($errorsText != "")
-                        <a data-toggle="popover" data-placement="right" title="Error" data-content="{{ $errorsText }}"><i  style="color: #FFA900;" class="fas fa-exclamation-circle fa-lg"></i></a>
-                    @endif
-                    @if($warningsText != "")
-                        <a data-toggle="popover" data-placement="right" title="Warning" data-content="{{ $warningsText }}"><i  style="color: #00B74A;" class="fas fa-bell fa-lg"></i></a>
-                    @endif
-                @endif
-            </td>
+            <td>{{ $singleProduct[0]["product_name"] }}&nbsp;</td>
             <td>{{ $singleProduct[0]["sku"] }}</td>
             <td>{{ $singleProduct[0]["slug"] }} @isset($singleProduct[0]["urlPreview"]) <a href="{{ $singleProduct[0]["urlPreview"] }}" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a> @endisset</td>
             <td><img src="{{ asset('/').$singleProduct[0]["product_image"] }}" height="70px"/></td>
@@ -74,9 +41,6 @@
                 @else
                     <span class="table-edit"><button type="button" class="btn btn-primary btn-rounded btn-sm editProductBtn" data-toggle="modal" data-target="#editProduct" value="{{$singleProduct[0]["id_product"]}}">EDIT</button></span>
                     <span class="table-remove"><a href="{{ route('deleteProduct',['id' => $singleProduct[0]["id_product"]]) }}"><button type="button" class="btn btn-danger btn-rounded btn-sm deleteProductBtn">DELETE</button></a></span>
-                    <span class="table-review"><a href="{{ route('productReviews',['id' => $singleProduct[0]["id_product"]]) }}"><button type="button" class="btn btn-success btn-rounded btn-sm reviewsBtn">REVIEWS</button></a></span>
-                    <span class="table-pixel"><button type="button" class="btn btn-dark btn-rounded btn-sm showProductPixel" data-toggle="modal" data-target="#productPixel" value="{{$singleProduct[0]["id_product"]}}">PIXEL</button></span>
-                    <span class="table-sizes"><a href="{{ route('getAllProductSizes',['id' => $singleProduct[0]["id_product"]]) }}"><button type="button" class="btn btn-warning btn-rounded btn-sm sizesBtn">SIZES</button></a></span>
                 @endif
              </td>
         </tr>

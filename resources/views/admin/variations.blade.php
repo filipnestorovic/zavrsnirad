@@ -107,7 +107,7 @@
                     <div class="modal-body">
                         <div class="md-form input-group input-group-sm mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm">Please select product first</span>
+                                <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm">Select product</span>
                             </div>
                             <select name="productDdlModal" id="productDdlModal" data-toggle="dropdown" required data-live-search="true">
                                 @foreach($products as $product)
@@ -170,21 +170,16 @@
                     url: baseURL + "ajaxData/getVariationsAjax?page=" + currentPage,
                     data: {searchFilter:searchFilter, landerFilter:landerFilter, checkoutFilter:checkoutFilter, thankyouFilter: thankyouFilter, productFilter: productFilter, brandFilter:brandFilter},
                     success: function (data) {
-                        // console.log(data);
+                        console.log(data);
                         $('#variationTableAjax').html('');
                         $('#variationTableAjax').html(data);
                         $('[data-toggle="tooltip"]').tooltip();
                         $('[data-toggle="popover"]').popover({
                             html: true
                         });
-
-                        $('.copyVariationButton').click(function () {
-                            return confirm('Are you sure that you want to create new variation from this variation?');
-                        });
                     },
                     error: function (req, err) {
-                        $('#errorMessageHeader').html('Error on getting variations list');
-                        $('#errorMessageHeader').slideDown();
+                        $('#errorMessageHeader').html('Error on getting variations list').slideDown();;
                     }
                 });
             }
