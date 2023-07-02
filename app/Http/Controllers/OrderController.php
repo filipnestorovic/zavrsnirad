@@ -251,7 +251,7 @@ class OrderController extends Controller
         $webhookUrl = "";
 //        $webhookBackupUrl = "https://webhook.site/433c4a77-cc04-4130-8ca5-0a6d56dd3ec9";
 
-        $webhookUrl = "https://new.serverwombat.com/api/orderWebhook";
+        $webhookUrl = "https://new.dev.serverwombat.com/api/orderWebhook";
 
         try {
             return $client->post($webhookUrl, ['body' => json_encode($jsonArray)]);

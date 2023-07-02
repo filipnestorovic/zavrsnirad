@@ -55,7 +55,7 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
 
-    public function index(Request $request, $site = null, $domain = null, $slug = null, $coupon = null) {
+    public function index(Request $request, $site = null, $domain = null, $slug = null) {
 
         $brandUrl = 'https://'.$site.'.'.$domain;
         $country_id = $request->get('countryId');
@@ -146,9 +146,9 @@ class HomeController extends Controller
         }
     }
 
-    public function lander(Request $request, $site = null, $domain = null, $slug = null, $coupon = null) {
+    public function lander(Request $request, $site = null, $domain = null, $slug = null) {
 
-        $this->index($request, $site, $domain, $slug, $coupon);
+        $this->index($request, $site, $domain, $slug);
 
         $this->data['event'] = "ViewContent";
 
@@ -163,8 +163,8 @@ class HomeController extends Controller
         return view($this->returnedData['landerView'], $this->data);
     }
 
-    public function checkout(Request $request, $site = null, $domain = null, $slug = null, $coupon = null) {
-        $this->index($request, $site, $domain, $slug, $coupon);
+    public function checkout(Request $request, $site = null, $domain = null, $slug = null) {
+        $this->index($request, $site, $domain, $slug);
 
         $this->data['event'] = "AddToCart";
 

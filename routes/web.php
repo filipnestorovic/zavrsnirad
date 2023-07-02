@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::group([ 'middleware' => ['admin']], function() {
-    Route::domain('ict.wombatsbrand.com')->middleware(['auth'])->group(function () {
+    Route::domain('zavrsnirad.wombatsbrand.com')->middleware(['auth'])->group(function () {
         Route::get('/', [App\Http\Controllers\AdminController::class, 'admin'])->name('adminDashboard');
         Route::get('/logout', [App\Http\Controllers\AdminController::class, 'logout'])->name('logoutAdmin');
 
@@ -117,8 +117,8 @@ Route::group([ 'middleware' => ['admin']], function() {
 Route::group(['middleware' => ['guest']], function () {
     $webRoutes = function() {
         Route::get('/{slug}/thankyou', [App\Http\Controllers\HomeController::class, 'thankyou'])->name('thankyou');
-        Route::get('/{slug}/checkout/{coupon?}', [App\Http\Controllers\HomeController::class, 'checkout'])->name('checkout');
-        Route::get('/{slug?}/{coupon?}', [App\Http\Controllers\HomeController::class, 'lander'])->name('lander');
+        Route::get('/{slug}/checkout', [App\Http\Controllers\HomeController::class, 'checkout'])->name('checkout');
+        Route::get('/{slug?}', [App\Http\Controllers\HomeController::class, 'lander'])->name('lander');
 
         Route::post('/order', [App\Http\Controllers\OrderController::class, 'order'])->name('order');
         Route::post('/upCrossSellOrder', [App\Http\Controllers\OrderController::class, 'upCrossSellOrder'])->name('upCrossSellOrder');
